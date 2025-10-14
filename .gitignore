@@ -1,0 +1,26 @@
+# Typst build artifacts
+*.pdf
+*.typst
+build/
+
+# Images cache or generated assets
+**/images/**/.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.venv/
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
