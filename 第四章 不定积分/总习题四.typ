@@ -1,22 +1,22 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[总习题四]
 #subsection[一、选择题]
 1. 若函数  $f(x)$  在区间  $(a, b)$  内连续，则在  $(a, b)$  内  $f(x)$  ( ).
    #v(0.5em)
    #choices(
-   必有导函数,
-   必有原函数,
-   必有界,
-   必有极限
+   [必有导函数],
+   [必有原函数],
+   [必有界],
+   [必有极限]
    )
-2. 若  $F'(x) = f(x), v a r p h i'(x) = f(x)$ ，则  $integral f(x) , dif x = (quad)$ .
+2. 若  $F'(x) = f(x), phi'(x) = f(x)$ ，则  $integral f(x) , dif x = (quad)$ .
    #v(0.5em)
    #choices(
-   $F(x)$,
-   $varphi(x)$,
-   $varphi (x) + C$,
-   $F(x) + varphi (x) + C$
+   [$F(x)$],
+   [$phi(x)$],
+   [$phi (x) + C$],
+   [$F(x) + phi (x) + C$]
    )
 3.下列式子中正确的是( )
    #v(0.5em)

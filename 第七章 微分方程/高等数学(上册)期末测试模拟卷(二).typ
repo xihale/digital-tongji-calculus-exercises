@@ -1,3 +1,5 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[高等数学(上册)期末测试模拟卷(二)]]
 #subsection[一、选择题(每小题3分，共15分)]
 1. 当  $x -> 0$  时，下列( )是  $x$  的三阶无穷小
@@ -41,7 +43,7 @@
    y' = x + y sin x$"
    )
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x [if] x > 0, e^x - 2 [if] x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a =$
+6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x " if " x > 0, e^x - 2 " if " x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a ="
 7. 曲线  ${ x = e^t + ln (1 + t^2), y = arctan t }$  在点  $t = 0$  处的切线方程为  
 8.函数  $f(x) = 2^{x}$  的带有拉格朗日余项的三阶麦克劳林公式为
 
@@ -53,13 +55,13 @@
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
 12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) , dif t)^2)/(integral_0^x t e^(2 t^2) , diff t)$ .
    #answer-space
-13. 已知函数  $y = f(x)$  由方程  $e^y + xy - 2x - 1 = 0$  所确定，求  $y''(0)$ .
+13. 已知函数  $y = f(x)$  由方程  $e^y + x y - 2x - 1 = 0$  所确定，求  $y''(0)$ .
    #answer-space
 14. 求  $integral e^(sqrt(x)) dif x$
    #answer-space
 15. 求  $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) , dif x$ .
    #answer-space
-16. 设函数  $f(x) = cases( 1/(1 + x^2) [if] x <= 0, ln x [if] x > 0 )$  求  $integral_(-1)^(1) x f(x) , dif x$.
+16. 设函数  $f(x) = cases( 1/(1 + x^2) " if " x <= 0, ln x " if " x > 0 )$  求  $integral_(-1)^(1) x f(x) , dif x$.
    #answer-space
 17. 求曲线  $y = (x - 1) root(3,x^2)$  的凹凸区间及拐点
    #answer-space

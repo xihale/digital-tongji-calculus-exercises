@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[总习题五]
 #subsection[一、选择题]
@@ -18,7 +18,7 @@
    [充要条件],
    [无关条件]
    )
-3. 若函数  $f(x) = cases( x [if] x >= 0, e^x [if] x < 0 )$  则  $integral_(-1)^(2) f(x) , dif x = (quad)$ .
+3. 若函数  $f(x) = cases( x " if " x >= 0, e^x " if " x < 0 )$  则  $integral_(-1)^(2) f(x) , dif x = (quad)$ .
    #v(0.5em)
    #choices(
    $3 - e^(-1)$,
@@ -34,7 +34,7 @@
    $12 - 2 sqrt(2)$,
    $1 - (3 sqrt(2))/2$
    )
-5. 若函数  $f(x) = cases( (integral_0^x (e^(t^2) - 1) , dif t)/x^2 [if] x != 0, a [if] x = 0 )$  且已知  $f(x)$  在点  $x = 0$  处连续，则必有( ).
+5. 若函数  $f(x) = cases( (integral_0^x (e^(t^2) - 1) , dif t)/x^2 " if " x != 0, a " if " x = 0 )$  且已知  $f(x)$  在点  $x = 0$  处连续，则必有( ).
    #v(0.5em)
    #choices(
    $a = 1$,
@@ -66,7 +66,7 @@
 #subsection[四、证明题]
 12. 设  $f''(x)$  在区间  $[a, b]$  上连续，证明：
 $$
-integral_a^b x f''(x) dx = [b f'(b) - f(b)] - [a f'(a) - f(a)].
+integral_a^b x f''(x) d x = [b f'(b) - f(b)] - [a f'(a) - f(a)].
 $$
 #pagebreak()
 #align(center)[总习题五结束]

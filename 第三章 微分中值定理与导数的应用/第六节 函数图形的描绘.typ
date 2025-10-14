@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[第六节 函数图形的描绘]
 #subsection[一、选择题]
@@ -13,10 +13,10 @@
 2. 函数  $y = f(x)$  在点  $x_0$  处连续且取得极大值，则( ).
    #v(0.5em)
    #choices(
-   $f'(x_0) = 0$,
-   $f''(x_0) < 0$,
-   $f'(x_0) = 0$  且  $f''(x_0) <   0$,
-   $f'(x_{0}) = 0$  或不存在
+   [$f'(x_0) = 0$],
+   [$f''(x_0) < 0$],
+   [$f'(x_0) = 0$  且  $f''(x_0) <   0$],
+   [$f'(x_{0}) = 0$  或不存在]
    )
 3. 已知  $lim_(x -> a) (f(x) - f(a))/(x - a) = -1$ ，则在点  $x = a$  处( ).
    #v(0.5em)

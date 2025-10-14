@@ -1,22 +1,22 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第三节 泰勒公式]
 #subsection[一、选择题]
 1. 已知  $cos x = 1 - x^2/2 + R_3(x)$ , 则  $R_3(x) = (quad)$ .
    #v(0.5em)
    #choices(
-   (sin xi)/3! x^3$",
-   -(sin xi)/3! x^3$",
-   (cos xi)/4! x^4$",
-   -(cos xi)/4! x^4$"
+   [$(sin xi)/3! x^3$],
+   [$-(sin xi)/3! x^3$],
+   [$(cos xi)/4! x^4$],
+   [$-(cos xi)/4! x^4$]
    )
 2. 函数  $f(x)$  的泰勒展开式  $f(x) = sum_(k=0)^n a_k (x - x_0)^k + R_n(x)$  中拉格朗日余项  $R_n(x) =$  ( ).
    #v(0.5em)
    #choices(
-   f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  (20  $0 <   theta <  1)$",
-   f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$",
-   f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  (20  $0 <   theta <  1)$",
-   f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$"
+   [$f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  $(0 <   theta <  1)$],
+   [$f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$],
+   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  $(0 <   theta <  1)$],
+   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$]
    )
 #subsection[二、计算题]
 3. 求函数  $f(x) = sqrt(x)$  按  $(x - 4)$  的幂展开的带有拉格朗日余项的三阶泰勒公式

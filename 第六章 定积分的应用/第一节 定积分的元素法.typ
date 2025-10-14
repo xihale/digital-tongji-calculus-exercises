@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[第一节 定积分的元素法第二节 定积分在几何学上的应用]
 #subsection[一、填空题]

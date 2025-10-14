@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[总习题三]
 #subsection[一、选择题]
@@ -13,10 +13,10 @@
 2. 设  $f'(x_0) = f''(x_0) = 0, f'''(x_0) > 0$ ，则( ).
    #v(0.5em)
    #choices(
-   $f'(x_0)$  是  $f'(x)$  的极大值,
-   $f(x_0)$  是  $f(x)$  的极大值,
-   $f(x_0)$  是  $f(x)$  的极小值,
-   $(x_0, f(x_0))$  是曲线  $y = f(x)$  的拐点
+   [$f'(x_0)$  是  $f'(x)$  的极大值],
+   [$f(x_0)$  是  $f(x)$  的极大值],
+   [$f(x_0)$  是  $f(x)$  的极小值],
+   [$(x_0, f(x_0))$  是曲线  $y = f(x)$  的拐点]
    )
 #subsection[二、填空题]
 3. 函数  $y = ln sin x$  在区间  $[pi/6, 5pi/6]$  上满足罗尔中值定理的  $xi$  值是  

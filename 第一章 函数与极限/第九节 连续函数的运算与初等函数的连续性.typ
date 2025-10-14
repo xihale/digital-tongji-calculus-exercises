@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[第九节 连续函数的运算与初等函数的连续性]
 #subsection[一、选择题]

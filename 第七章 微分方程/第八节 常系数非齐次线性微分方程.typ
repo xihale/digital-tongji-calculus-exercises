@@ -1,20 +1,22 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[第八节 常系数非齐次线性微分方程]
 #subsection[一、选择题]
 1. 微分方程  $y'' - y = 3 e^x + 2$  的一个特解具有形式  $(a, b$  为常数)( ).
    #v(0.5em)
    #choices(
-   y^* = a e^x + b$",
-   y^* = a e^x + b x$",
-   y^* = a x e^x + b$",
-   y^* = a x e^x + b x$"
+   [$y^* = a e^x + b$],
+   [$y^* = a e^x + b x$],
+   [$y^* = a x e^x + b$],
+   [$y^* = a x e^x + b x$]
    )
 2. 微分方程  $y'' + y = sin x$  的一个特解具有形式( ).
    #v(0.5em)
    #choices(
-   y^* = a sin x$",
-   y^* = a cos x$",
-   y^* = x(a sin x + b cos x)$",
-   y^* = a cos x + b sin x$"
+   [$y^* = a sin x$],
+   [$y^* = a cos x$],
+   [$y^* = x(a sin x + b cos x)$],
+   [$y^* = a cos x + b sin x$]
    )
 #subsection[二、计算题]
 3. 求下列微分方程的通解：

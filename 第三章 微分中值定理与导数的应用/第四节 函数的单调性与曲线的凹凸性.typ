@@ -1,22 +1,22 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[第四节 函数的单调性与曲线的凹凸性]
 #subsection[一、选择题]
 1. 设函数  $f(x), g(x)$  在区间  $[a, b]$  上可导，且  $f'(x) > g'(x)$ ，则在  $(a, b)$  内有( ).
    #v(0.5em)
    #choices(
-   f(x) - g(x) > 0$",
-   f(x) - g(x)>= 0$",
-   f(x) - g(x) > f(b) - g(b)$",
-   f(x) - g(x) > f(a) - g(a)$"
+   [$f(x) - g(x) > 0$],
+   [$f(x) - g(x)>= 0$],
+   [$f(x) - g(x) > f(b) - g(b)$],
+   [$f(x) - g(x) > f(a) - g(a)$]
    )
 2. 设函数  $f(x) = |x(1 - x)|$ ，则( ).
    #v(0.5em)
    #choices(
-   x = 0$  是  $f(x)$  的极值点，但  $(0,0)$  不是曲线  $y = f(x)$  的拐点",
-   x = 0$  不是  $f(x)$  的极值点，但  $(0,0)$  是曲线  $y = f(x)$  的拐点",
-   x = 0$  是  $f(x)$  的极值点，且  $(0,0)$  是曲线  $y = f(x)$  的拐点",
-   x = 0$  不是  $f(x)$  的极值点，  $(0,0)$  也不是曲线  $y = f(x)$  的拐点"
+   [$x = 0$  是  $f(x)$  的极值点，但  $(0,0)$  不是曲线  $y = f(x)$  的拐点],
+   [$x = 0$  不是  $f(x)$  的极值点，但  $(0,0)$  是曲线  $y = f(x)$  的拐点],
+   [$x = 0$  是  $f(x)$  的极值点，且  $(0,0)$  是曲线  $y = f(x)$  的拐点],
+   [$x = 0$  不是  $f(x)$  的极值点，  $(0,0)$  也不是曲线  $y = f(x)$  的拐点]
    )
 3. 曲线  $y = (x - 1)^2 (x - 3)^2$  的拐点个数是( ).
    #v(0.5em)

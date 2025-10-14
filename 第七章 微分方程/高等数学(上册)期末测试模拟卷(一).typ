@@ -1,14 +1,14 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[高等数学(上册)期末测试模拟卷(一)]
 #subsection[一、选择题(每小题3分，共15分)]
 1. 当  $x -> 0$  时，下列( )是  $x$  的同阶(不等价)无穷小。
    #v(0.5em)
    #choices(
-   sin x - x$",
-   ln (1 - x)$",
-   x^{2} sin x$",
-   {e}^{x} - 1$"
+   [$sin x - x$],
+   [$ln (1 - x)$],
+   [$x^{2} sin x$],
+   [${e}^{x} - 1$]
    )
 2.下列命题中不正确的是( )
    #v(0.5em)
@@ -29,21 +29,21 @@
 4.下列不定积分的计算不正确的是( )
    #v(0.5em)
    #choices(
-   integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$",
-   integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$",
-   integral 2^{x} dot 3^{x} dif x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$",
-   integral (x)/(1 + x^2) , dif x = arctan x + C$"
+   [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+   [$integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
+   [$integral 2^{x} dot 3^{x} dif x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$],
+   [$integral (x)/(1 + x^2) , dif x = arctan x + C$]
    )
 5.下列反常积分收敛的是( )
    #v(0.5em)
    #choices(
-   integral_(1)^(+infinity)(dif x)/(sqrt{x})$",
-   integral_(-infinity)^(+infinity) (dif x)/(x^2 + 4x + 5)$",
-   integral_(0)^(1) (dif x)/(x^2)$",
-   integral_(-1)^(1) (dif x)/x$"
+   [$integral_(1)^(+infinity)(dif x)/(sqrt{x})$],
+   [$integral_(-infinity)^(+infinity) (dif x)/(x^2 + 4x + 5)$],
+   [$integral_(0)^(1) (dif x)/(x^2)$],
+   [$integral_(-1)^(1) (dif x)/x$]
    )
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) [if] -1 < x < 0, a sec x + 1 [if] x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank().  
+6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) " if " -1 < x < 0, a sec x + 1 " if " x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank().
 7. 已知参数方程  ${ x = ln (1 + t^2), y = t - arctan t, }$  则  $d y/d x =$  
 8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为  
 9. 曲线  $y = 4x - x^{2}$  在其顶点处的曲率  $k =$  
@@ -59,7 +59,7 @@
    #answer-space
 15. 求  $integral_(0)^(pi) x^{2} |cos x| , dif x$ .
    #answer-space
-16. 设函数  $f(x) = cases( 1 + x^2 [if] x < 0, e^(-x) [if] x >= 0 )$  求  $integral_(1)^(3) f(x - 2) , dif x$.
+16. 设函数  $f(x) = cases( 1 + x^2 " if " x < 0, e^(-x) " if " x >= 0 )$  求  $integral_(1)^(3) f(x - 2) , dif x$.
    #answer-space
 17. 求曲线  $y = x^4 (12 ln x - 7)$  的凹凸区间及拐点
    #answer-space

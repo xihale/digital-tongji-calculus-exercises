@@ -1,21 +1,9 @@
-#import [../template.typ]: chapter, section, subsection, choices, answer-space
+#import "../template.typ": chapter, section, subsection, choices, answer-space
 
 #let exams = [
   // 模拟卷标题
-  #block(text(weight: [bold], size: 16pt)[高等数学(上册)期末测试模拟卷(一)])
+  #block(text(weight: "bold", size: 16pt)[高等数学(上册)期末测试模拟卷(一)])
   
   // 模拟卷一
-  #include [模拟卷一.typ]
-  #pagebreak()
-  
-  // 模拟卷二
-  #include [模拟卷二.typ]
-  #pagebreak()
-  
-  // 真题一
-  #include [真题一.typ]
-  #pagebreak()
-  
-  // 真题二
-  #include [真题二.typ]
+  #include "模拟卷一.typ"
 ]

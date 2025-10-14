@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第三节 定积分的换元积分法和分部积分法]
 #subsection[一、判断题(如果错误，请加以改正)]

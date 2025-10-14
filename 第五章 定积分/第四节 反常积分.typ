@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第四节 反常积分]
 #subsection[一、判断题(如果错误，请加以改正)]
@@ -22,5 +22,5 @@
 #subsection[三、证明题]
 6.(附加题)证明：若函数  $f(x)$  在区间  $(-infinity, +infinity)$  上连续，且  $integral_(-infinity)^(+infinity) f(x) , dif x$  收敛，则  $forall x in (-infinity, +infinity)$ ，恒有
 $$
-(d/dx) integral_ (- infinity) ^ {x} f (t) diff t = f (x),   (d/dx) integral_ {x} ^ {+ infinity} f (t) diff t = - f (x).
+(d/d x) integral_ (- infinity) ^ {x} f (t) diff t = f (x),   (d/d x) integral_ {x} ^ {+ infinity} f (t) diff t = - f (x).
 $$

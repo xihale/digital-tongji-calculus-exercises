@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第四节 有理函数的积分]
 #subsection[一、判断题(如果错误，请加以改正)]

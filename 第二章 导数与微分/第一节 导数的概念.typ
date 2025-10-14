@@ -1,3 +1,5 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[第一节 导数的概念]
 #subsection[一、选择题]
 1. 设函数  $f(x) = x(x - 1)(x + 2)(x - 3)dots (x + 100)$ ，则  $f'(1) = (quad)$ .

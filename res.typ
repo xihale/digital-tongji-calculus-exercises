@@ -1,5 +1,5 @@
-#set page(paper: [a4], margin: 2cm)
-#set text(size: 14pt, font: ([LXGW WenKai], [STKaiti]))
+#set page(paper: "a4", margin: 2cm)
+#set text(size: 14pt, font: ("LXGW WenKai", "STKaiti"))
 
 // 内联选项宏：自动添加 A., B., C., … 前缀
 #let choice-text(item) = if type(item) == str { text(item) } else { item }
@@ -12,10 +12,10 @@
 	// #set math.equation(numbering: [(1)]) // 注释掉以使用默认行内公式
 	// #show math.equation: it => align(center)[#it] // 注释掉，恢复默认行内显示
 	// 标题样式
-	#let title(content) = block(text(weight: [bold], size: 20pt, content))
-	#let chapter(content) = block(text(weight: [bold], size: 16pt, content))
-	#let section(content) = block(text(weight: [bold], size: 14pt, content))
-	#let subsection(content) = block(text(weight: [bold], size: 12pt, content))
+#let title(content) = block(text(weight: "bold", size: 20pt, content))
+#let chapter(content) = block(text(weight: "bold", size: 16pt, content))
+#let section(content) = block(text(weight: "bold", size: 14pt, content))
+#let subsection(content) = block(text(weight: "bold", size: 12pt, content))
 	// 答题空间
 	#let answer-space = v(3cm)
    #let blank = answer-space

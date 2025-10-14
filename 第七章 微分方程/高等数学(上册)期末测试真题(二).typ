@@ -1,14 +1,14 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[高等数学(上册)期末测试真题(二)]
 #subsection[一、选择题(每小题3分，共30分)]
 1. 若  $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则( ).
    #v(0.5em)
    #choices(
-   a = 0, b in R$",
-   a = 0, b = 1$",
-   a in R, b = 1$",
-   a in R, b in R$"
+   [$a = 0, b in R$],
+   [$a = 0, b = 1$],
+   [$a in R, b = 1$],
+   [$a in R, b in R$]
    )
 2.当  $x->infinity$  时，  $x cos x$  is( )
    #v(0.5em)
@@ -21,18 +21,18 @@
 3. 设函数  $y = e^(2x - 1)$ ，则  $y^(20)(1) = (quad)$ .
    #v(0.5em)
    #choices(
-   2^20 e$",
-   2^20 e^(-1)$",
-   2^20$",
+   [$2^20 e$],
+   [$2^20 e^(-1)$],
+   [$2^20$],
    [e]
    )
 4.当  $x->0$  时，( )是  $x - sin x$  的同阶无穷小
    #v(0.5em)
    #choices(
-   x + tan x$",
-   x tan x$",
-   x^2 + tan x$",
-   x^2 tan x$"
+   [$x + tan x$],
+   [$x tan x$],
+   [$x^2 + tan x$],
+   [$x^2 tan x$]
    )
 5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的( ).
    #v(0.5em)
@@ -45,42 +45,42 @@
 6. 设函数  $y = f(x)$  具有二阶导数，且  $f'(x) > 0, f''(x) < 0, Delta x$  为自变量在点  $x_0$  处的增量， $Delta y$  与  $d y$  分别为  $f(x)$  在点  $x_0$  处对应的增量与微分。若  $Delta x > 0$ ，则( ).
    #v(0.5em)
    #choices(
-   0 <   d y <   Delta y$",
-   0 < Delta y < d y$",
-   Delta y < d y < 0$",
-   d y < Delta y < 0$"
+   [$0 <   d y <   Delta y$],
+   [$0 < Delta y < d y$],
+   [$Delta y < d y < 0$],
+   [$d y < Delta y < 0$]
    )
 7. 设函数  $f(x)$  的一个原函数为  $x e^(-x)$ ，则  $f'(x) = (quad)$ .
    #v(0.5em)
    #choices(
-   x e^(-x)$",
-   (1 - x) e^(-x)$",
-   (2 + x) e^(-x)$",
-   (-2 + x) e^(-x)$"
+   [$x e^(-x)$],
+   [$(1 - x) e^(-x)$],
+   [$(2 + x) e^(-x)$],
+   [$(-2 + x) e^(-x)$]
    )
 8. 设函数  $f(x)$  在点  $x_0$  的某邻域内可导，且  $lim_(x -> x_0) (f'(x))/(x - x_0) = a (a < 0)$ ，则( ).
    #v(0.5em)
    #choices(
-   f(x_0)$  是  $f(x)$  的极小值",
-   f(x_0)$  是  $f(x)$  的极大值",
+   [$f(x_0)$  是  $f(x)$  的极小值],
+   [$f(x_0)$  是  $f(x)$  的极大值],
    [在点  $x_0$  的某邻域内  $f(x)$  单调增加],
    [在点  $x_0$  的某邻域内  $f(x)$  单调减少]
    )
 9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) , dif t = (quad)$ .
    #v(0.5em)
    #choices(
-   f(2)$",
-   f(1)$",
-   {2f}(2)$",
-   2f(1)$"
+   [$f(2)$],
+   [$f(1)$],
+   [${2f}(2)$],
+   [$2f(1)$]
    )
 10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) , dif t + ln 2$ ，则  $f(x) = (quad)$ .
     #v(0.5em)
     #choices(
-    e^{x} ln 2$",
-    {e}^{2x} ln 2$",
-    {e}^{x} + ln 2$",
-    e^{2x} + ln 2$"
+    [${e}^{x} ln 2$],
+    [${e}^{2x} ln 2$],
+    [${e}^{x} + ln 2$],
+    [${e}^{2x} + ln 2$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
 11.  $lim_(x->0^+)(1 + sin x)^(ln x) = underline(quad)$  

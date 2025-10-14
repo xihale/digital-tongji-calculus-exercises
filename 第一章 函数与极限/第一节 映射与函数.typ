@@ -1,3 +1,5 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[第一节 映射与函数]
 #subsection[一、判断题]
 1.  $f(x) = x,g(x) = sqrt(x^2)$  是两个相同的函数. ( )

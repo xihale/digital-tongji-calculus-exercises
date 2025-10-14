@@ -1,3 +1,5 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[参考答案与提示]]
 #subsection[第五章 定积分]
 *第一节 定积分的概念与性质*
@@ -47,7 +49,7 @@
 二、3.三.  $4.y = C x^2$ .  
 三、5.  $C_1 = 0, C_2 = 1$ . 6.  $y' = x^2$ .  
 7. (1)  $y = e^(C x)$ ; (2)  $(e^x + 1)(e^y - 1) = C$ .  
-8. (1)  $cos x - sqrt(2) cos y = 0$ ; (2)  $ln y = tan(x/2)$ . 9.  $xy = 6$ .  
+8. (1)  $cos x - sqrt(2) cos y = 0$ ; (2)  $ln y = tan(x/2)$ . 9.  $x y = 6$ .  
 四、10.6 h.  
 五、11.略.
 *第三节 齐次方程*
@@ -62,7 +64,7 @@
 $$
 6. y = 2 (e ^ x - x - 1).
 $$
-7. (1)  $y = 1/x e^(C x)$ ; (2)  $2x^2 y^2 ln |y| - 2xy - 1 = C x^2 y^2$ .
+7. (1)  $y = 1/x e^(C x)$ ; (2)  $2x^2 y^2 ln |y| - 2x y - 1 = C x^2 y^2$ .
 *第五节 可降阶的高阶微分方程*
 一、1.  $y = -1/4 sin 2x + cos x + C_1 x + C_2$ .  
 2. $y = 1/8 e ^ {2 x} + C _ {1} x ^ {2} + C _ {2} x + C _ {3}.$ 
@@ -110,7 +112,7 @@ $$
 18. 提示：由已知得 $integral_0^pi [f(x) + f''(x)] sin x d x = f(0) + 1$ , 故 $f(0) = 2$ .  
 19. 提示: 对应齐次微分方程的通解为 $Y = C_1 e^x + C_2 e^(-x)$ . 设非齐次微分方程的特解为 $y^* = e^x(a x^2 + Bx)$ , 代入原微分方程, 解得 $A = 1, B = -1$ . 设原微分方程的通解为 $y = C_1 e^x + C_2 e^(-x) + e^x(x^2 - x)$ , 代入初值条件得 $C_1 = 1, C_2 = -1$ ，故所求特解为 $y = e^x (x^2 - x + 1) - e^(-x)$ .  
 20. 提示: 方程两端同时对  $x$  求导数, 得 $4 x^3 - y - x y' - y' e^x - y e^x = 0$ , 解得 $y' = (4x^3 - y(e^x + 1))/(e^x + x)$ . 由已知可得，当  $x = 0$  时  $y(0) = -1$ ，代入得  $y'(0) = 2$ . 再对上式求导，代入 $x=0, y(0)=-1, y'(0)=2$ 可得 $y''(0) = -7$ .  
-21. 提示：令  $x = sin t$ ，于是有原式  $= integral_(pi/4)^(pi/2) cot^2 t d t = integral_(pi/4)^(pi/2)(csc^2 t - 1) dt = (-cot t - t) |_(pi/4)^(pi/2) = 1 - pi/4$ .
+21. 提示：令  $x = sin t$ ，于是有原式  $= integral_(pi/4)^(pi/2) cot^2 t d t = integral_(pi/4)^(pi/2)(csc^2 t - 1) d t = (-cot t - t) |_(pi/4)^(pi/2) = 1 - pi/4$ .
 四、22. 提示：(1)  $V_1 = integral_a^2 pi (2x^2)^2 d x = (4 pi)/5 (32 - a^5)$ . (2)  $V_2 = pi a^2 dot 2a^2 - integral_0^(2a^2) pi (y/2) d y = pi a^4$ . (3)  $V = V_1 + V_2 = (4 pi)/5 (32 - a^5) + pi a^4$ , 于是有 $V' = 4 pi a^3 (1 - a)$ . 因当  $0 < a < 1$  时  $V' > 0$ , 当  $1 < a < 2$  时  $V' < 0$ , 故  $a = 1$  是函数  $V = V_1 + V_2$  唯一的极大值点. 因此, 当  $a = 1$  时,  $V = V_1 + V_2$  取得最大值, 且最大值为 $V = (4 pi)/5 (32 - 1) + pi = (129 pi)/5$ .
 五、23. 提示：由极限的性质和  $lim_(x -> a^+) (f(2x - a))/(x - a)$  存在可得， $lim_(x -> a^+) f(2x - a) = 0$ . 由函数  $f(x)$  在区间  $[a,b]$  上连续可知  $f(a) = 0$ . 由  $f'(x) > 0$  可知， $f(x)$  在  $(a,b)$  内严格单调增加，故有  $f(x) > f(a) = 0, x in (a,b)$ . 构造辅助函数 $F(x) = x^2, G(x) = integral_a^x f(t) d t, x in [a, b]$ . 显然  $F(x), G(x)$  满足柯西中值定理的条件，于是在  $(a, b)$  内至少存在一点  $xi$ ，使得 $(F(b) - F(a))/(G(b) - G(a)) = F'(xi)/G'(xi)$ ，即 $(b^2 - a^2)/(integral_a^b f(t) d t) = (2 xi)/(f(xi))$ .  
 24. 提示：设函数  $f(x) = ln (1 + x)$ ，显然  $f(x)$  在区间  $[0, x]$  上满足拉格朗日中值定理的条件，于是有 $ln (1 + x) - ln (1 + 0) = (1/(1 + xi)) (x - 0) quad (0 <   xi <   x)$ , 即  $ln (1 + x) = x/(1 + xi)$ . 显然  $x/(1 + x) < x/(1 + xi) < x$  成立, 即  $x/(1 + x) < ln (1 + x) < x$  成立.
@@ -122,6 +124,6 @@ $$
 19. 提示：(1)求齐次微分方程的通解 特征方程为  $r^2 - r - 2 = 0$  ，解得  $r_1 = 2, r_2 = -1$  ，故齐次微分方程的通解为 $Y = C _ {1} e ^ {- x} + C _ {2} e ^ {2 x}$ . (2)求非齐次微分方程的特解 设特解为  $y^{*} = (a x + b) e^{x}$  ，代入原微分方程解得  $a = 1, b = 0$  ，故特解为  $y^{*} = x e^{x}$ . 因此，原微分方程的通解为  $y = C_{1} e^{-x} + C_{2} e^{2x} + x e^{x}$ .
 20. 提示：(方法一)利用  $Gamma$  函数的性质，显然 $integral_0^(+infinity) x^2 e^(-x) dif x = Gamma(3) = 2! = 2$ . (方法二)  $integral_0^(+infinity) x^2 e^(-x) dif x = - integral_0^(+infinity) x^2 d(e^(-x)) = -x^2 e^(-x) |_0^(+infinity) + integral_0^(+infinity) e^(-x) bullet 2x diff x = -2 integral_0^(+infinity) x d(e^(-x)) = -2 x e^(-x) |_0^(+infinity) + 2 integral_0^(+infinity) e^(-x) diff x = 2$ .  
 21. 提示：函数  $f(x)$  的定义域为  ${x | x != 0, x in R}$ . 由 $f'(x) = e^(2/x) dot (2 x^2 - 4 x - 6)/x^2 = e^(2/x) dot ((2 x + 2)(x - 3))/x^2 = 0$ , 解得  $x_{1} = -1, x_{2} = 3$ . 列表1如下. 表1  <table><tr><td>x</td><td>(−∞, −1)</td><td>−1</td><td>(−1,0)</td><td>0</td><td>(0,3)</td><td>3</td><td>(3,+∞)</td></tr><tr><td>f' (x)</td><td>+</td><td></td><td>-</td><td></td><td>-</td><td></td><td>+</td></tr><tr><td>f(x)</td><td>增区间</td><td>极大值 e-2</td><td>减区间</td><td></td><td>减区间</td><td>极小值 9e2/3</td><td>增区间</td></tr></table> 因为 $lim_(x -> 0^+) (2x + 3) e^(2/x) = + infinity$ , 所以铅直渐近线为  $x = 0$ . 又因为 $k = lim_(x -> infinity) (2 + 3/x) e^(2/x) = 2$ , $b = lim_(x -> infinity) [(2x + 3) e^(2/x) - 2x] = lim_(x -> infinity) 2x (e^(2/x) - 1) + lim_(x -> infinity) 3 e^(2/x) = 7$ , 所以斜渐近线为  $y = 2x + 7$ .
-四、22. 提示：(1)当  $x != 0$  时，因为  $(xf'(x) - f(x))/x^2 = -3$ ，即  $(f(x)/x)' = -3$ ，所以 $f(x) = -3 x^2 + C x$ . 又 $2 = integral_0^1 f(x) d x = integral_0^1 (-3 x^2 + C x) dx = -1 + C/2$ , 解得  $C = 6$  ，故 $f(x) = -3 x^2 + 6 x$ . (2)旋转体的体积 $V = integral_0^1 pi f^2(x) d x = integral_0^1 pi (-3 x^2 + 6 x)^2 dx = (24 pi)/5$ .
+四、22. 提示：(1)当  $x != 0$  时，因为  $(xf'(x) - f(x))/x^2 = -3$ ，即  $(f(x)/x)' = -3$ ，所以 $f(x) = -3 x^2 + C x$ . 又 $2 = integral_0^1 f(x) d x = integral_0^1 (-3 x^2 + C x) d x = -1 + C/2$ , 解得  $C = 6$  ，故 $f(x) = -3 x^2 + 6 x$ . (2)旋转体的体积 $V = integral_0^1 pi f^2(x) d x = integral_0^1 pi (-3 x^2 + 6 x)^2 d x = (24 pi)/5$ .
 五、23. 提示：(1)构造函数  $F(x) = f(x) - 1 + x$ ，所以有 $F(0) = f(0) - 1 = -1, quad F(1) = f(1) - 1 + 1 = 1$ . 由零点定理知，存在  $xi in (0,1)$ ，使得  $F(xi) = 0$ ，即  $f(xi) = 1 - xi$ . (2) 在区间  $(0, xi)$  内，利用拉格朗日中值定理，有 $f'(eta_1) = (f(xi) - f(0))/(xi - 0) = (1 - xi)/xi$ . 在区间  $(xi, 1)$  内，利用拉格朗日中值定理，有 $f'(eta_2) = (f(1) - f(xi))/(1 - xi) = xi/(1 - xi)$ . 因此，存在不同的  $eta_1, eta_2 in (0, 1)$ ，使得  $f'(eta_1) f'(eta_2) = 1$ .  
 24. 提示：(1)方程两端同时对  $x$  求导数，得 $cos y - x sin y dot y' + cos x + e^y dot y' = 0$ , 所以 $d y/d x = (cos y + cos x)/(x sin y - e^y)$ . (2) 由  $x cos y + sin x + e^y = 1$  知  $f(0) = 0$ , 再由  $d y/d x = (cos y + cos x)/(x sin y - e^y)$  知  $f'(0) = -2$ , 于是 $lim_(x->0) [(1 - f(x))/(1 + f(x))]^(1/x) = lim_(x->0) [1 + (-2 f(x))/(1 + f(x))]^((1 + f(x))/(-2 f(x)) dot (-2 f(x))/(1 + f(x)) dot 1/x) = e^(lim_(x + x f(x)) - 2 f(x)) = e^(-2 dot lim_(x -> 0) (f'(x))/(1 + f(x) + x f'(x))) = e^4$ .

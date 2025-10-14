@@ -1,23 +1,23 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第二节 数列的极限]
 #subsection[一、选择题]
 1.下列数列  ${x_n}$  中，收敛的是( )
 			 #v(0.5em)
 			 #choices(
-				$x_n = (-1)^n (n - 1)/n$,
-				$x_n = n/(n + 1)$,
-				$x_n = sin (n pi/2)$,
-				$x_n = n - (-1)^n$
+				[$x_n = (-1)^n (n - 1)/n$],
+				[$x_n = n/(n + 1)$],
+				[$x_n = sin (n pi/2)$],
+				[$x_n = n - (-1)^n$]
 			 )
 			 #answer-space
 2.下列数列  ${x_n}$  中，发散的是( ).
 			 #v(0.5em)
 			 #choices(
-				$x_n = 1/(2^n)$,
-				$x_n = 5 + (-1)^n/n^2$,
-				$x_n = (2n - 1)/(3n + 2)$,
-				$x_n = (1 + (-1)^n)/2$
+				[$x_n = 1/(2^n)$],
+				[$x_n = 5 + (-1)^n/n^2$],
+				[$x_n = (2n - 1)/(3n + 2)$],
+				[$x_n = (1 + (-1)^n)/2$]
 			 )
 			 #answer-space
 #subsection[二、填空题]

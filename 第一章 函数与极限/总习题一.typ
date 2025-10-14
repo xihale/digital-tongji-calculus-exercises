@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[总习题一]
 #subsection[一、选择题]
@@ -29,7 +29,7 @@
 #subsection[二、填空题]
 4.数列  ${x_n}$  有界是  ${x_n}$  收敛的 条件  
 5. 函数  $f(x) = (x - 2)/ln |x - 1|$  的一个无穷间断点是  
-6. 设函数  $f(x) = cases( sqrt(x^2 - 1) [if] x < -1, b [if] x = -1, a + arccos x [if] -1 < x <= 1 )$  在点  $x = -1$  处连续，则  $a =$  #blank， $b =$  #blank.  
+6. 设函数  $f(x) = cases( sqrt(x^2 - 1) " if " x < -1, b " if " x = -1, a + arccos x " if " -1 < x <= 1 )$  在点  $x = -1$  处连续，则  $a =$  #blank， $b =$  #blank.  
 7. 函数  $f(x) = (2^(1/x) - 1)/(2^(1/x) + 1)$  的间断点是 #blank，是第 #blank 类间断点。
 #subsection[三、计算题]
 8. 求下列极限：

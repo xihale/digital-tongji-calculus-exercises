@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[第二节 换元积分法(1)]
 #subsection[一、判断题(如果错误，请加以改正)]

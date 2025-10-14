@@ -1,3 +1,5 @@
+#import "../template.typ": answer-space, blank, choices, section, subsection
+
 #section[总习题七]
 #subsection[一、选择题]
 1. 设非齐次线性微分方程  $y'' + P(x) y = Q(x)$  有两个不同的解  $y_{1}(x)$  与  $y_{2}(x)$ ， $C$  为任意常数，则该微分方程的通解是( ).
@@ -33,3 +35,4 @@
    #answer-space
 #pagebreak()
 #align(center)[
+]

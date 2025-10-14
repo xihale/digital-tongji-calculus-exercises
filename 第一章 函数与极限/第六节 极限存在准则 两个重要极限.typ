@@ -1,4 +1,4 @@
-#import [../template.typ]: answer-space, blank, choices, section, subsection
+#import "../template.typ": answer-space, blank, choices, section, subsection
 
 #section[第六节 极限存在准则 两个重要极限]
 #subsection[一、选择题]

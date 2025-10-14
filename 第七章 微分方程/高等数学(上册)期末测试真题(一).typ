@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space, blank
+#import "../template.typ": section, subsection, choices, answer-space, blank
 
 #section[高等数学(上册)期末测试真题(一)]
 #subsection[一、选择题(每小题3分，共30分)]
@@ -18,7 +18,7 @@
    [同阶无穷小, 但不是等价无穷小],
    [低阶无穷小]
    )
-3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) [if] x < 0, (1 + x)^x [if] x >= 0 )$  则  $x = 0$  是  $f(x)$  的( ).
+3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) " if " x < 0, (1 + x)^x " if " x >= 0 )$  则  $x = 0$  是  $f(x)$  的( ).
    #v(0.5em)
    #choices(
    [跳跃间断点],
@@ -97,7 +97,7 @@
     #answer-space
 19. 求微分方程  $y'' - y' = 4x e^x$  满足初值条件  $y|_(x=0) = 0, y'|_(x=0) = 1$  的特解.  
     #answer-space
-20. 设函数  $y = y(x)$  由方程  $x^4 - xy - y e^x = 1$  所确定，求  $d^2 y/d x^2 |_(x=0)$ .  
+20. 设函数  $y = y(x)$  由方程  $x^4 - x y - y e^x = 1$  所确定，求  $d^2 y/d x^2 |_(x=0)$ .  
     #answer-space
 21. 求  $integral_(sqrt(2/x))^(1) (sqrt(1 - x^2))/(x^2) , dif x$.
     #answer-space
@@ -113,7 +113,7 @@
 #subsection[五、选答题(7分)(考生可从下面2个题中任选1个作答，多做不多得分)]
 23. 设函数  $f(x)$  在区间  $[a, b]$  上连续，在  $(a, b)$  内可导，又  $f'(x) > 0$ ，且极限  $lim_(x -> a^+) (f(2x - a))/(x - a)$  存在，证明：在  $(a, b)$  内存在一点  $xi$ ，使得
 $$
-(frac(b^2 - a^2, integral_a^b f(x) dx) = frac(2*xi, f(xi)))
+(frac(b^2 - a^2, integral_a^b f(x) d x) = frac(2*xi, f(xi)))
 $$
 24. 证明: 当  $x > 0$  时,  $x/(1 + x) < ln (1 + x) < x$ .
 #pagebreak()

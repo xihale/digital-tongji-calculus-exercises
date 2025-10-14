@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第二节 微积分基本公式]
 #subsection[一、计算题]
@@ -23,7 +23,7 @@
    #answer-space
    (3)  $integral_0^(2pi) |sin x| dif x$;
    #answer-space
-   (4)  $integral_0^(2) f(x) , dif x$ ，其中  $f(x) = cases(x + 1 [if] x <= 1, 1/2 x^2 [if] x > 1)$
+   (4)  $integral_0^(2) f(x) , dif x$ ，其中  $f(x) = cases(x + 1 " if " x <= 1, 1/2 x^2 " if " x > 1)$
    #answer-space
    (5)  $integral_0^2 max {x^2,x^3} dif x$.
    #answer-space
@@ -32,7 +32,7 @@
    #answer-space
    (2)  $integral_(-3)^2 f'(x) , dif x$ ;
    #figure(
-     image([images/5-1.jpg], width: 80%),
+     image("images/5-1.jpg", width: 80%),
      caption: [图5-1]
    )
    (3)  $integral_(-3)^2 f''(x) , dif x$ ;

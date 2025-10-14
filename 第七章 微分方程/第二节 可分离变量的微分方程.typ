@@ -1,4 +1,4 @@
-#import [../template.typ]: section, subsection, choices, answer-space
+#import "../template.typ": section, subsection, choices, answer-space
 
 #section[第二节 可分离变量的微分方程]
 #subsection[一、选择题]
@@ -13,10 +13,10 @@
 2.下列方程中( )是一阶微分方程
    #v(0.5em)
    #choices(
-   (y - xy')^2 = x^2 yy''$",
-   (y'' )^2 + 5(y')^4 - y^5 + x^7 = 0$",
-   (x^{2} - y^{2}) dif x + (x^{2} + y^{2}) diff y = 0$",
-   x y'' + y' + y = 0$"
+   [$(y - x y')^2 = x^2 y''$],
+   [$(y'' )^2 + 5(y')^4 - y^5 + x^7 = 0$],
+   [$(x^{2} - y^{2}) dif x + (x^{2} + y^{2}) diff y = 0$],
+   [$x y'' + y' + y = 0$]
    )
 #subsection[二、填空题]
 3.  $x y'' + 2x^{2}(y')^{2} + x^{3}y = x^{4} + 1$  是 阶微分方程
@@ -40,4 +40,4 @@
 10. 一个半球体形状的雪堆, 其体积融化率与半球体面积  $A$  成正比, 比例系数  $k > 0$ . 假设在融化过程中雪堆始终保持半球体形状, 已知半径为  $r_0$  的雪堆在开始融化的  $3  h$  内, 融化了其体积的  $7/8$ , 问: 雪堆全部融化需要多少时间?
     #answer-space
 #subsection[五、证明题]
-11. 验证:  $x^{2} - xy + y^{2} = C$  所确定的函数为微分方程  $(x - 2y) y' = 2x - y$  的解.
+11. 验证:  $x^{2} - x y + y^{2} = C$  所确定的函数为微分方程  $(x - 2y) y' = 2x - y$  的解.
