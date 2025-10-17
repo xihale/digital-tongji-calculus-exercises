@@ -1,4 +1,4 @@
-#import "../template.typ": answer-space, blank, choices, section, subsection
+#import "../template.typ": *
 
 #section[参考答案与提示]]
 #subsection[第五章 定积分]
@@ -30,7 +30,7 @@
 *第六章 定积分的应用*
 *第一节 定积分的元素法*
 *第二节 定积分在几何学上的应用*
-一、1.略. 2.  $|x^2 + 2x - x^3| , dif x, integral_(-1)^(2) |x^2 + 2x - x^3| , diff x$ . 3.  $(pi R^2)/(H^2) (H - x)^2 dif x, integral_0^H (pi R^2)/(H^2) (H - x)^2 diff x$ .  
+一、1.略. 2.  $|x^2 + 2x - x^3| dif x, integral_(-1)^(2) |x^2 + 2x - x^3| dif x$ . 3.  $(pi R^2)/(H^2) (H - x)^2 dif x, integral_0^H (pi R^2)/(H^2) (H - x)^2 dif x$ .  
 二、4.  $3/2 - ln 2$ . $5.e + 1/e -2$ . $6.16/3 p^2$ . $7.3/2 a^2 pi .$  
 8.  $V_x = 128/7 pi, V_y = 64/5 pi$ . 9.  $3/10 pi$ . 10.  $1 + 1/2 ln(3/2)$ .  
 11.  $V_x = 2 pi^2, V_y = 4 pi/3$ .
@@ -67,7 +67,7 @@ $$
 7. (1)  $y = 1/x e^(C x)$ ; (2)  $2x^2 y^2 ln |y| - 2x y - 1 = C x^2 y^2$ .
 *第五节 可降阶的高阶微分方程*
 一、1.  $y = -1/4 sin 2x + cos x + C_1 x + C_2$ .  
-2. $y = 1/8 e ^ {2 x} + C _ {1} x ^ {2} + C _ {2} x + C _ {3}.$ 
+2. $y = 1/8 e ^ {2 x} + C _ 1 x ^ 2 + C _ 2 x + C _ 3.$ 
 二、3. (1)  $y = x arctan x - 1/2 ln(1 + x^2) + C_1 x + C_2$ ; (2)  $y^3 = C_1 x + C_2$ .  
 4. (1)  $y = ln sec x$ ; (2)  $y = ln(e^x + e^(-x)) - ln 2$ .  
 三、5.  $s = (mg)/c (t + (m/c) e^(-c t/m) - (m/c))$
@@ -120,10 +120,11 @@ $$
 一、1.B. 2. D. 3. A. 4. D. 5.B. 6. B. 8.B. 9.C. 10. B.
 二、11.1. 12. -3. 13.  $2/3$ 14.2. 15.  $9x - 2y = 3$ 16.  $y - ln (x + y + 1) = C$  或  $x = C e^y - y - 1$
 三、17. 提示：原式  $= lim_(x -> 0^+) e^(ln(tan 3x)^(1/(2 ln x)))) = e^(lim_(x -> 0^+) (ln tan 3x)/(2 ln x)) = e^(lim_(x -> 0^+) ((1/tan 3x) dot 3 sec^2 3x)/(2/x)) = e^(1/2)$ .  
-18. 提示：令  $sqrt(3x + 2) = u, x = (1/3)(u^2 - 2)$ ， $dif x = (2u)/3 diff u$ ，则原式  $= integral ((1 - u)/(1 + u)) dot (2u)/3 dif u = (2/3) integral ((u + 1) - 2 + (1 - u^2))/(1 + u) diff u = (4/3) sqrt(3x + 2) - x - (4/3) ln |1 + sqrt(3x + 2)| + C$ .  
-19. 提示：(1)求齐次微分方程的通解 特征方程为  $r^2 - r - 2 = 0$  ，解得  $r_1 = 2, r_2 = -1$  ，故齐次微分方程的通解为 $Y = C _ {1} e ^ {- x} + C _ {2} e ^ {2 x}$ . (2)求非齐次微分方程的特解 设特解为  $y^{*} = (a x + b) e^{x}$  ，代入原微分方程解得  $a = 1, b = 0$  ，故特解为  $y^{*} = x e^{x}$ . 因此，原微分方程的通解为  $y = C_{1} e^{-x} + C_{2} e^{2x} + x e^{x}$ .
-20. 提示：(方法一)利用  $Gamma$  函数的性质，显然 $integral_0^(+infinity) x^2 e^(-x) dif x = Gamma(3) = 2! = 2$ . (方法二)  $integral_0^(+infinity) x^2 e^(-x) dif x = - integral_0^(+infinity) x^2 d(e^(-x)) = -x^2 e^(-x) |_0^(+infinity) + integral_0^(+infinity) e^(-x) bullet 2x diff x = -2 integral_0^(+infinity) x d(e^(-x)) = -2 x e^(-x) |_0^(+infinity) + 2 integral_0^(+infinity) e^(-x) diff x = 2$ .  
-21. 提示：函数  $f(x)$  的定义域为  ${x | x != 0, x in R}$ . 由 $f'(x) = e^(2/x) dot (2 x^2 - 4 x - 6)/x^2 = e^(2/x) dot ((2 x + 2)(x - 3))/x^2 = 0$ , 解得  $x_{1} = -1, x_{2} = 3$ . 列表1如下. 表1  <table><tr><td>x</td><td>(−∞, −1)</td><td>−1</td><td>(−1,0)</td><td>0</td><td>(0,3)</td><td>3</td><td>(3,+∞)</td></tr><tr><td>f' (x)</td><td>+</td><td></td><td>-</td><td></td><td>-</td><td></td><td>+</td></tr><tr><td>f(x)</td><td>增区间</td><td>极大值 e-2</td><td>减区间</td><td></td><td>减区间</td><td>极小值 9e2/3</td><td>增区间</td></tr></table> 因为 $lim_(x -> 0^+) (2x + 3) e^(2/x) = + infinity$ , 所以铅直渐近线为  $x = 0$ . 又因为 $k = lim_(x -> infinity) (2 + 3/x) e^(2/x) = 2$ , $b = lim_(x -> infinity) [(2x + 3) e^(2/x) - 2x] = lim_(x -> infinity) 2x (e^(2/x) - 1) + lim_(x -> infinity) 3 e^(2/x) = 7$ , 所以斜渐近线为  $y = 2x + 7$ .
+18. 提示：令  $sqrt(3x + 2) = u, x = (1/3)(u^2 - 2)$ ， $dif x = (2u)/3 dif u$ ，则原式  $= integral ((1 - u)/(1 + u)) dot (2u)/3 dif u = (2/3) integral ((u + 1) - 2 + (1 - u^2))/(1 + u) dif u = (4/3) sqrt(3x + 2) - x - (4/3) ln |1 + sqrt(3x + 2)| + C$ .  
+19. 提示：(1)求齐次微分方程的通解 特征方程为  $r^2 - r - 2 = 0$  ，解得  $r_1 = 2, r_2 = -1$  ，故齐次微分方程的通解为 $Y = C _ 1 e ^ {- x} + C _ 2 e ^ {2 x}$ . (2)求非齐次微分方程的特解 设特解为  $y^* = (a x + b) e^x$  ，代入原微分方程解得  $a = 1, b = 0$  ，故特解为  $y^* = x e^x$ . 因此，原微分方程的通解为  $y = C_1 e^{-x} + C_2 e^{2x} + x e^x$ .
+20. 提示：(方法一)利用  $Gamma$  函数的性质，显然 $integral_0^(+infinity) x^2 e^(-x) dif x = Gamma(3) = 2! = 2$ . (方法二)  $integral_0^(+infinity) x^2 e^(-x) dif x = - integral_0^(+infinity) x^2 d(e^(-x)) = -x^2 e^(-x) |_0^(+infinity) + integral_0^(+infinity) e^(-x) bullet 2x dif x = -2 integral_0^(+infinity) x d(e^(-x)) = -2 x e^(-x) |_0^(+infinity) + 2 integral_0^(+infinity) e^(-x) dif x = 2$ .  
+21. 提示：函数  $f(x)$  的定义域为  $cases(x | x != 0, x in R)$ . 由 $f'(x) = e^(2/x) dot (2 x^2 - 4 x - 6)/x^2 = e^(2/x) dot ((2 x + 2)(x - 3))/x^2 = 0$ , 解得  $x_1 = -1, x_2 = 3$ . 列表1如下. 表1  <table><tr><td>x</td><td>(−∞, −1)</td><td>−1</td><td>(−1,0)</td><td>0</td><td>(0,3)</td><td>3</td><td>(3,+∞)</td></tr><tr><td>f' (x)</td><td>+</td><td></td><td>-</td><td></td><td>-</td><td></td><td>+</td></tr><tr><td>f(x)</td><td>增区间</td><td>极大值 e-2</td><td>减区间</td><td></td><td>减区间</td><td>极小值 9e2/3</td><td>增区间</td></tr></table> 因为 $lim_(x -> 0^+) (2x + 3) e^(2/x) = + infinity$ , 所以铅直渐近线为  $x = 0$ . 又因为 $k = lim_(x -> infinity) (2 + 3/x) e^(2/x) = 2$ , $b = lim_(x -> infinity) [(2x + 3) e^(2/x) - 2x] = lim_(x -> infinity) 2x (e^(2/x) - 1) + lim_(x -> infinity) 3 e^(2/x) = 7$ , 所以斜渐近线为  $y = 2x + 7$ .
 四、22. 提示：(1)当  $x != 0$  时，因为  $(xf'(x) - f(x))/x^2 = -3$ ，即  $(f(x)/x)' = -3$ ，所以 $f(x) = -3 x^2 + C x$ . 又 $2 = integral_0^1 f(x) d x = integral_0^1 (-3 x^2 + C x) d x = -1 + C/2$ , 解得  $C = 6$  ，故 $f(x) = -3 x^2 + 6 x$ . (2)旋转体的体积 $V = integral_0^1 pi f^2(x) d x = integral_0^1 pi (-3 x^2 + 6 x)^2 d x = (24 pi)/5$ .
 五、23. 提示：(1)构造函数  $F(x) = f(x) - 1 + x$ ，所以有 $F(0) = f(0) - 1 = -1, quad F(1) = f(1) - 1 + 1 = 1$ . 由零点定理知，存在  $xi in (0,1)$ ，使得  $F(xi) = 0$ ，即  $f(xi) = 1 - xi$ . (2) 在区间  $(0, xi)$  内，利用拉格朗日中值定理，有 $f'(eta_1) = (f(xi) - f(0))/(xi - 0) = (1 - xi)/xi$ . 在区间  $(xi, 1)$  内，利用拉格朗日中值定理，有 $f'(eta_2) = (f(1) - f(xi))/(1 - xi) = xi/(1 - xi)$ . 因此，存在不同的  $eta_1, eta_2 in (0, 1)$ ，使得  $f'(eta_1) f'(eta_2) = 1$ .  
-24. 提示：(1)方程两端同时对  $x$  求导数，得 $cos y - x sin y dot y' + cos x + e^y dot y' = 0$ , 所以 $d y/d x = (cos y + cos x)/(x sin y - e^y)$ . (2) 由  $x cos y + sin x + e^y = 1$  知  $f(0) = 0$ , 再由  $d y/d x = (cos y + cos x)/(x sin y - e^y)$  知  $f'(0) = -2$ , 于是 $lim_(x->0) [(1 - f(x))/(1 + f(x))]^(1/x) = lim_(x->0) [1 + (-2 f(x))/(1 + f(x))]^((1 + f(x))/(-2 f(x)) dot (-2 f(x))/(1 + f(x)) dot 1/x) = e^(lim_(x + x f(x)) - 2 f(x)) = e^(-2 dot lim_(x -> 0) (f'(x))/(1 + f(x) + x f'(x))) = e^4$ .
+24. 提示：(1)方程两端同时对  $x$  求导数，得 $cos y - x sin y dot y' + cos x + e^y dot y' = 0$ , 所以 $(d y)/(d x = (cos y + cos x)/(x sin y - e^y))$ . (2) 由  $x cos y + sin x + e^y = 1$  知  $f(0) = 0$ , 再由  $(d y)/(d x = (cos y + cos x)/(x sin y - e^y))$  知  $f'(0) = -2$ , 于是 $lim_(x->0) [(1 - f(x))/(1 + f(x))]^(1/x) = lim_(x->0) [1 + (-2 f(x))/(1 + f(x))]^((1 + f(x))/(-2 f(x)) dot (-2 f(x))/(1 + f(x)) dot 1/x) = e^(lim_(x + x f(x)) - 2 f(x)) = e^(-2 dot lim_(x -> 0) (f'(x))/(1 + f(x) + x f'(x))) = e^4$ .
+#answer-space

@@ -1,8 +1,8 @@
-#import "../template.typ": answer-space, blank, choices, section, subsection
+#import "../template.typ": *
 
 #section[第六节 极限存在准则 两个重要极限]
 #subsection[一、选择题]
-1. $lim_(x->0)(1/x sin x)/(cos x) = ()$
+1. $lim_(x->0)(1/x sin x)/(cos x) (#h(2em))$
   #v(0.5em)
   #choices(
     1,
@@ -10,7 +10,7 @@
     [不存在],
     0,
   )
-2. $lim_(x->infinity)(1 - 1/x)^(2x) = ()$
+2. $lim_(x->infinity)(1 - 1/x)^(2x) (#h(2em))$
   #v(0.5em)
   #choices(
     $2 e$,
@@ -36,7 +36,7 @@
 (6)  $lim_(x->infinity)(1 - 1/x)^(k x) (k in N_+)$.
 #answer-space
 #subsection[四、证明题]
-6. 利用极限存在准则，证明：
+6. 利用极限存在准则，证明：\
   (1)  $lim_(n->infinity)n(1/(n^2 + pi) + 1/(n^2 + 2pi) + dots + 1/(n^2 + n pi)) = 1$;
   #answer-space
   (2) 数列  $sqrt(2), sqrt(2 + sqrt(2)), sqrt(2 + sqrt(2 + sqrt(2))), dots$  的极限存在；

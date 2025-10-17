@@ -1,3 +1,3 @@
-#import "../template.typ": section, subsection, choices, answer-space
+#import "../template.typ": *
 
 #section[第四节 无穷小与无穷大]

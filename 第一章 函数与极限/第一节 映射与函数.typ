@@ -1,17 +1,17 @@
-#import "../template.typ": answer-space, blank, choices, section, subsection
+#import "../template.typ": *
 
 #section[第一节 映射与函数]
 #subsection[一、判断题]
-1.  $f(x) = x,g(x) = sqrt(x^2)$  是两个相同的函数. ( )
+1.  $f(x) = x,g(x) = sqrt(x^2)$  是两个相同的函数. (#h(2em))
    #answer-space
-2.  $f(x) = 1, g(x) = sec^2 x - tan^2 x$  是两个相同的函数. ()
+2.  $f(x) = 1, g(x) = sec^2 x - tan^2 x$  是两个相同的函数. (#h(2em))
    #answer-space
 #subsection[二、选择题]
 3. 设函数  $f(x) = cases(
-		 -sin^3 x & -pi <= x <= 0,
-		 sin^3 x & 0 < x <= pi,
+		 -sin^3 x &"if" -pi <= x <= 0,
+		 sin^3 x &"if" 0 < x <= pi,
 	)$ 
-   则此函数是( ).
+   则此函数是(#h(2em)).
 			#v(0.5em)
 				#choices(
 					[周期函数],
@@ -20,7 +20,7 @@
 					[偶函数]
 				)
 			 #answer-space
-4. 设函数  $f(x) = e^x, g(x) = sin^2 x$ ，则  $f[g(x)] = ( )$ .
+4. 设函数  $f(x) = e^x, g(x) = sin^2 x$ ，则  $f[g(x)] = (#h(2em))$ .
 		 #v(0.5em)
 		 #choices(
 			$e^(sin^2 x)$,

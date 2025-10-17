@@ -1,17 +1,17 @@
-#import "../template.typ": section, subsection, choices, answer-space
+#import "../template.typ": *
 
 #section[第二节 数列的极限]
 #subsection[一、选择题]
-1.下列数列  ${x_n}$  中，收敛的是( )
+1.下列数列  ${x_n}$  中，收敛的是(#h(2em))
 			 #v(0.5em)
 			 #choices(
 				[$x_n = (-1)^n (n - 1)/n$],
 				[$x_n = n/(n + 1)$],
-				[$x_n = sin (n pi/2)$],
+				[$x_n = sin (pi/2 n)$],
 				[$x_n = n - (-1)^n$]
 			 )
 			 #answer-space
-2.下列数列  ${x_n}$  中，发散的是( ).
+2.下列数列  ${x_n}$  中，发散的是(#h(2em)).
 			 #v(0.5em)
 			 #choices(
 				[$x_n = 1/(2^n)$],

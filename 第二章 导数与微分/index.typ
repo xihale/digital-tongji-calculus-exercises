@@ -1,4 +1,4 @@
-#import "../template.typ": answer-space, chapter, choices, section, subsection
+#import "../template.typ": *
 // 章节标题
 #chapter[第二章 导数与微分]
 

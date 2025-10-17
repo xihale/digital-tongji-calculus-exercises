@@ -4,9 +4,9 @@
 #subsection[一、选择题(每小题3分，共30分)]
 1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (#h(2em))$
    #choices(
-   2/3$",
+   [2/3],
    [6],
-   3/2$",
+   [3/2],
    [不存在]
    )
 2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的(#h(2em)).
@@ -16,7 +16,6 @@
    [同阶无穷小, 但不是等价无穷小],
    [低阶无穷小]
    )
-3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的(#h(2em)).
    #choices(
    [跳跃间断点],
    [可去间断点],
@@ -30,50 +29,49 @@
    [有两个实根],
    [有三个实根]
    )
-5. 设  $f'(x) = g(x)$ ，则  $(d)/(d x f(sin^2 x) = (#h(2em)))$ .
    #choices(
-   2g(x) sin x$",
-   g(x) sin 2x$",
-   g(sin^2 x)$",
-   g(sin^2 x) sin 2x$"
+   [$2g(x) sin x$],
+   [$g(x) sin 2x$],
+   [$g(sin^2 x)$],
+   [$g(sin^2 x) sin 2x$]
    )
 6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则(#h(2em)).
    #choices(
-   f(0)$  是  $f(x)$  的极大值",
-   f(0)$  是  $f(x)$  的极小值",
-   (0, f(0))$  是曲线  $y = f(x)$  的拐点",
-   f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点"
+   [$f(0)$  是  $f(x)$  的极大值],
+   [$f(0)$  是  $f(x)$  的极小值],
+   [$(0, f(0))$  是曲线  $y = f(x)$  的拐点],
+   [$f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点]
    )
 7. 设函数  $f(x)$  具有二阶连续导数，其部分图形如图1所示，试确定下列定积分的符号：
    (1)  $integral_(-3)^(2) f(x) dif x$ ;
    (2)  $integral_(-3)^(2) f'(x) dif x$ ;
    #figure(
-     image([images/1.jpg], width: 80%),
+     image("./images/真题一-图1.jpg", width: 80%),
      caption: [图1]
    )
    (3)  $integral_(-3)^(2) f''(x) dif x$ ;
    (4)  $integral_(-3)^(2) f'''(x) dif x$ .
 8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#h(2em)).
    #choices(
-   C_1 y_1 + C_2 y_2 + y_3$",
-   C_1 y_1 + C_2 y_2 - (C_1 + C_2) y_3$",
-   C_1 y_1 + C_2 y_2 - (1 - C_1 - C_2) y_3$",
-   C_1 y_1 + C_2 y_2 + (1 - C_1 - C_2) y_3$"
+   [$C_1 y_1 + C_2 y_2 + y_3$],
+   [$C_1 y_1 + C_2 y_2 - (C_1 + C_2) y_3$],
+   [$C_1 y_1 + C_2 y_2 - (1 - C_1 - C_2) y_3$],
+   [$C_1 y_1 + C_2 y_2 + (1 - C_1 - C_2) y_3$]
    )
 9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为(#h(2em)).
    #choices(
-   1/b - 1/a$",
-   1/a - 1/b$",
-   b - a$",
-   a - b$"
+   [$1/b - 1/a$],
+   [$1/a - 1/b$],
+   [$b - a$],
+   [$a - b$]
    )
 10.下列反常积分收敛的是(#h(2em))
     #v(0.5em)
     #choices(
-    integral_(-infinity)^(+infinity) cos x dif x$",
-    integral_(0)^(+infinity) e^(-2x) dif x$",
-    integral_(-1)^(1) (dif x)/(x^2)$",
-    integral_(1)^(3) (dif x)/(ln x)$"
+    [$integral_(-infinity)^(+infinity) cos x dif x$],
+    [$integral_(0)^(+infinity) e^(-2x) dif x$],
+    [$integral_(-1)^(1) (dif x)/(x^2)$],
+    [$integral_(1)^(3) (dif x)/(ln x)$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
 11. 已知  $lim_(x -> 1) f(x)$  存在，且函数  $f(x) = x^2 + 2x lim_(x -> 1) f(x)$ ，则  $lim_(x -> 1) f(x) =$  
@@ -96,7 +94,7 @@
 #subsection[四、应用题(10分)]
 22. 如图 2 所示, 由抛物线  $y = 2x^2$  与直线  $x = a, x = 2$  及  $y = 0$  所围成的平面图形为  $D_1$ , 由抛物线  $y = 2x^2$  与直线  $x = a$  及  $y = 0$  所围成的平面图形为  $D_2$ , 其中  $0 < a < 2$ .
 #figure(
-  image([images/2.jpg], width: 80%),
+  image("./images/真题一-图2.jpg", width: 80%),
   caption: [图2]
 )
 (1) 试求  $D_1$  绕  $x$  轴旋转一周所得旋转体的体积  $V_1$ ;  
@@ -109,4 +107,3 @@ $$
 $$
 24. 证明: 当  $x > 0$  时,  $x/(1 + x) < ln (1 + x) < x$ .
 #pagebreak()
-#align(center)[

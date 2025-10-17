@@ -1,17 +1,15 @@
-#import "../template.typ": section, subsection, choices, answer-space, blank
+#import "../template.typ": *
 
 #section[第一节 微分中值定理]
 #subsection[一、选择题]
-1. 设函数  $f(x) = sin x$  在区间  $[0, pi]$  上满足罗尔中值定理的条件，则罗尔中值定理结论中的  $xi = (quad)$ .
-   #v(0.5em)
+1. 设函数  $f(x) = sin x$  在区间  $[0, pi]$  上满足罗尔中值定理的条件，则罗尔中值定理结论中的  $xi = (#h(2em))$ .
    #choices(
    [$pi$],
    [$pi/2$],
    [$pi/3$],
    [$pi/4$]
    )
-2. 下列函数中在区间  $[1, e]$  上满足拉格朗日中值定理条件的是( ).
-   #v(0.5em)
+2. 下列函数中在区间  $[1, e]$  上满足拉格朗日中值定理条件的是(#h(2em)).
    #choices(
    [$ln x$],
    [$ln ln x$],

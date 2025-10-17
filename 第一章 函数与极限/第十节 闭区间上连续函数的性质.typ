@@ -1,4 +1,4 @@
-#import "../template.typ": section, subsection, choices, answer-space
+#import "../template.typ": *
 
 #section[第十节 闭区间上连续函数的性质]
 #subsection[一、证明题]

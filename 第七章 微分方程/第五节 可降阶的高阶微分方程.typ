@@ -1,4 +1,4 @@
-#import "../template.typ": answer-space, blank, choices, section, subsection
+#import "../template.typ": *
 
 #section[第五节 可降阶的高阶微分方程]
 #subsection[一、填空题]
@@ -6,11 +6,13 @@
 2. 微分方程  $y'' = e^(2x)$  的通解是
 #subsection[二、计算题]
 3. 求下列微分方程的通解：
-   (1)  $y'' = 1/(1 + x^{2})$
+
+   (1)  $y'' = 1/(1 + x^2)$
    #answer-space
    (2)  $y y'' + 2(y')^2 = 0$.
    #answer-space
 4. 求下列微分方程满足所给初值条件的特解：
+
    (1)  $y'' = e^(2y), y|_(x = 0) = y'|_(x = 0) = 0$;
    #answer-space
    (2)  $y'' + (y')^2 = 1, y|_(x=0) = 0, y'|_(x=0) = 0$.

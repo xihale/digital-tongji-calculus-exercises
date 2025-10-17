@@ -1,9 +1,8 @@
-#import "../template.typ": section, subsection, choices, answer-space
+#import "../template.typ": *
 
 #section[第二节 函数的求导法则]
 #subsection[一、选择题]
-1. 设在点  $x_0$  处函数  $f(x)$  可导， $g(x)$  不可导，则在点  $x_0$  处( ).
-   #v(0.5em)
+1. 设在点  $x_0$  处函数  $f(x)$  可导， $g(x)$  不可导，则在点  $x_0$  处(#h(2em)).
    #choices(
    [ $f(x) + g(x)$  必可导],
    [ $f(x)g(x)$  必不可导],
@@ -37,11 +36,11 @@
    #answer-space
    (7)  $y = x arcsin(x/2) + sqrt(4 - x^2)$ .
    #answer-space
-5. 设函数  $f(x)$  可导，求函数  $y = f(sin^2 x) + f(cos^2 x)$  的导数  $d y/d x$ .
+5. 设函数  $f(x)$  可导，求函数  $y = f(sin^2 x) + f(cos^2 x)$  的导数  $(d y)/(d x)$ .
    #answer-space
 #subsection[三、证明题]
-6. 设函数  $f(x)$  满足下列条件：
-   (1)  $f(x + y) = f(x)f(y),forall x,y in R,$  
-   (2)  $f(x) = 1 + x g(x)$ , 而  $lim_(x->0)g(x) = 1$
+6. 设函数  $f(x)$  满足下列条件：\
+   (1)  $f(x + y) = f(x)f(y),forall x,y in R,$ \
+   (2)  $f(x) = 1 + x g(x)$ , 而  $lim_(x->0)g(x) = 1$\
    试证：  $f(x)$  在  $R$  上处处可导，且  $f'(x) = f(x)$
    #answer-space

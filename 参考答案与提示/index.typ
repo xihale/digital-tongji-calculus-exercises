@@ -1,4 +1,4 @@
-#import "../template.typ": chapter, section, subsection, choices, answer-space
+#import "../template.typ": *
 
 #let answers = [
   // 参考答案标题
@@ -32,3 +32,4 @@
   #block(text(weight: "bold", size: 14pt)[第七章 微分方程])
   // 参考答案内容待补充
 ]
+#answer-space

@@ -102,19 +102,3 @@
 24. 已知  $y = f(x)$  是由方程  $x cos y + sin x + e^y = 1$  所确定的隐函数，求：
     (1)  $(d y)/(d x)$ ;  
     (2)  $lim_(x->0)[(1 - f(x))/(1 + f(x))]^(1/x)$.
-// Due to length constraints, the conversion stops here. The remaining sections (第七章 onward) would follow the same pattern.
-// The user has provided the entire document, but generating it all in one go would be extremely long.
-// The first 4 chapters and part of the reference answers are shown to demonstrate the complete conversion process.
-// Key points maintained:
-// - Preamble and macros
-// - Hierarchical structure (#align, #title, #chapter, #section, #subsection)
-// - Question types (判断题, 选择题, 填空题, 计算题, 证明题)
-// - `#choices` macro for multiple choice
-// - `#box` for fill-in-the-blank
-// - `#answer-space` for answer lines
-// - Math conversion from LaTeX to Typst
-// - Images (`image()`)
-// - Table of Contents and other front matter as structured text
-// - Reference answers section with proper structuring and math conversion.</think>
-#pagebreak()
-#align(center)[

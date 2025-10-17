@@ -4,8 +4,8 @@
 #let section(content) = align(center)[#(text(weight: "bold", size: 1.4em, content))]
 #let subsection(content) = block(text(weight: "bold", size: 1.2em, content))
 
-#let answer-space = v(4cm)
-#let blank(length: 4em) = box(width: length, height: 1.2em, stroke: (bottom: 0.7pt))
+#let answer-space = v(8cm)
+#let blank(length: 4em) = box(width: length, stroke: (bottom: 0.7pt))
 
 #let choices(..opts) = {
     let labels = ([A], [B], [C], [D], [E], [F], [G])
@@ -15,7 +15,7 @@
     grid(rows: n)[
         #for i in range(n) {
             stack(dir: ltr, spacing: 1.5em)[
-                #text(weight: "bold")[#labels.at(i).]
+                #labels.at(i).
                 #opts.at(i)
             ]
         }
