@@ -2,31 +2,99 @@
 
 #section[第三节 泰勒公式]
 #subsection[一、选择题]
-1. 已知  $cos x = 1 - x^2/2 + R_3(x)$ , 则  $R_3(x) = (#h(2em))$ .
+1. 已知  $cos x = 1 - x^2/2 + R_3(x)$, 则  $R_3(x) =$ (#answer-choice[C]).
    #choices(
    [$(sin xi)/3! x^3$],
    [$-(sin xi)/3! x^3$],
    [$(cos xi)/4! x^4$],
    [$-(cos xi)/4! x^4$]
    )
-2. 函数  $f(x)$  的泰勒展开式  $f(x) = sum_(k=0)^n a_k (x - x_0)^k + R_n(x)$  中拉格朗日余项  $R_n(x) =$  (#h(2em)).
+   #answer-process[
+     泰勒展开：$cos x = 1 - x^2/2! + x^4/4! - ...$
+     
+     所以 $R_3(x) = x^4/(4!) cos xi = (cos xi)/(4!) x^4$（其中 $0 < xi < x$）
+   ]
+   
+2. 函数  $f(x)$  的泰勒展开式  $f(x) = sum_(k=0)^n a_k (x - x_0)^k + R_n(x)$  中拉格朗日余项  $R_n(x) =$ (#answer-choice[D]).
    #choices(
-   [$f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  $(0 <   theta <  1)$],
-   [$f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$],
-   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  $(0 <   theta <  1)$],
-   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$]
+   [$f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  $(0 < theta < 1)$],
+   [$f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 < theta < 1)$],
+   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  $(0 < theta < 1)$],
+   [$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 < theta < 1)$]
    )
+   #answer-process[
+     拉格朗日余项公式为 $R_n(x) = f^(n+1)(x_0 + theta(x-x_0)) / (n+1)! (x-x_0)^(n+1)$，其中 $0 < theta < 1$
+   ]
 #subsection[二、计算题]
 3. 求函数  $f(x) = sqrt(x)$  按  $(x - 4)$  的幂展开的带有拉格朗日余项的三阶泰勒公式
-   #answer-space
+   #answer-process[
+     $f(4) = 2, f'(x) = 1/(2sqrt(x)), f'(4) = 1/4$
+     
+     $f''(x) = -1/(4x^(3/2)), f''(4) = -1/32$
+     
+     $f'''(x) = 3/(8x^(5/2)), f'''(4) = 3/256$
+     
+     泰勒公式：$sqrt(x) = 2 + 1/4(x-4) - 1/64(x-4)^2 + 1/512(x-4)^3 + R_3(x)$
+     
+     其中 $R_3(x) = -15/(8xi^(7/2)) times 1/(4!) (x-4)^4$ ($4 < xi < x$)
+   ]
+   
 4. 求函数  $f(x) = 1/x$  按  $(x + 1)$  的幂展开的带有拉格朗日余项的  $n$  阶泰勒公式
-   #answer-space
+   #answer-process[
+     $f(x) = 1/x, f(-1) = -1, f^(k)(x) = (-1)^k k! / x^(k+1)$
+     
+     $f^(k)(-1) = (-1)^k k!$
+     
+     泰勒公式：$1/x = -1 + (x+1) - (x+1)^2 + (x+1)^3 - ... + (-1)^n(x+1)^n + R_n(x)$
+     
+     $R_n(x) = (-1)^(n+1) (n+1)! / xi^(n+2) (x+1)^(n+1)$ ($-1 < xi < x$)
+   ]
+   
 5. 求函数  $f(x) = x e^x$  带有佩亚诺余项的  $n$  阶麦克劳林公式
-   #answer-space
+   #answer-process[
+     $e^x = sum_(k=0)^(infinity) x^k / k!$
+     
+     $x e^x = x sum_(k=0)^(infinity) x^k / k! = sum_(k=0)^(infinity) x^(k+1) / k! = sum_(k=1)^(infinity) x^k / (k-1)!$
+     
+     带佩亚诺余项：$x e^x = x + x^2 + x^3 / 2! + x^4 / 3! + ... + x^n / (n-1)! + o(x^n)$
+   ]
+   
 6. 应用三阶泰勒公式求  $root(3,30)$  的近似值，并估计误差
-   #answer-space
-7.(附加题)利用泰勒公式求下列极限：\
+   #answer-process[
+     令 $f(x) = root(3,x) = x^(1/3)$，在 $x = 27$ 处展开
+     
+     $f(27) = 3, f'(27) = 1/(3 times 27^(2/3)) = 1/27$
+     
+     $f''(27) = -2/(9 times 27^(5/3)) = -2/(9 times 243) = -2/2187$
+     
+     $f(30) approx 3 + 1/27 (3) - 2/(2 times 2187) times 9 = 3 + 1/9 - 1/243 approx 3.111$
+     
+     误差估计：$|R_2| = |f^(3)(xi)| / 6 times 27 < $ 某个上界
+   ]
+   
+7. (附加题)利用泰勒公式求下列极限：\
    (1)  $lim_(x->0)(cos x - e^(-x^2/2))/(x^2[x + ln(1 - x)])$;
-   #answer-space
+   #answer-process[
+     展开：$cos x = 1 - x^2/2 + x^4/24 + o(x^5)$
+     
+     $e^(-x^2/2) = 1 - x^2/2 + x^4/8 + o(x^5)$
+     
+     $cos x - e^(-x^2/2) = x^4(1/24 - 1/8) + o(x^5) = -x^4/12 + o(x^5)$
+     
+     $ln(1-x) = -x - x^2/2 - x^3/3 + ...$，$x + ln(1-x) = -x^2/2 - x^3/3 + ...$
+     
+     分母：$x^2(-x^2/2 - x^3/3 + ...) = -x^4/2 + o(x^5)$
+     
+     极限 $= (-x^4/12) / (-x^4/2) = 1/6$
+   ]
+   
    (2)  $lim_(x->infinity)[x - x^2 ln (1 + 1/x)]$.
-   #answer-space
+   #answer-process[
+     令 $t = 1/x$，当 $x -> infinity$ 时 $t -> 0^+$
+     
+     $x - x^2 ln(1 + 1/x) = 1/t - 1/t^2 ln(1+t)$
+     
+     $= 1/t - 1/t^2 (t - t^2/2 + t^3/3 + ...)$
+     
+     $= 1/t - 1/t + 1/2 - t/3 + ... = 1/2 - t/3 + ... -> 1/2$
+   ]

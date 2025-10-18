@@ -2,7 +2,7 @@
 #set text(size: 1.3em, font: ("LXGW WenKai", "STKaiti"))
 #set image(width: 12em)
 
-#import "template.typ": title, chapter, section, subsection, answer-space, blank, choices
+#import "template.typ": *
 
 #align(center)[
   #title[高等数学习题册]
@@ -18,6 +18,5 @@
 #include "第六章 定积分的应用/index.typ"
 #include "第七章 微分方程/index.typ"
 #include "模拟卷与真题/index.typ"
-#include "参考答案与提示/index.typ"
 
 #answer-space

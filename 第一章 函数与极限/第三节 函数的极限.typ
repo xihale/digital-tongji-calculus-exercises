@@ -24,7 +24,7 @@
    [不存在]
    )
 #subsection[二、填空题]
-4. 当 $0 < |x - 3| < delta$ 时，取 $delta$ = #blank()，$|(x^2 - 9)/(x - 3) -6| < epsilon$ 成立。
+4. 当 $0 < |x - 3| < delta$ 时，取 $delta$ = #blank($epsilon$)，$|(x^2 - 9)/(x - 3) -6| < epsilon$ 成立。
 #subsection[三、计算题]
 5. 对于图 1-1 所示的函数  $f(x)$ ，求下列极限，若极限不存在，说明理由：
    #figure(image("images/2-5.jpg"), caption: [图 1-1])

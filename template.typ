@@ -4,8 +4,64 @@
 #let section(content) = align(center)[#(text(weight: "bold", size: 1.4em, content))]
 #let subsection(content) = block(text(weight: "bold", size: 1.2em, content))
 
+// 答案显示控制系统
+// 全局开关：true 显示答案，false 隐藏答案
+#let SHOW_ANSWERS = false
+
+// 选择题答案（取代 h(2em)）
+// 用法: #answer-choice[A] 或 #answer-choice[]（空答案）
+#let answer-choice(content) = {
+  if SHOW_ANSWERS {
+    // 显示答案时，显示答案内容（带括号）
+    text(fill: rgb("#0066cc"), weight: "bold")[#content]
+  } else {
+    h(2em)
+  }
+}
+
+// 解答过程答案（取代 answer-space）
+// 用法: #answer-process[解答过程...] 或 #answer-process[内容][高度]
+// 高度参数决定不显示答案时的占位空间，默认6cm
+#let answer-process(content, height: 6cm) = {
+  if SHOW_ANSWERS {
+    // 显示答案时，显示答案内容在浅色背景框中
+    block(
+      fill: rgb("#f0f8ff"),
+      inset: 1em,
+      radius: 0.3em,
+      width: 100%,
+      stroke: (paint: rgb("#0066cc"), thickness: 0.5pt, dash: "dashed")
+    )[
+      #text(fill: rgb("#003366"))[
+        #content
+      ]
+    ]
+  } else {
+    // 不显示答案时，占据相同空间以保持页码一致
+    v(height)
+  }
+}
+
+// 保留旧的定义以兼容（但建议逐步替换）
 #let answer-space = v(8cm)
-#let blank(length: 4em) = box(width: length, stroke: (bottom: 0.7pt))
+
+// 填空题答案（用下划线）
+// 用法: #blank[答案内容]
+#let blank(..args) = {
+  let pos = args.pos()
+  let has-content = pos.len() > 0
+  let placeholder = box(width: 5em, stroke: (bottom: 0.7pt))
+
+  if SHOW_ANSWERS {
+    if has-content {
+      underline[#pos.at(0)]
+    } else {
+      placeholder
+    }
+  } else {
+    placeholder
+  }
+}
 
 #let choices(..opts) = {
     let labels = ([A], [B], [C], [D], [E], [F], [G])

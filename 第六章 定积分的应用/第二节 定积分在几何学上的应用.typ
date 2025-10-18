@@ -5,31 +5,56 @@
 #subsection[一、填空题]
 1. 能用定积分表示的量具有如下特征：
 
-   (1)  
+   (1)  可以把整体划分为数量众多、彼此同类且足够小的微元；
 
-   (2)  
+   (2)  每个微元的量能够写成某个自变量的函数与对应微小量（如 $d x$、$d y$ 等）的乘积；
 
-   (3)
+   (3)  当分割无限细时，所有微元量的求和极限存在，并等于所求的总量。
 
-2. 若要求由曲线  $y = x^3$  和  $y = x^2 + 2x$  所围成图形的面积，则其面积元素为 #blank()，面积的表达式为 #blank().  
+2. 若要求由曲线  $y = x^3$  和  $y = x^2 + 2x$  所围成图形的面积，则其面积元素为 #blank[$abs(x^3 - (x^2 + 2x)) d x$]，面积的表达式为 #blank[$integral_{-1}^{0} (x^3 - x^2 - 2x) d x + integral_{0}^{2} (x^2 + 2x - x^3) d x$].  
 
-3. 若要求底面半径为  $R$ ，高为  $H$  的圆锥的体积，可建立以底面圆心  $O$  为坐标原点，高为  $x$  轴的坐标系，则其体积元素为 #blank()，体积的表达式为 #blank()。
+3. 若要求底面半径为  $R$ ，高为  $H$  的圆锥的体积，可建立以底面圆心  $O$  为坐标原点，高为  $x$  轴的坐标系，则其体积元素为 #blank[$π (R (1 - x/H))^2 d x$]，体积的表达式为 #blank[$integral_{0}^{H} π (R (1 - x/H))^2 d x = frac{1}{3} π R^2 H$]。
 
 #subsection[二、计算题]
 4. 求由曲线  $y = 1/x$  和直线  $y = x$  及  $x = 2$  所围成图形的面积
-   #answer-space
-5. 求由曲线  $y = e^x$  及  $y = e^(-x)$  与直线  $x = 1$  所围成图形的面积
-   #answer-space
+   #answer-process[
+     曲线交于 $x = 1$。在 $[1, 2]$ 上上方函数为 $y = x$。
+     面积 $S = integral_{1}^{2} (x - 1/x) d x = [x^2/2 - ln x]_1^2 = 3/2 - ln 2$。
+   ]
+5. 求由曲线  $y = e^x$  及  $y = e^{-x}$  与直线  $x = 1$  所围成图形的面积
+   #answer-process[
+     两曲线交于 $x = 0$。面积
+     $S = integral_{0}^{1} (e^x - e^{-x}) d x = [e^x + e^{-x}]_0^1 = e + e^{-1} - 2$。
+   ]
 6. 求由抛物线  $y^2 = 2 p x$  及其在点  $(p/2, p)$  处的法线所围成图形的面积
-   #answer-space
+   #answer-process[
+     法线方程：$y = -x + 3p/2$，与抛物线除给定点外再交于 $(9p/2, -3p)$。
+     采用横条法：$S = integral_{-3p}^{p} [(3p/2 - y) - y^2/(2p)] d y = (16/3) p^2$。
+   ]
 7. 求由摆线  $cases( x = a(t - sin t), y = a(1 - cos t) ) quad (0 <= t <= pi)$  的一拱与  $x$  轴所围成图形的面积
-   #answer-space
+   #answer-process[
+     参数面积公式 $S = integral y x'(t) d t$，其中 $x'(t) = a(1 - cos t)$。
+     $S = a^2 integral_0^π (1 - cos t)^2 d t = (3/2) π a^2$。
+   ]
 8. 由曲线  $y = x^3$  与直线  $x = 2$  及  $y = 0$  所围成的图形分别绕  $x$  轴及  $y$  轴旋转一周，计算所得两个旋转体的体积.
-   #answer-space
+   #answer-process[
+     绕 $x$ 轴：$V_x = π integral_{0}^{2} (x^3)^2 d x = 128π/7$。
+     绕 $y$ 轴（圆柱壳）：$V_y = 2π integral_{0}^{2} x ⋅ x^3 d x = 64π/5$。
+   ]
 9. 由曲线  $y = x^2$  及  $y^2 = x$  所围成的图形绕  $y$  轴旋转一周，计算所得旋转体的体积
-   #answer-space
+   #answer-process[
+     对 $0 ≤ y ≤ 1$，外半径 $r_o = sqrt(y)$，内半径 $r_i = y^2$。
+     $V = π integral_{0}^{1} (r_o^2 - r_i^2) d y = π integral_{0}^{1} (y - y^4) d y = 3π/10$。
+   ]
 10. 计算曲线  $y = ln x$  上相应于  $sqrt(3) <= x <= sqrt(8)$  的一段弧的长度.
-    #answer-space
+    #answer-process[
+      弧长公式给出 $L = integral_{sqrt(3)}^{sqrt(8)} sqrt(x^2 + 1)/x d x$。
+      化简为 $L = [sqrt(x^2 + 1) + ln (x /(sqrt(x^2 + 1) + 1))]_{sqrt(3)}^{sqrt(8)} = 1 + frac{1}{2} ln(3/2)$。
+    ]
 11. (附加题) 由圆  $x^2 + (y - 1)^2 = 1$  所围成的图形分别绕  $x$  轴和  $y$  轴旋转一周, 计算所得旋转体的体积.
-    #answer-space
+    #answer-process[
+      圆盘面积为 $π$，质心距 $x$ 轴的距离为 1。
+      绕 $x$ 轴旋转得圆环体：$V_x = π ⋅ 2π = 2π^2$。
+      绕 $y$ 轴旋转成半径 1 的球：$V_y = 4π/3$。
+    ]
 
