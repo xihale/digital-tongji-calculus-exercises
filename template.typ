@@ -5,8 +5,9 @@
 #let subsection(content) = block(text(weight: "bold", size: 1.2em, content))
 
 // 答案显示控制系统
-// 全局开关：true 显示答案，false 隐藏答案
-#let SHOW_ANSWERS = true
+// 通过 input 参数传递，默认为 false（隐藏答案）
+// 使用: typst compile --input SHOW_ANSWER=true input.typ output.pdf
+#let SHOW_ANSWERS = sys.inputs.at("SHOW_ANSWER", default: "false") == "true"
 
 // 选择题答案（取代 h(2em)）
 // 用法: #answer-choice[A] 或 #answer-choice[]（空答案）
