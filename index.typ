@@ -4,9 +4,15 @@
 
 #import "template.typ": *
 
+#let VERSION = "v0.0.2"
+
 #align(center)[
   #title[高等数学习题册]
   (上)
+  
+  #text(size: 0.9em, fill: rgb("#666666"))[#VERSION]
+
+  
 ]
 
 #include "intro.typ"
