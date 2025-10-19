@@ -2,11 +2,11 @@
 
 #section[第二节 换元积分法(2)]
 #subsection[一、填空题]
-1. 如果被积函数中含有 $sqrt(a^2 - x^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a cos t \ dif t$)，其中 $x = a sin t$
-2. 如果被积函数中含有 $sqrt(a^2 + x^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a sec^2 t \ dif t$)，或 $a cosh t \ dif t$
-3. 如果被积函数中含有 $sqrt(x^2 - a^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a sec t tan t \ dif t$)，或 $a sinh t \ dif t$
+1. 如果被积函数中含有 $sqrt(a^2 - x^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a cos t  dif t$)，其中 $x = a sin t$
+2. 如果被积函数中含有 $sqrt(a^2 + x^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a sec^2 t  dif t$)，或 $a cosh t  dif t$
+3. 如果被积函数中含有 $sqrt(x^2 - a^2)$，可做代换将根式化去，此时 $dif x =$ #blank($a sec t tan t  dif t$)，或 $a sinh t  dif t$
 #subsection[二、计算题]
-4. 计算下列不定积分：\
+4. 计算下列不定积分：
    (1) $integral (dif x)/(x sqrt(1 + x^2))$；
    #answer-process[
      令 $u = 1/x$，则 $x = 1/u$，$dif x = -(1/u^2) dif u$。
@@ -110,7 +110,7 @@
    因此 $integral (sqrt(x^2 - 4))/x dif x = sqrt(x^2 - 4) - 2 arccos(2/x) + C$
    ]
 
-5.(附加题)计算下列不定积分：\
+5.(附加题)计算下列不定积分：
    (1) $integral (x^3 + 1)/((x^2 + 1)^2) dif x$；
    #answer-process[
      分子改写：$x^3 + 1 = x(x^2 + 1) - x + 1 = x(x^2+1) + (1-x)$

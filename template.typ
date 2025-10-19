@@ -6,7 +6,7 @@
 
 // 答案显示控制系统
 // 全局开关：true 显示答案，false 隐藏答案
-#let SHOW_ANSWERS = false
+#let SHOW_ANSWERS = true
 
 // 选择题答案（取代 h(2em)）
 // 用法: #answer-choice[A] 或 #answer-choice[]（空答案）
@@ -52,12 +52,8 @@
   let has-content = pos.len() > 0
   let placeholder = box(width: 5em, stroke: (bottom: 0.7pt))
 
-  if SHOW_ANSWERS {
-    if has-content {
-      underline[#pos.at(0)]
-    } else {
-      placeholder
-    }
+  if SHOW_ANSWERS and has-content {
+    text(fill: rgb("#0066cc"))[#pos.at(0)]
   } else {
     placeholder
   }

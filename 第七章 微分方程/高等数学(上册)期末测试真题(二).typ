@@ -69,9 +69,9 @@
     #v(0.5em)
     #choices(
     [$e^x ln 2$],
-    [$e^{2x} ln 2$],
+    [$e^(2x) ln 2$],
     [$e^x + ln 2$],
-    [$e^{2x} + ln 2$]
+    [$e^(2x) + ln 2$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
 11.  $lim_(x->0^+)(1 + sin x)^(ln x) = (#h(2em))$  
