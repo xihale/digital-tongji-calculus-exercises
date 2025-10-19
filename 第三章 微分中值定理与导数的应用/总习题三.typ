@@ -64,14 +64,14 @@
 4. $lim_(x->0)(e^x + e^(-x) - 2)/x^2 = #blank(1)$
    #answer-process[
      使用洛必达法则或泰勒级数。用泰勒级数：
-     $e^x = 1 + x + x^2/2! + x^3/3! + ...$
-     $e^(-x) = 1 - x + x^2/2! - x^3/3! + ...$
+     $e^x = 1 + x + (x^2)/2! + (x^3)/3! + ...$
+     $e^(-x) = 1 - x + (x^2)/2! - (x^3)/3! + ...$
      
-     $e^x + e^(-x) = 2 + x^2 + x^4/12 + ...$
+     $e^x + e^(-x) = 2 + x^2 + (x^4)/12 + ...$
      
-     $e^x + e^(-x) - 2 = x^2 + x^4/12 + ...$
+     $e^x + e^(-x) - 2 = x^2 + (x^4)/12 + ...$
      
-     $lim_(x->0)(e^x + e^(-x) - 2)/x^2 = lim_(x->0)(x^2 + x^4/12 + ...)/x^2 = 1$
+     $lim_(x->0)(e^x + e^(-x) - 2)/(x^2) = lim_(x->0)(x^2 + (x^4)/12 + ...)/(x^2) = 1$
    ]
 
 5.曲线  $y = x e^(-x)$  的拐点是 $(2, 2e^(-2))$，凸区间是 $(-infinity, 2)$ , 凹区间是 #blank( $(2, +infinity)$)
@@ -94,7 +94,7 @@
      
      令 $f'(x) = 0$：$8/x - 2x = 0$，得 $2x^2 = 8$，$x^2 = 4$，$x = 2$（取正值）。
      
-     $f''(x) = -8/x^2 - 2 < 0$ 恒成立，所以 $x = 2$ 是最大值点。
+     $f''(x) = -8/(x^2) - 2 < 0$ 恒成立，所以 $x = 2$ 是最大值点。
      
      最大值：$f(2) = 8 ln 2 - 4$。
    ]
@@ -104,12 +104,12 @@
      铅直渐近线：当 $x -> -1$ 时，分母 $x + 1 -> 0$，分子 $e^x -> e^(-1) ≠ 0$，所以 $x = -1$ 是铅直渐近线。
      
      斜渐近线：当 $x -> +infinity$ 时：
-     $f(x) = e^x/(x+1)$
+     $f(x) = (e^x)/(x+1)$
      
-  使用洛必达法则求 $lim_(x->+infinity) (e^x/(x+1))/x = lim_(x->+infinity) e^x/(x+1) · 1/x = +infinity$
+  使用洛必达法则求 $lim_(x->+infinity) ((e^x)/(x+1))/x = lim_(x->+infinity) (e^x)/(x+1) · 1/x = +infinity$
      
   求斜渐近线 $y = k x + b$：
-     $k = lim_(x->+infinity) f(x)/x = lim_(x->+infinity) e^x/(x(x+1))$ （趋于无穷，无斜渐近线）
+     $k = lim_(x->+infinity) f(x)/x = lim_(x->+infinity) (e^x)/(x(x+1))$ （趋于无穷，无斜渐近线）
      
      当 $x -> -infinity$ 时，$f(x) -> 0$，$y = 0$ 可能是渐近线... 需要重新分析。
      
@@ -154,7 +154,7 @@
   ]
   (2)  $lim_(x-> +infinity)((2/pi) arctan x)^x$.
   #answer-process[
-    设 $y = ((2/pi) arctan x)^x$，则 $ln y = x ln((2/pi) arctan x)$
+    设 $y = ((2/pi) arctan x)^x$，则 $ln y = x (ln((2)/pi) arctan x)$
     
     当 $x -> +infinity$ 时，$arctan x -> pi/2$，所以 $(2/pi) arctan x -> 1$。
     
@@ -164,7 +164,7 @@
     
     $u - 1 = (2/pi) arctan x - 1 = (2/pi) arctan x - (2/pi) · (pi/2) = (2/pi)(arctan x - pi/2)$
     
-    当 $x -> +infinity$：$arctan x - pi/2 ≈ -1/x$（由导数知 $arctan'x = 1/(1+x^2) ≈ 1/x^2$）
+    当 $x -> +infinity$：$arctan x - pi/2 ≈ -1/x$（由导数知 $arctan'x = 1/(1+x^2) ≈ 1/(x^2)$）
     
     所以 $x(u-1) ≈ x · (2/pi) · (-1/x) = -2/pi$
     
@@ -184,7 +184,7 @@
     $f^(4)(x) = ...$，$f^(4)(0) = 0$
     
     泰勒公式：
-    $arctan x = x - x^3/3 + o(x^3)$
+    $arctan x = x - (x^3)/3 + o(x^3)$
   ]
   (2)  $f(x) = x^3 ln x, x_0 = 1, n = 4$  ，拉格朗日余项
   #answer-process[
@@ -195,7 +195,7 @@
     $f''(x) = 6x ln x + 3x + 2x = 6x ln x + 5x$，$f''(1) = 5$
     $f'''(x) = 6 ln x + 6 + 5 = 6 ln x + 11$，$f'''(1) = 11$
     $f^(4)(x) = 6/x$，$f^(4)(1) = 6$
-    $f^(5)(x) = -6/x^2$
+    $f^(5)(x) = -6/(x^2)$
     
     泰勒公式：
   $x^3 ln x = (x-1) + frac(5, 2!)(x-1)^2 + frac(11, 3!)(x-1)^3 + frac(6, 4!)(x-1)^4 + frac(f^(5)(xi), 5!)(x-1)^5$
@@ -255,7 +255,7 @@
 
 13. 试确定常数  $a, b$ ，使得  $f(x) = x - (a + b cos x) sin x$  为当  $x -> 0$  时关于  $x$  的五阶无穷小。
    #answer-process[
-     $f(x) = x - (a + b cos x) sin x$ 为五阶无穷小，意味着 $f(x) = o(x^5)$ 且 $f(x)/x^5$ 的极限存在或为 $0$。
+     $f(x) = x - (a + b cos x) sin x$ 为五阶无穷小，意味着 $f(x) = o(x^5)$ 且 $f(x)/(x^5)$ 的极限存在或为 $0$。
      
      更准确地说，$f(0) = f'(0) = f''(0) = f'''(0) = f^(4)(0) = 0$，且 $f^(5)(0) ≠ 0$。
      

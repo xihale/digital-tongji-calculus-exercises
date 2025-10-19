@@ -17,7 +17,7 @@
      对于 $integral_(u(x))^(v(x)) f(t) dif t$ 的求导：
   $frac(d, d x) = f(v(x)) v'(x) - f(u(x)) u'(x)$
      
-     这里 $u(x) = x^2, v(x) = x^3, f(t) = 1/sqrt(1+t^4)$。
+     这里 $u(x) = x^2, v(x) = x^3, f(t) = 1/(sqrt(1)+t^4)$。
      
   $frac(d, d x) integral_(x^2)^(x^3) (dif t)/(sqrt(1 + t^4)) = frac(1, sqrt(1 + (x^3)^4)) · 3x^2 - frac(1, sqrt(1 + (x^2)^4)) · 2x$
      
@@ -53,7 +53,7 @@
      
     $lim_(x->0) frac(2 integral_0^x e^(t^2) dif t · e^(x^2), x e^(2x^2))$
      
-     仍是 $0/0$ 型。用泰勒展开：$integral_0^x e^(t^2) dif t approx x - x^3/3 + ...$
+     仍是 $0/0$ 型。用泰勒展开：$integral_0^x e^(t^2) dif t approx x - (x^3)/3 + ...$
      
      分子：$2(x + O(x^3)) · 1 = 2x + O(x^3)$
      分母：$x · 1 = x$
@@ -67,7 +67,7 @@
      
      分母：$sqrt(x^2 + 1) approx x$
      
-    $lim_(x->+infinity) frac(pi^2 x / 4, x) = pi^2/4$
+    $lim_(x->+infinity) frac(pi^2 x / 4, x) = (pi^2)/4$
    ]
 
 3. 计算下列定积分：

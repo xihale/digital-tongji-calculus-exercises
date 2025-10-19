@@ -60,12 +60,12 @@
     (1)  $x y' + y = y(ln x + ln y)$ ;
     #answer-process[
        假设 $y > 0$，令 $u = ln y$，则 $x (dif u)/(dif x) = ln x + u - 1$。
-      写成 $(u/x)' = (ln x - 1)/x^2$，积分得 $u/x = -(ln x)/x + C$。
+      写成 $(u/x)' = (ln x - 1)/(x^2)$，积分得 $u/x = -(ln x)/x + C$。
        故 $ln y = C x - ln x$，即 $y = e^(C x)/x$。
     ]
     (2)  $y(x y + 1) dif x + x(1 + x y + x^2 y^2) dif y = 0$。
     #answer-process[
-      令 $u = x y$，则 $dif y = (x (dif u) - u (dif x))/x^2$。
+      令 $u = x y$，则 $dif y = (x (dif u) - u (dif x))/(x^2)$。
        代入可得 $(1 + u + u^2) x (dif u) = u^3 (dif x)$。
        分离变量并积分得到 $ln|u| - 1/u - 1/(2u^2) = ln|x| + C$。
        还原即 $ln|y| - 1/(x y) - 1/(2 x^2 y^2) = C$。

@@ -182,7 +182,7 @@
    $y = v_0 sin alpha dot (x/(v_0 cos alpha)) - 1/2 g (x/(v_0 cos alpha))^2$
    $y = x tan alpha - (g x^2)/(2 v_0^2 cos^2 alpha)$
    
-   利用三角恒等式 $1/cos^2 alpha = 1 + tan^2 alpha$，可以进一步化简：
+   利用三角恒等式 $1/(cos^2) alpha = 1 + tan^2 alpha$，可以进一步化简：
    $y = x tan alpha - (g x^2 (1 + tan^2 alpha))/(2 v_0^2)$
    
    这就是弹道曲线的方程。

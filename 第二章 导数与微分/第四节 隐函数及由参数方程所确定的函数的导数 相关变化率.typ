@@ -12,7 +12,7 @@
    #answer-process[
      对 $y = (1 + x)^(1/x)$ 取对数：$ln y = (1/x) ln(1+x)$
      
-     两边对 $x$ 求导：$y'/y = -1/x^2 times ln(1+x) + 1/x times 1/(1+x)$
+     两边对 $x$ 求导：$y'/y = -1/(x^2) times ln(1+x) + 1/x times 1/(1+x)$
      
      所以 $y' = y[-ln(1+x)/x^2 + 1/(x(1+x))]$
      
@@ -35,7 +35,7 @@
      
      $d y / d x = sin t / (1 - cos t)$
      
-     当 $t = pi/2$ 时：$x = 2(pi/2 - 1) = pi - 2$，$y = 2(1 - 0) = 2$
+     当 $t = pi/2$ 时：$x = (2(pi)/2 - 1) = pi - 2$，$y = 2(1 - 0) = 2$
      
      $d y / d x |_{t = pi/2} = 1 / 1 = 1$
      

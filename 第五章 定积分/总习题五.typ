@@ -84,10 +84,10 @@
      函数 $f(x)$ 在 $x = 0$ 处连续，需要满足：
      $lim_(x->0) f(x) = f(0) = a$
      
-     计算 $lim_(x->0) f(x) = lim_(x->0) (integral_0^x (e^(t^2) - 1) dif t)/x^2$
+     计算 $lim_(x->0) f(x) = lim_(x->0) (integral_0^x (e^(t^2) - 1) dif t)/(x^2)$
      
      这是 $0/0$ 型未定式，使用洛必达法则：
-     $lim_(x->0) (integral_0^x (e^(t^2) - 1) dif t)/x^2 = lim_(x->0) (e^(x^2) - 1)/(2x)$
+     $lim_(x->0) (integral_0^x (e^(t^2) - 1) dif t)/(x^2) = lim_(x->0) (e^(x^2) - 1)/(2x)$
      
      仍然是 $0/0$ 型，继续使用洛必达法则：
      $= lim_(x->0) (2x e^(x^2))/2 = lim_(x->0) x e^(x^2) = 0$
@@ -241,7 +241,7 @@
 
     (4)  $integral_(1)^(2) x log_(2) x  dif x$ ;
       #answer-process[
-         分部积分：令 $u = log_2 x$，$dif v = x dif x$，则 $v = x^2/2$。
+         分部积分：令 $u = log_2 x$，$dif v = x dif x$，则 $v = (x^2)/2$。
          $integral_(1)^(2) x log_2 x dif x = [frac(x^2, 2) log_2 x]_1^2 - integral_(1)^(2) frac(x^2, 2) · frac(1, x ln 2) dif x$
       
          $= 2 - frac(1, 2 ln 2) integral_(1)^(2) x dif x = 2 - frac(1, 2 ln 2) [frac(x^2, 2)]_1^2$

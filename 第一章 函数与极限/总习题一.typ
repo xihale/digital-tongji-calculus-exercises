@@ -13,12 +13,12 @@
      当 $x -> 0$ 时，利用无穷小的等价关系：
      $1 - cos x approx x^2 / 2$
      
-     因此，$(1 - cos x)^2 approx (x^2/2)^2 = x^4/4$
+     因此，$(1 - cos x)^2 approx ((x^2)/2)^2 = (x^4)/4$
      
      而 $sin^2 x approx x^2$
      
      比较两个无穷小的阶数：
-     $lim_(x->0) (1 - cos x)^2 / sin^2 x = lim_(x->0) (x^4/4) / x^2 = lim_(x->0) x^2/4 = 0$
+     $lim_(x->0) (1 - cos x)^2 / sin^2 x = lim_(x->0) ((x^4)/4) / x^2 = lim_(x->0) (x^2)/4 = 0$
      
      所以 $(1 - cos x)^2$ 是 $sin^2 x$ 的高阶无穷小。
    ]
@@ -73,7 +73,7 @@
      
      因此，有界是收敛的必要不充分条件。
    ]
-   #answer-space
+   
    
 5. 函数  $f(x) = (x - 2)/(ln |x - 1|)$  的一个无穷间断点是  #blank($x = 0$)
    #answer-process[
@@ -97,12 +97,12 @@
      
      3) 在 $x = 2$ 处：$ln |2 - 1| = ln 1 = 0$，分子 $2 - 2 = 0$。
         这需要更仔细的分析。当 $x -> 2$ 时，分子 $x - 2 -> 0$，分母 $ln |x - 1| -> 0$。
-        使用洛必达法则：$lim_(x->2) (x - 2)/ln|x - 1| = lim_(x->2) 1/(1/(x-1)) = lim_(x->2) (x - 1) = 1$。
+        使用洛必达法则：$lim_(x->2) (x - 2)/(ln|x) - 1| = lim_(x->2) (1/(1)/(x-1)) = lim_(x->2) (x - 1) = 1$。
         这是可去间断点。
      
      因此，一个无穷间断点是 $x = 0$。
    ]
-   #answer-space
+   
    
 6. 设函数  $f(x) = cases( sqrt(x^2 - 1) &"if" x < -1, b &"if" x = -1, a + arccos x &"if" -1 < x <= 1 )$  在点  $x = -1$  处连续，则  $a =$ #blank($-pi$)， $b =$ #blank($0$).
    #answer-process[
@@ -130,7 +130,7 @@
      
      验证：$lim_(x->-1^-) f(x) = 0$，$lim_(x->-1^+) f(x) = -pi + pi = 0$，$f(-1) = 0$，三者相等，函数连续。
    ]
-   #answer-space
+   
    
 7. 函数  $f(x) = (2^(1/x) - 1)/(2^(1/x) + 1)$  的间断点是 #blank($x = 0$)，是第 #blank($1$) 类间断点。
    #answer-process[
@@ -142,7 +142,7 @@
      因此 $lim_(x->0^+) f(x) = lim_(x->0^+) (2^(1/x) - 1)/(2^(1/x) + 1)$
      
      分子分母同时除以 $2^(1/x)$：
-     $= lim_(x->0^+) (1 - 1/2^(1/x))/(1 + 1/2^(1/x)) = (1 - 0)/(1 + 0) = 1$
+     $= lim_(x->0^+) (1 - 1/(2^(1/x)))/(1 + 1/(2^(1/x))) = (1 - 0)/(1 + 0) = 1$
      
      计算左极限（$x -> 0^-$）：
      当 $x -> 0^-$ 时，$1/x -> -infinity$，所以 $2^(1/x) -> 0$。
@@ -156,7 +156,7 @@
      
      因此 $x = 0$ 是跳跃间断点，属于第一类间断点（第一类间断点是指单侧极限都存在的间断点）。
    ]
-   #answer-space
+   
 #subsection[三、计算题]
 8. 求下列极限：
    (1)  $lim_(x-> +infinity)x(sqrt(x^2 + 1) -x)$
@@ -174,7 +174,7 @@
      
      $= 1/(sqrt(1 + 0) + 1) = 1/2$
    ]
-   #answer-space
+   
    
    (2)  $lim_(x->infinity)((2x + 3)/(2x + 1))^(x + 1)$
    #answer-process[
@@ -189,23 +189,23 @@
      
      因此 $lim_(x->infinity)((2x + 3)/(2x + 1))^(x + 1) = e^1 = e$。
    ]
-   #answer-space
+   
    
    (3)  $lim_(x->0)(tan x - sin x)/x^3$
    #answer-process[
      使用泰勒展开式或者逐步求导。
      
      方法一（泰勒展开）：
-     $tan x = x + x^3/3 + O(x^5)$
-     $sin x = x - x^3/6 + O(x^5)$
+     $tan x = x + (x^3)/3 + O(x^5)$
+     $sin x = x - (x^3)/6 + O(x^5)$
      
-     因此 $tan x - sin x = x^3/3 + x^3/6 + O(x^5) = x^3/2 + O(x^5)$
+     因此 $tan x - sin x = (x^3)/3 + (x^3)/6 + O(x^5) = (x^3)/2 + O(x^5)$
      
-     所以 $lim_(x->0)(tan x - sin x)/x^3 = lim_(x->0) (x^3/2 + O(x^5))/x^3 = 1/2$
+     所以 $lim_(x->0)(tan x - sin x)/(x^3) = lim_(x->0) ((x^3)/2 + O(x^5))/(x^3) = 1/2$
      
      方法二（洛必达法则）：
      分子分母都趋于 $0$，使用洛必达法则：
-     $lim_(x->0)(tan x - sin x)/x^3 = lim_(x->0)(sec^2 x - cos x)/(3x^2)$
+     $lim_(x->0)(tan x - sin x)/(x^3) = lim_(x->0)(sec^2 x - cos x)/(3x^2)$
      
      仍然是 $0/0$ 型，继续使用洛必达：
      $= lim_(x->0)(2 sec^2 x tan x + sin x)/(6x)$
@@ -214,7 +214,7 @@
      $= lim_(x->0)(2 sec^2 x (sec^2 x + 2 tan^2 x) + cos x)/6$
      $= (2 dot 1 dot (1 + 0) + 1)/6 = 3/6 = 1/2$
    ]
-   #answer-space
+   
 #subsection[四、证明题]
 9. 根据函数极限的定义，证明：  $lim_(x->3)(x^2 - x - 6)/(x - 3) = 5$.
    #answer-process[
@@ -231,32 +231,32 @@
      
      因此，根据函数极限的定义，$lim_(x->3)(x^2 - x - 6)/(x - 3) = 5$。
    ]
-   #answer-space  
+     
    
 10. 证明:  $lim_(n->infinity)(1/sqrt(n^2 + 1) + 1/sqrt(n^2 + 2) + dots + 1/sqrt(n^2 + n)) = 1$.
     #answer-process[
-      设 $S_n = 1/sqrt(n^2 + 1) + 1/sqrt(n^2 + 2) + dots + 1/sqrt(n^2 + n)$。
+      设 $S_n = 1/(sqrt(n^2) + 1) + 1/(sqrt(n^2) + 2) + dots + 1/(sqrt(n^2) + n)$。
       
-      这是 $n$ 项和，每一项的形式为 $1/sqrt(n^2 + k)$，其中 $k = 1, 2, ..., n$。
+      这是 $n$ 项和，每一项的形式为 $1/(sqrt(n^2) + k)$，其中 $k = 1, 2, ..., n$。
       
       对于最小的项和最大的项，有：
-      $1/sqrt(n^2 + n) <= 1/sqrt(n^2 + k) <= 1/sqrt(n^2 + 1)$
+      $1/(sqrt(n^2) + n) <= 1/(sqrt(n^2) + k) <= 1/(sqrt(n^2) + 1)$
       
       因此：
-      $n dot 1/sqrt(n^2 + n) <= S_n <= n dot 1/sqrt(n^2 + 1)$
+      $n dot 1/(sqrt(n^2) + n) <= S_n <= n dot 1/(sqrt(n^2) + 1)$
       
       即：
-      $n/sqrt(n^2 + n) <= S_n <= n/sqrt(n^2 + 1)$
+      $n/(sqrt(n^2) + n) <= S_n <= n/(sqrt(n^2) + 1)$
       
       对左端求极限：
-      $lim_(n->infinity) n/sqrt(n^2 + n) = lim_(n->infinity) n/(n sqrt(1 + 1/n)) = lim_(n->infinity) 1/sqrt(1 + 1/n) = 1$
+      $lim_(n->infinity) n/(sqrt(n^2) + n) = lim_(n->infinity) n/(n sqrt(1 + 1/n)) = lim_(n->infinity) 1/(sqrt(1) + 1/n) = 1$
       
       对右端求极限：
-      $lim_(n->infinity) n/sqrt(n^2 + 1) = lim_(n->infinity) n/(n sqrt(1 + 1/n^2)) = lim_(n->infinity) 1/sqrt(1 + 1/n^2) = 1$
+      $lim_(n->infinity) n/(sqrt(n^2) + 1) = lim_(n->infinity) n/(n sqrt(1 + 1/n^2)) = lim_(n->infinity) 1/(sqrt(1) + 1/n^2) = 1$
       
       根据夹逼准则，$lim_(n->infinity) S_n = 1$。
     ]
-    #answer-space  
+      
     
 11. 证明: 方程  $sin x + x + 1 = 0$  在开区间  $(-pi/2, pi/2)$  内至少有一个根.
     #answer-process[
@@ -272,5 +272,5 @@
       
       即方程 $sin x + x + 1 = 0$ 在开区间 $(-pi/2, pi/2)$ 内至少有一个根。
     ]
-    #answer-space
+    
 

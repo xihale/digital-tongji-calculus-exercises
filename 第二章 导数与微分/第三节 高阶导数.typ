@@ -28,7 +28,7 @@
    #answer-process[
      $d y / d x = f'(x)/f(x)$
      
-     $(d^2 y) / (d x^2) = (f''(x) times f(x) - (f'(x))^2) / (f(x))^2 = f''(x)/f(x) - (f'(x))^2/(f(x))^2$
+     $(d^2 y) / (d x^2) = (f''(x) times f(x) - (f'(x))^2) / (f(x))^2 = f''(x)/f(x) - ((f'(x))^2)/(f(x))^2$
    ]
 #subsection[三、计算题]
 4. 求下列函数的二阶导数：
@@ -41,7 +41,7 @@
    
    (2)  $y = ln (x + sqrt(1 + x^2))$ .
    #answer-process[
-     $y' = 1/(x + sqrt(1+x^2)) times (1 + x/sqrt(1+x^2)) = 1/sqrt(1+x^2)$
+     $y' = 1/(x + sqrt(1+x^2)) times (1 + x/(sqrt(1)+x^2)) = 1/(sqrt(1)+x^2)$
      
      $y'' = -x / (1+x^2)^(3/2)$
    ]

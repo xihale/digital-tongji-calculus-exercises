@@ -56,12 +56,12 @@
 
   (4)  $integral x^3 ln^2 x dif x$;
   #answer-process[
-    令 $u = ln^2 x$，$dif v = x^3 dif x$，则 $dif u = 2 ln x · (1/x) dif x$，$v = x^4/4$。
+    令 $u = ln^2 x$，$dif v = x^3 dif x$，则 $dif u = 2 ln x · (1/x) dif x$，$v = (x^4)/4$。
     
     $integral x^3 ln^2 x dif x = frac(x^4, 4) ln^2 x - integral frac(x^4, 4) · frac(2 ln x, x) dif x$
     $= frac(x^4, 4) ln^2 x - frac(1, 2) integral x^3 ln x dif x$
     
-    对 $integral x^3 ln x dif x$ 分部积分：令 $u = ln x$，$dif v = x^3 dif x$，则 $dif u = (1/x) dif x$，$v = x^4/4$。
+    对 $integral x^3 ln x dif x$ 分部积分：令 $u = ln x$，$dif v = x^3 dif x$，则 $dif u = (1/x) dif x$，$v = (x^4)/4$。
     
     $integral x^3 ln x dif x = frac(x^4, 4) ln x - integral frac(x^4, 4) · frac(1, x) dif x$
     $= frac(x^4, 4) ln x - frac(1, 4) integral x^3 dif x$
@@ -165,7 +165,7 @@
   
   $integral (arctan e^x)/(e^(2x)) dif x = integral frac(arctan u, u^2) · frac(dif u, u) = integral frac(arctan u, u^3) dif u$
   
-  分部积分：令 $v = arctan u$，$dif w = (1/u^3) dif u$，则 $dif v = frac(1, 1+u^2) dif u$，$w = -frac(1, 2u^2)$。
+  分部积分：令 $v = arctan u$，$dif w = (1/(u^3)) dif u$，则 $dif v = frac(1, 1+u^2) dif u$，$w = -frac(1, 2u^2)$。
   
   $integral frac(arctan u, u^3) dif u = -frac(arctan u, 2u^2) + integral frac(1, 2u^2(1+u^2)) dif u$
   

@@ -132,7 +132,7 @@
    #answer-process[
      令 $t = tan(x/2)$，则 $sin x = 2t/(1+t^2)$，$dif x = 2 dif t/(1+t^2)$。
      
-     $sin^2 x = 4t^2/(1+t^2)^2$
+     $sin^2 x = (4t^2)/(1+t^2)^2$
      
    $3 + sin^2 x = frac(3(1+t^2)^2 + 4t^2, (1+t^2)^2) = frac(3(1+2t^2+t^4) + 4t^2, (1+t^2)^2)$
      
@@ -146,9 +146,9 @@
      
    实际上 $= integral frac(dif x, (7-cos 2x)/2)$... 需要标准答案。
      
-     使用Weierstrass代换 $t = tan x$：$sin^2 x = t^2/(1+t^2)$，$dif x = dif t/(1+t^2)$。
+     使用Weierstrass代换 $t = tan x$：$sin^2 x = (t^2)/(1+t^2)$，$dif x = dif t/(1+t^2)$。
      
-   $integral (dif x)/(3+sin^2x) = integral frac(dif t/(1+t^2), 3 + t^2/(1+t^2)) = integral frac(dif t, 3(1+t^2)+t^2)$
+   $integral (dif x)/(3+sin^2x) = integral frac(dif t/(1+t^2), 3 + (t^2)/(1+t^2)) = integral frac(dif t, 3(1+t^2)+t^2)$
      
    $= integral frac(dif t, 3 + 4t^2) = frac(1, 4) integral frac(dif t, 3/4 + t^2)$
      

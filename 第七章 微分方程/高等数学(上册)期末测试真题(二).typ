@@ -82,15 +82,15 @@
 16. 微分方程  $y' = 1/(x + y)$  的通解为
 #subsection[三、计算题(每小题7分，共35分)]
 17. 求  $lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$ .
-    #answer-space
+    
 18. 求  $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) dif x$.
-    #answer-space
+    
 19. 求微分方程  $y'' - y' - 2y = (1 - 2x) e^x$  的通解
-    #answer-space
+    
 20. 求  $integral_(0)^(+infinity) x^2 e^(-x) dif x$ .
-    #answer-space
+    
 21. 求函数  $f(x) = (2x + 3) e^(2/x)$  的单调区间、极值以及渐近线方程
-    #answer-space
+    
 #subsection[四、应用题(10分)]
 22. 设函数  $f(x)$  在区间  $[0,1]$  上连续，在  $(0,1)$  内大于零，且满足  $x f'(x) = f(x) - 3x^2$ ，曲线  $y = f(x)$  与直线  $x = 0, x = 1, y = 0$  所围成图形  $D$  的面积为 2。求：
     (1)函数  $f(x)$  
@@ -111,7 +111,7 @@
 // - Question types (判断题, 选择题, 填空题, 计算题, 证明题)
 // - `#choices` macro for multiple choice
 // - `#box` for fill-in-the-blank
-// - `#answer-space` for answer lines
+// - `` for answer lines
 // - Math conversion from LaTeX to Typst
 // - Images (`image()`)
 // - Table of Contents and other front matter as structured text

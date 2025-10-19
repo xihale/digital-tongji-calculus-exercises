@@ -115,9 +115,9 @@
      
      $f(ln x) = e^(ln x) = x$
      
-     $integral x^2 f(ln x) dif x = integral x^3 dif x = x^4/4 + C$
+     $integral x^2 f(ln x) dif x = integral x^3 dif x = (x^4)/4 + C$
      
-     题目给定答案是 $x^3/3 - x^3 ln x/3 + C$，这是 $integral x^2 e^(ln x) dif x$ 吗？不是。
+     题目给定答案是 $(x^3)/3 - x^3 ln x/3 + C$，这是 $integral x^2 e^(ln x) dif x$ 吗？不是。
    ]
 
 8. 设  $F'(x) = f(x)$ , 则  $integral f(a x + b) dif x = $ #blank($frac(1, a) F(a x + b) + C$) .  
@@ -133,7 +133,7 @@
    #answer-process[
      由条件 $integral x f(x) dif x = arcsin x + C$ 得：
      
-     $x f(x) = (arcsin x)' = 1/sqrt(1-x^2)$
+     $x f(x) = (arcsin x)' = 1/(sqrt(1)-x^2)$
      
      所以 $f(x) = 1/(x sqrt(1-x^2))$
      
@@ -203,7 +203,7 @@
 
     (3)  $integral (dif x)/(cos^2 x root(4, tan x))$ ;  
     #answer-process[
-      令 $u = tan x$，则 $dif u = sec^2 x dif x = (1/cos^2 x) dif x$，所以 $dif x / cos^2 x = dif u$。
+      令 $u = tan x$，则 $dif u = sec^2 x dif x = (1/(cos^2) x) dif x$，所以 $dif x / cos^2 x = dif u$。
       
    $integral (dif x)/(cos^2 x root(4, tan x)) = integral frac(dif u, u^(1/4)) = integral u^(-1/4) dif u$
       

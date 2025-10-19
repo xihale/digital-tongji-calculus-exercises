@@ -65,7 +65,7 @@
     #answer-process[
    分离变量得 $(dif y)/(y ln y) = (dif x)/sin x$。
    积分得到 $ln|ln y| = ln|tan (x/2)| + C$，可化为 $ln y = C_1 tan (x/2)$。
-   利用 $y(pi/2) = e$（此时 $tan(pi/4) = 1$）求得 $C_1 = 1$，故 $y = exp[tan(x/2)]$。
+   利用 $(y(pi)/2) = e$（此时 $tan(pi/4) = 1$）求得 $C_1 = 1$，故 $y = exp[tan(x/2)]$。
     ]
 9. 一曲线通过点  $(2,3)$，且它在两坐标轴间的任一切线均被切点所平分，求该曲线方程
    #answer-process[
@@ -79,8 +79,8 @@
       #answer-process[
          对半球体有 $V = (2/3) pi r^3$、$A = 2 pi r^2$，因此 $(dif V)/(dif t) = 2 pi r^2 times (dif r)/(dif t)$。
          由题设 $(dif V)/(dif t) = -k A = -2k pi r^2$，可得 $(dif r)/(dif t) = -k$，从而 $r(t) = r_0 - k t$。
-         3 小时后体积剩 $1/8$，半径缩为 $r_0/2$，故 $r_0 - 3k = r_0/2$，解得 $k = r_0/6$。
-         当 $r(t) = 0$ 时雪堆融尽，此时 $t = r_0/k = 6$ h。
+         3 小时后体积剩 $1/8$，半径缩为 $(r_0)/2$，故 $r_0 - 3k = (r_0)/2$，解得 $k = (r_0)/6$。
+         当 $r(t) = 0$ 时雪堆融尽，此时 $t = (r_0)/k = 6$ h。
       ]
 #subsection[五、证明题]
 11. 验证:  $x^2 - x y + y^2 = C$  所确定的函数为微分方程  $(x - 2y) y' = 2x - y$  的解.

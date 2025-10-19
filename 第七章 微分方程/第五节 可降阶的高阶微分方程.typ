@@ -24,7 +24,7 @@
     #answer-process[
        设 $p = y'$，得 $p (dif p)/(dif y) = e^(2y)$，积分有 $(1/2) p^2 = (1/2) e^(2y) + C$。
        利用初值 $p(0) = 0$，$y(0) = 0$ 得 $C = -1/2$，故 $(y')^2 = e^(2y) - 1$。
-      取 $e^(-y) = cos x$，则 $(dif y)/sqrt(e^(2y) - 1) = dif x$，从而解得 $y = -ln cos x$。
+      取 $e^(-y) = cos x$，则 $(dif y)/(sqrt(e^(2y)) - 1) = dif x$，从而解得 $y = -ln cos x$。
     ]
     (2)  $y'' + (y')^2 = 1, y|_(x=0) = 0, y'|_(x=0) = 0$。
     #answer-process[
@@ -35,5 +35,5 @@
 5. 设有一质量为  $m$  的物体在空中由静止开始下落。如果空气阻力  $R = c v$ ( $c$  为常数， $v$  为物体运动的速度)，试求物体下落的距离  $s$  与时间  $t$  的函数关系。
    #answer-process[
      建立运动方程 $m (dif v)/(dif t) = m g - c v$，解得 $v(t) = (m g/c) (1 - e^(-(c/m) t))$。
-   位移 $s(t) = ∫_0^t v(τ) dif τ = (m g/c) t + (m^2 g/c^2) (e^(-(c/m) t) - 1)$。
+   位移 $s(t) = ∫_0^t v(τ) dif τ = (m g/c) t + (m^2 g/(c^2)) (e^(-(c/m) t) - 1)$。
    ]

@@ -13,7 +13,7 @@
   )
   #answer-process[
     当 $x->0$ 时，$sin x approx x$，$cos x approx 1$，所以：
-    $lim_(x->0)(1/x sin x)/(cos x) = lim_(x->0)(1/x dot x)/1 = lim_(x->0)1/1 = 1$
+    $lim_(x-(>0)(1)/x sin x)/(cos x) = lim_(x-(>0)(1)/x dot x)/1 = lim_(x-(>0)1)/1 = 1$
   ]
 
 2. $lim_(x->infinity)(1 - 1/x)^(2x)$ (#h(2em))
@@ -57,42 +57,42 @@
     当 $x->0$ 时，$x / sin x -> 1$，$cos x -> 1$，所以：
     $lim_(x->0)(x / sin x) dot cos x = 1 dot 1 = 1$
   ]
-  #answer-space
+  
 
 (2)  $lim_(x->0)(1 - cos 2x)/(x sin x)$;
   #answer-process[
     使用三角恒等式 $1 - cos 2x = 2 sin^2 x$，所以：
     $lim_(x->0)(1 - cos 2x)/(x sin x) = lim_(x->0)(2 sin^2 x)/(x sin x) = lim_(x->0)(2 sin x)/x = 2 dot lim_(x->0)(sin x)/x = 2 dot 1 = 2$
   ]
-  #answer-space
+  
 
 (3)  $lim_(n->infinity)2^n sin(x/2^n)$  ( $x$  为不等于零的常数)；
   #answer-process[
-    令 $t = x/2^n$，当 $n->infinity$ 时，$t->0$，所以：
-    $lim_(n->infinity)2^n sin(x/2^n) = lim_(t->0)(x/t) sin t = x dot lim_(t->0)(sin t)/t = x dot 1 = x$
+    令 $t = x/(2^n)$，当 $n->infinity$ 时，$t->0$，所以：
+    $lim_(n->infinity)2^n sin(x/2^n) = lim_(t-(>0)(x)/t) sin t = x dot lim_(t->0)(sin t)/t = x dot 1 = x$
   ]
-  #answer-space
+  
 
 (4)  $lim_(x->0)(1 - x)^(1/x)$;
   #answer-process[
     我们知道 $lim_(x->0)(1 + x)^(1/x) = e$，所以：
     $lim_(x->0)(1 - x)^(1/x) = lim_(x->0)[(1 + (-x))^(1/(-x))]^(-1) = e^(-1) = 1/e$
   ]
-  #answer-space
+  
 
 (5)  $lim_(x->0)(1 + x)^(1/x)$
   #answer-process[
     这是一个重要极限，直接得到：
     $lim_(x->0)(1 + x)^(1/x) = e$
   ]
-  #answer-space
+  
 
 (6)  $lim_(x->infinity)(1 - 1/x)^(k x) (k in N_+)$.
   #answer-process[
     我们可以变形：
     $lim_(x->infinity)(1 - 1/x)^(k x) = lim_(x->infinity)[(1 - 1/x)^(-x)]^(-k) = e^(-k)$
   ]
-  #answer-space
+  
 
 #subsection[四、证明题]
 6. 利用极限存在准则，证明：\
@@ -107,15 +107,15 @@
     $n dot n/(n^2 + n pi) <= S_n <= n dot n/(n^2 + pi)$
     
     即：
-    $n^2/(n^2 + n pi) <= S_n <= n^2/(n^2 + pi)$
+    $(n^2)/(n^2 + n pi) <= S_n <= (n^2)/(n^2 + pi)$
     
     当 $n->infinity$ 时：
-    $lim_(n->infinity) n^2/(n^2 + n pi) = lim_(n->infinity) 1/(1 + pi/n) = 1$
-    $lim_(n->infinity) n^2/(n^2 + pi) = lim_(n->infinity) 1/(1 + pi/n^2) = 1$
+    $lim_(n->infinity) (n^2)/(n^2 + n pi) = lim_(n->infinity) 1/(1 + pi/n) = 1$
+    $lim_(n->infinity) (n^2)/(n^2 + pi) = lim_(n->infinity) 1/(1 + pi/(n^2)) = 1$
     
     根据夹逼准则，$lim_(n->infinity) S_n = 1$，证毕。
   ]
-  #answer-space
+  
 
   (2) 数列  $sqrt(2), sqrt(2 + sqrt(2)), sqrt(2 + sqrt(2 + sqrt(2))), dots$  的极限存在；
   #answer-process[
@@ -127,31 +127,31 @@
     
     由于数列 ${a_n}$ 单调递增且有上界，根据单调有界准则，数列 ${a_n}$ 的极限存在。
   ]
-  #answer-space
+  
 
   (3)  $lim_(x->0)root(n, 1 + x) = 1$.
   #answer-process[
-    需要证明 $lim_(x->0)(1 + x)(1/n) = 1$。
+    需要证明 $lim_(x->0)(1 + (x)(1)/n) = 1$。
     
-    令 $f(x) = (1 + x)(1/n) - 1$，需要证明 $lim_(x->0) f(x) = 0$。
+    令 $f(x) = (1 + (x)(1)/n) - 1$，需要证明 $lim_(x->0) f(x) = 0$。
     
-    当 $x > 0$ 时，$(1 + x)(1/n) > 1$，所以 $f(x) > 0$。
-    当 $-1 < x < 0$ 时，$(1 + x)(1/n) < 1$，所以 $f(x) < 0$。
+    当 $x > 0$ 时，$(1 + (x)(1)/n) > 1$，所以 $f(x) > 0$。
+    当 $-1 < x < 0$ 时，$(1 + (x)(1)/n) < 1$，所以 $f(x) < 0$。
     
     考虑 $x > 0$ 的情况，有：
-    $0 < (1 + x)(1/n) - 1 < (1 + x) - 1 = x$
+    $0 < (1 + (x)(1)/n) - 1 < (1 + x) - 1 = x$
     
     当 $x->0^+$ 时，$x->0$，根据夹逼准则，$lim_(x->0^+) f(x) = 0$。
     
     考虑 $-1 < x < 0$ 的情况，令 $x = -y$，其中 $0 < y < 1$，则：
-    $f(x) = (1 - y)(1/n) - 1$
+    $f(x) = (1 - (y)(1)/n) - 1$
     
-    由于 $0 < 1 - y < 1$，所以 $(1 - y)(1/n) > 1 - y$（因为 $1/n < 1$），因此：
-    $1 - y - 1 < (1 - y)(1/n) - 1 < 0$
+    由于 $0 < 1 - y < 1$，所以 $(1 - (y)(1)/n) > 1 - y$（因为 $1/n < 1$），因此：
+    $1 - y - 1 < (1 - (y)(1)/n) - 1 < 0$
     即 $-y < f(x) < 0$
     
     当 $x->0^-$ 时，$y->0^+$，根据夹逼准则，$lim_(x->0^-) f(x) = 0$。
     
-    综上所述，$lim_(x->0) f(x) = 0$，即 $lim_(x->0)(1 + x)(1/n) = 1$，证毕。
+    综上所述，$lim_(x->0) f(x) = 0$，即 $lim_(x->0)(1 + (x)(1)/n) = 1$，证毕。
   ]
-  #answer-space
+  

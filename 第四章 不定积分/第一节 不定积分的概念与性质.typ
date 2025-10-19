@@ -35,7 +35,7 @@
 
 6. 已知函数  $F(x)$  的导函数为  $1/sqrt(1 - x^2)$ ，且当  $x = 1$  时函数值为  $(3pi)/2$ ，试求此函数。
    #answer-process[
-     $F'(x) = 1/sqrt(1-x^2)$，所以 $F(x) = arcsin x + C$
+     $F'(x) = 1/(sqrt(1)-x^2)$，所以 $F(x) = arcsin x + C$
      
      由 $F(1) = 3pi/2$ 得：$pi/2 + C = 3pi/2$，所以 $C = pi$
      
@@ -47,9 +47,9 @@
    #answer-process[
      对每个函数求导验证：
      
-     $(arcsin(2x-1))' = 2 / sqrt(1-(2x-1)^2) = 2 / sqrt(4x-4x^2) = 1/sqrt(x-x^2)$ ✓
+     $(arcsin(2x-1))' = 2 / sqrt(1-(2x-1)^2) = 2 / sqrt(4x-4x^2) = 1/(sqrt(x)-x^2)$ ✓
      
-     $(arccos(1-2x))' = -(-2)/sqrt(1-(1-2x)^2) = 2/sqrt(4x-4x^2) = 1/sqrt(x-x^2)$ ✓
+     $(arccos(1-2x))' = -(-2)/(sqrt(1)-(1-2x)^2) = 2/(sqrt(4x)-4x^2) = 1/(sqrt(x)-x^2)$ ✓
      
      类似可验证第三个，因此都是原函数
    ]

@@ -28,28 +28,28 @@
 #subsection[二、计算题]
 3. 利用等价无穷小的性质，求下列极限：
    (1)  $lim_(x->0)(tan x - sin x)/(sin^3 x)$;
-   #answer-space
+   
    #answer-process[
    $lim_(x->0)(tan x - sin x)/(sin^3 x)$
    = $lim_(x->0)(sin x/cos x - sin x)/(sin^3 x)$
    = $lim_(x->0)(sin x (1/cos x - 1))/(sin^3 x)$
-   = $lim_(x->0)(1/cos x - 1)/(sin^2 x)$
+   = $lim_(x-(>0)(1)/cos x - 1)/(sin^2 x)$
    = $lim_(x->0)((1 - cos x)/cos x)/(sin^2 x)$
    = $lim_(x->0)(1 - cos x)/(cos x * sin^2 x)$
    
-   当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ x^2/2$，$sin x ~ x$，所以：
-   = $lim_(x->0)(x^2/2)/(1 * x^2)$
-   = $lim_(x->0)1/2$
+   当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，$sin x ~ x$，所以：
+   = $lim_(x-(>0)(x^2)/2)/(1 * x^2)$
+   = $lim_(x-(>0)1)/2$
    = $1/2$
    ]
    (2)  $lim_(x->0)(sin x - tan x)/((root(3,1 + x^2) - 1)(sqrt(1 + sin x) - 1))$.
-   #answer-space
+   
    #answer-process[
    分析分子：
    $sin x - tan x = sin x - sin x/cos x = sin x (1 - 1/cos x) = sin x (cos x - 1)/cos x$
    
-   当 $x -> 0$ 时，$sin x ~ x$，$cos x - 1 ~ -x^2/2$，$cos x -> 1$，所以：
-   $sin x - tan x ~ x * (-x^2/2)/1 = -x^3/2$
+   当 $x -> 0$ 时，$sin x ~ x$，$cos x - 1 ~ -(x^2)/2$，$cos x -> 1$，所以：
+   $sin x - tan x ~ x * (-(x^2)/2)/1 = -(x^3)/2$
    
    分析分母：
    $(root(3,1 + x^2) - 1)(sqrt(1 + sin x) - 1)$
@@ -59,10 +59,10 @@
    
    所以，分母 ~ $(1/3) * x^2 * (1/2) * x = (1/6) * x^3$
    
-   因此，原极限 = $lim_(x->0)(-x^3/2)/((1/6) * x^3) = lim_(x->0)(-1/2)/(1/6) = -3$
+   因此，原极限 = $lim_(x->0)(-(x^3)/2)/((1/6) * x^3) = lim_(x->0)(-(1/2)/(1)/6) = -3$
    ]
 4. 设  $lim_(x -> -1) (x^3 - a x^2 - x + 4)/(x + 1) = l (l != infinity)$ ，试求  $a$  和  $l$  的值
-   #answer-space
+   
    #answer-process[
    当 $x -> -1$ 时，分母 $x + 1 -> 0$。如果极限存在且为有限值 $l$，那么分子 $x^3 - a x^2 - x + 4$ 在 $x = -1$ 处也必须为 0。
    
@@ -83,19 +83,19 @@
    ]
 #subsection[三、证明题]
 5. 证明: 当  $x -> 0$  时, 有  $sec x - 1 ~ x^2/2$ .
-   #answer-space
+   
    #answer-process[
-   要证明 $sec x - 1 ~ x^2/2$ 当 $x -> 0$ 时，需要证明 $lim_(x->0)(sec x - 1)/(x^2/2) = 1$。
+   要证明 $sec x - 1 ~ (x^2)/2$ 当 $x -> 0$ 时，需要证明 $lim_(x->0)(sec x - (1)/(x^2)/2) = 1$。
    
-   $lim_(x->0)(sec x - 1)/(x^2/2)$
-   = $lim_(x->0)(1/cos x - 1)/(x^2/2)$
-   = $lim_(x->0)((1 - cos x)/cos x)/(x^2/2)$
-   = $lim_(x->0)(1 - cos x)/(cos x * x^2/2)$
+   $lim_(x->0)(sec x - (1)/(x^2)/2)$
+   = $lim_(x-(>0)(1)/cos x - (1)/(x^2)/2)$
+   = $lim_(x->0)((1 - cos x)/cos (x)/(x^2)/2)$
+   = $lim_(x->0)(1 - cos x)/(cos x * (x^2)/2)$
    
-   当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ x^2/2$，所以：
-   = $lim_(x->0)(x^2/2)/(1 * x^2/2)$
+   当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，所以：
+   = $lim_(x-(>0)(x^2)/2)/(1 * (x^2)/2)$
    = $lim_(x->0)1$
    = $1$
    
-   因此，$sec x - 1 ~ x^2/2$ 当 $x -> 0$ 时。
+   因此，$sec x - 1 ~ (x^2)/2$ 当 $x -> 0$ 时。
    ]

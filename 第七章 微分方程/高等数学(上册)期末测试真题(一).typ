@@ -84,15 +84,15 @@
 16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为
 #subsection[三、计算题(每小题7分，共35分)]
 17. 已知连续函数  $f(x) = integral_(0)^(3x) f(t/3) dif t + e^(2x)$ ，求  $f(x)$ .  
-    #answer-space
+    
 18. 已知  $f(pi) = 1$ ，函数  $f(x)$  二阶连续可微，且  $integral_(0)^(pi)[f(x) + f''(x)] sin x dif x = 3$ ，求  $f(0)$ .  
-    #answer-space
+    
 19. 求微分方程  $y'' - y' = 4x e^x$  满足初值条件  $y|_(x=0) = 0, y'|_(x=0) = 1$  的特解.  
-    #answer-space
+    
 20. 设函数  $y = y(x)$  由方程  $x^4 - x y - y e^x = 1$  所确定，求  $(d^2 y)/(d x^2 |_(x=0))$ .  
-    #answer-space
+    
 21. 求  $integral_(sqrt(2/x))^(1) (sqrt(1 - x^2))/(x^2) dif x$.
-    #answer-space
+    
 #subsection[四、应用题(10分)]
 22. 如图 2 所示, 由抛物线  $y = 2x^2$  与直线  $x = a, x = 2$  及  $y = 0$  所围成的平面图形为  $D_1$ , 由抛物线  $y = 2x^2$  与直线  $x = a$  及  $y = 0$  所围成的平面图形为  $D_2$ , 其中  $0 < a < 2$ .
 #figure(

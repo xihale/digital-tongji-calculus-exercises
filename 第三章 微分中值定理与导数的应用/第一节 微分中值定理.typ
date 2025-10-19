@@ -47,7 +47,7 @@
    #answer-process[
      令 $f(x) = arcsin x + arccos x$
      
-     $f'(x) = 1/sqrt(1-x^2) - 1/sqrt(1-x^2) = 0$
+     $f'(x) = 1/(sqrt(1)-x^2) - 1/(sqrt(1)-x^2) = 0$
      
      所以 $f(x) =$ 常数
      

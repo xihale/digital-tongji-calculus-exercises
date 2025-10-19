@@ -171,7 +171,7 @@
      先求 $f'(x)$：由变限积分求导，
      $f'(x) = frac(sin(x^2), x^2) · 2x = frac(2 sin(x^2), x)$
      
-     用分部积分求 $integral_0^1 x f(x) dif x$：令 $u = f(x)$，$dif v = x dif x$，则 $dif u = f'(x) dif x$，$v = x^2/2$。
+     用分部积分求 $integral_0^1 x f(x) dif x$：令 $u = f(x)$，$dif v = x dif x$，则 $dif u = f'(x) dif x$，$v = (x^2)/2$。
      
      $integral_0^1 x f(x) dif x = [frac(x^2, 2) f(x)]_0^1 - integral_0^1 frac(x^2, 2) f'(x) dif x$
      

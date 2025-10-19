@@ -9,7 +9,8 @@
   (上)
 ]
 
-// 章节包含
+#include "intro.typ"
+
 #include "第一章 函数与极限/index.typ"
 #include "第二章 导数与微分/index.typ"
 #include "第三章 微分中值定理与导数的应用/index.typ"
@@ -19,4 +20,4 @@
 #include "第七章 微分方程/index.typ"
 #include "模拟卷与真题/index.typ"
 
-#answer-space
+

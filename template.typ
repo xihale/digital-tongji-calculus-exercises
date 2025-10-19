@@ -26,7 +26,7 @@
   if SHOW_ANSWERS {
     // 显示答案时，显示答案内容在浅色背景框中
     block(
-      fill: rgb("#f0f8ff"),
+      // fill: rgb("#f0f8ff"),
       inset: 1em,
       radius: 0.3em,
       width: 100%,

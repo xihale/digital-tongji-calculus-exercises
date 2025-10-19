@@ -9,9 +9,9 @@
 4. 计算下列不定积分：
    (1) $integral (dif x)/(x sqrt(1 + x^2))$；
    #answer-process[
-     令 $u = 1/x$，则 $x = 1/u$，$dif x = -(1/u^2) dif u$。
+     令 $u = 1/x$，则 $x = 1/u$，$dif x = -(1/(u^2)) dif u$。
      
-     $1 + x^2 = 1 + 1/u^2 = (u^2 + 1)/u^2$，$sqrt(1 + x^2) = sqrt(u^2 + 1) / |u|$
+     $1 + x^2 = 1 + 1/(u^2) = (u^2 + 1)/(u^2)$，$sqrt(1 + x^2) = sqrt(u^2 + 1) / |u|$
      
   $integral (dif x)/(x sqrt(1 + x^2)) = integral frac(-(1/u^2), (1/u) · sqrt(u^2 + 1) / abs(u)) dif u$
      
@@ -25,7 +25,7 @@
      
   $= integral frac(1, sin t) dif t = integral csc t dif t = -ln|csc t + cot t| + C$
      
-     由 $x = tan t$ 得 $sin t = x/sqrt(1+x^2)$，$cos t = 1/sqrt(1+x^2)$，$tan t = x$，$cot t = 1/x$。
+     由 $x = tan t$ 得 $sin t = x/(sqrt(1)+x^2)$，$cos t = 1/(sqrt(1)+x^2)$，$tan t = x$，$cot t = 1/x$。
      
      $csc t + cot t = sqrt(1+x^2)/x + 1/x = (1 + sqrt(1+x^2))/x$
      
@@ -62,7 +62,7 @@
 
    (4) $integral (dif x)/(1 + sqrt(2x))$；
    #answer-process[
-     令 $u = sqrt(2x)$，则 $2x = u^2$，$x = u^2/2$，$dif x = u dif u$。
+     令 $u = sqrt(2x)$，则 $2x = u^2$，$x = (u^2)/2$，$dif x = u dif u$。
      
   $integral (dif x)/(1 + sqrt(2x)) = integral frac(u, 1 + u) dif u = integral frac(1 + u - 1, 1 + u) dif u$
      
@@ -79,7 +79,7 @@
      
   $= integral frac(dif t, sec t) = integral cos t dif t = sin t + C$
      
-     由 $x = tan t$ 得 $sin t = x/sqrt(1+x^2)$。
+     由 $x = tan t$ 得 $sin t = x/(sqrt(1)+x^2)$。
      
      因此 $integral (dif x)/(sqrt((x^2 + 1)^3)) = frac(x, sqrt(1+x^2)) + C$
    ]

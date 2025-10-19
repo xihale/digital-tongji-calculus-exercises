@@ -16,7 +16,7 @@
      
      C: 洛必达法则应用不当，分子极限为 0，不能再应用
      
-     D: $lim x/e^x -> 0/1 = 0$，而不是用洛必达后 $1/e^0 = 1$
+     D: $lim x/(e^x) -> 0/1 = 0$，而不是用洛必达后 $1/(e^0) = 1$
    ]
    
 2. 下列式子中，极限存在但不能用洛必达法则计算的是 (#answer-choice[C])
@@ -71,20 +71,20 @@
    #answer-process[
      分子 $->$ 0，分母 $sec x - cos x = 1/cos x - cos x = (1 - cos^2 x) / cos x = sin^2 x / cos x -> 0$
      
-     用洛必达：$lim = lim (2x/(1+x^2)) / (sin x / cos x times (-sin x) - (-sin x)/cos^2 x)$
+     用洛必达：$lim = lim (2x/(1+x^2)) / (sin x / cos x times (-sin x) - (-sin x)/(cos^2) x)$
      
      简化后 $lim -> 2 times 1 / 1 = 2$
    ]
    
    (4)  $lim_(x->0)x^2 e^(1/x^2)$;
    #answer-process[
-     令 $t = 1/x^2$，当 $x -> 0$ 时 $t -> infinity$
+     令 $t = 1/(x^2)$，当 $x -> 0$ 时 $t -> infinity$
      
      原极限 $= lim_(t -> infinity) e^t / t = infinity$（指数速度更快）
      
      等等，应该是0。重新考虑：当 $x -> 0$ 时，$x^2 -> 0$ 而 $e^(1/x^2) -> infinity$
      
-     这是 $0 times infinity$ 形式，需要转化为 $lim_(x->0) e^(1/x^2) / (1/x^2) = lim_(u -> infinity) e^u / u = infinity$
+     这是 $0 times infinity$ 形式，需要转化为 $lim_(x->0) e^(1/x^2) / (1/(x^2)) = lim_(u -> infinity) e^u / u = infinity$
      
      所以原极限为 infinity
    ]

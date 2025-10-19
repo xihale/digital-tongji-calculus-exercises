@@ -6,7 +6,7 @@
 #answer-process[
 函数在 $x = 0$ 处连续，意味着 $lim_(x->0) f(x) = f(0) = a$。
 计算极限：
-$lim_(x->0) (1/x) sin(x/3) = lim_(x->0) (sin(x/3))/(x/3) * (1/3) = 1 * (1/3) = 1/3$
+$lim_(x->0) (1/x) sin(x/3) = lim_(x->0) ((sin(x/3))/(x)/3) * (1/3) = 1 * (1/3) = 1/3$
 因此，$a = 1/3$。
 ]
 
@@ -50,7 +50,7 @@ $lim_(x->0) (1/x) sin(x/3) = lim_(x->0) (sin(x/3))/(x/3) * (1/3) = 1 * (1/3) = 1
    $f(x) = lim_(n->infinity) (1 - x^(2n))/(1 + x^(2n)) x = (1 - 0)/(1 + 0) x = x$
    
    当 $|x| > 1$ 时，$lim_(n->infinity) x^(2n) = +oo$，所以
-   $f(x) = lim_(n->infinity) (1 - x^(2n))/(1 + x^(2n)) x = lim_(n->infinity) (1/x^(2n) - 1)/(1/x^(2n) + 1) x = (0 - 1)/(0 + 1) x = -x$
+   $f(x) = lim_(n->infinity) (1 - x^(2n))/(1 + x^(2n)) x = lim_(n->infinity) (1/(x^(2n)) - (1)/(1)/(x^(2n)) + 1) x = (0 - 1)/(0 + 1) x = -x$
    
    当 $|x| = 1$ 时：
    $f(1) = lim_(n->infinity) (1 - 1^(2n))/(1 + 1^(2n)) * 1 = lim_(n->infinity) (1 - 1)/(1 + 1) = 0$

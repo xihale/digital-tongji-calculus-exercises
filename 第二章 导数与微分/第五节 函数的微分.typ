@@ -28,7 +28,7 @@
      
      $d u = d(sqrt(x)) times arcsin sqrt(x) + sqrt(x) times d(arcsin sqrt(x))$
      
-     $= (1/(2sqrt(x))) arcsin sqrt(x) d x + sqrt(x) times 1/sqrt(1-x) times 1/(2sqrt(x)) d x$
+     $= (1/(2sqrt(x))) arcsin sqrt(x) d x + sqrt(x) times 1/(sqrt(1)-x) times 1/(2sqrt(x)) d x$
      
      $= [(arcsin sqrt(x))/(2sqrt(x)) + 1/(2sqrt(1-x))] d x$
    ]
@@ -51,9 +51,9 @@
    
    (3)  $y = arcsin sqrt(1 - x^2)$ ;
    #answer-process[
-     $d y = 1/sqrt(1-(1-x^2)) times 1/(2sqrt(1-x^2)) times (-2x) d x$
+     $d y = 1/(sqrt(1)-(1-x^2)) times 1/(2sqrt(1-x^2)) times (-2x) d x$
      
-     $= 1/sqrt(x^2) times (-x) / sqrt(1-x^2) d x = -1 d x$ (当 $x > 0$)
+     $= 1/(sqrt(x^2)) times (-x) / sqrt(1-x^2) d x = -1 d x$ (当 $x > 0$)
    ]
    
    (4)  $y = tan^2 (1 + 2x^2)$ .
