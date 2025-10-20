@@ -4,7 +4,7 @@
 
 #import "template.typ": *
 
-#let VERSION = "v0.0.2"
+#let VERSION = "v0.0.3"
 
 #align(center)[
   #title[高等数学习题册]
