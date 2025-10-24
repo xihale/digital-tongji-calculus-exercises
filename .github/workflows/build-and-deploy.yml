@@ -48,6 +48,10 @@ jobs:
           
           # Verify files were created
           ls -lh *.pdf
+          
+          # Save PDFs to a temporary location
+          mkdir -p /tmp/pdfs
+          cp "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf" /tmp/pdfs/
       
       - name: Fetch web branch
         run: |
@@ -66,7 +70,7 @@ jobs:
       
       - name: Copy PDFs to web branch
         run: |
-          git checkout master -- "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          cp /tmp/pdfs/*.pdf .
       
       - name: Commit and push to web branch
         run: |
@@ -83,6 +87,10 @@ jobs:
       - name: Switch back to master for release
         run: |
           git checkout master
+      
+      - name: Restore PDFs for release
+        run: |
+          cp /tmp/pdfs/*.pdf .
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
