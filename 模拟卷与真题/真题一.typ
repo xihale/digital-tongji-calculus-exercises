@@ -209,7 +209,6 @@
    因此答案是 $b - a$。
    ]
 10.下列反常积分收敛的是(#answer-choice[B])
-    #v(0.5em)
     #choices(
     [$integral_(-infinity)^(+infinity) cos x dif x$],
     [$integral_(0)^(+infinity) e^(-2x) dif x$],

@@ -20,7 +20,6 @@
 		 sin^3 x &"if" 0 < x <= pi,
 	)$ 
    则此函数是(#answer-choice[C]).
-			#v(0.5em)
 				#choices(
 					[周期函数],
 					[单调增函数],
@@ -35,7 +34,6 @@
 			   因此 $f(x)$ 是奇函数。
 			 ]
 4. 设函数  $f(x) = e^x, g(x) = sin^2 x$ ，则  $f[g(x)] = (#answer-choice[A])$ .
-		 #v(0.5em)
 		 #choices(
 			$e^(sin^2 x)$,
 			$sin^2 e^x$,
