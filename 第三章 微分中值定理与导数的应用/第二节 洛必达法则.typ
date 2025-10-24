@@ -10,7 +10,7 @@
    [$lim_(x->0)x/e^x = lim_(x->0)1/e^x = 1$]
    )
    #answer-process[
-     A: $lim_(n->infinity) 1/n = 0$，所以 $e^0 = 1$，但这里计算错误（实际上极限是1）
+     A: 虽然最终结果 $e^0 = 1$ 是正确的，但表达式中从 $lim_(n->infinity)(ln n)/n$ 直接跳到 $lim_(n->infinity)(1/n)$ 没有明确显示洛必达法则的应用步骤（即求导过程）。严格来说，应写为 $lim_(n->infinity)((ln n)')/(n') = lim_(n->infinity)(1/n)/1 = lim_(n->infinity)(1/n)$。
      
      B: 分子分母都趋于0，可用洛必达法则，$lim = lim (1+cos x)/(1-cos x)|_{x->0}$ 但 $1-cos 0 = 0$，需再用一次，得 infinity ✓
      
