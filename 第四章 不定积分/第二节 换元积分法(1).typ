@@ -2,14 +2,14 @@
 
 #section[第二节 换元积分法(1)]
 #subsection[一、判断题(如果错误，请加以改正)]
-1. 因  $integral cos x dif x = sin x + C$ ，故  $integral cos 2x dif x = sin 2x + C.$  #answer-choice[(错误)]
+1. 因  $integral cos x dif x = sin x + C$ ，故  $integral cos 2x dif x = sin 2x + C.$  (#answer-choice[(错误)])
    #answer-process(height: 4cm)[
      正确的结果应该是 $integral cos 2x dif x = (1/2) sin 2x + C$。
      
     这是因为 $frac(d, d x)[(1/2) sin 2x] = (1/2) · 2 cos 2x = cos 2x$。
    ]
 
-2. 若  $integral f(x) dif x = F(x) + C$ ，则  $integral f(u) dif x = F(u) + C.$  #answer-choice[(错误)]
+2. 若  $integral f(x) dif x = F(x) + C$ ，则  $integral f(u) dif x = F(u) + C.$  (#answer-choice[(错误)])
    #answer-process(height: 5cm)[
      这是常见的错误。积分中的变量 $dif x$ 与被积函数中的变量必须相同。
      

@@ -4,7 +4,7 @@
 1.  $(d integral_a^b f(x) dif x)/(d x) = f(x)$  (#answer-choice[错]).
    #answer-process[错。应该是 $(d integral_a^x f(t) dif t) / (d x) = f(x)$，外层的 $a,b$ 是常数]
    
-2. 定积分的定义中，"$lambda -> 0$"可以换成"$n -> infinity$". (#answer-choice[否]).
+2. 定积分的定义中，$lambda -> 0$可以换成$n -> infinity$. (#answer-choice[否]).
    #answer-process[不一定。$lambda -> 0$ 不等同于 $n -> infinity$，需要同时满足等分条件]
 
 3. 交换定积分的上下限，定积分的值不变. (#answer-choice[错]).

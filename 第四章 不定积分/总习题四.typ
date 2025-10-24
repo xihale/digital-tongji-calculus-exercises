@@ -9,7 +9,7 @@
    [必有界],
    [必有极限]
    )
-   #answer-choice[(B)]
+   (#answer-choice[(B)])
    #answer-process[
      根据不定积分的存在定理，连续函数必有原函数（即不定积分存在）。
    ]
@@ -21,7 +21,7 @@
    [$phi (x) + C$],
    [$F(x) + phi (x) + C$]
    )
-   #answer-choice[(C)]
+   (#answer-choice[(C)])
     #answer-process[
        不定积分是所有原函数的集合。$F$ 和 $phi$ 都是 $f$ 的原函数，它们相差一个常数。
      
@@ -35,7 +35,7 @@
    $integral dif f(x) = f(x)$,
    $integral dif f(x) = f(x) + C$
    )
-   #answer-choice[(D)]
+   (#answer-choice[(D)])
    #answer-process[
      分析各选项：
      (A) 错。应该是 $d[integral f(x) dif x] = f(x) dif x$
@@ -51,7 +51,7 @@
    $-1/x + C$,
    $-ln x + C$
    )
-   #answer-choice[(C)]
+   (#answer-choice[(C)])
    #answer-process[
      $f(ln x) = e^(-ln x) = 1/x$
      
@@ -67,7 +67,7 @@
    $2 arcsin (2x - 1) + C$,
    $arcsin (2x - 1) + C$
    )
-   #answer-choice[(D)]
+   (#answer-choice[(D)])
    #answer-process[
      令 $u = sqrt(x)$，则 $x = u^2$，$dif x = 2u dif u$。
      

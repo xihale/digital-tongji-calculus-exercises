@@ -68,7 +68,6 @@
    [$a - b$]
    )
 10.下列反常积分收敛的是(#h(2em))
-    #v(0.5em)
     #choices(
     [$integral_(-infinity)^(+infinity) cos x dif x$],
     [$integral_(0)^(+infinity) e^(-2x) dif x$],

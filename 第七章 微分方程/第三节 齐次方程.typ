@@ -2,7 +2,7 @@
 
 #section[第三节 齐次方程]
 #subsection[一、选择题]
-1. 微分方程  $(d y)/(d x) = y/x + tan(y/x)$  的通解为#answer-choice[A].
+1. 微分方程  $(d y)/(d x) = y/x + tan(y/x)$  的通解为(#answer-choice[A]).
    #choices(
    [$sin(y/x) = C x$],
    [$sin(y/x) = 1/(C x)$],
