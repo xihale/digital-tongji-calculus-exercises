@@ -1,7 +1,22 @@
 // 统一的标题样式模板
 #let title(content) = text(weight: "bold", size: 2.3em, content)
-#let chapter(content) = align(center)[#(text(weight: "bold", size: 1.8em, content))]
-#let section(content) = align(center)[#(text(weight: "bold", size: 1.4em, content))]
+
+// 使用 Typst 的 heading 系统，以便自动生成目录
+// 章标题（一级标题）
+#let chapter(content) = {
+  align(center)[
+    #heading(level: 1, numbering: none)[#content]
+  ]
+}
+
+// 节标题（二级标题）
+#let section(content) = {
+  align(center)[
+    #heading(level: 2, numbering: none)[#content]
+  ]
+}
+
+// 小节标题（三级标题，不显示在目录中）
 #let subsection(content) = block(text(weight: "bold", size: 1.2em, content))
 
 // 答案显示控制系统
