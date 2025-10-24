@@ -2,7 +2,54 @@
 
 本文档说明如何更新章节版本并准备发布。
 
-## 更新流程
+## 版本更新方式
+
+### 方式一：自动版本管理（推荐用于 main 分支）
+
+如果你在 `main` 分支上工作，GitHub Actions 会自动处理版本递增：
+
+1. **修改内容**：编辑章节的 `.typ` 文件
+2. **提交并推送**：提交到 main 分支
+   ```bash
+   git add .
+   git commit -m "修正第二章第3题的错误"
+   git push origin main
+   ```
+3. **自动递增**：CI 会自动检测修改的章节并递增其题目版本（patch 级别）
+4. **无需手动操作**：版本更新会自动提交
+
+**限制：**
+- 仅在 main 分支自动触发
+- 仅递增题目版本（`CHAPTER_VERSIONS`）
+- 仅递增 patch 版本（x.y.z+1）
+
+### 方式二：使用自动递增脚本
+
+对于需要更精细控制的场景（如递增答案版本、minor/major 版本）：
+
+```bash
+# 递增第二章的题目版本（patch）
+python3 auto_increment_version.py "第二章 导数与微分" --type patch --version-type question
+
+# 递增第三章的答案版本（minor）
+python3 auto_increment_version.py "第三章 微分中值定理与导数的应用" --type minor --version-type answer
+
+# 同时递增题目和答案版本
+python3 auto_increment_version.py "第一章 函数与极限" --type patch --version-type both
+
+# 递增主版本号
+python3 auto_increment_version.py "第二章 导数与微分" --type major --version-type question
+```
+
+**优点：**
+- 可以选择递增类型（patch/minor/major）
+- 可以选择版本类型（question/answer/both）
+- 可以同时处理多个章节
+- 无需手动编辑 versions.typ
+
+### 方式三：手动编辑（传统方式）
+
+## 手动更新流程
 
 ### 1. 修改内容
 
@@ -11,7 +58,7 @@
 1. 编辑相应的题目文件（如 `第二章 导数与微分/第一节 导数的概念.typ`）
 2. 保存修改
 
-### 2. 更新版本号
+### 2. 更新版本号（手动方式）
 
 打开 `versions.typ` 文件，找到对应章节的版本配置：
 

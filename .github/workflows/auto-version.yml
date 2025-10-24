@@ -1,0 +1,106 @@
+name: Auto Version Increment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '第*章*/**/*.typ'
+      - '模拟卷与真题/**/*.typ'
+
+jobs:
+  auto-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Get changed files
+        id: changed-files
+        run: |
+          # Get list of changed .typ files in chapters
+          CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD | grep -E '^第.*章.*/.*.typ$|^模拟卷与真题/.*.typ$' || true)
+          echo "Changed files:"
+          echo "$CHANGED_FILES"
+          echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Determine affected chapters
+        id: affected-chapters
+        run: |
+          CHANGED_FILES="${{ steps.changed-files.outputs.changed_files }}"
+          
+          # Extract unique chapter names
+          CHAPTERS=""
+          
+          if echo "$CHANGED_FILES" | grep -q "第一章 函数与极限"; then
+            CHAPTERS="$CHAPTERS 第一章 函数与极限"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第二章 导数与微分"; then
+            CHAPTERS="$CHAPTERS 第二章 导数与微分"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第三章 微分中值定理与导数的应用"; then
+            CHAPTERS="$CHAPTERS 第三章 微分中值定理与导数的应用"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第四章 不定积分"; then
+            CHAPTERS="$CHAPTERS 第四章 不定积分"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第五章 定积分"; then
+            CHAPTERS="$CHAPTERS 第五章 定积分"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第六章 定积分的应用"; then
+            CHAPTERS="$CHAPTERS 第六章 定积分的应用"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "第七章 微分方程"; then
+            CHAPTERS="$CHAPTERS 第七章 微分方程"
+          fi
+          if echo "$CHANGED_FILES" | grep -q "模拟卷与真题"; then
+            CHAPTERS="$CHAPTERS 模拟卷与真题"
+          fi
+          
+          echo "Affected chapters: $CHAPTERS"
+          echo "chapters=$CHAPTERS" >> $GITHUB_OUTPUT
+      
+      - name: Auto-increment versions
+        id: increment-versions
+        run: |
+          CHAPTERS="${{ steps.affected-chapters.outputs.chapters }}"
+          
+          if [ -z "$CHAPTERS" ]; then
+            echo "No chapters affected"
+            exit 0
+          fi
+          
+          # Use the auto_increment_version.py script
+          python3 auto_increment_version.py $CHAPTERS --type patch --version-type question
+      
+      - name: Commit version changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if git diff --quiet versions.typ; then
+            echo "No version changes to commit"
+            exit 0
+          fi
+          
+          CHAPTERS="${{ steps.affected-chapters.outputs.chapters }}"
+          git add versions.typ
+          git commit -m "chore: auto-increment versions for modified chapters
+
+Modified chapters: $CHAPTERS
+
+[skip ci]"
+          git push

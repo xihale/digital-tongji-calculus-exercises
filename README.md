@@ -111,13 +111,54 @@ typst watch index.typ
 
 ### 版本管理工具
 
-项目提供了一个辅助脚本 `check_versions.py` 来查看当前所有章节的版本信息：
+项目提供了多个辅助脚本来管理版本：
+
+#### 1. 查看当前版本
 
 ```bash
 python3 check_versions.py
 ```
 
 该脚本会显示：
+- 所有章节的题目版本
+- 所有章节的答案版本  
+- 自动计算的主文件版本
+- 版本管理使用说明
+
+#### 2. 手动递增版本
+
+```bash
+# 递增第二章的题目版本（patch）
+python3 auto_increment_version.py "第二章 导数与微分" --type patch --version-type question
+
+# 递增第三章的答案版本（minor）
+python3 auto_increment_version.py "第三章 微分中值定理与导数的应用" --type minor --version-type answer
+
+# 同时递增多个章节的版本
+python3 auto_increment_version.py "第一章 函数与极限" "第二章 导数与微分" --type patch --version-type question
+```
+
+参数说明：
+- `--type`: 递增类型，可选 `patch`（修订号）、`minor`（次版本）、`major`（主版本）
+- `--version-type`: 版本类型，可选 `question`（题目）、`answer`（答案）、`both`（两者）
+
+### 自动版本管理（CI）
+
+项目配置了 GitHub Actions 工作流，可以在每次 push 到 main 分支时自动递增版本：
+
+**工作原理：**
+1. 检测哪些章节的 `.typ` 文件被修改
+2. 自动递增这些章节的题目版本（patch 级别）
+3. 提交版本更新到仓库（带 `[skip ci]` 标记避免循环触发）
+
+**触发条件：**
+- push 到 `main` 分支
+- 修改了章节目录下的 `.typ` 文件
+
+**注意：**
+- CI 只自动递增题目版本（`CHAPTER_VERSIONS`）
+- 如需递增答案版本，请手动使用 `auto_increment_version.py` 脚本
+- 如需 minor 或 major 版本递增，也请手动操作
 - 所有章节的题目版本
 - 所有章节的答案版本  
 - 自动计算的主文件版本
