@@ -4,6 +4,16 @@
 
 有一些漏网之鱼没有处理，以后再弄。
 
+## 📱 在线预览
+
+**🌐 [访问网页版](https://xihale.github.io/digital-tongji-calculus-exercises/)**
+
+网页版特性：
+- 📖 在线预览答案内容
+- 🗂️ 可折叠的侧边栏目录
+- 📄 支持 PDF 下载
+- 🔄 自动构建和部署
+
 ## Intro
 
 本项目是《高等数学习题册》的 Typst 排版项目，包含：

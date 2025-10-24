@@ -1,3 +1,13 @@
 *.pdf
-*.js
 *.log
+output/
+node_modules/
+dist/
+.DS_Store
+.vscode/
+*.swp
+*.swo
+*~
+
+# Keep web JavaScript files
+!web/**/*.js

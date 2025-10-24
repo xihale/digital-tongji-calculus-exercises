@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高等数学习题册（上册） - 数字版</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>高等数学习题册（上册）</h1>
+            <p class="subtitle">开源的高等数学习题集电子化版本</p>
+        </header>
+
+        <main>
+            <section class="version-info">
+                <h2>📌 版本信息</h2>
+                <div class="version-card">
+                    <div class="version-item">
+                        <span class="label">当前版本：</span>
+                        <span class="value" id="current-version">v0.0.3</span>
+                    </div>
+                    <div class="version-item">
+                        <span class="label">最后更新：</span>
+                        <span class="value" id="last-update">加载中...</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <h2>✨ 特性</h2>
+                <ul>
+                    <li><strong>详细的答案解析</strong>：由 AI 辅助生成，人工校对题干、部分公式</li>
+                    <li><strong>在线预览</strong>：基于 WASM 技术实现实时预览</li>
+                    <li><strong>灵活导航</strong>：可展开/收拢的侧边栏目录</li>
+                    <li><strong>PDF 生成</strong>：支持在线生成 PDF 文档</li>
+                </ul>
+            </section>
+
+            <section class="errata">
+                <h2>📝 勘误信息</h2>
+                <p>本项目正在快速迭代中，勘误信息会及时更新。</p>
+                <div class="warning">
+                    ⚠️ <strong>重要声明</strong>：本书大量借助 AI 进行处理，题干部分经由人工校对，但答案和解析部分主要由 AI 生成。由于人手不足，可能存在错误，<strong>请读者自行甄别</strong>。如遇错误或疑惑，欢迎提交 issue 或 pull request。
+                </div>
+            </section>
+
+            <section class="chapters">
+                <h2>📚 章节目录</h2>
+                <ul class="chapter-list">
+                    <li>第一章 函数与极限</li>
+                    <li>第二章 导数与微分</li>
+                    <li>第三章 微分中值定理与导数的应用</li>
+                    <li>第四章 不定积分</li>
+                    <li>第五章 定积分</li>
+                    <li>第六章 定积分的应用</li>
+                    <li>第七章 微分方程</li>
+                    <li>模拟卷与真题</li>
+                </ul>
+            </section>
+
+            <section class="actions">
+                <a href="preview.html" class="btn btn-primary">📖 在线预览答案</a>
+                <a href="https://github.com/xihale/digital-tongji-calculus-exercises" class="btn btn-secondary" target="_blank">
+                    🔗 GitHub 仓库
+                </a>
+            </section>
+
+            <section class="resources">
+                <h2>📚 相关资源</h2>
+                <ul>
+                    <li><a href="https://typst.app/docs" target="_blank">Typst 官方文档</a></li>
+                    <li><a href="https://typst-doc-cn.github.io/" target="_blank">Typst 中文文档</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>本项目采用 <a href="https://github.com/xihale/digital-tongji-calculus-exercises/blob/main/LICENSE" target="_blank">MIT License</a> 开源许可证</p>
+            <p>配套同济大学《高等数学(第七版)》</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
