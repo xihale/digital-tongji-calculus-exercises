@@ -22,23 +22,23 @@
 - 必须安装 Typst 环境 （我使用 0.13.1 ）
   详情请参考 官网
 
-- 字体选择性安装，不做说明
+- **字体**：项目已内置精简版 LXGW WenKai 字体（位于 `fonts/` 目录），无需额外安装。如果需要使用完整字体或其他字体，请参考字体目录中的说明
 
 ### 编译文档
 
 ```bash
 # 编译整个项目为 PDF（不显示答案）
-typst compile index.typ 高等数学习题册上册.pdf
+typst compile --font-path fonts/ index.typ 高等数学习题册上册.pdf
 
 # 编译并显示答案
-typst compile --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
+typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
 ```
 
 ### 实时预览
 
 ```bash
 # 在 VS Code 中预览（需要安装 Typst 扩展）
-typst watch index.typ
+typst watch --font-path fonts/ index.typ
 ```
 
 ### 项目配置
