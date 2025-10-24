@@ -1,0 +1,109 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Install Typst
+        run: |
+          curl -fsSL https://github.com/typst/typst/releases/download/v0.13.1/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
+          tar -xf typst.tar.xz
+          sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+          typst --version
+      
+      - name: Extract version from index.typ
+        id: version
+        run: |
+          VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Version extracted: $VERSION"
+      
+      - name: Build PDFs
+        run: |
+          # Build PDF without answers
+          typst compile index.typ "高等数学习题册上册.pdf"
+          
+          # Build PDF with answers
+          typst compile --input SHOW_ANSWER=true index.typ "高等数学习题册上册_带答案.pdf"
+          
+          # Verify files were created
+          ls -lh *.pdf
+      
+      - name: Fetch web branch
+        run: |
+          git fetch origin web
+          git checkout web
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Update index.html version
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" index.html
+          
+          # Verify the change
+          grep "version-value" index.html
+      
+      - name: Copy PDFs to web branch
+        run: |
+          git checkout master -- "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+      
+      - name: Commit and push to web branch
+        run: |
+          git add index.html "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          
+          # Only commit if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: version ${{ steps.version.outputs.version }} [skip ci]"
+            git push origin web
+          fi
+      
+      - name: Switch back to master for release
+        run: |
+          git checkout master
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: Release ${{ steps.version.outputs.version }}
+          body: |
+            ## 高等数学习题册（上册）${{ steps.version.outputs.version }}
+            
+            自动构建和发布
+            
+            ### 下载
+            - 📖 高等数学习题册上册.pdf (无答案版)
+            - 📖 高等数学习题册上册_带答案.pdf (带答案版)
+            
+            ### 在线预览
+            访问：https://dtce.xihale.top
+          files: |
+            高等数学习题册上册.pdf
+            高等数学习题册上册_带答案.pdf
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
