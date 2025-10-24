@@ -31,12 +31,54 @@ jobs:
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
           typst --version
       
-      - name: Extract version from index.typ
+      - name: Auto-increment version if .typ files changed
         id: version
         run: |
-          VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if any .typ files were modified in the recent commits
+          TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | grep -c '\.typ$' || echo "0")
+          
+          # Extract current version
+          CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+          echo "Current version: $CURRENT_VERSION"
+          
+          if [ "$TYP_CHANGES" -gt 0 ]; then
+            echo "Detected $TYP_CHANGES .typ file(s) changed, auto-incrementing version..."
+            
+            # Parse version (e.g., v0.0.3 -> 0.0.3)
+            VERSION_NUM=$(echo "$CURRENT_VERSION" | sed 's/^v//')
+            
+            # Split version into parts
+            MAJOR=$(echo "$VERSION_NUM" | cut -d. -f1)
+            MINOR=$(echo "$VERSION_NUM" | cut -d. -f2)
+            PATCH=$(echo "$VERSION_NUM" | cut -d. -f3)
+            
+            # Increment patch version
+            PATCH=$((PATCH + 1))
+            
+            # Create new version
+            NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+            echo "New version: $NEW_VERSION"
+            
+            # Update version in index.typ
+            sed -i "s/#let VERSION = \"$CURRENT_VERSION\"/#let VERSION = \"$NEW_VERSION\"/" index.typ
+            
+            # Commit the version change
+            git add index.typ
+            git commit -m "chore: auto-increment version to $NEW_VERSION [skip ci]"
+            git push origin master
+            
+            VERSION="$NEW_VERSION"
+          else
+            echo "No .typ files changed, keeping current version: $CURRENT_VERSION"
+            VERSION="$CURRENT_VERSION"
+          fi
+          
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Version extracted: $VERSION"
+          echo "Final version: $VERSION"
       
       - name: Build PDFs
         run: |
