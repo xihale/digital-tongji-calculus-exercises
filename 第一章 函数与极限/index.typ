@@ -1,6 +1,13 @@
 #import "../template.typ": *
-// 章节标题
+#import "../versions.typ": *
+
+// 章节标题与版本信息
 #chapter[第一章 函数与极限]
+#align(center)[
+  #text(size: 0.7em, fill: rgb("#888888"))[
+    题目版本: #get-chapter-version("第一章 函数与极限") | 答案版本: #get-answer-version("第一章 函数与极限")
+  ]
+]
 
 // 节内容
 
