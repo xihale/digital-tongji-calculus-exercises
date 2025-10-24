@@ -28,10 +28,4 @@ LXGW WenKai 字体采用 SIL Open Font License 1.1 授权。
 
 ### 重新生成精简字体
 
-如果需要重新生成精简字体（例如添加了新的内容），可以使用以下步骤：
-
-1. 提取所有使用的字符
-2. 下载完整版 LXGW WenKai 字体
-3. 使用 fonttools 的 pyftsubset 工具进行字体精简
-
-详细脚本可以参考项目历史提交记录。
+如果需要重新生成精简字体（例如添加了新的内容），请使用 `scripts/subset_font.py` 脚本。详见 `scripts/README.md`。

@@ -7,7 +7,7 @@
 1. 安装依赖: pip install fonttools brotli
 2. 运行脚本: python3 subset_font.py
 
-作者：GitHub Copilot
+生成工具：自动化脚本
 日期：2025-10-24
 """
 
@@ -44,13 +44,37 @@ def get_common_chinese_chars():
     chinese_numbers = "零一二三四五六七八九十百千万亿"
     common_chars.update(chinese_numbers)
     
-    # 常用量词和助词
-    common_words = "个的了在是有人这上中大为和我国到他们不说子地也时要就说得着后自那看可起来对年生到地成地民可我这用出手行是过以方想天面前后间内外高长大小多少年月日时分秒点左右上下东西南北"
+    # 常用量词、助词、代词
+    common_words = (
+        "个的了在是有人这上中大为和我国到他们不说子地也时要就说得着后自那看可起来对年生"
+        "到地成地民可我这用出手行是过以方想天面前后间内外高长大小多少年月日时分秒点"
+        "左右上下东西南北"
+    )
     common_chars.update(common_words)
     
-    # 数学和学术术语
-    math_terms = "数学函数方程极限导数微分积分变量常量定理公式计算求解证明已知则设令若使因此所以即为故等于大于小于约属于属包含组集合素实虚复正负奇偶质数位系整循商余模角弧度周期幅相切线法法向垂直平行斜率截距曲率凸凹拐间断跳跃可去无穷无极限连续可导阶高阶低次零点根极值最大最小值域值区间闭开半有界无界收敛发散单调增减性质特征齐次非齐通解特解初值边界条件参数变换代入换元部积法则链式乘积商比例反函互余补角弧度对数指数幂根号绝对值符号正弦余弦正切余切正割余割反三角双曲泰勒麦克劳林洛必达柯西罗尔拉格朗日黎曼牛顿莱布尼茨"
-    common_chars.update(math_terms)
+    # 数学和学术术语（按类别分组）
+    # 基础数学概念
+    math_basic = "数学函数方程极限导数微分积分变量常量定理公式计算求解证明已知则设令若使因此所以即为故"
+    # 比较和关系
+    math_relations = "等于大于小于约属于属包含组集合素实虚复正负奇偶质数位系整循商余模"
+    # 几何和三角
+    math_geometry = "角弧度周期幅相切线法法向垂直平行斜率截距曲率凸凹拐"
+    # 连续性和极限
+    math_continuity = "间断跳跃可去无穷无极限连续可导阶高阶低次零点根极值最大最小值域值区间闭开半有界无界收敛发散单调增减"
+    # 微分方程
+    math_diffeq = "性质特征齐次非齐通解特解初值边界条件参数变换代入换元部积法则链式乘积商比例"
+    # 函数类型
+    math_functions = "反函互余补角弧度对数指数幂根号绝对值符号正弦余弦正切余切正割余割反三角双曲"
+    # 数学家名字
+    math_names = "泰勒麦克劳林洛必达柯西罗尔拉格朗日黎曼牛顿莱布尼茨"
+    
+    common_chars.update(math_basic)
+    common_chars.update(math_relations)
+    common_chars.update(math_geometry)
+    common_chars.update(math_continuity)
+    common_chars.update(math_diffeq)
+    common_chars.update(math_functions)
+    common_chars.update(math_names)
     
     return common_chars
 
@@ -97,7 +121,8 @@ def main():
     
     # 3. 保存字符集
     print("\n步骤 3: 保存字符集...")
-    temp_dir = Path('/tmp')
+    import tempfile
+    temp_dir = Path(tempfile.gettempdir())
     chars_file = temp_dir / 'font_chars.txt'
     sorted_chars = sorted(all_chars)
     with open(chars_file, 'w', encoding='utf-8') as f:
@@ -111,11 +136,19 @@ def main():
     
     if not input_font.exists():
         print(f"正在从 {font_url} 下载...")
-        result = subprocess.run(['wget', '-O', str(input_font), font_url], 
-                              capture_output=True, text=True)
-        if result.returncode != 0:
-            print(f"下载失败: {result.stderr}")
-            return
+        try:
+            # 尝试使用 wget（如果可用）
+            result = subprocess.run(['wget', '-O', str(input_font), font_url], 
+                                  capture_output=True, text=True, timeout=300)
+            if result.returncode != 0:
+                print(f"wget 下载失败，尝试使用 Python urllib...")
+                import urllib.request
+                urllib.request.urlretrieve(font_url, input_font)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            # wget 不可用，使用 Python 内置库
+            print(f"使用 Python urllib 下载...")
+            import urllib.request
+            urllib.request.urlretrieve(font_url, input_font)
     else:
         print(f"字体文件已存在: {input_font}")
     
