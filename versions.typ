@@ -28,12 +28,28 @@
 // 获取最新版本号
 // Get the latest version from all chapters
 #let get-latest-version() = {
-  let versions = CHAPTER_VERSIONS.values() + ANSWER_VERSIONS.values()
+  let all-versions = CHAPTER_VERSIONS.values() + ANSWER_VERSIONS.values()
   let latest = "1.0.0"
   
-  for v in versions {
-    // Simple string comparison (works for semantic versioning)
-    if v > latest {
+  for v in all-versions {
+    // Parse version strings for proper comparison
+    let v-parts = v.split(".")
+    let latest-parts = latest.split(".")
+    
+    let is-newer = false
+    if int(v-parts.at(0)) > int(latest-parts.at(0)) {
+      is-newer = true
+    } else if int(v-parts.at(0)) == int(latest-parts.at(0)) {
+      if int(v-parts.at(1)) > int(latest-parts.at(1)) {
+        is-newer = true
+      } else if int(v-parts.at(1)) == int(latest-parts.at(1)) {
+        if int(v-parts.at(2)) > int(latest-parts.at(2)) {
+          is-newer = true
+        }
+      }
+    }
+    
+    if is-newer {
       latest = v
     }
   }
