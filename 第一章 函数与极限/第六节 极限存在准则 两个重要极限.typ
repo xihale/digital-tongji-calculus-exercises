@@ -4,7 +4,7 @@
 #subsection[一、选择题]
 1. $lim_(x->0)(1/x sin x)/(cos x)$ (#h(2em))
   #v(0.5em)
-  #answer-choice[1]
+  (#answer-choice[1])
   #choices(
     1,
     $infinity$,
@@ -18,7 +18,7 @@
 
 2. $lim_(x->infinity)(1 - 1/x)^(2x)$ (#h(2em))
   #v(0.5em)
-  #answer-choice[$e^(-2)$]
+  (#answer-choice[$e^(-2)$])
   #choices(
     $2 e$,
     $e^(-2)$,

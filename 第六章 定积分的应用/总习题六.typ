@@ -9,7 +9,7 @@
    [$integral_(1)^(ln 2) ln y , dif y$],
    [$integral_(1)^(2)(2 - e^x) dif x$]
    )
-   #answer-choice[(A)]
+   (#answer-choice[(A)])
 
 2.如图6-2所示，阴影部分面积为(#h(2em))
 #figure(
@@ -22,7 +22,7 @@
    [$integral_(a)^(b)[f(x) + g(x)] dif x$],
    [$integral_(a)^(c)[f(x) - g(x)] dif x + integral_(c)^(b)[g(x) - f(x)] dif x$]
    )
-   #answer-choice[(B)]
+   (#answer-choice[(B)])
 #subsection[二、填空题]
 3.由抛物线  $y = x^2 + 2x$  ，直线  $x = 1$  和  $x$  轴所围成图形的面积为  #blank($4/3$)
 

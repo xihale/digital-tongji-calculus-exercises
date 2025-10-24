@@ -9,7 +9,7 @@
    [$y^* = a x e^x + b$],
    [$y^* = a x e^x + b x$]
    )
-   #answer-choice[C]
+   (#answer-choice[C])
    #answer-process[
    首先分析特征方程：$r^2 - 1 = 0$，解得 $r = \pm 1$。
    
@@ -27,7 +27,7 @@
    [$y^* = x(a sin x + b cos x)$],
    [$y^* = a cos x + b sin x$]
    )
-   #answer-choice[C]
+   (#answer-choice[C])
    #answer-process[
    首先分析特征方程：$r^2 + 1 = 0$，解得 $r = \pm i$。
    

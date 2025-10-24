@@ -19,7 +19,7 @@
 		 -sin^3 x &"if" -pi <= x <= 0,
 		 sin^3 x &"if" 0 < x <= pi,
 	)$ 
-   则此函数是#answer-choice[C].
+   则此函数是(#answer-choice[C]).
 			#v(0.5em)
 				#choices(
 					[周期函数],

@@ -303,10 +303,10 @@ $
 1. 函数  $f(x) = (x + 1)/(x^2 - 1)$  在( )的变化过程中为无穷大
    #v(0.5em)
    #choices(
-   "$x -> 0$",
-   "$x -> 1$",
-   "$x -> -1$",
-   "$x -> infinity$"
+   $x -> 0$,
+   $x -> 1$,
+   $x -> -1$,
+   $x -> infinity$
    )
 #subsection[二、计算题]
 2. 计算下列极限：
@@ -335,17 +335,17 @@ $
    #v(0.5em)
    #choices(
    "1",
-   "$infinity$",
+   $infinity$,
    "不存在",
    "0"
    )
 2.  $lim_(x->infinity)(1 - 1/x)^(2x) = ()$
    #v(0.5em)
    #choices(
-   "$2 e$",
-   "$e^(-2)$",
-   "$e^2$",
-   "$2/e$"
+   $2 e$,
+   $e^(-2)$,
+   $e^2$,
+   $2/e$
    )
 #subsection[二、填空题]
 3. 设  $lim_(x -> infinity) (1 + k/x)^x = e^3$ ，则  $k =$  #blank.  
@@ -416,10 +416,10 @@ $
 2. 设函数  $f(x) = cases( x, & x >= 0, 0, & x < 0, ), g(x) = cases( x + 1, & x < 1, x, & x >= 1, )$  则  $f(x) + g(x)$  的连续区间是( ).
    #v(0.5em)
    #choices(
-   "$(-infinity , + infinity)$",
-   "$(- infinity, 0) union (0, +infinity)$",
-   "$(- infinity, 1) union (1, +infinity)$",
-   "$(-infinity, 0) union (0, 1) union (1, +infinity)$"
+   $(-infinity , + infinity)$,
+   $(- infinity, 0) union (0, +infinity)$,
+   $(- infinity, 1) union (1, +infinity)$,
+   $(-infinity, 0) union (0, 1) union (1, +infinity)$
    )
 3. 已知当  $x -> 0$  时， $sqrt(1 - x) - sqrt(1 + x) ~ a x$ ，则常数  $a = (quad)$
    #v(0.5em)
@@ -489,8 +489,8 @@ $$
    #choices(
    "$f(x) + C$  ( $C$  为非零常数)",
    "$f(-x) + C$  ( $C$  为非零常数)",
-   "$f(x) + f(-x)$",
-   "$f[f(x)]$"
+   $f(x) + f(-x)$,
+   $f[f(x)]$
    )
 3. 设函数  $f(x) = x^2 + arctan(1/(x - 1))$ ，则  $x = 1$  是  $f(x)$  的( ).
    #v(0.5em)
@@ -528,15 +528,15 @@ $$
    #v(0.5em)
    #choices(
    "101!",
-   "$-101!/100$",
-   "$-100!$",
-   "$100!/99$"
+   $-101!/100$,
+   $-100!$,
+   $100!/99$
    )
 2. 设函数  $f(x) = cases( (1 - e^(-x^2))/x, & x != 0, 0, & x = 0, )$  则  $f'(0) = (quad)$ .
    #v(0.5em)
    #choices(
    "0",
-   "$1/2$",
+   $1/2$,
    "1",
    "-1"
    )
@@ -609,9 +609,9 @@ $$
    #v(0.5em)
    #choices(
    "0",
-   "$-1/2^27$",
-   "$2^27 - 1/2^27$",
-   "$2^27$"
+   $-1/2^27$,
+   $2^27 - 1/2^27$,
+   $2^27$
    )
 #subsection[二、填空题]
 2. 设函数  $y = (1 + x^2) arctan x$ ，则  $y'' =$  #blank.  
@@ -642,16 +642,16 @@ $$
    #choices(
    "2",
    "8",
-   "$1/2 - ln 2$",
-   "$1 - ln 4$"
+   $1/2 - ln 2$,
+   $1 - ln 4$
    )
 2. 已知曲线  $L$  的参数方程为  ${ x = 2(t - sin t), y = 2(1 - cos t), }$  则  $L$  上点  $t = pi/2$  处的切线方程是( ).
    #v(0.5em)
    #choices(
-   "$x + y = pi$",
-   "$x - y = pi - 4$",
-   "$x - y = pi$",
-   "$x + y = pi - 4$"
+   $x + y = pi$,
+   $x - y = pi - 4$,
+   $x - y = pi$,
+   $x + y = pi - 4$
    )
 #subsection[二、填空题]
 3. 设函数  $y = y(x)$  由方程  $x sin y + ye^x = 0$  所确定，则  $y' (0) =$
@@ -711,10 +711,10 @@ $$
 1. 设函数  $f(x) = (x - a) phi(x)$ ，其中函数  $phi(x)$  在点  $x = a$  处连续，则必有( ).
    #v(0.5em)
    #choices(
-   "$f'(x) = phi (x)$",
-   "$f'(x) = phi (x) + (x - a) phi'(x)$",
-   "$f'(a) = phi (a)$",
-   "$f'(a) = phi'(a)$"
+   $f'(x) = phi (x)$,
+   $f'(x) = phi (x) + (x - a) phi'(x)$,
+   $f'(a) = phi (a)$,
+   $f'(a) = phi'(a)$
    )
 2. 若函数  $y = f(x)$  有  $f'(x_0) = 1/2$ ，则当  $Delta x -> 0$  时该函数在点  $x = x_0$  处的微分  $dy$  是  $Delta x$  的( ).
    #v(0.5em)
@@ -748,18 +748,18 @@ $$
 1. 设函数  $f(x) = sin x$  在区间  $[0, pi]$  上满足罗尔中值定理的条件，则罗尔中值定理结论中的  $xi = (quad)$ .
    #v(0.5em)
    #choices(
-   "$pi$",
-   "$pi/2$",
-   "$pi/3$",
-   "$pi/4$"
+   $pi$,
+   $pi/2$,
+   $pi/3$,
+   $pi/4$
    )
 2. 下列函数中在区间  $[1, e]$  上满足拉格朗日中值定理条件的是( ).
    #v(0.5em)
    #choices(
-   "$ln x$",
-   "$ln ln x$",
-   "$1/ln x$",
-   "$ln (2 - x)$"
+   $ln x$,
+   $ln ln x$,
+   $1/ln x$,
+   $ln (2 - x)$
    )
 #subsection[二、填空题]
 3. 设函数  $f(x) = (x - 1)(x - 2)(x - 3)(x - 5)$ ，则  $f'(x) = 0$  有 #blank 个实根，分别位于区间 #blank 中。
@@ -775,18 +775,18 @@ $$
 1.下列式子中运用洛必达法则正确的是( )
    #v(0.5em)
    #choices(
-   "$lim_(n->infinity)root(n,n) = e^(lim_(n->infinity)(ln n)/n) = e^(lim_(n->infinity)(1/n)) = 1$",
-   "$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = infinity$",
+   $lim_(n->infinity)root(n,n) = e^(lim_(n->infinity)(ln n)/n) = e^(lim_(n->infinity)(1/n)) = 1$,
+   $lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = infinity$,
    "$lim_(x->0)(x^2 sin(1/x))/sin x = lim_(x->0)(2x sin(1/x) - cos(1/x))/cos x$  不存在",
-   "$lim_(x->0)x/e^x = lim_(x->0)1/e^x = 1$"
+   $lim_(x->0)x/e^x = lim_(x->0)1/e^x = 1$
    )
 2.下列式子中，极限存在但不能用洛必达法则计算的是( )
    #v(0.5em)
    #choices(
-   "$lim_(x->0)x^2/sin x$",
-   "$lim_(x->0^+)(1/x)^(tan x)$",
-   "$lim_(x->infinity)(x + sin x)/x$",
-   "$lim_(x-> +infinity)x^n/e^x$"
+   $lim_(x->0)x^2/sin x$,
+   $lim_(x->0^+)(1/x)^(tan x)$,
+   $lim_(x->infinity)(x + sin x)/x$,
+   $lim_(x-> +infinity)x^n/e^x$
    )
 #subsection[二、填空题]
 3.  $lim_(x->pi/2)cos 5x/cos 3x = underline(quad)$  
@@ -814,18 +814,18 @@ $$
 1. 已知  $cos x = 1 - x^2/2 + R_3(x)$ , 则  $R_3(x) = (quad)$ .
    #v(0.5em)
    #choices(
-   "$(sin xi)/3! x^3$",
-   "$-(sin xi)/3! x^3$",
-   "$(cos xi)/4! x^4$",
-   "$-(cos xi)/4! x^4$"
+   $(sin xi)/3! x^3$,
+   $-(sin xi)/3! x^3$,
+   $(cos xi)/4! x^4$,
+   $-(cos xi)/4! x^4$
    )
 2. 函数  $f(x)$  的泰勒展开式  $f(x) = sum_(k=0)^n a_k (x - x_0)^k + R_n(x)$  中拉格朗日余项  $R_n(x) =$  ( ).
    #v(0.5em)
    #choices(
-   "$f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  (20  $0 <   theta <  1)$",
-   "$f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$",
-   "$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  (20  $0 <   theta <  1)$",
-   "$f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$"
+   $f^(n + 1)(theta x)/((n + 1)!) (x - x_0)^(n + 1)$  (20  $0 <   theta <  1)$,
+   $f^(n + 1)(x_0 + theta x)/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$,
+   $f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^n$  (20  $0 <   theta <  1)$,
+   $f^(n + 1)(x_0 + theta(x - x_0))/((n + 1)!) (x - x_0)^(n + 1)$ $(0 <   theta <  1)$
    )
 #subsection[二、计算题]
 3. 求函数  $f(x) = sqrt(x)$  按  $(x - 4)$  的幂展开的带有拉格朗日余项的三阶泰勒公式
@@ -846,10 +846,10 @@ $$
 1. 设函数  $f(x), g(x)$  在区间  $[a, b]$  上可导，且  $f'(x) > g'(x)$ ，则在  $(a, b)$  内有( ).
    #v(0.5em)
    #choices(
-   "$f(x) - g(x) > 0$",
-   "$f(x) - g(x)>= 0$",
-   "$f(x) - g(x) > f(b) - g(b)$",
-   "$f(x) - g(x) > f(a) - g(a)$"
+   $f(x) - g(x) > 0$,
+   $f(x) - g(x)>= 0$,
+   $f(x) - g(x) > f(b) - g(b)$,
+   $f(x) - g(x) > f(a) - g(a)$
    )
 2. 设函数  $f(x) = |x(1 - x)|$ ，则( ).
    #v(0.5em)
@@ -898,17 +898,17 @@ $$
 1. 已知函数  $f(x) = x^4 + a x^2 + bx$  在点  $x = 1$  处有极值 -2, 则常数  $a, b$  的值为( ).
    #v(0.5em)
    #choices(
-   "$a = -2, b = 1$",
-   "$a = 1, b = -1$",
-   "$a = 0, b = -3$",
-   "$a = -1, b = -2$"
+   $a = -2, b = 1$,
+   $a = 1, b = -1$,
+   $a = 0, b = -3$,
+   $a = -1, b = -2$
    )
 2. 函数  $y = f(x)$  在点  $x_0$  处连续且取得极大值，则( ).
    #v(0.5em)
    #choices(
-   "$f'(x_0) = 0$",
-   "$f''(x_0) < 0$",
-   "$f'(x_0) = 0$  且  $f''(x_0) <   0$",
+   $f'(x_0) = 0$,
+   $f''(x_0) < 0$,
+   $f'(x_0) = 0$  且  $f''(x_0) <   0$,
    "$f'(x_{0}) = 0$  或不存在"
    )
 3. 已知  $lim_(x -> a) (f(x) - f(a))/(x - a) = -1$ ，则在点  $x = a$  处( ).
@@ -965,10 +965,10 @@ $$
 1. 设在区间  $[0, 1]$  上  $f''(x) > 0$ ，则下列判断正确的是( ).
    #v(0.5em)
    #choices(
-   "$f'(1) > f'(0) > f(1) - f(0)$",
-   "$f'(1) > f(1) - f(0) > f'(0)$",
-   "$f(1) - f(0) > f'(1) > f'(0)$",
-   "$f'(1) > f(0) - f(1) > f'(0)$"
+   $f'(1) > f'(0) > f(1) - f(0)$,
+   $f'(1) > f(1) - f(0) > f'(0)$,
+   $f(1) - f(0) > f'(1) > f'(0)$,
+   $f'(1) > f(0) - f(1) > f'(0)$
    )
 2. 设  $f'(x_0) = f''(x_0) = 0, f'''(x_0) > 0$ ，则( ).
    #v(0.5em)
@@ -1163,34 +1163,34 @@ $$
 2. 若  $F'(x) = f(x), varphi'(x) = f(x)$ ，则  $integral f(x) , diff x = (quad)$ .
    #v(0.5em)
    #choices(
-   "$F(x)$",
-   "$varphi(x)$",
-   "$varphi (x) + C$",
-   "$F(x) + varphi (x) + C$"
+   $F(x)$,
+   $varphi(x)$,
+   $varphi (x) + C$,
+   $F(x) + varphi (x) + C$
    )
 3.下列式子中正确的是( )
    #v(0.5em)
    #choices(
-   "$d[integral f(x) diff x] = f(x)$",
-   "$diff/dx[integral f(x) diff x] = f(x) diff x$",
-   "$integral diff f(x) = f(x)$",
-   "$integral diff f(x) = f(x) + C$"
+   $d[integral f(x) diff x] = f(x)$,
+   $diff/dx[integral f(x) diff x] = f(x) diff x$,
+   $integral diff f(x) = f(x)$,
+   $integral diff f(x) = f(x) + C$
    )
 4. 设函数  $f(x) = e^(-x)$ ，则  $integral (f(ln x))/x , diff x = (quad)$ .
    #v(0.5em)
    #choices(
-   "$1/x + C$",
-   "$ln x + C$",
-   "$-1/x + C$",
-   "$-ln x + C$"
+   $1/x + C$,
+   $ln x + C$,
+   $-1/x + C$,
+   $-ln x + C$
    )
 5.  $integral (diff x)/(sqrt(x(1 - x))) = (quad)$
    #v(0.5em)
    #choices(
-   "$1/2 arcsin sqrt(x) + C$",
-   "$arcsin sqrt(x) + C$",
-   "$2 arcsin (2x - 1) + C$",
-   "$arcsin (2x - 1) + C$"
+   $1/2 arcsin sqrt(x) + C$,
+   $arcsin sqrt(x) + C$,
+   $2 arcsin (2x - 1) + C$,
+   $arcsin (2x - 1) + C$
    )
 #subsection[二、填空题]
 6.  $integral (1 - sin^2(x/2)) diff x =$  
@@ -1341,7 +1341,7 @@ $$
 1. 设  $I = integral_(a)^(b) f(x) , diff x$ ，根据定积分的几何意义可知( ).
    #v(0.5em)
    #choices(
-   "$I$  是由曲线  $y = f(x)$  及直线  $x = a, x = b$  与  $x$  轴所围成图形的面积，所以  $I > 0$",
+   $I$  是由曲线  $y = f(x)$  及直线  $x = a, x = b$  与  $x$  轴所围成图形的面积，所以  $I > 0$,
    "若  $I = 0$ , 则上述图形面积为零, 从而图形的“高”  $f(x) = 0$",
    "$I$  是曲线  $y = f(x)$  及直线  $x = a, x = b$  与  $x$  轴之间各部分面积的代数和",
    "$I$  是由曲线  $y = |f(x)|$  及直线  $x = a, x = b$  与  $x$  轴所围成图形的面积"
@@ -1357,26 +1357,26 @@ $$
 3. 若函数  $f(x) = cases( x, & x >= 0, e^x, & x < 0, )$  则  $integral_(-1)^(2) f(x) , diff x = (quad)$ .
    #v(0.5em)
    #choices(
-   "$3 - e^(-1)$",
-   "$3 + e^(-1)$",
-   "$3 - e$",
-   "$3 + e$"
+   $3 - e^(-1)$,
+   $3 + e^(-1)$,
+   $3 - e$,
+   $3 + e$
    )
 4. 设函数  $f(x)$  连续， $x > 0$ ，且  $integral_(1)^(x^2) f(t) , diff t = x^2 (x - 1)$ ，则  $f(2) = (quad)$ .
    #v(0.5em)
    #choices(
-   "$(3 sqrt(2))/2 - 1$",
-   "$2 sqrt(2) - {12}$",
-   "$12 - 2 sqrt(2)$",
-   "$1 - (3 sqrt(2))/2$"
+   $(3 sqrt(2))/2 - 1$,
+   $2 sqrt(2) - {12}$,
+   $12 - 2 sqrt(2)$,
+   $1 - (3 sqrt(2))/2$
    )
 5. 若函数  $f(x) = cases( (integral_0^x (e^(t^2) - 1) , diff t)/x^2, & x != 0, a, & x = 0, )$  且已知  $f(x)$  在点  $x = 0$  处连续，则必有( ).
    #v(0.5em)
    #choices(
-   "$a = 1$",
-   "$a = 2$",
-   "$a = 0$",
-   "$a = -1$"
+   $a = 1$,
+   $a = 2$,
+   $a = 0$,
+   $a = -1$
    )
 #subsection[二、填空题]
 6.  $d/dx integral_(a)^(b) arctan x diff x = underline(quad)$  
@@ -1452,18 +1452,18 @@ $$
 1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为( ).
    #v(0.5em)
    #choices(
-   "$integral_(1)^(2) ln y , diff y$",
-   "$integral_(0)^(e^2) e^x , diff y$",
-   "$integral_(1)^(ln 2) ln y , diff y$",
-   "$integral_(1)^(2)(2 - e^x) diff x$"
+   $integral_(1)^(2) ln y , diff y$,
+   $integral_(0)^(e^2) e^x , diff y$,
+   $integral_(1)^(ln 2) ln y , diff y$,
+   $integral_(1)^(2)(2 - e^x) diff x$
    )
 2.如图6-2所示，阴影部分面积为( )
    #v(0.5em)
    #choices(
-   "$integral_(a)^(b)[f(x) - g(x)] diff x$",
-   "$integral_(a)^(c)[g(x) - f(x)] diff x + integral_(c)^(b)[f(x) - g(x)] diff x$",
-   "$integral_(a)^(b)[f(x) + g(x)] diff x$",
-   "$integral_(a)^(c)[f(x) - g(x)] diff x + integral_(c)^(b)[g(x) - f(x)] diff x$"
+   $integral_(a)^(b)[f(x) - g(x)] diff x$,
+   $integral_(a)^(c)[g(x) - f(x)] diff x + integral_(c)^(b)[f(x) - g(x)] diff x$,
+   $integral_(a)^(b)[f(x) + g(x)] diff x$,
+   $integral_(a)^(c)[f(x) - g(x)] diff x + integral_(c)^(b)[g(x) - f(x)] diff x$
    )
 ![](https://cdn-mineru.openxlab.org.cn/result/2025-10-06/d40b3283-10ab-4cb6-8bea-4bab4dd11b16/c3fc79bbde1d520a1e4c87fd5c0052b152f79528d14387229ee90645e1b0daef.jpg)  
 图6-2
@@ -1496,10 +1496,10 @@ $$
 2.下列方程中( )是一阶微分方程
    #v(0.5em)
    #choices(
-   "$(y - xy')^2 = x^2 yy''$",
-   "$(y'' )^2 + 5(y')^4 - y^5 + x^7 = 0$",
-   "$(x^{2} - y^{2}) diff x + (x^{2} + y^{2}) diff y = 0$",
-   "$x y'' + y' + y = 0$"
+   $(y - xy')^2 = x^2 yy''$,
+   $(y'' )^2 + 5(y')^4 - y^5 + x^7 = 0$,
+   $(x^{2} - y^{2}) diff x + (x^{2} + y^{2}) diff y = 0$,
+   $x y'' + y' + y = 0$
    )
 #subsection[二、填空题]
 3.  $x y'' + 2x^{2}(y')^{2} + x^{3}y = x^{4} + 1$  是 阶微分方程
@@ -1529,10 +1529,10 @@ $$
 1. 微分方程  $dy/dx = y/x + tan(y/x)$  的通解为( ).
    #v(0.5em)
    #choices(
-   "$sin(y/x) = Cx$",
-   "$sin(y/x) = 1/(Cx)$",
-   "$sin(x/y) = Cx$",
-   "$sin(x/y) = 1/(Cx)$"
+   $sin(y/x) = Cx$,
+   $sin(y/x) = 1/(Cx)$,
+   $sin(x/y) = Cx$,
+   $sin(x/y) = 1/(Cx)$
    )
 #subsection[二、计算题]
 2. 求下列齐次方程的通解：
@@ -1553,10 +1553,10 @@ $$
 3. 以下( )是一阶线性微分方程
    #v(0.5em)
    #choices(
-   "$y' = sec y$",
-   "$y y' = 1$",
-   "$x^{2} y'' + 3xy' + y = 0$",
-   "$dy/dx = -(x^2 + x^3 + y)/(1 + x)$"
+   $y' = sec y$,
+   $y y' = 1$,
+   $x^{2} y'' + 3xy' + y = 0$,
+   $dy/dx = -(x^2 + x^3 + y)/(1 + x)$
    )
 #subsection[三、计算题]
 4. 求下列微分方程的通解：
@@ -1600,10 +1600,10 @@ $$
 1. 设线性无关的函数  $y_{1}, y_{2}, y_{3}$  都是二阶非齐次线性微分方程  $y'' + P(x) y' + Q(x) y = f(x)$  的解， $C_{1}, C_{2}, C_{3}$  是任意常数，则该微分方程的通解是( ).
    #v(0.5em)
    #choices(
-   "$C_{1} y_{1} + C_{2} y_{2} + C_{3} y_{3}$",
-   "$C_{1} y_{1} + C_{2} y_{2} - (C_{1} + C_{2}) y_{3}$",
-   "$(1 + C_{1} + C_{2}) y_{1} + C_{1} y_{2} + C_{2} y_{3}$",
-   "$(1 + C_{1} + C_{2}) y_{1} - C_{1} y_{2} - C_{2} y_{3}$"
+   $C_{1} y_{1} + C_{2} y_{2} + C_{3} y_{3}$,
+   $C_{1} y_{1} + C_{2} y_{2} - (C_{1} + C_{2}) y_{3}$,
+   $(1 + C_{1} + C_{2}) y_{1} + C_{1} y_{2} + C_{2} y_{3}$,
+   $(1 + C_{1} + C_{2}) y_{1} - C_{1} y_{2} - C_{2} y_{3}$
    )
 #subsection[二、填空题]
 2. 设  $y_{1} = cos x$  与  $y_{2} = sin x$  是微分方程  $y'' + y = 0$  的两个解，则该微分方程的通解为
@@ -1631,18 +1631,18 @@ $$
 1. 微分方程  $y'' - y = 3 e^x + 2$  的一个特解具有形式  $(a, b$  为常数)( ).
    #v(0.5em)
    #choices(
-   "$y^* = a e^x + b$",
-   "$y^* = a e^x + b x$",
-   "$y^* = a x e^x + b$",
-   "$y^* = a x e^x + b x$"
+   $y^* = a e^x + b$,
+   $y^* = a e^x + b x$,
+   $y^* = a x e^x + b$,
+   $y^* = a x e^x + b x$
    )
 2. 微分方程  $y'' + y = sin x$  的一个特解具有形式( ).
    #v(0.5em)
    #choices(
-   "$y^* = a sin x$",
-   "$y^* = a cos x$",
-   "$y^* = x(a sin x + b cos x)$",
-   "$y^* = a cos x + b sin x$"
+   $y^* = a sin x$,
+   $y^* = a cos x$,
+   $y^* = x(a sin x + b cos x)$,
+   $y^* = a cos x + b sin x$
    )
 #subsection[二、计算题]
 3. 求下列微分方程的通解：
@@ -1663,18 +1663,18 @@ $$
 1. 设非齐次线性微分方程  $y'' + P(x) y = Q(x)$  有两个不同的解  $y_{1}(x)$  与  $y_{2}(x)$ ， $C$  为任意常数，则该微分方程的通解是( ).
    #v(0.5em)
    #choices(
-   "$C[y_{1}(x) - y_{2}(x)]$",
-   "$y_{1}(x) + C[y_{1}(x) - y_{2}(x)]$",
-   "$C[y_{1}(x) + y_{2}(x)]$",
-   "$y_{1}(x) + C[y_{1}(x) + y_{2}(x)]$"
+   $C[y_{1}(x) - y_{2}(x)]$,
+   $y_{1}(x) + C[y_{1}(x) - y_{2}(x)]$,
+   $C[y_{1}(x) + y_{2}(x)]$,
+   $y_{1}(x) + C[y_{1}(x) + y_{2}(x)]$
    )
 2.具有特解  $y_{1} = e^(-x), y_{2} = 2x e^(-x), y_{3} = 3 e^{x}$  的三阶常系数齐次线性微分方程是( )
    #v(0.5em)
    #choices(
-   "$y''' - y'' - y' + y = 0$",
-   "$y''' + y'' - y' - y = 0$",
-   "$y''' - 6y'' + 11y' - 6y = 0$",
-   "$y''' - 2y'' - y' + 2y = 0$"
+   $y''' - y'' - y' + y = 0$,
+   $y''' + y'' - y' - y = 0$,
+   $y''' - 6y'' + 11y' - 6y = 0$,
+   $y''' - 2y'' - y' + 2y = 0$
    )
 #subsection[二、填空题]
 3. 已知  $y = 1, y = x, y = x^2$  是某二阶非齐次线性微分方程的三个解，则该微分方程的通解为
@@ -1697,10 +1697,10 @@ $$
 1. 当  $x -> 0$  时，下列( )是  $x$  的同阶(不等价)无穷小。
    #v(0.5em)
    #choices(
-   "$sin x - x$",
-   "$ln (1 - x)$",
-   "$x^{2} sin x$",
-   "${e}^{x} - 1$"
+   $sin x - x$,
+   $ln (1 - x)$,
+   $x^{2} sin x$,
+   ${e}^{x} - 1$
    )
 2.下列命题中不正确的是( )
    #v(0.5em)
@@ -1721,18 +1721,18 @@ $$
 4.下列不定积分的计算不正确的是( )
    #v(0.5em)
    #choices(
-   "$integral (diff x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$",
-   "$integral (diff x)/(x^2 - 2x + 2) = arctan(x - 1) + C$",
-   "$integral 2^{x} dot 3^{x} diff x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$",
-   "$integral (x)/(1 + x^2) , diff x = arctan x + C$"
+   $integral (diff x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$,
+   $integral (diff x)/(x^2 - 2x + 2) = arctan(x - 1) + C$,
+   $integral 2^{x} dot 3^{x} diff x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$,
+   $integral (x)/(1 + x^2) , diff x = arctan x + C$
    )
 5.下列反常积分收敛的是( )
    #v(0.5em)
    #choices(
-   "$integral_(1)^(+infinity)(diff x)/(sqrt{x})$",
-   "$integral_(-infinity)^(+infinity) (diff x)/(x^2 + 4x + 5)$",
-   "$integral_(0)^(1) (diff x)/(x^2)$",
-   "$integral_(-1)^(1) (diff x)/x$"
+   $integral_(1)^(+infinity)(diff x)/(sqrt{x})$,
+   $integral_(-infinity)^(+infinity) (diff x)/(x^2 + 4x + 5)$,
+   $integral_(0)^(1) (diff x)/(x^2)$,
+   $integral_(-1)^(1) (diff x)/x$
    )
 #subsection[二、填空题(每小题3分，共18分)]
 6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)), & -1 < x < 0, a sec x + 1, & x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank.  
@@ -1769,10 +1769,10 @@ $$
 1. 当  $x -> 0$  时，下列( )是  $x$  的三阶无穷小
    #v(0.5em)
    #choices(
-   "$root(3,x^2) - sqrt(x)$",
+   $root(3,x^2) - sqrt(x)$,
    "$sqrt(a + x^3) - sqrt(a)$  ( $a > 0$  是常数)",
-   "$x^{3} + 0.0001 x^{2}$",
-   "$root(3, tan x)$"
+   $x^{3} + 0.0001 x^{2}$,
+   $root(3, tan x)$
    )
 2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是( ).
    #v(0.5em)
@@ -1793,18 +1793,18 @@ $$
 4.下列不定积分的计算不正确的是( )
    #v(0.5em)
    #choices(
-   "$integral (diff x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$",
-   "$integral (diff x)/(x^2 + 2x + 2) = arctan(x + 1) + C$",
-   "$integral sin^2 x diff x = 1/3 sin^3 x + C$",
-   "$integral 2^{x} dot 3^{x} diff x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$"
+   $integral (diff x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$,
+   $integral (diff x)/(x^2 + 2x + 2) = arctan(x + 1) + C$,
+   $integral sin^2 x diff x = 1/3 sin^3 x + C$,
+   $integral 2^{x} dot 3^{x} diff x = (2^{x} dot 3^{x})/(ln 2 + ln 3) + C$
    )
 5.下列方程中( )为一阶线性微分方程
    #v(0.5em)
    #choices(
-   "$y' + x y^2 = e^x$",
-   "$y y' + x y = e^x$",
-   "$y' = cos y + x$",
-   "$y' = x + y sin x$"
+   $y' + x y^2 = e^x$,
+   $y y' + x y = e^x$,
+   $y' = cos y + x$,
+   $y' = x + y sin x$
    )
 #subsection[二、填空题(每小题3分，共18分)]
 6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x, & x > 0, e^x - 2, & x <= 0, )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a =$
@@ -1845,9 +1845,9 @@ $$
 1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (quad)$
    #v(0.5em)
    #choices(
-   "$2/3$",
+   $2/3$,
    "6",
-   "$3/2$",
+   $3/2$,
    "不存在"
    )
 2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的( ).
@@ -1877,10 +1877,10 @@ $$
 5. 设  $f'(x) = g(x)$ ，则  $d/dx f(sin^2 x) = (quad)$ .
    #v(0.5em)
    #choices(
-   "$2g(x) sin x$",
-   "$g(x) sin 2x$",
-   "$g(sin^2 x)$",
-   "$g(sin^2 x) sin 2x$"
+   $2g(x) sin x$,
+   $g(x) sin 2x$,
+   $g(sin^2 x)$,
+   $g(sin^2 x) sin 2x$
    )
 6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则( ).
    #v(0.5em)
@@ -1900,26 +1900,26 @@ $$
 8. 设线性无关的函数  $y_{1}, y_{2}, y_{3}$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_{1}, C_{2}$  是任意常数，则该非齐次微分方程的通解是( ).
    #v(0.5em)
    #choices(
-   "$C_{1} y_{1} + C_{2} y_{2} + y_{3}$",
-   "$C_{1} y_{1} + C_{2} y_{2} - (C_{1} + C_{2}) y_{3}$",
-   "$C_{1} y_{1} + C_{2} y_{2} - (1 - C_{1} - C_{2}) y_{3}$",
-   "$C_{1} y_{1} + C_{2} y_{2} + (1 - C_{1} - C_{2}) y_{3}$"
+   $C_{1} y_{1} + C_{2} y_{2} + y_{3}$,
+   $C_{1} y_{1} + C_{2} y_{2} - (C_{1} + C_{2}) y_{3}$,
+   $C_{1} y_{1} + C_{2} y_{2} - (1 - C_{1} - C_{2}) y_{3}$,
+   $C_{1} y_{1} + C_{2} y_{2} + (1 - C_{1} - C_{2}) y_{3}$
    )
 9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为( ).
    #v(0.5em)
    #choices(
-   "$1/b - 1/a$",
-   "$1/a - 1/b$",
-   "$b - a$",
-   "$a - b$"
+   $1/b - 1/a$,
+   $1/a - 1/b$,
+   $b - a$,
+   $a - b$
    )
 10.下列反常积分收敛的是( )
     #v(0.5em)
     #choices(
-    "$integral_(-infinity)^(+infinity) cos x diff x$",
-    "$integral_(0)^(+infinity) e^(-2x) diff x$",
-    "$integral_(-1)^(1) (diff x)/(x^2)$",
-    "$integral_(1)^(3) (diff x)/(ln x)$"
+    $integral_(-infinity)^(+infinity) cos x diff x$,
+    $integral_(0)^(+infinity) e^(-2x) diff x$,
+    $integral_(-1)^(1) (diff x)/(x^2)$,
+    $integral_(1)^(3) (diff x)/(ln x)$
     )
 #subsection[二、填空题(每小题3分，共18分)]
 11. 已知  $lim_(x -> 1) f(x)$  存在，且函数  $f(x) = x^2 + 2x lim_(x -> 1) f(x)$ ，则  $lim_(x -> 1) f(x) =$  
@@ -1958,10 +1958,10 @@ $$
 1. 若  $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则( ).
    #v(0.5em)
    #choices(
-   "$a = 0, b in R$",
-   "$a = 0, b = 1$",
-   "$a in R, b = 1$",
-   "$a in R, b in R$"
+   $a = 0, b in R$,
+   $a = 0, b = 1$,
+   $a in R, b = 1$,
+   $a in R, b in R$
    )
 2.当  $x->infinity$  时，  $x cos x$  is( )
    #v(0.5em)
@@ -1974,18 +1974,18 @@ $$
 3. 设函数  $y = e^(2x - 1)$ ，则  $y^(20)(1) = (quad)$ .
    #v(0.5em)
    #choices(
-   "$2^20 e$",
-   "$2^20 e^(-1)$",
-   "$2^20$",
+   $2^20 e$,
+   $2^20 e^(-1)$,
+   $2^20$,
    "e"
    )
 4.当  $x->0$  时，( )是  $x - sin x$  的同阶无穷小
    #v(0.5em)
    #choices(
-   "$x + tan x$",
-   "$x tan x$",
-   "$x^2 + tan x$",
-   "$x^2 tan x$"
+   $x + tan x$,
+   $x tan x$,
+   $x^2 + tan x$,
+   $x^2 tan x$
    )
 5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的( ).
    #v(0.5em)
@@ -1998,18 +1998,18 @@ $$
 6. 设函数  $y = f(x)$  具有二阶导数，且  $f'(x) > 0, f''(x) < 0, Delta x$  为自变量在点  $x_0$  处的增量， $Delta y$  与  $dy$  分别为  $f(x)$  在点  $x_0$  处对应的增量与微分。若  $Delta x > 0$ ，则( ).
    #v(0.5em)
    #choices(
-   "$0 <   dy <   Delta y$",
-   "$0 < Delta y < dy$",
-   "$Delta y < dy < 0$",
-   "$dy < Delta y < 0$"
+   $0 <   dy <   Delta y$,
+   $0 < Delta y < dy$,
+   $Delta y < dy < 0$,
+   $dy < Delta y < 0$
    )
 7. 设函数  $f(x)$  的一个原函数为  $x e^(-x)$ ，则  $f'(x) = (quad)$ .
    #v(0.5em)
    #choices(
-   "$x e^(-x)$",
-   "$(1 - x) e^(-x)$",
-   "$(2 + x) e^(-x)$",
-   "$(-2 + x) e^(-x)$"
+   $x e^(-x)$,
+   $(1 - x) e^(-x)$,
+   $(2 + x) e^(-x)$,
+   $(-2 + x) e^(-x)$
    )
 8. 设函数  $f(x)$  在点  $x_0$  的某邻域内可导，且  $lim_(x -> x_0) (f'(x))/(x - x_0) = a (a < 0)$ ，则( ).
    #v(0.5em)
@@ -2022,18 +2022,18 @@ $$
 9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) , diff t = (quad)$ .
    #v(0.5em)
    #choices(
-   "$f(2)$",
-   "$f(1)$",
-   "${2f}(2)$",
-   "$2f(1)$"
+   $f(2)$,
+   $f(1)$,
+   ${2f}(2)$,
+   $2f(1)$
    )
 10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) , diff t + ln 2$ ，则  $f(x) = (quad)$ .
     #v(0.5em)
     #choices(
-    "$e^{x} ln 2$",
-    "${e}^{2x} ln 2$",
-    "${e}^{x} + ln 2$",
-    "$e^{2x} + ln 2$"
+    $e^{x} ln 2$,
+    ${e}^{2x} ln 2$,
+    ${e}^{x} + ln 2$,
+    $e^{2x} + ln 2$
     )
 #subsection[二、填空题(每小题3分，共18分)]
 11.  $lim_(x->0^+)(1 + sin x)^(ln x) = underline(quad)$  

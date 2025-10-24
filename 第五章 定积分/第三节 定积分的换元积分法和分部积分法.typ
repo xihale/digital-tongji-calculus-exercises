@@ -3,7 +3,7 @@
 #section[第三节 定积分的换元积分法和分部积分法]
 #subsection[一、判断题(如果错误，请加以改正)]
 1.  $integral_(1)^(2)(dif x)/((11 + 5x)^3) =^[u = 11 + 5 x] 1/5 integral_(1)^(2) (dif u)/(u^3) = 1/5 dot (-1/2 u^(-2) |_(1)^(2)) = 3/40$ (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      错误在于：换元时积分上下限应该改变。
      
@@ -17,7 +17,7 @@
    ]
 
 2.  $integral_(-pi/2)^(pi/2) x^2 sqrt(1 - cos^2 x) dif x = integral_(-pi/2)^(pi/2) x^2 sin x dif x$  ，由于  $x^2 sin x$  是奇函数，因此有 $ integral_ (- pi/2) ^ (pi/2) x ^ 2 sqrt(1 - cos ^ 2 x) dif x = integral_ (- pi/2) ^ (pi/2) x ^ 2 sin x dif x = 0 quad (#h(2em)) $
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      错误在于：$sqrt(1 - cos^2 x) = |sin x|$，而不是 $sin x$。
      

@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试真题(一)]
 #subsection[一、选择题(每小题3分，共30分)]
-1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = #answer-choice[B]$
+1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (#answer-choice[B])$
    #choices(
    [$2/3$],
    [$6$],
@@ -22,7 +22,7 @@
    
    由题意，$e^(k/2) = e^3$，因此 $k/2 = 3$，得 $k = 6$。
    ]
-2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的#answer-choice[C].
+2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的(#answer-choice[C]).
    #choices(
    [高阶无穷小],
    [等价无穷小],
@@ -52,7 +52,7 @@
    
    由于极限存在且不为 0 或 $infinity$，所以两个无穷小是同阶无穷小，但不是等价无穷小（因为比值不为 1）。
    ]
-3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的#answer-choice[A].
+3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的(#answer-choice[A]).
    #choices(
    [跳跃间断点],
    [可去间断点],
@@ -98,7 +98,7 @@
    
    因为两个单侧极限都存在且有限，但不相等，所以 $x = 0$ 是跳跃间断点。
    ]
-4.方程  $x^4 -4x = 1$  在区间(0,1)内#answer-choice[A].
+4.方程  $x^4 -4x = 1$  在区间(0,1)内(#answer-choice[A]).
    #choices(
    [无实根],
    [有唯一实根],
@@ -120,7 +120,7 @@
    因为 $f(x)$ 在 $(0,1)$ 上单调递减，且 $f(0) = -1 < 0$，$f(1) = -4 < 0$，
    所以 $f(x) < 0$ 对所有 $x in (0,1)$ 成立，因此方程在 $(0,1)$ 内无实根。
    ]
-5. 设  $f'(x) = g(x)$ ，则  $(d)/(d x) f(sin^2 x) = #answer-choice[D]$ .
+5. 设  $f'(x) = g(x)$ ，则  $(d)/(d x) f(sin^2 x) = (#answer-choice[D])$ .
    #choices(
    [$2g(x) sin x$],
    [$g(x) sin 2x$],
@@ -139,7 +139,7 @@
    因此，
    $frac(d, d x) f(sin^2 x) = g(sin^2 x) * sin 2x = g(sin^2 x) sin 2x$
    ]
-6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则#answer-choice[A].
+6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则(#answer-choice[A]).
    #choices(
    [$f(0)$  是  $f(x)$  的极大值],
    [$f(0)$  是  $f(x)$  的极小值],
@@ -187,7 +187,7 @@
    [$C_1 y_1 + C_2 y_2 - (1 - C_1 - C_2) y_3$],
    [$C_1 y_1 + C_2 y_2 + (1 - C_1 - C_2) y_3$]
    )
-9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为#answer-choice[C].
+9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为(#answer-choice[C]).
    #choices(
    [$1/b - 1/a$],
    [$1/a - 1/b$],
@@ -208,7 +208,7 @@
    
    因此答案是 $b - a$。
    ]
-10.下列反常积分收敛的是#answer-choice[B]
+10.下列反常积分收敛的是(#answer-choice[B])
     #v(0.5em)
     #choices(
     [$integral_(-infinity)^(+infinity) cos x dif x$],
@@ -315,7 +315,7 @@
     
     但如果原函数定义有所不同，可能是 $k = -1/2$。需要根据具体题意确定。
     ]  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #answer-choice[$pi$]$  
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = (#answer-choice[$pi$])$  
     #answer-process[
     首先，对分母进行配方：
     $x^2 + 2x + 2 = (x + 1)^2 + 1$
@@ -332,7 +332,7 @@
     
     $= pi/2 - (-pi/2) = pi$
     ]  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #answer-choice[2/3]$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = (#answer-choice[2/3])$  
     #answer-process[
     分离积分：
     $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = integral_(-1)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x + integral_(-1)^(1) frac(x sin^2 x, 1 + sqrt(1 - x^2)) dif x$
