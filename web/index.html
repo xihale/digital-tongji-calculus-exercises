@@ -3,91 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高等数学习题册（上册） - 数字版</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>高等数学习题册（上册）</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 
+                         "Noto Sans", sans-serif, "LXGW WenKai", "STKaiti";
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0066cc;
+        }
+        
+        .intro {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .version {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 2rem 0;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .version-label {
+            font-weight: bold;
+            color: #666;
+        }
+        
+        .version-value {
+            color: #0066cc;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .links {
+            margin: 2rem 0;
+        }
+        
+        .links a {
+            display: inline-block;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            padding: 0.8rem 1.5rem;
+            background: #0066cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .links a:hover {
+            background: #0052a3;
+        }
+        
+        .links a.secondary {
+            background: #666;
+        }
+        
+        .links a.secondary:hover {
+            background: #555;
+        }
+        
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .links a {
+                display: block;
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>高等数学习题册（上册）</h1>
-            <p class="subtitle">开源的高等数学习题集电子化版本</p>
-        </header>
-
-        <main>
-            <section class="version-info">
-                <h2>📌 版本信息</h2>
-                <div class="version-card">
-                    <div class="version-item">
-                        <span class="label">当前版本：</span>
-                        <span class="value" id="current-version">v0.0.3</span>
-                    </div>
-                    <div class="version-item">
-                        <span class="label">最后更新：</span>
-                        <span class="value" id="last-update">加载中...</span>
-                    </div>
-                </div>
-            </section>
-
-            <section class="features">
-                <h2>✨ 特性</h2>
-                <ul>
-                    <li><strong>详细的答案解析</strong>：由 AI 辅助生成，人工校对题干、部分公式</li>
-                    <li><strong>在线预览</strong>：基于 WASM 技术实现实时预览</li>
-                    <li><strong>灵活导航</strong>：可展开/收拢的侧边栏目录</li>
-                    <li><strong>PDF 生成</strong>：支持在线生成 PDF 文档</li>
-                </ul>
-            </section>
-
-            <section class="errata">
-                <h2>📝 勘误信息</h2>
-                <p>本项目正在快速迭代中，勘误信息会及时更新。</p>
-                <div class="warning">
-                    ⚠️ <strong>重要声明</strong>：本书大量借助 AI 进行处理，题干部分经由人工校对，但答案和解析部分主要由 AI 生成。由于人手不足，可能存在错误，<strong>请读者自行甄别</strong>。如遇错误或疑惑，欢迎提交 issue 或 pull request。
-                </div>
-            </section>
-
-            <section class="chapters">
-                <h2>📚 章节目录</h2>
-                <ul class="chapter-list">
-                    <li>第一章 函数与极限</li>
-                    <li>第二章 导数与微分</li>
-                    <li>第三章 微分中值定理与导数的应用</li>
-                    <li>第四章 不定积分</li>
-                    <li>第五章 定积分</li>
-                    <li>第六章 定积分的应用</li>
-                    <li>第七章 微分方程</li>
-                    <li>模拟卷与真题</li>
-                </ul>
-            </section>
-
-            <section class="actions">
-                <a href="preview.html" class="btn btn-primary">📖 在线预览答案</a>
-                <a href="pdf/高等数学习题册上册_带答案.pdf" class="btn btn-secondary" download>
-                    ⬇️ 下载 PDF（带答案）
-                </a>
-                <a href="pdf/高等数学习题册上册.pdf" class="btn btn-secondary" download>
-                    ⬇️ 下载 PDF（仅题目）
-                </a>
-                <a href="https://github.com/xihale/digital-tongji-calculus-exercises" class="btn btn-secondary" target="_blank">
-                    🔗 GitHub 仓库
-                </a>
-            </section>
-
-            <section class="resources">
-                <h2>📚 相关资源</h2>
-                <ul>
-                    <li><a href="https://typst.app/docs" target="_blank">Typst 官方文档</a></li>
-                    <li><a href="https://typst-doc-cn.github.io/" target="_blank">Typst 中文文档</a></li>
-                </ul>
-            </section>
-        </main>
-
+        <h1>高等数学习题册（上册）</h1>
+        <p class="intro">一份开源的高等数学习题集电子化版本，使用 Typst 排版，内容配套同济大学《高等数学(第七版)》。</p>
+        
+        <div class="version">
+            <span class="version-label">当前版本：</span>
+            <span class="version-value" id="version">v0.0.3</span>
+        </div>
+        
+        <div class="links">
+            <a href="pdf/高等数学习题册上册_带答案.pdf" target="_blank">📖 预览答案 PDF</a>
+            <a href="https://github.com/xihale/digital-tongji-calculus-exercises" class="secondary" target="_blank">📦 GitHub 项目</a>
+        </div>
+        
         <footer>
             <p>本项目采用 <a href="https://github.com/xihale/digital-tongji-calculus-exercises/blob/main/LICENSE" target="_blank">MIT License</a> 开源许可证</p>
-            <p>配套同济大学《高等数学(第七版)》</p>
         </footer>
     </div>
-
-    <script src="js/main.js"></script>
 </body>
 </html>

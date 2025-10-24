@@ -24,28 +24,77 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 检查是否需要重新编译 PDF
+        id: check_changes
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "force_build=true" >> $GITHUB_OUTPUT
+            echo "需要重新编译（手动触发）"
+          elif git diff --name-only HEAD~1 HEAD | grep -E '\.typ$'; then
+            echo "force_build=true" >> $GITHUB_OUTPUT
+            echo "检测到 .typ 文件变更，需要重新编译"
+          else
+            echo "force_build=false" >> $GITHUB_OUTPUT
+            echo "未检测到 .typ 文件变更，使用缓存"
+          fi
 
       - name: 安装 Typst
+        if: steps.check_changes.outputs.force_build == 'true'
         uses: typst-community/setup-typst@v3
         with:
           typst-version: '0.13.1'
 
+      - name: 创建输出目录
+        run: |
+          mkdir -p web/pdf
+
+      - name: 恢复 PDF 缓存
+        if: steps.check_changes.outputs.force_build == 'false'
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            output/*.pdf
+          key: pdf-cache-${{ hashFiles('**/*.typ') }}
+          restore-keys: |
+            pdf-cache-
+
       - name: 编译 PDF（带答案）
+        if: steps.check_changes.outputs.force_build == 'true'
         run: |
           mkdir -p output
-          mkdir -p web/pdf
           typst compile --input SHOW_ANSWER=true index.typ output/高等数学习题册上册_带答案.pdf
-          cp output/高等数学习题册上册_带答案.pdf web/pdf/
 
       - name: 编译 PDF（不带答案）
+        if: steps.check_changes.outputs.force_build == 'true'
         run: |
           typst compile index.typ output/高等数学习题册上册.pdf
-          cp output/高等数学习题册上册.pdf web/pdf/
 
-      - name: 准备部署文件
+      - name: 保存 PDF 缓存
+        if: steps.check_changes.outputs.force_build == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            output/*.pdf
+          key: pdf-cache-${{ hashFiles('**/*.typ') }}
+
+      - name: 复制 PDF 到 web 目录
         run: |
-          # 确保所有需要的文件都在 web 目录中
-          ls -la web/
+          if [ -f output/高等数学习题册上册_带答案.pdf ]; then
+            cp output/高等数学习题册上册_带答案.pdf web/pdf/
+          fi
+          if [ -f output/高等数学习题册上册.pdf ]; then
+            cp output/高等数学习题册上册.pdf web/pdf/
+          fi
+
+      - name: 验证文件
+        run: |
+          echo "Web 目录内容："
+          ls -lh web/
+          echo "PDF 目录内容："
+          ls -lh web/pdf/ || echo "PDF 目录为空"
 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
