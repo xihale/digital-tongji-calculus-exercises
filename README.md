@@ -15,6 +15,25 @@
 > ⚠️ **重要声明**：本书大量借助 AI 进行处理，题干部分经由人工校对，但答案和解析部分主要由 AI 生成。由于人手不足，可能存在错误，**请读者自行甄别**。如遇错误或疑惑，欢迎提交 issue 或 pull request。
 
 
+## 自动构建与部署
+
+本项目配置了 GitHub Actions 自动化工作流，当代码推送到 `master` 分支时会自动：
+
+1. 编译生成两个版本的 PDF：
+   - `高等数学习题册上册.pdf`（无答案版）
+   - `高等数学习题册上册_带答案.pdf`（带答案版）
+
+2. 更新网页版本号并部署到 [https://dtce.xihale.top](https://dtce.xihale.top)
+
+3. 创建 GitHub Release，版本号自动从 `index.typ` 中的 `VERSION` 变量获取
+
+### 版本管理
+
+要发布新版本，只需：
+1. 修改 `index.typ` 中的 `VERSION` 变量
+2. 提交并推送到 `master` 分支
+3. GitHub Actions 会自动完成构建和发布
+
 ## 自行构建
 
 ### 前置
