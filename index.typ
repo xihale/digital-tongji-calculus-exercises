@@ -4,6 +4,15 @@
 
 #import "template.typ": *
 
+// 设置标题样式以匹配原有外观
+#set heading(numbering: none)
+#show heading.where(level: 1): it => align(center)[
+  #text(weight: "bold", size: 1.8em)[#it.body]
+]
+#show heading.where(level: 2): it => align(center)[
+  #text(weight: "bold", size: 1.4em)[#it.body]
+]
+
 #let VERSION = "v0.0.3"
 
 #align(center)[
@@ -16,6 +25,19 @@
 ]
 
 #include "intro.typ"
+
+// 添加目录
+#align(center)[
+  #text(weight: "bold", size: 1.8em)[目录]
+]
+#outline(
+  title: none,  // 不显示默认标题，我们已经自定义了
+  depth: 2,     // 显示两级目录：章和节
+  indent: 2em   // 二级目录缩进
+)
+#pagebreak()
+
+#set page(footer: context align(center)[#counter(page).display()])
 
 #include "第一章 函数与极限/index.typ"
 #include "第二章 导数与微分/index.typ"
