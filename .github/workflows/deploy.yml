@@ -32,7 +32,8 @@ jobs:
 
       - name: 编译 PDF（带答案）
         run: |
-          mkdir -p output web/pdf
+          mkdir -p output
+          mkdir -p web/pdf
           typst compile --input SHOW_ANSWER=true index.typ output/高等数学习题册上册_带答案.pdf
           cp output/高等数学习题册上册_带答案.pdf web/pdf/
 
