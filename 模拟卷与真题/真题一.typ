@@ -187,7 +187,7 @@
    [$C_1 y_1 + C_2 y_2 - (1 - C_1 - C_2) y_3$],
    [$C_1 y_1 + C_2 y_2 + (1 - C_1 - C_2) y_3$]
    )
-9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为#answer-choice[A].
+9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为#answer-choice[C].
    #choices(
    [$1/b - 1/a$],
    [$1/a - 1/b$],
@@ -195,51 +195,18 @@
    [$a - b$]
    )
    #answer-process[
-   *建立坐标系统和积分设置：*
-   
    围成的区域由以下边界确定：
-   - 曲线 $y = ln x$
+   - 曲线 $y = ln x$（即 $x = e^y$）
    - 直线 $y = ln a$ 和 $y = ln b$（其中 $b > a > 0$）
-   - $y$ 轴（即 $x = 0$）
+   - $y$ 轴（$x = 0$）
    
-   在 $y = ln x$ 上，若 $y = ln a$，则 $x = a$；若 $y = ln b$，则 $x = b$
+   使用水平条带法，以 $y$ 为积分变量，从 $y = ln a$ 到 $y = ln b$。
    
-   *转换为关于 $y$ 的积分：*
+   在高度 $y$ 处，横向宽度为 $x = e^y$（从 $y$ 轴到曲线）。
    
-   从 $y = ln x$ 得 $x = e^y$。在 $y$ 的范围 $[ln a, ln b]$ 上，曲线 $x = e^y$ 从 $x = a$ 变化到 $x = b$。
+   面积 $= integral_(ln a)^(ln b) e^y dif y = [e^y]_(ln a)^(ln b) = e^(ln b) - e^(ln a) = b - a$
    
-   面积可以表示为：
-   $A = integral_(ln a)^(ln b) e^y dif y$
-   
-   *计算积分：*
-   
-   $A = integral_(ln a)^(ln b) e^y dif y = e^y |_(ln a)^(ln b) = e^(ln b) - e^(ln a) = b - a$
-   
-   但这是把曲线和 $y$ 轴之间的面积（向右）。题目要求的是"由曲线与直线及 $y$ 轴所围成图形"。
-   
-   让我重新理解：应该是以 $y$ 为积分变量，$x$ 从 $y$ 轴（$x = 0$）到曲线 $x = e^y$。
-   
-   不对，如果关于 $y$ 的方程是 $y = ln x$，反函数是 $x = e^y$。面积应该是：
-   
-   $A = integral_(ln a)^(ln b) (e^y - 0) dif y = integral_(ln a)^(ln b) e^y dif y = [e^y]_(ln a)^(ln b) = b - a$
-   
-   但选项中 $b - a$ 是选项 C。让我检查题意...
-   
-   如果将积分用 $x$ 表示，由于 $x = e^y$，所以 $dif y = dif(ln x) = frac(dif x, x)$
-   
-   当 $y = ln a$ 时，$x = a$；当 $y = ln b$ 时，$x = b$
-   
-   面积 $= integral_a^b frac(1, x) dif x = ln x |_a^b = ln b - ln a = ln(b/a)$
-   
-   这仍不匹配选项。选项中出现 $1/b$ 和 $1/a$，这提示可能是错误的理解。
-   
-   重新理解：面积 $= integral_(ln a)^(ln b) e^y dif y = e^(ln b) - e^(ln a) = b - a$
-   
-   等等，题目可能要求的格式不同。若答案是 $1/b - 1/a$，这可能来自不同的积分设置。
-   
-   实际上标准答案应该是 $1/b - 1/a$（选项 A），其中面积实际上是 $integral_a^b (ln b - ln x) dif x = integral_a^b ln(b/x) dif x$
-   
-   经过详细计算，标准答案为 $1/b - 1/a$。
+   因此答案是 $b - a$。
    ]
 10.下列反常积分收敛的是#answer-choice[B]
     #v(0.5em)
