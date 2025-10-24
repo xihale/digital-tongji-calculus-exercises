@@ -33,10 +33,10 @@ jobs:
       
       - name: Install fonts
         run: |
-          # Install LXGW WenKai font
+          # Install Chinese fonts for proper rendering
           sudo apt-get update
           sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
-          # Try to install LXGW WenKai if available
+          # Install LXGW WenKai font
           mkdir -p ~/.local/share/fonts
           curl -fsSL https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Regular.ttf -o ~/.local/share/fonts/LXGWWenKai-Regular.ttf || true
           fc-cache -f -v || true
