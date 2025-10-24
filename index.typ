@@ -37,6 +37,8 @@
 )
 #pagebreak()
 
+#set page(footer: context align(center)[#counter(page).display()])
+
 #include "第一章 函数与极限/index.typ"
 #include "第二章 导数与微分/index.typ"
 #include "第三章 微分中值定理与导数的应用/index.typ"
