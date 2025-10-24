@@ -31,16 +31,6 @@ jobs:
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
           typst --version
       
-      - name: Install fonts
-        run: |
-          # Install Chinese fonts for proper rendering
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
-          # Install LXGW WenKai font
-          mkdir -p ~/.local/share/fonts
-          curl -fsSL https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Regular.ttf -o ~/.local/share/fonts/LXGWWenKai-Regular.ttf || true
-          fc-cache -f -v || true
-      
       - name: Extract version from index.typ
         id: version
         run: |
@@ -51,17 +41,17 @@ jobs:
       - name: Build PDFs
         run: |
           # Build PDF without answers
-          typst compile index.typ "高等数学习题册上册.pdf"
+          typst compile --font-path fonts/ index.typ index.pdf
           
           # Build PDF with answers
-          typst compile --input SHOW_ANSWER=true index.typ "高等数学习题册上册_带答案.pdf"
+          typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ index_ans.pdf
           
           # Verify files were created
           ls -lh *.pdf
           
           # Save PDFs to a temporary location
           mkdir -p /tmp/pdfs
-          cp "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf" /tmp/pdfs/
+          cp index.pdf index_ans.pdf /tmp/pdfs/
       
       - name: Fetch web branch
         run: |
@@ -84,7 +74,7 @@ jobs:
       
       - name: Commit and push to web branch
         run: |
-          git add index.html "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          git add index.html index.pdf index_ans.pdf
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
@@ -113,14 +103,14 @@ jobs:
             自动构建和发布
             
             ### 下载
-            - 📖 高等数学习题册上册.pdf (无答案版)
-            - 📖 高等数学习题册上册_带答案.pdf (带答案版)
+            - 📖 index.pdf (无答案版)
+            - 📖 index_ans.pdf (带答案版)
             
             ### 在线预览
             访问：https://dtce.xihale.top
           files: |
-            高等数学习题册上册.pdf
-            高等数学习题册上册_带答案.pdf
+            index.pdf
+            index_ans.pdf
           draft: false
           prerelease: false
         env:
