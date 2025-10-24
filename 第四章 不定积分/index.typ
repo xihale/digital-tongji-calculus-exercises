@@ -1,6 +1,13 @@
 #import "../template.typ": *
-// 章节标题
+#import "../versions.typ": *
+
+// 章节标题与版本信息
 #chapter[第四章 不定积分]
+#align(center)[
+  #text(size: 0.7em, fill: rgb("#888888"))[
+    题目版本: #get-chapter-version("第四章 不定积分") | 答案版本: #get-answer-version("第四章 不定积分")
+  ]
+]
 
 // 节内容
 #include "第一节 不定积分的概念与性质.typ"

@@ -3,8 +3,11 @@
 #set image(width: 12em)
 
 #import "template.typ": *
+#import "versions.typ": *
 
-#let VERSION = "v0.0.3"
+// 主文件版本自动与各章节版本对齐
+// Main file version automatically aligns with latest chapter version
+#let VERSION = "v" + MAIN_VERSION
 
 #align(center)[
   #title[高等数学习题册]

@@ -1,6 +1,13 @@
 #import "../template.typ": *
-// 章节标题
+#import "../versions.typ": *
+
+// 章节标题与版本信息
 #chapter[第六章 定积分的应用]
+#align(center)[
+  #text(size: 0.7em, fill: rgb("#888888"))[
+    题目版本: #get-chapter-version("第六章 定积分的应用") | 答案版本: #get-answer-version("第六章 定积分的应用")
+  ]
+]
 
 // 节内容
 #include "第一节 定积分的元素法.typ"
