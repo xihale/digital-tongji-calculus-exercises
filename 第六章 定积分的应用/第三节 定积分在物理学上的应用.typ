@@ -6,7 +6,8 @@
 
 #figure(
   image("images/6-1.jpg", width: 80%),
-  caption: [图6-1]
+  caption: [图6-1],
+  alt: "x 轴上长度为 l 的细棒与距离其右端为 a 的质点 M 的位置关系示意图"
 )
     #answer-process[
        取细棒上位置 $x$ 的微元，距质点的距离为 $r = a + l - x$，微元质量 $d m = μ d x$。
