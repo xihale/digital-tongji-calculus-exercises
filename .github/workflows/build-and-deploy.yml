@@ -67,6 +67,7 @@ jobs:
             echo "HEAD commit: $HEAD_COMMIT"
             
             # Check if the current version matches the tag
+            # Both CURRENT_VERSION and LAST_TAG should have the same format (e.g., "v0.0.5")
             if [ "$CURRENT_VERSION" = "$LAST_TAG" ]; then
               # If HEAD is different from the tag commit, we need to check for .typ changes
               if [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
