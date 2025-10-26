@@ -110,7 +110,9 @@ jobs:
       
       - name: Commit and push to web branch
         run: |
-          git add index.html index/ index_ans/ "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          git add index.html "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          # Add HTML export directories
+          git add index/ index_ans/
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
