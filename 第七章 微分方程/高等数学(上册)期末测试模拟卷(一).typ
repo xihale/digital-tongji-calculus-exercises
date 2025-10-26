@@ -51,7 +51,7 @@
    
 9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
    
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#answer-choice[])$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank()$
    
 11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
    
@@ -59,7 +59,7 @@
 7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$  
 8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为  
 9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#answer-choice[])$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank()$
 
 11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]

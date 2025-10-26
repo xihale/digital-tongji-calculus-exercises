@@ -73,7 +73,7 @@
     [$e^(2x) + ln 2$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
-11.  $lim_(x->0^+)(1 + sin x)^(ln x) = (#answer-choice[])$  
+11.  $lim_(x->0^+)(1 + sin x)^(ln x) = #blank()$  
 12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = \_$
 13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  
 14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank().  

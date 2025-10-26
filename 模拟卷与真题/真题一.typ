@@ -315,7 +315,7 @@
     
     但如果原函数定义有所不同，可能是 $k = -1/2$。需要根据具体题意确定。
     ]  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = (#answer-choice[$pi$])$  
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[$pi$]$  
     #answer-process[
     首先，对分母进行配方：
     $x^2 + 2x + 2 = (x + 1)^2 + 1$
@@ -332,7 +332,7 @@
     
     $= pi/2 - (-pi/2) = pi$
     ]  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = (#answer-choice[2/3])$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[$2/3$]$  
     #answer-process[
     分离积分：
     $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = integral_(-1)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x + integral_(-1)^(1) frac(x sin^2 x, 1 + sqrt(1 - x^2)) dif x$

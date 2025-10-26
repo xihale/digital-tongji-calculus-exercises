@@ -182,7 +182,7 @@
      
      $k = (|-2|)/((1+0^2)^(3/2)) = 2/1 = 2$
    ]
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#answer-choice[])$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank()$
    
    #answer-process[
      答案：$2pi$

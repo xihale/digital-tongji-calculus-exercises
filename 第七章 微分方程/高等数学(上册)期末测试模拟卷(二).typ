@@ -51,7 +51,7 @@
    
 9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为
    
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = (#answer-choice[])$
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = #blank()$
    
 11. 微分方程  $(1 + y)^2 d y/d x + x^3 = 0$  的通解为
    
