@@ -31,30 +31,72 @@ jobs:
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
           typst --version
       
-      - name: Install fonts
-        run: |
-          # Install Chinese fonts for proper rendering
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk fonts-noto-cjk-extra
-          # Install LXGW WenKai font
-          mkdir -p ~/.local/share/fonts
-          curl -fsSL https://github.com/lxgw/LxgwWenKai/releases/download/v1.330/LXGWWenKai-Regular.ttf -o ~/.local/share/fonts/LXGWWenKai-Regular.ttf || true
-          fc-cache -f -v || true
-      
-      - name: Extract version from index.typ
+      - name: Auto-increment version if .typ files changed
         id: version
         run: |
-          VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+          # Configure git
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Get the last release tag (if any)
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -n "$LAST_TAG" ]; then
+            echo "Last release tag: $LAST_TAG"
+            # Check if any .typ files were modified since the last release
+            TYP_CHANGES=$(git diff --name-only "$LAST_TAG" HEAD | { grep '\.typ$' || true; } | wc -l)
+          else
+            echo "No previous release found, checking HEAD~1"
+            # Check if any .typ files were modified in the recent commits
+            TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | { grep '\.typ$' || true; } | wc -l)
+          fi
+          
+          # Extract current version
+          CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+          echo "Current version: $CURRENT_VERSION"
+          
+          if [ "$TYP_CHANGES" -gt 0 ]; then
+            echo "Detected $TYP_CHANGES .typ file(s) changed, auto-incrementing version..."
+            
+            # Parse version (e.g., v0.0.3 -> 0.0.3)
+            VERSION_NUM=$(echo "$CURRENT_VERSION" | sed 's/^v//')
+            
+            # Split version into parts
+            MAJOR=$(echo "$VERSION_NUM" | cut -d. -f1)
+            MINOR=$(echo "$VERSION_NUM" | cut -d. -f2)
+            PATCH=$(echo "$VERSION_NUM" | cut -d. -f3)
+            
+            # Increment patch version
+            PATCH=$((PATCH + 1))
+            
+            # Create new version
+            NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+            echo "New version: $NEW_VERSION"
+            
+            # Update version in index.typ
+            sed -i "s/#let VERSION = \"$CURRENT_VERSION\"/#let VERSION = \"$NEW_VERSION\"/" index.typ
+            
+            # Commit the version change
+            git add index.typ
+            git commit -m "chore: auto-increment version to $NEW_VERSION [skip ci]"
+            git push origin master
+            
+            VERSION="$NEW_VERSION"
+          else
+            echo "No .typ files changed, keeping current version: $CURRENT_VERSION"
+            VERSION="$CURRENT_VERSION"
+          fi
+          
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Version extracted: $VERSION"
+          echo "Final version: $VERSION"
       
       - name: Build PDFs
         run: |
           # Build PDF without answers
-          typst compile index.typ "高等数学习题册上册.pdf"
+          typst compile --font-path fonts/ --no-pdf-tags index.typ index.pdf
           
           # Build PDF with answers
-          typst compile --input SHOW_ANSWER=true index.typ "高等数学习题册上册_带答案.pdf"
+          typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ index_ans.pdf
           
           # Verify files were created
           ls -lh *.pdf
@@ -121,14 +163,14 @@ jobs:
             自动构建和发布
             
             ### 下载
-            - 📖 高等数学习题册上册.pdf (无答案版)
-            - 📖 高等数学习题册上册_带答案.pdf (带答案版)
+            - 📖 index.pdf (无答案版)
+            - 📖 index_ans.pdf (带答案版)
             
             ### 在线预览
             访问：https://dtce.xihale.top 或 GitHub Pages
           files: |
-            高等数学习题册上册.pdf
-            高等数学习题册上册_带答案.pdf
+            index.pdf
+            index_ans.pdf
           draft: false
           prerelease: false
         env:

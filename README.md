@@ -37,6 +37,8 @@
 - 在线阅读 HTML 版本（带导航）
 - 下载 PDF 文件
 
+> ℹ️ **关于 Tagged PDF（无障碍 PDF）**：为了减小文件体积，发布的 PDF 默认不包含 tagged PDF 标签。如需带标签的无障碍 PDF 版本，可以自行构建（参见下方「自行构建」章节）或联系作者获取。
+
 ### 版本管理
 
 要发布新版本，只需：
@@ -61,15 +63,27 @@
 
 ### 编译文档
 
+默认情况下，Typst 0.14.0+ 会生成带标签的无障碍 PDF（文件体积较大）。以下是基本的编译命令：
+
 ```bash
-# 编译整个项目为 PDF（不显示答案）
+# 编译整个项目为 PDF（不显示答案，带标签）
 typst compile --font-path fonts/ index.typ 高等数学习题册上册.pdf
 
-# 编译并显示答案
+# 编译并显示答案（带标签）
 typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
 
 # 导出 HTML 版本
 python3 scripts/export_html.py --both
+```
+
+如需生成较小体积的 PDF（与发布版本相同，不含无障碍标签），可添加 `--no-pdf-tags` 标志：
+
+```bash
+# 生成较小体积的 PDF（不显示答案）
+typst compile --font-path fonts/ --no-pdf-tags index.typ 高等数学习题册上册.pdf
+
+# 生成较小体积的 PDF（带答案）
+typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
 ```
 
 ### 实时预览
