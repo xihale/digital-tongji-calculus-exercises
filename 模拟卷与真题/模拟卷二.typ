@@ -302,21 +302,16 @@
    ]
 
 9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为 #blank[$|cos x|$]
-
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = $ #blank[$pi/2$]
-
-11. 微分方程  $(1 + y)^2 (d y)/(d x) + x^3 = 0$  的通解为 #blank[$(1 + y)^3 = -3x^4/4 + C$]
    #answer-process[
-   **问题9-11的解答过程：**
-   
-   **问题9：**曲率计算
    $y = ln sec x = -ln cos x$
    - $y' = tan x$
    - $y'' = sec^2 x$
    
    曲率：$k = |y''|/((1 + (y')^2)^(3"/"2)) = |sec^2 x|/((1 + tan^2 x)^(3"/"2)) = sec^2 x/(sec^3 x) = 1/sec x = |cos x|$
-   
-   **问题10：**定积分
+   ]
+
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = $ #blank[$pi/2$]
+   #answer-process[
    拆分：$integral_(-1)^(1) (x^2 sin x)/(sqrt(1 - x^2)) d x + integral_(-1)^(1) (1 - x^2)/(sqrt(1 - x^2)) d x$
    
    第一部分是奇函数，积分为 $0$
@@ -324,8 +319,10 @@
    第二部分：$integral_(-1)^(1) sqrt(1 - x^2) d x$ 是半圆面积 $= pi r^2/2 = pi/2$
    
    所以总积分 $= 0 + pi/2 = pi/2$
-   
-   **问题11：**可分离变量微分方程
+   ]
+
+11. 微分方程  $(1 + y)^2 (d y)/(d x) + x^3 = 0$  的通解为 #blank[$(1 + y)^3 = -3x^4/4 + C$]
+   #answer-process[
    $(1 + y)^2 d y/d x = -x^3$
    
    分离变量：$(1 + y)^2 d y = -x^3 d x$

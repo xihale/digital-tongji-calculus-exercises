@@ -87,18 +87,7 @@
    ]
    
 12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank[$x - ln 5 - arctan 2$ 或 $x - y - ln 5 - arctan 2 = 0$]$  
-   
-13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k =$  #blank[$2$].  
-   
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[$pi$]$  
-   
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[$4 - pi$]$  
-   
-16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为 #blank[$(1, -7)$]
    #answer-process[
-   **问题11-16的解答过程：**
-   
-   **问题12：**参数方程切线
    在 $t = 2$ 时：
    - $x = ln(1 + 4) = ln 5$
    - $y = 2 - arctan 2 - 2 = -arctan 2$
@@ -111,21 +100,27 @@
    斜率：$d y/d x = (4"/"5)/(4"/"5) = 1$
    
    切线方程：$y - (-arctan 2) = 1(x - ln 5)$，即 $y = x - ln 5 - arctan 2$
+   ]
    
-   **问题13：**原函数与导数关系
+13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k =$  #blank[$2$].  
+   #answer-process[
    若 $F(x) = -ln cos 2x$ 是 $f(x) = k tan 2x$ 的原函数，则 $F'(x) = f(x)$。
    
    $F'(x) = -(1/(cos 2x)) dot (-sin 2x) dot 2 = (2 sin 2x)/(cos 2x) = 2 tan 2x$
    
    因此 $k tan 2x = 2 tan 2x$，所以 $k = 2$。
+   ]
    
-   **问题14：**反常积分
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[$pi$]$  
+   #answer-process[
    $integral_(-infinity)^(+infinity) (d x)/(x^2 + 2x + 2) = integral_(-infinity)^(+infinity) (d x)/((x + 1)^2 + 1)$
    
    令 $u = x + 1$，则 $d u = d x$：
    $= integral_(-infinity)^(+infinity) (d u)/(u^2 + 1) = [arctan u]_(-infinity)^(+infinity) = pi/2 - (-pi/2) = pi$
+   ]
    
-   **问题15：**定积分
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[$4 - pi$]$  
+   #answer-process[
    拆分：$integral_(-1)^(1) (x sin^2 x)/(1 + sqrt(1 - x^2)) d x + integral_(-1)^(1) (2x^2)/(1 + sqrt(1 - x^2)) d x$
    
    第一项是奇函数，积分为 $0$。
@@ -135,8 +130,10 @@
    
    所以：$integral_(-1)^(1) 2(1 - sqrt(1 - x^2)) d x = 2[x]_(-1)^(1) - 2 integral_(-1)^(1) sqrt(1 - x^2) d x$
    $= 2 dot 2 - 2 dot pi/2 = 4 - pi$
+   ]
    
-   **问题16：**拐点
+16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为 #blank[$(1, -7)$]
+   #answer-process[
    $y = x^4(12 ln x - 7)$
    
    求一阶导数：
