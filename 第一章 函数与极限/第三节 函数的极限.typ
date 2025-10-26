@@ -67,7 +67,11 @@
 
 #subsection[三、计算题]
 5. 对于图 1-1 所示的函数  $f(x)$ ，求下列极限，若极限不存在，说明理由：
-   #figure(image("images/2-5.jpg"), caption: [图 1-1])
+   #figure(
+     image("images/2-5.jpg"),
+     caption: [图 1-1],
+     alt: "函数 f(x) 的图形，用于分析函数在特定点处的极限性质"
+   )
    (1)  $lim_(x->2)f(x)$
    
    #answer-process[

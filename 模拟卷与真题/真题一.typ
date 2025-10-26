@@ -176,7 +176,8 @@
    (2)  $integral_(-3)^(2) f'(x) dif x$ ;
    #figure(
      image("./images/真题一-图1.jpg", width: 80%),
-     caption: [图1]
+     caption: [图1],
+     alt: "函数 f(x) 在区间 [-3, 2] 上的图形，用于分析定积分的符号"
    )
    (3)  $integral_(-3)^(2) f''(x) dif x$ ;
    (4)  $integral_(-3)^(2) f'''(x) dif x$ .
@@ -592,7 +593,8 @@
 22. 如图 2 所示, 由抛物线  $y = 2x^2$  与直线  $x = a, x = 2$  及  $y = 0$  所围成的平面图形为  $D_1$ , 由抛物线  $y = 2x^2$  与直线  $x = a$  及  $y = 0$  所围成的平面图形为  $D_2$ , 其中  $0 < a < 2$ .
 #figure(
   image("./images/真题一-图2.jpg", width: 10em),
-  caption: [图2]
+  caption: [图2],
+  alt: "抛物线 y = 2x² 与直线 x = a、x = 2 及 x 轴围成的平面图形 D1 和 D2 的示意图"
 )
 (1) 试求  $D_1$  绕  $x$  轴旋转一周所得旋转体的体积  $V_1$ ;
     #answer-process[

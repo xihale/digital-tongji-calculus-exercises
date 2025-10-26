@@ -14,7 +14,8 @@
 2.如图6-2所示，阴影部分面积为(#h(2em))
 #figure(
   image("images/6-2.jpg", width: 18em),
-  caption: [图6-2]
+  caption: [图6-2],
+  alt: "两条曲线 f(x) 和 g(x) 在区间 [a, b] 上围成的阴影区域，用于计算定积分表示的面积"
 )
    #choices(
    [$integral_(a)^(b)[f(x) - g(x)] dif x$],
