@@ -5,9 +5,9 @@ on:
     branches:
       - master
     paths-ignore:
-      - 'README.md'
-      - 'LICENSE'
-      - '.gitignore'
+      - "README.md"
+      - "LICENSE"
+      - ".gitignore"
 
 permissions:
   contents: write
@@ -17,30 +17,30 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: Install Typst
         run: |
           curl -fsSL https://github.com/typst/typst/releases/download/v0.14.0/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
           tar -xf typst.tar.xz
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
           typst --version
-      
+
       - name: Auto-increment version if .typ files changed
         id: version
         run: |
           # Configure git
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
+
           # Get the last release tag (if any)
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          
+
           if [ -n "$LAST_TAG" ]; then
             echo "Last release tag: $LAST_TAG"
             # Check if any .typ files were modified since the last release
@@ -50,11 +50,11 @@ jobs:
             # Check if any .typ files were modified in the recent commits
             TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | { grep '\.typ$' || true; } | wc -l)
           fi
-          
+
           # Extract current version
           CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
           echo "Current version: $CURRENT_VERSION"
-          
+
           if [ "$TYP_CHANGES" -gt 0 ]; then
             echo "Detected $TYP_CHANGES .typ file(s) changed, auto-incrementing version..."
             
@@ -86,72 +86,72 @@ jobs:
             echo "No .typ files changed, keeping current version: $CURRENT_VERSION"
             VERSION="$CURRENT_VERSION"
           fi
-          
+
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Final version: $VERSION"
-      
+
       - name: Build PDFs
         run: |
           # Build PDF without answers
           typst compile --font-path fonts/ --no-pdf-tags index.typ index.pdf
-          
+
           # Build PDF with answers
           typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ index_ans.pdf
-          
+
           # Verify files were created
           ls -lh *.pdf
-      
+
       - name: Install Python dependencies
         run: |
           python3 -m pip install --upgrade pip
-      
+
       - name: Export HTML
         run: |
           # Export both versions (without and with answers)
           python3 scripts/export_html.py --both
-          
+
           # Verify HTML files were created
           echo "Files in index/:"
           find index -type f -name "*.html" | head -10
           echo "Files in index_ans/:"
           find index_ans -type f -name "*.html" | head -10
-      
+
       - name: Prepare deployment directory
         run: |
           # Create deployment directory
           mkdir -p deploy
-          
+
           # Copy web folder contents to deploy
           cp -r web/* deploy/
-          
+
           # Copy exported HTML directories
           cp -r index deploy/
           cp -r index_ans deploy/
-          
+
           # Copy PDFs
-          cp "高等数学习题册上册.pdf" deploy/
-          cp "高等数学习题册上册_带答案.pdf" deploy/
-          
+          cp index.pdf deploy/高等数学习题册上册.pdf
+          cp index_ans.pdf deploy/高等数学习题册上册_带答案.pdf
+
           # Update version in index.html
           VERSION="${{ steps.version.outputs.version }}"
           sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
-          
+
           # Verify the structure
           echo "Deploy directory structure:"
           ls -la deploy/
-      
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'deploy'
-      
+          path: "deploy"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
@@ -159,13 +159,13 @@ jobs:
           name: Release ${{ steps.version.outputs.version }}
           body: |
             ## 高等数学习题册（上册）${{ steps.version.outputs.version }}
-            
+
             自动构建和发布
-            
+
             ### 下载
             - 📖 index.pdf (无答案版)
             - 📖 index_ans.pdf (带答案版)
-            
+
             ### 在线预览
             访问：https://dtce.xihale.top 或 GitHub Pages
           files: |
