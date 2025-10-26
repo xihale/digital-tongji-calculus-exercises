@@ -2,70 +2,70 @@
 
 #section[高等数学(上册)期末测试真题(二)]
 #subsection[一、选择题(每小题3分，共30分)]
-1. 若  $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则(#answer-choice[]).
+1. 若  $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则(#answer-choice[B]).
    #choices(
    [$a = 0, b in R$],
    [$a = 0, b = 1$],
    [$a in R, b = 1$],
    [$a in R, b in R$]
    )
-2.当  $x->infinity$  时，  $x cos x$  is(#answer-choice[])
+2.当  $x->infinity$  时，  $x cos x$  is(#answer-choice[D])
    #choices(
    [无穷小],
    [无穷大],
    [有界但不是无穷小],
    [无界但不是无穷大]
    )
-3. 设函数  $y = e^(2x - 1)$ ，则  $y^(20)(1) = (#answer-choice[])$ .
+3. 设函数  $y = e^(2x - 1)$ ，则  $y^(20)(1) = (#answer-choice[A])$ .
    #choices(
    [$2^20 e$],
    [$2^20 e^(-1)$],
    [$2^20$],
    [e]
    )
-4.当  $x->0$  时，(#answer-choice[])是  $x - sin x$  的同阶无穷小
+4.当  $x->0$  时，(#answer-choice[D])是  $x - sin x$  的同阶无穷小
    #choices(
    [$x + tan x$],
    [$x tan x$],
    [$x^2 + tan x$],
    [$x^2 tan x$]
    )
-5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的(#answer-choice[]).
+5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的(#answer-choice[C]).
    #choices(
    [可去间断点],
    [跳跃间断点],
    [无穷间断点],
    [振荡间断点]
    )
-6. 设函数  $y = f(x)$  具有二阶导数，且  $f'(x) > 0, f''(x) < 0, Delta x$  为自变量在点  $x_0$  处的增量， $Delta y$  与  $d y$  分别为  $f(x)$  在点  $x_0$  处对应的增量与微分。若  $Delta x > 0$ ，则(#answer-choice[]).
+6. 设函数  $y = f(x)$  具有二阶导数，且  $f'(x) > 0, f''(x) < 0, Delta x$  为自变量在点  $x_0$  处的增量， $Delta y$  与  $d y$  分别为  $f(x)$  在点  $x_0$  处对应的增量与微分。若  $Delta x > 0$ ，则(#answer-choice[A]).
    #choices(
    [$0 <   d y <   Delta y$],
    [$0 < Delta y < d y$],
    [$Delta y < d y < 0$],
    [$d y < Delta y < 0$]
    )
-7. 设函数  $f(x)$  的一个原函数为  $x e^(-x)$ ，则  $f'(x) = (#answer-choice[])$ .
+7. 设函数  $f(x)$  的一个原函数为  $x e^(-x)$ ，则  $f'(x) = (#answer-choice[D])$ .
    #choices(
    [$x e^(-x)$],
    [$(1 - x) e^(-x)$],
    [$(2 + x) e^(-x)$],
    [$(-2 + x) e^(-x)$]
    )
-8. 设函数  $f(x)$  在点  $x_0$  的某邻域内可导，且  $lim_(x -> x_0) (f'(x))/(x - x_0) = a (a < 0)$ ，则(#answer-choice[]).
+8. 设函数  $f(x)$  在点  $x_0$  的某邻域内可导，且  $lim_(x -> x_0) (f'(x))/(x - x_0) = a (a < 0)$ ，则(#answer-choice[B]).
    #choices(
    [$f(x_0)$  是  $f(x)$  的极小值],
    [$f(x_0)$  是  $f(x)$  的极大值],
    [在点  $x_0$  的某邻域内  $f(x)$  单调增加],
    [在点  $x_0$  的某邻域内  $f(x)$  单调减少]
    )
-9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t = (#answer-choice[])$ .
+9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t = (#answer-choice[D])$ .
    #choices(
    [$f(2)$],
    [$f(1)$],
    [${2f}(2)$],
    [$2f(1)$]
    )
-10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) dif t + ln 2$ ，则  $f(x) = (#answer-choice[])$ .
+10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) dif t + ln 2$ ，则  $f(x) = (#answer-choice[B])$ .
     #choices(
     [$e^x ln 2$],
     [$e^(2x) ln 2$],
@@ -73,10 +73,10 @@
     [$e^(2x) + ln 2$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
-11.  $lim_(x->0^+)(1 + sin x)^(ln x) = #blank()$  
+11.  $lim_(x->0^+)(1 + sin x)^(ln x) = #blank[]$  
 12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = \_$
 13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  
-14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank().  
+14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[].  
 15. 曲线  $y = -3/2 x^3 + 9/2 x^2$  在其拐点处的切线方程是  
 16. 微分方程  $y' = 1/(x + y)$  的通解为
 #subsection[三、计算题(每小题7分，共35分)]

@@ -124,7 +124,7 @@
   $= frac(1, a) F(u) + C = frac(1, a) F(a x + b) + C$
    ]
 
-9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank() . 
+9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[] . 
    #answer-process[
      由条件 $integral x f(x) dif x = arcsin x + C$ 得：
      

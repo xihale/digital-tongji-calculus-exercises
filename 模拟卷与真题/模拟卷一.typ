@@ -111,7 +111,7 @@
      D. $integral_(-1)^1 (dif x)/x$ 在 $x=0$ 处被积函数无界，且 $lim_(epsilon->0) integral_(-epsilon)^epsilon (dif x)/x$ 不存在，发散
    ]
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank().
+6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank[$a = 2$].
    
    #answer-process[
      答案：$a = 2$
@@ -182,7 +182,7 @@
      
      $k = (|-2|)/((1+0^2)^(3/2)) = 2/1 = 2$
    ]
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank()$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[$2pi$]$
    
    #answer-process[
      答案：$2pi$
