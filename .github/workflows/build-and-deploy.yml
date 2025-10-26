@@ -93,10 +93,10 @@ jobs:
       - name: Build PDFs
         run: |
           # Build PDF without answers
-          typst compile --font-path fonts/ index.typ index.pdf
+          typst compile --font-path fonts/ --no-pdf-tags index.typ index.pdf
           
           # Build PDF with answers
-          typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ index_ans.pdf
+          typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ index_ans.pdf
           
           # Verify files were created
           ls -lh *.pdf
