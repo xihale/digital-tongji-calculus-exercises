@@ -38,62 +38,79 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Get the last release tag (if any)
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-
-          # Extract current version
+          # Extract current version from index.typ
           CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
-          echo "Current version: $CURRENT_VERSION"
+          echo "Current version in index.typ: $CURRENT_VERSION"
+
+          # Try to get the last release tag using git describe (works if history is connected)
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          # If git describe failed, try to find the latest tag by listing all tags and sorting
+          if [ -z "$LAST_TAG" ]; then
+            LAST_TAG=$(git tag -l 'v*' | sort -V | tail -n 1)
+            if [ -n "$LAST_TAG" ]; then
+              echo "Found last tag by listing all tags: $LAST_TAG"
+            fi
+          else
+            echo "Found last tag by git describe: $LAST_TAG"
+          fi
 
           # Determine if we need to bump the version
           SHOULD_BUMP=false
           
           if [ -n "$LAST_TAG" ]; then
-            echo "Last release tag: $LAST_TAG"
-            
             # Get the commit SHA of the last tag
             TAG_COMMIT=$(git rev-list -n 1 "$LAST_TAG")
             HEAD_COMMIT=$(git rev-parse HEAD)
             
-            echo "Tag commit: $TAG_COMMIT"
-            echo "Head commit: $HEAD_COMMIT"
+            echo "Tag $LAST_TAG points to commit: $TAG_COMMIT"
+            echo "HEAD commit: $HEAD_COMMIT"
             
-            # If HEAD is different from the tag commit, check for .typ changes
-            if [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
-              # Try multiple methods to detect .typ file changes
-              
-              # Method 1: Check git log for .typ files in commits since tag
-              TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD | { grep '\.typ$' || true; } | sort -u | wc -l)
-              
-              # Method 2: Check diff (works for normal history)
-              TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD | { grep '\.typ$' || true; } | wc -l)
-              
-              # Method 3: Check if current commit has any .typ files (for grafted commits)
-              TYP_CHANGES_SHOW=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
-              
-              echo "TYP changes (log): $TYP_CHANGES_LOG"
-              echo "TYP changes (diff): $TYP_CHANGES_DIFF"
-              echo "TYP changes (show): $TYP_CHANGES_SHOW"
-              
-              # If any method detected .typ changes, we should bump
-              if [ "$TYP_CHANGES_LOG" -gt 0 ] || [ "$TYP_CHANGES_DIFF" -gt 0 ] || [ "$TYP_CHANGES_SHOW" -gt 0 ]; then
-                SHOULD_BUMP=true
-                echo "Detected .typ file changes since last release"
+            # Check if the current version matches the tag
+            if [ "$CURRENT_VERSION" = "$LAST_TAG" ]; then
+              # If HEAD is different from the tag commit, we need to check for .typ changes
+              if [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
+                # Try multiple methods to detect .typ file changes
+                
+                # Method 1: Check git log for .typ files in commits since tag
+                TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD 2>/dev/null | { grep '\.typ$' || true; } | sort -u | wc -l)
+                
+                # Method 2: Check diff (works for normal history)
+                TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD 2>/dev/null | { grep '\.typ$' || true; } | wc -l)
+                
+                # Method 3: Check if current commit has any .typ files (for grafted commits)
+                TYP_CHANGES_SHOW=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
+                
+                echo "TYP changes detected by:"
+                echo "  - git log: $TYP_CHANGES_LOG"
+                echo "  - git diff: $TYP_CHANGES_DIFF"
+                echo "  - git show HEAD: $TYP_CHANGES_SHOW"
+                
+                # If any method detected .typ changes, we should bump
+                if [ "$TYP_CHANGES_LOG" -gt 0 ] || [ "$TYP_CHANGES_DIFF" -gt 0 ] || [ "$TYP_CHANGES_SHOW" -gt 0 ]; then
+                  SHOULD_BUMP=true
+                  echo "Decision: .typ files changed since last release, will bump version"
+                else
+                  echo "Decision: No .typ file changes detected, will not bump version"
+                fi
+              else
+                echo "Decision: HEAD is at the same commit as the last tag, no version bump needed"
               fi
             else
-              echo "HEAD is at the same commit as the last tag, no version bump needed"
+              echo "Decision: Current version ($CURRENT_VERSION) differs from last tag ($LAST_TAG), assuming version was already bumped"
             fi
           else
-            echo "No previous release found, checking HEAD for .typ files"
+            echo "No previous release tag found"
             # Check if current commit has any .typ files
             TYP_CHANGES=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
             if [ "$TYP_CHANGES" -gt 0 ]; then
               SHOULD_BUMP=true
-              echo "Detected .typ files in current commit"
+              echo "Decision: Detected .typ files in current commit, will bump version for first release"
             fi
           fi
 
           if [ "$SHOULD_BUMP" = "true" ]; then
+            echo ""
             echo "Auto-incrementing version..."
             
             # Parse version (e.g., v0.0.3 -> 0.0.3)
@@ -121,12 +138,13 @@ jobs:
             
             VERSION="$NEW_VERSION"
           else
+            echo ""
             echo "No version bump needed, keeping current version: $CURRENT_VERSION"
             VERSION="$CURRENT_VERSION"
           fi
 
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Final version: $VERSION"
+          echo "Final version for release: $VERSION"
 
       - name: Build PDFs
         run: |
