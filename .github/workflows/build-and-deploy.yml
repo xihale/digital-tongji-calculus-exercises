@@ -58,10 +58,6 @@ jobs:
           
           # Verify files were created
           ls -lh *.pdf
-          
-          # Save PDFs to a temporary location
-          mkdir -p /tmp/pdfs
-          cp "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf" /tmp/pdfs/
       
       - name: Install Python dependencies
         run: |
@@ -77,58 +73,42 @@ jobs:
           find index -type f -name "*.html" | head -10
           echo "Files in index_ans/:"
           find index_ans -type f -name "*.html" | head -10
+      
+      - name: Prepare deployment directory
+        run: |
+          # Create deployment directory
+          mkdir -p deploy
           
-          # Save HTML to temporary location
-          mkdir -p /tmp/html_export
-          cp -r index /tmp/html_export/
-          cp -r index_ans /tmp/html_export/
-      
-      - name: Fetch web branch
-        run: |
-          git fetch origin web
-          git checkout web
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-      
-      - name: Update index.html version
-        run: |
+          # Copy web folder contents to deploy
+          cp -r web/* deploy/
+          
+          # Copy exported HTML directories
+          cp -r index deploy/
+          cp -r index_ans deploy/
+          
+          # Copy PDFs
+          cp "高等数学习题册上册.pdf" deploy/
+          cp "高等数学习题册上册_带答案.pdf" deploy/
+          
+          # Update version in index.html
           VERSION="${{ steps.version.outputs.version }}"
-          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" index.html
+          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
           
-          # Verify the change
-          grep "version-value" index.html
+          # Verify the structure
+          echo "Deploy directory structure:"
+          ls -la deploy/
       
-      - name: Copy PDFs to web branch
-        run: |
-          cp /tmp/pdfs/*.pdf .
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
-      - name: Copy HTML to web branch
-        run: |
-          # Copy HTML exports to web branch
-          cp -r /tmp/html_export/index .
-          cp -r /tmp/html_export/index_ans .
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'deploy'
       
-      - name: Commit and push to web branch
-        run: |
-          git add index.html "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
-          # Add HTML export directories
-          git add index/ index_ans/
-          
-          # Only commit if there are changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Auto-update: version ${{ steps.version.outputs.version }} [skip ci]"
-            git push origin web
-          fi
-      
-      - name: Switch back to master for release
-        run: |
-          git checkout master
-      
-      - name: Restore PDFs for release
-        run: |
-          cp /tmp/pdfs/*.pdf .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -145,7 +125,7 @@ jobs:
             - 📖 高等数学习题册上册_带答案.pdf (带答案版)
             
             ### 在线预览
-            访问：https://dtce.xihale.top
+            访问：https://dtce.xihale.top 或 GitHub Pages
           files: |
             高等数学习题册上册.pdf
             高等数学习题册上册_带答案.pdf
