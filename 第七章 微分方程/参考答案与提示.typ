@@ -7,12 +7,12 @@
 #subsection[第二节 可分离变量的微分方程]
 
 一、选择题
-1. #answer-choice[D]
+1. (#answer-choice[D])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是D。
 ]
 
-2. #answer-choice[C]
+2. (#answer-choice[C])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是C。
 ]
@@ -73,7 +73,7 @@
 #subsection[第三节 齐次方程]
 
 一、选择题
-1. #answer-choice[A]
+1. (#answer-choice[A])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是A。
 ]
@@ -107,7 +107,7 @@
 ]
 
 二、选择题
-3. #answer-choice[D]
+3. (#answer-choice[D])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是D。
 ]
@@ -178,7 +178,7 @@
 #subsection[第七节 常系数齐次线性微分方程]
 
 一、选择题
-1. #answer-choice[D]
+1. (#answer-choice[D])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是D。
 ]
@@ -229,12 +229,12 @@
 #subsection[第八节 常系数非齐次线性微分方程]
 
 一、选择题
-1. #answer-choice[C]
+1. (#answer-choice[C])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是C。
 ]
 
-2. #answer-choice[C]
+2. (#answer-choice[C])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是C。
 ]
@@ -270,12 +270,12 @@ $$
 #subsection[总习题七]
 
 一、选择题
-1. #answer-choice[B]
+1. (#answer-choice[B])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是B。
 ]
 
-2. #answer-choice[B]
+2. (#answer-choice[B])
 #answer-process[
 这是一道选择题，根据题目内容，正确答案是B。
 ]

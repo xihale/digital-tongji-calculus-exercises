@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试模拟卷(二)]
 #subsection[一、选择题(每小题3分，共15分)]
-1. 当  $x -> 0$  时，下列是  $x$  的三阶无穷小 #answer-choice[B].
+1. 当  $x -> 0$  时，下列是  $x$  的三阶无穷小 (#answer-choice[B]).
    #choices(
    [$root(3,x^2) - sqrt(x)$],
    [$sqrt(a + x^3) - sqrt(a)$  ( $a > 0$  是常数)],
@@ -37,7 +37,7 @@
      当 $x -> 0$ 时，$tan x approx x$，所以 $(tan x)^(1/3) approx x^(1/3)$，这是 $x$ 的 $1/3$ 阶无穷小。
    ]
 
-2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是 #answer-choice[B].
+2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是 (#answer-choice[B]).
    #choices(
    [$f(0)$  是  $f(x)$  的极大值],
    [$f(0)$  是  $f(x)$  的极小值],
@@ -83,7 +83,7 @@
      
      由于 $f'(0) = 0$，这说明 $x = 0$ 是 $f'(x)$ 的极小值点，因此 $f(0)$ 是 $f(x)$ 的极小值。
    ]
-3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为 #answer-choice[A].
+3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为 (#answer-choice[A]).
    #choices(
    [1],
    [2],
@@ -128,7 +128,7 @@
      
      综上所述，只有 $x = 1$ 处是无穷间断点，共 1 个。
    ]
-4.下列不定积分的计算不正确的是 #answer-choice[C].
+4.下列不定积分的计算不正确的是 (#answer-choice[C]).
    #choices(
    [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
    [$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
@@ -170,7 +170,7 @@
      
      $integral 6^x dif x = 6^x / ln 6 + C = 6^x / ln(2 dot 3) + C = 6^x / (ln 2 + ln 3) + C$ ✓ 正确
    ]
-5.下列方程中为一阶线性微分方程 #answer-choice[D].
+5.下列方程中为一阶线性微分方程 (#answer-choice[D]).
    #choices(
    [$y' + x y^2 = e^x$],
    [$y y' + x y = e^x$],

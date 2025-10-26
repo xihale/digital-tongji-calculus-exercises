@@ -2,7 +2,7 @@
 
 #section[总习题一]
 #subsection[一、选择题]
-1. 当  $x -> 0$  时， $(1 - cos x)^2$  是  $sin^2 x$  的(#h(2em)) #answer-choice[A].
+1. 当  $x -> 0$  时， $(1 - cos x)^2$  是  $sin^2 x$  的(#h(2em)) (#answer-choice[A]).
    #choices(
    [高阶无穷小],
    [同阶无穷小, 但不是等价无穷小],
@@ -23,7 +23,7 @@
      所以 $(1 - cos x)^2$ 是 $sin^2 x$ 的高阶无穷小。
    ]
    
-2. 设  $f(x)$  为奇函数, 则下列函数中 (#h(2em)) #answer-choice[D] 也为奇函数.
+2. 设  $f(x)$  为奇函数, 则下列函数中 (#h(2em)) (#answer-choice[D]) 也为奇函数.
    #choices(
    [ $f(x) + C$，其中 $C$ 为非零常数],
    [ $f(-x) + C$，其中 $C$ 为非零常数],
@@ -42,7 +42,7 @@
      D：$g(x) = f[f(x)]$，则 $g(-x) = f[f(-x)] = f[-f(x)] = -f[f(x)] = -g(x)$（因为 $f$ 是奇函数）。所以是奇函数。
    ]
    
-3. 设函数  $f(x) = x^2 + arctan(1/(x - 1))$ ，则  $x = 1$  是  $f(x)$  的(#h(2em)) #answer-choice[B].
+3. 设函数  $f(x) = x^2 + arctan(1/(x - 1))$ ，则  $x = 1$  是  $f(x)$  的(#h(2em)) (#answer-choice[B]).
    #choices(
    [可去间断点],
    [跳跃间断点],

@@ -3,7 +3,7 @@
 #section[第四节 反常积分]
 #subsection[一、判断题(如果错误，请加以改正)]
 1. 已知  $sin x$  是奇函数, 则  $integral_(-infinity)^(+infinity) sin x dif x = 0$ (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      反常积分 $integral_(-infinity)^(+infinity) sin x dif x$ 不收敛，所以不能直接说等于 $0$。
      
@@ -14,7 +14,7 @@
    ]
 
 2. $integral_(-infinity)^(+infinity) sin x dif x = lim_(b-> +infinity) integral_(-b)^(b) sin x dif x = lim_(b-> +infinity)(-cos b + cos b) = 0$ (#h(2em))
-   #answer-choice[(正确)]
+   (#answer-choice[(正确)])
    #answer-process[
      这是主值积分（Cauchy principal value）。当对称地取极限时，确实得到 $0$。
      
@@ -24,7 +24,7 @@
    ]
 
 3. $integral_(-2)^(3)(dif x)/x = ln |x| |_(-2)^(3) = ln 3 - ln 2.$ (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      错误在于：$x = 0$ 是被积函数的奇点，在积分区间 $[-2, 3]$ 内部，所以这是一个反常积分。
      

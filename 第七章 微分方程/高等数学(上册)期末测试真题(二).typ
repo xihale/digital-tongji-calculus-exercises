@@ -66,7 +66,6 @@
    [$2f(1)$]
    )
 10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) dif t + ln 2$ ，则  $f(x) = (#h(2em))$ .
-    #v(0.5em)
     #choices(
     [$e^x ln 2$],
     [$e^(2x) ln 2$],

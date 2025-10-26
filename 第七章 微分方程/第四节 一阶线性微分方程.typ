@@ -2,16 +2,16 @@
 
 #section[第四节 一阶线性微分方程]
 #subsection[一、判断题]
-1.  $y' = sin y$  是一阶线性微分方程 #answer-choice[×]
+1.  $y' = sin y$  是一阶线性微分方程 (#answer-choice[×])
     #answer-process[
        一阶线性方程需具备形式 $y' + P(x) y = Q(x)$，此处右侧依赖于 $y$ 的非线性函数 $sin y$，故命题错误。
     ]
-2.  $y' = x^3 y^3 + x y$  不是一阶线性微分方程 #answer-choice[√]
+2.  $y' = x^3 y^3 + x y$  不是一阶线性微分方程 (#answer-choice[√])
     #answer-process[
        方程含有 $y^3$ 项，无法写成 $y' + P(x) y = Q(x)$ 的线性结构，判断正确。
     ]
 #subsection[二、选择题]
-3. 以下#answer-choice[D]是一阶线性微分方程
+3. 以下(#answer-choice[D])是一阶线性微分方程
    #choices(
    [$y' = sec y$],
    [$y y' = 1$],

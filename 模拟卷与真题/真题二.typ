@@ -298,10 +298,10 @@
      $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t = lim_(x -> 2) (integral_(4)^(2x) f(t/2) dif t) / (x - 2)$
      
      对分子关于 $x$ 求导：
-     $d/("d" x) integral_(4)^(2x) f(t/2) dif t = f((2x)/2) · (2x)' = f(x) · 2 = 2f(x)$
+     $d/(d x) integral_(4)^(2x) f(t/2) dif t = f((2x)/2) · (2x)' = f(x) · 2 = 2f(x)$
      
      对分母关于 $x$ 求导：
-     $d/("d" x) (x - 2) = 1$
+     $d/(d x) (x - 2) = 1$
      
      应用洛必达法则：
      $lim_(x -> 2) (2f(x))/1 = 2f(2)$
@@ -309,7 +309,6 @@
      答案是 D。
    ]
 10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) dif t + ln 2$ ，则  $f(x) = (#answer-choice[B])$ .
-    #v(0.5em)
     #choices(
     [$e^x ln 2$],
     [$e^2x ln 2$],
@@ -546,14 +545,14 @@
       
       令 $u = sqrt(3x + 2)$，则：
       $u^2 = 3x + 2$
-      $2u "d" u = 3 "d" x$
-      $"d" x = (2u)/(3) "d" u$
+      $2u d u = 3 d x$
+      $d x = (2u)/(3) d u$
       $x = (u^2 - 2)/3$
       
       代入积分：
-      $integral (1 - u)/(1 + u) · (2u)/(3) "d" u = (2)/(3) integral (u(1 - u))/(1 + u) "d" u$
+      $integral (1 - u)/(1 + u) · (2u)/(3) d u = (2)/(3) integral (u(1 - u))/(1 + u) d u$
       
-      $= (2)/(3) integral (u - u^2)/(1 + u) "d" u$
+      $= (2)/(3) integral (u - u^2)/(1 + u) d u$
       
       对被积函数进行长除法：
       $(u - u^2)/(1 + u) = (-u^2 + u)/(1 + u)$
@@ -562,7 +561,7 @@
       $(-u^2 + u)/(1 + u) = -u + 2 - (2)/(1 + u)$
       
       因此：
-      $(2)/(3) integral (-u + 2 - (2)/(1 + u)) "d" u$
+      $(2)/(3) integral (-u + 2 - (2)/(1 + u)) d u$
       
       $= (2)/(3) [(-u^2)/(2) + 2u - 2 ln|1 + u|] + C$
       
@@ -623,45 +622,45 @@
     ]
 20. 求  $integral_(0)^(+infinity) x^2 e^(-x) dif x$ .
     #answer-process[
-      计算反常积分 $integral_(0)^(+infinity) x^2 e^(-x) "d" x$。
+      计算反常积分 $integral_(0)^(+infinity) x^2 e^(-x) d x$。
       
-      先求不定积分 $integral x^2 e^(-x) "d" x$，使用分部积分法两次。
+      先求不定积分 $integral x^2 e^(-x) d x$，使用分部积分法两次。
       
-      设 $u = x^2$，$"d" v = e^(-x) "d" x$
-      则 $"d" u = 2x "d" x$，$v = -e^(-x)$
+      设 $u = x^2$，$d v = e^(-x) d x$
+      则 $d u = 2x d x$，$v = -e^(-x)$
       
-      $integral x^2 e^(-x) "d" x = -x^2 e^(-x) - integral (-e^(-x)) · 2x "d" x$
+      $integral x^2 e^(-x) d x = -x^2 e^(-x) - integral (-e^(-x)) · 2x d x$
       
-      $= -x^2 e^(-x) + 2 integral x e^(-x) "d" x$
+      $= -x^2 e^(-x) + 2 integral x e^(-x) d x$
       
-      对 $integral x e^(-x) "d" x$ 再用分部积分：
-      设 $u = x$，$"d" v = e^(-x) "d" x$
-      则 $"d" u = "d" x$，$v = -e^(-x)$
+      对 $integral x e^(-x) d x$ 再用分部积分：
+      设 $u = x$，$d v = e^(-x) d x$
+      则 $d u = d x$，$v = -e^(-x)$
       
-      $integral x e^(-x) "d" x = -x e^(-x) - integral (-e^(-x)) "d" x$
+      $integral x e^(-x) d x = -x e^(-x) - integral (-e^(-x)) d x$
       
-      $= -x e^(-x) + integral e^(-x) "d" x$
+      $= -x e^(-x) + integral e^(-x) d x$
       
       $= -x e^(-x) - e^(-x)$
       
       $= -(x + 1) e^(-x)$
       
       因此：
-      $integral x^2 e^(-x) "d" x = -x^2 e^(-x) + 2[-(x + 1) e^(-x)]$
+      $integral x^2 e^(-x) d x = -x^2 e^(-x) + 2[-(x + 1) e^(-x)]$
       
       $= -x^2 e^(-x) - 2(x + 1) e^(-x)$
       
       $= -e^(-x)[x^2 + 2x + 2]$
       
       计算定积分：
-      $integral_(0)^(+infinity) x^2 e^(-x) "d" x = lim_(t -> +infinity) [-e^(-x)(x^2 + 2x + 2)]_(0)^(t)$
+      $integral_(0)^(+infinity) x^2 e^(-x) d x = lim_(t -> +infinity) [-e^(-x)(x^2 + 2x + 2)]_(0)^(t)$
       
       当 $x -> +infinity$ 时，$e^(-x)(x^2 + 2x + 2) -> 0$（指数衰减快于幂增长）
       
       当 $x = 0$ 时，$-e^0(0 + 0 + 2) = -2$
       
       因此：
-      $integral_(0)^(+infinity) x^2 e^(-x) "d" x = 0 - (-2) = 2$
+      $integral_(0)^(+infinity) x^2 e^(-x) d x = 0 - (-2) = 2$
     ]
 21. 求函数  $f(x) = (2x + 3) e^(2/x)$  的单调区间、极值以及渐近线方程
     #answer-process[
@@ -743,7 +742,7 @@
       两边同时除以 $x^2$：
       $(f'(x))/x - f(x)/x^2 = -3/x$
       
-      即 $d/("d" x)[f(x)/x] = -3x^2/x^2 = -3$（利用商法则的逆过程）
+      即 $d/(d x)[f(x)/x] = -3x^2/x^2 = -3$（利用商法则的逆过程）
       
       积分得：
       $f(x)/x = -3x + C_1$
@@ -756,7 +755,7 @@
       代入 $f(x) = -3x^2 + C_1 x$：$f(0) = 0$ 自动满足。
       
       利用面积条件：
-      $integral_0^1 f(x) "d" x = integral_0^1 (-3x^2 + C_1 x) "d" x = 2$
+      $integral_0^1 f(x) d x = integral_0^1 (-3x^2 + C_1 x) d x = 2$
       
       $[-x^3 + (C_1/2) x^2]_0^1 = 2$
       
@@ -773,13 +772,13 @@
       *第(2)问：求旋转体体积*
       
       绕 $x$ 轴旋转的体积公式：
-      $V = pi integral_0^1 [f(x)]^2 "d" x = pi integral_0^1 [3x(2 - x)]^2 "d" x$
+      $V = pi integral_0^1 [f(x)]^2 d x = pi integral_0^1 [3x(2 - x)]^2 d x$
       
-      $= pi integral_0^1 9x^2(2 - x)^2 "d" x$
+      $= pi integral_0^1 9x^2(2 - x)^2 d x$
       
-      $= 9pi integral_0^1 x^2(4 - 4x + x^2) "d" x$
+      $= 9pi integral_0^1 x^2(4 - 4x + x^2) d x$
       
-      $= 9pi integral_0^1 (4x^2 - 4x^3 + x^4) "d" x$
+      $= 9pi integral_0^1 (4x^2 - 4x^3 + x^4) d x$
       
       $= 9pi [(4/3)x^3 - x^4 + (1/5)x^5]_0^1$
       

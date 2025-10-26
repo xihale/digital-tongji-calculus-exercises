@@ -3,10 +3,10 @@
 #section[第四节 有理函数的积分]
 #subsection[一、判断题(如果错误，请加以改正)]
 1.有理函数也称为有理分式，整式也是有理分式的一种 (#h(2em))
-   #answer-choice[(正确)]
+   (#answer-choice[(正确)])
 
 2.有理分式  $(x^3 + x^2 - x - 1)/(2x^3 + 3x^2 + 6x)$  是真分式  (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      分子最高次数为 3，分母最高次数也为 3。当分子和分母的次数相同或分子次数更高时，该分式是假分式。
      
@@ -14,7 +14,7 @@
    ]
 
 3. 令  $t = tan(x/2)$ , 则  $integral (tan x)/(sin x + cos x - 1) dif x = integral (A)/((1 - t)(1 - t^2)) dif t$  中  $A = -2$ (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      当 $t = tan(x/2)$ 时：
      - $sin x = 2t/(1+t^2)$，$cos x = (1-t^2)/(1+t^2)$，$tan x = 2t/(1-t^2)$
@@ -30,13 +30,13 @@
    ]
 
 4. 在计算三角函数有理式的不定积分  $integral R(sin x, cos x) dif x$  时，一般使用变换  $t = tan(x/2)$ (#h(2em))
-   #answer-choice[(正确)]
+   (#answer-choice[(正确)])
    #answer-process[
      这是三角函数有理式的标准处理方法。
    ]
 
 5.所有连续函数均存在初等函数的原函数 (#h(2em))
-   #answer-choice[(错误)]
+   (#answer-choice[(错误)])
    #answer-process[
      反例：$e^(-x^2)$ 是连续函数，但其原函数（涉及误差函数）不能用初等函数表示。
      

@@ -9,7 +9,7 @@
    [1],
    [不存在]
    )
-   #answer-choice[不存在]
+   (#answer-choice[不存在])
    #answer-process[
    当 $x -> 1^+$ 时，$x > 1$，所以 $|x - 1| = x - 1$，因此：
    $lim_(x->1^+)(|x - 1|)/(x - 1) = lim_(x->1^+)(x - 1)/(x - 1) = lim_(x->1^+)1 = 1$
@@ -27,7 +27,7 @@
    [充要条件],
    [无关条件]
    )
-   #answer-choice[充要条件]
+   (#answer-choice[充要条件])
    #answer-process[
    根据函数极限的定义，$lim_(x->x_0)f(x)$ 存在的充分必要条件是 $lim_(x->x_0^+)f(x)$ 和 $lim_(x->x_0^-)f(x)$ 都存在且相等。
    
@@ -41,7 +41,7 @@
    $1/4$,
    [不存在]
    )
-   #answer-choice[不存在]
+   (#answer-choice[不存在])
    #answer-process[
    当 $x -> 0^+$ 时，$x > 0$，所以 $|x| = x$，因此：
    $lim_(x->0^+)(2x + |x|)/(4x - 3|x|) = lim_(x->0^+)(2x + x)/(4x - 3x) = lim_(x->0^+)(3x)/(x) = lim_(x->0^+)3 = 3$

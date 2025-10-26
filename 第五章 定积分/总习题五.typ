@@ -98,14 +98,14 @@
    ]
 
 #subsection[二、填空题]
-6.  $frac(d, "dx") integral_(a)^(b) arctan x dif x = #blank(0)$  
+6.  $frac(d, dif x) integral_(a)^(b) arctan x dif x = #blank(0)$  
    #answer-process[
      根据定积分的性质，$integral_(a)^(b) arctan x dif x$ 是一个常数（与 $x$ 无关）。
      
      因为积分变量是 $x$，而积分限 $a$ 和 $b$ 都是常数，所以整个积分的结果是一个常数。
      
      常数的导数为 $0$，因此：
-     $frac(d, "dx") integral_(a)^(b) arctan x dif x = 0$
+     $frac(d, dif x) integral_(a)^(b) arctan x dif x = 0$
    ]
 
 7.  $integral_(-pi/2)^(pi/2) sqrt(1 - cos^2 x) dif x = #blank(2)$
@@ -159,12 +159,12 @@
 10. 已知  $x e^x$  为函数  $f(x)$  的一个原函数, 则  $integral_(0)^(1) x f'(x) dif x = #blank($e$)$
    #answer-process[
      由于 $x e^x$ 是 $f(x)$ 的一个原函数，所以：
-     $f(x) = frac(d, "dx") (x e^x) = e^x + x e^x = e^x (1 + x)$
+     $f(x) = frac(d, dif x) (x e^x) = e^x + x e^x = e^x (1 + x)$
      
      计算 $integral_(0)^(1) x f'(x) dif x$：
      
      方法一：使用分部积分法
-     设 $u = x$，$d v = f'(x) "dx"$，则 $d u = "dx"$，$v = f(x)$
+     设 $u = x$，$d v = f'(x) dif x$，则 $d u = dif x$，$v = f(x)$
      
      $integral_(0)^(1) x f'(x) dif x = [x f(x)]_(0)^(1) - integral_(0)^(1) f(x) dif x$
      
@@ -174,7 +174,7 @@
      计算第二项：
      $integral_(0)^(1) f(x) dif x = integral_(0)^(1) e^x (1 + x) dif x$
      
-     使用分部积分法，设 $u = 1 + x$，$d v = e^x "dx"$，则 $d u = "dx"$，$v = e^x$
+     使用分部积分法，设 $u = 1 + x$，$d v = e^x dif x$，则 $d u = dif x$，$v = e^x$
      
      $integral_(0)^(1) e^x (1 + x) dif x = [(1 + x) e^x]_(0)^(1) - integral_(0)^(1) e^x dif x$
      $= [(1 + 1) e^1 - (1 + 0) e^0] - [e^x]_(0)^(1)$
@@ -185,7 +185,7 @@
      
      方法二：直接计算
      由于 $f(x) = e^x (1 + x)$，那么：
-     $f'(x) = frac(d, "dx") [e^x (1 + x)] = e^x (1 + x) + e^x = e^x (2 + x)$
+     $f'(x) = frac(d, dif x) [e^x (1 + x)] = e^x (1 + x) + e^x = e^x (2 + x)$
      
      所以：
      $integral_(0)^(1) x f'(x) dif x = integral_(0)^(1) x e^x (2 + x) dif x$
@@ -193,11 +193,11 @@
      $= 2 integral_(0)^(1) x e^x dif x + integral_(0)^(1) x^2 e^x dif x$
      
      计算 $integral x e^x dif x$：
-     使用分部积分，设 $u = x$，$d v = e^x "dx"$，则 $d u = "dx"$，$v = e^x$
+     使用分部积分，设 $u = x$，$d v = e^x dif x$，则 $d u = dif x$，$v = e^x$
      $integral x e^x dif x = x e^x - integral e^x dif x = x e^x - e^x + C = e^x (x - 1) + C$
      
      计算 $integral x^2 e^x dif x$：
-     使用分部积分，设 $u = x^2$，$d v = e^x "dx"$，则 $d u = 2x "dx"$，$v = e^x$
+     使用分部积分，设 $u = x^2$，$d v = e^x dif x$，则 $d u = 2x dif x$，$v = e^x$
      $integral x^2 e^x dif x = x^2 e^x - 2 integral x e^x dif x = x^2 e^x - 2 e^x (x - 1) + C = e^x (x^2 - 2x + 2) + C$
      
      因此：
