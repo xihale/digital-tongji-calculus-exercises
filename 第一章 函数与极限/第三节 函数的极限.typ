@@ -50,7 +50,7 @@
    ]
 
 #subsection[二、填空题]
-4. 当 $0 < |x - 3| < delta$ 时，取 $delta$ = #blank($epsilon$)，$|(x^2 - 9)/(x - 3) -6| < epsilon$ 成立。
+4. 当 $0 < |x - 3| < delta$ 时，取 $delta$ = #blank[$epsilon$]，$|(x^2 - 9)/(x - 3) -6| < epsilon$ 成立。
    #answer-process[
    首先，简化表达式：
    $(x^2 - 9)/(x - 3) - 6 = (x + 3) - 6 = x - 3$

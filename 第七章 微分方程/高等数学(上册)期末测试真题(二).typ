@@ -73,12 +73,91 @@
     [$e^(2x) + ln 2$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
-11.  $lim_(x->0^+)(1 + sin x)^(ln x) = #blank[]$  
-12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = \_$
-13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  
-14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[].  
-15. 曲线  $y = -3/2 x^3 + 9/2 x^2$  在其拐点处的切线方程是  
-16. 微分方程  $y' = 1/(x + y)$  的通解为
+11.  $lim_(x->0^+)(1 + sin x)^(ln x) = #blank[$1$]$  
+   #answer-process[
+   $L = lim_(x->0^+)(1 + sin x)^(ln x)$
+   
+   取对数：$ln L = lim_(x->0^+) ln x dot ln(1 + sin x)$
+   
+   当 $x -> 0^+$ 时，$ln(1 + sin x) approx sin x approx x$
+   
+   所以：$ln L = lim_(x->0^+) x ln x = 0$（因为 $lim_(x->0^+) x ln x = 0$）
+   
+   因此：$L = e^0 = 1$
+   ]
+   
+12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = $ #blank[$-3$]
+   #answer-process[
+   $lim_(h->0) (f(1 - 2h) - f(1))/h = 6$
+   
+   令 $u = 1 - 2h$，则 $h = (1 - u)/2$，当 $h -> 0$ 时，$u -> 1$
+   
+   原式 $= lim_(u->1) (f(u) - f(1))/((1 - u)/2) = lim_(u->1) (2(f(u) - f(1)))/(1 - u) = lim_(u->1) (-2(f(u) - f(1)))/(u - 1) = -2f'(1)$
+   
+   所以 $-2f'(1) = 6$，得 $f'(1) = -3$
+   ]
+   
+13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$ #blank[$2/3$]
+   #answer-process[
+   $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) sin x) d x$
+   
+   拆分：
+   - $integral_(-1)^(1) x^2 d x = [x^3/3]_(-1)^(1) = 1/3 - (-1/3) = 2/3$
+   - $integral_(-1)^(1) sqrt(4 - x^2) sin x d x = 0$（奇函数在对称区间上积分为 $0$）
+   
+   总和：$2/3 + 0 = 2/3$
+   ]
+   
+14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[$2$].  
+   #answer-process[
+   $x = f(t) - pi$，$y = f(e^(2t) - 1)$
+   
+   求导：
+   - $d x/d t = f'(t)$，在 $t = 0$：$d x/d t = f'(0)$
+   - $d y/d t = f'(e^(2t) - 1) dot 2e^(2t)$，在 $t = 0$：$d y/d t = f'(0) dot 2$
+   
+   所以：$(d y)/(d x|_(t=0)) = (2f'(0))/(f'(0)) = 2$
+   ]
+   
+15. 曲线  $y = -3/2 x^3 + 9/2 x^2$  在其拐点处的切线方程是 #blank[$y = 9x/2 - 3/2$ 或 $9x - 2y - 3 = 0$]
+   #answer-process[
+   $y = -3/2 x^3 + 9/2 x^2$
+   
+   求导：
+   - $y' = -9/2 x^2 + 9x$
+   - $y'' = -9x + 9 = 9(1 - x)$
+   
+   拐点：$y'' = 0$，得 $x = 1$
+   
+   在 $x = 1$ 时：
+   - $y = -3/2 + 9/2 = 3$
+   - $y' = -9/2 + 9 = 9/2$
+   
+   切线方程：$y - 3 = 9/2(x - 1)$，即 $y = 9x/2 - 3/2$，或 $9x - 2y - 3 = 0$
+   ]
+   
+16. 微分方程  $y' = 1/(x + y)$  的通解为 #blank[$y - ln|x + y + 1| = C$]
+   #answer-process[
+   $y' = 1/(x + y)$
+   
+   令 $u = x + y$，则 $d u/d x = 1 + d y/d x$
+   
+   所以：$d y/d x = d u/d x - 1$
+   
+   代入原方程：$d u/d x - 1 = 1/u$
+   
+   整理：$d u/d x = 1 + 1/u = (u + 1)/u$
+   
+   分离变量：$u/(u + 1) d u = d x$
+   
+   化简：$(1 - 1/(u + 1)) d u = d x$
+   
+   积分：$u - ln|u + 1| = x + C$
+   
+   代回 $u = x + y$：$x + y - ln|x + y + 1| = x + C$
+   
+   整理得：$y - ln|x + y + 1| = C$
+   ]
 #subsection[三、计算题(每小题7分，共35分)]
 17. 求  $lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$ .
     

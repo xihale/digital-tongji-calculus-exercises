@@ -43,17 +43,87 @@
    )
    
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[]
+6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[$-1$]
+   #answer-process[
+   要使函数在 $x = 0$ 处连续，需要 $lim_(x -> 0^-) f(x) = lim_(x -> 0^+) f(x) = f(0)$。
    
-7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为  
+   左极限：$lim_(x -> 0^-) (e^x - 2) = e^0 - 2 = -1$
    
-8.函数  $f(x) = 2^x$  的带有拉格朗日余项的三阶麦克劳林公式为
+   右极限：$lim_(x -> 0^+) (x sin(1/x) + (sin(a x))/x)$
+   - 第一项：$x sin(1/x) -> 0$（因为 $|sin(1/x)| <= 1$，所以 $|x sin(1/x)| <= |x| -> 0$）
+   - 第二项：$(sin(a x))/x = a dot (sin(a x))/(a x) -> a dot 1 = a$（当 $x -> 0$）
    
-9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为
+   所以右极限 $= 0 + a = a$
    
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = #blank[]$
+   由连续性：$a = -1$
+   ]
    
-11. 微分方程  $(1 + y)^2 d y/d x + x^3 = 0$  的通解为
+7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为 #blank[$y = x - 1$]
+   #answer-process[
+   在 $t = 0$ 时：
+   - $x = e^0 + ln(1 + 0) = 1 + 0 = 1$
+   - $y = arctan 0 = 0$
+   - 点为 $(1, 0)$
+   
+   求导：
+   - $d x/d t = e^t + (2t)/(1 + t^2)$，在 $t = 0$：$d x/d t = 1 + 0 = 1$
+   - $d y/d t = 1/(1 + t^2)$，在 $t = 0$：$d y/d t = 1$
+   
+   斜率：$d y/d x = (d y"/"d t)/(d x"/"d t) = 1/1 = 1$
+   
+   切线方程：$y - 0 = 1(x - 1)$，即 $y = x - 1$
+   ]
+   
+8.函数  $f(x) = 2^x$  的带有拉格朗日余项的三阶麦克劳林公式为 #blank[$1 + x ln 2 + (x^2(ln 2)^2)/2 + (x^3(ln 2)^3)/6 + (2^xi(ln 2)^4 x^4)/24$，其中 $xi$ 在 $0$ 与 $x$ 之间]
+   #answer-process[
+   $f(x) = 2^x$，求各阶导数：
+   - $f(0) = 2^0 = 1$
+   - $f'(x) = 2^x ln 2$，$f'(0) = ln 2$
+   - $f''(x) = 2^x (ln 2)^2$，$f''(0) = (ln 2)^2$
+   - $f'''(x) = 2^x (ln 2)^3$，$f'''(0) = (ln 2)^3$
+   - $f^((4))(x) = 2^x (ln 2)^4$
+   
+   带拉格朗日余项的三阶麦克劳林公式：
+   $f(x) = 1 + x ln 2 + (x^2(ln 2)^2)/2 + (x^3(ln 2)^3)/6 + (2^xi(ln 2)^4 x^4)/24$
+   ]
+   
+9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为 #blank[$|cos x|$]
+   #answer-process[
+   $y = ln sec x = -ln cos x$
+   - $y' = tan x$
+   - $y'' = sec^2 x$
+   
+   曲率：$k = |y''|/((1 + (y')^2)^(3"/"2)) = |sec^2 x|/((1 + tan^2 x)^(3"/"2)) = sec^2 x/(sec^3 x) = 1/sec x = |cos x|$
+   ]
+   
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = #blank[$pi/2$]$
+   #answer-process[
+   拆分：$integral_(-1)^(1) (x^2 sin x)/(sqrt(1 - x^2)) d x + integral_(-1)^(1) (1 - x^2)/(sqrt(1 - x^2)) d x$
+   
+   第一部分是奇函数，积分为 $0$
+   
+   第二部分：$integral_(-1)^(1) sqrt(1 - x^2) d x$ 是半圆面积 $= pi r^2/2 = pi/2$
+   
+   所以总积分 $= 0 + pi/2 = pi/2$
+   ]
+   
+11. 微分方程  $(1 + y)^2 d y/d x + x^3 = 0$  的通解为 #blank[$(1 + y)^3 = -3x^4/4 + C$ 或 $1 + y = root(3, -3x^4/4 + C)$]
+   #answer-process[
+   $(1 + y)^2 d y/d x = -x^3$
+   
+   分离变量：$(1 + y)^2 d y = -x^3 d x$
+   
+   积分：$integral (1 + y)^2 d y = integral -x^3 d x$
+   
+   得：$(1 + y)^3/3 = -x^4/4 + C_1$
+   
+   整理：$(1 + y)^3 = -3x^4/4 + C$（其中 $C = 3C_1$）
+   ]
+   
+   得：$(1 + y)^3/3 = -x^4/4 + C_1$
+   
+   整理：$(1 + y)^3 = -3x^4/4 + C$（其中 $C = 3C_1$）
+   ]
    
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
 12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$ .

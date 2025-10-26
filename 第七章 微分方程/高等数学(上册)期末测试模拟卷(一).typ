@@ -43,25 +43,84 @@
    )
    
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank[].
+6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank[$2$].
+   #answer-process[
+   由于函数在 $x = 0$ 处连续，需要满足 $lim_(x -> 0^-) f(x) = lim_(x -> 0^+) f(x) = f(0)$。
    
-7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$  
+   计算左极限（使用洛必达法则或等价无穷小）：
+   $lim_(x -> 0^-) (sin 3x)/(ln(1 + x)) = lim_(x -> 0^-) (3x)/(x) = 3$
    
-8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为  
+   计算右极限和函数值：
+   $lim_(x -> 0^+) (a sec x + 1) = f(0) = a dot 1 + 1 = a + 1$
    
-9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
+   由连续性：$3 = a + 1$，因此 $a = 2$。
+   ]
    
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[]$
+7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$ #blank[$t/2$]
+   #answer-process[
+   参数方程求导：$d y/d x = (d y"/"d t)/(d x"/"d t)$
    
-11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
+   $d x/d t = (2t)/(1 + t^2)$，$d y/d t = 1 - 1/(1 + t^2) = t^2/(1 + t^2)$
    
-#subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
-7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$  
-8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为  
-9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[]$
-
-11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
+   因此 $d y/d x = (t^2/(1 + t^2))/((2t)/(1 + t^2)) = t^2/(1 + t^2) dot (1 + t^2)/(2t) = t/2$
+   ]
+   
+8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为 #blank[$x + x^2 + x^3/2 + (e^xi (3 + xi))/(4!) x^4$，其中 $xi$ 在 $0$ 与 $x$ 之间]
+   #answer-process[
+   设 $f(x) = x e^x$，求各阶导数在 $x = 0$ 处的值：
+   - $f(0) = 0$
+   - $f'(x) = e^x + x e^x = (1 + x)e^x$，$f'(0) = 1$
+   - $f''(x) = e^x + (1 + x)e^x = (2 + x)e^x$，$f''(0) = 2$
+   - $f'''(x) = e^x + (2 + x)e^x = (3 + x)e^x$，$f'''(0) = 3$
+   - $f^((4))(x) = e^x + (3 + x)e^x = (4 + x)e^x$
+   
+   带拉格朗日余项的三阶麦克劳林公式：
+   $f(x) = f(0) + f'(0)x + (f''(0))/(2!)x^2 + (f'''(0))/(3!)x^3 + (f^((4))(xi))/(4!)x^4$
+   $= 0 + x + (2x^2)/2 + (3x^3)/6 + (e^xi(4 + xi))/(24)x^4$
+   $= x + x^2 + x^3/2 + (e^xi(4 + xi))/(24)x^4$，其中 $xi$ 在 $0$ 与 $x$ 之间
+   ]
+   
+9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$ #blank[$2$]
+   #answer-process[
+   $y = 4x - x^2$，顶点在 $x = 2$（由 $y' = 4 - 2x = 0$ 得）
+   
+   $y' = 4 - 2x$，在 $x = 2$ 时，$y' = 0$
+   $y'' = -2$
+   
+   曲率公式：$k = |y''|/((1 + (y')^2)^(3"/"2)) = |-2|/((1 + 0)^(3"/"2)) = 2/1 = 2$
+   ]
+   
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[$2 pi$]$
+   #answer-process[
+   $integral_(-2)^(2) (x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) d x$
+   
+   拆分为两部分：
+   - 第一部分：$integral_(-2)^(2) (x|sin x|)/(sqrt(4 - x^2)) d x$
+     
+     注意 $f(x) = (x|sin x|)/(sqrt(4 - x^2))$ 是奇函数，因为 $f(-x) = (-x|sin(-x)|)/(sqrt(4 - x^2)) = (-x|sin x|)/(sqrt(4 - x^2)) = -f(x)$
+     
+     所以在对称区间 $[-2, 2]$ 上积分为 $0$。
+   
+   - 第二部分：$integral_(-2)^(2) (4 - x^2)/(sqrt(4 - x^2)) d x = integral_(-2)^(2) sqrt(4 - x^2) d x$
+     
+     这是半径为 $2$ 的上半圆的面积：$integral_(-2)^(2) sqrt(4 - x^2) d x = (1/2) pi r^2 = (1/2) pi dot 4 = 2 pi$
+   
+   因此总积分 $= 0 + 2 pi = 2 pi$
+   ]
+   
+11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为 #blank[$y = tan(e^x + C)$]
+   #answer-process[
+   $(d y)/(d x) = (1 + y^2)e^x$
+   
+   分离变量：$(d y)/(1 + y^2) = e^x d x$
+   
+   两边积分：$integral (d y)/(1 + y^2) = integral e^x d x$
+   
+   得：$arctan y = e^x + C$
+   
+   所以通解为：$y = tan(e^x + C)$
+   ]
+   
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
 12. 求  $lim_(x -> +infinity) (integral_0^x arctan^2 t dif t)/(sqrt(x^2 + 1))$ .  
    
