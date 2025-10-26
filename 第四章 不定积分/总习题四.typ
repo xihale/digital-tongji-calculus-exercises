@@ -115,7 +115,7 @@
      题目给定答案是 $(x^3)/3 - x^3 ln x/3 + C$，这是 $integral x^2 e^(ln x) dif x$ 吗？不是。
    ]
 
-8. 设  $F'(x) = f(x)$ , 则  $integral f(a x + b) dif x = $ #blank[$frac(1, a] F(a x + b) + C$) .  
+8. 设  $F'(x) = f(x)$ , 则  $integral f(a x + b) dif x = $ #blank[$frac(1, a) F(a x + b) + C$].  
    #answer-process[
      令 $u = a x + b$，则 $dif u = a dif x$，$dif x = dif u/a$。
      
@@ -138,12 +138,7 @@
      
      $integral x sqrt(1-x^2) dif x = integral sqrt(u) dot (-d u/2) = -1/2 integral u^(1"/"2) d u$
      $= -1/2 dot (2/3) u^(3"/"2) + C = -1/3 (1 - x^2)^(3"/"2) + C$
-   ]
-     
-     令 $u = 1 - x^2$，则 $dif u = -2x dif x$：
-     
-  $= -frac(1, 2) integral sqrt(u) dif u = -frac(1, 2) · frac(2 u^(3/2), 3) + C = -frac((1-x^2)^(3/2), 3) + C$
-   ]
+  ]
 
 10. 若  $integral x f(x) dif x = x sin x - integral sin x dif x$ ，则  $f(x) = $ #blank[$sin x + x cos x$].
    #answer-process[

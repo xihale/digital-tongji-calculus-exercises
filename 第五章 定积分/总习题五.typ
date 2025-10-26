@@ -120,7 +120,7 @@
      $= 2[ -cos x ]_(0)^(pi/2) = 2[ -cos(pi/2) + cos(0) ] = 2[ 0 + 1 ] = 2$
    ]
 
-8. 由区间  $[a, b]$  上连续曲线  $y = f(x)$ , 直线  $x = a, x = b (a < b)$  和  $x$  轴所围成图形的面积为  $S = #blank[$integral_(a]^(b) abs(f(x)) dif x$)$ .
+8. 由区间  $[a, b]$  上连续曲线  $y = f(x)$ , 直线  $x = a, x = b (a < b)$  和  $x$  轴所围成图形的面积为  $S = #blank[$integral_(a)^(b) abs(f(x)) dif x$]$.
    #answer-process[
      根据定积分的几何意义，曲线 $y = f(x)$ 与 $x$ 轴之间的面积应取绝对值，以确保面积为正。
      
