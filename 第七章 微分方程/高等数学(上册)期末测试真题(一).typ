@@ -2,42 +2,42 @@
 
 #section[高等数学(上册)期末测试真题(一)]
 #subsection[一、选择题(每小题3分，共30分)]
-1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (#h(2em))$
+1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (#answer-choice[])$
    #choices(
    [$2/3$],
    [$6$],
    [$3/2$],
    [不存在]
    )
-2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的(#h(2em)).
+2. 当  $x->0$  时,  $sin x + x^2 cos(1/x)$  是  $(1 + cos x) ln (1 + x)$  的(#answer-choice[]).
    #choices(
    [高阶无穷小],
    [等价无穷小],
    [同阶无穷小, 但不是等价无穷小],
    [低阶无穷小]
    )
-3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的(#h(2em)).
+3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的(#answer-choice[]).
    #choices(
    [跳跃间断点],
    [可去间断点],
    [连续点],
    [第二类间断点]
    )
-4.方程  $x^4 -4x = 1$  在区间(0,1)内(#h(2em)).
+4.方程  $x^4 -4x = 1$  在区间(0,1)内(#answer-choice[]).
    #choices(
    [无实根],
    [有唯一实根],
    [有两个实根],
    [有三个实根]
    )
-5. 设  $f'(x) = g(x)$ ，则  $(d)/(d x) f(sin^2 x) = (#h(2em))$ .
+5. 设  $f'(x) = g(x)$ ，则  $(d)/(d x) f(sin^2 x) = (#answer-choice[])$ .
    #choices(
    [$2g(x) sin x$],
    [$g(x) sin 2x$],
    [$g(sin^2 x)$],
    [$g(sin^2 x) sin 2x$]
    )
-6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则(#h(2em)).
+6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则(#answer-choice[]).
    #choices(
    [$f(0)$  是  $f(x)$  的极大值],
    [$f(0)$  是  $f(x)$  的极小值],
@@ -54,21 +54,21 @@
    )
    (3)  $integral_(-3)^(2) f''(x) dif x$ ;
    (4)  $integral_(-3)^(2) f'''(x) dif x$ .
-8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#h(2em)).
+8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#answer-choice[]).
    #choices(
    [$C_1 y_1 + C_2 y_2 + y_3$],
    [$C_1 y_1 + C_2 y_2 - (C_1 + C_2) y_3$],
    [$C_1 y_1 + C_2 y_2 - (1 - C_1 - C_2) y_3$],
    [$C_1 y_1 + C_2 y_2 + (1 - C_1 - C_2) y_3$]
    )
-9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为(#h(2em)).
+9. 由曲线  $y = ln x$  与直线  $y = ln a, y = ln b (b > a > 0)$  及  $y$  轴所围成图形的面积为(#answer-choice[]).
    #choices(
    [$1/b - 1/a$],
    [$1/a - 1/b$],
    [$b - a$],
    [$a - b$]
    )
-10.下列反常积分收敛的是(#h(2em))
+10.下列反常积分收敛的是(#answer-choice[])
     #choices(
     [$integral_(-infinity)^(+infinity) cos x dif x$],
     [$integral_(0)^(+infinity) e^(-2x) dif x$],
@@ -79,8 +79,8 @@
 11. 已知  $lim_(x -> 1) f(x)$  存在，且函数  $f(x) = x^2 + 2x lim_(x -> 1) f(x)$ ，则  $lim_(x -> 1) f(x) =$  
 12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank()$  
 13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k =$  #blank().  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = (#h(2em))$  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = (#h(2em))$  
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = (#answer-choice[])$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = (#answer-choice[])$  
 16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为
 #subsection[三、计算题(每小题7分，共35分)]
 17. 已知连续函数  $f(x) = integral_(0)^(3x) f(t/3) dif t + e^(2x)$ ，求  $f(x)$ .  

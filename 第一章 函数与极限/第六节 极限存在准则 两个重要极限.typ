@@ -2,7 +2,7 @@
 
 #section[第六节 极限存在准则 两个重要极限]
 #subsection[一、选择题]
-1. $lim_(x->0)(1/x sin x)/(cos x)$ (#h(2em))
+1. $lim_(x->0)(1/x sin x)/(cos x)$ (#answer-choice[])
   (#answer-choice[1])
   #choices(
     1,
@@ -15,7 +15,7 @@
     $lim_(x->0)(1/x sin x)/(cos x) = lim_(x->0)(1/x dot x)/1 = lim_(x->0)1/1 = 1$
   ]
 
-2. $lim_(x->infinity)(1 - 1/x)^(2x)$ (#h(2em))
+2. $lim_(x->infinity)(1 - 1/x)^(2x)$ (#answer-choice[])
   (#answer-choice[$e^(-2)$])
   #choices(
     $2 e$,

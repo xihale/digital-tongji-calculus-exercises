@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试模拟卷(一)]
 #subsection[一、选择题(每小题3分，共15分)]
-1. 当  $x -> 0$  时，下列(#h(2em))是  $x$  的同阶(不等价)无穷小。
+1. 当  $x -> 0$  时，下列(#answer-choice[])是  $x$  的同阶(不等价)无穷小。
    #choices(
    [$sin x - x$],
    [$ln (1 - x)$],
@@ -24,7 +24,7 @@
      
      D. $e^x - 1 = x + x^2/2 + dots$，$lim_(x->0) (e^x - 1)/x = 1$，为等价无穷小
    ]
-2.下列命题中不正确的是(#h(2em))
+2.下列命题中不正确的是(#answer-choice[])
    #choices(
    [若函数  $f(x)$  在点  $x_0$  处不连续，则  $f(x)$  在点  $x_0$  处必不可导],
    [若  $lim_(x -> x_0) f(x)$  不存在, 则函数  $f(x)$  在点  $x_0$  处不连续],
@@ -43,7 +43,7 @@
      
      D. 不正确。可积不一定连续，例如有有限个间断点的函数仍然可积
    ]
-3. 设函数  $f(x) = (1 + e^(1/x))/(3 + 2 e^(1/x))$ ，则  $x = 0$  是  $f(x)$  的(#h(2em)).
+3. 设函数  $f(x) = (1 + e^(1/x))/(3 + 2 e^(1/x))$ ，则  $x = 0$  是  $f(x)$  的(#answer-choice[]).
    #choices(
    [跳跃间断点],
    [可去间断点],
@@ -70,7 +70,7 @@
      
      左右极限存在但不相等，故为跳跃间断点
    ]
-4.下列不定积分的计算不正确的是(#h(2em))
+4.下列不定积分的计算不正确的是(#answer-choice[])
    #choices(
    [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
    [$integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
@@ -90,7 +90,7 @@
      D. 不正确。$integral (x dif x)/(1+x^2) = 1/2 integral (dif(1+x^2))/(1+x^2) = 1/2 ln(1+x^2) + C$
         而 $arctan x$ 的导数是 $1/(1+x^2)$，不是 $x/(1+x^2)$
    ]
-5.下列反常积分收敛的是(#h(2em))
+5.下列反常积分收敛的是(#answer-choice[])
    #choices(
    [$integral_(1)^(+infinity)(dif x)/(sqrt x)$],
    [$integral_(-infinity)^(+infinity) (dif x)/(x^2 + 4x + 5)$],
@@ -182,7 +182,7 @@
      
      $k = (|-2|)/((1+0^2)^(3/2)) = 2/1 = 2$
    ]
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#h(2em))$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#answer-choice[])$
    
    #answer-process[
      答案：$2pi$

@@ -2,7 +2,7 @@
 
 #section[总习题六]
 #subsection[一、选择题]
-1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#h(2em)).
+1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#answer-choice[]).
    #choices(
    [$integral_(1)^(2) ln y , dif y$],
    [$integral_(0)^(e^2) e^x , dif y$],
@@ -11,7 +11,7 @@
    )
    (#answer-choice[(A)])
 
-2.如图6-2所示，阴影部分面积为(#h(2em))
+2.如图6-2所示，阴影部分面积为(#answer-choice[])
 #figure(
   image("images/6-2.jpg", width: 18em),
   caption: [图6-2],

@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试模拟卷(二)]]
 #subsection[一、选择题(每小题3分，共15分)]
-1. 当  $x -> 0$  时，下列(#h(2em))是  $x$  的三阶无穷小
+1. 当  $x -> 0$  时，下列(#answer-choice[])是  $x$  的三阶无穷小
    #choices(
    [$root(3,x^2) - sqrt(x)$],
    [$sqrt(a + x^3) - sqrt(a)$  ( $a > 0$  是常数)],
@@ -10,7 +10,7 @@
    [$root(3, tan x)$]
    )
    
-2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是(#h(2em)).
+2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是(#answer-choice[]).
    #choices(
    [$f(0)$  是  $f(x)$  的极大值],
    [$f(0)$  是  $f(x)$  的极小值],
@@ -18,7 +18,7 @@
    [$f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点]
    )
    
-3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为(#h(2em)).
+3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为(#answer-choice[]).
    #choices(
    [1],
    [2],
@@ -26,7 +26,7 @@
    [4]
    )
    
-4.下列不定积分的计算不正确的是(#h(2em))
+4.下列不定积分的计算不正确的是(#answer-choice[])
    #choices(
    [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
    [$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
@@ -34,7 +34,7 @@
    [$integral 2^x dot 3^x dif x = (2^x dot 3^x)/(ln 2 + ln 3) + C$]
    )
    
-5.下列方程中(#h(2em))为一阶线性微分方程
+5.下列方程中(#answer-choice[])为一阶线性微分方程
    #choices(
    [$y' + x y^2 = e^x$],
    [$y y' + x y = e^x$],
@@ -51,7 +51,7 @@
    
 9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为
    
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = (#h(2em))$
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = (#answer-choice[])$
    
 11. 微分方程  $(1 + y)^2 d y/d x + x^3 = 0$  的通解为
    

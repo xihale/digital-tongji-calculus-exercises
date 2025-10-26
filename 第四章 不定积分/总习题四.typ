@@ -2,7 +2,7 @@
 
 #section[总习题四]
 #subsection[一、选择题]
-1. 若函数  $f(x)$  在区间  $(a, b)$  内连续，则在  $(a, b)$  内  $f(x)$  (#h(2em)).
+1. 若函数  $f(x)$  在区间  $(a, b)$  内连续，则在  $(a, b)$  内  $f(x)$  (#answer-choice[]).
    #choices(
    [必有导函数],
    [必有原函数],
@@ -14,7 +14,7 @@
      根据不定积分的存在定理，连续函数必有原函数（即不定积分存在）。
    ]
 
-2. 若  $F'(x) = f(x), phi'(x) = f(x)$ ，则  $integral f(x) dif x = (#h(2em))$ .
+2. 若  $F'(x) = f(x), phi'(x) = f(x)$ ，则  $integral f(x) dif x = (#answer-choice[])$ .
    #choices(
    [$F(x)$],
    [$phi(x)$],
@@ -28,7 +28,7 @@
        因此 $integral f(x) dif x = phi(x) + C$（或 $F(x) + C$）。
    ]
 
-3.下列式子中正确的是(#h(2em))
+3.下列式子中正确的是(#answer-choice[])
    #choices(
    $d[integral f(x) dif x] = f(x)$,
    $(dif [integral f(x) dif x])/(d x) = f(x) dif x$,
@@ -44,7 +44,7 @@
      (D) 正确。$integral dif f(x) = integral f'(x) dif x = f(x) + C$
    ]
 
-4. 设函数  $f(x) = e^(-x)$ ，则  $integral (f(ln x))/x dif x = (#h(2em))$ .
+4. 设函数  $f(x) = e^(-x)$ ，则  $integral (f(ln x))/x dif x = (#answer-choice[])$ .
    #choices(
    $1/x + C$,
    $ln x + C$,
@@ -60,7 +60,7 @@
      $= -1/x + C$
    ]
 
-5.  $integral (dif x)/(sqrt(x(1 - x))) = (#h(2em))$
+5.  $integral (dif x)/(sqrt(x(1 - x))) = (#answer-choice[])$
    #choices(
    $1/2 arcsin sqrt(x) + C$,
    $arcsin sqrt(x) + C$,
