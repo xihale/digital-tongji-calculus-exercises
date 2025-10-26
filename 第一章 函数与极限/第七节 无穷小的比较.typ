@@ -33,13 +33,13 @@
    $lim_(x->0)(tan x - sin x)/(sin^3 x)$
    $= lim_(x->0)(sin x/cos x - sin x)/(sin^3 x)$
    $= lim_(x->0)(sin x (1/cos x - 1))/(sin^3 x)$
-   $= lim_(x-(>0)(1)/cos x - 1)/(sin^2 x)$
+   $= lim_(x->0)(1)/cos x - 1)/(sin^2 x)$
    $= lim_(x->0)((1 - cos x)/cos x)/(sin^2 x)$
    $= lim_(x->0)(1 - cos x)/(cos x * sin^2 x)$
    
    当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，$sin x ~ x$，所以：
-   $= lim_(x-(>0)(x^2)/2)/(1 * x^2)$
-   $= lim_(x-(>0)1)/2$
+   $= lim_(x->0)(x^2)/2)/(1 * x^2)$
+   $= lim_(x->0)1/2$
    $= 1/2$
    ]
    (2)  $lim_(x->0)(sin x - tan x)/((root(3,1 + x^2) - 1)(sqrt(1 + sin x) - 1))$.
@@ -88,12 +88,12 @@
    要证明 $sec x - 1 ~ (x^2)/2$ 当 $x -> 0$ 时，需要证明 $lim_(x->0)(sec x - (1)/(x^2)/2) = 1$。
    
    $lim_(x->0)(sec x - (1)/(x^2)/2)$
-   $= lim_(x-(>0)(1)/cos x - (1)/(x^2)/2)$
+   $= lim_(x->0)(1)/cos x - (1)/(x^2)/2)$
    $= lim_(x->0)((1 - cos x)/cos (x)/(x^2)/2)$
    $= lim_(x->0)(1 - cos x)/(cos x * (x^2)/2)$
    
    当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，所以：
-   $= lim_(x-(>0)(x^2)/2)/(1 * (x^2)/2)$
+   $= lim_(x->0)(x^2)/2)/(1 * (x^2)/2)$
    $= lim_(x->0)1$
    $= 1$
    
