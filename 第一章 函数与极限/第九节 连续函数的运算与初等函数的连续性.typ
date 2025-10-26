@@ -22,7 +22,7 @@
     
     因为左右极限都存在但不相等，所以 $x = 0$ 是跳跃间断点。
   ]
-2. 设函数  $f(x) = cases(x &"if" x >= 0, 0 &"if" x < 0,), g(x) = cases(x + 1 &"if" x < 1, x &"if" x >= 1,)$  则  $f(x) + g(x)$  的连续区间是(#answer-choice[A]).
+2. 设函数  $f(x) = cases(x &"if" x >= 0, 0 &"if" x < 0,), g(x) = cases(x + 1 &"if" x < 1, x &"if" x >= 1,)$  则  $f(x) + g(x)$  的连续区间是(#answer-choice[C]).
   #choices(
     [$(-infinity , + infinity)$],
     [$(- infinity, 0) union (0, +infinity)$],
@@ -46,9 +46,7 @@
     $lim_(x->1^-)(2x+1) = 3$，$lim_(x->1^+)(2x) = 2$，$f(1)+g(1) = 1+1 = 2$，
     左右极限不相等，所以在 $x=1$ 处不连续。
     
-    因此连续区间应为 $(- infinity, 1) union (1, +infinity)$，答案应为 C。
-    
-    （注：如果标准答案为 A，可能题目有误或理解不同）
+    因此连续区间应为 $(- infinity, 1) union (1, +infinity)$，答案为 C。
   ]
 3. 已知当  $x -> 0$  时， $sqrt(1 - x) - sqrt(1 + x) ~ a x$ ，则常数  $a = (#answer-choice[B])$
   #choices(
