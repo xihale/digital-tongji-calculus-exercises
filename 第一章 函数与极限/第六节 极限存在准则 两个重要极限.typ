@@ -12,7 +12,7 @@
   )
   #answer-process[
     当 $x->0$ 时，$sin x approx x$，$cos x approx 1$，所以：
-    $lim_(x-(>0)(1)/x sin x)/(cos x) = lim_(x-(>0)(1)/x dot x)/1 = lim_(x-(>0)1)/1 = 1$
+    $lim_(x->0)(1/x sin x)/(cos x) = lim_(x->0)(1/x dot x)/1 = lim_(x->0)1/1 = 1$
   ]
 
 2. $lim_(x->infinity)(1 - 1/x)^(2x)$ (#h(2em))
@@ -67,7 +67,7 @@
 (3)  $lim_(n->infinity)2^n sin(x/2^n)$  ( $x$  为不等于零的常数)；
   #answer-process[
     令 $t = x/(2^n)$，当 $n->infinity$ 时，$t->0$，所以：
-    $lim_(n->infinity)2^n sin(x/2^n) = lim_(t-(>0)(x)/t) sin t = x dot lim_(t->0)(sin t)/t = x dot 1 = x$
+    $lim_(n->infinity)2^n sin(x/2^n) = lim_(t->0)(x/t) sin t = x dot lim_(t->0)(sin t)/t = x dot 1 = x$
   ]
   
 
