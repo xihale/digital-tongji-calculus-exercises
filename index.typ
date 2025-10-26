@@ -1,5 +1,5 @@
 #set page(paper: "a4", margin: 2cm)
-#set text(size: 1.3em, font: ("LXGW WenKai", "STKaiti"))
+#set text(size: 1.3em, font: ("LXGW WenKai"))
 #set image(width: 12em)
 
 #import "template.typ": *
