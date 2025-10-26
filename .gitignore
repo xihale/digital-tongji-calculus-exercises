@@ -4,3 +4,5 @@
 __pycache__/
 *.pyc
 *.pyo
+index/
+index_ans/
