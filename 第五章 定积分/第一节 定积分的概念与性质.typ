@@ -1,27 +1,14 @@
 #import "../template.typ": *
 
-#subsection[一、判断题(如果错误，请加以改正)]
-1.  $(d integral_a^b f(x) dif x)/(d x) = f(x)$  (#answer-choice[错]).
-   #answer-process[错。应该是 $(d integral_a^x f(t) dif t) / (d x) = f(x)$，外层的 $a,b$ 是常数]
-   
-2. 定积分的定义中，$lambda -> 0$可以换成$n -> infinity$. (#answer-choice[否]).
-   #answer-process[不一定。$lambda -> 0$ 不等同于 $n -> infinity$，需要同时满足等分条件]
-
-3. 交换定积分的上下限，定积分的值不变. (#answer-choice[错]).
-   #answer-process[错。应为 $integral_b^a f(x) dif x = -integral_a^b f(x) dif x$]
-
-4. 若等式  $integral_a^b f(x) dif x = integral_a^c f(x) dif x + integral_c^b f(x) dif x$  成立，则必有  $a < c < b.$  (#answer-choice[错]).
-   #answer-process[错。$c$ 可以在 $[a,b]$ 区间内任何位置，不一定严格在中间]
-
 #section[第一节 定积分的概念与性质]
 #subsection[一、判断题(如果错误，请加以改正)]
-1.  $(d integral_a^b f(x) dif x)/(d x) = f(x)$  (#h(2em))  
+1.  $(d integral_a^b f(x) dif x)/(d x) = f(x)$  (#answer-choice[错])  
 
-2. 定积分的定义中，“ $lambda -> 0$ ”可以换成“ $n -> infinity$ ”. (#h(2em))
+2. 定积分的定义中，“ $lambda -> 0$ ”可以换成“ $n -> infinity$ ”. (#answer-choice[否])
 
-3.交换定积分的上下限，定积分的值不变. (#h(2em))
+3.交换定积分的上下限，定积分的值不变. (#answer-choice[错])
 
-4.若等式  $integral_a^b f(x) dif x = integral_a^c f(x) dif x + integral_c^b f(x) dif x$  成立，则必有  $a <   c <   b.$  (#h(2em))
+4.若等式  $integral_a^b f(x) dif x = integral_a^c f(x) dif x + integral_c^b f(x) dif x$  成立，则必有  $a <   c <   b.$  (#answer-choice[错])
 
 #subsection[二、计算题]
 5. 设  $integral_(-1)^1 3f(x) dif x = 18, integral_(-1)^3 f(x) dif x = 4, integral_(-1)^3 g(x) dif x = 3$ ，求：

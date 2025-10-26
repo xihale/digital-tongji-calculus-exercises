@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试模拟卷(一)]
 #subsection[一、选择题(每小题3分，共15分)]
-1. 当  $x -> 0$  时，下列(#h(2em))是  $x$  的同阶(不等价)无穷小。
+1. 当  $x -> 0$  时，下列(#answer-choice[B])是  $x$  的同阶(不等价)无穷小。
    #choices(
    [$sin x - x$],
    [$ln (1 - x)$],
@@ -10,7 +10,7 @@
    [$e^x - 1$]
    )
    
-2.下列命题中不正确的是(#h(2em))
+2.下列命题中不正确的是(#answer-choice[D])
    #choices(
    [若函数  $f(x)$  在点  $x_0$  处不连续，则  $f(x)$  在点  $x_0$  处必不可导],
    [若  $lim_(x -> x_0) f(x)$  不存在, 则函数  $f(x)$  在点  $x_0$  处不连续],
@@ -18,7 +18,7 @@
    [若函数  $f(x)$  在区间  $[a, b]$  上可积，则  $f(x)$  在  $[a, b]$  上必连续]
    )
    
-3. 设函数  $f(x) = (1 + e^(1/x))/(3 + 2 e^(1/x))$ ，则  $x = 0$  是  $f(x)$  的(#h(2em)).
+3. 设函数  $f(x) = (1 + e^(1/x))/(3 + 2 e^(1/x))$ ，则  $x = 0$  是  $f(x)$  的(#answer-choice[A]).
    #choices(
    [跳跃间断点],
    [可去间断点],
@@ -26,7 +26,7 @@
    [振荡间断点]
    )
    
-4.下列不定积分的计算不正确的是(#h(2em))
+4.下列不定积分的计算不正确的是(#answer-choice[D])
    #choices(
    [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
    [$integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
@@ -34,7 +34,7 @@
    [$integral (x)/(1 + x^2) dif x = arctan x + C$]
    )
    
-5.下列反常积分收敛的是(#h(2em))
+5.下列反常积分收敛的是(#answer-choice[B])
    #choices(
    [$integral_(1)^(+infinity)(dif x)/(sqrtx)$],
    [$integral_(-infinity)^(+infinity) (dif x)/(x^2 + 4x + 5)$],
@@ -43,7 +43,7 @@
    )
    
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank().
+6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank[].
    
 7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$  
    
@@ -51,7 +51,7 @@
    
 9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
    
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#h(2em))$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[]$
    
 11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
    
@@ -59,7 +59,7 @@
 7. 已知参数方程  $cases( x = ln (1 + t^2), y = t - arctan t, )$  则  $(d y)/(d x =)$  
 8. 函数  $f(x) = x e^x$  的带有拉格朗日余项的三阶麦克劳林公式为  
 9. 曲线  $y = 4x - x^2$  在其顶点处的曲率  $k =$  
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = (#h(2em))$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[]$
 
 11. 微分方程  $(d y)/(d x = (1 + y^2) e^x)$  的通解为
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]

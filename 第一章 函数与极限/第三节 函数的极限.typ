@@ -2,14 +2,13 @@
 
 #section[第三节 函数的极限]
 #subsection[一、选择题]
-1.  $lim_(x->1)(|x - 1|)/(x - 1)$ (#h(2em))
+1.  $lim_(x->1)(|x - 1|)/(x - 1)$ (#answer-choice[不存在])
    #choices(
    [-1],
    [0],
    [1],
    [不存在]
    )
-   (#answer-choice[不存在])
    #answer-process[
    当 $x -> 1^+$ 时，$x > 1$，所以 $|x - 1| = x - 1$，因此：
    $lim_(x->1^+)(|x - 1|)/(x - 1) = lim_(x->1^+)(x - 1)/(x - 1) = lim_(x->1^+)1 = 1$
@@ -20,28 +19,26 @@
    由于左极限和右极限不相等，所以极限不存在。
    ]
 
-2.  $lim_(x->x_0^+)f(x)$  和  $lim_(x->x_0^-)f(x)$  存在且相等是  $lim_(x->x_0)f(x)$  存在的(#h(2em)).
+2.  $lim_(x->x_0^+)f(x)$  和  $lim_(x->x_0^-)f(x)$  存在且相等是  $lim_(x->x_0)f(x)$  存在的(#answer-choice[充要条件]).
    #choices(
    [充分条件],
    [必要条件],
    [充要条件],
    [无关条件]
    )
-   (#answer-choice[充要条件])
    #answer-process[
    根据函数极限的定义，$lim_(x->x_0)f(x)$ 存在的充分必要条件是 $lim_(x->x_0^+)f(x)$ 和 $lim_(x->x_0^-)f(x)$ 都存在且相等。
    
    因此，$lim_(x->x_0^+)f(x)$ 和 $lim_(x->x_0^-)f(x)$ 存在且相等是 $lim_(x->x_0)f(x)$ 存在的充要条件。
    ]
 
-3. 设函数  $f(x) = (2x + |x|)/(4x - 3|x|)$ ，则  $lim_(x->0)f(x) = (#h(2em))$ .
+3. 设函数  $f(x) = (2x + |x|)/(4x - 3|x|)$ ，则  $lim_(x->0)f(x) = (#answer-choice[不存在])$ .
    #choices(
    $1/2$,
    $1/3$,
    $1/4$,
    [不存在]
    )
-   (#answer-choice[不存在])
    #answer-process[
    当 $x -> 0^+$ 时，$x > 0$，所以 $|x| = x$，因此：
    $lim_(x->0^+)(2x + |x|)/(4x - 3|x|) = lim_(x->0^+)(2x + x)/(4x - 3x) = lim_(x->0^+)(3x)/(x) = lim_(x->0^+)3 = 3$

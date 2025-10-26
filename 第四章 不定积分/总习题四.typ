@@ -2,40 +2,37 @@
 
 #section[总习题四]
 #subsection[一、选择题]
-1. 若函数  $f(x)$  在区间  $(a, b)$  内连续，则在  $(a, b)$  内  $f(x)$  (#h(2em)).
+1. 若函数  $f(x)$  在区间  $(a, b)$  内连续，则在  $(a, b)$  内  $f(x)$  (#answer-choice[(B)]).
    #choices(
    [必有导函数],
    [必有原函数],
    [必有界],
    [必有极限]
    )
-   (#answer-choice[(B)])
    #answer-process[
      根据不定积分的存在定理，连续函数必有原函数（即不定积分存在）。
    ]
 
-2. 若  $F'(x) = f(x), phi'(x) = f(x)$ ，则  $integral f(x) dif x = (#h(2em))$ .
+2. 若  $F'(x) = f(x), phi'(x) = f(x)$ ，则  $integral f(x) dif x = (#answer-choice[(C)])$ .
    #choices(
    [$F(x)$],
    [$phi(x)$],
    [$phi (x) + C$],
    [$F(x) + phi (x) + C$]
    )
-   (#answer-choice[(C)])
     #answer-process[
        不定积分是所有原函数的集合。$F$ 和 $phi$ 都是 $f$ 的原函数，它们相差一个常数。
      
        因此 $integral f(x) dif x = phi(x) + C$（或 $F(x) + C$）。
    ]
 
-3.下列式子中正确的是(#h(2em))
+3.下列式子中正确的是(#answer-choice[(D)])
    #choices(
    $d[integral f(x) dif x] = f(x)$,
    $(dif [integral f(x) dif x])/(d x) = f(x) dif x$,
    $integral dif f(x) = f(x)$,
    $integral dif f(x) = f(x) + C$
    )
-   (#answer-choice[(D)])
    #answer-process[
      分析各选项：
      (A) 错。应该是 $d[integral f(x) dif x] = f(x) dif x$
@@ -44,14 +41,13 @@
      (D) 正确。$integral dif f(x) = integral f'(x) dif x = f(x) + C$
    ]
 
-4. 设函数  $f(x) = e^(-x)$ ，则  $integral (f(ln x))/x dif x = (#h(2em))$ .
+4. 设函数  $f(x) = e^(-x)$ ，则  $integral (f(ln x))/x dif x = (#answer-choice[(C)])$ .
    #choices(
    $1/x + C$,
    $ln x + C$,
    $-1/x + C$,
    $-ln x + C$
    )
-   (#answer-choice[(C)])
    #answer-process[
      $f(ln x) = e^(-ln x) = 1/x$
      
@@ -60,14 +56,13 @@
      $= -1/x + C$
    ]
 
-5.  $integral (dif x)/(sqrt(x(1 - x))) = (#h(2em))$
+5.  $integral (dif x)/(sqrt(x(1 - x))) = (#answer-choice[(D)])$
    #choices(
    $1/2 arcsin sqrt(x) + C$,
    $arcsin sqrt(x) + C$,
    $2 arcsin (2x - 1) + C$,
    $arcsin (2x - 1) + C$
    )
-   (#answer-choice[(D)])
    #answer-process[
      令 $u = sqrt(x)$，则 $x = u^2$，$dif x = 2u dif u$。
      
@@ -129,7 +124,7 @@
   $= frac(1, a) F(u) + C = frac(1, a) F(a x + b) + C$
    ]
 
-9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank() . 
+9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[] . 
    #answer-process[
      由条件 $integral x f(x) dif x = arcsin x + C$ 得：
      

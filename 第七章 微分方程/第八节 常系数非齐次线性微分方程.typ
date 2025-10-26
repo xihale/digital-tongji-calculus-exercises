@@ -2,14 +2,13 @@
 
 #section[第八节 常系数非齐次线性微分方程]
 #subsection[一、选择题]
-1. 微分方程  $y'' - y = 3 e^x + 2$  的一个特解具有形式  $(a, b$  为常数)(#h(2em)).
+1. 微分方程  $y'' - y = 3 e^x + 2$  的一个特解具有形式  $(a, b$  为常数)(#answer-choice[C]).
    #choices(
    [$y^* = a e^x + b$],
    [$y^* = a e^x + b x$],
    [$y^* = a x e^x + b$],
    [$y^* = a x e^x + b x$]
    )
-   (#answer-choice[C])
    #answer-process[
    首先分析特征方程：$r^2 - 1 = 0$，解得 $r = \pm 1$。
    
@@ -20,14 +19,13 @@
    因此，整个方程的特解形式为 $y^* = A x e^x + B$，对应选项 C。
    ]
 
-2. 微分方程  $y'' + y = sin x$  的一个特解具有形式(#h(2em)).
+2. 微分方程  $y'' + y = sin x$  的一个特解具有形式(#answer-choice[C]).
    #choices(
    [$y^* = a sin x$],
    [$y^* = a cos x$],
    [$y^* = x(a sin x + b cos x)$],
    [$y^* = a cos x + b sin x$]
    )
-   (#answer-choice[C])
    #answer-process[
    首先分析特征方程：$r^2 + 1 = 0$，解得 $r = \pm i$。
    

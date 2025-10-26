@@ -181,7 +181,7 @@
    )
    (3)  $integral_(-3)^(2) f''(x) dif x$ ;
    (4)  $integral_(-3)^(2) f'''(x) dif x$ .
-8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#h(2em)).
+8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#answer-choice[D]).
    #choices(
    [$C_1 y_1 + C_2 y_2 + y_3$],
    [$C_1 y_1 + C_2 y_2 - (C_1 + C_2) y_3$],
@@ -315,7 +315,7 @@
     
     但如果原函数定义有所不同，可能是 $k = -1/2$。需要根据具体题意确定。
     ]  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = (#answer-choice[$pi$])$  
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[$pi$]$  
     #answer-process[
     首先，对分母进行配方：
     $x^2 + 2x + 2 = (x + 1)^2 + 1$
@@ -332,7 +332,7 @@
     
     $= pi/2 - (-pi/2) = pi$
     ]  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = (#answer-choice[2/3])$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[$2/3$]$  
     #answer-process[
     分离积分：
     $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = integral_(-1)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x + integral_(-1)^(1) frac(x sin^2 x, 1 + sqrt(1 - x^2)) dif x$
