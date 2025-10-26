@@ -23,9 +23,19 @@
    - `高等数学习题册上册.pdf`（无答案版）
    - `高等数学习题册上册_带答案.pdf`（带答案版）
 
-2. 更新网页版本号并部署到 [https://dtce.xihale.top](https://dtce.xihale.top)
+2. 导出 HTML 版本：
+   - `index/`（不含答案版）- 适合学习练习
+   - `index_ans/`（含答案版）- 包含详细解析
 
-3. 创建 GitHub Release，版本号自动从 `index.typ` 中的 `VERSION` 变量获取
+3. 合并 `web/` 文件夹与导出的 HTML，部署到 GitHub Pages
+
+4. 创建 GitHub Release，版本号自动从 `index.typ` 中的 `VERSION` 变量获取
+
+### 在线访问
+
+- 网站主页：[https://dtce.xihale.top](https://dtce.xihale.top) 或 GitHub Pages
+- 在线阅读 HTML 版本（带导航）
+- 下载 PDF 文件
 
 > ℹ️ **关于 Tagged PDF（无障碍 PDF）**：为了减小文件体积，发布的 PDF 默认不包含 tagged PDF 标签。如需带标签的无障碍 PDF 版本，可以自行构建（参见下方「自行构建」章节）或联系作者获取。
 
@@ -35,6 +45,12 @@
 1. 修改 `index.typ` 中的 `VERSION` 变量
 2. 提交并推送到 `master` 分支
 3. GitHub Actions 会自动完成构建和发布
+
+### 网站架构
+
+- `web/` 文件夹：存放网站基础文件（index.html, style.css）
+- `scripts/export_html.py`：导出 HTML 版本的脚本
+- CI/CD 自动合并 web 文件夹和导出的 HTML 后部署
 
 ## 自行构建
 
@@ -55,6 +71,9 @@ typst compile --font-path fonts/ index.typ 高等数学习题册上册.pdf
 
 # 编译并显示答案（带标签）
 typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
+
+# 导出 HTML 版本
+python3 scripts/export_html.py --both
 ```
 
 如需生成较小体积的 PDF（与发布版本相同，不含无障碍标签），可添加 `--no-pdf-tags` 标志：

@@ -100,49 +100,57 @@ jobs:
           
           # Verify files were created
           ls -lh *.pdf
+      
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+      
+      - name: Export HTML
+        run: |
+          # Export both versions (without and with answers)
+          python3 scripts/export_html.py --both
           
-          # Save PDFs to a temporary location
-          mkdir -p /tmp/pdfs
-          cp index.pdf index_ans.pdf /tmp/pdfs/
+          # Verify HTML files were created
+          echo "Files in index/:"
+          find index -type f -name "*.html" | head -10
+          echo "Files in index_ans/:"
+          find index_ans -type f -name "*.html" | head -10
       
-      - name: Fetch web branch
+      - name: Prepare deployment directory
         run: |
-          git fetch origin web
-          git checkout web
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-      
-      - name: Update index.html version
-        run: |
+          # Create deployment directory
+          mkdir -p deploy
+          
+          # Copy web folder contents to deploy
+          cp -r web/* deploy/
+          
+          # Copy exported HTML directories
+          cp -r index deploy/
+          cp -r index_ans deploy/
+          
+          # Copy PDFs
+          cp "高等数学习题册上册.pdf" deploy/
+          cp "高等数学习题册上册_带答案.pdf" deploy/
+          
+          # Update version in index.html
           VERSION="${{ steps.version.outputs.version }}"
-          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" index.html
+          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
           
-          # Verify the change
-          grep "version-value" index.html
+          # Verify the structure
+          echo "Deploy directory structure:"
+          ls -la deploy/
       
-      - name: Copy PDFs to web branch
-        run: |
-          cp /tmp/pdfs/*.pdf .
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       
-      - name: Commit and push to web branch
-        run: |
-          git add index.html index.pdf index_ans.pdf
-          
-          # Only commit if there are changes
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Auto-update: version ${{ steps.version.outputs.version }} [skip ci]"
-            git push origin web
-          fi
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'deploy'
       
-      - name: Switch back to master for release
-        run: |
-          git checkout master
-      
-      - name: Restore PDFs for release
-        run: |
-          cp /tmp/pdfs/*.pdf .
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
       
       - name: Create Release
         uses: softprops/action-gh-release@v1
@@ -159,7 +167,7 @@ jobs:
             - 📖 index_ans.pdf (带答案版)
             
             ### 在线预览
-            访问：https://dtce.xihale.top
+            访问：https://dtce.xihale.top 或 GitHub Pages
           files: |
             index.pdf
             index_ans.pdf

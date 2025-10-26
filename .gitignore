@@ -4,5 +4,5 @@
 __pycache__/
 *.pyc
 *.pyo
-typst-x86_64-*
-typst*.tar.xz
+index/
+index_ans/
