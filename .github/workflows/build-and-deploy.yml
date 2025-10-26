@@ -38,8 +38,18 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # Check if any .typ files were modified in the recent commits
-          TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | grep -c '\.typ$' || echo "0")
+          # Get the last release tag (if any)
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          
+          if [ -n "$LAST_TAG" ]; then
+            echo "Last release tag: $LAST_TAG"
+            # Check if any .typ files were modified since the last release
+            TYP_CHANGES=$(git diff --name-only "$LAST_TAG" HEAD | { grep '\.typ$' || true; } | wc -l)
+          else
+            echo "No previous release found, checking HEAD~1"
+            # Check if any .typ files were modified in the recent commits
+            TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | { grep '\.typ$' || true; } | wc -l)
+          fi
           
           # Extract current version
           CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
