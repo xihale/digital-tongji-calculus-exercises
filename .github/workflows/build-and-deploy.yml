@@ -41,22 +41,60 @@ jobs:
           # Get the last release tag (if any)
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
 
-          if [ -n "$LAST_TAG" ]; then
-            echo "Last release tag: $LAST_TAG"
-            # Check if any .typ files were modified since the last release
-            TYP_CHANGES=$(git diff --name-only "$LAST_TAG" HEAD | { grep '\.typ$' || true; } | wc -l)
-          else
-            echo "No previous release found, checking HEAD~1"
-            # Check if any .typ files were modified in the recent commits
-            TYP_CHANGES=$(git diff --name-only HEAD~1 HEAD | { grep '\.typ$' || true; } | wc -l)
-          fi
-
           # Extract current version
           CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
           echo "Current version: $CURRENT_VERSION"
 
-          if [ "$TYP_CHANGES" -gt 0 ]; then
-            echo "Detected $TYP_CHANGES .typ file(s) changed, auto-incrementing version..."
+          # Determine if we need to bump the version
+          SHOULD_BUMP=false
+          
+          if [ -n "$LAST_TAG" ]; then
+            echo "Last release tag: $LAST_TAG"
+            
+            # Get the commit SHA of the last tag
+            TAG_COMMIT=$(git rev-list -n 1 "$LAST_TAG")
+            HEAD_COMMIT=$(git rev-parse HEAD)
+            
+            echo "Tag commit: $TAG_COMMIT"
+            echo "Head commit: $HEAD_COMMIT"
+            
+            # If HEAD is different from the tag commit, check for .typ changes
+            if [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
+              # Try multiple methods to detect .typ file changes
+              
+              # Method 1: Check git log for .typ files in commits since tag
+              TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD | { grep '\.typ$' || true; } | sort -u | wc -l)
+              
+              # Method 2: Check diff (works for normal history)
+              TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD | { grep '\.typ$' || true; } | wc -l)
+              
+              # Method 3: Check if current commit has any .typ files (for grafted commits)
+              TYP_CHANGES_SHOW=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
+              
+              echo "TYP changes (log): $TYP_CHANGES_LOG"
+              echo "TYP changes (diff): $TYP_CHANGES_DIFF"
+              echo "TYP changes (show): $TYP_CHANGES_SHOW"
+              
+              # If any method detected .typ changes, we should bump
+              if [ "$TYP_CHANGES_LOG" -gt 0 ] || [ "$TYP_CHANGES_DIFF" -gt 0 ] || [ "$TYP_CHANGES_SHOW" -gt 0 ]; then
+                SHOULD_BUMP=true
+                echo "Detected .typ file changes since last release"
+              fi
+            else
+              echo "HEAD is at the same commit as the last tag, no version bump needed"
+            fi
+          else
+            echo "No previous release found, checking HEAD for .typ files"
+            # Check if current commit has any .typ files
+            TYP_CHANGES=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
+            if [ "$TYP_CHANGES" -gt 0 ]; then
+              SHOULD_BUMP=true
+              echo "Detected .typ files in current commit"
+            fi
+          fi
+
+          if [ "$SHOULD_BUMP" = "true" ]; then
+            echo "Auto-incrementing version..."
             
             # Parse version (e.g., v0.0.3 -> 0.0.3)
             VERSION_NUM=$(echo "$CURRENT_VERSION" | sed 's/^v//')
@@ -83,7 +121,7 @@ jobs:
             
             VERSION="$NEW_VERSION"
           else
-            echo "No .typ files changed, keeping current version: $CURRENT_VERSION"
+            echo "No version bump needed, keeping current version: $CURRENT_VERSION"
             VERSION="$CURRENT_VERSION"
           fi
 
