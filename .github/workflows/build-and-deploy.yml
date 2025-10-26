@@ -63,6 +63,26 @@ jobs:
           mkdir -p /tmp/pdfs
           cp "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf" /tmp/pdfs/
       
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+      
+      - name: Export HTML
+        run: |
+          # Export both versions (without and with answers)
+          python3 scripts/export_html.py --both
+          
+          # Verify HTML files were created
+          echo "Files in index/:"
+          find index -type f -name "*.html" | head -10
+          echo "Files in index_ans/:"
+          find index_ans -type f -name "*.html" | head -10
+          
+          # Save HTML to temporary location
+          mkdir -p /tmp/html_export
+          cp -r index /tmp/html_export/
+          cp -r index_ans /tmp/html_export/
+      
       - name: Fetch web branch
         run: |
           git fetch origin web
@@ -82,9 +102,15 @@ jobs:
         run: |
           cp /tmp/pdfs/*.pdf .
       
+      - name: Copy HTML to web branch
+        run: |
+          # Copy HTML exports to web branch
+          cp -r /tmp/html_export/index .
+          cp -r /tmp/html_export/index_ans .
+      
       - name: Commit and push to web branch
         run: |
-          git add index.html "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
+          git add index.html index/ index_ans/ "高等数学习题册上册.pdf" "高等数学习题册上册_带答案.pdf"
           
           # Only commit if there are changes
           if git diff --staged --quiet; then
