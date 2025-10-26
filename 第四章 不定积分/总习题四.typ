@@ -83,7 +83,7 @@
      $= arcsin t + C = arcsin(2x - 1) + C$
    ]
 #subsection[二、填空题]
-6.  $integral (1 - sin^2(x/2)) dif x = $ #blank($x + sin x + C$)
+6.  $integral (1 - sin^2(x/2)) dif x = $ #blank[$x + sin x + C$]
    #answer-process[
      $1 - sin^2(x/2) = cos^2(x/2)$
      
@@ -94,7 +94,7 @@
      应该是 $x/2 + sin x/2 + C$ 才对。或许题目想要的是直接形式。
    ]
 
-7. 若  $e^x$  是函数  $f(x)$  的一个原函数, 则  $integral x^2 f(ln x) dif x = $ #blank($x^3/3 - x^3 ln x/3 + C$) .  
+7. 若  $e^x$  是函数  $f(x)$  的一个原函数, 则  $integral x^2 f(ln x) dif x = $ #blank[$x^3/3 - x^3 ln x/3 + C$] .  
    #answer-process[
      由 $integral f(x) dif x = e^x + C$ 得 $f(x) = e^x$。
      
@@ -115,7 +115,7 @@
      题目给定答案是 $(x^3)/3 - x^3 ln x/3 + C$，这是 $integral x^2 e^(ln x) dif x$ 吗？不是。
    ]
 
-8. 设  $F'(x) = f(x)$ , 则  $integral f(a x + b) dif x = $ #blank($frac(1, a) F(a x + b) + C$) .  
+8. 设  $F'(x) = f(x)$ , 则  $integral f(a x + b) dif x = $ #blank[$frac(1, a] F(a x + b) + C$) .  
    #answer-process[
      令 $u = a x + b$，则 $dif u = a dif x$，$dif x = dif u/a$。
      
@@ -124,7 +124,7 @@
   $= frac(1, a) F(u) + C = frac(1, a) F(a x + b) + C$
    ]
 
-9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[] . 
+9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[需补充答案] . 
    #answer-process[
      由条件 $integral x f(x) dif x = arcsin x + C$ 得：
      
@@ -139,7 +139,7 @@
   $= -frac(1, 2) integral sqrt(u) dif u = -frac(1, 2) · frac(2 u^(3/2), 3) + C = -frac((1-x^2)^(3/2), 3) + C$
    ]
 
-10. 若  $integral x f(x) dif x = x sin x - integral sin x dif x$ ，则  $f(x) = $ #blank($sin x + x cos x$).
+10. 若  $integral x f(x) dif x = x sin x - integral sin x dif x$ ，则  $f(x) = $ #blank[$sin x + x cos x$].
    #answer-process[
          左边用分部积分：令 $u = x$，$dif v = f(x) dif x$，则 $dif u = dif x$，$v = phi(x)$（$f$ 的一个原函数）。
     

@@ -98,7 +98,7 @@
    ]
 
 #subsection[二、填空题]
-6.  $frac(d, dif x) integral_(a)^(b) arctan x dif x = #blank(0)$  
+6.  $frac(d, dif x) integral_(a)^(b) arctan x dif x = #blank[0]$  
    #answer-process[
      根据定积分的性质，$integral_(a)^(b) arctan x dif x$ 是一个常数（与 $x$ 无关）。
      
@@ -108,7 +108,7 @@
      $frac(d, dif x) integral_(a)^(b) arctan x dif x = 0$
    ]
 
-7.  $integral_(-pi/2)^(pi/2) sqrt(1 - cos^2 x) dif x = #blank(2)$
+7.  $integral_(-pi/2)^(pi/2) sqrt(1 - cos^2 x) dif x = #blank[2]$
    #answer-process[
      被积函数化简为 $sqrt(1 - cos^2 x) = |sin x|$。
      
@@ -120,7 +120,7 @@
      $= 2[ -cos x ]_(0)^(pi/2) = 2[ -cos(pi/2) + cos(0) ] = 2[ 0 + 1 ] = 2$
    ]
 
-8. 由区间  $[a, b]$  上连续曲线  $y = f(x)$ , 直线  $x = a, x = b (a < b)$  和  $x$  轴所围成图形的面积为  $S = #blank($integral_(a)^(b) abs(f(x)) dif x$)$ .
+8. 由区间  $[a, b]$  上连续曲线  $y = f(x)$ , 直线  $x = a, x = b (a < b)$  和  $x$  轴所围成图形的面积为  $S = #blank[$integral_(a]^(b) abs(f(x)) dif x$)$ .
    #answer-process[
      根据定积分的几何意义，曲线 $y = f(x)$ 与 $x$ 轴之间的面积应取绝对值，以确保面积为正。
      
@@ -128,7 +128,7 @@
      $S = integral_(a)^(b) |f(x)| dif x$
    ]
 
-9.  $integral_(-1)^0 |3x + 1| dif x = $ #blank([5/6])
+9.  $integral_(-1)^0 |3x + 1| dif x = $ #blank[[5/6]]
    #answer-process[
      令 $3x + 1 = 0$，得 $x = -1/3$，这是绝对值函数的变号点。
      
@@ -156,7 +156,7 @@
      $integral_(-1)^0 |3x + 1| dif x = 2/3 + 1/6 = 5/6$
    ]
 
-10. 已知  $x e^x$  为函数  $f(x)$  的一个原函数, 则  $integral_(0)^(1) x f'(x) dif x = #blank($e$)$
+10. 已知  $x e^x$  为函数  $f(x)$  的一个原函数, 则  $integral_(0)^(1) x f'(x) dif x = #blank[$e$]$
    #answer-process[
      由于 $x e^x$ 是 $f(x)$ 的一个原函数，所以：
      $f(x) = frac(d, dif x) (x e^x) = e^x + x e^x = e^x (1 + x)$

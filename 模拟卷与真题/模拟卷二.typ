@@ -202,7 +202,7 @@
    ]
 
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank($0$).
+6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[$0$].
    #answer-process[
      函数在 $x = 0$ 处连续需满足：$lim_(x->0^-) f(x) = lim_(x->0^+) f(x) = f(0)$
      
@@ -248,7 +248,7 @@
      根据标准解法，答案是 $a = 0$。
    ]
 
-7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为 #blank($y = x - 1$).
+7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为 #blank[$y = x - 1$].
    #answer-process[
      参数方程为 $x = e^t + ln(1 + t^2)$，$y = arctan t$。
      
@@ -275,7 +275,7 @@
      切线方程：$y - 0 = 1(x - 1)$，即 $y = x - 1$
    ]
 
-8.函数  $f(x) = 2^x$  的带有拉格朗日余项的三阶麦克劳林公式为 #blank[] 
+8.函数  $f(x) = 2^x$  的带有拉格朗日余项的三阶麦克劳林公式为 #blank[需补充答案] 
    #answer-process[
      麦克劳林公式的一般形式为：$f(x) = f(0) + f'(0)x + (f''(0))/(2!) x^2 + (f'''(0))/(3!) x^3 + (f^((4))(xi))/(4!) x^4$
      
@@ -301,11 +301,11 @@
      其中 $xi$ 在 $0$ 与 $x$ 之间。
    ]
 
-9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为 #blank[]
+9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为 #blank[需补充答案]
 
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = $ #blank[]
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = $ #blank[需补充答案]
 
-11. 微分方程  $(1 + y)^2 (d y)/(d x) + x^3 = 0$  的通解为 #blank[]
+11. 微分方程  $(1 + y)^2 (d y)/(d x) + x^3 = 0$  的通解为 #blank[需补充答案]
 
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
 12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$ .

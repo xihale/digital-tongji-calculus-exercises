@@ -19,21 +19,21 @@
    ]
 #subsection[二、填空题]
 3. 将合适的函数填入下列空格中：\
-  (1)  #blank($1/a$) dif x = dif(a x + b) ;
+  (1)  #blank[$1/a$] dif x = dif(a x + b) ;
    
-  (2)  dif #blank($x^2/2$) = x dif x;
+  (2)  dif #blank[$x^2/2$] = x dif x;
    
-  (3)  dif #blank($ln |x|$) = (1/x) dif x;
+  (3)  dif #blank[$ln |x|$] = (1/x) dif x;
    
-  (4)  dif #blank($sin x$) = cos x dif x ;
+  (4)  dif #blank[$sin x$] = cos x dif x ;
    
-  (5)  dif #blank($-cos x$) = sin x dif x ;
+  (5)  dif #blank[$-cos x$] = sin x dif x ;
    
-  (6)  dif #blank($e^(2x)/2$) = e^(2x) dif x ;
+  (6)  dif #blank[$e^(2x)/2$] = e^(2x) dif x ;
    
-  (7)  dif #blank($2 sqrt(x)$) = 1/sqrt(x)  dif x ;
+  (7)  dif #blank[$2 sqrt(x)$] = 1/sqrt(x)  dif x ;
    
-  (8)  dif #blank($-1/x$) = 1/x^2 dif x .
+  (8)  dif #blank[$-1/x$] = 1/x^2 dif x .
 #subsection[三、计算题]
 4. 计算下列不定积分：
    (1)  $integral (dif x)/((3x - 2)^2)$ ;

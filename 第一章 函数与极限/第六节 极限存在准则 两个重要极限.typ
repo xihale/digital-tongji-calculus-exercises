@@ -27,12 +27,12 @@
   ]
 
 #subsection[二、填空题]
-3. 设  $lim_(x -> infinity) (1 + k/x)^x = e^3$ ，则  $k =$ #blank(3).
+3. 设  $lim_(x -> infinity) (1 + k/x)^x = e^3$ ，则  $k =$ #blank[3].
   #answer-process[
     我们知道 $lim_(x -> infinity) (1 + k/x)^x = e^k$，所以 $e^k = e^3$，因此 $k = 3$。
   ]
 
-4. 设  $lim_(x->infinity)((x + 2a)/(x - a))^x = 8$ ，则  $a =$ #blank($ln 2$).
+4. 设  $lim_(x->infinity)((x + 2a)/(x - a))^x = 8$ ，则  $a =$ #blank[$ln 2$].
   #answer-process[
     将表达式变形：
     $lim_(x->infinity)((x + 2a)/(x - a))^x = lim_(x->infinity)(1 + 3a/(x - a))^x$

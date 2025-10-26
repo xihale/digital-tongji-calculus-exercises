@@ -76,12 +76,12 @@
     [$integral_(1)^(3) (dif x)/(ln x)$]
     )
 #subsection[二、填空题(每小题3分，共18分)]
-11. 已知  $lim_(x -> 1) f(x)$  存在，且函数  $f(x) = x^2 + 2x lim_(x -> 1) f(x)$ ，则  $lim_(x -> 1) f(x) =$  
-12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank[]$  
-13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k =$  #blank[].  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[]$  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[]$  
-16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为
+11. 已知  $lim_(x -> 1) f(x)$  存在，且函数  $f(x) = x^2 + 2x lim_(x -> 1) f(x)$ ，则  $lim_(x -> 1) f(x) =$ #blank[需补充答案]
+12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank[需补充答案]$  
+13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k =$  #blank[需补充答案].  
+14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[需补充答案]$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[需补充答案]$  
+16. 曲线  $y = x^4 (12 ln x - 7)$  的拐点为 #blank[需补充答案]
 #subsection[三、计算题(每小题7分，共35分)]
 17. 已知连续函数  $f(x) = integral_(0)^(3x) f(t/3) dif t + e^(2x)$ ，求  $f(x)$ .  
     
