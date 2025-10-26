@@ -338,7 +338,7 @@
       答案是 B。
     ]
 #subsection[二、填空题(每小题3分，共18分)]
-11.  $lim_(x->0^+)(1 + sin x)^(ln x) = $ #blank[[$1$]]  
+11.  $lim_(x->0^+)(1 + sin x)^(ln x) = $ #blank[$1$]  
      #answer-process[
        计算极限 $lim_(x->0^+)(1 + sin x)^(ln x)$。
        
@@ -373,7 +373,7 @@
        
        答案是 $1$。
      ]  
-12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = $ #blank[[$-3$]]
+12. 若  $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$ ，则  $f'(1) = $ #blank[$-3$]
     #answer-process[
       已知 $lim_(h->0)(f(1 - 2h) - f(1))/h = 6$。
       
@@ -394,7 +394,7 @@
       
       因此 $f'(1) = -3$
     ]
-13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  #blank[[$2/3$]]
+13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  #blank[$2/3$]
      #answer-process[
        计算 $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x$。
        
@@ -413,7 +413,7 @@
        
        总结果：$integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x = 2/3 + 0 = 2/3$
      ]  
-14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[[$2$]]
+14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[$2$]
     #answer-process[
       参数方程的导数公式：$(d y)/(d x) = (d y"/"d t)/(d x"/"d t)$
       
@@ -435,7 +435,7 @@
       
       答案是 $2$。
     ]  
-15. 曲线  $y = -3/2 x^3 + 9/2 x^2$  在其拐点处的切线方程是 #blank[[$y = 9/2 x - 3/2$ 或 $9x - 2y - 3 = 0$]]
+15. 曲线  $y = -3/2 x^3 + 9/2 x^2$  在其拐点处的切线方程是 #blank[$y = 9/2 x - 3/2$ 或 $9x - 2y - 3 = 0$]
     #answer-process[
       求曲线 $y = -3/2 x^3 + 9/2 x^2$ 的拐点。
       
@@ -468,7 +468,7 @@
       
       答案是 $y = 9/2 x - 3/2$ 或 $9x - 2y - 3 = 0$
     ]  
-16. 微分方程  $y' = 1/(x + y)$  的通解为 #blank[[$y - ln|x + y + 1| = C$ 或 $y = C + ln|x + y + 1|$]]
+16. 微分方程  $y' = 1/(x + y)$  的通解为 #blank[$y - ln|x + y + 1| = C$ 或 $y = C + ln|x + y + 1|$]
     #answer-process[
       微分方程 $y' = 1/(x + y)$ 可改写为：
       

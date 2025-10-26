@@ -128,7 +128,7 @@
      $S = integral_(a)^(b) |f(x)| dif x$
    ]
 
-9.  $integral_(-1)^0 |3x + 1| dif x = $ #blank[[5/6]]
+9.  $integral_(-1)^0 |3x + 1| dif x = $ #blank[5/6]
    #answer-process[
      令 $3x + 1 = 0$，得 $x = -1/3$，这是绝对值函数的变号点。
      
