@@ -2,16 +2,15 @@
 
 #section[总习题六]
 #subsection[一、选择题]
-1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#answer-choice[]).
+1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#answer-choice[(A)]).
    #choices(
    [$integral_(1)^(2) ln y , dif y$],
    [$integral_(0)^(e^2) e^x , dif y$],
    [$integral_(1)^(ln 2) ln y , dif y$],
    [$integral_(1)^(2)(2 - e^x) dif x$]
    )
-   (#answer-choice[(A)])
 
-2.如图6-2所示，阴影部分面积为(#answer-choice[])
+2.如图6-2所示，阴影部分面积为(#answer-choice[(B)])
 #figure(
   image("images/6-2.jpg", width: 18em),
   caption: [图6-2],
@@ -23,7 +22,6 @@
    [$integral_(a)^(b)[f(x) + g(x)] dif x$],
    [$integral_(a)^(c)[f(x) - g(x)] dif x + integral_(c)^(b)[g(x) - f(x)] dif x$]
    )
-   (#answer-choice[(B)])
 #subsection[二、填空题]
 3.由抛物线  $y = x^2 + 2x$  ，直线  $x = 1$  和  $x$  轴所围成图形的面积为  #blank($4/3$)
 
