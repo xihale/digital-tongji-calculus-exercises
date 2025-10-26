@@ -10,7 +10,6 @@ import json
 import shutil
 from pathlib import Path
 from typing import List, Dict, Tuple
-import html
 
 REPO_ROOT = Path(__file__).parent.parent
 OUTPUT_DIR = REPO_ROOT / "index"
@@ -77,144 +76,6 @@ def parse_structure() -> List[Chapter]:
         chapters.append(chapter)
     
     return chapters
-
-def convert_typst_math_to_latex(math_content: str) -> str:
-    """Convert Typst math syntax to LaTeX"""
-    # Remove outer $ signs if present
-    math_content = math_content.strip()
-    
-    # Typst uses similar syntax to LaTeX, but with some differences
-    # Most basic math works the same, but we need to handle some differences
-    
-    # Convert Typst's dif to \mathrm{d}
-    math_content = re.sub(r'\bdif\b', r'\\mathrm{d}', math_content)
-    
-    # Convert Typst's mathematical constants/sets
-    math_content = re.sub(r'\bRR\b', r'\\mathbb{R}', math_content)
-    math_content = re.sub(r'\bZZ\b', r'\\mathbb{Z}', math_content)
-    math_content = re.sub(r'\bNN\b', r'\\mathbb{N}', math_content)
-    math_content = re.sub(r'\bQQ\b', r'\\mathbb{Q}', math_content)
-    math_content = re.sub(r'\bCC\b', r'\\mathbb{C}', math_content)
-    
-    return math_content
-
-def convert_typst_to_html(typst_content: str, chapter_dir: Path, show_answers: bool) -> str:
-    """Convert Typst content to HTML with math preserved"""
-    
-    # Remove imports
-    typst_content = re.sub(r'#import\s+"[^"]+"\s*:\s*\*\s*', '', typst_content)
-    
-    html_parts = []
-    lines = typst_content.split('\n')
-    i = 0
-    
-    while i < len(lines):
-        line = lines[i]
-        
-        # Skip empty lines
-        if not line.strip():
-            i += 1
-            continue
-        
-        # Handle section headings
-        if re.match(r'^\s*#section\[', line):
-            title = re.search(r'#section\[(.*?)\]', line)
-            if title:
-                html_parts.append(f'<h1>{html.escape(title.group(1))}</h1>\n')
-            i += 1
-            continue
-        
-        # Handle subsection headings
-        if re.match(r'^\s*#subsection\[', line):
-            title = re.search(r'#subsection\[(.*?)\]', line)
-            if title:
-                html_parts.append(f'<h2>{html.escape(title.group(1))}</h2>\n')
-            i += 1
-            continue
-        
-        # Handle answer-choice (inline)
-        if '#answer-choice[' in line:
-            if show_answers:
-                # Keep the answer choice
-                line = re.sub(r'#answer-choice\[([^\]]+)\]', r'(\1)', line)
-            else:
-                # Remove the answer choice
-                line = re.sub(r'\s*\(#answer-choice\[[^\]]+\]\)', '', line)
-        
-        # Handle answer-process blocks
-        if re.match(r'^\s*#answer-process\[', line):
-            if show_answers:
-                # Multi-line answer block
-                answer_lines = [line]
-                bracket_count = line.count('[') - line.count(']')
-                i += 1
-                while i < len(lines) and bracket_count > 0:
-                    answer_lines.append(lines[i])
-                    bracket_count += lines[i].count('[') - lines[i].count(']')
-                    i += 1
-                
-                # Extract content between brackets
-                answer_content = '\n'.join(answer_lines)
-                match = re.search(r'#answer-process\[(.*)\]', answer_content, re.DOTALL)
-                if match:
-                    answer_text = match.group(1).strip()
-                    # Convert math in answer and process line by line
-                    answer_lines = answer_text.split('\n')
-                    answer_html_parts = []
-                    for answer_line in answer_lines:
-                        answer_line = answer_line.strip()
-                        if answer_line:
-                            answer_html_parts.append(f'<p>{convert_math_inline(answer_line)}</p>')
-                    html_parts.append(f'<div class="answer">\n{"".join(answer_html_parts)}\n</div>\n')
-            else:
-                # Skip answer block
-                bracket_count = line.count('[') - line.count(']')
-                i += 1
-                while i < len(lines) and bracket_count > 0:
-                    bracket_count += lines[i].count('[') - lines[i].count(']')
-                    i += 1
-            continue
-        
-        # Handle choices
-        if re.match(r'^\s*#choices\(', line):
-            # Multi-line choices
-            choice_lines = [line]
-            paren_count = line.count('(') - line.count(')')
-            i += 1
-            while i < len(lines) and paren_count > 0:
-                choice_lines.append(lines[i])
-                paren_count += lines[i].count('(') - lines[i].count(')')
-                i += 1
-            
-            # Parse choices
-            choices_content = '\n'.join(choice_lines)
-            choice_items = re.findall(r'\[([^\]]+)\]', choices_content)
-            if choice_items:
-                html_parts.append('<ol type="A" class="choices">\n')
-                for choice in choice_items:
-                    choice_html = convert_math_inline(choice)
-                    html_parts.append(f'<li>{choice_html}</li>\n')
-                html_parts.append('</ol>\n')
-            continue
-        
-        # Regular content line
-        if line.strip() and not line.strip().startswith('#'):
-            line_html = convert_math_inline(line.strip())
-            html_parts.append(f'<p>{line_html}</p>\n')
-        
-        i += 1
-    
-    return ''.join(html_parts)
-
-def convert_math_inline(text: str) -> str:
-    """Convert inline math expressions from Typst to MathJax format"""
-    # Handle inline math $...$
-    def replace_math(match):
-        math = convert_typst_math_to_latex(match.group(1))
-        return f'${math}$'
-    
-    text = re.sub(r'\$([^$]+?)\$', replace_math, text)
-    return text
 
 def create_section_typst(chapter: Chapter, section: Section, output_path: Path, temp_dir: Path):
     """Create a standalone Typst file for a section"""
@@ -356,24 +217,6 @@ def create_navigation_html(chapters: List[Chapter], current_chapter_idx: int,
 def wrap_html_with_navigation(html_content: str, sidebar: str, prev_btn: str, 
                                next_btn: str, section_title: str) -> str:
     """Wrap the compiled HTML with navigation elements"""
-    # Add MathJax configuration and library
-    mathjax = """
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-        displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-      }
-    };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script" async></script>
-    """
-    
     css = """
     <style>
         * {
@@ -569,23 +412,6 @@ def wrap_html_with_navigation(html_content: str, sidebar: str, prev_btn: str,
             margin-bottom: 1em;
             line-height: 1.6;
         }
-        
-        .content .answer {
-            background: #f0f8ff;
-            border-left: 3px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        
-        .content .choices {
-            margin-left: 20px;
-            margin-bottom: 1em;
-        }
-        
-        .content .choices li {
-            margin-bottom: 0.5em;
-        }
     </style>
     """
     
@@ -606,7 +432,6 @@ def wrap_html_with_navigation(html_content: str, sidebar: str, prev_btn: str,
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{section_title} - 高等数学习题册</title>
-    {mathjax}
     {css}
 </head>
 <body>
@@ -640,6 +465,9 @@ def export_all(show_answers: bool = False):
     
     print(f"Exporting {'with' if show_answers else 'without'} answers to {output_dir}")
     
+    temp_dir = Path("/tmp/typst_export")
+    temp_dir.mkdir(exist_ok=True)
+    
     for ch_idx, chapter in enumerate(chapters):
         print(f"Processing {chapter.title}...")
         chapter_output = output_dir / chapter.dirname
@@ -649,20 +477,27 @@ def export_all(show_answers: bool = False):
         chapter_dir = REPO_ROOT / chapter.dirname
         images_src = chapter_dir / "images"
         images_dest = chapter_output / "images"
-        if images_src.exists():
-            shutil.copytree(images_src, images_dest, dirs_exist_ok=True)
+        if images_src.exists() and not images_dest.exists():
+            shutil.copytree(images_src, images_dest)
         
         for sec_idx, section in enumerate(chapter.sections):
             print(f"  - {section.title}")
             
-            # Read the section file
-            section_path = chapter_dir / section.filename
-            try:
-                with open(section_path, 'r', encoding='utf-8') as f:
-                    typst_content = f.read()
+            # Create temporary Typst file
+            temp_typst = temp_dir / f"temp_{ch_idx}_{sec_idx}.typ"
+            create_section_typst(chapter, section, temp_typst, temp_dir)
+            
+            # Compile to HTML
+            temp_html = temp_dir / f"temp_{ch_idx}_{sec_idx}.html"
+            if compile_to_html(temp_typst, temp_html, show_answers):
+                # Read compiled HTML
+                with open(temp_html, 'r', encoding='utf-8') as f:
+                    html_content = f.read()
                 
-                # Convert Typst to HTML
-                html_content = convert_typst_to_html(typst_content, chapter_dir, show_answers)
+                # Extract body content (if possible)
+                body_match = re.search(r'<body[^>]*>(.*)</body>', html_content, re.DOTALL)
+                if body_match:
+                    html_content = body_match.group(1)
                 
                 # Generate navigation
                 sidebar, prev_btn, next_btn = create_navigation_html(
@@ -679,8 +514,11 @@ def export_all(show_answers: bool = False):
                 output_file = chapter_output / section.html_filename
                 with open(output_file, 'w', encoding='utf-8') as f:
                     f.write(final_html)
-            except Exception as e:
-                print(f"    Error processing {section.title}: {e}")
+            else:
+                print(f"    Failed to compile {section.title}")
+    
+    # Clean up temp files
+    shutil.rmtree(temp_dir, ignore_errors=True)
     
     # Create index.html that redirects to first section
     if chapters and chapters[0].sections:
