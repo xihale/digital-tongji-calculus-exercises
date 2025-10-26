@@ -101,21 +101,6 @@ jobs:
           # Verify files were created
           ls -lh *.pdf
 
-      - name: Install Python dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-
-      - name: Export HTML
-        run: |
-          # Export both versions (without and with answers)
-          python3 scripts/export_html.py --both
-
-          # Verify HTML files were created
-          echo "Files in index/:"
-          find index -type f -name "*.html" | head -10
-          echo "Files in index_ans/:"
-          find index_ans -type f -name "*.html" | head -10
-
       - name: Prepare deployment directory
         run: |
           # Create deployment directory
@@ -123,10 +108,6 @@ jobs:
 
           # Copy web folder contents to deploy
           cp -r web/* deploy/
-
-          # Copy exported HTML directories
-          cp -r index deploy/
-          cp -r index_ans deploy/
 
           # Copy PDFs
           cp index.pdf deploy/高等数学习题册上册.pdf
@@ -166,7 +147,7 @@ jobs:
             - 📖 index.pdf (无答案版)
             - 📖 index_ans.pdf (带答案版)
 
-            ### 在线预览
+            ### 在线预览 PDF
             访问：https://dtce.xihale.top 或 GitHub Pages
           files: |
             index.pdf
