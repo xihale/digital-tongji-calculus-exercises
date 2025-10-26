@@ -42,44 +42,55 @@ jobs:
           CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
           echo "Current version in index.typ: $CURRENT_VERSION"
 
-          # Try to get the last release tag using git describe (works if history is connected)
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # Get the latest release from GitHub API
+          LATEST_RELEASE=$(curl -s -H "Authorization: Bearer ${{ github.token }}" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/latest")
           
-          # If git describe failed, try to find the latest tag by listing all tags and sorting
-          if [ -z "$LAST_TAG" ]; then
-            LAST_TAG=$(git tag -l 'v*' | sort -V | tail -n 1)
-            if [ -n "$LAST_TAG" ]; then
-              echo "Found last tag by listing all tags: $LAST_TAG"
-            fi
+          LAST_TAG=$(echo "$LATEST_RELEASE" | jq -r '.tag_name // empty')
+          
+          if [ -z "$LAST_TAG" ] || [ "$LAST_TAG" = "null" ]; then
+            echo "No previous release found via GitHub API"
           else
-            echo "Found last tag by git describe: $LAST_TAG"
+            echo "Found last release from GitHub API: $LAST_TAG"
           fi
 
           # Determine if we need to bump the version
           SHOULD_BUMP=false
           
-          if [ -n "$LAST_TAG" ]; then
-            # Get the commit SHA of the last tag
-            TAG_COMMIT=$(git rev-list -n 1 "$LAST_TAG")
+          if [ -n "$LAST_TAG" ] && [ "$LAST_TAG" != "null" ]; then
+            # Get the commit SHA of the last tag from git
+            TAG_COMMIT=$(git rev-list -n 1 "$LAST_TAG" 2>/dev/null || echo "")
             HEAD_COMMIT=$(git rev-parse HEAD)
             
-            echo "Tag $LAST_TAG points to commit: $TAG_COMMIT"
+            if [ -n "$TAG_COMMIT" ]; then
+              echo "Tag $LAST_TAG points to commit: $TAG_COMMIT"
+            else
+              echo "Tag $LAST_TAG exists in GitHub release but not found in local git (possibly grafted history)"
+            fi
             echo "HEAD commit: $HEAD_COMMIT"
             
             # Check if the current version matches the tag
             # Both CURRENT_VERSION and LAST_TAG should have the same format (e.g., "v0.0.5")
             if [ "$CURRENT_VERSION" = "$LAST_TAG" ]; then
-              # If HEAD is different from the tag commit, we need to check for .typ changes
-              if [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
+              # If HEAD is different from the tag commit (or tag commit not found), check for .typ changes
+              if [ -z "$TAG_COMMIT" ] || [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
                 # Try multiple methods to detect .typ file changes
                 
-                # Method 1: Check git log for .typ files in commits since tag
-                TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD 2>/dev/null | { grep '\.typ$' || true; } | sort -u | wc -l)
+                # Method 1: Check git log for .typ files in commits since tag (if tag exists in git)
+                if [ -n "$TAG_COMMIT" ]; then
+                  TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD 2>/dev/null | { grep '\.typ$' || true; } | sort -u | wc -l)
+                else
+                  TYP_CHANGES_LOG=0
+                fi
                 
-                # Method 2: Check diff (works for normal history)
-                TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD 2>/dev/null | { grep '\.typ$' || true; } | wc -l)
+                # Method 2: Check diff (works for normal history, if tag exists in git)
+                if [ -n "$TAG_COMMIT" ]; then
+                  TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD 2>/dev/null | { grep '\.typ$' || true; } | wc -l)
+                else
+                  TYP_CHANGES_DIFF=0
+                fi
                 
-                # Method 3: Check if current commit has any .typ files (for grafted commits)
+                # Method 3: Check if current commit has any .typ files (for grafted commits or when tag not in git)
                 TYP_CHANGES_SHOW=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
                 
                 echo "TYP changes detected by:"
