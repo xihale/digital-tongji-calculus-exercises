@@ -124,15 +124,21 @@
   $= frac(1, a) F(u) + C = frac(1, a) F(a x + b) + C$
    ]
 
-9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[需补充答案] . 
+9. 设  $integral x f(x) dif x = arcsin x + C$ ，则  $integral (dif x)/(f(x)) = $ #blank[$-(1 - x^2)^(3"/"2)/3 + C$] . 
    #answer-process[
      由条件 $integral x f(x) dif x = arcsin x + C$ 得：
      
-     $x f(x) = (arcsin x)' = 1/(sqrt(1)-x^2)$
+     对两边求导：$x f(x) = (arcsin x)' = 1/(sqrt(1-x^2))$
      
      所以 $f(x) = 1/(x sqrt(1-x^2))$
      
-  $integral (dif x)/(f(x)) = integral x sqrt(1-x^2) dif x$
+     因此：$integral (dif x)/(f(x)) = integral x sqrt(1-x^2) dif x$
+     
+     令 $u = 1 - x^2$，则 $d u = -2x d x$，所以 $x d x = -d u/2$
+     
+     $integral x sqrt(1-x^2) dif x = integral sqrt(u) dot (-d u/2) = -1/2 integral u^(1"/"2) d u$
+     $= -1/2 dot (2/3) u^(3"/"2) + C = -1/3 (1 - x^2)^(3"/"2) + C$
+   ]
      
      令 $u = 1 - x^2$，则 $dif u = -2x dif x$：
      

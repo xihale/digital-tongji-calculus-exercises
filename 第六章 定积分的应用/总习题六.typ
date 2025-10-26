@@ -27,7 +27,22 @@
 
 4. 曲线  $y = sqrt(x) - 1/3 sqrt(x^3)$  相应于区间[1,3]上的一段弧的长度为  #blank[$4/3$]
 
-5. 由曲线  $y = sin x$  和它在  $x = pi/2$  处的切线以及直线  $x = pi$  所围成图形绕  $x$  轴旋转一周所得旋转体的体积为  #blank[需补充答案]
+5. 由曲线  $y = sin x$  和它在  $x = pi/2$  处的切线以及直线  $x = pi$  所围成图形绕  $x$  轴旋转一周所得旋转体的体积为  #blank[$pi^2/4$]
+   #answer-process[
+   曲线 $y = sin x$ 在 $x = pi/2$ 处：$y = sin(pi/2) = 1$，$y' = cos(pi/2) = 0$
+   
+   切线方程为：$y = 1$（水平线）
+   
+   所围区域：从 $x = pi/2$ 到 $x = pi$，上边界 $y = 1$，下边界 $y = sin x$
+   
+   绕 $x$ 轴旋转的体积（用盘法或壳法）：
+   $V = pi integral_(pi/2)^pi (1^2 - sin^2 x) d x = pi integral_(pi/2)^pi (1 - sin^2 x) d x$
+   
+   使用恒等式 $sin^2 x = (1 - cos 2x)/2$：
+   $V = pi integral_(pi/2)^pi (1 - (1 - cos 2x)/2) d x = pi integral_(pi/2)^pi (1/2 + cos 2x/2) d x$
+   
+   $= pi [x/2 + sin 2x/4]_(pi/2)^pi = pi [(pi/2 + 0) - (pi/4 + 0)] = pi dot pi/4 = pi^2/4$
+   ]
 
 6. 水下有一个宽  2 m , 高  3 m  的矩形闸门铅直地浸没在水中, 水面超过门顶  2 m , 则闸门上所受的水压力为  #blank[$78000 N$]
 
