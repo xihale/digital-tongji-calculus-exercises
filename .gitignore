@@ -5,4 +5,4 @@ __pycache__/
 *.pyc
 *.pyo
 typst-x86_64-*
-typst.tar.xz
+typst*.tar.xz
