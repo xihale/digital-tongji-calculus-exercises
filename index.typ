@@ -18,10 +18,10 @@
 #align(center)[
   #title[高等数学习题册]
   (上)
-  
+
   #text(size: 0.9em, fill: rgb("#666666"))[#VERSION]
 
-  
+
 ]
 
 #include "intro.typ"
@@ -47,5 +47,3 @@
 #include "第六章 定积分的应用/index.typ"
 #include "第七章 微分方程/index.typ"
 #include "模拟卷与真题/index.typ"
-
-

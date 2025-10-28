@@ -1,226 +1,142 @@
-name: Build and Deploy
+name: Build and Deploy (Manual)
 
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - "README.md"
-      - "LICENSE"
-      - ".gitignore"
+    workflow_dispatch:
+        inputs:
+            version_bump:
+                description: "是否自动进行版本 bump"
+                required: false
+                default: "true"
+                type: choice
+                options:
+                    - "true"
+                    - "false"
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
+    contents: write
+    pages: write
+    id-token: write
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
+    build-and-deploy:
+        runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-      - name: Install Typst
-        run: |
-          curl -fsSL https://github.com/typst/typst/releases/download/v0.14.0/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
-          tar -xf typst.tar.xz
-          sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
-          typst --version
+            - name: Install Typst
+              run: |
+                  curl -fsSL https://github.com/typst/typst/releases/download/v0.14.0/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
+                  tar -xf typst.tar.xz
+                  sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+                  typst --version
 
-      - name: Auto-increment version if .typ files changed
-        id: version
-        run: |
-          # Configure git
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+            - name: Auto-increment version
+              id: version
+              if: github.event.inputs.version_bump == 'true'
+              run: |
+                  # Configure git
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Extract current version from index.typ
-          CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
-          echo "Current version in index.typ: $CURRENT_VERSION"
+                  # Extract current version from index.typ
+                  CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+                  echo "Current version: $CURRENT_VERSION"
 
-          # Get the latest release from GitHub API
-          LATEST_RELEASE=$(curl -s -H "Authorization: Bearer ${{ github.token }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases/latest")
-          
-          LAST_TAG=$(echo "$LATEST_RELEASE" | jq -r '.tag_name // empty')
-          
-          if [ -z "$LAST_TAG" ] || [ "$LAST_TAG" = "null" ]; then
-            echo "No previous release found via GitHub API"
-          else
-            echo "Found last release from GitHub API: $LAST_TAG"
-          fi
+                  # Parse version (e.g., v0.0.3 -> 0.0.3)
+                  VERSION_NUM=$(echo "$CURRENT_VERSION" | sed 's/^v//')
 
-          # Determine if we need to bump the version
-          SHOULD_BUMP=false
-          
-          if [ -n "$LAST_TAG" ] && [ "$LAST_TAG" != "null" ]; then
-            # Get the commit SHA of the last tag from git
-            TAG_COMMIT=$(git rev-list -n 1 "$LAST_TAG" 2>/dev/null || echo "")
-            HEAD_COMMIT=$(git rev-parse HEAD)
-            
-            if [ -n "$TAG_COMMIT" ]; then
-              echo "Tag $LAST_TAG points to commit: $TAG_COMMIT"
-            else
-              echo "Tag $LAST_TAG exists in GitHub release but not found in local git (possibly grafted history)"
-            fi
-            echo "HEAD commit: $HEAD_COMMIT"
-            
-            # Check if the current version matches the tag
-            # Both CURRENT_VERSION and LAST_TAG should have the same format (e.g., "v0.0.5")
-            if [ "$CURRENT_VERSION" = "$LAST_TAG" ]; then
-              # If HEAD is different from the tag commit (or tag commit not found), check for .typ changes
-              if [ -z "$TAG_COMMIT" ] || [ "$HEAD_COMMIT" != "$TAG_COMMIT" ]; then
-                # Try multiple methods to detect .typ file changes
-                
-                # Method 1: Check git log for .typ files in commits since tag (if tag exists in git)
-                if [ -n "$TAG_COMMIT" ]; then
-                  TYP_CHANGES_LOG=$(git log --name-only --pretty=format: "$LAST_TAG"..HEAD 2>/dev/null | { grep '\.typ$' || true; } | sort -u | wc -l)
-                else
-                  TYP_CHANGES_LOG=0
-                fi
-                
-                # Method 2: Check diff (works for normal history, if tag exists in git)
-                if [ -n "$TAG_COMMIT" ]; then
-                  TYP_CHANGES_DIFF=$(git diff --name-only "$LAST_TAG" HEAD 2>/dev/null | { grep '\.typ$' || true; } | wc -l)
-                else
-                  TYP_CHANGES_DIFF=0
-                fi
-                
-                # Method 3: Check if current commit has any .typ files (for grafted commits or when tag not in git)
-                TYP_CHANGES_SHOW=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
-                
-                echo "TYP changes detected by:"
-                echo "  - git log: $TYP_CHANGES_LOG"
-                echo "  - git diff: $TYP_CHANGES_DIFF"
-                echo "  - git show HEAD: $TYP_CHANGES_SHOW"
-                
-                # If any method detected .typ changes, we should bump
-                if [ "$TYP_CHANGES_LOG" -gt 0 ] || [ "$TYP_CHANGES_DIFF" -gt 0 ] || [ "$TYP_CHANGES_SHOW" -gt 0 ]; then
-                  SHOULD_BUMP=true
-                  echo "Decision: .typ files changed since last release, will bump version"
-                else
-                  echo "Decision: No .typ file changes detected, will not bump version"
-                fi
-              else
-                echo "Decision: HEAD is at the same commit as the last tag, no version bump needed"
-              fi
-            else
-              echo "Decision: Current version ($CURRENT_VERSION) differs from last tag ($LAST_TAG), assuming version was already bumped"
-            fi
-          else
-            echo "No previous release tag found"
-            # Check if current commit has any .typ files
-            TYP_CHANGES=$(git show --name-only --pretty=format: HEAD | { grep '\.typ$' || true; } | wc -l)
-            if [ "$TYP_CHANGES" -gt 0 ]; then
-              SHOULD_BUMP=true
-              echo "Decision: Detected .typ files in current commit, will bump version for first release"
-            fi
-          fi
+                  # Split version into parts and increment patch
+                  MAJOR=$(echo "$VERSION_NUM" | cut -d. -f1)
+                  MINOR=$(echo "$VERSION_NUM" | cut -d. -f2)
+                  PATCH=$(echo "$VERSION_NUM" | cut -d. -f3)
+                  PATCH=$((PATCH + 1))
 
-          if [ "$SHOULD_BUMP" = "true" ]; then
-            echo ""
-            echo "Auto-incrementing version..."
-            
-            # Parse version (e.g., v0.0.3 -> 0.0.3)
-            VERSION_NUM=$(echo "$CURRENT_VERSION" | sed 's/^v//')
-            
-            # Split version into parts
-            MAJOR=$(echo "$VERSION_NUM" | cut -d. -f1)
-            MINOR=$(echo "$VERSION_NUM" | cut -d. -f2)
-            PATCH=$(echo "$VERSION_NUM" | cut -d. -f3)
-            
-            # Increment patch version
-            PATCH=$((PATCH + 1))
-            
-            # Create new version
-            NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
-            echo "New version: $NEW_VERSION"
-            
-            # Update version in index.typ
-            sed -i "s/#let VERSION = \"$CURRENT_VERSION\"/#let VERSION = \"$NEW_VERSION\"/" index.typ
-            
-            # Commit the version change
-            git add index.typ
-            git commit -m "chore: auto-increment version to $NEW_VERSION [skip ci]"
-            git push origin master
-            
-            VERSION="$NEW_VERSION"
-          else
-            echo ""
-            echo "No version bump needed, keeping current version: $CURRENT_VERSION"
-            VERSION="$CURRENT_VERSION"
-          fi
+                  NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+                  echo "New version: $NEW_VERSION"
 
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Final version for release: $VERSION"
+                  # Update version in index.typ
+                  sed -i "s/#let VERSION = \"$CURRENT_VERSION\"/#let VERSION = \"$NEW_VERSION\"/" index.typ
 
-      - name: Build PDFs
-        run: |
-          # Build PDF without answers
-          typst compile --font-path fonts/ --no-pdf-tags index.typ index.pdf
+                  # Commit and push the version change
+                  git add index.typ
+                  git commit -m "chore: bump version to $NEW_VERSION [skip ci]"
+                  git push origin master
 
-          # Build PDF with answers
-          typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ index_ans.pdf
+                  VERSION="$NEW_VERSION"
 
-          # Verify files were created
-          ls -lh *.pdf
+                  echo "version=$VERSION" >> $GITHUB_OUTPUT
+                  echo "Final release version: $VERSION"
 
-      - name: Prepare deployment directory
-        run: |
-          # Create deployment directory
-          mkdir -p deploy
+            - name: Build PDFs
+              run: |
+                  # Build PDF without answers
+                  typst compile --font-path fonts/ --no-pdf-tags index.typ dtce.pdf
 
-          # Copy web folder contents to deploy
-          cp -r web/* deploy/
+                  # Build PDF with answers
+                  typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ dtce_ans.pdf
 
-          # Copy PDFs
-          cp index.pdf deploy/高等数学习题册上册.pdf
-          cp index_ans.pdf deploy/高等数学习题册上册_带答案.pdf
+                  # Verify files were created
+                  ls -lh *.pdf
 
-          # Update version in index.html
-          VERSION="${{ steps.version.outputs.version }}"
-          sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
+            - name: Prepare deployment directory
+              run: |
+                  # Create deployment directory
+                  mkdir -p deploy
 
-          # Verify the structure
-          echo "Deploy directory structure:"
-          ls -la deploy/
+                  # Copy web folder contents to deploy
+                  cp -r web/* deploy/
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+                  # Copy PDFs
+                  cp dtce.pdf deploy/高等数学习题册上册.pdf
+                  cp dtce_ans.pdf deploy/高等数学习题册上册_带答案.pdf
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "deploy"
+                  # Update version in index.html
+                  VERSION="${{ steps.version.outputs.version }}"
+                  if [ -z "$VERSION" ]; then
+                    VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+                  fi
+                  sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+                  # Verify the structure
+                  echo "Deploy directory structure:"
+                  ls -la deploy/
 
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ steps.version.outputs.version }}
-          name: Release ${{ steps.version.outputs.version }}
-          body: |
-            ## 高等数学习题册（上册）${{ steps.version.outputs.version }}
+            - name: Setup Pages
+              uses: actions/configure-pages@v4
 
-            自动构建和发布
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: "deploy"
 
-            ### 下载
-            - 📖 index.pdf (无答案版)
-            - 📖 index_ans.pdf (带答案版)
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
 
-            ### 在线预览 PDF
-            访问：https://dtce.xihale.top 或 GitHub Pages
-          files: |
-            index.pdf
-            index_ans.pdf
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Create Release
+              uses: softprops/action-gh-release@v1
+              with:
+                  tag_name: ${{ steps.version.outputs.version }}
+                  name: Release ${{ steps.version.outputs.version }}
+                  body: |
+                      ## 高等数学习题册（上册）${{ steps.version.outputs.version }}
+
+                      自动构建和发布
+
+                      ### 下载
+                      - 📖 dtce.pdf (无答案版)
+                      - 📖 dtce_ans.pdf (带答案版)
+
+                      ### 在线预览 PDF
+                      访问：https://dtce.xihale.top 或 GitHub Pages
+                  files: |
+                      dtce.pdf
+                      dtce_ans.pdf
+                  draft: false
+                  prerelease: false
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
