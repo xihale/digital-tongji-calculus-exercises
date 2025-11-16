@@ -8,3 +8,4 @@ index/
 index_ans/
 typst.tar.xz
 typst-x86_64-unknown-linux-musl/
+test_*.typ

@@ -66,7 +66,7 @@
 #let blank(..args) = {
   let pos = args.pos()
   let has-content = pos.len() > 0
-  let placeholder = box(width: 5em, stroke: (bottom: 0.7pt))
+  let placeholder = box(width: 5em, height: 1.2em, stroke: (bottom: 0.7pt))
 
   if SHOW_ANSWERS and has-content {
     text(fill: rgb("#0066cc"))[#pos.at(0)]
