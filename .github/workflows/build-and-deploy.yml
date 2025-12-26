@@ -35,7 +35,7 @@ jobs:
                   typst --version
 
             - name: Auto-increment version
-              id: version
+              id: auto_version
               if: github.event.inputs.version_bump == 'true'
               run: |
                   # Configure git
@@ -43,7 +43,7 @@ jobs:
                   git config user.email "github-actions[bot]@users.noreply.github.com"
 
                   # Extract current version from index.typ
-                  CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
+                  CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"+' index.typ)
                   echo "Current version: $CURRENT_VERSION"
 
                   # Parse version (e.g., v0.0.3 -> 0.0.3)
@@ -65,11 +65,19 @@ jobs:
                   git add index.typ
                   git commit -m "chore: bump version to $NEW_VERSION [skip ci]"
                   git push origin master
+                  
+                  echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
-                  VERSION="$NEW_VERSION"
-
+            - name: Set final version
+              id: version
+              run: |
+                  # Get version from previous step or from file
+                  VERSION="${{ steps.auto_version.outputs.version }}"
+                  if [ -z "$VERSION" ]; then
+                    VERSION=$(grep -oP '#let VERSION = "\K[^"+' index.typ)
+                  fi
+                  echo "Final version: $VERSION"
                   echo "version=$VERSION" >> $GITHUB_OUTPUT
-                  echo "Final release version: $VERSION"
 
             - name: Build PDFs
               run: |
@@ -94,11 +102,8 @@ jobs:
                   cp dtce.pdf deploy/高等数学习题册上册.pdf
                   cp dtce_ans.pdf deploy/高等数学习题册上册_带答案.pdf
 
-                  # Update version in index.html
+                  # Update version in index.html (already dynamic, but good for local/legacy)
                   VERSION="${{ steps.version.outputs.version }}"
-                  if [ -z "$VERSION" ]; then
-                    VERSION=$(grep -oP '#let VERSION = "\K[^"]+' index.typ)
-                  fi
                   sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
 
                   # Verify the structure
