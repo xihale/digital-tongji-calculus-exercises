@@ -88,20 +88,30 @@
      法线方程：$y - sqrt(2)/4 a = 1 times (x - sqrt(2)/4 a)$，即 $y = x$
    ]
    
-7. 求由方程  $y = tan (x + y)$  所确定的隐函数的二阶导数  $(d^2 y)/(d x^2)$ .
-   #answer-process[
-     对 $y = tan(x + y)$ 求导：$y' = sec^2(x+y) times (1 + y')$
-     
-     $y' = sec^2(x+y) + sec^2(x+y) times y'$
-     
-     $(1 - sec^2(x+y)) y' = sec^2(x+y)$
-     
-     $-tan^2(x+y) times y' = sec^2(x+y)$
-     
-     $y' = -sec^2(x+y) / tan^2(x+y)$
-     
-     再求导得 $y''$ 表达式较复杂...
-   ]
+ 7. 求由方程  $y = tan (x + y)$  所确定的隐函数的二阶导数  $(d^2 y)/(d x^2)$ .
+    #answer-process[
+      对 $y = tan(x + y)$ 求导：$y' = sec^2(x+y) times (1 + y')$
+      
+      $y' = sec^2(x+y) + sec^2(x+y) times y'$
+      
+      $(1 - sec^2(x+y)) y' = sec^2(x+y)$
+      
+      $-tan^2(x+y) times y' = sec^2(x+y)$
+      
+      $y' = -sec^2(x+y) / tan^2(x+y)$
+      
+      对 $y'$ 再求导：
+      $y'' = d/d x[-sec^2(x+y) / tan^2(x+y)]$
+      
+      $= -[sec^2(x+y) times tan^2(x+y)(1+y') - sec^2(x+y) times 2 tan(x+y) sec^2(x+y)(1+y')] / tan^4(x+y)$
+      
+      $= -sec^2(x+y) tan(x+y)(1+y')[tan(x+y) - 2 sec^2(x+y)] / tan^4(x+y)$
+      
+      $= -sec^2(x+y)(1+y')[tan(x+y) - 2 sec^2(x+y)] / tan^3(x+y)$
+      
+      将 $y' = -sec^2(x+y) / tan^2(x+y)$ 代入得：
+      $y'' = 2 sec^4(x+y)(1+tan^2(x+y)) / tan^5(x+y) = 2 sec^6(x+y) / tan^5(x+y)$
+    ]
    
 8. 用对数求导法求函数  $y = (x/(1 + x))^x$  的导数
    #answer-process[

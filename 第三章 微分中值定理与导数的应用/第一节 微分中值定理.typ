@@ -43,18 +43,18 @@
      因此 $f'(x) = 0$ 有 3 个实根，分别在 $(1,2), (2,3), (3,5)$ 中
    ]
 #subsection[三、证明题]
-4. 证明恒等式:  $arcsin x + arccos x = pi/2 (-1 <= x <= 1)$ .
-   #answer-process[
-     令 $f(x) = arcsin x + arccos x$
-     
-     $f'(x) = 1/(sqrt(1)-x^2) - 1/(sqrt(1)-x^2) = 0$
-     
-     所以 $f(x) =$ 常数
-     
-     取 $x = 0$: $f(0) = arcsin 0 + arccos 0 = 0 + pi/2 = pi/2$
-     
-     因此 $arcsin x + arccos x = pi/2$
-   ]
+ 4. 证明恒等式:  $arcsin x + arccos x = pi/2 (-1 <= x <= 1)$ .
+    #answer-process[
+      令 $f(x) = arcsin x + arccos x$
+      
+      $f'(x) = 1/sqrt(1-x^2) - 1/sqrt(1-x^2) = 0$
+      
+      所以 $f(x) =$ 常数
+      
+      取 $x = 0$: $f(0) = arcsin 0 + arccos 0 = 0 + pi/2 = pi/2$
+      
+      因此 $arcsin x + arccos x = pi/2$
+    ]
    
 5. 若函数  $f(x)$  在区间  $(a, b)$  内具有二阶导数，且  $f(x_1) = f(x_2) = f(x_3)$ ，其中  $a < x_1 < x_2 < x_3 < b$ ，证明：在区间  $(x_1, x_3)$  内至少存在一点  $xi$ ，使得  $f''(xi) = 0$ .
    #answer-process[

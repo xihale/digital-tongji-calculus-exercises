@@ -13,7 +13,7 @@
   #text(weight: "bold", size: 1.4em)[#it.body]
 ]
 
-#let VERSION = "v0.0.7"
+#let VERSION = "v0.0.8"
 
 #align(center)[
   #title[高等数学习题册]

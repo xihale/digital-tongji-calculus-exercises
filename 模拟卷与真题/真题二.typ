@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试真题(二)]
 #subsection[一、选择题(每小题3分，共30分)]
-1. 若  $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则(#answer-choice[B]).
+1. 若  $lim_(x->oo)(a x^3 + b x^2 + 2)/(x^2 + 2) = 1(a,b$  为常数), 则(#answer-choice[B]).
    #choices(
    [$a = 0, b in R$],
    [$a = 0, b = 1$],
@@ -10,24 +10,24 @@
    [$a in R, b in R$]
    )
    #answer-process[
-     计算极限 $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2)$。
+     计算极限 $lim_(x->oo)(a x^3 + b x^2 + 2)/(x^2 + 2)$。
      
      分子的最高次幂为 3 次（当 $a != 0$ 时），分母最高次幂为 2 次。
      
      若 $a != 0$，分子最高次为 $a x^3$，分母最高次为 $x^2$，则：
-     $lim_(x->infinity)(a x^3 + b x^2 + 2)/(x^2 + 2) = lim_(x->infinity) a x = +infinity$ 或 $-infinity$
+     $lim_(x->oo)(a x^3 + b x^2 + 2)/(x^2 + 2) = lim_(x->oo) a x = +oo$ 或 $-oo$
      
      这与极限等于 1 矛盾，所以必须 $a = 0$。
      
      当 $a = 0$ 时，极限变为：
-     $lim_(x->infinity)(b x^2 + 2)/(x^2 + 2) = lim_(x->infinity)(b + 2/x^2)/(1 + 2/x^2)$
+     $lim_(x->oo)(b x^2 + 2)/(x^2 + 2) = lim_(x->oo)(b + 2/x^2)/(1 + 2/x^2)$
      
-     当 $x -> infinity$ 时，$2/x^2 -> 0$，因此：
-     $lim_(x->infinity)(b x^2 + 2)/(x^2 + 2) = b/1 = b = 1$
+     当 $x -> oo$ 时，$2/x^2 -> 0$，因此：
+     $lim_(x->oo)(b x^2 + 2)/(x^2 + 2) = b/1 = b = 1$
      
      所以 $a = 0, b = 1$，答案是 B。
    ]
-2.当  $x->infinity$  时，  $x cos x$  is(#answer-choice[D])
+2.当  $x->oo$  时，  $x cos x$  is(#answer-choice[D])
    #choices(
    [无穷小],
    [无穷大],
@@ -35,12 +35,12 @@
    [无界但不是无穷大]
    )
    #answer-process[
-     分析 $x cos x$ 在 $x -> infinity$ 时的性质。
+     分析 $x cos x$ 在 $x -> oo$ 时的性质。
      
      首先考虑 $x cos x$ 是否有界：
      由于 $|cos x| <= 1$，所以 $|x cos x| = |x| |cos x| <= |x|$
      
-     当 $x -> infinity$ 时，$|x| -> infinity$，所以 $|x cos x| -> infinity$
+     当 $x -> oo$ 时，$|x| -> oo$，所以 $|x cos x| -> oo$
      
      因此 $x cos x$ 是无界的。
      
@@ -122,13 +122,13 @@
      
      所以 $x^2 tan x$ 与 $x - sin x$ 是同阶无穷小。答案是 D。
    ]
-5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的(#answer-choice[C]z).
-   #choices(
-   [可去间断点],
-   [跳跃间断点],
-   [无穷间断点],
-   [振荡间断点]
-   )
+ 5.  $x = 1$  是函数  $f(x) = (ln x)/|x - 1|$  的(#answer-choice[B]).
+    #choices(
+    [可去间断点],
+    [跳跃间断点],
+    [无穷间断点],
+    [振荡间断点]
+    )
    #answer-process[
      分析函数 $f(x) = (ln x)/|x - 1|$ 在 $x = 1$ 处的间断性。
      
@@ -156,14 +156,11 @@
      
      所以 $lim_(x->1^-) f(x) = -1$
      
-     综合分析：
-     - 函数在 $x = 1$ 处无定义
-     - 左极限 $-1$ 和右极限 $1$ 都存在但不相等
-     
-     这似乎是跳跃间断点。但题目选择中有无穷间断点，让我重新检查...
-     
-     实际上，如果题目的函数定义有所不同，或者题意要求不同，则答案可能是 B（跳跃间断点）。
-     但按照给定函数，两个单侧极限都存在且有限但不相等，是跳跃间断点。
+      综合分析：
+      - 函数在 $x = 1$ 处无定义
+      - 左极限 $-1$ 和右极限 $1$ 都存在且有限但不相等
+      
+      这是跳跃间断点。答案是 B。
    ]
 6. 设函数  $y = f(x)$  具有二阶导数，且  $f'(x) > 0, f''(x) < 0, Delta x$  为自变量在点  $x_0$  处的增量， $Delta y$  与  $d y$  分别为  $f(x)$  在点  $x_0$  处对应的增量与微分。若  $Delta x > 0$ ，则(#answer-choice[A]).
    #choices(
@@ -281,7 +278,7 @@
      
      因此 $f(x_0)$ 是极大值。答案是 B。
    ]
-9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t = (#answer-choice[D])$ .
+9. 设函数  $f(x)$  连续，则  $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) d t = (#answer-choice[D])$ .
    #choices(
    [$f(2)$],
    [$f(1)$],
@@ -289,16 +286,16 @@
    [$2f(1)$]
    )
    #answer-process[
-     计算极限 $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t$。
+     计算极限 $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) d t$。
      
-     当 $x -> 2$ 时，分子 $integral_(4)^(2x) f(t/2) dif t -> integral_4^4 f(t/2) dif t = 0$，分母 $x - 2 -> 0$
+     当 $x -> 2$ 时，分子 $integral_(4)^(2x) f(t/2) d t -> integral_4^4 f(t/2) d t = 0$，分母 $x - 2 -> 0$
      
      这是 $0/0$ 型不定式，应用洛必达法则：
      
-     $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) dif t = lim_(x -> 2) (integral_(4)^(2x) f(t/2) dif t) / (x - 2)$
+     $lim_(x -> 2) (1/(x - 2)) integral_(4)^(2x) f(t/2) d t = lim_(x -> 2) (integral_(4)^(2x) f(t/2) d t) / (x - 2)$
      
      对分子关于 $x$ 求导：
-     $d/(d x) integral_(4)^(2x) f(t/2) dif t = f((2x)/2) · (2x)' = f(x) · 2 = 2f(x)$
+     $d/(d x) integral_(4)^(2x) f(t/2) d t = f((2x)/2) · (2x)' = f(x) · 2 = 2f(x)$
      
      对分母关于 $x$ 求导：
      $d/(d x) (x - 2) = 1$
@@ -308,7 +305,7 @@
      
      答案是 D。
    ]
-10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) dif t + ln 2$ ，则  $f(x) = (#answer-choice[B])$ .
+10. 如果连续函数  $f(x)$  满足关系式  $f(x) = 2 integral_(0)^(x) f(t) d t + ln 2$ ，则  $f(x) = (#answer-choice[B])$ .
     #choices(
     [$e^x ln 2$],
     [$e^2x ln 2$],
@@ -316,7 +313,7 @@
     [$e^2x + ln 2$]
     )
     #answer-process[
-      设 $F(x) = integral_(0)^(x) f(t) dif t$，则 $F'(x) = f(x)$，$F(0) = 0$。
+      设 $F(x) = integral_(0)^(x) f(t) d t$，则 $F'(x) = f(x)$，$F(0) = 0$。
       
       原方程变为：$f(x) = 2F(x) + ln 2$
       
@@ -328,7 +325,7 @@
       一般解为：$f(x) = C e^(2x)$，其中 $C$ 是常数。
       
       利用初始条件，当 $x = 0$ 时：
-      $f(0) = 2 integral_(0)^(0) f(t) dif t + ln 2 = 0 + ln 2 = ln 2$
+      $f(0) = 2 integral_(0)^(0) f(t) d t + ln 2 = 0 + ln 2 = ln 2$
       
       代入 $f(x) = C e^(2x)$：
       $f(0) = C e^0 = C = ln 2$
@@ -342,16 +339,16 @@
      #answer-process[
        计算极限 $lim_(x->0^+)(1 + sin x)^(ln x)$。
        
-       这是 $1^(-infinity)$ 型不定式。
+       这是 $1^(-oo)$ 型不定式。
        
        令 $y = (1 + sin x)^(ln x)$，取对数：
        $ln y = (ln x) ln(1 + sin x)$
        
        计算 $lim_(x->0^+) (ln x) ln(1 + sin x)$：
        
-       当 $x -> 0^+$ 时，$sin x -> 0$，$ln x -> -infinity$，$ln(1 + sin x) -> 0$
+       当 $x -> 0^+$ 时，$sin x -> 0$，$ln x -> -oo$，$ln(1 + sin x) -> 0$
        
-       这是 $(-infinity) · 0$ 型不定式。改写为：
+       这是 $(-oo) · 0$ 型不定式。改写为：
        $lim_(x->0^+) (ln x) ln(1 + sin x) = lim_(x->0^+) (ln(1 + sin x))/(1/(ln x))$
        
        这是 $0/0$ 型，应用洛必达法则：
@@ -363,9 +360,9 @@
        
        需要计算 $lim_(x->0^+) x ln^2 x$。
        
-       令 $t = ln x$，则 $x = e^t$，当 $x -> 0^+$ 时，$t -> -infinity$
+       令 $t = ln x$，则 $x = e^t$，当 $x -> 0^+$ 时，$t -> -oo$
        
-       $lim_(x->0^+) x ln^2 x = lim_(t -> -infinity) e^t t^2 = 0$（指数函数比幂函数趋于 0 更快）
+       $lim_(x->0^+) x ln^2 x = lim_(t -> -oo) e^t t^2 = 0$（指数函数比幂函数趋于 0 更快）
        
        因此 $lim_(x->0^+) (ln x) ln(1 + sin x) = -(1) · 0 = 0$
        
@@ -394,14 +391,14 @@
       
       因此 $f'(1) = -3$
     ]
-13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x =$  #blank[$2/3$]
+13.  $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) d x =$  #blank[$2/3$]
      #answer-process[
-       计算 $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x$。
+       计算 $integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) d x$。
        
        分解为两部分：
-       $integral_(-1)^(1) x^2 dif x + integral_(-1)^(1) sqrt(4 - x^2) sin x dif x$
+       $integral_(-1)^(1) x^2 d x + integral_(-1)^(1) sqrt(4 - x^2) sin x d x$
        
-       第一部分：$integral_(-1)^(1) x^2 dif x = [x^3/3]_(-1)^(1) = 1/3 - (-1/3) = 2/3$
+       第一部分：$integral_(-1)^(1) x^2 d x = [x^3/3]_(-1)^(1) = 1/3 - (-1/3) = 2/3$
        
        第二部分：分析 $g(x) = sqrt(4 - x^2) sin x$ 的奇偶性。
        
@@ -409,9 +406,9 @@
        
        所以 $g(x)$ 是奇函数。在对称区间 $[-1, 1]$ 上，奇函数的积分为 0。
        
-       因此：$integral_(-1)^(1) sqrt(4 - x^2) sin x dif x = 0$
+       因此：$integral_(-1)^(1) sqrt(4 - x^2) sin x d x = 0$
        
-       总结果：$integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) dif x = 2/3 + 0 = 2/3$
+       总结果：$integral_(-1)^(1)(x^2 + sqrt(4 - x^2) bullet sin x) d x = 2/3 + 0 = 2/3$
      ]  
 14. 设参数方程  $cases( x = f(t) - pi, y = f(e^(2t) - 1), )$  函数  $f$  可导，且  $f'(0) != 0$ ，则  $(d y)/(d x|_(t=0) =)$  #blank[$2$]
     #answer-process[
@@ -510,15 +507,15 @@
     #answer-process[
       计算极限 $lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$。
       
-      这是 $1^(-infinity)$ 型不定式。
+      这是 $1^(-oo)$ 型不定式。
       
       令 $L = lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$，取对数：
       
       $ln L = lim_(x -> 0^+) (1/(2 ln x)) · ln(tan 3x) = lim_(x -> 0^+) (ln(tan 3x))/(2 ln x)$
       
-      当 $x -> 0^+$ 时，$tan 3x -> 0$，$ln(tan 3x) -> -infinity$，$ln x -> -infinity$
+      当 $x -> 0^+$ 时，$tan 3x -> 0$，$ln(tan 3x) -> -oo$，$ln x -> -oo$
       
-      这是 $(-infinity)/(-infinity)$ 型，应用洛必达法则：
+      这是 $(-oo)/(-oo)$ 型，应用洛必达法则：
       
       $ln L = lim_(x -> 0^+) (d/(d x)[ln(tan 3x)])/(d/(d x)[2 ln x])$
       
@@ -539,9 +536,9 @@
       
       答案是 $sqrt(e)$。
     ]
-18. 求  $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) dif x$.
+18. 求  $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) d x$.
     #answer-process[
-      计算积分 $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) dif x$。
+      计算积分 $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) d x$。
       
       令 $u = sqrt(3x + 2)$，则：
       $u^2 = 3x + 2$
@@ -620,9 +617,9 @@
       
       通解：$y = C_1 e^(2x) + C_2 e^(-x) + x e^x$
     ]
-20. 求  $integral_(0)^(+infinity) x^2 e^(-x) dif x$ .
+20. 求  $integral_(0)^(+oo) x^2 e^(-x) d x$ .
     #answer-process[
-      计算反常积分 $integral_(0)^(+infinity) x^2 e^(-x) d x$。
+      计算反常积分 $integral_(0)^(+oo) x^2 e^(-x) d x$。
       
       先求不定积分 $integral x^2 e^(-x) d x$，使用分部积分法两次。
       
@@ -653,20 +650,20 @@
       $= -e^(-x)[x^2 + 2x + 2]$
       
       计算定积分：
-      $integral_(0)^(+infinity) x^2 e^(-x) d x = lim_(t -> +infinity) [-e^(-x)(x^2 + 2x + 2)]_(0)^(t)$
+      $integral_(0)^(+oo) x^2 e^(-x) d x = lim_(t -> +oo) [-e^(-x)(x^2 + 2x + 2)]_(0)^(t)$
       
-      当 $x -> +infinity$ 时，$e^(-x)(x^2 + 2x + 2) -> 0$（指数衰减快于幂增长）
+      当 $x -> +oo$ 时，$e^(-x)(x^2 + 2x + 2) -> 0$（指数衰减快于幂增长）
       
       当 $x = 0$ 时，$-e^0(0 + 0 + 2) = -2$
       
       因此：
-      $integral_(0)^(+infinity) x^2 e^(-x) d x = 0 - (-2) = 2$
+      $integral_(0)^(+oo) x^2 e^(-x) d x = 0 - (-2) = 2$
     ]
 21. 求函数  $f(x) = (2x + 3) e^(2/x)$  的单调区间、极值以及渐近线方程
     #answer-process[
       分析函数 $f(x) = (2x + 3) e^(2/x)$。
       
-      定义域：$x != 0$，即 $x in (-infinity, 0) union (0, +infinity)$
+      定义域：$x != 0$，即 $x in (-oo, 0) union (0, +oo)$
       
       *第一步：求单调区间*
       
@@ -686,13 +683,13 @@
       
       由于 $e^(2/x) > 0$，$x^2 > 0$，所以 $f'(x)$ 的符号由 $(x - 3)(x + 1)$ 决定。
       
-      当 $x in (-infinity, -1)$ 时，$(x - 3) < 0$，$(x + 1) < 0$，$f'(x) > 0$，$f(x)$ 单调递增
+      当 $x in (-oo, -1)$ 时，$(x - 3) < 0$，$(x + 1) < 0$，$f'(x) > 0$，$f(x)$ 单调递增
       
       当 $x in (-1, 0)$ 时，$(x - 3) < 0$，$(x + 1) > 0$，$f'(x) < 0$，$f(x)$ 单调递减
       
       当 $x in (0, 3)$ 时，$(x - 3) < 0$，$(x + 1) > 0$，$f'(x) < 0$，$f(x)$ 单调递减
       
-      当 $x in (3, +infinity)$ 时，$(x - 3) > 0$，$(x + 1) > 0$，$f'(x) > 0$，$f(x)$ 单调递增
+      当 $x in (3, +oo)$ 时，$(x - 3) > 0$，$(x + 1) > 0$，$f'(x) > 0$，$f(x)$ 单调递增
       
       *第二步：求极值*
       
@@ -710,20 +707,20 @@
       
       *第三步：求渐近线*
       
-      竖直渐近线：$x = 0$（因为 $lim_(x -> 0^+) e^(2/x) = +infinity$，$lim_(x -> 0^-) e^(2/x) = 0$）
+      竖直渐近线：$x = 0$（因为 $lim_(x -> 0^+) e^(2/x) = +oo$，$lim_(x -> 0^-) e^(2/x) = 0$）
       
-      当 $x -> 0^+$ 时，$e^(2/x) -> +infinity$，所以 $lim_(x -> 0^+) f(x) = +infinity$
+      当 $x -> 0^+$ 时，$e^(2/x) -> +oo$，所以 $lim_(x -> 0^+) f(x) = +oo$
       
       当 $x -> 0^-$ 时，$e^(2/x) -> 0$，所以 $lim_(x -> 0^-) f(x) = 0$（实际上极限为 $3 · 0 = 0$）
       
       所以 $x = 0$ 是竖直渐近线。
       
-      斜渐近线：当 $x -> +infinity$ 时，$e^(2/x) -> e^0 = 1$
+      斜渐近线：当 $x -> +oo$ 时，$e^(2/x) -> e^0 = 1$
       
-      $lim_(x -> +infinity) f(x) = lim_(x -> +infinity) (2x + 3) · 1 = +infinity$，没有水平渐近线。
+      $lim_(x -> +oo) f(x) = lim_(x -> +oo) (2x + 3) · 1 = +oo$，没有水平渐近线。
       
       总结：
-      - 单调递增区间：$(-infinity, -1)$，$(3, +infinity)$
+      - 单调递增区间：$(-oo, -1)$，$(3, +oo)$
       - 单调递减区间：$(-1, 0)$，$(0, 3)$
       - 极大值：$f(-1) = e^(-2)$
       - 极小值：$f(3) = 9e^(2/3)$

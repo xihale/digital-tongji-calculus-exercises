@@ -2,16 +2,16 @@
 
 #section[第七节 无穷小的比较]
 #subsection[一、填空题]
-1. 当  $x -> 0$  时， $2x - x^2$  是  $x^2 - x^3$  的 #blank[1/2] 阶无穷小。  
-   #answer-process[
-   要确定 $2x - x^2$ 相对于 $x^2 - x^3$ 的无穷小阶数，计算它们的比值的极限：
-   $lim_(x->0) (2x - x^2)/(x^2 - x^3)^(1/2)$
-   $= lim_(x->0) (x(2 - x))/(x^(2*1/2)(1 - x)^(1/2))$
-   $= lim_(x->0) (2 - x)/(1 - x)^(1/2)$
-   $= 2/1 = 2$
-   
-   因此，$2x - x^2$ 是 $x^2 - x^3$ 的 1/2 阶无穷小。
-   ]
+1. 当  $x -> 0$  时， $2x - x^2$  是  $x^2 - x^3$  的 #blank[1阶（同阶）] 阶无穷小。  
+    #answer-process[
+    要确定 $2x - x^2$ 相对于 $x^2 - x^3$ 的无穷小阶数，计算它们的比值的极限：
+    $lim_(x->0) (2x - x^2)/(x^2 - x^3)^(1/2)$
+    $= lim_(x->0) (x(2 - x))/(x(1 - x)^(1/2))$
+    $= lim_(x->0) (2 - x)/(1 - x)^(1/2)$
+    $= 2/1 = 2$
+    
+    由于极限为非零常数，因此 $2x - x^2$ 与 $x^2 - x^3$ 是同阶无穷小（1阶）。
+    ]
 2. 设  $lim_(x->1)(x^2 + a x + b)/(1 - x) = 5$  ，则  $a = #blank[-7] ,b = #blank[6] .$
    #answer-process[
    当 $x -> 1$ 时，分母 $1 - x -> 0$。如果极限存在且为 5，那么分子 $x^2 + a x + b$ 在 $x = 1$ 处也必须为 0。
@@ -27,21 +27,21 @@
    ]
 #subsection[二、计算题]
 3. 利用等价无穷小的性质，求下列极限：
-   (1)  $lim_(x->0)(tan x - sin x)/(sin^3 x)$;
-   
-   #answer-process[
-   $lim_(x->0)(tan x - sin x)/(sin^3 x)$
-   $= lim_(x->0)(sin x/cos x - sin x)/(sin^3 x)$
-   $= lim_(x->0)(sin x (1/cos x - 1))/(sin^3 x)$
-   $= lim_(x->0)(1)/cos x - 1)/(sin^2 x)$
-   $= lim_(x->0)((1 - cos x)/cos x)/(sin^2 x)$
-   $= lim_(x->0)(1 - cos x)/(cos x * sin^2 x)$
-   
-   当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，$sin x ~ x$，所以：
-   $= lim_(x->0)(x^2)/2)/(1 * x^2)$
-   $= lim_(x->0)1/2$
-   $= 1/2$
-   ]
+    (1)  $lim_(x->0)(tan x - sin x)/(sin^3 x)$;
+    
+    #answer-process[
+    $lim_(x->0)(tan x - sin x)/(sin^3 x)$
+    $= lim_(x->0)(sin x/cos x - sin x)/(sin^3 x)$
+    $= lim_(x->0)(sin x (1/cos x - 1))/(sin^3 x)$
+    $= lim_(x->0)(1/cos x - 1)/(sin^2 x)$
+    $= lim_(x->0)((1 - cos x)/cos x)/(sin^2 x)$
+    $= lim_(x->0)((1 - cos x)/(cos x sin^2 x))$
+    
+    当 $x -> 0$ 时，$cos x -> 1$，$1 - cos x ~ (x^2)/2$，$sin x ~ x$，所以：
+    $= lim_(x->0)(x^2)/2)/(1 dot x^2)$
+    $= lim_(x->0)1/2$
+    $= 1/2$
+    ]
    (2)  $lim_(x->0)(sin x - tan x)/((root(3,1 + x^2) - 1)(sqrt(1 + sin x) - 1))$.
    
    #answer-process[
@@ -61,7 +61,7 @@
    
    因此，原极限 = $lim_(x->0)(-(x^3)/2)/((1/6) * x^3) = lim_(x->0)(-(1/2)/(1)/6) = -3$
    ]
-4. 设  $lim_(x -> -1) (x^3 - a x^2 - x + 4)/(x + 1) = l (l != infinity)$ ，试求  $a$  和  $l$  的值
+4. 设  $lim_(x -> -1) (x^3 - a x^2 - x + 4)/(x + 1) = l (l != oo)$ ，试求  $a$  和  $l$  的值
    
    #answer-process[
    当 $x -> -1$ 时，分母 $x + 1 -> 0$。如果极限存在且为有限值 $l$，那么分子 $x^3 - a x^2 - x + 4$ 在 $x = -1$ 处也必须为 0。

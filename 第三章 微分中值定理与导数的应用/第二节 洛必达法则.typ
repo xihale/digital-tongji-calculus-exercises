@@ -4,15 +4,15 @@
 #subsection[一、选择题]
 1. 下列式子中运用洛必达法则正确的是 (#answer-choice[B])
    #choices(
-   [$lim_(n->infinity)root(n,n) = e^(lim_(n->infinity)(ln n)/n) = e^(lim_(n->infinity)(1/n)) = 1$],
-   [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = infinity$],
+   [$lim_(n->oo)root(n,n) = e^(lim_(n->oo)(ln n)/n) = e^(lim_(n->oo)(1/n)) = 1$],
+   [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = oo$],
    [$lim_(x->0)(x^2 sin(1/x))/(sin x) = lim_(x->0)(2x sin(1/x) - cos(1/x))/(cos x)$  不存在],
    [$lim_(x->0)x/e^x = lim_(x->0)1/e^x = 1$]
    )
    #answer-process[
-     A: 虽然最终结果 $e^0 = 1$ 是正确的，但表达式中从 $lim_(n->infinity)(ln n)/n$ 直接跳到 $lim_(n->infinity)(1/n)$ 没有明确显示洛必达法则的应用步骤（即求导过程）。严格来说，应写为 $lim_(n->infinity)((ln n)')/(n') = lim_(n->infinity)(1/n)/1 = lim_(n->infinity)(1/n)$。
+     A: 虽然最终结果 $e^0 = 1$ 是正确的，但表达式中从 $lim_(n->oo)(ln n)/n$ 直接跳到 $lim_(n->oo)(1/n)$ 没有明确显示洛必达法则的应用步骤（即求导过程）。严格来说，应写为 $lim_(n->oo)((ln n)')/(n') = lim_(n->oo)(1/n)/1 = lim_(n->oo)(1/n)$。
      
-     B: 分子分母都趋于0，可用洛必达法则，$lim = lim (1+cos x)/(1-cos x)|_{x->0}$ 但 $1-cos 0 = 0$，需再用一次，得 infinity ✓
+     B: 分子分母都趋于0，可用洛必达法则，$lim = lim (1+cos x)/(1-cos x)|_{x->0}$ 但 $1-cos 0 = 0$，需再用一次，得 oo ✓
      
      C: 洛必达法则应用不当，分子极限为 0，不能再应用
      
@@ -23,8 +23,8 @@
    #choices(
    [$lim_(x->0)x^2(sin x)$],
    [$lim_(x->0^+)(1/x)^(tan x)$],
-   [$lim_(x->infinity)(x + sin x)/x$],
-   [$lim_(x-> +infinity)x^n/e^x$]
+   [$lim_(x->oo)(x + sin x)/x$],
+   [$lim_(x-> +oo)x^n/e^x$]
    )
    #answer-process[
      A: 连乘形式，极限为0，可用洛必达
@@ -43,9 +43,9 @@
      $lim = lim (-5 sin 5x) / (-3 sin 3x) |_{x -> pi/2} = (-5 times (-1)) / (-3 times 1) = -5/3$
    ]
 
-4.  $lim_(x-> +infinity)ln(1 + 1/x)/(arctan x) =$ #blank[0]
+4.  $lim_(x-> +oo)ln(1 + 1/x)/(arctan x) =$ #blank[0]
    #answer-process[
-     当 $x -> infinity$：分子 $ln(1 + 1/x) -> 0$，分母 $arctan x -> pi/2$
+     当 $x -> oo$：分子 $ln(1 + 1/x) -> 0$，分母 $arctan x -> pi/2$
      
      $lim = 0 / (pi/2) = 0$
    ]
@@ -78,15 +78,15 @@
    
    (4)  $lim_(x->0)x^2 e^(1/x^2)$;
    #answer-process[
-     令 $t = 1/(x^2)$，当 $x -> 0$ 时 $t -> infinity$
+     令 $t = 1/(x^2)$，当 $x -> 0$ 时 $t -> oo$
      
-     原极限 $= lim_(t -> infinity) e^t / t = infinity$（指数速度更快）
+     原极限 $= lim_(t -> oo) e^t / t = oo$（指数速度更快）
      
-     等等，应该是0。重新考虑：当 $x -> 0$ 时，$x^2 -> 0$ 而 $e^(1/x^2) -> infinity$
+     等等，应该是0。重新考虑：当 $x -> 0$ 时，$x^2 -> 0$ 而 $e^(1/x^2) -> oo$
      
-     这是 $0 times infinity$ 形式，需要转化为 $lim_(x->0) e^(1/x^2) / (1/(x^2)) = lim_(u -> infinity) e^u / u = infinity$
+     这是 $0 times oo$ 形式，需要转化为 $lim_(x->0) e^(1/x^2) / (1/(x^2)) = lim_(u -> oo) e^u / u = oo$
      
-     所以原极限为 infinity
+     所以原极限为 oo
    ]
    
    (5)  $lim_(x->1)(2/(x^2 - 1) - 1/(x - 1))$ ;
@@ -111,7 +111,7 @@
    
    (7)  $lim_(x->1^-)(1 - x) tan (pi x/2)$;
    #answer-process[
-     当 $x -> 1^-$ 时，$(1-x) -> 0$ 而 $tan(pi x/2) -> tan(pi/2) = infinity$
+     当 $x -> 1^-$ 时，$(1-x) -> 0$ 而 $tan(pi x/2) -> tan(pi/2) = oo$
      
      令 $u = 1 - x$，当 $x -> 1^-$ 时 $u -> 0^+$
      

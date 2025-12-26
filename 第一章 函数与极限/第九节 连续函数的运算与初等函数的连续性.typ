@@ -12,11 +12,11 @@
   #answer-process[
     分别计算左右极限：
     
-    当 $x -> 0^+$ 时，$1/x -> +infinity$，$e^(1/x) -> +infinity$，
+    当 $x -> 0^+$ 时，$1/x -> +oo$，$e^(1/x) -> +oo$，
     $(1 - 2e^(1/x))/(1 + e^(1/x)) -> -2$，$arctan(1/x) -> pi/2$，
     所以 $lim_(x->0^+) f(x) = -2 dot pi/2 = -pi$。
     
-    当 $x -> 0^-$ 时，$1/x -> -infinity$，$e^(1/x) -> 0$，
+    当 $x -> 0^-$ 时，$1/x -> -oo$，$e^(1/x) -> 0$，
     $(1 - 2e^(1/x))/(1 + e^(1/x)) -> 1$，$arctan(1/x) -> -pi/2$，
     所以 $lim_(x->0^-) f(x) = 1 dot (-pi/2) = -pi/2$。
     
@@ -24,10 +24,10 @@
   ]
 2. 设函数  $f(x) = cases(x &"if" x >= 0, 0 &"if" x < 0,), g(x) = cases(x + 1 &"if" x < 1, x &"if" x >= 1,)$  则  $f(x) + g(x)$  的连续区间是(#answer-choice[C]).
   #choices(
-    [$(-infinity , + infinity)$],
-    [$(- infinity, 0) union (0, +infinity)$],
-    [$(- infinity, 1) union (1, +infinity)$],
-    [$(-infinity, 0) union (0, 1) union (1, +infinity)$],
+    [$(-oo , + oo)$],
+    [$(- oo, 0) union (0, +oo)$],
+    [$(- oo, 1) union (1, +oo)$],
+    [$(-oo, 0) union (0, 1) union (1, +oo)$],
   )
   #answer-process[
     计算 $f(x) + g(x)$：
@@ -46,7 +46,7 @@
     $lim_(x->1^-)(2x+1) = 3$，$lim_(x->1^+)(2x) = 2$，$f(1)+g(1) = 1+1 = 2$，
     左右极限不相等，所以在 $x=1$ 处不连续。
     
-    因此连续区间应为 $(- infinity, 1) union (1, +infinity)$，答案为 C。
+    因此连续区间应为 $(- oo, 1) union (1, +oo)$，答案为 C。
   ]
 3. 已知当  $x -> 0$  时， $sqrt(1 - x) - sqrt(1 + x) ~ a x$ ，则常数  $a = (#answer-choice[B])$
   #choices(
@@ -118,17 +118,17 @@
     
     $= cos a dot 1 = cos a$
   ]
-  (3)  $lim_(x-> +infinity)(sqrt(x^2 + x) - sqrt(x^2 - x))$
+  (3)  $lim_(x-> +oo)(sqrt(x^2 + x) - sqrt(x^2 - x))$
   #answer-process[
     分子有理化：
-    $lim_(x-> +infinity)(sqrt(x^2 + x) - sqrt(x^2 - x))$
+    $lim_(x-> +oo)(sqrt(x^2 + x) - sqrt(x^2 - x))$
     
-    $= lim_(x-> +infinity) ((x^2+x) - (x^2-x))/(sqrt(x^2+x) + sqrt(x^2-x))$
+    $= lim_(x-> +oo) ((x^2+x) - (x^2-x))/(sqrt(x^2+x) + sqrt(x^2-x))$
     
-    $= lim_(x-> +infinity) (2x)/(sqrt(x^2+x) + sqrt(x^2-x))$
+    $= lim_(x-> +oo) (2x)/(sqrt(x^2+x) + sqrt(x^2-x))$
     
     分子分母同除以 $x$：
-    $= lim_(x-> +infinity) 2/(sqrt(1+1/x) + sqrt(1-1/x)) = 2/(1+1) = 1$
+    $= lim_(x-> +oo) 2/(sqrt(1+1/x) + sqrt(1-1/x)) = 2/(1+1) = 1$
   ]
   (4)  $lim_(x->0)((1 - x^2/2)^(2/3) - 1)/(x ln(1 + x))$;
   #answer-process[
@@ -142,19 +142,19 @@
   ]
   (5)  $lim_(x->0)(1 + 3 tan^2 x)^(cot^2 x)$ ;
   #answer-process[
-    这是 $1^infinity$ 型不定式，使用公式 $lim [1 + alpha(x)]^(beta(x)) = e^(lim alpha(x) dot beta(x))$
+    这是 $1^oo$ 型不定式，使用公式 $lim [1 + alpha(x)]^(beta(x)) = e^(lim alpha(x) dot beta(x))$
     
     原式 $= lim_(x->0) (1 + 3 tan^2 x)^(cot^2 x) = e^(lim_(x->0) 3 tan^2 x dot cot^2 x)$
     
     $= e^(lim_(x->0) 3 tan^2 x dot 1/(tan^2 x)) = e^(lim_(x->0) 3) = e^3$
   ]
-  (6)  $lim_(x-> +infinity)((3 + x)/(6 + x))^((x - 1)/2)$;
+  (6)  $lim_(x-> +oo)((3 + x)/(6 + x))^((x - 1)/2)$;
   #answer-process[
-    原式 $= lim_(x-> +infinity) ((6+x-3)/(6+x))^((x-1)/2)$
+    原式 $= lim_(x-> +oo) ((6+x-3)/(6+x))^((x-1)/2)$
     
-    $= lim_(x-> +infinity) (1 - 3/(6+x))^((x-1)/2)$
+    $= lim_(x-> +oo) (1 - 3/(6+x))^((x-1)/2)$
     
-    令 $t = -3/(6+x)$，当 $x -> +infinity$ 时，$t -> 0$，且 $x = -3/t - 6$
+    令 $t = -3/(6+x)$，当 $x -> +oo$ 时，$t -> 0$，且 $x = -3/t - 6$
     
     原式 $= lim_(t->0) (1+t)^((-3/t - 6 - 1)/2) = lim_(t->0) (1+t)^((-3/t - 7)/2)$
     

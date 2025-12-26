@@ -2,7 +2,7 @@
 
 #section[高等数学(上册)期末测试真题(一)]
 #subsection[一、选择题(每小题3分，共30分)]
-1. 若  $lim_(x->infinity)(1 + k/(2x))^x = e^3$  ，则  $k = (#answer-choice[B])$
+1. 若  $lim_(x->oo)(1 + k/(2x))^x = e^3$  ，则  $k = (#answer-choice[B])$
    #choices(
    [$2/3$],
    [$6$],
@@ -10,15 +10,15 @@
    [不存在]
    )
    #answer-process[
-   利用重要极限 $lim_(u->infinity)(1 + 1/u)^u = e$。
+   利用重要极限 $lim_(u->oo)(1 + 1/u)^u = e$。
    
-   设 $u = (2x)/k$，则当 $x -> infinity$ 时，$u -> infinity$。
+   设 $u = (2x)/k$，则当 $x -> oo$ 时，$u -> oo$。
    
-   $lim_(x->infinity)(1 + k/(2x))^x = lim_(x->infinity)(1 + 1/(2x/k))^x = lim_(x->infinity)[(1 + 1/u)^u]^(k/2)$
+   $lim_(x->oo)(1 + k/(2x))^x = lim_(x->oo)(1 + 1/(2x/k))^x = lim_(x->oo)[(1 + 1/u)^u]^(k/2)$
    
    根据重要极限，$(1 + 1/u)^u -> e$，所以：
    
-   $lim_(x->infinity)(1 + k/(2x))^x = e^(k/2)$
+   $lim_(x->oo)(1 + k/(2x))^x = e^(k/2)$
    
    由题意，$e^(k/2) = e^3$，因此 $k/2 = 3$，得 $k = 6$。
    ]
@@ -50,7 +50,7 @@
    
    $= 1/2 + 0 = 1/2$
    
-   由于极限存在且不为 0 或 $infinity$，所以两个无穷小是同阶无穷小，但不是等价无穷小（因为比值不为 1）。
+   由于极限存在且不为 0 或 $oo$，所以两个无穷小是同阶无穷小，但不是等价无穷小（因为比值不为 1）。
    ]
 3. 设函数  $f(x) = cases( (2/pi) arctan(1/x) &"if" x < 0, (1 + x)^x &"if" x >= 0 )$  则  $x = 0$  是  $f(x)$  的(#answer-choice[A]).
    #choices(
@@ -68,7 +68,7 @@
    *计算左极限 $lim_(x -> 0^-) f(x)$：*
    当 $x < 0$ 时，$f(x) = (2/pi) arctan(1/x)$
    
-   当 $x -> 0^-$ 时，$1/x -> -infinity$，所以 $arctan(1/x) -> -pi/2$
+   当 $x -> 0^-$ 时，$1/x -> -oo$，所以 $arctan(1/x) -> -pi/2$
    
    因此，$lim_(x -> 0^-) f(x) = (2/pi) * (-pi/2) = -1$
    
@@ -130,14 +130,14 @@
    #answer-process[
    使用链式法则求导。设 $u = sin^2 x$，则 $f(sin^2 x) = f(u)$。
    
-   $frac(d, d x) f(sin^2 x) = frac(d f, d u) * frac(d u, d x)$
+   $d/d x f(sin^2 x) = d f/d u * d u/d x$
    
-   由题意，$f'(x) = g(x)$，所以 $frac(d f, d u) = g(u) = g(sin^2 x)$
+   由题意，$f'(x) = g(x)$，所以 $d f/d u = g(u) = g(sin^2 x)$
    
-   计算 $frac(d u, d x) = frac(d, d x) sin^2 x = 2 sin x cos x = sin 2x$
+   计算 $d u/d x = d/d x sin^2 x = 2 sin x cos x = sin 2x$
    
    因此，
-   $frac(d, d x) f(sin^2 x) = g(sin^2 x) * sin 2x = g(sin^2 x) sin 2x$
+   $d/d x f(sin^2 x) = g(sin^2 x) * sin 2x = g(sin^2 x) sin 2x$
    ]
 6. 设函数  $f(x)$  具有二阶连续导数，且  $f'(0) = 0, lim_(x -> 0) (f''(x))/(cos x) = 1$ ，则(#answer-choice[A]).
    #choices(
@@ -172,15 +172,15 @@
    不过若题目答案是 A，可能需要重新理解题意或检查条件的符号。
    ]
 7. 设函数  $f(x)$  具有二阶连续导数，其部分图形如图1所示，试确定下列定积分的符号：
-   (1)  $integral_(-3)^(2) f(x) dif x$ ;
-   (2)  $integral_(-3)^(2) f'(x) dif x$ ;
+   (1)  $integral_(-3)^(2) f(x) d x$ ;
+   (2)  $integral_(-3)^(2) f'(x) d x$ ;
    #figure(
      image("./images/真题一-图1.jpg", width: 80%),
      caption: [图1],
      alt: "函数 f(x) 在区间 [-3, 2] 上的图形，用于分析定积分的符号"
    )
-   (3)  $integral_(-3)^(2) f''(x) dif x$ ;
-   (4)  $integral_(-3)^(2) f'''(x) dif x$ .
+   (3)  $integral_(-3)^(2) f''(x) d x$ ;
+   (4)  $integral_(-3)^(2) f'''(x) d x$ .
 8. 设线性无关的函数  $y_1, y_2, y_3$  都是二阶非齐次微分方程  $y'' + p(x) y' + q(x) y = f(x)$  的特解，  $C_1, C_2$  是任意常数，则该非齐次微分方程的通解是(#answer-choice[D]).
    #choices(
    [$C_1 y_1 + C_2 y_2 + y_3$],
@@ -205,51 +205,51 @@
    
    在高度 $y$ 处，横向宽度为 $x = e^y$（从 $y$ 轴到曲线）。
    
-   面积 $= integral_(ln a)^(ln b) e^y dif y = [e^y]_(ln a)^(ln b) = e^(ln b) - e^(ln a) = b - a$
+   面积 $= integral_(ln a)^(ln b) e^y d y = [e^y]_(ln a)^(ln b) = e^(ln b) - e^(ln a) = b - a$
    
    因此答案是 $b - a$。
    ]
 10.下列反常积分收敛的是(#answer-choice[B])
     #choices(
-    [$integral_(-infinity)^(+infinity) cos x dif x$],
-    [$integral_(0)^(+infinity) e^(-2x) dif x$],
-    [$integral_(-1)^(1) (dif x)/(x^2)$],
-    [$integral_(1)^(3) (dif x)/(ln x)$]
+    [$integral_(-oo)^(+oo) cos x d x$],
+    [$integral_(0)^(+oo) e^(-2x) d x$],
+    [$integral_(-1)^(1) (d x)/(x^2)$],
+    [$integral_(1)^(3) (d x)/(ln x)$]
     )
     #answer-process[
     逐一分析每个反常积分的收敛性：
     
-    *(A) $integral_(-infinity)^(+infinity) cos x dif x$：*
+    *(A) $integral_(-oo)^(+oo) cos x d x$：*
     
-    $integral_(-infinity)^(+infinity) cos x dif x = lim_(R -> +infinity) integral_(-R)^(R) cos x dif x = lim_(R -> +infinity) [sin x]_(-R)^(R) = lim_(R -> +infinity) (sin R - sin(-R)) = lim_(R -> +infinity) 2 sin R$
+    $integral_(-oo)^(+oo) cos x d x = lim_(R -> +oo) integral_(-R)^(R) cos x d x = lim_(R -> +oo) [sin x]_(-R)^(R) = lim_(R -> +oo) (sin R - sin(-R)) = lim_(R -> +oo) 2 sin R$
     
-    由于 $lim_(R -> +infinity) sin R$ 不存在，所以此积分发散。
+    由于 $lim_(R -> +oo) sin R$ 不存在，所以此积分发散。
     
-    *(B) $integral_(0)^(+infinity) e^(-2x) dif x$：*
+    *(B) $integral_(0)^(+oo) e^(-2x) d x$：*
     
-    $integral_(0)^(+infinity) e^(-2x) dif x = lim_(R -> +infinity) integral_(0)^(R) e^(-2x) dif x = lim_(R -> +infinity) [-frac(1, 2) e^(-2x)]_0^R$
+    $integral_(0)^(+oo) e^(-2x) d x = lim_(R -> +oo) integral_(0)^(R) e^(-2x) d x = lim_(R -> +oo) [-1/2 e^(-2x)]_0^R$
     
-    $= lim_(R -> +infinity) [-frac(1, 2) e^(-2R) + frac(1, 2)] = 0 + frac(1, 2) = frac(1, 2)$
+    $= lim_(R -> +oo) [-1/2 e^(-2R) + 1/2] = 0 + 1/2 = 1/2$
     
     所以此积分收敛，收敛值为 $1/2$。
     
-    *(C) $integral_(-1)^(1) (dif x)/(x^2)$：*
+    *(C) $integral_(-1)^(1) (d x)/(x^2)$：*
     
     被积函数在 $x = 0$ 处无界，这是瑕积分。
     
-    $integral_(-1)^(1) (dif x)/(x^2) = integral_(-1)^(0) (dif x)/(x^2) + integral_(0)^(1) (dif x)/(x^2)$
+    $integral_(-1)^(1) (d x)/(x^2) = integral_(-1)^(0) (d x)/(x^2) + integral_(0)^(1) (d x)/(x^2)$
     
-    $= lim_(epsilon -> 0^-) [-frac(1, x)]_(-1)^(epsilon) + lim_(delta -> 0^+) [-frac(1, x)]_(delta)^(1)$
+    $= lim_(epsilon -> 0^-) [-1/x]_(-1)^(epsilon) + lim_(delta -> 0^+) [-1/x]_(delta)^(1)$
     
-    $= lim_(epsilon -> 0^-) (-frac(1, epsilon) + 1) + lim_(delta -> 0^+) (-1 + frac(1, delta))$
+    $= lim_(epsilon -> 0^-) (-1/epsilon + 1) + lim_(delta -> 0^+) (-1 + 1/delta)$
     
-    $= -infinity + +infinity$，这是不确定的，但实际上两个部分都发散，所以整体发散。
+    $= -oo + +oo$，这是不确定的，但实际上两个部分都发散，所以整体发散。
     
-    *(D) $integral_(1)^(3) (dif x)/(ln x)$：*
+    *(D) $integral_(1)^(3) (d x)/(ln x)$：*
     
     被积函数在 $x = 1$ 处无界（因为 $ln 1 = 0$），这也是瑕积分。
     
-    $lim_(x -> 1^+) frac(1, ln x) = -infinity$
+    $lim_(x -> 1^+) 1/ln x = -oo$
     
     该积分也是发散的。
     
@@ -273,85 +273,82 @@
     
     解得：$-L = 1$，即 $L = -1$
     ]  
-12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank[-1 + (3/4)(x - ln 5)]$
-    #answer-process[
-    对于参数方程，切线斜率为 $frac(d y, d x) = frac(d y / d t, d x / d t)$
-    
-    *求导：*
-    - $frac(d x, d t) = frac(2t, 1 + t^2)$
-    - $frac(d y, d t) = 1 - frac(1, 1 + t^2)$
-    
-    *在 $t = 2$ 处：*
-    - $x(2) = ln(1 + 4) = ln 5$
-    - $y(2) = 2 - arctan 2 - 2 = -arctan 2$
-    
-    - $frac(d x, d t)|_(t=2) = frac(4, 5)$
-    - $frac(d y, d t)|_(t=2) = 1 - frac(1, 5) = frac(4, 5)$
-    
-    *切线斜率：*
-    $frac(d y, d x)|_(t=2) = frac(4/5, 4/5) = 1$
-    ]  
-13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k = #blank[-1/2]$.  
-    #answer-process[
-    如果 $F(x) = -ln cos 2x$ 是 $f(x) = k tan 2x$ 的一个原函数，那么：
-    
-    $F'(x) = f(x)$
-    
-    计算 $F'(x)$：
-    $F'(x) = frac(d, d x)[-ln cos 2x] = -frac(1, cos 2x) * frac(d, d x)[cos 2x]$
-    
-    $= -frac(1, cos 2x) * (-sin 2x * 2) = frac(2 sin 2x, cos 2x) = 2 tan 2x$
-    
-    由于 $F'(x) = f(x)$，所以：
-    $2 tan 2x = k tan 2x$
-    
-    因此 $k = 2$。
-    
-    等等，让我重新检查一下导数...
-    
-    实际上，$frac(d, d x)[-ln cos 2x] = -frac(1, cos 2x) * (-sin 2x) * 2 = frac(2 sin 2x, cos 2x) = 2 tan 2x$
-    
-    所以 $k = 2$。
-    
-    但如果原函数定义有所不同，可能是 $k = -1/2$。需要根据具体题意确定。
-    ]  
-14.  $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = #blank[$pi$]$  
+ 12. 曲线 $cases( x = ln (1 + t^2), y = t - arctan t - 2 )$ 在点 $t = 2$ 处的切线方程为 $y = #blank[-arctan 2 + 1(x - ln 5)]$
+     #answer-process[
+     对于参数方程，切线斜率为 $d y/d x = (d y/d t) / (d x/d t)$
+     
+     *求导：*
+     - $d x/d t = 2t/(1 + t^2)$
+     - $d y/d t = 1 - 1/(1 + t^2)$
+     
+     *在 $t = 2$ 处：*
+     - $x(2) = ln(1 + 4) = ln 5$
+     - $y(2) = 2 - arctan 2 - 2 = -arctan 2$
+     
+     - $d x/d t|_(t=2) = 4/5$
+     - $d y/d t|_(t=2) = 1 - 1/5 = 4/5$
+     
+     *切线斜率：*
+     $d y/d x|_(t=2) = (4/5) / (4/5) = 1$
+     
+     *切线方程：*
+     $y - y(2) = k(x - x(2))$
+     $y + arctan 2 = 1(x - ln 5)$
+     $y = -arctan 2 + x - ln 5$
+     ]
+ 13. 设函数  $f(x) = k tan 2x$  的一个原函数为  $-ln cos 2x$ ，则  $k = #blank[2]$.  
+     #answer-process[
+     如果 $F(x) = -ln cos 2x$ 是 $f(x) = k tan 2x$ 的一个原函数，那么：
+     
+     $F'(x) = f(x)$
+     
+     计算 $F'(x)$：
+     $F'(x) = d/d x[-ln cos 2x] = -1/cos 2x * d/d x[cos 2x]$
+     
+     $= -1/cos 2x * (-sin 2x * 2) = 2 sin 2x/cos 2x = 2 tan 2x$
+     
+     由于 $F'(x) = f(x)$，所以：
+     $2 tan 2x = k tan 2x$
+     
+     因此 $k = 2$。
+     ]
+14.  $integral_(-oo)^(+oo)(d x)/(x^2 + 2x + 2) = #blank[$pi$]$  
     #answer-process[
     首先，对分母进行配方：
     $x^2 + 2x + 2 = (x + 1)^2 + 1$
     
     所以：
-    $integral_(-infinity)^(+infinity)(dif x)/(x^2 + 2x + 2) = integral_(-infinity)^(+infinity)(dif x)/((x+1)^2 + 1)$
+    $integral_(-oo)^(+oo)(d x)/(x^2 + 2x + 2) = integral_(-oo)^(+oo)(d x)/((x+1)^2 + 1)$
     
-    令 $u = x + 1$，则 $d u = d x$，当 $x -> -infinity$ 时 $u -> -infinity$；当 $x -> +infinity$ 时 $u -> +infinity$：
+    令 $u = x + 1$，则 $d u = d x$，当 $x -> -oo$ 时 $u -> -oo$；当 $x -> +oo$ 时 $u -> +oo$：
     
-    $= integral_(-infinity)^(+infinity)(d u)/(u^2 + 1)$
+    $= integral_(-oo)^(+oo)(d u)/(u^2 + 1)$
     
     这是一个标准的反三角函数积分：
-    $= [arctan u]_(-infinity)^(+infinity) = arctan(+infinity) - arctan(-infinity)$
+    $= [arctan u]_(-oo)^(+oo) = arctan(+oo) - arctan(-oo)$
     
     $= pi/2 - (-pi/2) = pi$
     ]  
-15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = #blank[$2/3$]$  
+15.  $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) d x = #blank[$2/3$]$  
     #answer-process[
     分离积分：
-    $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = integral_(-1)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x + integral_(-1)^(1) frac(x sin^2 x, 1 + sqrt(1 - x^2)) dif x$
+    $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) d x = integral_(-1)^(1) 2x^2/1 + sqrt(1 - x^2) d x + integral_(-1)^(1) x sin^2 x/1 + sqrt(1 - x^2) d x$
     
-    对于第二个积分，注意 $frac(x sin^2 x, 1 + sqrt(1 - x^2))$ 是奇函数（奇函数除以偶函数得奇函数），所以在对称区间上积分为 0。
+    对于第二个积分，注意 $x sin^2 x/1 + sqrt(1 - x^2)$ 是奇函数（奇函数除以偶函数得奇函数），所以在对称区间上积分为 0。
     
     因此：
-    $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x = integral_(-1)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x$
+    $integral_(-1)^(1)(2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) d x = integral_(-1)^(1) 2x^2/1 + sqrt(1 - x^2) d x$
     
-    由于 $frac(2x^2, 1 + sqrt(1 - x^2))$ 是偶函数：
-    $= 2 integral_(0)^(1) frac(2x^2, 1 + sqrt(1 - x^2)) dif x$
+    由于 $2x^2/1 + sqrt(1 - x^2)$ 是偶函数：
+    $= 2 integral_(0)^(1) 2x^2/1 + sqrt(1 - x^2) d x$
     
     令 $x = sin theta$，则 $d x = cos theta d theta$，$sqrt(1 - x^2) = cos theta$：
     
     当 $x = 0$ 时，$theta = 0$；当 $x = 1$ 时，$theta = pi/2$
     
-    $= 2 integral_(0)^(pi/2) frac(2 sin^2 theta, 1 + cos theta) * cos theta d theta$
+    $= 2 integral_(0)^(pi/2) 2 sin^2 theta/1 + cos theta * cos theta d theta$
     
-    $= 4 integral_(0)^(pi/2) frac(sin^2 theta cos theta, 1 + cos theta) d theta$
+    $= 4 integral_(0)^(pi/2) sin^2 theta cos theta/1 + cos theta d theta$
     
     经过复杂的计算，标准答案为 $2/3$。
     ]  
@@ -362,7 +359,7 @@
     设 $f(x) = x^4(12 ln x - 7) = 12 x^4 ln x - 7 x^4$
     
     *求第一阶导数：*
-    $f'(x) = 12 * 4x^3 ln x + 12 x^4 * frac(1, x) - 28 x^3$
+    $f'(x) = 12 * 4x^3 ln x + 12 x^4 * 1/x - 28 x^3$
     
     $= 48 x^3 ln x + 12 x^3 - 28 x^3$
     
@@ -371,7 +368,7 @@
     $= 16 x^3 (3 ln x - 1)$
     
     *求第二阶导数：*
-    $f''(x) = 16 * 3 x^2 (3 ln x - 1) + 16 x^3 * frac(3, x)$
+    $f''(x) = 16 * 3 x^2 (3 ln x - 1) + 16 x^3 * 3/x$
     
     $= 48 x^2 (3 ln x - 1) + 48 x^2$
     
@@ -399,14 +396,14 @@
     因此，拐点为 $(1, -7)$。
     ]
 #subsection[三、计算题(每小题7分，共35分)]
-17. 已知连续函数  $f(x) = integral_(0)^(3x) f(t/3) dif t + e^(2x)$ ，求  $f(x)$ .
+17. 已知连续函数  $f(x) = integral_(0)^(3x) f(t/3) d t + e^(2x)$ ，求  $f(x)$ .
     #answer-process[
     对给定的函数方程求导以消除积分。
     
-    设 $f(x) = integral_(0)^(3x) f(t/3) dif t + e^(2x)$
+    设 $f(x) = integral_(0)^(3x) f(t/3) d t + e^(2x)$
     
     对两边关于 $x$ 求导：
-    $f'(x) = frac(d, d x) integral_(0)^(3x) f(t/3) dif t + 2 e^(2x)$
+    $f'(x) = d/d x integral_(0)^(3x) f(t/3) d t + 2 e^(2x)$
     
     使用莱布尼茨法则：
     $f'(x) = f(3x) * 3 + 2 e^(2x) = 3 f(3x) + 2 e^(2x)$
@@ -419,7 +416,7 @@
     这样会得到很复杂的递推关系。让我尝试另一种方法。
     
     假设 $f(x) = A e^(2x) + B$（常数形式），代入原方程：
-    $A e^(2x) + B = integral_(0)^(3x) (A e^(t/3) + B) dif t + e^(2x)$
+    $A e^(2x) + B = integral_(0)^(3x) (A e^(t/3) + B) d t + e^(2x)$
     
     $= [3 A e^(t/3) + B t]_0^(3x) + e^(2x)$
     
@@ -429,32 +426,32 @@
     
     标准答案应该需要进一步的分析或特定的求解技巧。通常这类方程的解为 $f(x) = e^(2x)$。
     ]
-18. 已知  $f(pi) = 1$ ，函数  $f(x)$  二阶连续可微，且  $integral_(0)^(pi)[f(x) + f''(x)] sin x dif x = 3$ ，求  $f(0)$ .
+18. 已知  $f(pi) = 1$ ，函数  $f(x)$  二阶连续可微，且  $integral_(0)^(pi)[f(x) + f''(x)] sin x d x = 3$ ，求  $f(0)$ .
     #answer-process[
     分离积分：
-    $integral_(0)^(pi)[f(x) + f''(x)] sin x dif x = integral_(0)^(pi) f(x) sin x dif x + integral_(0)^(pi) f''(x) sin x dif x = 3$
+    $integral_(0)^(pi)[f(x) + f''(x)] sin x d x = integral_(0)^(pi) f(x) sin x d x + integral_(0)^(pi) f''(x) sin x d x = 3$
     
-    *计算 $integral_(0)^(pi) f''(x) sin x dif x$ 使用分部积分：*
+    *计算 $integral_(0)^(pi) f''(x) sin x d x$ 使用分部积分：*
     
-    设 $u = f'(x)$，$d v = sin x dif x$，则 $d u = f''(x) dif x$，$v = -cos x$
+    设 $u = f'(x)$，$d v = sin x d x$，则 $d u = f''(x) d x$，$v = -cos x$
     
-    $integral_(0)^(pi) f''(x) sin x dif x = [-f'(x) cos x]_0^(pi) + integral_(0)^(pi) f'(x) cos x dif x$
+    $integral_(0)^(pi) f''(x) sin x d x = [-f'(x) cos x]_0^(pi) + integral_(0)^(pi) f'(x) cos x d x$
     
-    $= -f'(pi) cos pi - (-f'(0) cos 0) + integral_(0)^(pi) f'(x) cos x dif x$
+    $= -f'(pi) cos pi - (-f'(0) cos 0) + integral_(0)^(pi) f'(x) cos x d x$
     
-    $= f'(pi) + f'(0) + integral_(0)^(pi) f'(x) cos x dif x$
+    $= f'(pi) + f'(0) + integral_(0)^(pi) f'(x) cos x d x$
     
     再对第二项使用分部积分：
-    设 $u = f(x)$，$d v = cos x dif x$，则 $d u = f'(x) dif x$，$v = sin x$
+    设 $u = f(x)$，$d v = cos x d x$，则 $d u = f'(x) d x$，$v = sin x$
     
-    $integral_(0)^(pi) f'(x) cos x dif x = [f(x) sin x]_0^(pi) - integral_(0)^(pi) f(x) sin x dif x$
+    $integral_(0)^(pi) f'(x) cos x d x = [f(x) sin x]_0^(pi) - integral_(0)^(pi) f(x) sin x d x$
     
-    $= f(pi) sin pi - f(0) sin 0 - integral_(0)^(pi) f(x) sin x dif x$
+    $= f(pi) sin pi - f(0) sin 0 - integral_(0)^(pi) f(x) sin x d x$
     
-    $= -integral_(0)^(pi) f(x) sin x dif x$
+    $= -integral_(0)^(pi) f(x) sin x d x$
     
     *代入原方程：*
-    $integral_(0)^(pi) f(x) sin x dif x + f'(pi) + f'(0) - integral_(0)^(pi) f(x) sin x dif x = 3$
+    $integral_(0)^(pi) f(x) sin x d x + f'(pi) + f'(0) - integral_(0)^(pi) f(x) sin x d x = 3$
     
     $f'(pi) + f'(0) = 3$
     
@@ -527,21 +524,21 @@
     
     $(- x - e^x) y' = - 4 x^3 + y + y e^x$
     
-    $y' = frac(4 x^3 - y - y e^x, x + e^x)$
+    $y' = 4 x^3 - y - y e^x/x + e^x$
     
     *在 $x = 0$ 处的信息：*
     当 $x = 0$ 时，从原方程：$0 - 0 - y - 1 = 0 => y(0) = -1$
     
-    $y'(0) = frac(0 - (-1) - (-1) e^0, 0 + e^0) = frac(1 + 1, 1) = 2$
+    $y'(0) = (0 - (-1) - (-1) e^0/0 + e^0) = 1 + 1/1 = 2$
     
     *求 $y''$：*
-    对 $y' = frac(4 x^3 - y - y e^x, x + e^x)$ 求导（使用商法则）：
+    对 $y' = 4 x^3 - y - y e^x/x + e^x$ 求导（使用商法则）：
     
     设分子 $N = 4 x^3 - y - y e^x$，分母 $D = x + e^x$
     
     $y' = N / D$
     
-    $y'' = frac(N' * D - N * D', D^2)$
+    $y'' = N' * D - N * D'/D^2$
     
     计算各项：
     - $N' = 12 x^2 - y' - y' e^x - y e^x = 12 x^2 - y'(1 + e^x) - y e^x$
@@ -553,26 +550,26 @@
     - $D(0) = 0 + 1 = 1$
     - $D'(0) = 1 + 1 = 2$
     
-    $y''(0) = frac((-3) * 1 - 2 * 2, 1^2) = frac(-3 - 4, 1) = -7$
+    $y''(0) = ((-3) * 1 - 2 * 2/1^2) = -3 - 4/1 = -7$
     
     因此，$(d^2 y) / (d x^2)|_(x=0) = -7$
     ]
-21. 求  $integral_(sqrt(2/x))^(1) (sqrt(1 - x^2))/(x^2) dif x$.
+21. 求  $integral_(sqrt(2/x))^(1) (sqrt(1 - x^2))/(x^2) d x$.
     #answer-process[
-    这道题的积分限似乎有问题。让我假设是 $integral_(sqrt(2)/2)^(1) (sqrt(1 - x^2))/(x^2) dif x$ 或类似的形式。
+    这道题的积分限似乎有问题。让我假设是 $integral_(sqrt(2)/2)^(1) (sqrt(1 - x^2))/(x^2) d x$ 或类似的形式。
     
     *使用三角替换：*
     令 $x = sin theta$，则 $d x = cos theta d theta$，$sqrt(1 - x^2) = cos theta$
     
-    $integral (sqrt(1 - x^2))/(x^2) dif x = integral (cos theta)/(sin^2 theta) * cos theta d theta$
+    $integral (sqrt(1 - x^2))/(x^2) d x = integral (cos theta)/(sin^2 theta) * cos theta d theta$
     
     $= integral (cos^2 theta)/(sin^2 theta) d theta = integral cot^2 theta d theta$
     
     $= integral (csc^2 theta - 1) d theta = -cot theta - theta + C$
     
-    回代：$cot theta = frac(sqrt(1 - x^2), x)$，$theta = arcsin x$
+    回代：$cot theta = (sqrt(1 - x^2)/x)$，$theta = arcsin x$
     
-    $integral (sqrt(1 - x^2))/(x^2) dif x = -frac(sqrt(1 - x^2), x) - arcsin x + C$
+    $integral (sqrt(1 - x^2))/(x^2) d x = -(sqrt(1 - x^2)/x) - arcsin x + C$
     
     *计算定积分（假设上下限为标准值）：*
     
@@ -580,11 +577,11 @@
     
     若上限为 1，下限为 $sqrt(2)/2$（对应 $pi/4$），则：
     
-    $[- frac(sqrt(1 - x^2), x) - arcsin x]_(sqrt(2)/2)^(1)$
+    $[- (sqrt(1 - x^2)/x) - arcsin x]_(sqrt(2)/2)^(1)$
     
     在 $x = 1$ 处：$-0 - pi/2 = -pi/2$
     
-    在 $x = sqrt(2)/2$ 处：$-frac(sqrt(1 - 1/2), sqrt(2)/2) - pi/4 = -frac(sqrt(2)/2, sqrt(2)/2) - pi/4 = -1 - pi/4$
+    在 $x = sqrt(2)/2$ 处：$-(sqrt(1 - 1/2)/sqrt(2)/2) - pi/4 = -(sqrt(2)/2/sqrt(2)/2) - pi/4 = -1 - pi/4$
     
     结果 $= -pi/2 - (-1 - pi/4) = -pi/2 + 1 + pi/4 = 1 - pi/4$
     ]
@@ -600,11 +597,11 @@
     $D_1$ 是由 $y = 2x^2$（从 $x = a$ 到 $x = 2$）和 $y = 0$ 围成的区域。
     
     绕 $x$ 轴旋转一周的体积公式：
-    $V_1 = pi integral_a^2 (2x^2)^2 dif x = pi integral_a^2 4x^4 dif x$
+    $V_1 = pi integral_a^2 (2x^2)^2 d x = pi integral_a^2 4x^4 d x$
     
-    $= 4pi [frac(x^5, 5)]_a^2 = 4pi (frac(32, 5) - frac(a^5, 5))$
+    $= 4pi [x^5/5]_a^2 = 4pi (32/5 - a^5/5)$
     
-    $= frac(4pi, 5) (32 - a^5)$
+    $= 4pi/5 (32 - a^5)$
     ]
 
 (2) 试求  $D_2$  绕  $y$  轴旋转一周所得旋转体的体积  $V_2$ ;
@@ -613,38 +610,38 @@
     
     绕 $y$ 轴旋转，使用壳层法或圆盘法。这里用壳层法较简单：
     
-    壳层法公式：$V = 2pi integral_0^a x * 2x^2 dif x = 2pi integral_0^a 2x^3 dif x$
+    壳层法公式：$V = 2pi integral_0^a x * 2x^2 d x = 2pi integral_0^a 2x^3 d x$
     
-    $= 4pi [frac(x^4, 4)]_0^a = 4pi * frac(a^4, 4) = pi a^4$
+    $= 4pi [x^4/4]_0^a = 4pi * a^4/4 = pi a^4$
     
     因此，$V_2 = pi a^4$
     ]
 
 (3) 问: 当  $a$  为何值时,  $V = V_1 + V_2$  取得最大值? 并求出该最大值.
     #answer-process[
-    $V = V_1 + V_2 = frac(4pi, 5)(32 - a^5) + pi a^4 = frac(128pi, 5) - frac(4pi a^5, 5) + pi a^4$
+    $V = V_1 + V_2 = 4pi/5(32 - a^5) + pi a^4 = 128pi/5 - 4pi a^5/5 + pi a^4$
     
-    $= pi [frac(128, 5) + a^4 - frac(4a^5, 5)]$
+    $= pi [128/5 + a^4 - 4a^5/5]$
     
     求 $V$ 对 $a$ 的导数：
-    $frac(d V, d a) = pi [4a^3 - frac(20a^4, 5)] = pi [4a^3 - 4a^4] = 4pi a^3 (1 - a)$
+    $d V/d a = pi [4a^3 - 20a^4/5] = pi [4a^3 - 4a^4] = 4pi a^3 (1 - a)$
     
-    令 $frac(d V, d a) = 0$：
+    令 $d V/d a = 0$：
     $4pi a^3 (1 - a) = 0$
     
     由于 $0 < a < 2$，所以 $a != 0$，因此 $a = 1$
     
-    检验：当 $0 < a < 1$ 时，$frac(d V, d a) > 0$；当 $1 < a < 2$ 时，$frac(d V, d a) < 0$
+    检验：当 $0 < a < 1$ 时，$d V/d a > 0$；当 $1 < a < 2$ 时，$d V/d a < 0$
     
     所以 $a = 1$ 时 $V$ 取得最大值。
     
     最大值：
-    $V_max = pi [frac(128, 5) + 1 - frac(4, 5)] = pi [frac(128 - 4, 5) + 1] = pi [frac(124, 5) + 1] = pi frac(129, 5)$
+    $V_max = pi [128/5 + 1 - 4/5] = pi [128 - 4/5 + 1] = pi [124/5 + 1] = pi 129/5$
     ]
 #subsection[五、选答题(7分)(考生可从下面2个题中任选1个作答，多做不多得分)]
 23. 设函数  $f(x)$  在区间  $[a, b]$  上连续，在  $(a, b)$  内可导，又  $f'(x) > 0$ ，且极限  $lim_(x -> a^+) (f(2x - a))/(x - a)$  存在，证明：在  $(a, b)$  内存在一点  $xi$ ，使得
 $
-(frac(b^2 - a^2, integral_a^b f(x) d x) = frac(2*xi, f(xi)))
+(b^2 - a^2/integral_a^b f(x d x) = 2*xi/f(xi))
 $
     #answer-process[
     设 $L = lim_(x -> a^+) (f(2x - a))/(x - a)$（题目条件保证该极限存在）。
@@ -652,9 +649,9 @@ $
     由于 $f'(x) > 0$，所以 $f$ 在 $[a, b]$ 上严格单调递增。
     
     *分析给定的等式：*
-    左边 = $frac(b^2 - a^2, integral_a^b f(x) d x) = frac((b - a)(b + a), integral_a^b f(x) d x)$
+    左边 = $b^2 - a^2/integral_a^b f(x d x) = ((b - a)(b + a)/integral_a^b f(x) d x)$
     
-    右边 = $frac(2 xi, f(xi))$
+    右边 = $2 xi/f(xi)$
     
     这是一个中值性质。我们需要证明存在 $xi in (a, b)$ 使该等式成立。
     
@@ -662,7 +659,7 @@ $
     存在 $xi in (a, b)$，使得
     $integral_a^b (b + a) d x = (b + a) * (b - a)$
     
-    结合条件，可以构造辅助函数 $g(x) = (b^2 - a^2) - (x^2 - a^2) * frac(integral_a^b f(t) d t, integral_a^x f(t) d t)$
+    结合条件，可以构造辅助函数 $g(x) = (b^2 - a^2) - (x^2 - a^2) * (integral_a^b f(t) d t/integral_a^x f(t) d t)$
     
     利用罗尔定理或中值定理的其他形式，可以证明存在 $xi in (a, b)$ 满足所求等式。
     
@@ -677,9 +674,9 @@ $
     
     构造函数 $f(x) = x - ln(1 + x)$，$x > 0$
     
-    $f'(x) = 1 - frac(1, 1 + x) = frac(x, 1 + x) > 0$（当 $x > 0$ 时）
+    $f'(x) = 1 - 1/1 + x = x/1 + x > 0$（当 $x > 0$ 时）
     
-    所以 $f(x)$ 在 $(0, +infinity)$ 上严格递增。
+    所以 $f(x)$ 在 $(0, +oo)$ 上严格递增。
     
     由于 $f(0) = 0 - ln 1 = 0$，所以当 $x > 0$ 时，$f(x) > f(0) = 0$
     
@@ -687,17 +684,17 @@ $
     
     *第二部分：证明 $x/(1 + x) < ln(1 + x)$ 当 $x > 0$ 时*
     
-    构造函数 $g(x) = ln(1 + x) - frac(x, 1 + x)$，$x > 0$
+    构造函数 $g(x) = ln(1 + x) - x/1 + x$，$x > 0$
     
-    $g'(x) = frac(1, 1 + x) - frac((1 + x) - x, (1 + x)^2) = frac(1, 1 + x) - frac(1, (1 + x)^2)$
+    $g'(x) = 1/1 + x - ((1 + x) - x/(1 + x)^2) = 1/1 + x - 1/(1 + x^2)$
     
-    $= frac(1 + x - 1, (1 + x)^2) = frac(x, (1 + x)^2) > 0$（当 $x > 0$ 时）
+    $= 1 + x - 1/(1 + x^2) = x/(1 + x^2) > 0$（当 $x > 0$ 时）
     
-    所以 $g(x)$ 在 $(0, +infinity)$ 上严格递增。
+    所以 $g(x)$ 在 $(0, +oo)$ 上严格递增。
     
     由于 $g(0) = ln 1 - 0 = 0$，所以当 $x > 0$ 时，$g(x) > g(0) = 0$
     
-    因此 $ln(1 + x) - frac(x, 1 + x) > 0$，即 $frac(x, 1 + x) < ln(1 + x)$
+    因此 $ln(1 + x) - x/1 + x > 0$，即 $x/1 + x < ln(1 + x)$
     
     *结论：*
     综合以上两部分，当 $x > 0$ 时，$x/(1 + x) < ln(1 + x) < x$

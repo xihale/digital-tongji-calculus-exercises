@@ -32,10 +32,10 @@
      等等，应该是 $lim Delta y / d y = 1$（当高阶项趋于0时），所以是等价无穷小 B
    ]
 #subsection[二、填空题]
-3. 设函数  $s = e^(-t) cos 3t + sin 1$ ，则  $(d s)/(d t) =$ #blank[$-e^(-t)(cos 3t + 3sin 3t) + 0$]
-   #answer-process[
-     $(d s) / (d t) = -e^(-t) cos 3 t + e^(-t) times (-3 sin 3 t) = -e^(-t)(cos 3 t + 3 sin 3 t)$
-   ]
+ 3. 设函数  $s = e^(-t) cos 3t + sin 1$ ，则  $(d s)/(d t) =$ #blank[$-e^(-t)(cos 3t + 3sin 3t)$]
+    #answer-process[
+      $(d s) / (d t) = -e^(-t) cos 3 t + e^(-t) times (-3 sin 3 t) = -e^(-t)(cos 3 t + 3 sin 3 t)$
+    ]
    
 4. 设函数  $y = 2^(ln tan x)$ ，则  $d y =$ #blank[$2^(ln tan x) times ln 2 times sec^2 x / tan x d x$]
    #answer-process[
@@ -55,18 +55,16 @@
      在 $x = pi$: $y'(pi) = 1 / 1 + 1/(4-pi) = 1 + 1/(4-pi)$
    ]
    
-6. 曲线  $y = 2x^3 - 5x^2 + 4x - 5$  上点 $(2,-1)$ 处的法线方程是 #blank[$x + 4y + 2 = 0$]
-   #answer-process[
-     $y' = 6x^2 - 10x + 4$
-     
-     在 $x = 2$: $y'(2) = 24 - 20 + 4 = 8$
-     
-     法线斜率为 $-1/8$
-     
-     法线方程：$y + 1 = -1/8 (x - 2)$，即 $8y + 8 = -x + 2$，$x + 8y + 6 = 0$...
-     
-     让我重新算... $y + 1 = -1/8(x - 2)$，$8(y+1) = -(x-2)$，$8y + 8 = -x + 2$，$x + 8y + 6 = 0$
-   ]
+    6. 曲线  $y = 2x^3 - 5x^2 + 4x - 5$  上点 $(2,-1)$ 处的法线方程是 #blank[$x + 8y + 6 = 0$]
+    #answer-process[
+      $y' = 6x^2 - 10x + 4$
+      
+      在 $x = 2$: $y'(2) = 24 - 20 + 4 = 8$
+      
+      法线斜率为 $-1/8$
+      
+      法线方程：$y + 1 = -1/8 (x - 2)$，即 $8y + 8 = -x + 2$，$x + 8y + 6 = 0$
+    ]
    
 7. 设  $f(x)$  是可导函数， $Delta x$  是自变量在点  $x$  处的增量，则有  $lim_(Delta x -> 0) (f^2(x + Delta x) - f^2(x))/(Delta x) =$ #blank[$2 f(x) f'(x)$]
    #answer-process[

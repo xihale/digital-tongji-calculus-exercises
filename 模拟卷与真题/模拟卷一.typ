@@ -58,13 +58,13 @@
      
      $lim_(x->0^+) f(x) = lim_(x->0^+) (1 + e^(1/x))/(3 + 2e^(1/x))$
      
-     当 $x->0^+$ 时，$1/x -> +infinity$，$e^(1/x) -> +infinity$
+     当 $x->0^+$ 时，$1/x -> +oo$，$e^(1/x) -> +oo$
      
      $lim_(x->0^+) f(x) = lim_(x->0^+) (1 + e^(1/x))/(3 + 2e^(1/x)) = lim_(x->0^+) (1/(e^(1/x)) + 1)/(3/(e^(1/x)) + 2) = (0+1)/(0+2) = 1/2$
      
      $lim_(x->0^-) f(x) = lim_(x->0^-) (1 + e^(1/x))/(3 + 2e^(1/x))$
      
-     当 $x->0^-$ 时，$1/x -> -infinity$，$e^(1/x) -> 0$
+     当 $x->0^-$ 时，$1/x -> -oo$，$e^(1/x) -> 0$
      
      $lim_(x->0^-) f(x) = (1+0)/(3+0) = 1/3$
      
@@ -72,43 +72,43 @@
    ]
 4.下列不定积分的计算不正确的是(#answer-choice[D])
    #choices(
-   [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
-   [$integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
-   [$integral 2^x dot 3^x dif x = (2^x dot 3^x)/(ln 2 + ln 3) + C$],
-   [$integral (x)/(1 + x^2) dif x = arctan x + C$]
+   [$integral (d x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+   [$integral (d x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
+   [$integral 2^x dot 3^x d x = (2^x dot 3^x)/(ln 2 + ln 3) + C$],
+   [$integral (x)/(1 + x^2) d x = arctan x + C$]
    )
    
    #answer-process[
      答案：D
      
-     A. 正确。$integral (dif x)/(sqrt(4-x^2)) = arcsin(x/2) + C$
+     A. 正确。$integral (d x)/(sqrt(4-x^2)) = arcsin(x/2) + C$
      
-     B. 正确。$x^2 - 2x + 2 = (x-1)^2 + 1$，$integral (dif x)/((x-1)^2+1) = arctan(x-1) + C$
+     B. 正确。$x^2 - 2x + 2 = (x-1)^2 + 1$，$integral (d x)/((x-1)^2+1) = arctan(x-1) + C$
      
-     C. 正确。$integral 2^x dot 3^x dif x = integral 6^x dif x = 6^x/(ln 6) + C = 6^x/(ln 2 + ln 3) + C$
+     C. 正确。$integral 2^x dot 3^x d x = integral 6^x d x = 6^x/(ln 6) + C = 6^x/(ln 2 + ln 3) + C$
      
-     D. 不正确。$integral (x dif x)/(1+x^2) = 1/2 integral (dif(1+x^2))/(1+x^2) = 1/2 ln(1+x^2) + C$
+     D. 不正确。$integral (x d x)/(1+x^2) = 1/2 integral (d(1+x^2))/(1+x^2) = 1/2 ln(1+x^2) + C$
         而 $arctan x$ 的导数是 $1/(1+x^2)$，不是 $x/(1+x^2)$
    ]
 5.下列反常积分收敛的是(#answer-choice[B])
    #choices(
-   [$integral_(1)^(+infinity)(dif x)/(sqrt x)$],
-   [$integral_(-infinity)^(+infinity) (dif x)/(x^2 + 4x + 5)$],
-   [$integral_(0)^(1) (dif x)/(x^2)$],
-   [$integral_(-1)^(1) (dif x)/x$]
+   [$integral_(1)^(+oo)(d x)/(sqrt x)$],
+   [$integral_(-oo)^(+oo) (d x)/(x^2 + 4x + 5)$],
+   [$integral_(0)^(1) (d x)/(x^2)$],
+   [$integral_(-1)^(1) (d x)/x$]
    )
    
    #answer-process[
      答案：B
      
-     A. $integral_(1)^(+infinity) (dif x)/(sqrt(x)) = integral_1^(+infinity) x^(-1/2) dif x = [2sqrt(x)]_1^(+infinity) = +infinity$，发散
+     A. $integral_(1)^(+oo) (d x)/(sqrt(x)) = integral_1^(+oo) x^(-1/2) d x = [2sqrt(x)]_1^(+oo) = +oo$，发散
      
      B. $x^2 + 4x + 5 = (x+2)^2 + 1$
-        $integral_(-infinity)^(+infinity) (dif x)/((x+2)^2+1) = [arctan(x+2)]_(-infinity)^(+infinity) = pi/2 - (-pi/2) = pi$，收敛
+        $integral_(-oo)^(+oo) (d x)/((x+2)^2+1) = [arctan(x+2)]_(-oo)^(+oo) = pi/2 - (-pi/2) = pi$，收敛
      
-     C. $integral_0^1 (dif x)/(x^2) = [-1/x]_0^1 = -1 - (-infinity) = +infinity$，发散
+     C. $integral_0^1 (d x)/(x^2) = [-1/x]_0^1 = -1 - (-oo) = +oo$，发散
      
-     D. $integral_(-1)^1 (dif x)/x$ 在 $x=0$ 处被积函数无界，且 $lim_(epsilon->0) integral_(-epsilon)^epsilon (dif x)/x$ 不存在，发散
+     D. $integral_(-1)^1 (d x)/x$ 在 $x=0$ 处被积函数无界，且 $lim_(epsilon->0) integral_(-epsilon)^epsilon (d x)/x$ 不存在，发散
    ]
 #subsection[二、填空题(每小题3分，共18分)]
 6. 设函数  $f(x) = cases( (sin 3x)/(ln(1 + x)) &"if" -1 < x < 0, a sec x + 1 &"if" x >= 0 )$  在点  $x = 0$  处连续，则  $a =$  #blank[$a = 2$].
@@ -135,9 +135,9 @@
      
      由参数方程求导公式：$(d y)/(d x) = ((d y)/(d t))/((d x)/(d t))$
      
-     $(d x)/(d t) = dif/(dif t) ln(1+t^2) = (2t)/(1+t^2)$
+     $(d x)/(d t) = d/(d t) ln(1+t^2) = (2t)/(1+t^2)$
      
-     $(d y)/(d t) = dif/(dif t) (t - arctan t) = 1 - 1/(1+t^2) = t^2/(1+t^2)$
+     $(d y)/(d t) = d/(d t) (t - arctan t) = 1 - 1/(1+t^2) = t^2/(1+t^2)$
      
      $(d y)/(d x) = (t^2/(1+t^2))/(2t/(1+t^2)) = t^2/(1+t^2) dot (1+t^2)/(2t) = t/2$
    ]
@@ -182,13 +182,13 @@
      
      $k = (|-2|)/((1+0^2)^(3/2)) = 2/1 = 2$
    ]
-10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) dif x = #blank[$2pi$]$
+10.  $integral_(-2)^(2)(x|sin x| + 4 - x^2)/(sqrt(4 - x^2)) d x = #blank[$2pi$]$
    
    #answer-process[
      答案：$2pi$
      
      分解积分：
-     $integral_(-2)^2 (x|sin x| + 4 - x^2)/(sqrt(4-x^2)) dif x = integral_(-2)^2 (x|sin x|)/(sqrt(4-x^2)) dif x + integral_(-2)^2 (4-x^2)/(sqrt(4-x^2)) dif x$
+     $integral_(-2)^2 (x|sin x| + 4 - x^2)/(sqrt(4-x^2)) d x = integral_(-2)^2 (x|sin x|)/(sqrt(4-x^2)) d x + integral_(-2)^2 (4-x^2)/(sqrt(4-x^2)) d x$
      
      第一项：$f(x) = (x|sin x|)/(sqrt(4-x^2))$
      
@@ -196,13 +196,13 @@
      
      故第一项为奇函数在对称区间上的积分，结果为 $0$
      
-     第二项：$integral_(-2)^2 (4-x^2)/(sqrt(4-x^2)) dif x = integral_(-2)^2 sqrt(4-x^2) dif x$
+     第二项：$integral_(-2)^2 (4-x^2)/(sqrt(4-x^2)) d x = integral_(-2)^2 sqrt(4-x^2) d x$
      
-     令 $x = 2 sin theta$，$dif x = 2 cos theta dif theta$
+     令 $x = 2 sin theta$，$d x = 2 cos theta d theta$
      
-     $integral_(-2)^2 sqrt(4-x^2) dif x = integral_(-pi/2)^(pi/2) 2 cos theta dot 2 cos theta dif theta$
+     $integral_(-2)^2 sqrt(4-x^2) d x = integral_(-pi/2)^(pi/2) 2 cos theta dot 2 cos theta d theta$
      
-     $= 4 integral_(-pi/2)^(pi/2) cos^2 theta dif theta = 4 integral_(-pi/2)^(pi/2) (1+cos 2theta)/2 dif theta$
+     $= 4 integral_(-pi/2)^(pi/2) cos^2 theta d theta = 4 integral_(-pi/2)^(pi/2) (1+cos 2theta)/2 d theta$
      
      $= 2[theta + (sin 2theta)/2]_(-pi/2)^(pi/2) = 2[(pi/2 + 0) - (-pi/2 + 0)] = 2pi$
    ]
@@ -213,29 +213,29 @@
      
      这是可分离变量的微分方程。
      
-     分离变量：$(dif y)/(1+y^2) = e^x dif x$
+     分离变量：$(d y)/(1+y^2) = e^x d x$
      
-     两边积分：$integral (dif y)/(1+y^2) = integral e^x dif x$
+     两边积分：$integral (d y)/(1+y^2) = integral e^x d x$
      
      $arctan y = e^x + C$
      
      $y = tan(e^x + C)$
    ]
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
-12. 求  $lim_(x -> +infinity) (integral_0^x arctan^2 t dif t)/(sqrt(x^2 + 1))$ .  
+12. 求  $lim_(x -> +oo) (integral_0^x arctan^2 t d t)/(sqrt(x^2 + 1))$ .  
    
    #answer-process[
-     这是 $infinity/infinity$ 型极限，使用洛必达法则。
+     这是 $oo/oo$ 型极限，使用洛必达法则。
      
-     $lim_(x->+infinity) (integral_0^x arctan^2 t dif t)/(sqrt(x^2+1))$
+     $lim_(x->+oo) (integral_0^x arctan^2 t d t)/(sqrt(x^2+1))$
      
-     分子求导：$(dif)/(dif x) integral_0^x arctan^2 t dif t = arctan^2 x$
+     分子求导：$(d)/(d x) integral_0^x arctan^2 t d t = arctan^2 x$
      
-     分母求导：$(dif)/(dif x) sqrt(x^2+1) = x/(sqrt(x^2+1))$
+     分母求导：$(d)/(d x) sqrt(x^2+1) = x/(sqrt(x^2+1))$
      
-     $= lim_(x->+infinity) (arctan^2 x)/(x/(sqrt(x^2+1))) = lim_(x->+infinity) (arctan^2 x dot sqrt(x^2+1))/x$
+     $= lim_(x->+oo) (arctan^2 x)/(x/(sqrt(x^2+1))) = lim_(x->+oo) (arctan^2 x dot sqrt(x^2+1))/x$
      
-     $= lim_(x->+infinity) arctan^2 x dot (sqrt(x^2+1))/x = lim_(x->+infinity) arctan^2 x dot sqrt(1+1/(x^2))$
+     $= lim_(x->+oo) arctan^2 x dot (sqrt(x^2+1))/x = lim_(x->+oo) arctan^2 x dot sqrt(1+1/(x^2))$
      
      $= (pi/2)^2 dot 1 = pi^2/4$
    ]
@@ -264,47 +264,47 @@
      
      $y''(1) = ((-2 dot 1)(1+1) - 0)/(2^2) = (-4)/4 = -1$
    ]
-14. 求  $integral arctan sqrt(x) dif x$ .
+14. 求  $integral arctan sqrt(x) d x$ .
    
    #answer-process[
-     使用分部积分法，令 $u = arctan sqrt(x)$，$dif v = dif x$
+     使用分部积分法，令 $u = arctan sqrt(x)$，$d v = d x$
      
-     $dif u = 1/(1+x) dot 1/(2sqrt(x)) dif x = (dif x)/(2sqrt(x)(1+x))$，$v = x$
+     $d u = 1/(1+x) dot 1/(2sqrt(x)) d x = (d x)/(2sqrt(x)(1+x))$，$v = x$
      
-     $integral arctan sqrt(x) dif x = x arctan sqrt(x) - integral x/(2sqrt(x)(1+x)) dif x$
+     $integral arctan sqrt(x) d x = x arctan sqrt(x) - integral x/(2sqrt(x)(1+x)) d x$
      
-     $= x arctan sqrt(x) - 1/2 integral (sqrt(x))/(1+x) dif x$
+     $= x arctan sqrt(x) - 1/2 integral (sqrt(x))/(1+x) d x$
      
-     令 $sqrt(x) = t$，则 $x = t^2$，$dif x = 2t dif t$
+     令 $sqrt(x) = t$，则 $x = t^2$，$d x = 2t d t$
      
-     $integral (sqrt(x))/(1+x) dif x = integral t/(1+t^2) dot 2t dif t = 2 integral t^2/(1+t^2) dif t$
+     $integral (sqrt(x))/(1+x) d x = integral t/(1+t^2) dot 2t d t = 2 integral t^2/(1+t^2) d t$
      
-     $= 2 integral (1 - 1/(1+t^2)) dif t = 2(t - arctan t) + C$
+     $= 2 integral (1 - 1/(1+t^2)) d t = 2(t - arctan t) + C$
      
      $= 2(sqrt(x) - arctan sqrt(x)) + C$
      
-     因此：$integral arctan sqrt(x) dif x = x arctan sqrt(x) - sqrt(x) + arctan sqrt(x) + C$
+     因此：$integral arctan sqrt(x) d x = x arctan sqrt(x) - sqrt(x) + arctan sqrt(x) + C$
      
      $= (x+1) arctan sqrt(x) - sqrt(x) + C$
    ]
-15. 求  $integral_(0)^(pi) x^2 |cos x| dif x$ .
+15. 求  $integral_(0)^(pi) x^2 |cos x| d x$ .
    
    #answer-process[
      在 $[0, pi]$ 上，$cos x$ 在 $[0, pi/2]$ 上为正，在 $[pi/2, pi]$ 上为负
      
-     $integral_0^pi x^2 |cos x| dif x = integral_0^(pi/2) x^2 cos x dif x + integral_(pi/2)^pi x^2 (-cos x) dif x$
+     $integral_0^pi x^2 |cos x| d x = integral_0^(pi/2) x^2 cos x d x + integral_(pi/2)^pi x^2 (-cos x) d x$
      
-     对于 $integral x^2 cos x dif x$，使用两次分部积分：
+     对于 $integral x^2 cos x d x$，使用两次分部积分：
      
-     $integral x^2 cos x dif x = x^2 sin x - integral 2x sin x dif x$
+     $integral x^2 cos x d x = x^2 sin x - integral 2x sin x d x$
      
-     $= x^2 sin x - 2(-x cos x + integral cos x dif x)$
+     $= x^2 sin x - 2(-x cos x + integral cos x d x)$
      
      $= x^2 sin x + 2x cos x - 2 sin x + C$
      
-     $integral_0^(pi/2) x^2 cos x dif x = [(pi/2)^2 dot 1 + 0 - 2] - [0] = pi^2/4 - 2$
+     $integral_0^(pi/2) x^2 cos x d x = [(pi/2)^2 dot 1 + 0 - 2] - [0] = pi^2/4 - 2$
      
-     $integral_(pi/2)^pi x^2 (-cos x) dif x = -[x^2 sin x + 2x cos x - 2sin x]_(pi/2)^pi$
+     $integral_(pi/2)^pi x^2 (-cos x) d x = -[x^2 sin x + 2x cos x - 2sin x]_(pi/2)^pi$
      
      $= -[(0 - 2pi - 0) - (pi^2/4 + 0 - 2)] = -(-2pi - pi^2/4 + 2)$
      
@@ -312,16 +312,16 @@
      
      总和：$(pi^2/4 - 2) + (2pi + pi^2/4 - 2) = pi^2/2 + 2pi - 4$
    ]
-16. 设函数  $f(x) = cases( 1 + x^2 &"if" x < 0, e^(-x) &"if" x >= 0 )$  求  $integral_(1)^(3) f(x - 2) dif x$.
+16. 设函数  $f(x) = cases( 1 + x^2 &"if" x < 0, e^(-x) &"if" x >= 0 )$  求  $integral_(1)^(3) f(x - 2) d x$.
    
    #answer-process[
-     令 $u = x - 2$，则 $x = u + 2$，$dif x = dif u$
+     令 $u = x - 2$，则 $x = u + 2$，$d x = d u$
      
      当 $x = 1$ 时，$u = -1$；当 $x = 3$ 时，$u = 1$
      
-     $integral_1^3 f(x-2) dif x = integral_(-1)^1 f(u) dif u$
+     $integral_1^3 f(x-2) d x = integral_(-1)^1 f(u) d u$
      
-     $= integral_(-1)^0 (1+u^2) dif u + integral_0^1 e^(-u) dif u$
+     $= integral_(-1)^0 (1+u^2) d u + integral_0^1 e^(-u) d u$
      
      $= [u + u^3/3]_(-1)^0 + [-e^(-u)]_0^1$
      
@@ -346,15 +346,15 @@
      
      $= 48 dot 3x^2 ln x = 144x^2 ln x$
      
-     令 $y'' = 0$：$144x^2 ln x = 0$，得 $x = 1$ ($x > 0$)
-     
-     当 $0 < x < 1$ 时，$ln x < 0$，$y'' < 0$，曲线凹
-     
-     当 $x > 1$ 时，$ln x > 0$，$y'' > 0$，曲线凸
-     
-     拐点：$x = 1$，$y = 1 dot (0 - 7) = -7$
-     
-     凹区间：$(0, 1)$；凸区间：$(1, +infinity)$；拐点：$(1, -7)$
+      令 $y'' = 0$：$144x^2 ln x = 0$，得 $x = 1$ ($x > 0$)
+      
+      当 $0 < x < 1$ 时，$ln x < 0$，$y'' < 0$，曲线凸
+      
+      当 $x > 1$ 时，$ln x > 0$，$y'' > 0$，曲线凹
+      
+      拐点：$x = 1$，$y = 1 dot (0 - 7) = -7$
+      
+      凸区间：$(0, 1)$；凹区间：$(1, +oo)$；拐点：$(1, -7)$
    ]
 #subsection[四、应用题(每小题9分，共18分)]
 18. 要做一个容积为  $2 pi$  的密闭圆柱形罐头筒，问：半径和高分别为多少时能使所用材料最省？
@@ -391,7 +391,7 @@
      
      面积（用 $y$ 作积分变量）：
      
-     $S = integral_(-2)^4 [(y+4) - y^2/2] dif y = integral_(-2)^4 (y + 4 - y^2/2) dif y$
+     $S = integral_(-2)^4 [(y+4) - y^2/2] d y = integral_(-2)^4 (y + 4 - y^2/2) d y$
      
      $= [y^2/2 + 4y - y^3/6]_(-2)^4$
      
@@ -401,9 +401,9 @@
      
      体积（绕 $y$ 轴旋转）：
      
-     $V = pi integral_(-2)^4 [(y+4)^2 - (y^2/2)^2] dif y$
+     $V = pi integral_(-2)^4 [(y+4)^2 - (y^2/2)^2] d y$
      
-     $= pi integral_(-2)^4 [y^2 + 8y + 16 - y^4/4] dif y$
+     $= pi integral_(-2)^4 [y^2 + 8y + 16 - y^4/4] d y$
      
      $= pi [y^3/3 + 4y^2 + 16y - y^5/20]_(-2)^4$
      

@@ -13,25 +13,25 @@
      初等函数在其定义区间内都是连续的（除了某些特殊点如间断点）。但不一定可微，例如 $y = |x|$ 在 $x = 0$ 处连续但不可导、不可微。因此答案是连续。
    ]
 #subsection[二、填空题]
-2. 已知函数  $y = x^2 - x$ ，则在点  $x = 2$  处，当  $Delta x = 0.1$  时， $Delta y =$ #blank[0.31]， $d y =$ #blank[0.3].
-   #answer-process[
-     $y' = 2x - 1$，在 $x = 2$ 处 $y' = 3$
-     
-     $Delta y = f(2.1) - f(2) = (2.1^2 - 2.1) - (4 - 2) = 2.31 = 0.31$
-     
-     $d y = y'(2) times Delta x = 3 times 0.1 = 0.3$
-   ]
+ 2. 已知函数  $y = x^2 - x$ ，则在点  $x = 2$  处，当  $Delta x = 0.1$  时， $Delta y =$ #blank[0.31]， $d y =$ #blank[0.3].
+    #answer-process[
+      $y' = 2x - 1$，在 $x = 2$ 处 $y' = 3$
+      
+      $Delta y = f(2.1) - f(2) = (2.1^2 - 2.1) - (4 - 2) = (4.41 - 2.1) - 2 = 0.31$
+      
+      $d y = y'(2) times Delta x = 3 times 0.1 = 0.3$
+    ]
    
-3.  $d(sqrt(x) arcsin sqrt(x)) =$ #blank[$(arcsin sqrt(x) / (2 sqrt(x)) + 1/2)$] $d x$ .
-   #answer-process[
-     设 $u = sqrt(x) arcsin sqrt(x)$
-     
-     $d u = d(sqrt(x)) times arcsin sqrt(x) + sqrt(x) times d(arcsin sqrt(x))$
-     
-     $= (1/(2sqrt(x))) arcsin sqrt(x) d x + sqrt(x) times 1/(sqrt(1)-x) times 1/(2sqrt(x)) d x$
-     
-     $= [(arcsin sqrt(x))/(2sqrt(x)) + 1/(2sqrt(1-x))] d x$
-   ]
+ 3.  $d(sqrt(x) arcsin sqrt(x)) =$ #blank[$(arcsin sqrt(x) / (2 sqrt(x)) + 1/(2 sqrt(1-x)))$] $d x$ .
+    #answer-process[
+      设 $u = sqrt(x) arcsin sqrt(x)$
+      
+      $d u = d(sqrt(x)) times arcsin sqrt(x) + sqrt(x) times d(arcsin sqrt(x))$
+      
+      $= (1/(2sqrt(x))) arcsin sqrt(x) d x + sqrt(x) times 1/sqrt(1-x) times 1/(2sqrt(x)) d x$
+      
+      $= [(arcsin sqrt(x))/(2sqrt(x)) + 1/(2sqrt(1-x))] d x$
+    ]
    
 4. 设  $f(x)$  与  $g(x)$  都是可导函数，又函数  $y = f[g(2 - x^3)]$ ，则当  $Delta x -> 0$  时，无穷小  $Delta y$  关于  $Delta x$  的线性主部为 #blank[$f'[g(2-x^3)] times g'(2-x^3) times (-3x^2) times d x$].
    #answer-process[
@@ -49,12 +49,12 @@
      $d y = 2 ln(1-x) times 1/(1-x) times (-1) d x = -2 ln(1-x) / (1-x) d x$
    ]
    
-   (3)  $y = arcsin sqrt(1 - x^2)$ ;
-   #answer-process[
-     $d y = 1/(sqrt(1)-(1-x^2)) times 1/(2sqrt(1-x^2)) times (-2x) d x$
-     
-     $= 1/(sqrt(x^2)) times (-x) / sqrt(1-x^2) d x = -1 d x$ (当 $x > 0$)
-   ]
+     (3)  $y = arcsin sqrt(1 - x^2)$ ;
+     #answer-process[
+       $d y = 1/sqrt(1-(1-x^2)) times 1/(2sqrt(1-x^2)) times (-2x) d x$
+       
+       $= -x/(|x| sqrt(1-x^2)) d x = -(sign x)/sqrt(1-x^2) d x$
+     ]
    
    (4)  $y = tan^2 (1 + 2x^2)$ .
    #answer-process[

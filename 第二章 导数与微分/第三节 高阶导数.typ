@@ -17,12 +17,12 @@
      所以 $f^(27)(pi) = -(1/2)^27 cos(pi/2) = 0$
    ]
 #subsection[二、填空题]
- 2. 设函数  $y = (1 + x^2) arctan x$ ，则  $y'' = $ #blank[$2 x arctan x$].
-   #answer-process[
-     $y' = 2 x arctan x + (1+x^2) times 1/(1+x^2) = 2 x arctan x + 1$
-     
-     $y'' = 2 arctan x + 2 x times 1/(1+x^2) = 2 arctan x + 2 x/(1+x^2)$
-   ]
+  2. 设函数  $y = (1 + x^2) arctan x$ ，则  $y'' = $ #blank[$2 arctan x + 2 x/(1+x^2)$].
+    #answer-process[
+      $y' = 2 x arctan x + (1+x^2) times 1/(1+x^2) = 2 x arctan x + 1$
+      
+      $y'' = 2 arctan x + 2 x times 1/(1+x^2) = 2 arctan x + 2 x/(1+x^2)$
+    ]
    
 3. 若  $f''(x)$  存在，函数  $y = ln f(x)$ ，则  $(d^2 y) / (d x^2) = $ #blank[$f''(x)/f(x) - (f'(x))^2/(f(x))^2$].
    #answer-process[
@@ -39,12 +39,12 @@
      $y'' = -e^(-t)(cos t - sin t) + e^(-t)(-sin t - cos t) = e^(-t)(-2 cos t) = -2e^(-t) cos t$
    ]
    
-   (2)  $y = ln (x + sqrt(1 + x^2))$ .
-   #answer-process[
-     $y' = 1/(x + sqrt(1+x^2)) times (1 + x/(sqrt(1)+x^2)) = 1/(sqrt(1)+x^2)$
-     
-     $y'' = -x / (1+x^2)^(3/2)$
-   ]
+    (2)  $y = ln (x + sqrt(1 + x^2))$ .
+    #answer-process[
+      $y' = 1/(x + sqrt(1+x^2)) times (1 + x/sqrt(1+x^2)) = 1/sqrt(1+x^2)$
+      
+      $y'' = -x / (1+x^2)^(3/2)$
+    ]
 
 5. 设  $f''(x)$  存在，求函数  $y = f(x^2)$  的二阶导数  $(d^2 y)/(d x^2)$ .
    #answer-process[
@@ -104,5 +104,5 @@
      
      其中 $u' = -y'''$, $v' = 3(y')^2 times y''$
      
-     代入计算化简后得：$(d^3 x)/(d y^3) = \{3(y'')^2 - y' y'''\} / (y')^5$
+      代入计算化简后得：$(d^3 x)/(d y^3) = (3(y'')^2 - y' y''')/(y')^5$
    ]

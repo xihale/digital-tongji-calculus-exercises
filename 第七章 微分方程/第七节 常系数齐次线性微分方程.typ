@@ -49,23 +49,23 @@
     #answer-process[
        小振动时浮筒满足 $m y'' + ρ g A y = 0$，其中剖面积 $A = π r^2$，$r = 0.25$ m。
        角频率 $ω = sqrt(ρ g A / m)$，周期 $T = 2π/ω$，由 $T = 2$ s 得
-       $m = ρ g A / π^2 = frac(1000 ⋅ 9.8 ⋅ (0.25)^2, π) ≈ 1.95 × 10^2$ kg。
+       $m = ρ g A / π^2 = (1000 ⋅ 9.8 ⋅ (0.25)^2/π) ≈ 1.95 × 10^2$ kg。
     ]
 #subsection[五、证明题]
 8. 验证:  $y = C_1 x^2 + C_2 x^2 ln x$  ( $C_1, C_2$  是任意常数) 是微分方程  $x^2 y'' - 3x y' + 4y = 0$  的通解.
 #answer-process[
    设 $y = x^2 (C_1 + C_2 ln x)$，计算导数：$y' = 2x (C_1 + C_2 ln x) + C_2 x$，
-   $y'' = 2 (C_1 + C_2 ln x) + frac(3C_2, x)$。
+   $y'' = 2 (C_1 + C_2 ln x) + 3C_2/x$。
    代入方程得
-   $x^2 y'' - 3x y' + 4y = x^2 [2(C_1 + C_2 ln x) + frac(3C_2, x)]
+   $x^2 y'' - 3x y' + 4y = x^2 [2(C_1 + C_2 ln x) + 3C_2/x]
    - 3x [2x (C_1 + C_2 ln x) + C_2 x] + 4x^2 (C_1 + C_2 ln x) = 0$，
    恒等成立，说明所给函数族为通解。
 ]
 9. 验证:  $y = 1/x (C_1 e^x + C_2 e^(-x)) + e^x/2 (C_1, C_2$  是任意常数)是微分方程  $x y'' + 2y' - x y = e^x$  的通解.
 #answer-process[
-   写作 $y = frac(C_1 e^x + C_2 e^(-x), x) + frac{e^x}2$，计算导数：
-   $y' = frac(C_1 e^x - C_2 e^(-x), x) - frac(C_1 e^x + C_2 e^(-x), x^2) + frac{e^x}2$，
-   $y'' = frac(C_1 e^x + C_2 e^(-x), x) - frac(2(C_1 e^x - C_2 e^(-x)), x^2) + frac(2(C_1 e^x + C_2 e^(-x)), x^3) + frac{e^x}2$。
+   写作 $y = (C_1 e^x + C_2 e^(-x)/x) + frac{e^x}2$，计算导数：
+   $y' = (C_1 e^x - C_2 e^(-x)/x) - (C_1 e^x + C_2 e^(-x)/x^2) + frac{e^x}2$，
+   $y'' = (C_1 e^x + C_2 e^(-x)/x) - (2(C_1 e^x - C_2 e^(-x))/x^2) + (2(C_1 e^x + C_2 e^(-x))/x^3) + frac{e^x}2$。
    代入 $x y'' + 2y' - x y$ 并整理，含 $C_1, C_2$ 的项互相抵消，剩余 $e^x$，
    因而给定函数满足微分方程，并由于包含两个任意常数，构成通解。
 ]

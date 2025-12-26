@@ -87,7 +87,7 @@
    
    这是关于 $y$ 的一阶线性微分方程。
    
-   取 $P(x) = 1/(x ln x)$，则 $integral P(x) dif x = integral 1/(x ln x) dif x = ln(ln x)$。
+   取 $P(x) = 1/(x ln x)$，则 $integral P(x) d x = integral 1/(x ln x) d x = ln(ln x)$。
    
    积分因子为 $mu(x) = e^(ln(ln x)) = ln x$。
    
@@ -95,11 +95,11 @@
    
    即 $[y ln x]' = a ln x (ln x + 1) = a(ln^2 x + ln x)$
    
-   积分：$y ln x = a integral (ln^2 x + ln x) dif x$
+   积分：$y ln x = a integral (ln^2 x + ln x) d x$
    
-   计算 $integral ln^2 x dif x = x ln^2 x - 2x ln x + 2x + C_1$
+   计算 $integral ln^2 x d x = x ln^2 x - 2x ln x + 2x + C_1$
    
-   计算 $integral ln x dif x = x ln x - x + C_2$
+   计算 $integral ln x d x = x ln x - x + C_2$
    
    因此：$y ln x = a(x ln^2 x - 2x ln x + 2x + x ln x - x) + C$
    $= a(x ln^2 x - x ln x + x) + C$
@@ -127,9 +127,9 @@
 
 5. 求下列微分方程满足所给初值条件的特解：
 
-   (1)  $y^3 dif x + 2(x^2 - x y^2) dif y = 0, y|_(x=1) = 1$ ;
+   (1)  $y^3 d x + 2(x^2 - x y^2) d y = 0, y|_(x=1) = 1$ ;
    #answer-process[
-   改写为：$y^3 dif x + (2x^2 - 2x y^2) dif y = 0$
+   改写为：$y^3 d x + (2x^2 - 2x y^2) d y = 0$
    
    检验是否为全微分方程：$M(x,y) = y^3$，$N(x,y) = 2x^2 - 2x y^2$
    
@@ -137,7 +137,7 @@
    
    这不是全微分方程，尝试找积分因子 $mu = 1/x^3$：
    
-   方程变为：$y^3/x^3 dif x + (2/x - 2y^2/x^2) dif y = 0$
+   方程变为：$y^3/x^3 d x + (2/x - 2y^2/x^2) d y = 0$
    
    设 $M_1 = y^3/x^3$，$N_1 = 2/x - 2y^2/x^2$
    

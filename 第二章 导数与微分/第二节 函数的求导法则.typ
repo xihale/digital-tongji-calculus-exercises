@@ -54,15 +54,15 @@
    (1)  $y = arctan e^x$
    #answer-process[$y' = (e^x)/(1+(e^x)^2) = (e^x)/(1+e^(2x))$]
    
-   (2)  $y = arcsin^2 x$
-   #answer-process[$y' = 2 arcsin x times 1/(sqrt(1)-x^2)$]
+    (2)  $y = arcsin^2 x$
+    #answer-process[$y' = 2 arcsin x times 1/sqrt(1-x^2)$]
    
-   (3)  $y = ln (x + sqrt(a^2 + x^2))$ ;
-   #answer-process[
-     $y' = 1/(x + sqrt(a^2+x^2)) times (1 + x/(sqrt(a^2)+x^2))$
-     $= 1/(x + sqrt(a^2+x^2)) times (sqrt(a^2+x^2)+x)/(sqrt(a^2)+x^2)$
-     $= 1/(sqrt(a^2)+x^2)$
-   ]
+    (3)  $y = ln (x + sqrt(a^2 + x^2))$ ;
+    #answer-process[
+      $y' = 1/(x + sqrt(a^2+x^2)) times (1 + x/sqrt(a^2+x^2))$
+      $= 1/(x + sqrt(a^2+x^2)) times (sqrt(a^2+x^2)+x)/sqrt(a^2+x^2)$
+      $= 1/sqrt(a^2+x^2)$
+    ]
    
    (4)  $y = ln tan(x/2)$ ;
    #answer-process[
@@ -95,8 +95,24 @@
      $= sin 2x (f'(sin^2 x) - f'(cos^2 x))$
    ]
 #subsection[三、证明题]
-6. 设函数  $f(x)$  满足下列条件：\
-   (1)  $f(x + y) = f(x)f(y),forall x,y in R,$ \
-   (2)  $f(x) = 1 + x g(x)$ , 而  $lim_(x->0)g(x) = 1$\
-   试证：  $f(x)$  在  $R$  上处处可导，且  $f'(x) = f(x)$
-   
+ 6. 设函数  $f(x)$  满足下列条件：\
+    (1)  $f(x + y) = f(x)f(y),forall x,y in R,$ \
+    (2)  $f(x) = 1 + x g(x)$ , 而  $lim_(x->0)g(x) = 1$\
+    试证：  $f(x)$  在  $R$  上处处可导，且  $f'(x) = f(x)$
+
+    #answer-process[
+      证明：
+      由条件 (2)，$f(0) = 1 + 0 times g(0) = 1$
+
+      由条件 (1)，对任意 $x in R$：
+      $f'(x) = lim_(h->0) (f(x+h) - f(x))/h = lim_(h->0) (f(x)f(h) - f(x))/h$
+      $= f(x) lim_(h->0) (f(h) - 1)/h$
+
+      由条件 (2)，$f(h) = 1 + h g(h)$，所以 $(f(h) - 1)/h = g(h)$
+
+      由条件 (2) 知 $lim_(h->0) g(h) = 1$，因此：
+      $f'(x) = f(x) times 1 = f(x)$
+
+      ∴ $f(x)$ 在 $R$ 上处处可导，且 $f'(x) = f(x)$
+    ]
+

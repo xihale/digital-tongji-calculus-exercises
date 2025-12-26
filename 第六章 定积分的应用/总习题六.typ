@@ -2,25 +2,25 @@
 
 #section[总习题六]
 #subsection[一、选择题]
-1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#answer-choice[(A)]).
+1. 由曲线  $y = e^x$  和直线  $x = 0$  及  $y = 2$  所围成的曲边梯形的面积为(#answer-choice[A]).
    #choices(
-   [$integral_(1)^(2) ln y , dif y$],
-   [$integral_(0)^(e^2) e^x , dif y$],
-   [$integral_(1)^(ln 2) ln y , dif y$],
-   [$integral_(1)^(2)(2 - e^x) dif x$]
+   [$integral_(1)^(2) ln y , d y$],
+   [$integral_(0)^(e^2) e^x , d y$],
+   [$integral_(1)^(ln 2) ln y , d y$],
+   [$integral_(1)^(2)(2 - e^x) d x$]
    )
 
-2.如图6-2所示，阴影部分面积为(#answer-choice[(B)])
+2.如图6-2所示，阴影部分面积为(#answer-choice[B])
 #figure(
   image("images/6-2.jpg", width: 18em),
   caption: [图6-2],
   alt: "两条曲线 f(x) 和 g(x) 在区间 [a, b] 上围成的阴影区域，用于计算定积分表示的面积"
 )
    #choices(
-   [$integral_(a)^(b)[f(x) - g(x)] dif x$],
-   [$integral_(a)^(c)[g(x) - f(x)] dif x + integral_(c)^(b)[f(x) - g(x)] dif x$],
-   [$integral_(a)^(b)[f(x) + g(x)] dif x$],
-   [$integral_(a)^(c)[f(x) - g(x)] dif x + integral_(c)^(b)[g(x) - f(x)] dif x$]
+   [$integral_(a)^(b)[f(x) - g(x)] d x$],
+   [$integral_(a)^(c)[g(x) - f(x)] d x + integral_(c)^(b)[f(x) - g(x)] d x$],
+   [$integral_(a)^(b)[f(x) + g(x)] d x$],
+   [$integral_(a)^(c)[f(x) - g(x)] d x + integral_(c)^(b)[g(x) - f(x)] d x$]
    )
 #subsection[二、填空题]
 3.由抛物线  $y = x^2 + 2x$  ，直线  $x = 1$  和  $x$  轴所围成图形的面积为  #blank[$4/3$]
@@ -46,7 +46,7 @@
 
 6. 水下有一个宽  2 m , 高  3 m  的矩形闸门铅直地浸没在水中, 水面超过门顶  2 m , 则闸门上所受的水压力为  #blank[$78000 N$]
 
-7. 连续函数  $y = f(x, m)$  对于任意常数  $m$  恒大于零，则由曲线  $y = f(x, m)$  及直线  $x = a$ ， $x = b$ ， $y = 0$  所围成图形的面积为 #blank[$integral_a^b f(x,m) dif x$].
+7. 连续函数  $y = f(x, m)$  对于任意常数  $m$  恒大于零，则由曲线  $y = f(x, m)$  及直线  $x = a$ ， $x = b$ ， $y = 0$  所围成图形的面积为 #blank[$integral_a^b f(x,m) d x$].
 
 #subsection[三、计算题]
 8. 求  $C$  的值  $(0 < C <= 1)$ , 使得由两曲线  $y = x^2$  与  $y = C x^3$  所围成图形的面积为  $2/3$ .
@@ -55,11 +55,11 @@
      
      在 $0 <= x <= 1/C$ 上，$x^2 >= C x^3$ 当 $1 - C x >= 0$。
      
-     面积 $S = integral_(0)^(1/C) (x^2 - C x^3) dif x = [x^3/3 - C x^4/4]_0^(1/C)$
+     面积 $S = integral_(0)^(1/C) (x^2 - C x^3) d x = [x^3/3 - C x^4/4]_0^(1/C)$
      
-     $= frac(1, 3 C^3) - frac(C, 4 C^4) = frac(1, 3 C^3) - frac(1, 4 C^3) = frac(1, 12 C^3)$
+     $= 1/3 C^3 - C/4 C^4 = 1/3 C^3 - 1/4 C^3 = 1/12 C^3$
      
-     由 $frac(1, 12 C^3) = frac(2, 3)$，得 $C^3 = frac(1, 8)$，所以 $C = 1/2$。
+     由 $1/12 C^3 = 2/3$，得 $C^3 = 1/8$，所以 $C = 1/2$。
    ]
 
 9. 求  $a$  的值，使得由曲线  $y = a(1 - x^2)(a > 0)$  与它在点  $(-1,0)$  和  $(1,0)$  处的法线所围成图形的面积最小.
@@ -78,7 +78,7 @@
     #answer-process[
     在 $x$ 处，由 $y^2 = 2x$ 得 $y = ± sqrt(2x)$，弦长为 $2sqrt(2x)$。
       
-    等边三角形面积 $A(x) = frac(sqrt(3), 4) · (2sqrt(2x))^2 = 2sqrt(3) x$。
+    等边三角形面积 $A(x) = (sqrt(3)/4) · (2sqrt(2x))^2 = 2sqrt(3) x$。
       
-    体积 $V = integral_0^2 2sqrt(3) x dif x = 2sqrt(3) [x^2/2]_0^2 = 4sqrt(3)$。
+    体积 $V = integral_0^2 2sqrt(3) x d x = 2sqrt(3) [x^2/2]_0^2 = 4sqrt(3)$。
     ]

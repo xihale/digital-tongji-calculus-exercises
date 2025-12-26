@@ -32,8 +32,8 @@
     ]
     (2)  $(y^2 - 6x) (d y)/(d x) + 2y = 0$。
     #answer-process[
-      视作 $x$ 关于 $y$ 的方程：$(dif x)/(dif y) - (3/y) x = -y/2$。
-      积分因子为 $y^(-3)$，得到 $(dif(x y^(-3)))/(dif y) = -(1/2) y^(-2)$。
+      视作 $x$ 关于 $y$ 的方程：$(d x)/(d y) - (3/y) x = -y/2$。
+      积分因子为 $y^(-3)$，得到 $(d(x y^(-3)))/(d y) = -(1/2) y^(-2)$。
        积分得 $x y^(-3) = (1/2) y^(-1) + C$，故 $x = (1/2) y^2 + C y^3$。
     ]
 5. 求下列微分方程满足所给初值条件的特解：
@@ -59,14 +59,14 @@
 
     (1)  $x y' + y = y(ln x + ln y)$ ;
     #answer-process[
-       假设 $y > 0$，令 $u = ln y$，则 $x (dif u)/(dif x) = ln x + u - 1$。
+       假设 $y > 0$，令 $u = ln y$，则 $x (d u)/(d x) = ln x + u - 1$。
       写成 $(u/x)' = (ln x - 1)/(x^2)$，积分得 $u/x = -(ln x)/x + C$。
        故 $ln y = C x - ln x$，即 $y = e^(C x)/x$。
     ]
-    (2)  $y(x y + 1) dif x + x(1 + x y + x^2 y^2) dif y = 0$。
+    (2)  $y(x y + 1) d x + x(1 + x y + x^2 y^2) d y = 0$。
     #answer-process[
-      令 $u = x y$，则 $dif y = (x (dif u) - u (dif x))/(x^2)$。
-       代入可得 $(1 + u + u^2) x (dif u) = u^3 (dif x)$。
+      令 $u = x y$，则 $d y = (x (d u) - u (d x))/(x^2)$。
+       代入可得 $(1 + u + u^2) x (d u) = u^3 (d x)$。
        分离变量并积分得到 $ln|u| - 1/u - 1/(2u^2) = ln|x| + C$。
        还原即 $ln|y| - 1/(x y) - 1/(2 x^2 y^2) = C$。
     ]

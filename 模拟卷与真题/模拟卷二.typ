@@ -37,52 +37,33 @@
      当 $x -> 0$ 时，$tan x approx x$，所以 $(tan x)^(1/3) approx x^(1/3)$，这是 $x$ 的 $1/3$ 阶无穷小。
    ]
 
-2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是 (#answer-choice[B]).
-   #choices(
-   [$f(0)$  是  $f(x)$  的极大值],
-   [$f(0)$  是  $f(x)$  的极小值],
-   [(0, $f(0)$)  是曲线  $y = f(x)$  的拐点],
-   [$f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点]
-   )
-   #answer-process[
-     由条件：$f''(x) + [f'(x)]^2 = x$ 且 $f'(0) = 0$。
-     
-     在 $x = 0$ 处，代入条件得：
-     $f''(0) + [f'(0)]^2 = 0$
-     
-     $f''(0) + 0^2 = 0$
-     
-     $f''(0) = 0$
-     
-     这说明用二阶导数无法判断极值。需要用高阶导数或其他方法。
-     
-     对 $f''(x) + [f'(x)]^2 = x$ 两边关于 $x$ 求导：
-     $f'''(x) + 2f'(x) f''(x) = 1$
-     
-     在 $x = 0$ 处：
-     $f'''(0) + 2f'(0) f''(0) = 1$
-     
-     $f'''(0) + 0 = 1$
-     
-     $f'''(0) = 1 != 0$
-     
-     因此 $(0, f(0))$ 不是拐点（拐点处三阶导数为0）。选项C错误。
-     
-     对判断极值，考察 $f'(x)$ 在 $x = 0$ 附近的符号变化：
-     
-     对 $f''(x) + [f'(x)]^2 = x$，当 $x$ 充分小时（$x > 0$），有：
-     $f''(x) = x - [f'(x)]^2$
-     
-     当 $x > 0$ 且 $x$ 充分小时，若 $[f'(x)]^2$ 不太大，则 $f''(x) > 0$。
-     
-     更直接的方法：当 $x > 0$（充分小）时，$f''(x) = x - [f'(x)]^2 approx x > 0$（因为 $f'(x)$ 接近0）。
-     
-     当 $x < 0$（充分小）时，$f''(x) = x - [f'(x)]^2 approx x < 0$。
-     
-     这说明 $f''(x)$ 在 $x = 0$ 处从负变正。
-     
-     由于 $f'(0) = 0$，这说明 $x = 0$ 是 $f'(x)$ 的极小值点，因此 $f(0)$ 是 $f(x)$ 的极小值。
-   ]
+ 2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是 (#answer-choice[B]).
+    #choices(
+    [$f(0)$  是  $f(x)$  的极大值],
+    [$f(0)$  是  $f(x)$  的极小值],
+    [(0, $f(0)$)  是曲线  $y = f(x)$  的拐点],
+    [$f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点]
+    )
+    #answer-process[
+      由条件：$f''(x) + [f'(x)]^2 = x$ 且 $f'(0) = 0$。
+      
+      在 $x = 0$ 处：$f''(0) = 0$
+      
+      分析 $f''(x)$ 在 $x = 0$ 附近的符号：
+      - 当 $x > 0$ 且很小时：$f''(x) = x - [f'(x)]^2$。由于 $f'(x)$ 连续且 $f'(0) = 0$，$[f'(x)]^2$ 很小，所以 $f''(x) > 0$
+      - 当 $x < 0$ 且很小时：$f''(x) = x - [f'(x)]^2 < 0$
+      
+      $f''(x)$ 在 $x = 0$ 处从负变正。
+      
+      由 $f'(0) = 0$ 且 $f''(x)$ 在 $x = 0$ 处从负变正可知：
+      - 当 $x < 0$ 时，$f''(x) < 0$，$f'(x)$ 递减
+      - 当 $x > 0$ 时，$f''(x) > 0$，$f'(x)$ 递增
+      - $f'(0) = 0$ 是 $f'(x)$ 的最小值
+      
+      所以 $f'(x) \geq 0$ 恒成立（等号仅在 $x = 0$ 处取到）。
+      
+      这意味着 $f(x)$ 单调递增，且 $f(0)$ 是极小值。
+    ]
 3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为 (#answer-choice[A]).
    #choices(
    [1],
@@ -110,7 +91,7 @@
      分子：$sin 1 != 0$（常数）
      分母：$1 dot 0 dot (1 - pi) = 0$
      
-     分子不为零，分母为零，所以 $lim_(x->1) f(x) = infinity$ 或 $-infinity$。
+     分子不为零，分母为零，所以 $lim_(x->1) f(x) = oo$ 或 $-oo$。
      
      因此 $x = 1$ 是无穷间断点。
      
@@ -130,33 +111,33 @@
    ]
 4.下列不定积分的计算不正确的是 (#answer-choice[C]).
    #choices(
-   [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
-   [$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
-   [$integral sin^2 x dif x = 1/3 sin^3 x + C$],
-   [$integral 2^x dot 3^x dif x = (2^x dot 3^x)/(ln 2 + ln 3) + C$]
+   [$integral (d x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+   [$integral (d x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
+   [$integral sin^2 x d x = 1/3 sin^3 x + C$],
+   [$integral 2^x dot 3^x d x = (2^x dot 3^x)/(ln 2 + ln 3) + C$]
    )
    #answer-process[
      逐一检验每个选项：
      
-     选项 A：$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$
+     选项 A：$integral (d x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$
      
-     令 $u = x/2$，则 $dif u = dif x/2$，$dif x = 2 dif u$：
-     $integral (dif x)/(sqrt(4 - x^2)) = integral (2 dif u)/(sqrt(4 - 4u^2)) = integral (2 dif u)/(2sqrt(1 - u^2)) = integral (dif u)/(sqrt(1 - u^2))$
+     令 $u = x/2$，则 $d u = d x/2$，$d x = 2 d u$：
+     $integral (d x)/(sqrt(4 - x^2)) = integral (2 d u)/(sqrt(4 - 4u^2)) = integral (2 d u)/(2sqrt(1 - u^2)) = integral (d u)/(sqrt(1 - u^2))$
      
      $= arcsin u + C = arcsin(x/2) + C$ ✓ 正确
      
-     选项 B：$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$
+     选项 B：$integral (d x)/(x^2 + 2x + 2) = arctan(x + 1) + C$
      
      先配方：$x^2 + 2x + 2 = (x + 1)^2 + 1$
      
-     令 $u = x + 1$，$dif u = dif x$：
-     $integral (dif x)/((x + 1)^2 + 1) = integral (dif u)/(u^2 + 1) = arctan u + C = arctan(x + 1) + C$ ✓ 正确
+     令 $u = x + 1$，$d u = d x$：
+     $integral (d x)/((x + 1)^2 + 1) = integral (d u)/(u^2 + 1) = arctan u + C = arctan(x + 1) + C$ ✓ 正确
      
-     选项 C：$integral sin^2 x dif x = 1/3 sin^3 x + C$
+     选项 C：$integral sin^2 x d x = 1/3 sin^3 x + C$
      
      这是错误的。应该用倍角公式：$sin^2 x = (1 - cos 2x)/2$
      
-     $integral sin^2 x dif x = integral (1 - cos 2x)/2 dif x = 1/2 integral (1 - cos 2x) dif x$
+     $integral sin^2 x d x = integral (1 - cos 2x)/2 d x = 1/2 integral (1 - cos 2x) d x$
      
      $= 1/2 (x - (sin 2x)/2) + C = x/2 - (sin 2x)/4 + C$
      
@@ -164,11 +145,11 @@
      
      所以选项 C 错误。✗
      
-     选项 D：$integral 2^x dot 3^x dif x = (2^x dot 3^x)/(ln 2 + ln 3) + C$
+     选项 D：$integral 2^x dot 3^x d x = (2^x dot 3^x)/(ln 2 + ln 3) + C$
      
      $2^x dot 3^x = (2 dot 3)^x = 6^x$
      
-     $integral 6^x dif x = 6^x / ln 6 + C = 6^x / ln(2 dot 3) + C = 6^x / (ln 2 + ln 3) + C$ ✓ 正确
+     $integral 6^x d x = 6^x / ln 6 + C = 6^x / ln(2 dot 3) + C = 6^x / (ln 2 + ln 3) + C$ ✓ 正确
    ]
 5.下列方程中为一阶线性微分方程 (#answer-choice[D]).
    #choices(
@@ -202,51 +183,33 @@
    ]
 
 #subsection[二、填空题(每小题3分，共18分)]
-6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[$0$].
-   #answer-process[
-     函数在 $x = 0$ 处连续需满足：$lim_(x->0^-) f(x) = lim_(x->0^+) f(x) = f(0)$
-     
-     左极限：
-     $lim_(x->0^-) f(x) = lim_(x->0^-) (e^x - 2) = 1 - 2 = -1$
-     
-     函数在 $x = 0$ 处的值：
-     $f(0) = e^0 - 2 = -1$
-     
-     右极限：
-     $lim_(x->0^+) f(x) = lim_(x->0^+) (x sin(1/x) + (sin(a x))/x)$
-     
-     对于第一项：$lim_(x->0^+) x sin(1/x)$
-     
-     由于 $|sin(1/x)| <= 1$，所以 $|x sin(1/x)| <= |x| -> 0$，因此 $lim_(x->0^+) x sin(1/x) = 0$
-     
-     对于第二项：$lim_(x->0^+) (sin(a x))/x$
-     
-     使用极限 $lim_(u->0) (sin u)/u = 1$，令 $u = a x$，则当 $x -> 0^+$ 时，$u -> 0$：
-     $lim_(x->0^+) (sin(a x))/x = lim_(x->0^+) a dot (sin(a x))/(a x) = a dot lim_(u->0) (sin u)/u = a dot 1 = a$
-     
-     因此：
-     $lim_(x->0^+) f(x) = 0 + a = a$
-     
-     由连续性条件：$lim_(x->0^+) f(x) = f(0)$，即 $a = -1$
-     
-     等等，让我重新计算。$f(0)$ 处的值由 $x <= 0$ 的定义给出：
-     
-     $f(0) = e^0 - 2 = -1$
-     
-     所以需要 $a = -1$。
-     
-     但根据常见的题目，通常 $a = 0$ 使连续。让我验证 $a = 0$ 的情况：
-     
-     若 $a = 0$，则 $f(x) = x sin(1/x)$ 当 $x > 0$
-     
-     $lim_(x->0^+) x sin(1/x) = 0$（由被压缩定理）
-     
-     而 $f(0) = -1$，这样不连续。
-     
-     正确的答案应该是需要调整。通常题目可能是 $f(0)$ 点需要补充定义。如果 $f(x)$ 在 $x = 0$ 处的值也要连续，应该有 $a = 0$ 且 $f(0) = 0$。
-     
-     根据标准解法，答案是 $a = 0$。
-   ]
+ 6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[$-1$].
+    #answer-process[
+      函数在 $x = 0$ 处连续需满足：$lim_(x->0^-) f(x) = lim_(x->0^+) f(x) = f(0)$
+      
+      左极限：
+      $lim_(x->0^-) f(x) = lim_(x->0^-) (e^x - 2) = 1 - 2 = -1$
+      
+      函数在 $x = 0$ 处的值：
+      $f(0) = e^0 - 2 = -1$
+      
+      右极限：
+      $lim_(x->0^+) f(x) = lim_(x->0^+) (x sin(1/x) + (sin(a x))/x)$
+      
+      对于第一项：$lim_(x->0^+) x sin(1/x)$
+      
+      由于 $|sin(1/x)| <= 1$，所以 $|x sin(1/x)| <= |x| -> 0$，因此 $lim_(x->0^+) x sin(1/x) = 0$
+      
+      对于第二项：$lim_(x->0^+) (sin(a x))/x$
+      
+      使用极限 $lim_(u->0) (sin u)/u = 1$，令 $u = a x$，则当 $x -> 0^+$ 时，$u -> 0$：
+      $lim_(x->0^+) (sin(a x))/x = lim_(x->0^+) a dot (sin(a x))/(a x) = a dot lim_(u->0) (sin u)/u = a dot 1 = a$
+      
+      因此：
+      $lim_(x->0^+) f(x) = 0 + a = a$
+      
+      由连续性条件：$lim_(x->0^+) f(x) = f(0)$，即 $a = -1$
+    ]
 
 7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为 #blank[$y = x - 1$].
    #answer-process[
@@ -310,7 +273,7 @@
    曲率：$k = |y''|/((1 + (y')^2)^(3"/"2)) = |sec^2 x|/((1 + tan^2 x)^(3"/"2)) = sec^2 x/(sec^3 x) = 1/sec x = |cos x|$
    ]
 
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x = $ #blank[$pi/2$]
+10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) d x = $ #blank[$pi/2$]
    #answer-process[
    拆分：$integral_(-1)^(1) (x^2 sin x)/(sqrt(1 - x^2)) d x + integral_(-1)^(1) (1 - x^2)/(sqrt(1 - x^2)) d x$
    
@@ -335,15 +298,15 @@
    ]
 
 #subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
-12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$ .
+12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) d t)^2)/(integral_0^x t e^(2 t^2) d t)$ .
    
 13. 已知函数  $y = f(x)$  由方程  $e^y + x y - 2x - 1 = 0$  所确定，求  $y''(0)$ .
    
-14. 求  $integral e^(sqrt(x)) dif x$
+14. 求  $integral e^(sqrt(x)) d x$
    
-15. 求  $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) dif x$ .
+15. 求  $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) d x$ .
    
-16. 设函数  $f(x) = cases( 1/(1 + x^2) &"if" x <= 0, ln x &"if" x > 0 )$  求  $integral_(-1)^(1) x f(x) dif x$.
+16. 设函数  $f(x) = cases( 1/(1 + x^2) &"if" x <= 0, ln x &"if" x > 0 )$  求  $integral_(-1)^(1) x f(x) d x$.
    
 17. 求曲线  $y = (x - 1) root(3,x^2)$  的凹凸区间及拐点
    
@@ -353,5 +316,5 @@
 19. 求由曲线  $y = x^(3/2)$  ，直线  $x = 4$  及  $x$  轴所围成图形的面积，并求此图形绕  $x$  轴旋转一周所得旋转体的体积。
    
 #subsection[五、证明题(5分)]
-20. 设函数  $f(x)$  在区间  $[0,1]$  上连续，在  $(0,1)$  内可导，且  $integral_0^1 f(x) dif x = 0$  ，证明：必存在  $xi in (0,1)$ ，使得 $2 f (xi) = - xi f ^prime (xi).$
+20. 设函数  $f(x)$  在区间  $[0,1]$  上连续，在  $(0,1)$  内可导，且  $integral_0^1 f(x) d x = 0$  ，证明：必存在  $xi in (0,1)$ ，使得 $2 f (xi) = - xi f ^prime (xi).$
 #pagebreak()
