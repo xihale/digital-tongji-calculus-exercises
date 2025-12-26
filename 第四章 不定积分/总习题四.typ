@@ -209,7 +209,7 @@
 
  12. 设函数  $f(sin^2 x) = x/(sin x)$ ，求  $integral (sqrt(x))/(sqrt(1 - x)) f(x) d x$.
      #answer-process[
-       令 $u = sin^2 x$，则 $\sin x = sqrt(u)$，$x = arcsin sqrt(u)$。
+       令 $u = sin^2 x$，则 $sin x = sqrt(u)$，$x = arcsin sqrt(u)$。
        
        所以 $f(u) = (arcsin sqrt(u))/sqrt(u)$
        
@@ -219,15 +219,15 @@
        
     $= integral (arcsin sqrt(x))/sqrt(1-x)) d x$
        
-       令 $v = sqrt(x)$，则 $x = v^2$，$d x = 2v d v$，$\sqrt{1-x} = \sqrt{1-v^2}$：
+       令 $v = sqrt(x)$，则 $x = v^2$，$d x = 2v d v$，$sqrt(1-x) = sqrt(1-v^2)$：
        
-    $= integral arcsin v/\sqrt{1-v^2} · 2v d v$
+    $= integral arcsin v/sqrt(1-v^2) · 2v d v$
        
-       令 $w = arcsin v$，则 $d w = d v / \sqrt{1-v^2}$，$v = \sin w$：
+       令 $w = arcsin v$，则 $d w = d v / sqrt(1-v^2)$，$v = sin w$：
        
-    $= 2 integral w \sin w · d w = 2(-w \cos w + \sin w) + C$
+    $= 2 integral w sin w · d w = 2(-w cos w + sin w) + C$
        
-    $= 2[-\arcsin(sqrt(x)) · sqrt(1-x) + sqrt(x)] + C$
+    $= 2[-arcsin(sqrt(x)) · sqrt(1-x) + sqrt(x)] + C$
      ]
 
 13. 已知函数  $f(x)$  的一个原函数为  $ln^2 x$ ，求  $integral x f'(x) d x$ .

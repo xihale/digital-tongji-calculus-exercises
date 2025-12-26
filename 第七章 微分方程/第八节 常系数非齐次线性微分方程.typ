@@ -10,7 +10,7 @@
    [$y^* = a x e^x + b x$]
    )
    #answer-process[
-   首先分析特征方程：$r^2 - 1 = 0$，解得 $r = \pm 1$。
+   首先分析特征方程：$r^2 - 1 = 0$，解得 $r = plus.minus 1$。
    
    对于非齐次项 $3 e^x$，由于 $e^x$ 对应的特征根 $r = 1$ 是单根，所以特解形式应为 $A x e^x$。
    
@@ -27,7 +27,7 @@
    [$y^* = a cos x + b sin x$]
    )
    #answer-process[
-   首先分析特征方程：$r^2 + 1 = 0$，解得 $r = \pm i$。
+   首先分析特征方程：$r^2 + 1 = 0$，解得 $r = plus.minus i$。
    
    对于非齐次项 $sin x$，由于 $sin x$ 对应的特征根 $r = i$ 是单根，所以特解形式应为 $x (A cos x + B sin x)$。
    

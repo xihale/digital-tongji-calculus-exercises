@@ -53,7 +53,7 @@
      #answer-process[
        $d y = 1/sqrt(1-(1-x^2)) times 1/(2sqrt(1-x^2)) times (-2x) d x$
        
-       $= -x/(|x| sqrt(1-x^2)) d x = -(sign x)/sqrt(1-x^2) d x$
+       $= -x/(|x| sqrt(1-x^2)) d x = -(op("sgn") x)/sqrt(1-x^2) d x$
      ]
    
    (4)  $y = tan^2 (1 + 2x^2)$ .
