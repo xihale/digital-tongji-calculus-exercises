@@ -43,7 +43,7 @@ jobs:
                   git config user.email "github-actions[bot]@users.noreply.github.com"
 
                   # Extract current version from index.typ
-                  CURRENT_VERSION=$(grep -oP '#let VERSION = "\K[^"+' index.typ)
+                  CURRENT_VERSION=$(grep 'let VERSION =' index.typ | cut -d '"' -f 2)
                   echo "Current version: $CURRENT_VERSION"
 
                   # Parse version (e.g., v0.0.3 -> 0.0.3)
@@ -74,7 +74,7 @@ jobs:
                   # Get version from previous step or from file
                   VERSION="${{ steps.auto_version.outputs.version }}"
                   if [ -z "$VERSION" ]; then
-                    VERSION=$(grep -oP '#let VERSION = "\K[^"+' index.typ)
+                    VERSION=$(grep 'let VERSION =' index.typ | cut -d '"' -f 2)
                   fi
                   echo "Final version: $VERSION"
                   echo "version=$VERSION" >> $GITHUB_OUTPUT
@@ -102,7 +102,7 @@ jobs:
                   cp dtce.pdf deploy/高等数学习题册上册.pdf
                   cp dtce_ans.pdf deploy/高等数学习题册上册_带答案.pdf
 
-                  # Update version in index.html (already dynamic, but good for local/legacy)
+                  # Update version in index.html
                   VERSION="${{ steps.version.outputs.version }}"
                   sed -i "s/<span class=\"version-value\" id=\"version\">v[0-9.]*</<span class=\"version-value\" id=\"version\">$VERSION</g" deploy/index.html
 
