@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <h1>高等数学习题册（上册）</h1>
-            <p class="version">版本: <span class="version-value" id="version">v0.0.6</span></p>
+            <p class="version">版本: <span class="version-value" id="version">Checking...</span></p>
         </header>
         
         <main>
@@ -58,5 +58,26 @@
             <p><a href="https://github.com/xihale/digital-tongji-calculus-exercises" target="_blank">GitHub 仓库</a></p>
         </footer>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('https://api.github.com/repos/xihale/digital-tongji-calculus-exercises/releases/latest')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.tag_name) {
+                        document.getElementById('version').textContent = data.tag_name;
+                    }
+                })
+                .catch(error => {
+                    console.log('Could not fetch latest version:', error);
+                    document.getElementById('version').textContent = 'Latest';
+                });
+        });
+    </script>
 </body>
 </html>
