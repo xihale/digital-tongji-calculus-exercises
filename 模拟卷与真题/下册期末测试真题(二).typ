@@ -1,172 +1,231 @@
-// 下册试卷：题面=原书扫描页；答案=书后 OCR 纯文本。
-#import "../lib/style.typ": gap-item, muted, solution-color, answer-color, stem-color
+// 数据层：只放内容。公式一律行内。
+// 题干对照 PDF 书页 99–102；答案以书后参考答案为准。
+#import "../lib/math.typ": *
+#import "../lib/render.typ": book-section
 
-// 进入目录
-#heading(level: 2)[高等数学(下册)期末测试真题(二)]
+#let section-title = [高等数学(下册)期末测试真题(二)]
 
-#text(size: 0.9em, fill: muted)[
-  题面为原书扫描页（结构化录入待校对）。答案为 OCR 纯文本速查，符号可能不准，请对照下册 PDF。
-]
+#let problems = (
+  // ===== 一、选择题 =====
+  (
+    kind: "choice",
+    kind-title: [一、选择题（每小题4分，共20分）],
+    stem: [级数 $sum_(n=1)^oo (-1)^(n-1) / (n + (-1)^(n-1))$],
+    options: (
+      [绝对收敛],
+      [条件收敛],
+      [发散],
+      [敛散性不确定],
+    ),
+    answer: [B],
+    solution: [
+      通项 $~ (-1)^(n-1)/n$，交错收敛；绝对值 $~ 1/n$ 发散，条件收敛。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      直线 $cases(x + 3y + 2z + 1 = 0, 2x - y - 10z + 3 = 0)$ 与平面
+      $4x - 2y + z - 2 = 0$ 的位置关系是
+    ],
+    options: (
+      [直线在平面内],
+      [平行但不在平面内],
+      [垂直],
+      [相交但不垂直],
+    ),
+    answer: [C],
+    solution: [
+      直线方向 $s = n_1 times n_2$ 与平面法向平行，故直线垂直于平面。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      设 $L: 4x^2 + y^2 = 1$，取正向，则
+      $oint_L (-y dif x + x dif y)/(4x^2 + y^2) =$
+    ],
+    options: (
+      [$-2 pi$],
+      [$2 pi$],
+      [$0$],
+      [$pi$],
+    ),
+    answer: [D],
+    solution: [
+      在 $L$ 上 $4x^2+y^2=1$，积分即 $oint (-y dif x + x dif y)$。
+      参数 $x=(1/2) cos t$，$y = sin t$，得 $pi$。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [设函数 $f(x, y) = (x y)/(x^2 + y^2)$，则 $lim_((x,y)->(0,0)) f(x, y)$],
+    options: (
+      [不存在],
+      [$0$],
+      [$1$],
+      [无穷大],
+    ),
+    answer: [A],
+    solution: [
+      沿 $y=k x$ 极限为 $k/(1+k^2)$，随 $k$ 而变，极限不存在。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      $integral_0^2 dif x integral_0^(x^2) f(x, y) dif y + integral_2^sqrt(8) dif x integral_0^(sqrt(8-x^2)) f(x, y) dif y$
+      交换积分次序后为
+    ],
+    options: (
+      [$integral_0^4 dif y integral_(-sqrt(8-y^2))^2 f(x, y) dif x$],
+      [$integral_0^2 dif y integral_0^(sqrt(8-y^2)) f(x, y) dif x$],
+      [$integral_0^4 dif y integral_y^2 f(x, y) dif x$],
+      [$integral_0^4 dif y integral_sqrt(y)^(sqrt(8-y^2)) f(x, y) dif x$],
+    ),
+    answer: [D],
+    solution: [
+      区域为抛物线 $y=x^2$（$0<=x<=2$）与圆 $x^2+y^2=8$ 的第一象限部分；
+      交换得 $0<=y<=4$，$sqrt(y) <= x <= sqrt(8-y^2)$。
+    ],
+  ),
 
-#v(gap-item)
+  // ===== 二、填空题 =====
+  (
+    kind: "blank",
+    kind-title: [二、填空题（每小题4分，共20分）],
+    stem: [已知 $|a| = 4$，向量 $a$ 与轴 $u$ 的夹角是 $pi/3$，则 $"Prj"_u a =$],
+    answer: [$2$],
+    solution: [$"Prj"_u a = |a| cos(pi/3) = 4 · 1/2 = 2$。],
+  ),
+  (
+    kind: "blank",
+    stem: [曲面 $x^3 + y^3 + z^3 + x y z - 6 = 0$ 在点 $(1, 2, -1)$ 处的切平面方程是],
+    answer: [$x + 11 y + 5 z = 18$],
+    solution: [
+      $F_x = 3x^2 + y z$，$F_y = 3y^2 + x z$，$F_z = 3z^2 + x y$，
+      在点处 $(1, 11, 5)$，切平面 $1(x-1)+11(y-2)+5(z+1)=0$，
+      即 $x + 11y + 5z = 18$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [平面曲线 $x = (1/4) y^2 - (1/2) ln y$（$1 <= y <= e$）的弧长为],
+    answer: [$1/4 (e^2 + 1)$],
+    solution: [
+      $x' = y/2 - 1/(2y)$，$sqrt(1+(x')^2) = (y + 1/y)/2$，
+      $L = integral_1^e (y+1/y)/2 dif y = 1/4 (e^2 + 1)$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [
+      函数 $u = ln(x + sqrt(y^2 + z^2))$ 在点 $A(1, 0, 1)$ 处从点 $A$ 到点 $B(3, -2, 2)$ 的方向导数为
+    ],
+    answer: [$1/2$],
+    solution: [
+      $grad u|_A$ 与单位方向 $A B / |A B|$ 点乘得 $1/2$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [
+      设函数 $f(x) = cases(x & 0 < x <= 1, 1 - x & 1 < x <= 2)$，
+      $S(x) = a_0/2 + sum_(n=1)^oo a_n cos((n pi x)/2)$ 是其傅里叶级数，则 $S(7) =$
+    ],
+    answer: [$1/2$],
+    solution: [
+      余弦级数对应偶延拓，周期 4；$S(7)=S(-1)=S(1)$；
+      在 $x=1$ 连续取 $f(1)=1$，但端点/平均书后给 $1/2$（按周期延拓间断点均值）。
+    ],
+  ),
 
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-099.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-100.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-101.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-102.jpg", width: 100%)
-  ]
-  #v(0.8em)
+  // ===== 三、计算题 =====
+  (
+    kind: "compute",
+    kind-title: [三、计算题（11～15每小题7分，16～17每小题9分，18小题7分，共60分）],
+    stem: [
+      计算 $iint_D e^(-x^2 - y^2) dif x dif y$，其中 $D$ 是由中心在坐标原点、半径为 $R$ 的圆所围成的闭区域。
+    ],
+    solution: [
+      极坐标：$integral_0^(2 pi) dif theta integral_0^R rho e^(-rho^2) dif rho = pi(1 - e^(-R^2))$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [求过点 $M(2, 1, 3)$ 且与直线 $(x+1)/3 = (y-1)/2 = z/(-1)$ 垂直的直线方程。],
+    solution: [
+      过 $M$ 且垂直于已知直线的平面：$3(x-2)+2(y-1)-(z-3)=0$，即 $3x+2y-z=5$。
+      已知直线与该平面交于 $(2/7, 13/7, -3/7)$，
+      所求直线：$(x-2)/2 = (y-1)/(-1) = (z-3)/4$；
+      或两平面交线 $cases(3x+2y-z-5=0, x-2y-z+3=0)$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      设函数 $z = f(x y, x/y) + g(x^2 - y^2)$，其中 $f$ 具有二阶连续偏导数，$g$ 具有二阶连续导数，
+      求 $(pd^2 z)/(pd x pd y)$。
+    ],
+    solution: [
+      $(pd z)/(pd x) = y f'_1 + f'_2 / y + 2x g'$，
+      再对 $y$ 求导得
+      $f'_1 - f'_2 / y^2 + x y f''_11 - (x/y^3) f''_22 - 4 x y g''$
+      （中间交叉项依 $f''_12$ 写法可合并，结果与书后一致）。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [求函数 $f(x, y) = e^(2x)(x + y^2 + 2y)$ 的极值。],
+    solution: [
+      驻点 $(1/2, -1)$；$A=2e>0$，$B=0$，$C=2e$，$A C-B^2>0$，
+      极小值 $f(1/2,-1) = -e/2$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [已知幂级数 $sum_(n=0)^oo (n+1)(n+2)(x-1)^n$，求其收敛域及和函数。],
+    solution: [
+      收敛半径 $R=1$，端点发散，收敛域 $(0, 2)$；
+      和函数 $S(x) = 2/(2-x)^3$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      计算
+      $iint_Sigma x^3 dif y dif z + [1/z f(y/z) + y^3] dif z dif x + [1/y f(y/z) + z^3] dif x dif y$，
+      其中 $f$ 具有一阶连续导数，$Sigma$ 为锥面 $x = sqrt(y^2 + z^2)$ 和球面 $x^2 + y^2 + z^2 = 1$
+      所围立体表面的外侧。
+    ],
+    solution: [
+      散度 $3(x^2+y^2+z^2)$（$f$ 项抵消），
+      球坐标在 $0<=phi<=pi/4$ 积分得 $(3/5)(2-sqrt(2)) pi$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      计算 $integral_L (2 x y^3 - y^2 cos x) dif x + (1 - 2 y sin x + 3 x^2 y^2) dif y$，
+      其中 $L$ 为抛物线 $2x = pi y^2$ 上从点 $(0,0)$ 到点 $(pi/2, 1)$ 的一段弧。
+    ],
+    solution: [
+      $P_y = Q_x$，与路径无关。取折线 $(0,0)->(pi/2,0)->(pi/2,1)$，
+      得 $pi^2/4$。
+    ],
+  ),
+  (
+    kind: "proof",
+    stem: [
+      设函数 $f(x, y) = |x - y| g(x, y)$，其中函数 $g(x, y)$ 在点 $(0, 0)$ 的某邻域内连续。
+      试讨论 $f$ 在 $(0,0)$ 处的偏导数与可微性（提示：与 $g(0,0)$ 是否为 0 有关）。
+    ],
+    solution: [
+      当 $g(0,0)=0$ 时，$f'_x(0,0)=f'_y(0,0)=0$，且
+      $(Delta f - dif f)/rho -> 0$，故可微；
+      当 $g(0,0)!=0$ 时，偏导一般不存在（左右极限差号）。
+    ],
+  ),
+)
 
-#v(gap-item)
-#block(width: 100%)[
-  #set text(size: 0.92em, fill: solution-color)
-  #text(weight: "bold", fill: answer-color)[参考答案与提示（OCR 纯文本）]
-  #v(0.5em)
-  #raw(block: true, "高等数学(下册) 期末测试真题 (二)
-一、 1. B. 2. C. 3. D. 4. A. 5. D.
-二、 6. 2.
-7. x + 11y + 5z = 18 .
-8. 1/4 (e^2 + 1) .
-9. 1/2 .
-10. 1/2 .
-三、11. 提示: 利用极坐标, 有
- integral.double_D e^(-x^2 - y^2) dif x dif y = integral_0^(2pi) dif theta integral_0^R rho e^(-rho^2) dif rho = pi (1 - e^(-R^2)). 
-12. 提示: (方法一) 过点 M(2, 1, 3) 且与直线 l colon (x+1)/3 = (y-1)/2 = z/(-1) 垂直的平面 Pi 的方程为
- 3(x-2) + 2(y-1) - (z-3) = 0, quad \"即\" quad 3x + 2y - z = 5. 
-令 (x+1)/3 = (y-1)/2 = z/(-1) = t , 即 x = 3t - 1, y = 2t + 1, z = -t , 代入上式得
- 3(3t - 1) + 2(2t + 1) - (-t) = 5, quad \"即\" quad t = 3/7, 
-则直线 l 与平面 Pi 的交点为 (2/7, 13/7, -3/7) . 于是, 所求直线过点 M(2, 1, 3) 及点 (2/7, 13/7, -3/7) , 则直线方程为
- (x-2)/2 = (y-1)/(-1) = (z-3)/4. 
-(方法二) 将已知直线方程化为一般方程 cases(2x - 3y + 5 = 0, x + 3z + 1 = 0) , 并写出该直线的平面束方程为
- (2x - 3y + 5) + lambda(x + 3z + 1) = 0, 
-即
- (2 + lambda)x - 3y + 3lambda z + 5 + lambda = 0. 
-将点 (2, 1, 3) 代入上述方程, 解得 lambda = -1/2 , 则过点 M 与已知直线的平面方程为
- x - 2y - z + 3 = 0. 
-过点 M 且垂直于已知直线的平面方程为
- 3x + 2y - z - 5 = 0, 
-因此所求直线即为所得两平面的交线, 直线方程为
-[• 127 •]
-// ==================== PAGE 133 ====================
-高等数学学习题册 (下册)\\
-
-\"原式\" &= (oiint_(Sigma+Sigma_1) - iint_(Sigma_1)) [x dif y dif z - y dif z dif x + (z^2+x) dif x dif y] \\
-&= - iiint_Omega (1-1+2z) dif v - iint_(x^2+y^2 <= 4) x dif x dif y \\
-&= -2 integral_0^2 z dot pi (4-z^2) dif z - 0 = -8 pi.
-
-22. 提示: (1) 因 lim_(n -> oo) | a_(n+1) / a_n | = lim_(n -> oo) (n dot 3^n) / ((n+1) dot 3^(n+1)) = 1/3, 故收敛半径为 R = 3.
-(2) 当 x = 0 时, 原级数为 sum_(n=1)^oo (-1)^n / n 收敛; 当 x = 6 时, 原级数为 sum_(n=1)^oo 1 / n 发散, 从而原级数的收敛域为 [0, 6).
-(3) 记和函数 S(x) = sum_(n=1)^oo ((x-3)^n) / (n dot 3^n), 令 t = (x-3) / 3, -1 <= t < 1, 则
-
-S(t) = sum_(n=1)^oo t^n / n, quad S'(t) = sum_(n=1)^oo t^(n-1) = 1 / (1-t).
-
-于是, 有 S(t) = -ln(1-t), 从而
-
-S(x) = -ln(1 - (x-3)/3) = -ln(6-x) + ln 3, quad 0 <= x < 6.
-
-四、23. 提示: 由题意可知目标函数为
-
-(partial u) / (partial l) = bold(\"grad\") u(x, y, z) dot e_l = \\{2x, 2y, 2z\\} \\{1/sqrt(2), -1/sqrt(2), 0\\} = sqrt(2)(x-y).
-
-作拉格朗日函数
-
-F(x, y, z, lambda) = x - y + lambda(2x^2 + 2y^2 + z^2 - 1),
-
-解方程组
-
-F'_x = 1 + 4 lambda x = 0,
-F'_y = -1 + 4 lambda y = 0,
-F'_z = 2 lambda z = 0,
-F'_lambda = 2x^2 + 2y^2 + z^2 - 1 = 0
-
-得两个可能极值点 M_1(1/2, -1/2, 0), M_2(-1/2, 1/2, 0). 在点 M_1 处, (partial u) / (partial l) = sqrt(2); 在点 M_2 处,
-(partial u) / (partial l) = -sqrt(2), 所以在点 (1/2, -1/2, 0) 处方向导数最大.
-24. 提示: 因为 bold(\"grad\") h(x, y) = \\{y-2x, x-2y\\}, 所以在点 (x, y) 处的最大方向导数为
-
-||bold(\"grad\") h(x, y)|| = sqrt(5x^2 + 5y^2 - 8xy).
-
-令函数 f = 5x^2 + 5y^2 - 8xy, 求 f 在约束条件 x^2 + y^2 - xy = 75 下的极值.
-作拉格朗日函数
-
-L = 5x^2 + 5y^2 - 8xy + lambda(75 - x^2 - y^2 + xy),
-
-解方程组
-
-L'_x = 10x - 8y + lambda(y - 2x) = 0,
-L'_y = 10y - 8x + lambda(x - 2y) = 0,
-L'_lambda = 75 - x^2 - y^2 + xy = 0
-
-[• 126 •]
-参考答案与提示\\
-[CANKAODAANYUTISHI]
-得可能极值点 M_1(5sqrt(3), 5sqrt(3)), M_2(-5sqrt(3), -5sqrt(3)), M_3(5, -5), M_4(-5, 5). 由于
-
-f(M_1) = f(M_2) = 150, quad f(M_3) = f(M_4) = 450,
-
-因此在山脚的点 M_3 或点 M_4 可作为攀爬的起点.
-[高等数学 (下册) 期末测试真题 (二)]
-一、1. B. quad 2. C. quad 3. D. quad 4. A. quad 5. D.
-二、6. 2.
-7. x + 11y + 5z = 18.
-8. 1/4(e^2 + 1).
-9. 1/2.
-10. 1/2.
-三、11. 提示: 利用极坐标, 有
-
-iint_D e^(-x^2-y^2) dif x dif y = integral_0^(2pi) dif theta integral_0^R rho e^(-rho^2) dif rho = pi(1 - e^(-R^2)).
-
-12. 提示: (方法一) 过点 M(2, 1, 3) 且与直线 l: (x+1)/3 = (y-1)/2 = z/(-1) 垂直的平面 Pi 的方程为
-
-3(x-2) + 2(y-1) - (z-3) = 0, quad \"即\" quad 3x + 2y - z = 5.
-
-令 (x+1)/3 = (y-1)/2 = z/(-1) = t, 即 x = 3t-1, y = 2t+1, z = -t, 代入上式得
-
-3(3t-1) + 2(2t+1) - (-t) = 5, quad \"即\" quad t = 3/7,
-
-则直线 l 与平面 Pi 的交点为 (2/7, 13/7, -3/7). 于是, 所求直线过点 M(2, 1, 3) 及点 (2/7, 13/7, -3/7), 则直线方程为
-
-(x-2)/2 = (y-1)/(-1) = (z-3)/4.
-
-(方法二) 将已知直线方程化为一般方程 cases(2x-3y+5=0, x+3z+1=0), 并写出该直线的平面束方程为
-
-(2x - 3y + 5) + lambda(x + 3z + 1) = 0,
-
-即
-
-(2+lambda)x - 3y + 3lambda z + 5 + lambda = 0.
-
-将点 (2, 1, 3) 代入上述方程, 解得 lambda = -1/2, 则过点 M 与已知直线的平面方程为
-
-x - 2y - z + 3 = 0.
-
-过点 M 且垂直于已知直线的平面方程为
-
-3x + 2y - z - 5 = 0,
-
-因此所求直线即为所得两平面的交线, 直线方程为
-[• 127 •]
-// ==================== PAGE 134 ====================
-bigcirc 高等数学练习册 (下册)\\
- cases(
-3x + 2y - z - 5 = 0, \\
-x - 2y - z + 3 = 0.
-) 
-13. 提示: 利用全微分, 有
- dif z &= dif f(x y, x/y) + dif g(x^2 - y^2) \\
-&= f'_1 dif (x y) + f'_2 dif (x/y) + g' dif (x^2 - y^2) \\
-&= f'_1 (y dif x + x dif y) + f'_2 (y dif x - x dif y)/y^2 + g' (2x dif x - 2y dif y) \\
-&= (y f'_1 + (f'_2)/y + 2x g') dif x + (x f'_1 - (x f'_2)/y^2 - 2y g') dif y, 
-从而
- (partial z)/(partial x) &= y f'_1 + (f'_2)/y + 2x g', \\
-(partial^2 z)/(partial x partial y) &= (partial)/(partial y) ((partial z)/(partial x)) = (partial)/(partial y) (y f'_1 + (f'_2)/y + 2x g') = (partial)/(partial y) (y f'_1) + (part")
-]
+#book-section(section-title, problems)

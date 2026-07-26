@@ -1,130 +1,267 @@
-// 下册试卷：题面=原书扫描页；答案=书后 OCR 纯文本。
-#import "../lib/style.typ": gap-item, muted, solution-color, answer-color, stem-color
+// 数据层：只放内容。公式一律行内。
+// 题干对照 PDF 书页 87–90；答案以书后参考答案为准（并核验关键计算）。
+#import "../lib/math.typ": *
+#import "../lib/render.typ": book-section
 
-// 进入目录
-#heading(level: 2)[高等数学(下册)期末测试模拟卷(一)]
+#let section-title = [高等数学(下册)期末测试模拟卷(一)]
 
-#text(size: 0.9em, fill: muted)[
-  题面为原书扫描页（结构化录入待校对）。答案为 OCR 纯文本速查，符号可能不准，请对照下册 PDF。
-]
+#let problems = (
+  // ===== 一、选择题 =====
+  (
+    kind: "choice",
+    kind-title: [一、选择题（每小题3分，共15分）],
+    stem: [若函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处可微，则 $f(x, y)$ 在点 $(x_0, y_0)$ 处不一定],
+    options: (
+      [连续],
+      [偏导数存在],
+      [偏导数连续],
+      [曲面 $z = f(x, y)$ 的切平面存在],
+    ),
+    answer: [C],
+    solution: [
+      可微 ⇒ 连续、偏导存在、切平面存在；但偏导未必连续（偏导连续是可微的充分条件）。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      设 $f(x)$ 为连续函数，$F(t) = integral_1^t dif y integral_y^t f(x) dif x$，则 $F'(2) =$
+    ],
+    options: ([$2 f(2)$], [$f(2)$], [$-f(2)$], [$0$]),
+    answer: [B],
+    solution: [
+      积分域 $1 <= y <= t$，$y <= x <= t$；交换次序得 $1 <= x <= t$，$1 <= y <= x$，
+      故 $F(t) = integral_1^t (x-1) f(x) dif x$，$F'(t) = (t-1) f(t)$，从而 $F'(2) = f(2)$。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [将 $x O y$ 面上的双曲线 $x^2/3 - 4 y^2 = 1$ 绕 $y$ 轴旋转一周所得旋转曲面的方程为],
+    options: (
+      [$x^2/3 - 4 y^2 - 4 z^2 = 1$],
+      [$x^2/3 - 4 y^2 + 4 z^2 = 1$],
+      [$x^2/3 + y^2/3 - 4 z^2 = 1$],
+      [$x^2/3 - 4 y^2 + z^2/3 = 1$],
+    ),
+    answer: [D],
+    solution: [
+      绕 $y$ 轴旋转时，$x^2$ 换为 $x^2 + z^2$，得 $x^2/3 + z^2/3 - 4 y^2 = 1$，即 D。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      设 $L: x^2 + y^2 = 1$，取顺时针方向，则
+      $oint_L (x dif y - y dif x)/(x^2 + y^2) =$
+    ],
+    options: ([$0$], [$2 pi$], [$-2 pi$], [$pi$]),
+    answer: [C],
+    solution: [
+      在 $L$ 上 $x^2+y^2=1$，积分即 $oint_L (x dif y - y dif x)$。
+      逆时针为 $2 pi$，顺时针为 $-2 pi$。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [下列级数中，条件收敛的是],
+    options: (
+      [$sum_(n=1)^oo (-1)^n sqrt(n/(n+1))$],
+      [$sum_(n=1)^oo (-1)^(n-1) / sqrt(n(n+1))$],
+      [$sum_(n=1)^oo (-1)^(n-1) / (n(n+1))$],
+      [$sum_(n=1)^oo (-1)^(n-1) / 2^n$],
+    ),
+    answer: [B],
+    solution: [
+      A 通项不趋于 0，发散；B 绝对级数 $tilde 1/n$ 发散，交错收敛（莱布尼茨），条件收敛；
+      C 绝对收敛；D 绝对收敛（几何级数）。
+    ],
+  ),
 
-#v(gap-item)
+  // ===== 二、填空题 =====
+  (
+    kind: "blank",
+    kind-title: [二、填空题（每小题3分，共15分）],
+    stem: [已知 $|a| = 2$，$|b| = sqrt(2)$，且 $a · b = 2$，则 $|a times b| =$],
+    answer: [$2$],
+    solution: [
+      $|a times b|^2 = |a|^2 |b|^2 - (a · b)^2 = 4 · 2 - 4 = 4$，故 $|a times b| = 2$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [
+      函数 $u = x y^2 + z^3 - x y z$ 在点 $(1, 1, 2)$ 处沿方向角为
+      $alpha = pi/3$，$beta = pi/4$，$gamma = pi/3$ 的方向的方向导数为
+    ],
+    answer: [$5$],
+    solution: [
+      $u_x = y^2 - y z$，$u_y = 2 x y - x z$，$u_z = 3 z^2 - x y$，
+      在 $(1,1,2)$ 处 $grad u = (-1, 0, 11)$；
+      单位方向 $e = (1/2, sqrt(2)/2, 1/2)$，
+      故 $D_e u = -1/2 + 0 + 11/2 = 5$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [曲面 $x^2 + 2 y^2 + z - x e^z = 4$ 在点 $(0, 1, 2)$ 处的切平面方程为],
+    answer: [$e^2 x - 4 y - z + 6 = 0$],
+    solution: [
+      令 $F = x^2 + 2 y^2 + z - x e^z - 4$，
+      $F_x = 2x - e^z$，$F_y = 4y$，$F_z = 1 - x e^z$。
+      在 $(0,1,2)$：$grad F = (-e^2, 4, 1)$，
+      切平面 $-e^2 x + 4(y-1) + (z-2) = 0$，即 $e^2 x - 4 y - z + 6 = 0$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [设曲面 $Sigma$ 为上半球面 $z = sqrt(2 - x^2 - y^2)$，则 $iint_Sigma (y + 1) dif S =$],
+    answer: [$4 pi$],
+    solution: [
+      关于 $y$ 对称，$iint_Sigma y dif S = 0$；
+      $iint_Sigma 1 dif S$ 为半径 $sqrt(2)$ 的上半球面面积 $2 pi R^2 = 4 pi$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且
+      $f(x) = cases(1 - x & -pi <= x < 0, 1 + x & 0 <= x < pi)$，
+      $S(x)$ 为 $f(x)$ 的傅里叶级数的和函数，则 $S(-3 pi) =$
+    ],
+    answer: [$1 + pi$],
+    solution: [
+      $S(-3 pi) = S(-pi)$；在间断点取左右极限平均：
+      $f(-pi^+) = 1+pi$，$f(pi^-) = 1+pi$，故 $S(-pi) = 1+pi$。
+    ],
+  ),
 
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-087.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-088.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-089.jpg", width: 100%)
-  ]
-  #v(0.8em)
-  #block(width: 100%, breakable: true)[
-    #image("images/下册/page-090.jpg", width: 100%)
-  ]
-  #v(0.8em)
+  // ===== 三、计算题 =====
+  (
+    kind: "compute",
+    kind-title: [三、计算题（11～12每小题6分，13～17每小题7分，18小题8分，19小题10分，20小题5分，共70分）],
+    stem: [
+      设函数 $z = f(x, y)$ 的全微分为 $dif z = (4 - 2x) dif x - (2y + 4) dif y$，
+      试确定 $f(x, y)$ 的极值点，并判别该点是极大值点还是极小值点。
+    ],
+    solution: [
+      由 $f'_x = 4-2x$，$f'_y = -2y-4$，令二者为 0 得驻点 $(2, -2)$。
+      $A = f''_(x x) = -2$，$B = f''_(x y) = 0$，$C = f''_(y y) = -2$，
+      $A C - B^2 = 4 > 0$ 且 $A < 0$，故 $(2,-2)$ 为极大值点。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      计算 $iint_D cos(x/y) dif x dif y$，其中 $D$ 为由直线 $x = 0$，$y = pi/2$，$y = pi$
+      及抛物线 $x = y^2$ 所围成的平面区域。
+    ],
+    solution: [
+      $I = integral_(pi/2)^pi dif y integral_0^(y^2) cos(x/y) dif x
+        = integral_(pi/2)^pi y (sin y) dif y = pi - 1$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [设函数 $z = f(x/y, y/x)$，其中 $f$ 具有一阶连续偏导数，求 $dif z$。],
+    solution: [
+      记 $f'_1 = partial f \/ partial u$，$f'_2 = partial f \/ partial v$（$u=x/y$，$v=y/x$），则
+      $(pd z)/(pd x) = (1/y) f'_1 - (y/x^2) f'_2$，
+      $(pd z)/(pd y) = -(x/y^2) f'_1 + (1/x) f'_2$，
+      故 $dif z = ((1/y) f'_1 - (y/x^2) f'_2) dif x + ((1/x) f'_2 - (x/y^2) f'_1) dif y$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      求曲线 $cases(x^2 + 2 y^2 + z^2 = 10, x - y + z = 0)$ 在点 $(1, 2, 1)$ 处的切线方程。
+    ],
+    solution: [
+      $grad F = (2x, 4y, 2z)$，$grad G = (1, -1, 1)$；
+      在 $(1,2,1)$：$n_1 = (2,8,2) = 2(1,4,1)$，$n_2 = (1,-1,1)$，
+      方向 $s = n_1 times n_2 ~ (1, 0, -1)$，
+      切线：$(x-1)/1 = (y-2)/0 = (z-1)/(-1)$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0$，$f'(0) = 1$，求
+      $lim_(t -> 0^+) 1/t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y$。
+    ],
+    solution: [
+      极坐标：$lim_(t->0^+) (2 pi integral_0^t f(rho) rho dif rho)/t^3
+        = (2 pi)/3 lim_(t->0^+) f(t)/t = (2 pi)/3 f'(0) = (2 pi)/3$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [计算 $oint_L (y^2 + x) dif s$，其中 $L$ 为圆 $x^2 + y^2 = 4$。],
+    solution: [
+      参数 $x=2 cos theta$，$y=2 sin theta$，$dif s = 2 dif theta$，
+      $oint = integral_0^(2 pi) (4 sin^2 theta + 2 cos theta) · 2 dif theta = 8 pi$；
+      或由对称性 $oint y^2 dif s = (1/2) oint 4 dif s$，$oint x dif s = 0$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [将函数 $f(x) = 1/(x^2 + 4x + 3)$ 展开成 $(x - 1)$ 的幂级数。],
+    solution: [
+      $f(x) = 1/((x+1)(x+3)) = 1/(2(1+x)) - 1/(2(3+x))$
+      $= 1/(4(1+(x-1)/2)) - 1/(8(1+(x-1)/4))$。
+      展开得 $f(x) = sum_(n=0)^oo (-1)^n (1/2^(n+2) - 1/2^(2n+3)) (x-1)^n$，
+      收敛域 $-1 < x < 3$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      设函数 $f(x)$ 在区间 $(-oo, +oo)$ 上具有连续导数，$L$ 是上半平面 $(y > 0)$ 内以点 $(a, b)$ 为起点、
+      点 $(c, d)$ 为终点的有向分段光滑曲线，记
+      $I = integral_L [1/y + y f(x y)] dif x + [x f(x y) - x/y^2] dif y$。
+    ],
+    parts: (
+      [证明：曲线积分 $I$ 与路径 $L$ 无关；],
+      [当 $a b = c d$ 时，计算 $I$ 的值。],
+    ),
+    solution-parts: (
+      [
+        记 $P = 1/y + y f(x y)$，$Q = x f(x y) - x/y^2$。
+        $(pd P)/(pd y) = -1/y^2 + f(x y) + x y f'(x y) = (pd Q)/(pd x)$，
+        故在 $y>0$ 内与路径无关。
+      ],
+      [
+        取折线路径或势函数 $U = x/y + F(x y)$（$F'=f$），
+        $I = c/d - a/b + F(c d) - F(a b)$；
+        当 $a b = c d$ 时，$I = c/d - a/b$。
+      ],
+    ),
+  ),
+  (
+    kind: "compute",
+    stem: [
+      计算 $I = iint_Sigma [f_y (x, y) + x^3] dif y dif z + [y^3 - f_x (x, y)] dif z dif x + z^3 dif x dif y$，
+      其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$（$0 <= z <= 1$）的下侧。
+    ],
+    solution: [
+      取辅助面 $Sigma_1: z=1$（$x^2+y^2<=1$）上侧，与 $Sigma$ 围成 $Omega$。
+      散度 $div = 3(x^2+y^2+z^2)$（$f_(x y)$ 项抵消）。
+      柱坐标：$iiint_Omega (x^2+y^2+z^2) dif V = (3 pi)/10$，
+      $iint_(Sigma_1) z^3 dif x dif y = pi$，
+      故 $I = 3 · (3 pi)/10 - pi = -pi/10$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      设幂级数 $sum_(n=0)^oo a_n x^n$ 在 $(-oo, +oo)$ 上收敛，且
+      $a_0 = 0$，$a_1 = 1$，$a_2 = 0$，$a_(n+2) = 2/((n+1)) a_n$（$n = 0, 1, 2, dots$），
+      求该级数的和函数 $S(x)$。
+    ],
+    solution: [
+      偶项全为 0；$a_(2n+1) = 1/n!$（$n = 0, 1, 2, dots$），
+      故 $S(x) = sum_(n=0)^oo x^(2n+1)/n! = x e^(x^2)$（$-oo < x < +oo$）。
+    ],
+  ),
+)
 
-#v(gap-item)
-#block(width: 100%)[
-  #set text(size: 0.92em, fill: solution-color)
-  #text(weight: "bold", fill: answer-color)[参考答案与提示（OCR 纯文本）]
-  #v(0.5em)
-  #raw(block: true, "高等数学（下册）期末测试模拟卷（一）]]
-一、1. C. 2. B. 3. D. 4. C. 5. B.
-二、6. 2.
-8. e^2 x - 4y - z + 6 = 0.
-9. 4pi.
-10. 1 + pi.
-三、11. 提示：由 dif z = (4-2x) dif x - (2y+4) dif y 知，
- f'_x(x,y) = 4-2x, quad f'_y(x,y) = -2y-4. 
-令 cases(f'_x(x,y) = 4-2x = 0, f'_y(x,y) = -2y-4 = 0)，解得驻点 (2, -2). 又在点 (2, -2) 处，
- A = f''_(x x)(x,y) = -2, quad B = f''_(x y)(x,y) = 0, quad C = f''_(y y)(x,y) = -2, 
-有 A C - B^2 = 4 > 0，所以点 (2, -2) 是函数 z = f(x,y) 的极值点，且由 A < 0 知，点 (2, -2) 为极大值点.
-12. 提示：
- iint_D cos (x/y) dif x dif y = int_(pi/2)^pi dif y int_0^y cos (x/y) dif x = int_(pi/2)^pi y dif y int_0^y cos (x/y) dif(x/y) = int_(pi/2)^pi y sin y dif y = pi - 1. 
-13. 提示：因为
- (partial z)/(partial x) = 1/y f'_1 - y/x^2 f'_2, quad (partial z)/(partial y) = - x/y^2 f'_1 + 1/x f'_2, 
-所以
- dif z = (1/y f'_1 - y/x^2 f'_2) dif x + (1/x f'_2 - x/y^2 f'_1) dif y. 
-14. 提示：令函数
- F(x,y,z) = x^2 + 2y^2 + z^2 - 10, quad G(x,y,z) = x - y + z, 
-于是有
- F_x = 2x, quad F_y = 4y, quad F_z = 2z, quad G_x = 1, quad G_y = -1, quad G_z = 1. 
-在点 (1,2,1) 处，n_1 = \\{2, 8, 2\\} = 2\\{1, 4, 1\\}，n_2 = \\{1, -1, 1\\}，从而取切线的方向向量为
-[· 120 ·]
-align(left)[〇 高等数学学习题册 (下册)\\ []],
-align(right)[参考答案与提示 〇\\ [CANKAODAANYUTISHI]]
- s = mat(delim: \"|\", i, j, k; 1, 4, 1; 1, -1, 1) = 5i - 5k, 
-所以在点 (1,2,1) 处的切线方程为
- (x-1)/1 = (y-2)/0 = (z-1)/(-1). 
-15. 提示：
- lim_(t -> 0^+) 1/t^3 iint_(x^2+y^2 <= t^2) f(sqrt(x^2+y^2)) dif x dif y &= lim_(t -> 0^+) (int_0^(2pi) dif theta int_0^t f(rho) rho dif rho)/t^3 = lim_(t -> 0^+) (2pi int_0^t f(rho) rho dif rho)/t^3 \\
-&= 2pi/3 lim_(t -> 0^+) f(t)/t = 2pi/3 lim_(t -> 0^+) f'(t) \\
-&= 2pi/3 f'(0) = (2pi)/3. 
-16. 提示：(方法一) L 的参数方程为 cases(x = 2 cos theta, y = 2 sin theta) quad (0 <= theta <= 2pi)，从而有
- dif s = sqrt((-2 sin theta)^2 + (2 cos theta)^2) dif theta = 2 dif theta, 
-于是
- oint_L (y^2 + x) dif s &= int_0^(2pi) (4 sin^2 theta + 2 cos theta) dot 2 dif theta \\
-&= 8 int_0^(2pi) sin^2 theta dif theta + 0 = 8pi. 
-(方法二) 由对称性可知
- oint_L y^2 dif s = oint_L x^2 dif s, quad oint_L x dif s = 0, 
-所以
- oint_L (y^2 + x) dif s &= 1/2 oint_L (x^2 + y^2) dif s + 0 = 1/2 oint_L 4 dif s \\
-&= 2 oint_L dif s = 8pi. 
-17. 提示：因为
- f(x) &= 1/((x+1)(x+3)) = 1/(2(1+x)) - 1/(2(3+x)) \\
-&= 1/(4(1 + (x-1)/2)) - 1/(8(1 + (x-1)/4)), 
-而
- 1/(4(1 + (x-1)/2)) &= 1/4 sum_(n=0)^oo ((-1)^n)/2^n (x-1)^n quad (-1 < x < 3), \\
-1/(8(1 + (x-1)/4)) &= 1/8 sum_(n=0)^oo ((-1)^n)/4^n (x-1)^n quad (-3 < x < 5), 
-[· 121 ·]
-// ==================== PAGE 127 ====================
-[高等数学学习题册 (下册)], [参考答案与提示]
-16. 2 . \\
-17. 3 . \\
-18. (x+2)/2 . \\
-四、19. [1, 3] . \\
-20. S(x) = x^2/(1-x^2)^2 - ln(1-x^2) quad (-1 < x < 1) , \\
- sum_(n=1)^infty (n^2+1)/(n dot 2^n) = 2+ln 2 .
-= 高等数学(下册) 期末测试模拟卷(一)
-一、1. C. quad 2. B. quad 3. D. quad 4. C. quad 5. B. \\
-二、6. 2 . \\
-7. 5 . \\
-8. e^2 x - 4y - z + 6 = 0 . \\
-9. 4pi . \\
-10. 1+pi . \\
-三、11. 提示：由 dif z = (4-2x) dif x - (2y+4) dif y 知，
- f'_x (x,y) = 4-2x, quad f'_y (x,y) = -2y-4. 
-令 cases(f'_x (x,y) = 4-2x = 0, f'_y (x,y) = -2y-4 = 0) , 解得驻点 (2, -2) . 又在点 (2, -2) 处，
- A = f''_(x x)(x,y) = -2, quad B = f''_(x y)(x,y) = 0, quad C = f''_(y y)(x,y) = -2, 
-有 A C - B^2 = 4 > 0 , 所以点 (2, -2) 是函数 z = f(x,y) 的极值点，且由 A < 0 知，点 (2, -2) 为极大值点.
-12. 提示：
- iint_D cos(x/y) dif x dif y &= integral_(pi/2)^pi dif y integral_0^(y^2) cos(x/y) dif x \\
-&= integral_(pi/2)^pi y dif y integral_0^y cos(x/y) dif (x/y) \\
-&= integral_(pi/2)^pi y sin y dif y = pi - 1. 
-13. 提示：因为
- (partial z)/(partial x) = 1/y f'_1 - y/x^2 f'_2, quad (partial z)/(partial y) = 1/x f'_2 - x/y^2 f'_1, 
-所以
- dif z = (1/y f'_1 - y/x^2 f'_2) dif x + (1/x f'_2 - x/y^2 f'_1) dif y. 
-14. 提示：令函数
- F(x,y,z) = x^2 + 2y^2 + z^2 - 10, quad G(x,y,z) = x - y + z, 
-于是有
- F_x = 2x, quad F_y = 4y, quad F_z = 2z, quad G_x = 1, quad G_y = -1, quad G_z = 1. 
-在点 (1, 2, 1) 处， n_1 = \\{2, 8, 2\\} = 2\\{1, 4, 1\\} , n_2 = \\{1, -1, 1\\} ，从而取切线的方向向量为
- s = mat(delim: \"|\", i, j, k; 1, 4, 1; 1, -1, 1) = 5i - 5k, 
-所以在点 (1, 2, 1) 处的切线方程为
- (x-1)/1 = (y-2)/0 = (z-1)/(-1). 
-15. 提示：
- lim_(t -> 0^+) 1/t^3 iint_(x^2+y^2 <= t^2) f(sqrt(x^2+y^2)) dif x dif y &= lim_(t -> 0^+) (integral_0^(2pi) dif theta integral_0^t f(rho) rho dif rho)/t^3 \\
-&= lim_(t -> 0^+) (2pi integral_0^t f(rho) rho dif rho)/t^3 \\
-&= (2pi)/3 lim_(t -> 0^+) (f(t) t)/t^2 = (2pi)/3 lim_(t -> 0^+) f(t)/t \\
-&= (2pi)/3 lim_(t -> 0^+) f'(t) = (2pi)/3 f'(0) = (2pi)/3. 
-16. 提示：(方法一) L 的参数方程为 cases(x = 2 cos theta, y = 2 sin theta) quad (0 <= theta <= 2pi) , 从而有
- dif s = sqrt((-2 sin theta)^2 + (2 cos theta)^2) dif theta = 2 dif theta, 
-于是
- oint_L (y^2 + x) dif s &= integral_0^(2pi) (4 sin^2 theta + 2 cos theta) dot 2 dif theta \\
-&= 8 integral_0^(2pi) sin^2")
-]
+#book-section(section-title, problems)
