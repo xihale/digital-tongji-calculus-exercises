@@ -1,8 +1,6 @@
-#import "../template.typ": *
-// 章节标题
-#chapter[第一章 函数与极限]
+#import "../lib/render.typ": book-chapter
 
-// 节内容
+#book-chapter[第一章 函数与极限]
 
 #include "第一节 映射与函数.typ"
 #include "第二节 数列的极限.typ"
@@ -16,5 +14,4 @@
 #include "第十节 闭区间上连续函数的性质.typ"
 #include "总习题一.typ"
 
-// 分页
 #pagebreak()

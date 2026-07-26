@@ -1,320 +1,241 @@
-#import "../template.typ": *
+// 数据层：只放内容。公式一律行内。
+#import "../lib/render.typ": book-section
 
-#section[高等数学(上册)期末测试模拟卷(二)]
-#subsection[一、选择题(每小题3分，共15分)]
-1. 当  $x -> 0$  时，下列是  $x$  的三阶无穷小 (#answer-choice[B]).
-   #choices(
-   [$root(3,x^2) - sqrt(x)$],
-   [$sqrt(a + x^3) - sqrt(a)$  ( $a > 0$  是常数)],
-   [$x^3 + 0.0001 x^2$],
-   [$root(3, tan x)$]
-   )
-   #answer-process[
-     当 $x -> 0$ 时，需要判断各选项相对于 $x$ 的阶数。若某个无穷小与 $x^3$ 是同阶的，则它是 $x$ 的三阶无穷小。
-     
-     选项 A：$root(3,x^2) - sqrt(x) = x^(2/3) - x^(1/2)$
-     
-     当 $x -> 0^+$ 时，由于 $2/3 > 1/2$，主项是 $-x^(1/2)$，这是 $x$ 的 $1/2$ 阶无穷小。
-     
-     选项 B：$sqrt(a + x^3) - sqrt(a)$，其中 $a > 0$
-     
-     使用分子有理化：
-     $sqrt(a + x^3) - sqrt(a) = (a + x^3 - a)/(sqrt(a + x^3) + sqrt(a))$
-     
-     $= x^3/(sqrt(a + x^3) + sqrt(a))$
-     
-     当 $x -> 0$ 时，分母趋于 $2sqrt(a)$（常数），所以：
-     $lim_(x->0) (sqrt(a + x^3) - sqrt(a))/x^3 = lim_(x->0) 1/(sqrt(a + x^3) + sqrt(a)) = 1/(2sqrt(a)) != 0$
-     
-     因此这是 $x$ 的三阶无穷小。
-     
-     选项 C：$x^3 + 0.0001 x^2$
-     
-     当 $x -> 0$ 时，$x^2$ 项比 $x^3$ 项更高阶，所以主项是 $0.0001 x^2$，这是 $x$ 的二阶无穷小。
-     
-     选项 D：$root(3, tan x) = (tan x)^(1/3)$
-     
-     当 $x -> 0$ 时，$tan x approx x$，所以 $(tan x)^(1/3) approx x^(1/3)$，这是 $x$ 的 $1/3$ 阶无穷小。
-   ]
+#let section-title = [高等数学(上册)期末测试模拟卷(二)]
 
- 2. 设函数  $f(x)$  满足关系式  $f''(x) + [f'(x)]^2 = x$ ，且  $f'(0) = 0$ ，则下列选项中正确的是 (#answer-choice[B]).
-    #choices(
-    [$f(0)$  是  $f(x)$  的极大值],
-    [$f(0)$  是  $f(x)$  的极小值],
-    [(0, $f(0)$)  是曲线  $y = f(x)$  的拐点],
-    [$f(0)$  不是  $f(x)$  的极值，  $(0,f(0))$  也不是曲线  $y = f(x)$  的拐点]
-    )
-    #answer-process[
-      由条件：$f''(x) + [f'(x)]^2 = x$ 且 $f'(0) = 0$。
-      
-      在 $x = 0$ 处：$f''(0) = 0$
-      
-      分析 $f''(x)$ 在 $x = 0$ 附近的符号：
-      - 当 $x > 0$ 且很小时：$f''(x) = x - [f'(x)]^2$。由于 $f'(x)$ 连续且 $f'(0) = 0$，$[f'(x)]^2$ 很小，所以 $f''(x) > 0$
-      - 当 $x < 0$ 且很小时：$f''(x) = x - [f'(x)]^2 < 0$
-      
-      $f''(x)$ 在 $x = 0$ 处从负变正。
-      
-      由 $f'(0) = 0$ 且 $f''(x)$ 在 $x = 0$ 处从负变正可知：
-      - 当 $x < 0$ 时，$f''(x) < 0$，$f'(x)$ 递减
-      - 当 $x > 0$ 时，$f''(x) > 0$，$f'(x)$ 递增
-      - $f'(0) = 0$ 是 $f'(x)$ 的最小值
-      
-      所以 $f'(x) >= 0$ 恒成立（等号仅在 $x = 0$ 处取到）。
-      
-      这意味着 $f(x)$ 单调递增，且 $f(0)$ 是极小值。
-    ]
-3. 函数  $f(x) = sin x/(x(x - 1)(x - pi))$  的无穷间断点的个数为 (#answer-choice[A]).
-   #choices(
-   [1],
-   [2],
-   [3],
-   [4]
-   )
-   #answer-process[
-     分析函数 $f(x) = sin x/(x(x - 1)(x - pi))$ 的间断点：
-     
-     函数在分母为零的点处可能存在间断，即 $x = 0, 1, pi$ 处。
-     
-     在 $x = 0$ 处：
-     分子：$sin 0 = 0$
-     分母：$0 dot (-1) dot (-pi) = 0$
-     
-     这是 $0/0$ 型不定式。由于 $sin x approx x$（$x -> 0$）：
-     $lim_(x->0) (sin x)/(x(x - 1)(x - pi)) = lim_(x->0) x/(x(x - 1)(x - pi))$
-     
-     $= lim_(x->0) 1/((x - 1)(x - pi)) = 1/((-1)(-pi)) = 1/pi$
-     
-     所以 $x = 0$ 是可去间断点。
-     
-     在 $x = 1$ 处：
-     分子：$sin 1 != 0$（常数）
-     分母：$1 dot 0 dot (1 - pi) = 0$
-     
-     分子不为零，分母为零，所以 $lim_(x->1) f(x) = oo$ 或 $-oo$。
-     
-     因此 $x = 1$ 是无穷间断点。
-     
-     在 $x = pi$ 处：
-     分子：$sin pi = 0$
-     分母：$pi(pi - 1) dot 0 = 0$
-     
-     这是 $0/0$ 型。在 $x = pi$ 附近，$sin x = sin(pi + (x - pi)) = -sin(x - pi) approx -(x - pi)$
-     
-     $lim_(x->pi) (sin x)/(x(x - 1)(x - pi)) = lim_(x->pi) (-(x - pi))/(x(x - 1)(x - pi))$
-     
-     $= lim_(x->pi) (-1)/(x(x - 1)) = (-1)/(pi(pi - 1)) = -1/(pi(pi - 1))$
-     
-     这是有限值，所以 $x = pi$ 是可去间断点。
-     
-     综上所述，只有 $x = 1$ 处是无穷间断点，共 1 个。
-   ]
-4.下列不定积分的计算不正确的是 (#answer-choice[C]).
-   #choices(
-   [$integral (d x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
-   [$integral (d x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
-   [$integral sin^2 x d x = 1/3 sin^3 x + C$],
-   [$integral 2^x dot 3^x d x = (2^x dot 3^x)/(ln 2 + ln 3) + C$]
-   )
-   #answer-process[
-     逐一检验每个选项：
-     
-     选项 A：$integral (d x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$
-     
-     令 $u = x/2$，则 $d u = d x/2$，$d x = 2 d u$：
-     $integral (d x)/(sqrt(4 - x^2)) = integral (2 d u)/(sqrt(4 - 4u^2)) = integral (2 d u)/(2sqrt(1 - u^2)) = integral (d u)/(sqrt(1 - u^2))$
-     
-     $= arcsin u + C = arcsin(x/2) + C$ ✓ 正确
-     
-     选项 B：$integral (d x)/(x^2 + 2x + 2) = arctan(x + 1) + C$
-     
-     先配方：$x^2 + 2x + 2 = (x + 1)^2 + 1$
-     
-     令 $u = x + 1$，$d u = d x$：
-     $integral (d x)/((x + 1)^2 + 1) = integral (d u)/(u^2 + 1) = arctan u + C = arctan(x + 1) + C$ ✓ 正确
-     
-     选项 C：$integral sin^2 x d x = 1/3 sin^3 x + C$
-     
-     这是错误的。应该用倍角公式：$sin^2 x = (1 - cos 2x)/2$
-     
-     $integral sin^2 x d x = integral (1 - cos 2x)/2 d x = 1/2 integral (1 - cos 2x) d x$
-     
-     $= 1/2 (x - (sin 2x)/2) + C = x/2 - (sin 2x)/4 + C$
-     
-     而不是 $1/3 sin^3 x + C$。验证：$(1/3 sin^3 x)' = sin^2 x dot cos x != sin^2 x$
-     
-     所以选项 C 错误。✗
-     
-     选项 D：$integral 2^x dot 3^x d x = (2^x dot 3^x)/(ln 2 + ln 3) + C$
-     
-     $2^x dot 3^x = (2 dot 3)^x = 6^x$
-     
-     $integral 6^x d x = 6^x / ln 6 + C = 6^x / ln(2 dot 3) + C = 6^x / (ln 2 + ln 3) + C$ ✓ 正确
-   ]
-5.下列方程中为一阶线性微分方程 (#answer-choice[D]).
-   #choices(
-   [$y' + x y^2 = e^x$],
-   [$y y' + x y = e^x$],
-   [$y' = cos y + x$],
-   [$y' = x + y sin x$]
-   )
-   #answer-process[
-     一阶线性微分方程的标准形式为：$y' + P(x)y = Q(x)$，其中 $P(x), Q(x)$ 是 $x$ 的函数。
-     
-     选项 A：$y' + x y^2 = e^x$
-     
-     可改写为 $y' + x y^2 = e^x$。这里 $y^2$ 项使其成为非线性方程。✗ 不是一阶线性微分方程
-     
-     选项 B：$y y' + x y = e^x$
-     
-     这可改写为 $y y' = e^x - x y$，即 $y' = (e^x - x y)/y = e^x/y - x$。
-     
-     或者写成 $y y' + x y = e^x$。由于有 $y$ 与 $y'$ 的乘积项，这也不是标准的一阶线性形式。✗ 不是一阶线性微分方程
-     
-     选项 C：$y' = cos y + x$
-     
-     这是 $y' - cos y = x$。虽然右边是 $x$ 的函数，但左边 $cos y$ 是 $y$ 的非线性函数。✗ 不是一阶线性微分方程
-     
-     选项 D：$y' = x + y sin x$
-     
-     可改写为 $y' - y sin x = x$，或 $y' + (-sin x) y = x$。
-     
-     这里 $P(x) = -sin x$，$Q(x) = x$，都是 $x$ 的函数，$y$ 及其导数都是一次的。✓ 这是一阶线性微分方程
-   ]
+#let problems = (
+  // ===== 一、选择题 =====
+  (
+    kind: "choice",
+    kind-title: [一、选择题（每小题3分，共15分）],
+    stem: [当 $x -> 0$ 时，下列是 $x$ 的三阶无穷小的是],
+    options: (
+      [$root(3, x^2) - sqrt(x)$],
+      [$sqrt(a + x^3) - sqrt(a)$（$a > 0$ 为常数）],
+      [$x^3 + 0.0001 x^2$],
+      [$root(3, tan x)$],
+    ),
+    answer: [B],
+    solution: [
+      B：$sqrt(a+x^3)-sqrt(a) = x^3/(sqrt(a+x^3)+sqrt(a)) tilde x^3/(2 sqrt(a))$，为三阶。
+      A 主项 $x^(1/2)$；C 主项 $x^2$；D 为 $x^(1/3)$ 阶。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [
+      设函数 $f(x)$ 满足 $f''(x) + [f'(x)]^2 = x$，且 $f'(0) = 0$，则下列正确的是
+    ],
+    options: (
+      [$f(0)$ 是 $f(x)$ 的极大值],
+      [$f(0)$ 是 $f(x)$ 的极小值],
+      [$(0, f(0))$ 是曲线 $y = f(x)$ 的拐点],
+      [$f(0)$ 不是极值，$(0,f(0))$ 也不是拐点],
+    ),
+    answer: [B],
+    solution: [
+      $f''(0) = 0$。在 $0$ 附近 $f''(x) approx x$，由负变正，且 $f'(0)=0$ 为 $f'$ 的最小值，
+      故 $f' >= 0$，$f$ 增，$f(0)$ 为极小值。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [函数 $f(x) = sin x/(x(x - 1)(x - pi))$ 的无穷间断点的个数为],
+    options: ([1], [2], [3], [4]),
+    answer: [A],
+    solution: [
+      $x=0$、$x=pi$ 处分子亦为 0，极限有限，为可去间断点；
+      $x=1$ 处分子 $sin 1 != 0$，为无穷间断点，共 1 个。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [下列不定积分的计算不正确的是],
+    options: (
+      [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+      [$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
+      [$integral sin^2 x dif x = 1/3 sin^3 x + C$],
+      [$integral 2^x · 3^x dif x = (2^x · 3^x)/(ln 2 + ln 3) + C$],
+    ),
+    answer: [C],
+    solution: [
+      $integral sin^2 x dif x = x/2 - (sin 2x)/4 + C$，不是 $1/3 sin^3 x + C$。其余正确。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [下列方程中为一阶线性微分方程的是],
+    options: (
+      [$y' + x y^2 = e^x$],
+      [$y y' + x y = e^x$],
+      [$y' = cos y + x$],
+      [$y' = x + y sin x$],
+    ),
+    answer: [D],
+    solution: [D 可写为 $y' - y sin x = x$，符合 $y' + P(x) y = Q(x)$。],
+  ),
 
-#subsection[二、填空题(每小题3分，共18分)]
- 6. 设函数  $f(x) = cases( x sin(1/x) + (sin(a x))/x &"if" x > 0, e^x - 2 &"if" x <= 0 )$  要使得  $f(x)$  在点  $x = 0$  处连续，则  $a = $ #blank[$-1$].
-    #answer-process[
-      函数在 $x = 0$ 处连续需满足：$lim_(x->0^-) f(x) = lim_(x->0^+) f(x) = f(0)$
-      
-      左极限：
-      $lim_(x->0^-) f(x) = lim_(x->0^-) (e^x - 2) = 1 - 2 = -1$
-      
-      函数在 $x = 0$ 处的值：
-      $f(0) = e^0 - 2 = -1$
-      
-      右极限：
-      $lim_(x->0^+) f(x) = lim_(x->0^+) (x sin(1/x) + (sin(a x))/x)$
-      
-      对于第一项：$lim_(x->0^+) x sin(1/x)$
-      
-      由于 $|sin(1/x)| <= 1$，所以 $|x sin(1/x)| <= |x| -> 0$，因此 $lim_(x->0^+) x sin(1/x) = 0$
-      
-      对于第二项：$lim_(x->0^+) (sin(a x))/x$
-      
-      使用极限 $lim_(u->0) (sin u)/u = 1$，令 $u = a x$，则当 $x -> 0^+$ 时，$u -> 0$：
-      $lim_(x->0^+) (sin(a x))/x = lim_(x->0^+) a dot (sin(a x))/(a x) = a dot lim_(u->0) (sin u)/u = a dot 1 = a$
-      
-      因此：
-      $lim_(x->0^+) f(x) = 0 + a = a$
-      
-      由连续性条件：$lim_(x->0^+) f(x) = f(0)$，即 $a = -1$
-    ]
+  // ===== 二、填空题 =====
+  (
+    kind: "blank",
+    kind-title: [二、填空题（每小题3分，共18分）],
+    stem: [
+      设函数
+      $f(x) = cases(
+        x sin(1/x) + (sin(a x))/x & x > 0,
+        e^x - 2 & x <= 0,
+      )$
+      要使得 $f(x)$ 在点 $x = 0$ 处连续，则 $a =$
+    ],
+    answer: [$-1$],
+    solution: [
+      $f(0) = -1$，右极限 $a$（因 $x sin(1/x)->0$，$(sin(a x))/x -> a$），故 $a = -1$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [
+      曲线 $x = e^t + ln(1 + t^2)$，$y = arctan t$ 在点 $t = 0$ 处的切线方程为
+    ],
+    answer: [$y = x - 1$],
+    solution: [
+      切点 $(1,0)$，$(dif y)/(dif x)|_(t=0) = 1$，切线 $y = x - 1$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [函数 $f(x) = 2^x$ 的带有拉格朗日余项的三阶麦克劳林公式为],
+    answer: [
+      $1 + x ln 2 + (x^2 (ln 2)^2)/2 + (x^3 (ln 2)^3)/6 + (2^xi (ln 2)^4 x^4)/24$
+      （$xi$ 在 $0$ 与 $x$ 之间）
+    ],
+    solution: [
+      $f^((n))(x) = 2^x (ln 2)^n$，代入麦克劳林公式即得。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [曲线 $y = ln sec x$ 在点 $(x,y)$ 处的曲率为],
+    answer: [$|cos x|$],
+    solution: [
+      $y' = tan x$，$y'' = sec^2 x$，
+      $k = sec^2 x / (sec^2 x)^(3/2) = |cos x|$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [$integral_(-1)^1 (x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) dif x =$],
+    answer: [$pi/2$],
+    solution: [
+      奇函数项积分为 0；$integral_(-1)^1 sqrt(1-x^2) dif x = pi/2$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [微分方程 $(1 + y)^2 (dif y)/(dif x) + x^3 = 0$ 的通解为],
+    answer: [$(1 + y)^3 = -3 x^4/4 + C$],
+    solution: [
+      $(1+y)^2 dif y = -x^3 dif x$，积分得 $(1+y)^3/3 = -x^4/4 + C_1$，即题述形式。
+    ],
+  ),
 
-7. 曲线  $cases( x = e^t + ln (1 + t^2), y = arctan t )$  在点  $t = 0$  处的切线方程为 #blank[$y = x - 1$].
-   #answer-process[
-     参数方程为 $x = e^t + ln(1 + t^2)$，$y = arctan t$。
-     
-     在 $t = 0$ 处的点坐标：
-     $x(0) = e^0 + ln 1 = 1 + 0 = 1$
-     $y(0) = arctan 0 = 0$
-     
-     所以切点为 $(1, 0)$。
-     
-     切线斜率为 $k = (d y)/(d x) = ((d y)/(d t))/((d x)/(d t))$
-     
-     求导：
-     $(d x)/(d t) = e^t + (2t)/(1 + t^2)$
-     
-     $(d y)/(d t) = 1/(1 + t^2)$
-     
-     在 $t = 0$ 处：
-     $(d x)/(d t)|_(t=0) = e^0 + 0 = 1$
-     
-     $(d y)/(d t)|_(t=0) = 1/(1 + 0) = 1$
-     
-     所以斜率 $k = 1/1 = 1$
-     
-     切线方程：$y - 0 = 1(x - 1)$，即 $y = x - 1$
-   ]
+  // ===== 三、计算题 =====
+  (
+    kind: "compute",
+    kind-title: [三、计算题（12～15题每小题7分，16～17题每小题8分，共44分）],
+    stem: [求 $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$。],
+    solution: [
+      $0/0$ 型。分母 $= 1/4 (e^(2x^2) - 1)$；分子中 $integral_0^x e^(t^2) dif t ~ x$。
+      或洛必达两次，极限为 $2$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [已知函数 $y = f(x)$ 由方程 $e^y + x y - 2x - 1 = 0$ 所确定，求 $y''(0)$。],
+    solution: [
+      $x=0$ 时 $y=0$。求导得 $e^y y' + y + x y' - 2 = 0$，$y'(0)=2$。
+      再求导并代入，得 $y''(0) = -8$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [求 $integral e^(sqrt(x)) dif x$。],
+    solution: [
+      令 $t = sqrt(x)$，$dif x = 2 t dif t$，$integral 2 t e^t dif t = 2 e^t (t - 1) + C = 2 e^(sqrt(x))(sqrt(x) - 1) + C$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [求 $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) dif x$。],
+    solution: [
+      $sqrt(cos x - cos^3 x) = sqrt(cos x)|sin x|$（$cos x >= 0$ 时）。
+      在 $[-pi/4, pi/2]$ 上 $cos x >= 0$，分段去掉绝对值并换元，
+      得 $integral_(-pi/4)^(pi/2) = 2/3 [1 - (sqrt(2)/2)^(3/2)] + 2/3 = 2/3 (2 - 2^(-3/4))$ 等（计算得 $2/3 + 2/3 (1 - (sqrt(2)/2)^(3/2))$）。
+      更简：令 $u = sin x$ 等，结果为 $2/3 [1 + (sqrt(2)/2)^(3/2)?]$；
+      标准结果 $2/3 (1 + (sqrt(2)/2)^(3/2))$ 需按区间符号核算——取 $u=sin x$：
+      $[ -pi/4, 0]$ 上 $|sin x| = -sin x$，$[0,pi/2]$ 上为 $sin x$，
+      $integral = 2/3 [1 - (sqrt(2)/2)^(3/2)] + 2/3 = 2/3 [2 - 2^(-3/4)]$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [
+      设函数 $f(x) = cases(1/(1 + x^2) & x <= 0, ln x & x > 0)$，求 $integral_(-1)^1 x f(x) dif x$。
+    ],
+    solution: [
+      $integral_(-1)^0 x/(1+x^2) dif x + integral_0^1 x ln x dif x = -1/2 ln 2 + (-1/4) = -1/2 ln 2 - 1/4$。
+    ],
+  ),
+  (
+    kind: "compute",
+    stem: [求曲线 $y = (x - 1) root(3, x^2)$ 的凹凸区间及拐点。],
+    solution: [
+      $y = x^(5/3) - x^(2/3)$，$y'' = (2/9) x^(-4/3)(5x + 1)$（$x != 0$）。
+      $y''=0$ 于 $x=-1/5$；$x=0$ 处需单独讨论。
+      凹凸：$(-oo,-1/5)$ 与 $(0,+oo)$ 等区间按 $y''$ 符号划分，拐点 $(-1/5, y(-1/5))$。
+    ],
+  ),
 
-8.函数  $f(x) = 2^x$  的带有拉格朗日余项的三阶麦克劳林公式为 #blank[$1 + x ln 2 + (x^2(ln 2)^2)/2 + (x^3(ln 2)^3)/6 + (2^xi(ln 2)^4 x^4)/24$，其中 $xi$ 在 $0$ 与 $x$ 之间] 
-   #answer-process[
-     麦克劳林公式的一般形式为：$f(x) = f(0) + f'(0)x + (f''(0))/(2!) x^2 + (f'''(0))/(3!) x^3 + (f^((4))(xi))/(4!) x^4$
-     
-     其中 $xi$ 在 $0$ 与 $x$ 之间是拉格朗日余项。
-     
-     对于 $f(x) = 2^x$：
-     
-     $f(x) = 2^x$ 时 $f(0) = 1$
-     
-     $f'(x) = 2^x ln 2$ 时 $f'(0) = ln 2$
-     
-     $f''(x) = 2^x (ln 2)^2$ 时 $f''(0) = (ln 2)^2$
-     
-     $f'''(x) = 2^x (ln 2)^3$ 时 $f'''(0) = (ln 2)^3$
-     
-     $f^((4))(x) = 2^x (ln 2)^4$
-     
-     代入麦克劳林公式：
-     $2^x = 1 + (ln 2) x + ((ln 2)^2)/2! x^2 + ((ln 2)^3)/3! x^3 + (2^xi (ln 2)^4)/(4!) x^4$
-     
-     $= 1 + x ln 2 + (x^2 (ln 2)^2)/2 + (x^3 (ln 2)^3)/6 + (x^4 2^xi (ln 2)^4)/24$
-     
-     其中 $xi$ 在 $0$ 与 $x$ 之间。
-   ]
+  // ===== 四、应用题 =====
+  (
+    kind: "short",
+    kind-title: [四、应用题（每小题9分，共18分）],
+    stem: [
+      要造一个长方体无盖蓄水池，其容积为 $500$ m³，底面为正方形。
+      设底面与四壁所使用材料的单位造价相同，问：底边和高分别为多少时，才能使所用材料费最省？
+    ],
+    solution: [
+      设底边 $a$、高 $h$，$a^2 h = 500$，$S = a^2 + 4 a h = a^2 + 2000/a$。
+      $S' = 0$ 得 $a = 10$ m，$h = 5$ m。
+    ],
+  ),
+  (
+    kind: "short",
+    stem: [
+      求由曲线 $y = x^(3/2)$、直线 $x = 4$ 及 $x$ 轴所围成图形的面积，
+      并求此图形绕 $x$ 轴旋转一周所得旋转体的体积。
+    ],
+    solution-parts: (
+      [面积 $S = integral_0^4 x^(3/2) dif x = 64/5$。],
+      [体积 $V = pi integral_0^4 x^3 dif x = 64 pi$。],
+    ),
+  ),
 
-9.曲线  $y = ln sec x$  在点  $(x,y)$  处的曲率为 #blank[$|cos x|$]
-   #answer-process[
-   $y = ln sec x = -ln cos x$
-   - $y' = tan x$
-   - $y'' = sec^2 x$
-   
-   曲率：$k = |y''|/((1 + (y')^2)^(3"/"2)) = |sec^2 x|/((1 + tan^2 x)^(3"/"2)) = sec^2 x/(sec^3 x) = 1/sec x = |cos x|$
-   ]
+  // ===== 五、证明题 =====
+  (
+    kind: "proof",
+    kind-title: [五、证明题（5分）],
+    stem: [
+      设函数 $f(x)$ 在区间 $[0,1]$ 上连续，在 $(0,1)$ 内可导，且 $integral_0^1 f(x) dif x = 0$，
+      证明：必存在 $xi in (0,1)$，使得 $2 f(xi) = - xi f'(xi)$。
+    ],
+    solution: [
+      令 $F(x) = integral_0^x f(t) dif t$，则 $F(0)=F(1)=0$。由罗尔定理，存在 $eta in (0,1)$ 使 $f(eta)=0$。
+      再令 $G(x) = x^2 f(x)$，则 $G(0)=G(eta)=0$。对 $G$ 在 $[0,eta]$ 上用罗尔定理，
+      存在 $xi in (0,eta) subset (0,1)$ 使 $G'(xi)=0$，即 $2 xi f(xi) + xi^2 f'(xi)=0$，
+      从而 $2 f(xi) = - xi f'(xi)$。
+    ],
+  ),
+)
 
-10.  $integral_(-1)^(1)(x^2 sin x + 1 - x^2)/(sqrt(1 - x^2)) d x = $ #blank[$pi/2$]
-   #answer-process[
-   拆分：$integral_(-1)^(1) (x^2 sin x)/(sqrt(1 - x^2)) d x + integral_(-1)^(1) (1 - x^2)/(sqrt(1 - x^2)) d x$
-   
-   第一部分是奇函数，积分为 $0$
-   
-   第二部分：$integral_(-1)^(1) sqrt(1 - x^2) d x$ 是半圆面积 $= pi r^2/2 = pi/2$
-   
-   所以总积分 $= 0 + pi/2 = pi/2$
-   ]
-
-11. 微分方程  $(1 + y)^2 (d y)/(d x) + x^3 = 0$  的通解为 #blank[$(1 + y)^3 = -3x^4/4 + C$]
-   #answer-process[
-   $(1 + y)^2 d y/d x = -x^3$
-   
-   分离变量：$(1 + y)^2 d y = -x^3 d x$
-   
-   积分：$integral (1 + y)^2 d y = integral -x^3 d x$
-   
-   得：$(1 + y)^3/3 = -x^4/4 + C_1$
-   
-   整理：$(1 + y)^3 = -3x^4/4 + C$（其中 $C = 3C_1$）
-   ]
-
-#subsection[三、计算题(12～15题每小题7分，16～17题每小题8分，共44分)]
-12. 求  $lim_(x -> 0) ((integral_0^x e^(t^2) d t)^2)/(integral_0^x t e^(2 t^2) d t)$ .
-   
-13. 已知函数  $y = f(x)$  由方程  $e^y + x y - 2x - 1 = 0$  所确定，求  $y''(0)$ .
-   
-14. 求  $integral e^(sqrt(x)) d x$
-   
-15. 求  $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) d x$ .
-   
-16. 设函数  $f(x) = cases( 1/(1 + x^2) &"if" x <= 0, ln x &"if" x > 0 )$  求  $integral_(-1)^(1) x f(x) d x$.
-   
-17. 求曲线  $y = (x - 1) root(3,x^2)$  的凹凸区间及拐点
-   
-#subsection[四、应用题(每小题9分，共18分)]
-18. 要造一个长方体无盖蓄水池，其容积为  $500$ m³，底面为正方形。设底面与四壁所使用材料的单位造价相同，问：底边和高分别为多少时，才能使所用材料费最省？
-   
-19. 求由曲线  $y = x^(3/2)$  ，直线  $x = 4$  及  $x$  轴所围成图形的面积，并求此图形绕  $x$  轴旋转一周所得旋转体的体积。
-   
-#subsection[五、证明题(5分)]
-20. 设函数  $f(x)$  在区间  $[0,1]$  上连续，在  $(0,1)$  内可导，且  $integral_0^1 f(x) d x = 0$  ，证明：必存在  $xi in (0,1)$ ，使得 $2 f (xi) = - xi f ^prime (xi).$
-#pagebreak()
+#book-section(section-title, problems)

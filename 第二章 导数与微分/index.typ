@@ -1,8 +1,7 @@
-#import "../template.typ": *
-// 章节标题
-#chapter[第二章 导数与微分]
+#import "../lib/render.typ": book-chapter
 
-// 节内容
+#book-chapter[第二章 导数与微分]
+
 #include "第一节 导数的概念.typ"
 #include "第二节 函数的求导法则.typ"
 #include "第三节 高阶导数.typ"
@@ -10,5 +9,4 @@
 #include "第五节 函数的微分.typ"
 #include "总习题二.typ"
 
-// 分页
 #pagebreak()

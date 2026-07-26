@@ -1,6 +1,7 @@
-#import "../template.typ": *
+#import "../lib/render.typ": book-chapter
+
 // 章节标题
-#chapter[第四章 不定积分]
+#book-chapter[第四章 不定积分]
 
 // 节内容
 #include "第一节 不定积分的概念与性质.typ"

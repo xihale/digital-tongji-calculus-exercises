@@ -1,6 +1,8 @@
-#import "../template.typ": *
+// 数据层：只放内容。公式一律行内。
+#import "../lib/render.typ": book-section
 
-#section[第五节 函数的极值与最大值最小值]
-#align(center)[
-  这节什么都没有～
-]
+#let section-title = [第五节 函数的极值与最大值最小值]
+
+#let problems = ()
+
+#book-section(section-title, problems)

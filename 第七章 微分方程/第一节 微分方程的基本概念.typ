@@ -1,6 +1,8 @@
-#import "../template.typ": *
+// 数据层：只放内容。公式一律行内。
+#import "../lib/render.typ": book-section
 
-#section[第一节 微分方程的基本概念]
-#align(center)[
-  这节什么都没有～
-]
+#let section-title = [第一节 微分方程的基本概念]
+
+#let problems = ()
+
+#book-section(section-title, problems)

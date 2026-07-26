@@ -1,132 +1,117 @@
-#import "../template.typ": *
+// 数据层：只放内容。公式一律行内。
+#import "../lib/render.typ": book-section
 
-#section[第二节 洛必达法则]
-#subsection[一、选择题]
-1. 下列式子中运用洛必达法则正确的是 (#answer-choice[B])
-   #choices(
-   [$lim_(n->oo)root(n,n) = e^(lim_(n->oo)(ln n)/n) = e^(lim_(n->oo)(1/n)) = 1$],
-   [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = oo$],
-   [$lim_(x->0)(x^2 sin(1/x))/(sin x) = lim_(x->0)(2x sin(1/x) - cos(1/x))/(cos x)$  不存在],
-   [$lim_(x->0)x/e^x = lim_(x->0)1/e^x = 1$]
-   )
-   #answer-process[
-     A: 虽然最终结果 $e^0 = 1$ 是正确的，但表达式中从 $lim_(n->oo)(ln n)/n$ 直接跳到 $lim_(n->oo)(1/n)$ 没有明确显示洛必达法则的应用步骤（即求导过程）。严格来说，应写为 $lim_(n->oo)((ln n)')/(n') = lim_(n->oo)(1/n)/1 = lim_(n->oo)(1/n)$。
-     
-     B: 分子分母都趋于0，可用洛必达法则，$lim = lim (1+cos x)/(1-cos x)|_{x->0}$ 但 $1-cos 0 = 0$，需再用一次，得 oo ✓
-     
-     C: 洛必达法则应用不当，分子极限为 0，不能再应用
-     
-     D: $lim x/(e^x) -> 0/1 = 0$，而不是用洛必达后 $1/(e^0) = 1$
-   ]
-   
-2. 下列式子中，极限存在但不能用洛必达法则计算的是 (#answer-choice[C])
-   #choices(
-   [$lim_(x->0)x^2(sin x)$],
-   [$lim_(x->0^+)(1/x)^(tan x)$],
-   [$lim_(x->oo)(x + sin x)/x$],
-   [$lim_(x-> +oo)x^n/e^x$]
-   )
-   #answer-process[
-     A: 连乘形式，极限为0，可用洛必达
-     
-     B: $(1/x)^(tan x) = e^(tan x ln(1/x)) = e^(-tan x ln x)$，可用洛必达
-     
-     C: $lim = lim(1 + sin x / x) = 1 + 0 = 1$，这是代数方法，不涉及 0/0 ✓
-     
-     D: 可用洛必达法则
-   ]
-#subsection[二、填空题]
-3.  $lim_(x->pi/2)(cos 5x)/(cos 3x) =$ #blank[$-5/3$]
-   #answer-process[
-     用洛必达法则（分子分母都趋于0）：
-     
-     $lim = lim (-5 sin 5x) / (-3 sin 3x) |_{x -> pi/2} = (-5 times (-1)) / (-3 times 1) = -5/3$
-   ]
+#let section-title = [第二节 洛必达法则]
 
-4.  $lim_(x-> +oo)ln(1 + 1/x)/(arctan x) =$ #blank[0]
-   #answer-process[
-     当 $x -> oo$：分子 $ln(1 + 1/x) -> 0$，分母 $arctan x -> pi/2$
-     
-     $lim = 0 / (pi/2) = 0$
-   ]
-#subsection[三、计算题]
-5. 用洛必达法则计算下列极限：\
-   (1)  $lim_(x->0)(e^x - e^(-x))/sin x$;
-   #answer-process[
-     $lim = lim (e^x + e^(-x)) / cos x = (1 + 1) / 1 = 2$
-   ]
-   
-   (2)  $lim_(x->0^+)ln(tan 7x)/ln(tan 2x)$;
-   #answer-process[
-     两次洛必达法则：
-     
-     $lim = lim (7 sec^2 7x) / (tan 7x) times (tan 2x) / (2 sec^2 2x)$
-     
-     $= lim (7 sec^2 7x tan 2x) / (2 sec^2 2x tan 7x)$
-     
-     当 $x -> 0^+$ 时，使用 $tan x ~ x$：$lim = (7 times 1 times 2x) / (2 times 1 times 7x) = 1$
-   ]
-   
-   (3)  $lim_(x->0)ln(1 + x^2)/(sec x - cos x)$;
-   #answer-process[
-     分子 $->$ 0，分母 $sec x - cos x = 1/cos x - cos x = (1 - cos^2 x) / cos x = sin^2 x / cos x -> 0$
-     
-     用洛必达：$lim = lim (2x/(1+x^2)) / (sin x / cos x times (-sin x) - (-sin x)/(cos^2) x)$
-     
-     简化后 $lim -> 2 times 1 / 1 = 2$
-   ]
-   
-   (4)  $lim_(x->0)x^2 e^(1/x^2)$;
-   #answer-process[
-     令 $t = 1/(x^2)$，当 $x -> 0$ 时 $t -> oo$
-     
-     原极限 $= lim_(t -> oo) e^t / t = oo$（指数速度更快）
-     
-     等等，应该是0。重新考虑：当 $x -> 0$ 时，$x^2 -> 0$ 而 $e^(1/x^2) -> oo$
-     
-     这是 $0 times oo$ 形式，需要转化为 $lim_(x->0) e^(1/x^2) / (1/(x^2)) = lim_(u -> oo) e^u / u = oo$
-     
-     所以原极限为 oo
-   ]
-   
-   (5)  $lim_(x->1)(2/(x^2 - 1) - 1/(x - 1))$ ;
-   #answer-process[
-     通分：$= lim_(x->1) (2(x-1) - (x^2-1)) / ((x^2-1)(x-1))$
-     
-     $= lim_(x->1) (2x - 2 - x^2 + 1) / ((x-1)^2(x+1))$
-     
-     $= lim_(x->1) (-x^2 + 2x - 1) / ((x-1)^2(x+1))$
-     
-     $= lim_(x->1) (-(x-1)^2) / ((x-1)^2(x+1)) = -1/2$
-   ]
-   
-   (6)  $lim_(x->0^+)x^(sin x)$
-   #answer-process[
-     令 $y = x^(sin x) = e^(sin x ln x)$
-     
-     $lim_(x->0^+) sin x ln x = lim_(x->0^+) ln x / (1/sin x) = lim (-1/x) / (-cos x / sin^2 x) = lim sin^2 x / (x cos x) = 0$
-     
-     所以 $lim x^(sin x) = e^0 = 1$
-   ]
-   
-   (7)  $lim_(x->1^-)(1 - x) tan (pi x/2)$;
-   #answer-process[
-     当 $x -> 1^-$ 时，$(1-x) -> 0$ 而 $tan(pi x/2) -> tan(pi/2) = oo$
-     
-     令 $u = 1 - x$，当 $x -> 1^-$ 时 $u -> 0^+$
-     
-     原极限 $= lim_(u -> 0^+) u tan(pi(1-u)/2) = lim u tan(pi/2 - pi u/2)$
-     
-     $= lim u cot(pi u/2) = lim u / tan(pi u/2) = lim 1 / (pi/2 sec^2(pi u/2)) = 2/pi$
-   ]
-   
-   (8)  $lim_(x->0^+)(1/x)^(tan x)$.
-   #answer-process[
-     令 $y = (1/x)^(tan x) = e^(tan x ln(1/x)) = e^(-tan x ln x)$
-     
-     $lim_(x->0^+) (-tan x ln x) = lim_(x->0^+) (-ln x / cot x)$
-     
-     用洛必达：$= lim (-1/x) / (-csc^2 x) = lim sin^2 x / x = 0$
-     
-     所以 $lim (1/x)^(tan x) = e^0 = 1$
-   ]
+#let problems = (
+  // ===== 一、选择题 =====
+  (
+    kind: "choice",
+    stem: [下列式子中运用洛必达法则正确的是],
+    options: (
+      [$lim_(n->oo) root(n, n) = e^(lim_(n->oo)(ln n)/n) = e^(lim_(n->oo)(1/n)) = 1$],
+      [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = oo$],
+      [$lim_(x->0)(x^2 sin(1/x))/(sin x) = lim_(x->0)(2x sin(1/x) - cos(1/x))/(cos x)$ 不存在],
+      [$lim_(x->0) x/e^x = lim_(x->0) 1/e^x = 1$],
+    ),
+    answer: [B],
+    solution: [
+      A：数列极限不宜直接套用洛必达，且未写出求导过程。
+      B：属 $0/0$ 型，可洛必达；再令 $x -> 0$ 得 $2/0^+ = +oo$，运用正确。
+      C：分子 $x^2 sin(1/x)$ 的导数极限不存在，洛必达条件不满足。
+      D：$x -> 0$ 时 $x/e^x -> 0/1 = 0$，非不定式，不可用洛必达，且结果错误。
+    ],
+  ),
+  (
+    kind: "choice",
+    stem: [下列式子中，极限存在但不能用洛必达法则计算的是],
+    options: (
+      [$lim_(x->0) x^2 sin x$],
+      [$lim_(x->0^+)(1/x)^(tan x)$],
+      [$lim_(x->oo)(x + sin x)/x$],
+      [$lim_(x->+oo) x^n/e^x$],
+    ),
+    answer: [C],
+    solution: [
+      C：$lim_(x->oo)(x + sin x)/x = lim(1 + (sin x)/x) = 1$，
+      为代数变形，非 $0/0$ 或 $oo/oo$，且 $(1+cos x)/1$ 极限不存在，故不能用洛必达。
+      其余可用洛必达或先化为不定式后再用。
+    ],
+  ),
+
+  // ===== 二、填空题 =====
+  (
+    kind: "blank",
+    stem: [$lim_(x->pi/2)(cos 5x)/(cos 3x) =$],
+    answer: [$-5/3$],
+    solution: [
+      $x -> pi/2$ 时属 $0/0$ 型。洛必达得
+      $lim (-5 sin 5x)/(-3 sin 3x) = (5 sin(5pi/2))/(3 sin(3pi/2))$。
+      因 $sin(5pi/2) = 1$、$sin(3pi/2) = -1$，故极限为 $-5/3$。
+    ],
+  ),
+  (
+    kind: "blank",
+    stem: [$lim_(x->+oo) ln(1 + 1/x)/(arctan x) =$],
+    answer: [$0$],
+    solution: [
+      分子 $ln(1+1/x) -> 0$，分母 $arctan x -> pi/2$，
+      故极限为 $0/(pi/2) = 0$（非不定式）。
+    ],
+  ),
+
+  // ===== 三、计算题 =====
+  (
+    kind: "compute",
+    stem: [用洛必达法则计算下列极限：],
+    parts: (
+      [$lim_(x->0)(e^x - e^(-x))/sin x$；],
+      [$lim_(x->0^+) ln(tan 7x)/ln(tan 2x)$；],
+      [$lim_(x->0) ln(1 + x^2)/(sec x - cos x)$；],
+      [$lim_(x->0) x^2 e^(1/x^2)$；],
+      [$lim_(x->1)(2/(x^2 - 1) - 1/(x - 1))$；],
+      [$lim_(x->0^+) x^(sin x)$；],
+      [$lim_(x->1^-)(1 - x) tan(pi x/2)$；],
+      [$lim_(x->0^+)(1/x)^(tan x)$。],
+    ),
+    solution-parts: (
+      [
+        $0/0$ 型，洛必达：$lim (e^x + e^(-x))/cos x = 2/1 = 2$。
+      ],
+      [
+        $oo/oo$ 型。洛必达并整理得
+        $lim (7 sec^2 7x · tan 2x)/(2 sec^2 2x · tan 7x)$，
+        再用 $tan u ~ u$（$u -> 0^+$）得极限 $1$。
+      ],
+      [
+        分母 $sec x - cos x = sin^2 x / cos x$，故
+        原式 $= lim cos x · ln(1+x^2)/sin^2 x$。
+        由 $ln(1+x^2) ~ x^2$、$sin x ~ x$ 得极限 $1$。
+      ],
+      [
+        令 $t = 1/x^2$（$x -> 0$ 时 $t -> +oo$），
+        原式 $= lim_(t->+oo) e^t / t = +oo$。
+      ],
+      [
+        通分：$lim (2(x-1) - (x^2-1))/((x^2-1)(x-1))
+        = lim (-(x-1)^2)/((x-1)^2 (x+1)) = -1/2$。
+      ],
+      [
+        令 $y = x^(sin x) = e^(sin x ln x)$。
+        $lim sin x ln x = lim ln x / csc x$（洛必达）$= lim sin^2 x/(x cos x) = 0$，
+        故极限为 $e^0 = 1$。
+      ],
+      [
+        令 $u = 1 - x$（$x -> 1^-$ 时 $u -> 0^+$），
+        原式 $= lim u cot(pi u/2) = lim u / tan(pi u/2) = 2/pi$。
+      ],
+      [
+        令 $y = (1/x)^(tan x) = e^(-tan x ln x)$。
+        $lim (-tan x ln x) = lim (-ln x / cot x)$（洛必达）$= lim sin^2 x / x = 0$，
+        故极限为 $e^0 = 1$。
+      ],
+    ),
+  ),
+)
+
+#book-section(section-title, problems)

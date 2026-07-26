@@ -1,8 +1,7 @@
-#import "../template.typ": *
-// 章节标题
-#chapter[第三章 微分中值定理与导数的应用]
+#import "../lib/render.typ": book-chapter
 
-// 节内容
+#book-chapter[第三章 微分中值定理与导数的应用]
+
 #include "第一节 微分中值定理.typ"
 #include "第二节 洛必达法则.typ"
 #include "第三节 泰勒公式.typ"
@@ -12,5 +11,4 @@
 #include "第七节 曲率.typ"
 #include "总习题三.typ"
 
-// 分页
 #pagebreak()
