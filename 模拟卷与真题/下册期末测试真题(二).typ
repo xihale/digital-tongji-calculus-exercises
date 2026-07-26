@@ -1,5 +1,5 @@
 // 数据层：只放内容。公式一律行内。
-// 题干对照 PDF 书页 99–102；答案以书后参考答案为准。
+// 题干对照 PDF 书页 99–102；答案与过程经独立核验（原书笔误已改正）。
 #import "../lib/math.typ": *
 #import "../lib/render.typ": book-section
 
@@ -36,7 +36,9 @@
     ),
     answer: [C],
     solution: [
-      直线方向 $s = n_1 times n_2$ 与平面法向平行，故直线垂直于平面。
+      $n_1=(1,3,2)$，$n_2=(2,-1,-10)$，
+      $s = n_1 times n_2 = (-28, 14, -7) = -7(4,-2,1)$，
+      与平面法向 $(4,-2,1)$ 平行，故直线垂直于平面。
     ],
   ),
   (
@@ -81,12 +83,16 @@
       [$integral_0^4 dif y integral_(-sqrt(8-y^2))^2 f(x, y) dif x$],
       [$integral_0^2 dif y integral_0^(sqrt(8-y^2)) f(x, y) dif x$],
       [$integral_0^4 dif y integral_y^2 f(x, y) dif x$],
-      [$integral_0^4 dif y integral_sqrt(y)^(sqrt(8-y^2)) f(x, y) dif x$],
+      [$integral_0^2 dif y integral_(sqrt(y))^(sqrt(8-y^2)) f(x,y) dif x + integral_2^4 dif y integral_(sqrt(y))^2 f(x,y) dif x$],
     ),
     answer: [D],
     solution: [
-      区域为抛物线 $y=x^2$（$0<=x<=2$）与圆 $x^2+y^2=8$ 的第一象限部分；
-      交换得 $0<=y<=4$，$sqrt(y) <= x <= sqrt(8-y^2)$。
+      区域 $D = D_1 union D_2$：
+      $D_1: 0<=x<=2,\ 0<=y<=x^2$；$D_2: 2<=x<=sqrt(8),\ 0<=y<=sqrt(8-x^2)$。
+      $y in [0,4]$。固定 $y$：
+      - $0<=y<=2$ 时 $x$ 从 $sqrt(y)$ 到 $sqrt(8-y^2)$；
+      - $2<=y<=4$ 时仅 $D_1$，故 $x$ 从 $sqrt(y)$ 到 $2$。
+      故为选项 D。
     ],
   ),
 
@@ -124,7 +130,10 @@
     ],
     answer: [$1/2$],
     solution: [
-      $grad u|_A$ 与单位方向 $A B / |A B|$ 点乘得 $1/2$。
+      记 $R=sqrt(y^2+z^2)$，$grad u = (1/(x+R), y/((x+R)R), z/((x+R)R))$，
+      在 $A(1,0,1)$：$grad u = (1/2, 0, 1/2)$；
+      $arrow(A B)=(2,-2,1)$，$|A B|=3$，$e=(2/3,-2/3,1/3)$，
+      $D_e u = (1/2)(2/3) + (1/2)(1/3) = 1/2$。
     ],
   ),
   (
@@ -135,8 +144,9 @@
     ],
     answer: [$1/2$],
     solution: [
-      余弦级数对应偶延拓，周期 4；$S(7)=S(-1)=S(1)$；
-      在 $x=1$ 连续取 $f(1)=1$，但端点/平均书后给 $1/2$（按周期延拓间断点均值）。
+      余弦级数对应偶延拓，周期 $4$：$S(7)=S(7-8)=S(-1)=S(1)$。
+      $x=1$ 处左极限 $1$、右极限 $0$，间断点取均值 $S(1)=(1+0)/2=1/2$，
+      故 $S(7)=1/2$。
     ],
   ),
 
@@ -168,10 +178,14 @@
       求 $(pd^2 z)/(pd x pd y)$。
     ],
     solution: [
-      $(pd z)/(pd x) = y f'_1 + f'_2 / y + 2x g'$，
-      再对 $y$ 求导得
-      $f'_1 - f'_2 / y^2 + x y f''_11 - (x/y^3) f''_22 - 4 x y g''$
-      （中间交叉项依 $f''_12$ 写法可合并，结果与书后一致）。
+      $u=x y$，$v=x/y$，则
+      $(pd z)/(pd x) = y f'_1 + f'_2 / y + 2x g'$。
+      再对 $y$ 求偏导：
+      $partial_y (y f'_1) = f'_1 + y(x f''_11 - (x/y^2) f''_12)$，
+      $partial_y (f'_2/y) = (x/y) f''_12 - (x/y^3) f''_22 - f'_2/y^2$，
+      $partial_y (2x g') = -4 x y g''$。
+      $f''_12$ 交叉项相消，得
+      $(pd^2 z)/(pd x pd y) = f'_1 - f'_2/y^2 + x y f''_11 - (x/y^3) f''_22 - 4 x y g''$。
     ],
   ),
   (

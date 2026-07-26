@@ -1,5 +1,5 @@
 // 数据层：只放内容。公式一律行内。
-// 题干对照 PDF 书页 95–98；答案以书后参考答案为准。
+// 题干对照 PDF 书页 95–98；答案与过程经独立核验（原书笔误已改正）。
 #import "../lib/math.typ": *
 #import "../lib/render.typ": book-section
 
@@ -36,13 +36,14 @@
     ),
     answer: [D],
     solution: [
-      $grad (z - 4 + x^2 + y^2) = (2x, 2y, -1)$ 与 $(2,2,1)$ 平行（切平面法向），
-      得 $x=1$，$y=1$，$z=2$，即 $(1,1,2)$。
+      令 $F = x^2 + y^2 + z - 4$，则 $grad F = (2x, 2y, 1)$。
+      切平面平行于 $2x+2y+z=1$，故法向平行：$(2x,2y,1)=lambda(2,2,1)$，
+      得 $lambda=1$，$x=1$，$y=1$，代入曲面 $z=2$，即 $P(1,1,2)$。
     ],
   ),
   (
     kind: "choice",
-    stem: [函数 $f(x, y) = arctan(x/y)$ 在点 $(1, 0)$ 处的梯度为],
+    stem: [函数 $f(x, y) = arctan(x/y)$ 在点 $(0, 1)$ 处的梯度为],
     options: (
       [$-bold(i)$],
       [$bold(i)$],
@@ -51,9 +52,8 @@
     ),
     answer: [B],
     solution: [
-      $f_x = y/(x^2+y^2)$，$f_y = -x/(x^2+y^2)$；
-      在 $y->0^+$、$x=1$ 时 $f_x -> +oo$ 方向问题书后选 B（$bold(i)$）。
-      （注：点 $(1,0)$ 不在定义域 $y!=0$ 内，原题表述有瑕疵。）
+      $f_x = y/(x^2+y^2)$，$f_y = -x/(x^2+y^2)$。
+      在点 $(0,1)$：$f_x = 1$，$f_y = 0$，故 $grad f = bold(i)$。
     ],
   ),
   (
@@ -100,8 +100,10 @@
     ),
     answer: [A],
     solution: [
-      取对数求导。$z(2,1)=3^3=27$，
-      $(pd z)/(pd y) = z [ln(1+x y) · 0 + (x+y)·x/(1+x y) + ...]$ 整理得 $27(ln 3 + 2)$。
+      令 $ln z = (x+y) ln(1+x y)$，对 $y$ 求偏导：
+      $(1/z) z_y = ln(1+x y) + (x+y)·x/(1+x y)$。
+      在 $(2,1)$：$z=3^3=27$，右端 $= ln 3 + 3·2/3 = ln 3 + 2$，
+      故 $z_y = 27(ln 3 + 2)$。
     ],
   ),
   (
@@ -217,12 +219,13 @@
     kind: "blank",
     stem: [
       设函数 $f(x) = |x - 1/2|$，$b_n = 2 integral_0^1 f(x) sin(n pi x) dif x$（$n=1,2,dots$），
-      令 $S(x) = sum_(n=1)^oo b_n sin(n pi x)$，则 $S(-2.021) =$
+      令 $S(x) = sum_(n=1)^oo b_n sin(n pi x)$，则 $S(-2021) =$
     ],
     answer: [$0$],
     solution: [
-      $S$ 为 $f$ 在 $(0,1)$ 的正弦级数和的奇延拓，周期 2；
-      $S(-2.021) = S(-0.021) = -S(0.021)$，而端点/近 0 处取 0（或书后给 0）。
+      $S(x) = sum b_n sin(n pi x)$，而 $-2021$ 为奇数整数，
+      $sin(n pi · (-2021)) = sin(-2021 n pi) = 0$（对一切正整数 $n$），
+      故 $S(-2021) = 0$。
     ],
   ),
   (
@@ -272,9 +275,12 @@
       其中 $L$ 为圆 $x^2 + y^2 = a x$（$a > 0$）的上半部分，取逆时针方向。
     ],
     solution: [
-      记 $P = e^y + x - y$，$Q = x e^y - 2y$。补直径 $O A$ 成闭路，
-      $oint (P dif x + Q dif y) = iint_D (Q_x - P_y) = iint_D 1 dif x dif y = pi a^2 / 8$，
-      减去直径积分 $integral_a^0 (1+x) dif x$，得 $pi a^2/8 - a^2/2 - a$。
+      记 $P = e^y + x - y$，$Q = x e^y - 2y$。圆 $x^2+y^2=a x$ 圆心 $(a/2,0)$、半径 $a/2$，
+      上半弧逆时针方向为从 $(a,0)$ 到 $(0,0)$。
+      补直径 $O A$（$(0,0)->(a,0)$）成上半圆盘 $D$ 的正向边界：
+      $oint_(L+O A) = iint_D (Q_x - P_y) dif x dif y = iint_D 1 = pi a^2 / 8$，
+      直径上 $y=0$，$integral_0^a (1+x) dif x = a + a^2/2$，
+      故 $integral_L = pi a^2/8 - a - a^2/2$。
     ],
   ),
   (

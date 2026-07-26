@@ -1,5 +1,5 @@
 // 数据层：只放内容。公式一律行内。
-// 题干对照 PDF 书页 91–94；答案以书后参考答案为准。
+// 题干对照 PDF 书页 91–94；答案与过程经独立核验。
 #import "../lib/math.typ": *
 #import "../lib/render.typ": book-section
 
@@ -210,7 +210,8 @@
     stem: [计算 $iint_D y e^(x y) dif sigma$，其中闭区域 $D: 1/x <= y <= 1$，$1 <= x <= 2$。],
     solution: [
       $I = integral_1^2 dif x integral_(1/x)^1 y e^(x y) dif y$。
-      内层 $integral y e^(x y) dif y = e^(x y)(x y - 1)/x^2$，得 $e^x (x-1)/x^2$。
+      内层 $integral y e^(x y) dif y = e^(x y)(x y - 1)/x^2$，
+      上下限得 $e^x (x-1)/x^2$（下端 $y=1/x$ 贡献为 0）。
       因 $(e^x / x)' = e^x (x-1)/x^2$，故 $I = [e^x / x]_1^2 = e^2/2 - e$。
     ],
   ),

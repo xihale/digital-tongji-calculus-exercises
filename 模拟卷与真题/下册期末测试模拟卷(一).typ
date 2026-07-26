@@ -1,5 +1,5 @@
 // 数据层：只放内容。公式一律行内。
-// 题干对照 PDF 书页 87–90；答案以书后参考答案为准（并核验关键计算）。
+// 题干对照 PDF 书页 87–90；答案与过程经独立核验。
 #import "../lib/math.typ": *
 #import "../lib/render.typ": book-section
 
@@ -243,11 +243,12 @@
       其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$（$0 <= z <= 1$）的下侧。
     ],
     solution: [
-      取辅助面 $Sigma_1: z=1$（$x^2+y^2<=1$）上侧，与 $Sigma$ 围成 $Omega$。
-      散度 $div = 3(x^2+y^2+z^2)$（$f_(x y)$ 项抵消）。
+      取辅助面 $Sigma_1: z=1$（$x^2+y^2<=1$）上侧，与锥面 $Sigma$（下侧）围成
+      $Omega: rho <= z <= 1$。高斯公式得
+      $I = 3 iiint_Omega (x^2+y^2+z^2) dif V - iint_(Sigma_1) z^3 dif x dif y$
+      （$f_(x y)$ 与 $-f_(x y)$ 抵消）。
       柱坐标：$iiint_Omega (x^2+y^2+z^2) dif V = (3 pi)/10$，
-      $iint_(Sigma_1) z^3 dif x dif y = pi$，
-      故 $I = 3 · (3 pi)/10 - pi = -pi/10$。
+      $iint_(Sigma_1) 1 dif x dif y = pi$，故 $I = 9 pi/10 - pi = -pi/10$。
     ],
   ),
   (
