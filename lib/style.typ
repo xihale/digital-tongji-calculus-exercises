@@ -67,7 +67,11 @@
   #line(length: 100%, stroke: 0.6pt + muted)
 ]
 
-// 全局页面/正文字体（index 与独立入口共用）
+// 全局页面设置（index 与独立入口共用）。
+// 只放 set page：页面属性按"文档位置"生效，函数内的 set page 能传播到后续页面。
+// 切勿在此放 set text / set par / show math.equation —— 它们只作用于函数体内部，
+// 不会传播到调用之后的正文（typst 0.15 实测），会导致正文静默回退到默认字体。
+// 正文样式见 body-font / body-size 等，需在入口文档顶层用 set 应用。
 #let apply-document-style() = {
   set page(
     paper: "a4",
@@ -78,12 +82,14 @@
       right: page-margin-x,
     ),
   )
-  // 正文：思源宋体（Noto Serif CJK SC），与衬线数学字体协调；
-  set text(font: ("Noto Serif CJK SC"), size: body-size, fill: stem-color)
-  set par(leading: body-leading, spacing: par-spacing, justify: true)
-  set math.equation(numbering: none)
-  show math.equation: it => {
-    // 行内公式不再加 y 方向内边距，避免撑高行距 / 基线偏移（2026-07-21）
-    if it.block { it } else { box(inset: (y: 0pt), it) }
-  }
+}
+
+// 正文：思源宋体（Noto Serif CJK SC），与衬线数学字体协调。
+// 这是个值而非 set 规则，供入口文档在顶层 set text(font: body-font) 使用。
+#let body-font = "Noto Serif CJK SC"
+
+// 行内公式不再加 y 方向内边距，避免撑高行距 / 基线偏移（2026-07-21）。
+// 入口文档顶层写：#show math.equation: inline-equation-show
+#let inline-equation-show = it => {
+  if it.block { it } else { box(inset: (y: 0pt), it) }
 }

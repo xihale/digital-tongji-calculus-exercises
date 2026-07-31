@@ -1,9 +1,14 @@
 #import "lib/style.typ": (
   apply-document-style, stem-color, muted,
-  gap-item,
+  gap-item, body-font, body-size, body-leading, par-spacing, inline-equation-show,
 )
 
 #apply-document-style()
+// 正文样式必须在文档顶层 set —— 放进函数里调用不会传播（typst 0.15 实测）。
+#set text(font: body-font, size: body-size, fill: stem-color)
+#set par(leading: body-leading, spacing: par-spacing, justify: true)
+#set math.equation(numbering: none)
+#show math.equation: inline-equation-show
 #set image(width: 12em)
 #set heading(numbering: none)
 
@@ -17,11 +22,10 @@
   it.body
 }
 
-#let VERSION = "v0.1.0"
+#let VERSION = "v0.2.0"
 
 #align(center)[
   #text(weight: "bold", size: 2.0em)[高等数学习题册]\
-  （上·下总集）\
   #v(0.4em)
   #text(size: 0.9em, fill: muted)[#VERSION]
 ]
@@ -33,12 +37,13 @@
   #set align(left)
   目录
 ]
-// Typst 0.15+：outline 不再接受 fill 参数，用 entry 的 fill 画导点
+// Typst 0.15+：it.inner() 已含 body+filler+page，再拼 it.page() 会重复页码。
+// 改用 it.body()（仅标题），自行拼 filler（点导引）与 page。
 #show outline.entry: it => {
   it.indented(
     it.prefix(),
-    link(it.element.location(), it.inner() + box(width: 1fr, inset: (x: 0.3em))[
-      #line(length: 100%, stroke: 0.4pt + muted)
+    link(it.element.location(), it.body() + box(width: 1fr, inset: (x: 0.3em))[
+      #repeat(text(fill: muted)[.], gap: 0.3em)
     ] + [#it.page()]),
   )
 }
