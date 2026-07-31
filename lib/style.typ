@@ -38,6 +38,10 @@
 // 旧 API 的 answer-process 在未显式给 height 时不再占位）
 #let practice-gap = 4cm
 
+// spacer（纯垂直留白条目）的默认高度；数据层可逐条用 height 覆盖。
+// 仅在 practice 模式生效（full/answers 下解答占据该位置，留白无意义）。
+#let spacer-default = 3cm
+
 // 章节标题：居左
 #let section-title(body) = block(below: gap-item, width: 100%)[
   #set text(weight: "bold", size: 1.25em, fill: stem-color)

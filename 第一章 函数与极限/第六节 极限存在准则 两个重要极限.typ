@@ -77,7 +77,9 @@
       ],
     ),
   ),
-
+  //TODO
+  // 给上方计算题留书写空间（仅练习版出现；可调 height）
+  (kind: "spacer", height: 5cm),
   // ===== 四、证明题 =====
   (
     kind: "proof",

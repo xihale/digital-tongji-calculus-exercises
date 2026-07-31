@@ -54,6 +54,13 @@
 
 // ---------- 单题（full / practice） ----------
 #let render-one(num, p) = {
+  // spacer 不在此渲染（由 render-problems 直接发 v 间距）；
+  // 兜底：若被别处误调，仍按高度给留白，不当作普通题渲染。
+  if p.kind == "spacer" {
+    if mode == "practice" { v(p.at("height", default: spacer-default)) }
+    return
+  }
+
   let stem-parts = if "parts" in p { subparts(p.parts) } else { none }
   let sol = make-solution(p)
   let fig = {
@@ -135,16 +142,24 @@
 
 // ---------- 题册主体 ----------
 #let render-problems(problems) = {
-  // 题型首次出现顺序 → 一、二、三…
+  // 题型首次出现顺序 → 一、二、三…（spacer 不参与排序）
   let kind-seq = ()
   for p in problems {
+    if p.kind == "spacer" { continue }
     if "kind-title" not in p and not kind-seq.contains(p.kind) {
       kind-seq = kind-seq + (p.kind,)
     }
   }
 
+  // 题号独立计数：spacer 不占题号，也不出小节标题。
   let last-key = none
-  for (i, p) in problems.enumerate() {
+  let num = 0
+  for p in problems {
+    if p.kind == "spacer" {
+      if mode == "practice" { v(p.at("height", default: spacer-default)) }
+      continue
+    }
+
     let key = if "kind-title" in p {
       "t:" + repr(p.kind-title)
     } else {
@@ -167,7 +182,8 @@
       subsection-title(title)
       last-key = key
     }
-    render-one(i + 1, p)
+    num += 1
+    render-one(num, p)
   }
 }
 
@@ -175,25 +191,28 @@
 #let problem-has-answer(p) = "answer" in p or "answers" in p
 
 #let render-quick-answers(problems) = context {
-  let entries = problems
-    .enumerate()
-    .filter(((i, p)) => problem-has-answer(p))
-    .map(((i, p)) => {
-      let num = i + 1
-      let ans = if p.kind == "choice" or p.kind == "judge" {
-        text(fill: answer-color, weight: "bold")[#p.answer]
-      } else if p.kind == "blank" {
-        if "answers" in p {
-          blank-marks(p.answers)
-        } else {
-          blank-mark(p.answer)
-        }
+  // 题号与正文一致：spacer 不占题号；非 spacer 题都计数（无论有无答案），
+  // 但只对有答案的题输出条目。
+  let entries = ()
+  let num = 0
+  for p in problems {
+    if p.kind == "spacer" { continue }
+    num += 1
+    if not problem-has-answer(p) { continue }
+    let ans = if p.kind == "choice" or p.kind == "judge" {
+      text(fill: answer-color, weight: "bold")[#p.answer]
+    } else if p.kind == "blank" {
+      if "answers" in p {
+        blank-marks(p.answers)
       } else {
-        text(fill: answer-color)[#p.answer]
+        blank-mark(p.answer)
       }
-      let w = (measure[#num. #ans].width + 2.2em).abs
-      (num, ans, w)
-    })
+    } else {
+      text(fill: answer-color)[#p.answer]
+    }
+    let w = (measure[#num. #ans].width + 2.2em).abs
+    entries.push((num, ans, w))
+  }
 
   if entries.len() == 0 { return }
 
@@ -224,9 +243,12 @@
 
 // ---------- 详解（answers 模式） ----------
 #let render-solutions(problems) = {
-  for (i, p) in problems.enumerate() {
+  // 题号与正文一致：spacer 不占题号。
+  let num = 0
+  for p in problems {
+    if p.kind == "spacer" { continue }
+    num += 1
     if not has-solution(p) { continue }
-    let num = i + 1
     let body = p.at("solution", default: none)
     let parts = p.at("solution-parts", default: none)
     block(width: 100%, above: gap-item, below: 0em, breakable: true)[
@@ -249,7 +271,12 @@
   section-title(title-content)
 
   if show-stems {
-    render-problems(problems)
+    if problems.len() == 0 {
+      // 占位：本节无题（与题目一致的间距节奏）
+      block(width: 100%, above: gap-item, below: gap-item)[本节无题]
+    } else {
+      render-problems(problems)
+    }
   }
 
   if answers-only and problems.len() > 0 {
