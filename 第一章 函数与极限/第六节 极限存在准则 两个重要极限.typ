@@ -52,7 +52,7 @@
     parts: (
       [$lim_(x -> 0) x cot x$；],
       [$lim_(x -> 0) (1 - cos 2x)/(x sin x)$；],
-      [$lim_(n -> oo) 2^n sin(x/2^n)$（$x$ 为非零常数）；],
+      [$lim_(n -> oo) 2^n sin x/2^n$（$x$ 为非零常数）；],
       [$lim_(x -> 0) (1 - x)^(1/x)$；],
       [$lim_(x -> 0) (1 + x)^(1/x)$；],
       [$lim_(x -> oo) (1 - 1/x)^(k x)$（$k in NN_+$）。],
