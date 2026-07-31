@@ -31,8 +31,9 @@
   let cell-w = calc.max(max-w, min-cell)
   let avail = content-width - num-reserve
 
+  // 列数只取 4 或 2（跳过 3，避免四选项排成 3+1）；从大到小试，取首个能放下的。
   let cols = 1
-  for c in range(calc.min(n, 4), 0, step: -1) {
+  for c in (4, 2).filter(c => c <= n) {
     if c * cell-w + (c - 1) * g <= avail {
       cols = c
       break
@@ -132,7 +133,7 @@
   #set text(fill: stem-color)
   #set par(leading: body-leading, spacing: par-spacing)
   #context {
-    let lab = text(weight: "bold")[#num.]
+    let lab = text[#num.]
     let gap = 0.5em
     let w = measure[#lab#h(gap)].width
     set par(hanging-indent: w)
