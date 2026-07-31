@@ -2,6 +2,7 @@
   apply-document-style, stem-color, muted,
   gap-item, body-font, body-size, body-leading, par-spacing, inline-equation-show,
 )
+#import "lib/math.typ": math-cases-show
 
 #apply-document-style()
 // 正文样式必须在文档顶层 set —— 放进函数里调用不会传播（typst 0.15 实测）。
@@ -9,6 +10,8 @@
 #set par(leading: body-leading, spacing: par-spacing, justify: true)
 #set math.equation(numbering: none)
 #show math.equation: inline-equation-show
+// cases 式子与条件列距（见 lib/math.typ）
+#show math.cases: math-cases-show
 #set image(width: 12em)
 #set heading(numbering: none)
 

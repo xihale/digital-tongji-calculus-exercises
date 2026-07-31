@@ -19,7 +19,7 @@
 #let solution-color = rgb("#1e4d7b")
 #let muted = rgb("#6b7280")
 
-// 数学简写在 lib/math.typ（上/下册共用，按需 import）
+// 数学简写与 cases 列距：lib/math.typ（入口 #show math.cases: math-cases-show）
 
 // ---------- 字号 / 行高 ----------
 #let body-size = 12pt
