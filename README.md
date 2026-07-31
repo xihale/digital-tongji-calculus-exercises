@@ -74,10 +74,8 @@
 | 输入 | 效果 |
 |------|------|
 | 默认 / `MODE=practice` | 纯题（练习版） |
-| `SHOW_ANSWER=true` / `MODE=full` | 题干 + 蓝色详解 |
+| `MODE=full` | 题干 + 蓝色详解 |
 | `MODE=answers` | 无题干：答案速查 + 详解 |
-
-`SHOW_ANSWER` 仍兼容 CI。
 
 ## 自动构建与部署
 
@@ -118,35 +116,32 @@
 - 必须安装 Typst 环境（推荐使用 0.14.0 或更高版本以支持图片无障碍标签）
   详情请参考 官网
 
-- **字体**：项目已内置精简版 LXGW WenKai 字体（位于 `fonts/` 目录），无需额外安装。如果需要使用完整字体或其他字体，请参考字体目录中的说明
+- **字体**：正文使用 Noto Serif CJK SC，需系统已安装（多数 Linux 发行版自带；CI runner 已预装）
 
 ### 编译文档
 
 ```bash
 # 练习版（纯题，默认；等价 MODE=practice）
-typst compile --font-path fonts/ index.typ 高等数学习题册上册.pdf
+typst compile index.typ 高等数学习题册上册.pdf
 
 # 完整版（题 + 蓝色详解）
-typst compile --font-path fonts/ --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
+typst compile --input MODE=full index.typ 高等数学习题册上册_带答案.pdf
 
 # 答案速查 + 详解
-typst compile --font-path fonts/ --input MODE=answers index.typ 高等数学习题册上册_答案.pdf
-
-# 显式 MODE
-typst compile --font-path fonts/ --input MODE=full index.typ out.pdf
+typst compile --input MODE=answers index.typ 高等数学习题册上册_答案.pdf
 ```
 
 如需生成较小体积的 PDF（与发布版本相同，不含无障碍标签），可添加 `--no-pdf-tags` 标志：
 
 ```bash
-typst compile --font-path fonts/ --no-pdf-tags index.typ 高等数学习题册上册.pdf
-typst compile --font-path fonts/ --no-pdf-tags --input SHOW_ANSWER=true index.typ 高等数学习题册上册_带答案.pdf
+typst compile --no-pdf-tags index.typ 高等数学习题册上册.pdf
+typst compile --no-pdf-tags --input MODE=full index.typ 高等数学习题册上册_带答案.pdf
 ```
 
 ### 实时预览
 
 ```bash
-typst watch --font-path fonts/ index.typ
+typst watch index.typ
 ```
 
 ### 版式约定

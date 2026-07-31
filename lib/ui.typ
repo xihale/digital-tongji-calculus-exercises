@@ -38,7 +38,6 @@
       break
     }
   }
-  // 4 选项允许自然走 2/3/4 列，不再强制降级为 2 列（2026-07-21）
 
   v(gap-inner)
   block(width: 100%)[
@@ -62,7 +61,7 @@
 
 // ---------- 填空：空位与答案都带下划线 ----------
 // 单个空位
-#let blank-mark-one(ans) = {
+#let blank-mark(ans) = {
   let line = 0.55pt + luma(70)
   if show-solutions {
     box(
@@ -77,22 +76,14 @@
   }
 }
 
-// 多空：答案以中文分号「；」分隔时拆成多个下划线空位
-#let blank-mark(ans) = {
-  // 仅当 content 可拆时走多空；否则整段一个空
-  // 注意：ans 是 content，用 repr 不可靠；多空由调用方拆好后传入数组更稳。
-  // 这里保留单 content 接口；多空用 blank-marks。
-  blank-mark-one(ans)
-}
-
-// 多个填空（答案序列）
+// 多个填空（答案序列，以中文分号「；」分隔）
 #let blank-marks(answers) = {
   for (i, a) in answers.enumerate() {
     if i > 0 {
       text(fill: stem-color)[；]
       h(0.2em)
     }
-    blank-mark-one(a)
+    blank-mark(a)
   }
 }
 

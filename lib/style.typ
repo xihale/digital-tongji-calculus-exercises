@@ -1,20 +1,8 @@
 // 页面与基础样式：题/答色分；垂直间距只认下面几档。
 // 三态：full（题+解）/ practice（纯题）/ answers（速查+详解，无题干）
-//
-// 兼容旧 input：SHOW_ANSWER=true  → full
-//               SHOW_ANSWER=false → practice（默认）
-// 优先读取 MODE；未设时回退到 SHOW_ANSWER。
+// 编译时 --input MODE=full/practice/answers；默认 practice。
 
-#let mode = {
-  let m = sys.inputs.at("MODE", default: none)
-  if m != none {
-    m
-  } else if sys.inputs.at("SHOW_ANSWER", default: "false") == "true" {
-    "full"
-  } else {
-    "practice"
-  }
-}
+#let mode = sys.inputs.at("MODE", default: "practice")
 
 #let show-solutions = mode == "full" or mode == "answers"
 #let show-stems = mode == "full" or mode == "practice"
@@ -31,19 +19,7 @@
 #let solution-color = rgb("#1e4d7b")
 #let muted = rgb("#6b7280")
 
-// ---------- 数学简写（下册常用） ----------
-#let dif = math.upright("d")
-#let pd = math.partial
-#let ee = math.upright("e")
-#let ii = math.upright("i")
-#let grad = math.op("grad")
-#let div = math.op("div")
-#let rot = math.op("rot")
-#let Prj = math.op("Prj")
-#let int = math.integral
-#let iint = math.integral.double
-#let iiint = math.integral.triple
-#let oint = math.integral.cont
+// 数学简写在 lib/math.typ（上/下册共用，按需 import）
 
 // ---------- 字号 / 行高 ----------
 #let body-size = 12pt
@@ -103,8 +79,7 @@
     ),
   )
   // 正文：思源宋体（Noto Serif CJK SC），与衬线数学字体协调；
-  // 回退顺序含 LXGW WenKai，缺字体时也不致编译失败。
-  set text(font: ("Noto Serif CJK SC", "Source Han Serif SC", "LXGW WenKai"), size: body-size, fill: stem-color)
+  set text(font: ("Noto Serif CJK SC"), size: body-size, fill: stem-color)
   set par(leading: body-leading, spacing: par-spacing, justify: true)
   set math.equation(numbering: none)
   show math.equation: it => {

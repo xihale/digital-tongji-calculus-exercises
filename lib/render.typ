@@ -25,15 +25,19 @@
 
 #let has-solution(p) = "solution" in p or "solution-parts" in p
 
+// 默认：有 parts（分项）就给小问编号，否则不编
+#let solution-numbered(p) = p.at(
+  "solution-numbered",
+  default: "parts" in p or "solution-parts" in p,
+)
+
 #let make-solution(p) = {
   if not has-solution(p) { return none }
-  let body = if "solution" in p { p.solution } else { none }
-  let parts = if "solution-parts" in p { p.solution-parts } else { none }
-  let numbered = p.at(
-    "solution-numbered",
-    default: "parts" in p or "solution-parts" in p,
+  solution-block(
+    body: p.at("solution", default: none),
+    parts: p.at("solution-parts", default: none),
+    numbered: solution-numbered(p),
   )
-  solution-block(body: body, parts: parts, numbered: numbered)
 }
 
 #let render-figure(p) = {
@@ -223,12 +227,8 @@
   for (i, p) in problems.enumerate() {
     if not has-solution(p) { continue }
     let num = i + 1
-    let body = if "solution" in p { p.solution } else { none }
-    let parts = if "solution-parts" in p { p.solution-parts } else { none }
-    let numbered = p.at(
-      "solution-numbered",
-      default: "parts" in p or "solution-parts" in p,
-    )
+    let body = p.at("solution", default: none)
+    let parts = p.at("solution-parts", default: none)
     block(width: 100%, above: gap-item, below: 0em, breakable: true)[
       #set text(size: 0.97em, fill: solution-color)
       #set par(leading: body-leading, spacing: par-spacing, first-line-indent: 0em)
@@ -238,7 +238,7 @@
       #h(0.4em)
       #if body != none { body }
       #if parts != none {
-        subparts(parts, numbered: numbered)
+        subparts(parts, numbered: solution-numbered(p))
       }
     ]
   }
