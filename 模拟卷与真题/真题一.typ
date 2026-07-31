@@ -1,5 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
+#import "../lib/figures.typ": fig-piecewise-limits, fig-parabola-region
 
 #let section-title = [高等数学(上册)期末测试真题(一)]
 
@@ -90,7 +91,7 @@
     stem: [
       设函数 $f(x)$ 具有二阶连续导数，其部分图形如图 1 所示，试确定下列定积分的符号：
     ],
-    figure: image("./images/真题一-图1.jpg", width: 80%),
+    figure: fig-piecewise-limits(),
     figure-caption: [图1],
     parts: (
       [$integral_(-3)^2 f(x) dif x$；],
@@ -264,7 +265,7 @@
       如图 2 所示，由抛物线 $y = 2x^2$ 与直线 $x = a$、$x = 2$ 及 $y = 0$ 所围成的平面图形为 $D_1$，
       由抛物线 $y = 2x^2$ 与直线 $x = a$ 及 $y = 0$ 所围成的平面图形为 $D_2$，其中 $0 < a < 2$。
     ],
-    figure: image("./images/真题一-图2.jpg", width: 40%),
+    figure: fig-parabola-region(),
     figure-caption: [图2],
     parts: (
       [试求 $D_1$ 绕 $x$ 轴旋转一周所得旋转体的体积 $V_1$；],

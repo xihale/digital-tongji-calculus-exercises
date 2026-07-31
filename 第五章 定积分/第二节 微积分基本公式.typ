@@ -1,5 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
+#import "../lib/figures.typ": fig-arched-curve
 
 #let section-title = [第二节 微积分基本公式]
 
@@ -94,7 +95,7 @@
       设函数 $y = f(x)$ 具有三阶连续导数，其部分图形如图所示，
       试确定下列定积分的符号：
     ],
-    figure: image("images/5-1.jpg", width: 80%),
+    figure: fig-arched-curve(),
     figure-caption: [图5-1],
     parts: (
       [$integral_(-3)^2 f(x) dif x$；],

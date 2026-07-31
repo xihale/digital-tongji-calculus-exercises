@@ -1,5 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
+#import "../lib/figures.typ": fig-piecewise-limits
 
 #let section-title = [第三节 函数的极限]
 
@@ -60,7 +61,7 @@
   (
     kind: "compute",
     stem: [对于图 1-1 所示的函数 $f(x)$，求下列极限；若不存在，说明理由：],
-    figure: image("images/2-5.jpg", width: 70%),
+    figure: fig-piecewise-limits(),
     figure-caption: [图 1-1],
     parts: (
       [$lim_(x -> 2) f(x)$；],

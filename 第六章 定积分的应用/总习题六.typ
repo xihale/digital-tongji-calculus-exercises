@@ -1,5 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
+#import "../lib/figures.typ": fig-two-curves-shade
 
 #let section-title = [总习题六]
 
@@ -30,7 +31,7 @@
       [$integral_a^c [f(x) - g(x)] dif x + integral_c^b [g(x) - f(x)] dif x$],
     ),
     answer: [B],
-    figure: image("./images/6-2.jpg", width: 50%),
+    figure: fig-two-curves-shade(),
     figure-caption: [图6-2],
     solution: [
       在 $[a,c]$ 上 $g$ 在上方，在 $[c,b]$ 上 $f$ 在上方，

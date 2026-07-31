@@ -1,5 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
+#import "../lib/figures.typ": fig-rod-mass
 
 #let section-title = [第三节 定积分在物理学上的应用]
 
@@ -13,7 +14,7 @@
       已知万有引力常数为 $G$，则质点 $M$ 与细棒之间的引力大小为
     ],
     answer: [$(G m mu l)/(a(a + l))$ 或 $G m mu (1/a - 1/(a + l))$],
-    figure: image("./images/6-1.jpg", width: 80%),
+    figure: fig-rod-mass(),
     figure-caption: [图6-1],
     solution: [
       取细棒上位置 $x$ 的微元，距质点的距离为 $r = a + l - x$，微元质量 $dif m = mu dif x$。
