@@ -77,38 +77,6 @@
 | `MODE=full` | 题干 + 蓝色详解 |
 | `MODE=answers` | 无题干：答案速查 + 详解 |
 
-## 自动构建与部署
-
-本项目配置了 GitHub Actions 自动化工作流，当代码推送到 `master` 分支时会自动：
-
-1. 编译生成两个版本的 PDF：
-   - `高等数学习题册上册.pdf`（无答案版）
-   - `高等数学习题册上册_带答案.pdf`（带答案版）
-
-2. 将 PDF 文件与 `web/` 文件夹合并，部署到 GitHub Pages
-
-3. 创建 GitHub Release，版本号自动从 `index.typ` 中的 `VERSION` 变量获取
-
-### 在线访问
-
-- 网站主页：[https://dtce.xihale.top](https://dtce.xihale.top) 或 GitHub Pages
-- 在线预览 PDF 版本（浏览器内打开）
-- 下载 PDF 文件
-
-> ℹ️ **关于 Tagged PDF（无障碍 PDF）**：为了减小文件体积，发布的 PDF 默认不包含 tagged PDF 标签。如需带标签的无障碍 PDF 版本，可以自行构建（参见下方「自行构建」章节）或联系作者获取。
-
-### 版本管理
-
-要发布新版本，只需：
-1. 修改 `index.typ` 中的 `VERSION` 变量
-2. 提交并推送到 `master` 分支
-3. GitHub Actions 会自动完成构建和发布
-
-### 网站架构
-
-- `web/` 文件夹：存放网站基础文件（index.html, style.css）
-- CI/CD 自动将 web 文件夹和 PDF 文件部署到 GitHub Pages
-
 ## 自行构建
 
 ### 前置
@@ -116,32 +84,34 @@
 - 必须安装 Typst 环境（推荐使用 0.14.0 或更高版本以支持图片无障碍标签）
   详情请参考 官网
 
-- **字体**：正文使用 Noto Serif CJK SC，需系统已安装（多数 Linux 发行版自带；CI runner 已预装）
+- **字体**：正文使用 Noto Serif CJK SC，需系统已安装（多数 Linux 发行版自带）
 
 ### 编译文档
 
+项目根目录提供 `Makefile`，三态编译一把梭（统一带 `--no-pdf-tags`，与发布版体积一致）：
+
 ```bash
-# 练习版（纯题，默认；等价 MODE=practice）
-typst compile index.typ 高等数学习题册上册.pdf
-
-# 完整版（题 + 蓝色详解）
-typst compile --input MODE=full index.typ 高等数学习题册上册_带答案.pdf
-
-# 答案速查 + 详解
-typst compile --input MODE=answers index.typ 高等数学习题册上册_答案.pdf
+make practice   # 练习版（纯题）
+make full       # 完整版（题 + 蓝色详解）
+make answers    # 答案速查 + 详解
+make all        # 三态全出
+make watch      # 实时预览（默认 practice；WATCH=full make watch 切换）
+make clean      # 清理产物
 ```
 
-如需生成较小体积的 PDF（与发布版本相同，不含无障碍标签），可添加 `--no-pdf-tags` 标志：
+对应底层命令（亦可直接调用）：
 
 ```bash
-typst compile --no-pdf-tags index.typ 高等数学习题册上册.pdf
-typst compile --no-pdf-tags --input MODE=full index.typ 高等数学习题册上册_带答案.pdf
+typst compile --no-pdf-tags --input MODE=practice index.typ 高等数学习题册.pdf
+typst compile --no-pdf-tags --input MODE=full     index.typ 高等数学习题册_附答案.pdf
+typst compile --no-pdf-tags --input MODE=answers  index.typ 高等数学习题册_纯答案.pdf
 ```
 
 ### 实时预览
 
 ```bash
-typst watch index.typ
+make watch                    # 默认练习版
+WATCH=full make watch         # 完整版
 ```
 
 ### 版式约定
