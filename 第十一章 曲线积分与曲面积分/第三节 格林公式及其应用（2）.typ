@@ -93,7 +93,7 @@
     stem: [
       为使得 $int_(A B) f(x, y)(y dif x + x dif y)$ 与路径无关，则可微函数 $f(x, y)$ 应满足 。
     ],
-    answer: [$x pd f / pd x = y pd f / pd y$],
+    answer: [$x (pd f)/(pd x) = y (pd f)/(pd y)$],
     solution: [
       $M = f y, N = f x$。$M_y = N_x => f + y f_y = f + x f_x => x f_x = y f_y$。
     ],

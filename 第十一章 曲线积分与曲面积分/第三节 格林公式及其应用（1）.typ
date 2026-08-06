@@ -13,14 +13,14 @@
       设有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向。若函数 $P(x, y), Q(x, y)$ 在 $D$ 上具有一阶连续偏导数，则 $oint_L P dif x + Q dif y =$。
     ],
     options: (
-      [$iint_D (pd P / pd y-pd Q / pd x) dif sigma$],
-      [$iint_D (pd Q / pd y-pd P / pd x) dif sigma$],
-      [$iint_D (pd P / pd x-pd Q / pd y) dif sigma$],
-      [$iint_D (pd Q / pd x-pd P / pd y) dif sigma$],
+      [$iint_D ((pd P)/(pd y)-(pd Q)/(pd x)) dif sigma$],
+      [$iint_D ((pd Q)/(pd y)-(pd P)/(pd x)) dif sigma$],
+      [$iint_D ((pd P)/(pd x)-(pd Q)/(pd y)) dif sigma$],
+      [$iint_D ((pd Q)/(pd x)-(pd P)/(pd y)) dif sigma$],
     ),
     answer: [D],
     solution: [
-      由格林公式，取正向：$oint_L P dif x + Q dif y = iint_D (pd Q / pd x-pd P / pd y) dif sigma$。选 D。
+      由格林公式，取正向：$oint_L P dif x + Q dif y = iint_D ((pd Q)/(pd x)-(pd P)/(pd y)) dif sigma$。选 D。
     ],
   ),
   (
