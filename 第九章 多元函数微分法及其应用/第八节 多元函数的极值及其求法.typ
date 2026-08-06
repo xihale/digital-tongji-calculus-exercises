@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第八节 多元函数的极值及其求法]
 
@@ -71,7 +71,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $f(x, y) = 2x^2 + a x + x y^2 + 2y$ 在点 $(1, -1)$ 处取得极值，则常数 $a =$ ，极值的类型为 。
+      设函数 $f(x, y) = 2x^2 + a x + x y^2 + 2y$ 在点 $(1, -1)$ 处取得极值，则常数 $a =$ #blank()，极值的类型为 #blank()
     ],
     answers: (
       [$-5$],
@@ -98,10 +98,9 @@
     stem: [
       若要求函数 $u = sin x sin y sin z$ 在条件 \
       $x + y + z =(pi)/(2)$ ($x > 0, y > 0, z > 0$) 下的极值， \
-      可构造拉格朗日函数 \
-      ， \
-      求得其驻点为 ， \
-      在该点处函数取得 。
+      可构造拉格朗日函数 #blank()，
+      求得其驻点为 #blank()，
+      在该点处函数取得 #blank()
     ],
     answers: (
       [$L = sin x sin y sin z + lambda(x + y + z -(pi)/(2))$],

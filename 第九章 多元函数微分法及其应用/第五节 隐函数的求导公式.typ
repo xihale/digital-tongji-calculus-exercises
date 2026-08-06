@@ -49,7 +49,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $y = y(x)$ 由方程 $1 + x^2 y = ee^y$ 所确定，则 $(dif y)/(dif x)=$ 。
+      设函数 $y = y(x)$ 由方程 $1 + x^2 y = ee^y$ 所确定，则 $(dif y)/(dif x)=$
     ],
     answer: [$(2 x y )/(ee^y - x^2)$],
     solution: [
@@ -66,7 +66,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $(pd z)/(pd y)=$ 。
+      设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $(pd z)/(pd y)=$
     ],
     answer: [$(2 x y z - 1)/(1 - x y^2)$],
     solution: [
@@ -84,7 +84,7 @@
   (
     kind: "blank",
     stem: [
-      由方程 $x y z + sqrt(x^2 + y^2 + z^2) = sqrt(2)$ 所确定的函数 $z = z(x, y)$ 在点 $(1, 0, -1)$ 处的全微分 $dif z =$ 。
+      由方程 $x y z + sqrt(x^2 + y^2 + z^2) = sqrt(2)$ 所确定的函数 $z = z(x, y)$ 在点 $(1, 0, -1)$ 处的全微分 $dif z =$
     ],
     answer: [$dif x - sqrt(2) dif y$],
     solution: [

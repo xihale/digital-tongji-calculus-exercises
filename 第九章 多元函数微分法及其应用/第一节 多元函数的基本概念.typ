@@ -68,7 +68,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      函数 $z = sqrt(ln(x + y))$ 的定义域为 。
+      函数 $z = sqrt(ln(x + y))$ 的定义域为
     ],
     answer: [${(x, y) | x + y >= 1}$],
     solution: [
@@ -78,7 +78,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x, y) = x^2 + y^2 + x y ln y/x$，则 $f(k x, k y) =$ 。
+      设函数 $f(x, y) = x^2 + y^2 + x y ln y/x$，则 $f(k x, k y) =$
     ],
     answer: [$k^2 f(x, y)$],
     solution: [
@@ -91,7 +91,7 @@
   (
     kind: "blank",
     stem: [
-      $lim_((x,y) arrow (0,1)) (ln (y + ee^(x^2))) (sqrt(x^2 + y^2)) =$ 。
+      $lim_((x,y) arrow (0,1)) (ln (y + ee^(x^2))) (sqrt(x^2 + y^2)) =$
     ],
     answer: [$ln 2$],
     solution: [
@@ -110,7 +110,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x, y) = cases((tan(x^2 + y^2))/(x^2 + y^2) & (x, y) != (0, 0), A & (x, y) = (0, 0))$ 要使得 $f(x, y)$ 在点 $(0,0)$处连续，则 $A =$ 。
+      设函数 $f(x, y) = cases((tan(x^2 + y^2))/(x^2 + y^2) & (x, y) != (0, 0), A & (x, y) = (0, 0))$ 要使得 $f(x, y)$ 在点 $(0,0)$处连续，则 $A =$
     ],
     answer: [$1$],
     solution: [
@@ -122,7 +122,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $f(x, y) = (x^2 - y^2)^(-1) cos y/x$ 的间断点为 。
+      函数 $f(x, y) = (x^2 - y^2)^(-1) cos y/x$ 的间断点为
     ],
     answer: [${(x,y) | y = plus.minus x}$],
     solution: [

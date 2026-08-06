@@ -139,7 +139,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $z = x^(y + 1) (x > 0, x != 1)$ ，则 $dif z =$   .
+      设函数 $z = x^(y + 1) (x > 0, x != 1)$ ，则 $dif z =$
     ],
     answer: [$(y + 1)x^(y) dif x + x^(y + 1) ln x dif y .$],
     solution: [
@@ -157,7 +157,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则它在点 $M_0(1, -1, 1)$ 处的方向导数的最大值为 。
+      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则它在点 $M_0(1, -1, 1)$ 处的方向导数的最大值为
     ],
     answer: [$(sqrt(3))/(3)$],
     solution: [
@@ -190,7 +190,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $z = x y $ 在闭区域 $D = {(x, y) | x >= 0, y >= 0, x + y <= 1}$ 上的最大值为 。
+      函数 $z = x y $ 在闭区域 $D = {(x, y) | x >= 0, y >= 0, x + y <= 1}$ 上的最大值为
     ],
     answer: [$(1)/(4)$],
     solution: [

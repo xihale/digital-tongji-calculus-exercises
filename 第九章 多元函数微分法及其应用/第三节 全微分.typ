@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第三节 全微分]
 
@@ -85,7 +85,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      函数 $z = arctan y/x$ 当 $x = 2, y = 1, Delta x = 0.1, Delta y = -0.2$ 时的全增量 $Delta z approx$ ，全微分 $dif z =$ 。
+      函数 $z = arctan y/x$ 当 $x = 2, y = 1, Delta x = 0.1, Delta y = -0.2$ 时的全增量 $Delta z approx$ #blank()，全微分 $dif z =$ #blank()
     ],
     answers: (
       [$-0.09967$],

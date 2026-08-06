@@ -60,7 +60,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $z = sin(3x - y) + y$，则 $(pd z)/(pd x) |_(x=2, y=1) =$ 。
+      设函数 $z = sin(3x - y) + y$，则 $(pd z)/(pd x) |_(x=2, y=1) =$
     ],
     answer: [$3 cos 5$],
     solution: [
@@ -72,7 +72,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = x y +(y)/(x^3)$，则 $(pd^2 u)/(pd x^2) =$ 。
+      设函数 $u = x y +(y)/(x^3)$，则 $(pd^2 u)/(pd x^2) =$
     ],
     answer: [$(12y)/(x^5)$],
     solution: [
@@ -84,7 +84,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = x ln(x y)$，则 $(pd^2 u)/(pd x pd y) =$ 。
+      设函数 $u = x ln(x y)$，则 $(pd^2 u)/(pd x pd y) =$
     ],
     answer: [$(1)/(y)$],
     solution: [

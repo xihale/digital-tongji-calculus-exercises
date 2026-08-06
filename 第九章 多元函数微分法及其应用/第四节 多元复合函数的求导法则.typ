@@ -80,7 +80,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $z = x^2 + sin y, x = cos t, y = t^3$ ，则 $(dif z)/(dif t)=$   .
+      设函数 $z = x^2 + sin y, x = cos t, y = t^3$ ，则 $(dif z)/(dif t)=$
     ],
     answer: [$- sin 2 t + 3 t^2 cos t^3$],
     solution: [
@@ -112,7 +112,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $z = f(x,(x)/(y))$，其中 $f$ 具有二阶连续偏导数，则 $(pd^2 z)/(pd x pd y)=$ 。
+      设函数 $z = f(x,(x)/(y))$，其中 $f$ 具有二阶连续偏导数，则 $(pd^2 z)/(pd x pd y)=$
     ],
     answer: [$-(1)/((y^2) f_2')-(x)/((y^2) f_(12)'')-(x)/((y^3) f_(22)'')$],
     solution: [
