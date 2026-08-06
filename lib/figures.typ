@@ -11,7 +11,7 @@
 //   - 虚线 stroke 写法：`(paint: muted, dash: "dashed")`
 
 #import "@preview/cetz:0.4.2": canvas, draw
-#import "style.typ": stem-color, answer-color, muted, body-size
+#import "style.typ": answer-color, body-size, muted, stem-color
 
 #let axis-color = stem-color
 #let curve-color = answer-color
@@ -150,8 +150,6 @@
   let ya = 1.45
   let yc = 1.9
   let yb = 2.35
-
-
 
   // 叶扁长：半高小、跨度大 → 两侧缓降
   let h = 0.32
@@ -362,5 +360,5 @@
     line((x, -0.08), (x, 0.08), stroke: axis-color)
     content((x, 0), anchor: "north", padding: (top: 2pt))[#text(size: label-size)[#lab]]
   }
-  content((0.55, 1.85), anchor: "south", padding: (bottom: 1pt))[#text(size: label-size)[$y = f(x)$]]
+  content((0.85, 1.85), anchor: "south", padding: (bottom: 1pt))[#text(size: label-size)[$y = f(x)$]]
 })
