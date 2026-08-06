@@ -56,10 +56,13 @@
 
 // ---------- 单题（full / practice） ----------
 #let render-one(num, p) = {
-  // spacer 不在此渲染（由 render-problems 直接发 v 间距）；
+  // spacer 不在此渲染（由 render-problems 直接发 write-space）；
   // 兜底：若被别处误调，仍按高度给留白，不当作普通题渲染。
   if p.kind == "spacer" {
-    if mode == "practice" { v(p.at("height", default: spacer-default)) }
+    // 固定高度、不可分页（与 write-space 同策略）
+    if mode == "practice" {
+      write-space(p.at("height", default: spacer-default))
+    }
     return
   }
 
@@ -129,16 +132,21 @@
       },
     )
   } else {
+    // compute / proof / short / …
+    // 练习版：题干与作答留白绑定（短题不跨页；留白固定高度不可拆）
+    let want-space = mode == "practice" and p.at("practice-space", default: true)
+    let show-sol = show-solutions and sol != none
     problem(
       num,
       p.stem,
+      bind: want-space and not show-sol,
       extras: {
         fig
         if stem-parts != none { stem-parts }
-        if show-solutions and sol != none {
+        if show-sol {
           sol
-        } else if mode == "practice" and p.at("practice-space", default: true) {
-          v(p.at("practice-gap", default: practice-gap))
+        } else if want-space {
+          write-space(p.at("practice-gap", default: practice-gap))
         }
       },
     )
@@ -166,7 +174,9 @@
   let num = 0
   for p in problems {
     if p.kind == "spacer" {
-      if mode == "practice" { v(p.at("height", default: spacer-default)) }
+      if mode == "practice" {
+        write-space(p.at("height", default: spacer-default))
+      }
       continue
     }
 

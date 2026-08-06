@@ -3,7 +3,7 @@
 
 #import "style.typ": (
   show-solutions, answer-color, solution-color, stem-color,
-  content-width, body-leading, par-spacing,
+  content-width, page-body-height, body-leading, par-spacing,
   gap-inner, gap-block, gap-item,
 )
 
@@ -140,31 +140,48 @@
   ]
 }
 
+// ---------- 练习作答留白：固定高度、不可分页/压缩 ----------
+// 页底不够则整块移到下一页（只可多不可少）。
+#let write-space(height) = block(
+  width: 100%,
+  height: height,
+  breakable: false,
+)[]
+
 // ---------- 题目容器：题与题 / 节标题后 一律 gap-item ----------
 // 题号与题干同一段落 → 基线天然一致；换行悬挂缩进。
-// extras（选项 / 小问 / 解）左缩进与题干文字对齐。
-#let problem(num, stem, extras: none) = block(
-  width: 100%,
-  above: gap-item,
-  below: 0em,
-  breakable: true,
-)[
-  #set text(fill: stem-color)
-  #set par(leading: body-leading, spacing: par-spacing)
-  #context {
-    let lab = text[#num.]
-    let gap = 0.5em
-    let w = measure[#lab#h(gap)].width
-    set par(hanging-indent: w)
+// extras（选项 / 小问 / 解 / 作答留白）左缩进与题干文字对齐。
+// bind: true 时（练习版计算/简答/证明 + 作答区）：
+//   整题高度 ≤ 版心 → breakable: false，题干与答题区同页、页底不够整题下移；
+//   整题高度 > 版心 → 题干可分页，文末 write-space 仍不可拆。
+#let problem(num, stem, extras: none, bind: false) = context {
+  let gap = 0.5em
+  let lab = text[#num.]
+  let w = measure[#lab#h(gap)].width
+  let body = {
+    set text(fill: stem-color)
+    set par(leading: body-leading, spacing: par-spacing, hanging-indent: w)
     lab
     h(gap)
     stem
     if extras != none {
+      // 作答留白已是 unbreakable；其余 extras 随整题 bind 策略走
       block(width: 100%, breakable: true, inset: (left: w))[
         #set par(hanging-indent: 0em)
         #extras
       ]
     }
   }
-]
+  let can-break = if bind {
+    measure(block(width: content-width, body)).height > page-body-height
+  } else {
+    true
+  }
+  block(
+    width: 100%,
+    above: gap-item,
+    below: 0em,
+    breakable: can-break,
+  )[#body]
+}
 
