@@ -84,7 +84,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      设 $angle(bold(a), bold(b)) = pi/3, |bold(a)| = 5, |bold(b)| = 8$，则 $|bold(a) - bold(b)| =$ 。
+      设 $angle(bold(a), bold(b)) = pi/3, |bold(a)| = 5, |bold(b)| = 8$，则 $|bold(a) - bold(b)| =$
     ],
     answer: [$7$],
     solution: [
@@ -95,7 +95,7 @@
   (
     kind: "blank",
     stem: [
-      设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $Prj_bold(b) bold(a) =$ 。
+      设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $Prj_bold(b) bold(a) =$
     ],
     answer: [$4/3$],
     solution: [
@@ -107,7 +107,7 @@
   (
     kind: "blank",
     stem: [
-      已知 $|bold(a)| = 3, |bold(b)| = 26, |bold(a) times bold(b)| = 72$，则 $bold(a) dot bold(b) =$ 。
+      已知 $|bold(a)| = 3, |bold(b)| = 26, |bold(a) times bold(b)| = 72$，则 $bold(a) dot bold(b) =$
     ],
     answer: [$plus.minus 30$],
     solution: [

@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第五节 曲面及其方程]
 
@@ -43,7 +43,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      $x O y$ 面上双曲线 $4x^2 - 9y^2 = 36$ 分别绕 $x$ 轴、$y$ 轴旋转一周所得旋转曲面的方程分别为  和 。
+      $x O y$ 面上双曲线 $4x^2 - 9y^2 = 36$ 分别绕 $x$ 轴、$y$ 轴旋转一周所得旋转曲面的方程分别为 #blank() 和 #blank()
     ],
     answers: (
       [$4x^2 - 9(y^2 + z^2) = 36$],
@@ -59,7 +59,7 @@
   (
     kind: "blank",
     stem: [
-      曲面 $x^2 - y^2 - z^2 = 1$ 是由 $x O y$ 面上的曲线  绕 $x$ 轴旋转一周所得的或是由  面上的曲线  绕  轴旋转一周所得的。
+      曲面 $x^2 - y^2 - z^2 = 1$ 是由 $x O y$ 面上的曲线 #blank() 绕 $x$ 轴旋转一周所得的或是由 #blank() 面上的曲线 #blank() 绕 #blank() 轴旋转一周所得的
     ],
     answers: (
       [$x^2 - y^2 = 1$],
@@ -76,7 +76,7 @@
   (
     kind: "blank",
     stem: [
-      方程 $4 x^2 + 7 y^2 = z$ 所表示的曲面为 。
+      方程 $4 x^2 + 7 y^2 = z$ 所表示的曲面为
     ],
     answer: [椭圆抛物面],
     solution: [

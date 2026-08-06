@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [总习题八]
 
@@ -92,11 +92,11 @@
     kind-title: [二、填空题],
     stem: [
       已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则：
-            (1) 向量 $arrow(A B)$ 的方向余弦为 ，单位向量为 ；
-            (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 ，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 ；
-            (3) 以该三点为顶点的三角形的面积为 ；
-            (4) 过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 ；
-            (5) 过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 。
+            (1) 向量 $arrow(A B)$ 的方向余弦为 #blank()，单位向量为 #blank()；
+            (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #blank()，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #blank()；
+            (3) 以该三点为顶点的三角形的面积为 #blank()；
+            (4) 过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 #blank()；
+            (5) 过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 #blank()
     ],
     answers: (
       [$3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2)$],
@@ -131,7 +131,7 @@
   (
     kind: "blank",
     stem: [
-      方程 $x^2/1 + y^2/25 - z^2/16 = 1$ 所表示的曲面为 。
+      方程 $x^2/1 + y^2/25 - z^2/16 = 1$ 所表示的曲面为
     ],
     answer: [单叶双曲面],
   ),

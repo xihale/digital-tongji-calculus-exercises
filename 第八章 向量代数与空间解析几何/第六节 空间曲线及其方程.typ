@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第六节 空间曲线及其方程]
 
@@ -62,7 +62,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      曲线 $cases(-2 x + y^2 + z^2 = 0, z = 3)$ 在 $x O y$ 面上的投影曲线方程为 。
+      曲线 $cases(-2 x + y^2 + z^2 = 0, z = 3)$ 在 $x O y$ 面上的投影曲线方程为
     ],
     answer: [$cases(2 x - y^2 = 9, z = 0)$],
     solution: [
@@ -74,7 +74,7 @@
   (
     kind: "blank",
     stem: [
-      方程组 $cases(y = 5 x + 1, y = 2 x - 3)$ 在平面解析几何中表示  ，在空间解析几何中表示 。
+      方程组 $cases(y = 5 x + 1, y = 2 x - 3)$ 在平面解析几何中表示 #blank()，在空间解析几何中表示 #blank()
     ],
     answers: (
       [点 $(-((4)/(3)), -((17)/(3)))$],
@@ -87,7 +87,7 @@
   (
     kind: "blank",
     stem: [
-      曲线 $cases(x = t + 1, y = t^2, z = 2t + 1)$ 的一般方程为 。
+      曲线 $cases(x = t + 1, y = t^2, z = 2t + 1)$ 的一般方程为
     ],
     answer: [$cases(y = (x - 1)^2, z = 2x - 2)$],
     solution: [

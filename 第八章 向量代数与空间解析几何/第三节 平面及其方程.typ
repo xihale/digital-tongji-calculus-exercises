@@ -59,7 +59,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      过点 $M(3, 0, -1)$ 且与平面 $3x - 7y + 5z - 12 = 0$ 平行的平面方程为 。
+      过点 $M(3, 0, -1)$ 且与平面 $3x - 7y + 5z - 12 = 0$ 平行的平面方程为
     ],
     answer: [$3x - 7y + 5z - 4 = 0$],
     solution: [
@@ -69,7 +69,7 @@
   (
     kind: "blank",
     stem: [
-      点 $M_1(1, 2, 1)$ 到平面 $x + 2y + 2z - 10 = 0$ 的距离为 。
+      点 $M_1(1, 2, 1)$ 到平面 $x + 2y + 2z - 10 = 0$ 的距离为
     ],
     answer: [$1$],
     solution: [
@@ -79,7 +79,7 @@
   (
     kind: "blank",
     stem: [
-      使得平面 $x + k y - 2z = 9$ 与平面 $2x - 3y + z = 0$ 成 $pi/4$ 角的 $k$ 值为 。
+      使得平面 $x + k y - 2z = 9$ 与平面 $2x - 3y + z = 0$ 成 $pi/4$ 角的 $k$ 值为
     ],
     answer: [$plus.minus sqrt(70)/2$],
     solution: [

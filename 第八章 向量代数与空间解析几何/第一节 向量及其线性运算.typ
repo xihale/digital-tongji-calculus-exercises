@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第一节 向量及其线性运算]
 
@@ -64,7 +64,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      点 $(2, 1, -3)$ 关于坐标原点对称的点是 。
+      点 $(2, 1, -3)$ 关于坐标原点对称的点是
     ],
     answer: [$(-2, -1, 3)$],
     solution: [
@@ -75,7 +75,7 @@
   (
     kind: "blank",
     stem: [
-      设 $|bold(a)| = 4$，向量 $bold(a)$ 与轴 $l$ 的夹角为 $pi/6$，则 $Prj_l bold(a) =$ 。
+      设 $|bold(a)| = 4$，向量 $bold(a)$ 与轴 $l$ 的夹角为 $pi/6$，则 $Prj_l bold(a) =$
     ],
     answer: [$2 sqrt(3)$],
     solution: [
@@ -85,7 +85,7 @@
   (
     kind: "blank",
     stem: [
-      设向量 $bold(a)$ 与坐标轴正向的夹角分别为 $alpha, beta, gamma$，且 $alpha = 60^degree, beta = 120^degree$，则 $gamma =$  或 。
+      设向量 $bold(a)$ 与坐标轴正向的夹角分别为 $alpha, beta, gamma$，且 $alpha = 60^degree, beta = 120^degree$，则 $gamma =$ #blank() 或 #blank()
     ],
     answers: (
       [$(pi)/(4)$],
@@ -100,7 +100,7 @@
   (
     kind: "blank",
     stem: [
-      已知两点 $M_1(0, 1, 2)$ 和 $M_2(1, -1, 0)$，试用坐标式表示向量 $arrow(M_1 M_2)$ 和 $-2 arrow(M_1 M_2)$，并求 $arrow(M_1 M_2)$ 的模、方向余弦和方向角。
+      已知两点 $M_1(0, 1, 2)$ 和 $M_2(1, -1, 0)$，试用坐标式表示向量 $arrow(M_1 M_2)$ 和 $-2 arrow(M_1 M_2)$，并求 $arrow(M_1 M_2)$ 的模、方向余弦和方向角
     ],
     answer: [$(1, -2, -2), (-2, 4, 4)$；模为 3，方向余弦为 $(1)/(3), -(2)/(3), -(2)/(3)$。
     方向角为 $arccos 1/3, arccos(-(2)/(3)), arccos(-(2)/(3))$。],
@@ -118,7 +118,7 @@
   (
     kind: "blank",
     stem: [
-      求平行于向量 $bold(a) = (6, 7, -6)$ 的单位向量。
+      求平行于向量 $bold(a) = (6, 7, -6)$ 的单位向量
     ],
     solution: [
       $ |bold(a)| = sqrt(6^2 + 7^2 + (-6)^2) = 11 $
@@ -130,8 +130,8 @@
     stem: [
       设向量 $bold(m) = 3bold(i) + 5bold(j) + 3bold(k), bold(n) = 2bold(i) + bold(j) - 4bold(k),$
           $bold(p) = 5bold(i) + bold(j) - 4bold(k)$，
-          求向量 $bold(a) = 4bold(m) + 3bold(n) - bold(p)$ 在 $x$ 轴上的投影及在 $y$ 轴上的分向量。
-    ],
+          求向量 $bold(a) = 4bold(m) + 3bold(n) - bold(p)$ 在 $x$ 轴上的投影及在 $y$ 轴上的分向量
+        ],
     answer: [$13, 22bold(j)$。],
     solution: [
       $13, 22bold(j)$。
@@ -140,7 +140,7 @@
   (
     kind: "blank",
     stem: [
-      一向量的终点为点 $B(2, -1, 7)$，它在 $x$ 轴、$y$ 轴和 $z$ 轴上的投影分别为 $4, -4, 7$，求此向量的起点 $A$ 的坐标。
+      一向量的终点为点 $B(2, -1, 7)$，它在 $x$ 轴、$y$ 轴和 $z$ 轴上的投影分别为 $4, -4, 7$，求此向量的起点 $A$ 的坐标
     ],
     answer: [$(-2, 3, 0)$],
     solution: [
