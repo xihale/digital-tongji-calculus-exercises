@@ -78,7 +78,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      若幂级数 $sum_(n=0)^oo c_n x^n$ 在点 $x = -4$ 处收敛，在点 $x = 6$ 处发散，则当 $x = 1$ 时，$sum_(n=0)^oo c_n x^n$ 的敛散情况是 。
+      若幂级数 $sum_(n=0)^oo c_n x^n$ 在点 $x = -4$ 处收敛，在点 $x = 6$ 处发散，则当 $x = 1$ 时，$sum_(n=0)^oo c_n x^n$ 的敛散情况是
     ],
     answer: [绝对收敛],
     solution: [
@@ -92,7 +92,7 @@
   (
     kind: "blank",
     stem: [
-      若 $(lim_(n arrow oo) |c_n)/(c_(n+1)| = 2)$，则幂级数 $sum_(n=0)^oo c_n x^(2n)$ 的收敛半径为 。
+      若 $(lim_(n arrow oo) |c_n)/(c_(n+1)| = 2)$，则幂级数 $sum_(n=0)^oo c_n x^(2n)$ 的收敛半径为
     ],
     answer: [$sqrt(2)$],
     solution: [
@@ -109,7 +109,7 @@
   (
     kind: "blank",
     stem: [
-      当 $|x| < 1$ 时，幂级数 $(sum_(n=1)^oo x^n)/(n)$ 的和函数为 。
+      当 $|x| < 1$ 时，幂级数 $(sum_(n=1)^oo x^n)/(n)$ 的和函数为
     ],
     answer: [$-ln(1 - x)$],
     solution: [

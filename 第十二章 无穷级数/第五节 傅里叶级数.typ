@@ -75,7 +75,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(1 & "if" -pi <= x < 0, x & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = pi$ 处收敛于 。
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(1 & "if" -pi <= x < 0, x & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = pi$ 处收敛于
     ],
     answer: [$(pi+1)/(2)$],
     solution: [
@@ -90,7 +90,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x) = pi x + x^2$ ($-pi <= x <= pi$)，且其傅里叶级数为 $(a_0)/(2)+ sum_(n=1)^oo (a_n cos n x + b_n sin n x)$，则 $b_3 =$ 。
+      设函数 $f(x) = pi x + x^2$ ($-pi <= x <= pi$)，且其傅里叶级数为 $(a_0)/(2)+ sum_(n=1)^oo (a_n cos n x + b_n sin n x)$，则 $b_3 =$
     ],
     answer: [$(2)/(3)$],
     solution: [
@@ -105,7 +105,7 @@
   (
     kind: "blank",
     stem: [
-      已知函数 $f(x)$ 满足狄利克雷收敛条件，其傅里叶级数的和函数为 $S(x)$，且 $f(x)$ 在点 $x = 0$ 处左连续，$f(0^-) = -1$，$S(0) = 3$，则 $lim_(x arrow 0^+) f(x) =$ 。
+      已知函数 $f(x)$ 满足狄利克雷收敛条件，其傅里叶级数的和函数为 $S(x)$，且 $f(x)$ 在点 $x = 0$ 处左连续，$f(0^-) = -1$，$S(0) = 3$，则 $lim_(x arrow 0^+) f(x) =$
     ],
     answer: [$7$],
     solution: [
@@ -120,7 +120,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x) = 1 -(x)/(pi)$ ($0 <= x <= pi$) 的余弦级数的和函数为 $S(x)$，则 $S(-3) =$ 。
+      设函数 $f(x) = 1 -(x)/(pi)$ ($0 <= x <= pi$) 的余弦级数的和函数为 $S(x)$，则 $S(-3) =$
     ],
     answer: [$1 -(3)/(pi)$],
     solution: [
@@ -135,7 +135,7 @@
   (
     kind: "blank",
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，其傅里叶系数为 $a_n, b_n$。若函数 $g(x) = f(-x)$，则 $g(x)$ 的傅里叶系数 $a_n^*, b_n^*$ 与 $a_n, b_n$ 的关系为 $a_n^* = a_n$，$b_n^* = -b_n$。
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，其傅里叶系数为 $a_n, b_n$。若函数 $g(x) = f(-x)$，则 $g(x)$ 的傅里叶系数 $a_n^*, b_n^*$ 与 $a_n, b_n$ 的关系为 $a_n^* = a_n$，$b_n^* = -b_n$
     ],
     solution: [
       由定义 \

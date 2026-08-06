@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [总习题十二]
 
@@ -174,7 +174,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      幂级数 $(sum_(n=0)^oo x^n)/(n!)$ 的收敛区间为 。
+      幂级数 $(sum_(n=0)^oo x^n)/(n!)$ 的收敛区间为
     ],
     answer: [$(-oo, +oo)$],
     solution: [
@@ -188,7 +188,7 @@
   (
     kind: "blank",
     stem: [
-      级数 $(sum_(n=0)^oo 1)/(1 + a^n)$ ($a > 0$) 当 $a$ 满足条件  时收敛。
+      级数 $(sum_(n=0)^oo 1)/(1 + a^n)$ ($a > 0$) 当 $a$ 满足条件 #blank() 时收敛
     ],
     answer: [$a > 1$],
     solution: [
@@ -203,7 +203,7 @@
   (
     kind: "blank",
     stem: [
-      幂级数 $(sum_(n=1)^oo ((-1)^n x^(3n-1)))/(n dot 8^n)$ 的收敛域为 。
+      幂级数 $(sum_(n=1)^oo ((-1)^n x^(3n-1)))/(n dot 8^n)$ 的收敛域为
     ],
     answer: [$(-2, 2]$],
     solution: [
@@ -220,7 +220,7 @@
   (
     kind: "blank",
     stem: [
-      级数 $sum_(n=1)^oo (u_n - 2)$ 收敛，则 $lim_(n arrow oo) u_n =$ 。
+      级数 $sum_(n=1)^oo (u_n - 2)$ 收敛，则 $lim_(n arrow oo) u_n =$
     ],
     answer: [$2$],
     solution: [
@@ -234,7 +234,7 @@
   (
     kind: "blank",
     stem: [
-      幂级数 $(sum_(n=0)^oo x^n)/(3^n + (-2)^n + 3 dot 2^n)$ 的收敛半径 $R =$ 。
+      幂级数 $(sum_(n=0)^oo x^n)/(3^n + (-2)^n + 3 dot 2^n)$ 的收敛半径 $R =$
     ],
     answer: [$3$],
     solution: [
@@ -250,7 +250,7 @@
   (
     kind: "blank",
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(0 & "if" -pi <= x < 0, x + 2 & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = 0$ 处收敛于 。
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(0 & "if" -pi <= x < 0, x + 2 & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = 0$ 处收敛于
     ],
     answer: [$1$],
     solution: [
@@ -369,7 +369,7 @@
     kind: "blank",
     kind-title: [二、填空题（每小题3分，共15分）],
     stem: [
-      已知 $|a| = 2$，$|b| = sqrt(2)$，且 $a dot b = 2$，则 $|a times b| =$ 。
+      已知 $|a| = 2$，$|b| = sqrt(2)$，且 $a dot b = 2$，则 $|a times b| =$
     ],
     answer: [$2$],
     solution: [
@@ -380,7 +380,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $u = x y^2 + z^3 - x y z$ 在点 $(1, 1, 2)$ 处在方向角为 $alpha =(pi)/(3), beta =(pi)/(4), gamma =(pi)/(3)$ 的方向上的方向导数为 。
+      函数 $u = x y^2 + z^3 - x y z$ 在点 $(1, 1, 2)$ 处在方向角为 $alpha =(pi)/(3), beta =(pi)/(4), gamma =(pi)/(3)$ 的方向上的方向导数为
     ],
     answer: [$1 + sqrt(2)$],
     solution: [
@@ -398,7 +398,7 @@
   (
     kind: "blank",
     stem: [
-      曲面 $x^2 + 2y^2 + z - x ee^z = 4$ 在点 $(0, 1, 2)$ 处的切平面方程为 。
+      曲面 $x^2 + 2y^2 + z - x ee^z = 4$ 在点 $(0, 1, 2)$ 处的切平面方程为
     ],
     answer: [$ee^2 x - 4y - z + 6 = 0$],
     solution: [
@@ -411,7 +411,7 @@
   (
     kind: "blank",
     stem: [
-      设曲面 $Sigma$ 为上半球面 $z = sqrt(2 - x^2 - y^2)$，$iint_Sigma (y + 1) dif S =$ 。
+      设曲面 $Sigma$ 为上半球面 $z = sqrt(2 - x^2 - y^2)$，$iint_Sigma (y + 1) dif S =$
     ],
     answer: [$4 pi$],
     solution: [
@@ -422,7 +422,7 @@
   (
     kind: "blank",
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(1 - x & "if" -pi <= x < 0, 1 + x & "if" 0 <= x < pi)$，$S(x)$ 为 $f(x)$ 的傅里叶级数的和函数，则 $S(-3 pi) =$ 。
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(1 - x & "if" -pi <= x < 0, 1 + x & "if" 0 <= x < pi)$，$S(x)$ 为 $f(x)$ 的傅里叶级数的和函数，则 $S(-3 pi) =$
     ],
     answer: [$1+pi$],
     solution: [
@@ -698,7 +698,7 @@
     kind: "blank",
     kind-title: [二、填空题（每小题3分，共24分）],
     stem: [
-      已知直线 $(x)/(2)=(y+2)/()-2 =(z-1)/(1)$ 与 $(x-1)/(4)=(y-3)/(a)=(z+1)/()-2$ 相互垂直，则 $a =$ 。
+      已知直线 $(x)/(2)=(y+2)/()-2 =(z-1)/(1)$ 与 $(x-1)/(4)=(y-3)/(a)=(z+1)/()-2$ 相互垂直，则 $a =$
     ],
     answer: [$3$],
     solution: [
@@ -715,7 +715,7 @@
   (
     kind: "blank",
     stem: [
-      点 $M(1, 0, -1)$ 在平面 $x + 2y + z = 12$ 上的投影点的坐标为 。
+      点 $M(1, 0, -1)$ 在平面 $x + 2y + z = 12$ 上的投影点的坐标为
     ],
     answer: [$(3, 4, 1)$],
     solution: [
@@ -734,7 +734,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f$ 可微，$z = f(x + y, x y)$ 在点 $(x, y)$ 处的全微分 $dif z =$ 。
+      设函数 $f$ 可微，$z = f(x + y, x y)$ 在点 $(x, y)$ 处的全微分 $dif z =$
     ],
     answer: [$(f_1' + y f_2') dif x + (f_1' + x f_2') dif y$],
     solution: [
@@ -752,7 +752,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $u = x y^2 + z^3 - x^2 y z$ 在点 $M(1, 1, 1)$ 处的最大方向导数为 。
+      函数 $u = x y^2 + z^3 - x^2 y z$ 在点 $M(1, 1, 1)$ 处的最大方向导数为
     ],
     answer: [$sqrt(14)$],
     solution: [
@@ -769,8 +769,7 @@
       设 $I =(iiint_Omega dif v)/(1 + x^2 + y^2)$，其中空间闭区域 $Omega$ 由
           $z = sqrt(x^2 + y^2)$ 与 $z = 1$ 围成，
           则 $I$ 在柱面坐标系下的三次积分为
-          。
-    ],
+        ],
     answer: [$(int_0^(2 pi) dif theta int_0^1 rho dif rho int_rho^1 rho)/((1 + rho^2) dif z)$],
     solution: [
       柱坐标下 \
@@ -785,7 +784,7 @@
   (
     kind: "blank",
     stem: [
-      设 $f(x)$ 为连续函数，$F(t) = int_0^t dif y int_y^t f(x) dif x$ ($t > 0$)，将 $F(t)$ 交换积分次序后有 。
+      设 $f(x)$ 为连续函数，$F(t) = int_0^t dif y int_y^t f(x) dif x$ ($t > 0$)，将 $F(t)$ 交换积分次序后有
     ],
     answer: [$int_0^t dif x int_0^x f(x) dif y = int_0^t x f(x) dif x$],
     solution: [
@@ -800,7 +799,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 是直线 $3x + 4y = 12$ ($0 <= x <= 4$) 的一段，则 $int_L (3x + 4y) dif s =$ 。
+      设 $L$ 是直线 $3x + 4y = 12$ ($0 <= x <= 4$) 的一段，则 $int_L (3x + 4y) dif s =$
     ],
     answer: [$60$],
     solution: [
@@ -817,7 +816,7 @@
   (
     kind: "blank",
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，它在区间 $[-pi, pi)$ 上的表达式为 $f(x) = x$，则 $f(x)$ 的傅里叶级数的和函数 $S(x)$ 在点 $x =(5)/(2 pi)$ 处的值为 。
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，它在区间 $[-pi, pi)$ 上的表达式为 $f(x) = x$，则 $f(x)$ 的傅里叶级数的和函数 $S(x)$ 在点 $x =(5)/(2 pi)$ 处的值为
     ],
     answer: [$(pi)/(2)$],
     solution: [
@@ -1085,7 +1084,7 @@
     kind: "blank",
     kind-title: [二、填空题（每小题3分，共18分）],
     stem: [
-      设 $|a| = 1$ ， $|b| = sqrt(5)$ ，且 $|a + b| = |a - b|$ ，则 $|2 a - 3 b| =$ 。
+      设 $|a| = 1$ ， $|b| = sqrt(5)$ ，且 $|a + b| = |a - b|$ ，则 $|2 a - 3 b| =$
     ],
     answer: [$7$],
     solution: [
@@ -1097,7 +1096,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $z = f(x, y)$ 由方程 $ee^z + x y z + x + cos x = 2$ 所确定，则 $dif z|_((0,1)) =$ 。
+      设函数 $z = f(x, y)$ 由方程 $ee^z + x y z + x + cos x = 2$ 所确定，则 $dif z|_((0,1)) =$
     ],
     answer: [$-dif x$],
     solution: [
@@ -1113,7 +1112,7 @@
   (
     kind: "blank",
     stem: [
-      $int_0^2 dif x int_x^2 ee^(-y^2) dif y =$ 。
+      $int_0^2 dif x int_x^2 ee^(-y^2) dif y =$
     ],
     answer: [$(1)/(2 (1 - ee^(-4)))$],
     solution: [
@@ -1129,7 +1128,7 @@
   (
     kind: "blank",
     stem: [
-      由曲线 $3x^2 + 2y^2 = 12, z = 0$ 绕 $y$ 轴旋转一周所得的旋转曲面在点 $(0, sqrt(6), 0)$ 处的一个单位法向量为 。
+      由曲线 $3x^2 + 2y^2 = 12, z = 0$ 绕 $y$ 轴旋转一周所得的旋转曲面在点 $(0, sqrt(6), 0)$ 处的一个单位法向量为
     ],
     answer: [$(0, 1, 0)$],
     solution: [
@@ -1145,7 +1144,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x) = |x -(1)/(2|, b_n = 2 int_0^1 f(x) sin(n pi x) dif x)$ ，其正弦级数为 $S(x) = sum_(n=1)^( oo ) b_n sin(n pi x)$ ，则 $S(-2021) =$ .
+      设函数 $f(x) = |x -(1)/(2|, b_n = 2 int_0^1 f(x) sin(n pi x) dif x)$ ，其正弦级数为 $S(x) = sum_(n=1)^( oo ) b_n sin(n pi x)$ ，则 $S(-2021) =$
     ],
     answer: [$0$],
     solution: [
@@ -1160,7 +1159,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L: |x| + |y| = 1$ ，则 $(oint_L (dif s))/(|x| + |y|)=$ .
+      设 $L: |x| + |y| = 1$ ，则 $(oint_L (dif s))/(|x| + |y|)=$
     ],
     answer: [$4 sqrt(2)$],
     solution: [
@@ -1372,7 +1371,7 @@
     kind: "blank",
     kind-title: [二、填空题（每小题4分，共20分）],
     stem: [
-      已知 $|bold(a)| = 4$ ，向量 $bold(a)$ 与轴 $u$ 的夹角是 $(pi)/(3)$ ，则 $Prj_u bold(a) =$  .
+      已知 $|bold(a)| = 4$ ，向量 $bold(a)$ 与轴 $u$ 的夹角是 $(pi)/(3)$ ，则 $Prj_u bold(a) =$
     ],
     answer: [$2$],
     solution: [
@@ -1472,7 +1471,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x) = cases(x, & 0 < x <= 1, 1 - x, & 1 < x <= 2)$，其余弦级数记为 $S(x) =(a_0)/(2)+ sum_(n=1)^oo a_n cos((n pi x)/(2))$，则 $S(7) =$ 。
+      设函数 $f(x) = cases(x, & 0 < x <= 1, 1 - x, & 1 < x <= 2)$，其余弦级数记为 $S(x) =(a_0)/(2)+ sum_(n=1)^oo a_n cos((n pi x)/(2))$，则 $S(7) =$
     ],
     answer: [$(1)/(2)$],
     solution: [

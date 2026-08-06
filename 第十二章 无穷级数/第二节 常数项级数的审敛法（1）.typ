@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第二节 常数项级数的审敛法（1）]
 
@@ -45,7 +45,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      级数 $(sum_(n=1)^oo sqrt(2n+1))/(n^alpha)$ 收敛的充要条件是 $alpha$ 满足条件 。
+      级数 $(sum_(n=1)^oo sqrt(2n+1))/(n^alpha)$ 收敛的充要条件是 $alpha$ 满足条件
     ],
     answer: [$alpha >(3)/(2)$],
     solution: [
@@ -60,7 +60,7 @@
   (
     kind: "blank",
     stem: [
-      当 $p$ 满足条件  时，级数 $(sum_(n=1)^oo 1)/(n^p)$ 收敛。
+      当 $p$ 满足条件 #blank() 时，级数 $(sum_(n=1)^oo 1)/(n^p)$ 收敛
     ],
     answer: [$p > 1$],
     solution: [
@@ -73,7 +73,7 @@
   (
     kind: "blank",
     stem: [
-      若 $sum_(n=1)^oo u_n$ 为正项级数，且其部分和数列为 $(s_n)$，则级数 $sum_(n=1)^oo u_n$ 收敛的充要条件是 。
+      若 $sum_(n=1)^oo u_n$ 为正项级数，且其部分和数列为 $(s_n)$，则级数 $sum_(n=1)^oo u_n$ 收敛的充要条件是
     ],
     answer: [部分和数列有界],
     solution: [

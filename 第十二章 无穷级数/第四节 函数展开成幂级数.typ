@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第四节 函数展开成幂级数]
 
@@ -78,7 +78,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      若函数 $f(x) =(1)/((1 - 2x)(1 - 3x))$ 展开成 $x$ 的幂级数，其收敛半径 $R =$ 。
+      若函数 $f(x) =(1)/((1 - 2x)(1 - 3x))$ 展开成 $x$ 的幂级数，其收敛半径 $R =$
     ],
     answer: [$(1)/(3)$],
     solution: [
@@ -94,7 +94,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $f(x) = ln(2 + x)$ 关于 $x$ 的幂级数展开式为 ，其收敛域为 。
+      函数 $f(x) = ln(2 + x)$ 关于 $x$ 的幂级数展开式为 #blank()，其收敛域为 #blank()
     ],
     answers: (
       [$ln 2 +(sum_(n=1)^oo (-1)^(n-1))/((n dot 2^n) x^n)$],
@@ -114,7 +114,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x) = sum_(n=0)^oo a_n x^n$，则 $g(x) =(f(x))/(1 - x)$ 的麦克劳林级数展开式为 。
+      设函数 $f(x) = sum_(n=0)^oo a_n x^n$，则 $g(x) =(f(x))/(1 - x)$ 的麦克劳林级数展开式为
     ],
     answer: [$sum_(n=0)^oo (sum_(k=0)^n a_k) x^n$],
     solution: [
@@ -129,7 +129,7 @@
   (
     kind: "blank",
     stem: [
-      若 $(1)/(3 + x)= sum_(n=0)^oo a_n (x - 1)^n$ ($|x - 1| < 4$)，则 $a_n =$ 。
+      若 $(1)/(3 + x)= sum_(n=0)^oo a_n (x - 1)^n$ ($|x - 1| < 4$)，则 $a_n =$
     ],
     answer: [$((-1)^n)/(4^(n+1))$],
     solution: [
@@ -146,7 +146,7 @@
   (
     kind: "blank",
     stem: [
-      若函数 $ln(4 - 9x^2)$ 展开成 $x$ 的幂级数，其收敛半径 $R =$ 。
+      若函数 $ln(4 - 9x^2)$ 展开成 $x$ 的幂级数，其收敛半径 $R =$
     ],
     answer: [$(2)/(3)$],
     solution: [

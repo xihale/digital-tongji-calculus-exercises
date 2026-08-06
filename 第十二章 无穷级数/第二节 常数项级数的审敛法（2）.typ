@@ -56,7 +56,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      级数 $sum_(n=1)^oo u_n$ 条件收敛的含义是 。
+      级数 $sum_(n=1)^oo u_n$ 条件收敛的含义是
     ],
     answer: [$sum u_n$ 收敛而 $sum |u_n|$ 发散],
     solution: [
@@ -70,7 +70,7 @@
   (
     kind: "blank",
     stem: [
-      级数 $sum_(n=1)^oo u_n$ 绝对收敛的含义是 。
+      级数 $sum_(n=1)^oo u_n$ 绝对收敛的含义是
     ],
     answer: [$sum |u_n|$ 收敛],
     solution: [

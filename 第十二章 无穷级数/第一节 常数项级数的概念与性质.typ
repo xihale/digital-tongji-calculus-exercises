@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第一节 常数项级数的概念与性质]
 
@@ -77,7 +77,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      级数 $(2)/(1)-(3)/(2)+(4)/(3)-(5)/(4)+(6)/(5)- dots$ 的一般项是 。
+      级数 $(2)/(1)-(3)/(2)+(4)/(3)-(5)/(4)+(6)/(5)- dots$ 的一般项是
     ],
     answer: [$(-1)^(n+1) (n + 1) / n$],
     solution: [
@@ -90,7 +90,7 @@
   (
     kind: "blank",
     stem: [
-      设级数 $sum_(n=1)^oo 1 / ((2n - 1) (2n + 1))$，则 $s_n =$ ，$lim_(n arrow oo) s_n =$ 。
+      设级数 $sum_(n=1)^oo 1 / ((2n - 1) (2n + 1))$，则 $s_n =$ #blank()，$lim_(n arrow oo) s_n =$ #blank()
     ],
     answers: (
       [$(1)/(2 (1 -(1)/(2n+1)))$],
@@ -109,7 +109,7 @@
   (
     kind: "blank",
     stem: [
-      设级数 $sum_(n=1)^oo u_n$ 的部分和为 $s_n =(2^n - 1) / 2^n$，则级数的一般项 $u_n =$ ，余项 $r_n = sum_(k=n+1)^oo u_k =$ 。
+      设级数 $sum_(n=1)^oo u_n$ 的部分和为 $s_n =(2^n - 1) / 2^n$，则级数的一般项 $u_n =$ #blank()，余项 $r_n = sum_(k=n+1)^oo u_k =$ #blank()
     ],
     answers: (
       [$(1)/(2^n)$],
@@ -129,7 +129,7 @@
   (
     kind: "blank",
     stem: [
-      已知数列 $(b_n)$，有 $lim_(n arrow oo) b_n = oo$，且 $b_n != 0$ ($n = 1, 2, dots$)，则级数 $sum_(n=1)^oo ((1)/(b_n)-(1)/(b_(n+1)))$ 的和为 。
+      已知数列 $(b_n)$，有 $lim_(n arrow oo) b_n = oo$，且 $b_n != 0$ ($n = 1, 2, dots$)，则级数 $sum_(n=1)^oo ((1)/(b_n)-(1)/(b_(n+1)))$ 的和为
     ],
     answer: [$(1)/(b_1)$],
     solution: [
