@@ -88,6 +88,25 @@
   }
 }
 
+// 题干内嵌空位：按出现顺序消费当前题的 answer / answers
+// 用法：stem: [设 $f(x)=$ #blank()，则 $f'(0)=$ #blank()]
+// 若 stem 中未写 #blank()，render 仍在题末自动补空（兼容旧题）
+#let blank-answers = state("blank-answers", ())
+#let blank-counter = counter("blank-slot")
+
+#let blank() = {
+  blank-counter.step()
+  context {
+    let i = blank-counter.get().first() - 1
+    let answers = blank-answers.get()
+    if i < answers.len() {
+      blank-mark(answers.at(i))
+    } else {
+      blank-mark([])
+    }
+  }
+}
+
 // ---------- 小问分块：行高=正文；与前文/彼此一律 gap-block ----------
 #let subparts(items, numbered: true) = {
   if items.len() == 0 { return }
@@ -148,3 +167,4 @@
     }
   }
 ]
+

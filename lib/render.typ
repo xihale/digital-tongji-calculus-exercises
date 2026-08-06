@@ -8,6 +8,8 @@
 
 #import "style.typ": *
 #import "ui.typ": *
+// 供题干内嵌空：#import "…/render.typ": book-section, blank
+#let blank = blank
 
 // 题型显示名（序号按本节首次出现顺序自动编：一、二、三…）
 #let kind-names = (
@@ -84,46 +86,49 @@
     )
   } else if p.kind == "blank" {
     // answer 单空；answers 多空（「；」分隔语义）
-    // 若另有 parts（分项空位如 square），题干处不重复贴答案，答案只在解/速查
+    // 题干可用 #blank() 内嵌空位（按顺序消费 answer/answers）；
+    // 未使用 #blank() 时仍在题末自动补空（兼容旧题）。
+    // 若另有 parts（分项横线空位），题干处不重复贴答案，答案只在解/速查。
     let has-parts = "parts" in p
-    let blank = if has-parts {
-      none
-    } else if "answers" in p {
-      blank-marks(p.answers)
+    let ans-list = if "answers" in p {
+      p.answers
     } else if "answer" in p {
-      blank-mark(p.answer)
+      (p.answer,)
     } else {
-      none
+      ()
     }
     problem(
       num,
       {
+        blank-answers.update(ans-list)
+        blank-counter.update(0)
         p.stem
-        if blank != none { blank }
-        // 有 parts 时题干常以「：」收束，不再叠句号；否则统一「。」
-        if not has-parts [。]
+        // 题干内未写 #blank() 且无 parts：空位贴在末尾（旧行为）
+        if not has-parts {
+          context {
+            if blank-counter.get().first() == 0 and ans-list.len() > 0 {
+              blank-marks(ans-list)
+            }
+          }
+          [。]
+        }
       },
       extras: {
         fig
         if stem-parts != none { stem-parts }
         // 有 parts 的多空：详解前先给速查式答案行
-        if show-solutions and has-parts and ("answers" in p or "answer" in p) {
+        if show-solutions and has-parts and ans-list.len() > 0 {
           v(gap-block)
           block(width: 100%)[
             #set text(size: 0.97em, fill: solution-color)
             #text(weight: "bold", fill: answer-color)[答]#h(0.4em)
-            #if "answers" in p {
-              blank-marks(p.answers)
-            } else {
-              blank-mark(p.answer)
-            }
+            #blank-marks(ans-list)
           ]
         }
         if sol != none { sol }
       },
     )
   } else {
-    // compute / proof / short / …
     problem(
       num,
       p.stem,
@@ -141,18 +146,23 @@
 }
 
 // ---------- 题册主体 ----------
+// 小节标题规则（按 problems 数组自动推断）：
+//   - 默认：kind 变化时出标题，序号按本节 kind 首次出现顺序（一、二、三…）
+//   - 同 kind 连续题只出一次标题（勿给每题写 kind-title）
+//   - 可选 kind-title：仅在需要覆盖默认名时写在该组首题
+//     （如「判断题（如果错误…）」、试卷分值、应用题/选答题等同 kind 另起一节）
 #let render-problems(problems) = {
-  // 题型首次出现顺序 → 一、二、三…（spacer 不参与排序）
+  // 题型首次出现顺序 → 一、二、三…（spacer 不参与）
   let kind-seq = ()
   for p in problems {
     if p.kind == "spacer" { continue }
-    if "kind-title" not in p and not kind-seq.contains(p.kind) {
+    if not kind-seq.contains(p.kind) {
       kind-seq = kind-seq + (p.kind,)
     }
   }
 
   // 题号独立计数：spacer 不占题号，也不出小节标题。
-  let last-key = none
+  let last-kind = none
   let num = 0
   for p in problems {
     if p.kind == "spacer" {
@@ -160,13 +170,10 @@
       continue
     }
 
-    let key = if "kind-title" in p {
-      "t:" + repr(p.kind-title)
-    } else {
-      "k:" + p.kind
-    }
-
-    if key != last-key {
+    // 显式 kind-title → 强制新小节（支持同 kind 拆成「计算题 / 应用题」等）；
+    // 否则仅在 kind 变化时新开小节，自动生成「一、判断题」类标题。
+    let new-section = "kind-title" in p or p.kind != last-kind
+    if new-section {
       let title = if "kind-title" in p {
         p.kind-title
       } else {
@@ -180,7 +187,7 @@
         [#ord、#name]
       }
       subsection-title(title)
-      last-key = key
+      last-kind = p.kind
     }
     num += 1
     render-one(num, p)

@@ -42,22 +42,29 @@
 #let problems = (
   (kind: "choice", stem: […], options: (…), answer: [A], solution: […]),
   (kind: "blank", stem: […], answer: [$…$], solution: […]),
+  // 空在题末（默认）：不写 #blank()，渲染器自动贴在 stem 后
   (kind: "blank", stem: […分别为], answers: ([$a$], [$b$]), solution: […]),
+  // 空在题干内：用 #blank() 占位，按出现顺序对应 answer/answers
+  (kind: "blank", stem: [设 $f(x)=$ #blank()，则 $f'(0)=$ #blank()], answers: ([$x^2$], [$0$]), solution: […]),
   (kind: "compute", stem: […], parts: (…), solution-parts: (…)),
 )
 #book-section(section-title, problems)
 ```
 
+导入：`#import "../lib/render.typ": book-section, blank`（题干内嵌空时需要 `blank`）。
+
 题型 `kind`：`judge` | `choice` | `blank` | `compute` | `short` | `proof`。
+
+小节标题（「一、判断题」等）由 `problems` 中 `kind` 的首次出现顺序**自动推断**，不必写 `kind-title`。仅在需要覆盖默认名时，在该组**首题**写可选 `kind-title`（如「判断题（如果错误，请加以改正）」、试卷分值、同 `kind` 下另起的应用题/选答题）。
 
 ### 内容格式约定
 
 | 项 | 约定 |
 |----|------|
 | 公式 | 一律行内 `$…$`；微分写 `dif`，如 $(dif y)/(dif x)$、$(dif^2 y)/(dif x^2)$ |
-| 判断 | 答案 `√` / `×` |
+| 判断 | 答案 `√` / `×`；题干不写句号；渲染器只贴 `（　）`，括号后不加 `。` |
 | 选择 | 答案 `A`–`D`；题干不写句号（渲染器在选项括号后补 `。`） |
-| 填空 | 题干不写句号；数学答案包在 `$…$`；多空用 `answers: (…, …)` |
+| 填空 | 题干不写句号；数学答案包在 `$…$`；多空用 `answers: (…, …)`；句中空写 `#blank()`（按序消费答案），未写则空位仍在题末 |
 | 小问 `parts` | 非末项以 `；` 收束，末项以 `。` |
 | 计算/证明题干 | 以 `。` / `？` / `：` 收束 |
 | 参数方程 | `$x = …,\; y = …$`，不用 `cases` 独行 |
