@@ -62,7 +62,7 @@
     stem: [求下列函数的自然定义域：],
     parts: (
       [$y = arctan(x - 3)$；],
-      [$y = sqrt(3 - x) + arctan(1/x)$。],
+      [$y = sqrt(3 - x) + arctan 1/x$。],
     ),
     solution-parts: (
       [$arctan$ 的定义域为 $RR$，故定义域为 $RR$。],

@@ -32,13 +32,13 @@
     kind: "compute",
     stem: [求下列极限：],
     parts: (
-      [$lim_(x -> 0) (integral_0^x cos(t^2) dif t)/x$；],
+      [$lim_(x -> 0) (integral_0^x cos t^2 dif t)/x$；],
       [$lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$；],
       [$lim_(x -> +oo) (integral_0^x arctan^2 t dif t)/(sqrt(x^2 + 1))$。],
     ),
     solution-parts: (
       [
-        $0/0$ 型，洛必达：$lim_(x -> 0) cos(x^2) = 1$。
+        $0/0$ 型，洛必达：$lim_(x -> 0) cos x^2 = 1$。
       ],
       [
         洛必达后仍为 $0/0$。由 $integral_0^x e^(t^2) dif t ~ x$（$x -> 0$），
@@ -66,7 +66,7 @@
     ),
     solution-parts: (
       [
-        $[1/a arctan(x/a)]_0^(sqrt(3) a) = (1/a)(pi/3 - 0) = pi/(3a)$。
+        $[1/a arctan x/a]_0^(sqrt(3) a) = (1/a)(pi/3 - 0) = pi/(3a)$。
       ],
       [
         $(3x^4 + 3x^2 + 1)/(x^2 + 1) = 3x^2 + 1/(x^2 + 1)$，

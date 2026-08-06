@@ -7,6 +7,11 @@
 #let div = math.op("div")
 #let rot = math.op("rot")
 #let Prj = math.op("Prj")
+
+// 偏导 / 导数分数写法（Typst 的 / 只吃相邻原子）：
+//   错：$pd z / pd x$ → 渲成 ∂(z/∂)x
+//   对：$(pd z)/(pd x)$、$(pd^2 z)/(pd x pd y)$、$(dif y)/(dif x)$
+// 不要写成 pd z / pd x 或 dif y / dif x。
 // 积分：下册原稿用 int/iint/iiint/oint 作数学宏
 #let int = math.integral
 #let iint = math.integral.double

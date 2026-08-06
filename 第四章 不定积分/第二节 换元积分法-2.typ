@@ -64,7 +64,7 @@
       [
         令 $x = a sin t$，则 $dif x = a cos t dif t$，$sqrt(a^2-x^2) = a cos t$。
         原式 $= a^2 integral sin^2 t dif t = (a^2/2)(t - sin t cos t) + C$
-        $= (a^2/2) arcsin(x/a) - (x sqrt(a^2-x^2))/2 + C$。
+        $= (a^2/2) arcsin x/a - (x sqrt(a^2-x^2))/2 + C$。
       ],
       [
         令 $u = sqrt(2x)$，则 $x = u^2/2$，$dif x = u dif u$。
@@ -86,7 +86,7 @@
       [
         令 $x = 2 sec t$（$t in (0, pi/2)$），则 $dif x = 2 sec t tan t dif t$，$sqrt(x^2-4) = 2 tan t$。
         原式 $= 2 integral tan^2 t dif t = 2(tan t - t) + C$
-        $= sqrt(x^2 - 4) - 2 arccos(2/x) + C$。
+        $= sqrt(x^2 - 4) - 2 arccos 2/x + C$。
       ],
     ),
   ),

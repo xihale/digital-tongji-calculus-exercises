@@ -56,10 +56,10 @@
       [$y = arctan e^x$；],
       [$y = arcsin^2 x$；],
       [$y = ln(x + sqrt(a^2 + x^2))$；],
-      [$y = ln tan(x/2)$；],
+      [$y = ln tan x/2$；],
       [$y = e^(arctan sqrt(x))$；],
       [$y = e^(-x)(x^2 - 2 x + 3)$；],
-      [$y = x arcsin(x/2) + sqrt(4 - x^2)$。],
+      [$y = x arcsin x/2 + sqrt(4 - x^2)$。],
     ),
     solution-parts: (
       [$y' = e^x/(1 + e^(2 x))$。],
@@ -69,8 +69,8 @@
       [$y' = e^(arctan sqrt(x)) · 1/((1 + x) 2 sqrt(x))$。],
       [$y' = e^(-x)(-x^2 + 4 x - 5)$。],
       [
-        $y' = arcsin(x/2) + x/(2 sqrt(1 - x^2/4)) - x/sqrt(4 - x^2)$
-        $= arcsin(x/2) + x/sqrt(4 - x^2) - x/sqrt(4 - x^2) = arcsin(x/2)$。
+        $y' = arcsin x/2 + x/(2 sqrt(1 - x^2/4)) - x/sqrt(4 - x^2)$
+        $= arcsin x/2 + x/sqrt(4 - x^2) - x/sqrt(4 - x^2) = arcsin x/2$。
       ],
     ),
   ),

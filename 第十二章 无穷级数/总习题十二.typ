@@ -455,15 +455,15 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D cos((x)/(y)) dif x dif y$，其中 $D$ 为由直线 $x = 0, y =(pi)/(2), y = pi$ 及抛物线 $x = y^2$ 所围成的平面区域。
+      计算 $iint_D cos x/y dif x dif y$，其中 $D$ 为由直线 $x = 0, y =(pi)/(2), y = pi$ 及抛物线 $x = y^2$ 所围成的平面区域。
     ],
     solution: [
       按区域先对 $x$ 积分： \
           $D={((x,y)| pi)/(2)<=y<=pi, 0<=x<=y^2}$， \
           故 \
-          $I=int_pi/2^pi dif y int_0^(y^2) cos((x)/(y)) dif x$。 \
+          $I=int_pi/2^pi dif y int_0^(y^2) cos x/y dif x$。 \
           内层令 $u=(x)/(y)$，得 \
-          $int_0^(y^2) cos((x)/(y)) dif x=y sin y$。 \
+          $int_0^(y^2) cos x/y dif x=y sin y$。 \
           因而 \
           $I=int_pi/2^pi y sin y dif y =[-y cos y+sin y]_pi/2^pi =pi-1$。
     ],
@@ -1377,7 +1377,7 @@
     answer: [$2$],
     solution: [
       向轴 $u$ 的标量投影为 \
-          $Prj_u bold(a)=|bold(a)| cos((pi)/(3))$。 \
+          $Prj_u bold(a)=|bold(a)| cos pi/3$。 \
           代入 \
           $|bold(a)|=4$，得 \
           $Prj_u bold(a)=(4 dot 1)/(2)=2$。
@@ -1647,7 +1647,7 @@
           积分为 0。 \
           第二段 $B->A$：$x=(pi)/(2), dif x=0$， \
           积分化为 \
-          $int_0^1 [1-2y sin((pi)/(2))+3((pi)/(2))^2 y^2] dif y$ \
+          $int_0^1 [1-2y sin pi/2+3((pi)/(2))^2 y^2] dif y$ \
           $=int_0^1 (1-2y+(3pi^2)/(4 y^2)) dif y =1-1+(pi^2)/(4)=(pi^2)/(4)$。 \
           故原积分为 \
           $(pi^2)/(4)$。

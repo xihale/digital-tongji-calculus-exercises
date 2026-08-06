@@ -129,7 +129,7 @@
       求螺旋线 $x = a cos theta, y = a sin theta, z = b theta$ 在三个坐标面上的投影曲线的直角坐标方程。
     ],
     solution: [
-      在 $x O y$ 面上的投影：$x^2 + y^2 = a^2, z = 0$；在 $z O x$ 面上的投影：$x = a cos(z/b), y = 0$；在 $y O z$ 面上的投影：$y = a sin(z/b), x = 0$。
+      在 $x O y$ 面上的投影：$x^2 + y^2 = a^2, z = 0$；在 $z O x$ 面上的投影：$x = a cos z/b, y = 0$；在 $y O z$ 面上的投影：$y = a sin z/b, x = 0$。
     ],
   ),
   (

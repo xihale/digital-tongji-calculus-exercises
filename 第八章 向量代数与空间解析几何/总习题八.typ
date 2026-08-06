@@ -166,7 +166,7 @@
           $= 6(4) + 7(2 dot 3 dot 1/2) - 3(9) = 24 + 21 - 27 = 18$。
 
           $bold(A) times bold(B) = (2 bold(a) + 3 bold(b)) times (3 bold(a) - bold(b)) = -2 (bold(a) times bold(b)) + 9 (bold(b) times bold(a)) = -11 (bold(a) times bold(b))$。
-          $|bold(a) times bold(b)| = |bold(a)| dot |bold(b)| sin(pi/3) = 2 dot 3 dot sqrt(3)/2 = 3 sqrt(3)$。
+          $|bold(a) times bold(b)| = |bold(a)| dot |bold(b)| sin pi/3 = 2 dot 3 dot sqrt(3)/2 = 3 sqrt(3)$。
           故 $|bold(A) times bold(B)| = 11 dot 3 sqrt(3) = 33 sqrt(3)$。
     ],
   ),

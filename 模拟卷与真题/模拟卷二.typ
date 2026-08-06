@@ -52,7 +52,7 @@
     kind: "choice",
     stem: [下列不定积分的计算不正确的是],
     options: (
-      [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+      [$integral (dif x)/(sqrt(4 - x^2)) = arcsin x/2 + C$],
       [$integral (dif x)/(x^2 + 2x + 2) = arctan(x + 1) + C$],
       [$integral sin^2 x dif x = 1/3 sin^3 x + C$],
       [$integral 2^x · 3^x dif x = (2^x · 3^x)/(ln 2 + ln 3) + C$],
@@ -82,14 +82,14 @@
     stem: [
       设函数
       $f(x) = cases(
-        x sin(1/x) + (sin(a x))/x & x > 0,
+        x sin 1/x + (sin(a x))/x & x > 0,
         e^x - 2 & x <= 0,
       )$
       要使得 $f(x)$ 在点 $x = 0$ 处连续，则 $a =$
     ],
     answer: [$-1$],
     solution: [
-      $f(0) = -1$，右极限 $a$（因 $x sin(1/x)->0$，$(sin(a x))/x -> a$），故 $a = -1$。
+      $f(0) = -1$，右极限 $a$（因 $x sin 1/x->0$，$(sin(a x))/x -> a$），故 $a = -1$。
     ],
   ),
   (

@@ -71,7 +71,7 @@
         令 $u = sqrt(x)$，$x: 1 -> 4$ 对应 $u: 1 -> 2$，
         原式 $= 2 integral_1^2 u/(1 + u) dif u
         = 2 integral_1^2 (1 - 1/(1 + u)) dif u
-        = 2[u - ln(1 + u)]_1^2 = 2(1 + ln(2/3))$。
+        = 2[u - ln(1 + u)]_1^2 = 2(1 + ln 2/3)$。
       ],
       [
         令 $t = ln x$，$x: 1 -> e^2$ 对应 $t: 0 -> 2$，
@@ -83,7 +83,7 @@
         原式 $= [-x cot x]_(pi/4)^(pi/3) + integral_(pi/4)^(pi/3) cot x dif x
         = [-x cot x + ln|sin x|]_(pi/4)^(pi/3)
         = (-pi/(3 sqrt(3)) + ln(sqrt(3)/2)) - (-pi/4 + ln(sqrt(2)/2))
-        = pi/4 - pi/(3 sqrt(3)) + (1/2) ln(3/2)$。
+        = pi/4 - pi/(3 sqrt(3)) + (1/2) ln 3/2$。
       ],
       [
         分部：$u = arctan x$，$dif v = x dif x$，$v = x^2/2$，
@@ -118,12 +118,12 @@
       求 $integral_0^1 x f(x) dif x$。
     ],
     solution: [
-      $f'(x) = (sin(x^2)/x^2) · 2x = 2 sin(x^2)/x$。
+      $f'(x) = (sin x^2)/x^2 · 2x = 2 sin x^2/x$。
       分部：$integral_0^1 x f(x) dif x
       = [x^2/2 f(x)]_0^1 - (1/2) integral_0^1 x^2 f'(x) dif x
-      = (1/2) f(1) - integral_0^1 x sin(x^2) dif x$。
+      = (1/2) f(1) - integral_0^1 x sin x^2 dif x$。
       $f(1) = 0$；令 $w = x^2$，得
-      $integral_0^1 x sin(x^2) dif x = (1/2) integral_0^1 sin w dif w
+      $integral_0^1 x sin x^2 dif x = (1/2) integral_0^1 sin w dif w
       = (1 - cos 1)/2$。
       故原式 $= -(1 - cos 1)/2 = (cos 1 - 1)/2$。
     ],

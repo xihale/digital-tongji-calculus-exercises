@@ -11,14 +11,14 @@
     options: (
       [$lim_(n->oo) root(n, n) = e^(lim_(n->oo)(ln n)/n) = e^(lim_(n->oo)(1/n)) = 1$],
       [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = oo$],
-      [$lim_(x->0)(x^2 sin(1/x))/(sin x) = lim_(x->0)(2x sin(1/x) - cos(1/x))/(cos x)$ 不存在],
+      [$lim_(x->0)(x^2 sin 1/x)/(sin x) = lim_(x->0)(2x sin 1/x - cos 1/x)/(cos x)$ 不存在],
       [$lim_(x->0) x/e^x = lim_(x->0) 1/e^x = 1$],
     ),
     answer: [B],
     solution: [
       A：数列极限不宜直接套用洛必达，且未写出求导过程。
       B：属 $0/0$ 型，可洛必达；再令 $x -> 0$ 得 $2/0^+ = +oo$，运用正确。
-      C：分子 $x^2 sin(1/x)$ 的导数极限不存在，洛必达条件不满足。
+      C：分子 $x^2 sin 1/x$ 的导数极限不存在，洛必达条件不满足。
       D：$x -> 0$ 时 $x/e^x -> 0/1 = 0$，非不定式，不可用洛必达，且结果错误。
     ],
   ),

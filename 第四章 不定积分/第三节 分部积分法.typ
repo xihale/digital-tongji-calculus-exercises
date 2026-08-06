@@ -22,11 +22,11 @@
     stem: [计算下列不定积分：],
     parts: (
       [$integral x e^(-x) dif x$；],
-      [$integral x cos(x/3) dif x$；],
+      [$integral x cos x/3 dif x$；],
       [$integral x^2 cos x dif x$；],
       [$integral x^3 ln^2 x dif x$；],
       [$integral arcsin^2 x dif x$；],
-      [$integral cos(ln x) dif x$；],
+      [$integral cos ln x dif x$；],
       [$integral e^(sqrt(3x + 9)) dif x$。],
     ),
     solution-parts: (
@@ -35,8 +35,8 @@
         原式 $= -x e^(-x) + integral e^(-x) dif x = -(x+1) e^(-x) + C$。
       ],
       [
-        令 $u = x$，$dif v = cos(x/3) dif x$，则 $v = 3 sin(x/3)$，
-        原式 $= 3x sin(x/3) + 9 cos(x/3) + C$。
+        令 $u = x$，$dif v = cos x/3 dif x$，则 $v = 3 sin x/3$，
+        原式 $= 3x sin x/3 + 9 cos x/3 + C$。
       ],
       [
         两次分部积分得
@@ -52,7 +52,7 @@
       ],
       [
         两次分部积分并回代：
-        $integral cos(ln x) dif x = x/2 (cos(ln x) + sin(ln x)) + C$。
+        $integral cos ln x dif x = x/2 (cos ln x + sin ln x) + C$。
       ],
       [
         令 $t = sqrt(3x+9)$，则 $dif x = (2t/3) dif t$，
@@ -86,7 +86,7 @@
         令 $u = e^x$，原式 $= integral (arctan u)/u^3 dif u$。
         分部积分并用 $1/(u^2(1+u^2)) = 1/u^2 - 1/(1+u^2)$，得
         $-arctan u/(2u^2) - 1/(2u) - 1/2 arctan u + C$
-        $= -arctan(e^x)/(2 e^(2x)) - 1/(2 e^x) - 1/2 arctan(e^x) + C$。
+        $= -arctan e^x/(2 e^(2x)) - 1/(2 e^x) - 1/2 arctan e^x + C$。
       ],
     ),
   ),

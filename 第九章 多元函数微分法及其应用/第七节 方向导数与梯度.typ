@@ -18,7 +18,7 @@
       所以在 $(1,1)$ 处 \
       $bold(grad) z(1,1)=(2,-2)$。 \
       方向与 $x$ 轴正向成 $(3pi)/(4)$，对应单位方向向量 \
-      $bold(e)=(cos((3pi)/(4)),sin((3pi)/(4)))=(-(sqrt(2))/(2),(sqrt(2))/(2))$。 \
+      $bold(e)=(cos (3pi)/4,sin (3pi)/4)=(-(sqrt(2))/(2),(sqrt(2))/(2))$。 \
       方向导数公式： \
       $D_(bold(e)) z(1,1)=bold(grad) z(1,1) dot bold(e)$。 \
       代入得 \
@@ -96,7 +96,7 @@
         故 \
         $bold(grad)f(1,-1)=((1)/(sqrt(2)),-(2)/(sqrt(2)))=((sqrt(2))/(2),-sqrt(2))$。 \
         (2) 与 $x$ 轴成 $(pi)/(4)$ 的单位向量 \
-        $bold(e_1)=(cos((pi)/(4)),sin((pi)/(4)))=((sqrt(2))/(2),(sqrt(2))/(2))$。 \
+        $bold(e_1)=(cos pi/4,sin pi/4)=((sqrt(2))/(2),(sqrt(2))/(2))$。 \
         方向导数 \
         $D_(bold(e_1))f=bold(grad)f dot bold(e_1)$ \
         $=((sqrt(2))/(2),-sqrt(2)) dot ((sqrt(2))/(2),(sqrt(2))/(2))=-(1)/(2)$。 \

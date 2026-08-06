@@ -113,7 +113,7 @@
     stem: [计算曲线 $y = ln x$ 上相应于 $sqrt(3) <= x <= sqrt(8)$ 的一段弧的长度。],
     solution: [
       弧长 $L = integral_(sqrt(3))^(sqrt(8)) sqrt(x^2 + 1)/x dif x$。
-      化简为 $L = [sqrt(x^2 + 1) + ln (x /(sqrt(x^2 + 1) + 1))]_(sqrt(3))^(sqrt(8)) = 1 + 1/2 ln(3/2)$。
+      化简为 $L = [sqrt(x^2 + 1) + ln (x /(sqrt(x^2 + 1) + 1))]_(sqrt(3))^(sqrt(8)) = 1 + 1/2 ln 3/2$。
     ],
   ),
   (

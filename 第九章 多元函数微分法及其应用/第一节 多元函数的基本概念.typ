@@ -78,14 +78,14 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x, y) = x^2 + y^2 + x y ln ((y)/(x))$，则 $f(k x, k y) =$ 。
+      设函数 $f(x, y) = x^2 + y^2 + x y ln y/x$，则 $f(k x, k y) =$ 。
     ],
     answer: [$k^2 f(x, y)$],
     solution: [
       代入伸缩变量： \
-      $f(k x,k y)=(k x)^2+(k y)^2+(k x)(k y)ln((k y)/(k x))$。 \
-      因为 $ln((k y)/(k x))=ln((y)/(x))$，故 \
-      $f(k x,k y)=k^2[x^2+y^2+x y ln((y)/(x))]=k^2 f(x,y)$。
+      $f(k x,k y)=(k x)^2+(k y)^2+(k x)(k y)ln (k y)/(k x)$。 \
+      因为 $ln (k y)/(k x)=ln y/x$，故 \
+      $f(k x,k y)=k^2[x^2+y^2+x y ln y/x]=k^2 f(x,y)$。
     ],
   ),
   (
@@ -122,7 +122,7 @@
   (
     kind: "blank",
     stem: [
-      函数 $f(x, y) = (x^2 - y^2)^(-1) cos ((y)/(x))$ 的间断点为 。
+      函数 $f(x, y) = (x^2 - y^2)^(-1) cos y/x$ 的间断点为 。
     ],
     answer: [${(x,y) | y = plus.minus x}$],
     solution: [

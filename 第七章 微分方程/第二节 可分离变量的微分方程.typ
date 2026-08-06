@@ -97,8 +97,8 @@
         代入 $y(0) = pi/4$，得 $C_1 = sqrt(2)/2$，特解 $cos y = (sqrt(2)/2) cos x$。
       ],
       [
-        分离变量 $(dif y)/(y ln y) = (dif x)/sin x$，积分得 $ln y = C_1 tan(x/2)$。
-        由 $y(pi/2) = e$ 得 $C_1 = 1$，故 $y = exp[tan(x/2)]$。
+        分离变量 $(dif y)/(y ln y) = (dif x)/sin x$，积分得 $ln y = C_1 tan x/2$。
+        由 $y(pi/2) = e$ 得 $C_1 = 1$，故 $y = exp[tan x/2]$。
       ],
     ),
   ),

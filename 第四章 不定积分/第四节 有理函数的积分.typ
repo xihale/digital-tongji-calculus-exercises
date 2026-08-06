@@ -24,7 +24,7 @@
   (
     kind: "judge",
     stem: [
-      令 $t = tan(x/2)$，则
+      令 $t = tan x/2$，则
       $integral (tan x)/(sin x + cos x - 1) dif x = integral 2/((1 - t)(1 - t^2)) dif t$
       中系数 $A = 2$ 的写法正确
     ],
@@ -38,7 +38,7 @@
     kind: "judge",
     stem: [
       在计算三角函数有理式的不定积分 $integral R(sin x, cos x) dif x$ 时，
-      一般可使用变换 $t = tan(x/2)$
+      一般可使用变换 $t = tan x/2$
     ],
     answer: [√],
     solution: [正确。这是处理 $R(sin x, cos x)$ 的通用方法（万能代换）。],
@@ -99,10 +99,10 @@
     stem: [（附加题）试用两种方法计算不定积分 $integral (dif x)/(sin 2x + 2 sin x)$。],
     solution: [
       方法一：原式 $= integral dif x/(2 sin x (1 + cos x))$。
-      用半角公式 $sin x = 2 sin(x/2) cos(x/2)$，$1+cos x = 2 cos^2(x/2)$，
-      化成 $1/8 integral dif x/(sin(x/2) cos^3(x/2))$，再令 $u = cos(x/2)$ 计算。
-      方法二（万能代换）：令 $t = tan(x/2)$，得
-      原式 $= 1/4 integral (1/t + t) dif t = 1/4 ln|tan(x/2)| + 1/8 tan^2(x/2) + C$。
+      用半角公式 $sin x = 2 sin x/2 cos x/2$，$1+cos x = 2 cos^2 x/2$，
+      化成 $1/8 integral dif x/(sin x/2 cos^3 x/2)$，再令 $u = cos x/2$ 计算。
+      方法二（万能代换）：令 $t = tan x/2$，得
+      原式 $= 1/4 integral (1/t + t) dif t = 1/4 ln|tan x/2| + 1/8 tan^2 x/2 + C$。
     ],
   ),
 )

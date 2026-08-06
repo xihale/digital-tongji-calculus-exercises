@@ -49,7 +49,7 @@
     parts: (
       [$integral_1^(+oo) (dif x)/(x^4)$；],
       [$integral_(-oo)^(+oo) (dif x)/(x^2 + 2x + 2)$；],
-      [$integral_(2/pi)^(+oo) (1)/(x^2) sin(1/x) dif x$；],
+      [$integral_(2/pi)^(+oo) (1)/(x^2) sin 1/x dif x$；],
       [$integral_0^1 x/(sqrt(1 - x^2)) dif x$；],
       [$integral_1^e (dif x)/(x sqrt(1 - ln^2 x))$。],
     ),

@@ -92,7 +92,7 @@
 
           (2) $(1)/(2 dot 5)+(1)/(3 dot 6)+ dots +(1)/((n+1)(n+4))+ dots$；
 
-          (3) $sin pi / 2 + sin((pi)/(2^2)) + dots + sin((pi)/(2^n)) + dots$；
+          (3) $sin pi / 2 + sin(pi/2^2) + dots + sin(pi/2^n) + dots$；
 
           (4) $(sum_(n=1)^oo 1)/(1 + a^n)$ ($a > 0$)。
     ],
@@ -105,7 +105,7 @@
           对 $n>=1$， \
           $u_n <= (1)/((n+1)^2)$，而 $sum frac(1, (n+1)^2, style: "horizontal")$ 收敛， \
           故原级数收敛。 \
-          (3) $u_n=sin((pi)/(2^n))$。 \
+          (3) $u_n=sin(pi/2^n)$。 \
           由 $0<sin x<x$（$x>0$）得 \
           $0<u_n<(pi)/(2^n)$。 \
           而 $sum frac(pi, 2^n, style: "horizontal")$ 收敛，故原级数收敛。 \
@@ -120,16 +120,16 @@
       用比值审敛法判定下列级数的敛散性：
           (1) $(sum_(n=1)^oo (2^n dot n!))/(n^n)$；
 
-          (2) $sum_(n=1)^oo n tan((pi)/(2^(n+1)))$。
+          (2) $sum_(n=1)^oo n tan(pi/2^(n+1))$。
     ],
     solution: [
       (1) 设 $u_n=(2^n n!)/(n^n)$， \
           $(u_(n+1))/(u_n) = (2 ((n)/(n+1))^n arrow 2)/(ee) < 1$， \
           由比值审敛法，级数收敛。 \
-          (2) 设 $v_n=n tan((pi)/(2^(n+1)))$。 \
+          (2) 设 $v_n=n tan(pi/2^(n+1))$。 \
           且 \
           $(lim_(x arrow 0) tan x)/(x)= 1$，故 \
-          $(lim_(n arrow oo) (n tan((pi)/(2^(n+1)))))/((n pi)/(2^(n+1))) = 1$。 \
+          $(lim_(n arrow oo) (n tan(pi/2^(n+1))))/((n pi)/(2^(n+1))) = 1$。 \
           再看 $w_n = frac(n, 2^n, style: "horizontal")$，有 \
           $(w_(n+1))/(w_n) = (n+1)/((2n) arrow frac(1, 2, style: "horizontal")) < 1$，故 $sum w_n$ 收敛. \
           由极限比较，$sum v_n$ 亦收敛。

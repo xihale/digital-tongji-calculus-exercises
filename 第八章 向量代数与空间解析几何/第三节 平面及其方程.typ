@@ -84,7 +84,7 @@
     answer: [$plus.minus sqrt(70)/2$],
     solution: [
       法向量分别为 $(1, k, -2)$ 和 $(2, -3, 1)$。
-          $cos(pi/4) = sqrt(2)/2 = |2 - 3k - 2| / (sqrt(1+k^2+4) sqrt(4+9+1)) = |3k| / (sqrt(5+k^2) sqrt(14))$。
+          $cos pi/4 = sqrt(2)/2 = |2 - 3k - 2| / (sqrt(1+k^2+4) sqrt(4+9+1)) = |3k| / (sqrt(5+k^2) sqrt(14))$。
           $1/2 = 9k^2 / (14(5+k^2)) => 7(5+k^2) = 9k^2 => 35 + 7k^2 = 9k^2 => 2k^2 = 35 => k = plus.minus sqrt(70)/2$。
     ],
   ),

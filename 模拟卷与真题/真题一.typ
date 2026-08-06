@@ -19,7 +19,7 @@
   (
     kind: "choice",
     stem: [
-      当 $x->0$ 时，$sin x + x^2 cos(1/x)$ 是 $(1 + cos x) ln(1 + x)$ 的
+      当 $x->0$ 时，$sin x + x^2 cos 1/x$ 是 $(1 + cos x) ln(1 + x)$ 的
     ],
     options: (
       [高阶无穷小],
@@ -37,7 +37,7 @@
     stem: [
       设函数
       $f(x) = cases(
-        (2/pi) arctan(1/x) & x < 0,
+        (2/pi) arctan 1/x & x < 0,
         (1 + x)^x & x >= 0,
       )$，
       则 $x = 0$ 是 $f(x)$ 的

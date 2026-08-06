@@ -134,13 +134,13 @@
   (
     kind: "compute",
     stem: [
-      设 $((x)/(z)) = ln ((z)/(y))$ , 求 $pd z / pd x,pd z / pd y$ .
+      设 $((x)/(z)) = ln z/y$ , 求 $pd z / pd x,pd z / pd y$ .
     ],
     solution: [
       $pd z / pd x=(z)/(x+z)$，$pd z / pd y=(z^2)/(y(x+z))$。
 
       记 \
-      $F(x,y,z)=(x)/(z)- ln((z)/(y))=0$。 \
+      $F(x,y,z)=(x)/(z)- ln z/y=0$。 \
       隐函数求导公式给出 \
       $z_x=-(F_x)/(F_z), z_y=-(F_y)/(F_z)$。 \
       先算偏导： \

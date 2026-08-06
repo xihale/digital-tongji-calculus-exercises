@@ -208,7 +208,7 @@
     ],
     solution: [
       $ x = a/2(1+cos theta), y = a/2 sin theta, dif s = a/2 dif theta $
-          $ I = a^2/2 int_0^(2 pi) |cos(theta/2)| dif theta = 2a^2 $
+          $ I = a^2/2 int_0^(2 pi) |cos theta/2| dif theta = 2a^2 $
     ],
   ),
 )

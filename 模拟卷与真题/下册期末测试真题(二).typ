@@ -102,7 +102,7 @@
     kind-title: [二、填空题（每小题4分，共20分）],
     stem: [已知 $|a| = 4$，向量 $a$ 与轴 $u$ 的夹角是 $pi/3$，则 $"Prj"_u a =$],
     answer: [$2$],
-    solution: [$"Prj"_u a = |a| cos(pi/3) = 4 · 1/2 = 2$。],
+    solution: [$"Prj"_u a = |a| cos pi/3 = 4 · 1/2 = 2$。],
   ),
   (
     kind: "blank",

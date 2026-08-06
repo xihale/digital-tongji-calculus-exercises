@@ -7,18 +7,18 @@
   // ===== 一、选择题 =====
   (
     kind: "choice",
-    stem: [微分方程 $(dif y)/(dif x) = y/x + tan(y/x)$ 的通解为],
+    stem: [微分方程 $(dif y)/(dif x) = y/x + tan y/x$ 的通解为],
     options: (
-      [$sin(y/x) = C x$],
-      [$sin(y/x) = 1/(C x)$],
-      [$sin(x/y) = C x$],
-      [$sin(x/y) = 1/(C x)$],
+      [$sin y/x = C x$],
+      [$sin y/x = 1/(C x)$],
+      [$sin x/y = C x$],
+      [$sin x/y = 1/(C x)$],
     ),
     answer: [A],
     solution: [
       令 $v = y/x$，则 $(dif y)/(dif x) = v + x (dif v)/(dif x)$。
       代回得 $x (dif v)/(dif x) = tan v$，分离变量积分得 $ln|sin v| = ln|x| + C$，
-      即 $sin(y/x) = C_1 x$。
+      即 $sin y/x = C_1 x$。
     ],
   ),
 
@@ -27,14 +27,14 @@
     kind: "compute",
     stem: [求下列齐次方程的通解：],
     parts: (
-      [$x (dif y)/(dif x) = y ln(y/x)$；],
+      [$x (dif y)/(dif x) = y ln y/x$；],
       [$(x^3 + y^3) dif x - 3 x y^2 dif y = 0$。],
     ),
     solution-parts: (
       [
         设 $v = y/x$，方程化为 $(dif v)/(v(ln v - 1)) = (dif x)/x$。
-        令 $u = ln v - 1$，积分得 $ln|ln(y/x) - 1| = ln|x| + C$，
-        可写为 $ln(y/x) = C_1 x + 1$。
+        令 $u = ln v - 1$，积分得 $ln|ln y/x - 1| = ln|x| + C$，
+        可写为 $ln y/x = C_1 x + 1$。
       ],
       [
         令 $v = y/x$，分离变量得 $3 v^2/(1 - 2 v^3) dif v = (dif x)/x$，

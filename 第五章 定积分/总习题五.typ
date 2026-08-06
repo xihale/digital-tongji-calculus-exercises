@@ -151,7 +151,7 @@
       [$lim_(x -> 0) (integral_0^x 2 t cos t dif t)/(1 - cos x)$；],
       [$integral_(-1)^1 x/(sqrt(5 - 4x)) dif x$；],
       [$integral_1^2 x log_2 x dif x$；],
-      [$integral_1^e sin(ln x) dif x$。],
+      [$integral_1^e sin ln x dif x$。],
     ),
     solution-parts: (
       [

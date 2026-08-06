@@ -37,7 +37,7 @@
   ),
   (
     kind: "choice",
-    stem: [设函数 $f(x) = x^2 + arctan(1/(x - 1))$，则 $x = 1$ 是 $f(x)$ 的],
+    stem: [设函数 $f(x) = x^2 + arctan 1/(x - 1)$，则 $x = 1$ 是 $f(x)$ 的],
     options: ([可去间断点], [跳跃间断点], [无穷间断点], [振荡间断点]),
     answer: [B],
     solution: [

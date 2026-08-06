@@ -43,7 +43,7 @@
   ),
   (
     kind: "choice",
-    stem: [函数 $f(x, y) = arctan(x/y)$ 在点 $(0, 1)$ 处的梯度为],
+    stem: [函数 $f(x, y) = arctan x/y$ 在点 $(0, 1)$ 处的梯度为],
     options: (
       [$-bold(i)$],
       [$bold(i)$],

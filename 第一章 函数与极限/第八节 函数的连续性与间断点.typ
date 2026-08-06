@@ -18,7 +18,7 @@
     answer: [$1/3$],
     solution: [
       连续要求 $lim_(x -> 0) f(x) = a$。
-      $lim_(x -> 0) (1/x) sin(x/3) = lim_(x -> 0) (sin(x/3))/(x/3) dot 1/3 = 1/3$。
+      $lim_(x -> 0) (1/x) sin x/3 = lim_(x -> 0) (sin x/3)/(x/3) dot 1/3 = 1/3$。
     ],
   ),
 

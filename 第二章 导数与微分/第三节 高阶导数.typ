@@ -7,7 +7,7 @@
   // ===== 一、选择题 =====
   (
     kind: "choice",
-    stem: [若函数 $f(x) = sin(x/2) + cos 2 x$，则 $f^((27))(pi) =$],
+    stem: [若函数 $f(x) = sin x/2 + cos 2 x$，则 $f^((27))(pi) =$],
     options: (
       [$0$],
       [$-1/2^27$],
@@ -18,7 +18,7 @@
     solution: [
       $f^((n))(x) = (1/2)^n sin(x/2 + n pi/2) + 2^n cos(2 x + n pi/2)$。
       当 $n = 27$ 时，$27 pi/2 equiv 3 pi/2 space (mod 2 pi)$，
-      $f^((27))(x) = -(1/2)^27 cos(x/2) + 2^27 sin 2 x$。
+      $f^((27))(x) = -(1/2)^27 cos x/2 + 2^27 sin 2 x$。
       代入 $x = pi$ 得 $f^((27))(pi) = 0$。
     ],
   ),

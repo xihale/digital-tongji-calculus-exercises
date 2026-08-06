@@ -152,11 +152,11 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D cos(x/y) dif x dif y$，其中 $D$ 为由直线 $x = 0$，$y = pi/2$，$y = pi$
+      计算 $iint_D cos x/y dif x dif y$，其中 $D$ 为由直线 $x = 0$，$y = pi/2$，$y = pi$
       及抛物线 $x = y^2$ 所围成的平面区域。
     ],
     solution: [
-      $I = integral_(pi/2)^pi dif y integral_0^(y^2) cos(x/y) dif x
+      $I = integral_(pi/2)^pi dif y integral_0^(y^2) cos x/y dif x
         = integral_(pi/2)^pi y (sin y) dif y = pi - 1$。
     ],
   ),

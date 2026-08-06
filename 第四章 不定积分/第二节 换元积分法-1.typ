@@ -97,7 +97,7 @@
       ],
       [
         分子分母同乘 $e^x$：令 $u = e^x$，
-        原式 $= integral dif u/(u^2 + 1) = arctan(e^x) + C$。
+        原式 $= integral dif u/(u^2 + 1) = arctan e^x + C$。
       ],
       [
         令 $u = arctan x$，则 $dif u = dif x/(1+x^2)$，

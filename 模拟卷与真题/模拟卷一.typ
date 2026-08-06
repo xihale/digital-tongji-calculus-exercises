@@ -48,7 +48,7 @@
     kind: "choice",
     stem: [下列不定积分的计算不正确的是],
     options: (
-      [$integral (dif x)/(sqrt(4 - x^2)) = arcsin(x/2) + C$],
+      [$integral (dif x)/(sqrt(4 - x^2)) = arcsin x/2 + C$],
       [$integral (dif x)/(x^2 - 2x + 2) = arctan(x - 1) + C$],
       [$integral 2^x · 3^x dif x = (2^x · 3^x)/(ln 2 + ln 3) + C$],
       [$integral x/(1 + x^2) dif x = arctan x + C$],

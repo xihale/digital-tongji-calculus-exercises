@@ -59,8 +59,8 @@
     answer: [D],
     solution: [
       设 $F = x cos z + y cos x - ((pi)/(2)) z - ((pi)/(2))$。在其点处： \
-      $F_x = cos z - y sin x = cos 0 - (1 -(pi)/(2)) sin((pi)/(2)) = 1 - (1 -(pi)/(2)) =(pi)/(2)$。 \
-      $F_y = cos x = cos((pi)/(2)) = 0$。 \
+      $F_x = cos z - y sin x = cos 0 - (1 -(pi)/(2)) sin pi/2 = 1 - (1 -(pi)/(2)) =(pi)/(2)$。 \
+      $F_y = cos x = cos pi/2 = 0$。 \
       $F_z = -x sin z -(pi)/(2)= -(pi)/(2 sin 0)-(pi)/(2)= -(pi)/(2)$。 \
       法向量 $((pi)/(2), 0, -(pi)/(2))$ 即 $(1, 0, -1)$。 \
       方程为 $1(x -(pi)/(2)) - 1(z - 0) = 0 => x - z =(pi)/(2)$。

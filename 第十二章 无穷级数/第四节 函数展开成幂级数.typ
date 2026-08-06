@@ -183,7 +183,7 @@
     ],
     solution: [
       令 $u=x+(pi)/(3)$，则 \
-          $cos x=cos(u-(pi)/(3))=cos u cos((pi)/(3))+sin u sin((pi)/(3))$ \
+          $cos x=cos(u-pi/3)=cos u cos pi/3+sin u sin pi/3$ \
           $=(1)/(2 cos u)+(sqrt(3))/(2 sin u)$。 \
           再代入 \
           $cos u=(sum_(n=0)^oo (-1)^n u^(2n))/((2n)!)$， \

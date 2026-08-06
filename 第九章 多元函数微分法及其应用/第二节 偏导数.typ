@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $u = arctan((y)/(x))$，则 $pd u / pd x=$ 。
+      设函数 $u = arctan y/x$，则 $pd u / pd x=$ 。
     ],
     options: (
       [$(x)/(x^2 + y^2)$],
@@ -116,7 +116,7 @@
     kind: "compute",
     stem: [
       求下列函数的二阶偏导数 $pd^2 z / pd x^2,pd^2 z / pd y^2,pd^2 z / pd x pd y$：
-      (1) $z = arctan((y)/(x))$；
+      (1) $z = arctan y/x$；
 
       (2) $z = y^x$。
     ],
