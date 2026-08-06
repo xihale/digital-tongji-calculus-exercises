@@ -106,11 +106,18 @@
         blank-answers.update(ans-list)
         blank-counter.update(0)
         p.stem
-        // 题干内未写 #blank() 且无 parts：空位贴在末尾（旧行为）
+        // 题干内未写 #blank()：空位贴在末尾；
+        // 若已写部分 #blank() 但仍少于答案数：剩余空位补在末尾。
         if not has-parts {
           context {
-            if blank-counter.get().first() == 0 and ans-list.len() > 0 {
-              blank-marks(ans-list)
+            let used = blank-counter.get().first()
+            let n = ans-list.len()
+            if n > 0 and used < n {
+              if used == 0 {
+                blank-marks(ans-list)
+              } else {
+                blank-marks(ans-list.slice(used))
+              }
             }
           }
           [。]
