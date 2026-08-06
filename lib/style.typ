@@ -12,6 +12,8 @@
 #let page-margin-x = 2.6cm
 #let page-margin-y = 2cm
 #let content-width = 210mm - 2 * page-margin-x
+// A4 版心高度：用于判断「题干+作答留白」能否整页装下（装不下则题干可分页）
+#let page-body-height = 297mm - 2 * page-margin-y
 
 // 色：题干近黑；答案/解答用蓝系
 #let stem-color = rgb("#1a1a1a")
@@ -34,12 +36,15 @@
 #let gap-block = 1.0em
 #let gap-item = 1.6em
 
-// 练习模式计算题默认留白（仅 data-driven render 使用；
-// 旧 API 的 answer-process 在未显式给 height 时不再占位）
-#let practice-gap = 4cm
+// 练习模式计算/证明/简答默认书写留白高度（仅 practice）。
+// 高度固定、不可压缩：页底不够则整块留白移到下一页（只可多不可少）。
+// 短题：题干+留白能装进一页版心时整题 unbreakable，页底不够整题下移。
+// 长题：题干允许跨页，文末仍追加完整 practice-gap，绝不缩短作答区。
+// 单题可用 practice-gap 覆盖；practice-space: false 可关闭留白。
+#let practice-gap = 6cm
 
 // spacer（纯垂直留白条目）的默认高度；数据层可逐条用 height 覆盖。
-// 仅在 practice 模式生效（full/answers 下解答占据该位置，留白无意义）。
+// 固定高度、不可分页；仅 practice 生效（full/answers 下解答占位）。
 #let spacer-default = 3cm
 
 // 章节标题：居左
@@ -50,11 +55,13 @@
   #body
 ]
 
-// 小节标题：上下都留空，避免后文贴住
+// 小节标题：上下都留空，避免后文贴住。
+// sticky：页底只够放下标题时，与后文（首题）一同移到下一页，避免孤行标题。
 #let subsection-title(body) = block(
   width: 100%,
   above: gap-item,
   below: gap-block,
+  sticky: true,
 )[
   #set text(weight: "bold", size: 1.08em, fill: stem-color)
   #set align(left)
