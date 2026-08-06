@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第三节 格林公式及其应用（2）]
 
@@ -77,7 +77,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设有函数 $u(x, y)$，已知 $u(0, 0) = 1$，且全微分 $dif u = (2x cos y - y^lambda sin x) dif x + (2y cos x - x^lambda sin y) dif y$，则 $lambda =$ ，$u(x, y) =$ 。
+      设有函数 $u(x, y)$，已知 $u(0, 0) = 1$，且全微分 $dif u = (2x cos y - y^lambda sin x) dif x + (2y cos x - x^lambda sin y) dif y$，则 $lambda =$ #blank()，$u(x, y) =$ #blank()
     ],
     answers: (
       [$2$],
@@ -91,7 +91,7 @@
   (
     kind: "blank",
     stem: [
-      为使得 $int_(A B) f(x, y)(y dif x + x dif y)$ 与路径无关，则可微函数 $f(x, y)$ 应满足 。
+      为使得 $int_(A B) f(x, y)(y dif x + x dif y)$ 与路径无关，则可微函数 $f(x, y)$ 应满足
     ],
     answer: [$x (pd f)/(pd x) = y (pd f)/(pd y)$],
     solution: [

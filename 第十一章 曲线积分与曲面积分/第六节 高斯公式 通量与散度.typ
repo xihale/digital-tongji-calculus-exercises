@@ -61,7 +61,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦， $Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外）， 则用高斯公式化曲面积分为重积分时，有 $(iint_Sigma (x cos alpha + y cos beta + z cos gamma))/((sqrt(x^2 + y^2 + z^2)) dif S)$ $=$ 。
+      设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦， $Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外）， 则用高斯公式化曲面积分为重积分时，有 $(iint_Sigma (x cos alpha + y cos beta + z cos gamma))/((sqrt(x^2 + y^2 + z^2)) dif S)$ $=$
     ],
     answer: [$(iiint_Omega 2)/((sqrt(x^2 + y^2 + z^2)) dif v)$],
     solution: [
@@ -71,7 +71,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Omega$ 是由光滑闭曲面 $Sigma$ 所围成的空间闭区域，其体积记为 $V$，则沿 $Sigma$ 外侧的积分 $iint_Sigma (z - y) dif x dif y + (y - x) dif z dif x + (x - z) dif y dif z =$ 。
+      设 $Omega$ 是由光滑闭曲面 $Sigma$ 所围成的空间闭区域，其体积记为 $V$，则沿 $Sigma$ 外侧的积分 $iint_Sigma (z - y) dif x dif y + (y - x) dif z dif x + (x - z) dif y dif z =$
     ],
     answer: [$0$],
     solution: [
@@ -81,7 +81,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$，则 $iint_Sigma (x^2 + y^2 + z^2) dif S =$ 。
+      设 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$，则 $iint_Sigma (x^2 + y^2 + z^2) dif S =$
     ],
     answer: [$4 pi a^4$],
     solution: [
@@ -91,7 +91,7 @@
   (
     kind: "blank",
     stem: [
-      设空间闭区域 $Omega$ 由曲面 $z = a^2 - x^2 - y^2$ 与平面 $z = 0$ 所围成， 其中 $a$ 为正整数，记闭区域 $Omega$ 的表面外侧为 $S$，$Omega$ 的体积为 $V$， 则 $iint_S x^2 y z^2 dif y dif z - x y^2 z^2 dif z dif x + z (1 + x y z) dif x dif y$ $=$ 。
+      设空间闭区域 $Omega$ 由曲面 $z = a^2 - x^2 - y^2$ 与平面 $z = 0$ 所围成， 其中 $a$ 为正整数，记闭区域 $Omega$ 的表面外侧为 $S$，$Omega$ 的体积为 $V$， 则 $iint_S x^2 y z^2 dif y dif z - x y^2 z^2 dif z dif x + z (1 + x y z) dif x dif y$ $=$
     ],
     answer: [$iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + x y z) dif v$],
     solution: [
@@ -102,7 +102,7 @@
   (
     kind: "blank",
     stem: [
-      设有向量场 $bold(A) = (x^2 y + y^3) bold(i) + (x^3 - x y^2) bold(j)$，则 $div bold(A) =$ 。
+      设有向量场 $bold(A) = (x^2 y + y^3) bold(i) + (x^3 - x y^2) bold(j)$，则 $div bold(A) =$
     ],
     answer: [$0$],
     solution: [
@@ -112,7 +112,7 @@
   (
     kind: "blank",
     stem: [
-      向量场 $bold(A) = (x^2 y z, z y^2 x, x y z^2)$ 在点 $M(1, 3, 2)$ 处的散度 $div bold(A) =$ 。
+      向量场 $bold(A) = (x^2 y z, z y^2 x, x y z^2)$ 在点 $M(1, 3, 2)$ 处的散度 $div bold(A) =$
     ],
     answer: [$36$],
     solution: [
@@ -122,7 +122,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则 $div(grad u) |_((1, 1, 1)) =$ 。
+      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则 $div(grad u) |_((1, 1, 1)) =$
     ],
     answer: [$(1)/(3)$],
     solution: [

@@ -59,7 +59,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $L: x^2 + y^2 = 9$，取顺时针方向，则 $oint_L (2x - y + 4) dif x + (5y + 3x - 6) dif y =$ 。
+      设 $L: x^2 + y^2 = 9$，取顺时针方向，则 $oint_L (2x - y + 4) dif x + (5y + 3x - 6) dif y =$
     ],
     answer: [$-36 pi$],
     solution: [
@@ -70,7 +70,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为椭圆 $x^2/a^2+y^2/b^2= 1$ 的正向边界，则 $oint_L x dif y - y dif x =$ 。
+      设 $L$ 为椭圆 $x^2/a^2+y^2/b^2= 1$ 的正向边界，则 $oint_L x dif y - y dif x =$
     ],
     answer: [$2 pi a b$],
     solution: [
@@ -81,7 +81,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为圆 $x^2 + y^2 = 1$ 上从点 $(1, 0)$经点 $(0, 1)$ 到点 $(-1, 0)$ 的一段弧，则 $int_L ee^(y^2) dif y =$ 。
+      设 $L$ 为圆 $x^2 + y^2 = 1$ 上从点 $(1, 0)$经点 $(0, 1)$ 到点 $(-1, 0)$ 的一段弧，则 $int_L ee^(y^2) dif y =$
     ],
     answer: [$0$],
     solution: [

@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第四节 对面积的曲面积分]
 
@@ -45,7 +45,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $Sigma$ 为柱面 $x^2 + y^2 = a^2$ ($a > 0$) 在 $0 <= z <= h$ 之间的部分，则 $iint_Sigma dif S =$ ，$iint_Sigma x dif S =$ ，$iint_Sigma x^2 dif S =$ 。
+      设 $Sigma$ 为柱面 $x^2 + y^2 = a^2$ ($a > 0$) 在 $0 <= z <= h$ 之间的部分，则 $iint_Sigma dif S =$ #blank()，$iint_Sigma x dif S =$ #blank()，$iint_Sigma x^2 dif S =$ #blank()
     ],
     answers: (
       [$2 pi a h$],
@@ -62,7 +62,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Sigma$ 为球面 $z = 1 + sqrt(1 - x^2 - y^2)$，则 $iint_Sigma (x^2 + y^2 +(z)/(2)) dif S =$ 。
+      设 $Sigma$ 为球面 $z = 1 + sqrt(1 - x^2 - y^2)$，则 $iint_Sigma (x^2 + y^2 +(z)/(2)) dif S =$
     ],
     answer: [$(17 pi)/(6)$],
     solution: [
@@ -73,7 +73,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Sigma$ 为圆锥面 $z = sqrt(x^2 + y^2)$ 被圆柱面 $x^2 + y^2 = 2 a x$ ($a > 0$) 所截的部分，则 $iint_Sigma (x y + y z + z x) dif S =$ 。
+      设 $Sigma$ 为圆锥面 $z = sqrt(x^2 + y^2)$ 被圆柱面 $x^2 + y^2 = 2 a x$ ($a > 0$) 所截的部分，则 $iint_Sigma (x y + y z + z x) dif S =$
     ],
     answer: [$(64 sqrt(2))/(15 a^4)$],
     solution: [

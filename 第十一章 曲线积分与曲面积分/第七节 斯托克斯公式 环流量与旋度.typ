@@ -61,7 +61,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      向量场 $bold(A) = (x + y + z, y x, z)$ 的旋度 $rot bold(A) =$ 。
+      向量场 $bold(A) = (x + y + z, y x, z)$ 的旋度 $rot bold(A) =$
     ],
     answer: [$(0, 1, y - 1)$],
     solution: [
@@ -71,7 +71,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $f(x, y, z)$ 具有二阶连续偏导数，则 $rot(grad f) =$ 。
+      设函数 $f(x, y, z)$ 具有二阶连续偏导数，则 $rot(grad f) =$
     ],
     answer: [$bold(0)$],
     solution: [
@@ -81,7 +81,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则 $rot(grad u) |_((1, 0, 1)) =$ 。
+      设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则 $rot(grad u) |_((1, 0, 1)) =$
     ],
     answer: [$bold(0)$],
     solution: [
@@ -91,7 +91,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $y + z = 0$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L z dif x + y dif z =$ 。
+      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $y + z = 0$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L z dif x + y dif z =$
     ],
     answer: [$pi$],
     solution: [
@@ -101,7 +101,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $z = x + y$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L x z dif x + x dif y +(y^2)/(2 dif z)=$ 。
+      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $z = x + y$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L x z dif x + x dif y +(y^2)/(2 dif z)=$
     ],
     answer: [$pi$],
     solution: [

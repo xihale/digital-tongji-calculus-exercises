@@ -123,7 +123,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $L$ 为圆 $x^2 + y^2 = a^2$ 在第一象限的部分，则 $int_L x y dif s =$ 。
+      设 $L$ 为圆 $x^2 + y^2 = a^2$ 在第一象限的部分，则 $int_L x y dif s =$
     ],
     answer: [$(1)/(2 a^3)$],
     solution: [
@@ -133,7 +133,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为抛物线 $y = x^2$ 上从点 $O(0, 0)$ 到点 $A(1, 1)$ 的一段弧，则 $int_L x y dif x + (y - x) dif y =$ 。
+      设 $L$ 为抛物线 $y = x^2$ 上从点 $O(0, 0)$ 到点 $A(1, 1)$ 的一段弧，则 $int_L x y dif x + (y - x) dif y =$
     ],
     answer: [$(1)/(12)$],
     solution: [
@@ -143,7 +143,7 @@
   (
     kind: "blank",
     stem: [
-      设有一质量分布均匀的曲面 $Sigma$，在点 $(x, y, z)$ 处的面密度为 $rho(x, y, z)$，则该曲面关于 $z$ 轴的转动惯量 $I_z =$ 。
+      设有一质量分布均匀的曲面 $Sigma$，在点 $(x, y, z)$ 处的面密度为 $rho(x, y, z)$，则该曲面关于 $z$ 轴的转动惯量 $I_z =$
     ],
     answer: [$iint_Sigma (x^2 + y^2) rho dif S$],
     solution: [
@@ -153,7 +153,7 @@
   (
     kind: "blank",
     stem: [
-      设光滑闭曲面 $Sigma$ 围成的空间区域为 $Omega$，则利用高斯公式化曲面积分为重积分时，有 $iint_Sigma x y dif x dif y + z x dif z dif x + y z dif y dif z =$ 。
+      设光滑闭曲面 $Sigma$ 围成的空间区域为 $Omega$，则利用高斯公式化曲面积分为重积分时，有 $iint_Sigma x y dif x dif y + z x dif z dif x + y z dif y dif z =$
     ],
     answer: [$0$],
     solution: [
@@ -163,7 +163,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为 $x O y$ 面上沿顺时针方向绕行的闭曲线，且 $oint_L (x - 2y) dif x + (4x + 3y) dif y = -9$，则 $L$ 所围成平面区域 $D$ 的面积为 。
+      设 $L$ 为 $x O y$ 面上沿顺时针方向绕行的闭曲线，且 $oint_L (x - 2y) dif x + (4x + 3y) dif y = -9$，则 $L$ 所围成平面区域 $D$ 的面积为
     ],
     answer: [$(3)/(2)$],
     solution: [
@@ -173,7 +173,7 @@
   (
     kind: "blank",
     stem: [
-      设 $(a x y^3 - y^2 cos x) dif x + (1 + b y sin x + 3x^2 y^2) dif y$ 是某个二元函数 $f(x, y)$ 的全微分，则 $a, b$ 的值分别为 。
+      设 $(a x y^3 - y^2 cos x) dif x + (1 + b y sin x + 3x^2 y^2) dif y$ 是某个二元函数 $f(x, y)$ 的全微分，则 $a, b$ 的值分别为
     ],
     answer: [$a = 2, b = -2$],
     solution: [
@@ -183,7 +183,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为圆 $x^2 + y^2 = 1$，取顺时针方向，则 $I_1 = oint_L x^6 dif s$ 与 $I_2 = oint_L y^6 dif s$ 的大小关系是 。
+      设 $L$ 为圆 $x^2 + y^2 = 1$，取顺时针方向，则 $I_1 = oint_L x^6 dif s$ 与 $I_2 = oint_L y^6 dif s$ 的大小关系是
     ],
     answer: [$I_1 = I_2$],
     solution: [
@@ -193,7 +193,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $P(x, y, z)$ 在空间有界闭区域 $V$ 上具有一阶连续偏导数，$Sigma$ 为 $V$ 的光滑边界曲面的外侧，由高斯公式得 $iint_Sigma P(x, y, z) dif y dif z =$ 。
+      设函数 $P(x, y, z)$ 在空间有界闭区域 $V$ 上具有一阶连续偏导数，$Sigma$ 为 $V$ 的光滑边界曲面的外侧，由高斯公式得 $iint_Sigma P(x, y, z) dif y dif z =$
     ],
     answer: [$(iiint_V (partial P))/((partial x) dif v)$],
     solution: [

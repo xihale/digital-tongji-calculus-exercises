@@ -78,7 +78,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $L$ 为抛物线 $y = x^2$ 上从点 $A(0, 0)$ 到点 $B(1, 1)$ 的一段弧，则 $int_L x dif y =$ 。
+      设 $L$ 为抛物线 $y = x^2$ 上从点 $A(0, 0)$ 到点 $B(1, 1)$ 的一段弧，则 $int_L x dif y =$
     ],
     answer: [$2/3$],
     solution: [

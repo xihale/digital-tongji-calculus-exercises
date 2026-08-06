@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第五节 对坐标的曲面积分]
 
@@ -54,7 +54,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ 的外侧，则 $iint_Sigma z dif x dif y =$ 。
+      设 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ 的外侧，则 $iint_Sigma z dif x dif y =$
     ],
     answer: [$(4)/(3 pi a^3)$],
     solution: [
@@ -64,7 +64,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Sigma$ 是柱面 $x^2 + y^2 = 4$ 介于 $1 <= z <= 3$ 之间的部分，其法向量指向 $z$ 轴，则 $iint_Sigma sqrt(x^2 + y^2 + z^2) dif x dif y =$ 。
+      设 $Sigma$ 是柱面 $x^2 + y^2 = 4$ 介于 $1 <= z <= 3$ 之间的部分，其法向量指向 $z$ 轴，则 $iint_Sigma sqrt(x^2 + y^2 + z^2) dif x dif y =$
     ],
     answer: [$0$],
     solution: [
@@ -74,7 +74,7 @@
   (
     kind: "blank",
     stem: [
-      $iint_Sigma z dif x dif y + x dif y dif z + y dif z dif x =$ ，其中 $Sigma$ 为柱面 $x^2 + y^2 = a^2$ 被平面 $z = 1$ 和 $z = 4$ 所截的在第一卦限部分的前侧。
+      $iint_Sigma z dif x dif y + x dif y dif z + y dif z dif x =$ #blank()，其中 $Sigma$ 为柱面 $x^2 + y^2 = a^2$ 被平面 $z = 1$ 和 $z = 4$ 所截的在第一卦限部分的前侧
     ],
     answer: [$(3)/(2 pi a^2)$],
     solution: [

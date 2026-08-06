@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第一节 对弧长的曲线积分]
 
@@ -80,7 +80,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $L$ 为曲线 $cases(x = 2 cos t, y = 2 sin t, z = t)$，介于 $t = 0$ 到 $t = pi$ 的一段弧，则 $int_L z / (x^2 + y^2) dif s =$ 。
+      设 $L$ 为曲线 $cases(x = 2 cos t, y = 2 sin t, z = t)$，介于 $t = 0$ 到 $t = pi$ 的一段弧，则 $int_L z / (x^2 + y^2) dif s =$
     ],
     answer: [$(sqrt(5) pi^2)/8$],
     solution: [
@@ -91,7 +91,7 @@
   (
     kind: "blank",
     stem: [
-      设 $L: cases(x = a cos t, y = a sin t)$ ($0 <= t <= 2 pi, a > 0$)，则 $oint_L (x^2 + y^2)^n dif s =$ 。
+      设 $L: cases(x = a cos t, y = a sin t)$ ($0 <= t <= 2 pi, a > 0$)，则 $oint_L (x^2 + y^2)^n dif s =$
     ],
     answer: [$2 pi a^(2 n + 1)$],
     solution: [
@@ -103,11 +103,11 @@
     kind: "blank",
     stem: [
       设在 $x O y$ 面内有一线密度为 $mu(x, y)$ 的曲线弧 $L$，则：
-          此曲线弧关于 $x$ 轴的转动惯量为 $I_x =$ ；
-          关于 $y$ 轴的转动惯量为 $I_y =$ ；
+          此曲线弧关于 $x$ 轴的转动惯量为 $I_x =$ #blank()；
+          关于 $y$ 轴的转动惯量为 $I_y =$ #blank()；
           其质心坐标 $(overline(x), overline(y))$ 中：
-          $overline(x) =$ ，$overline(y) =$ 。
-    ],
+          $overline(x) =$ #blank()，$overline(y) =$ #blank()
+        ],
     answers: (
       [$int_L y^2 mu(x, y) dif s$],
       [$int_L x^2 mu(x, y) dif s$],
