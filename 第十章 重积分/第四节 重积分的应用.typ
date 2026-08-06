@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第四节 重积分的应用]
 
@@ -43,7 +43,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设均匀平面薄片所占闭区域为 $D = {(x, y) | x^2/a^2 + y^2/b^2 <= 1, y >= 0}$，则其面积为 ，其质心坐标为 。
+      设均匀平面薄片所占闭区域为 $D = {(x, y) | x^2/a^2 + y^2/b^2 <= 1, y >= 0}$，则其面积为 #blank()，其质心坐标为 #blank()
     ],
     answers: (
       [$pi a b / 2$],
@@ -56,7 +56,7 @@
   (
     kind: "blank",
     stem: [
-      设平面闭区域 $D$ 的形心坐标为 $(2, 3)$，其面积为 2，则 $iint_D x dif sigma =$ ， $iint_D y dif sigma =$ 。
+      设平面闭区域 $D$ 的形心坐标为 $(2, 3)$，其面积为 2，则 $iint_D x dif sigma =$ #blank()， $iint_D y dif sigma =$ #blank()
     ],
     answers: (
       [$4$],
@@ -66,7 +66,7 @@
   (
     kind: "blank",
     stem: [
-      半圆形薄片 $x^2 + y^2 <= R^2$ ($y >= 0$) 的面密度 $rho = 1$，则其关于 $y$ 轴的转动惯量 $I_y =$ 。
+      半圆形薄片 $x^2 + y^2 <= R^2$ ($y >= 0$) 的面密度 $rho = 1$，则其关于 $y$ 轴的转动惯量 $I_y =$
     ],
     answer: [$pi R^4 / 8$],
     solution: [

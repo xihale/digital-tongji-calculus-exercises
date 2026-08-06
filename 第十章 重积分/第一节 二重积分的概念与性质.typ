@@ -67,7 +67,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设曲顶柱体的顶部曲面函数 $z = f(x, y)$，它的底部区域为 $D$，则曲顶柱体的体积可表示为 。
+      设曲顶柱体的顶部曲面函数 $z = f(x, y)$，它的底部区域为 $D$，则曲顶柱体的体积可表示为
     ],
     answer: [$iint_D |f(x, y)| dif sigma$],
     solution: [
@@ -78,7 +78,7 @@
   (
     kind: "blank",
     stem: [
-      设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，则 $iint_D dif sigma =$  。
+      设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，则 $iint_D dif sigma =$
     ],
     answer: [$pi$],
     solution: [
@@ -88,7 +88,7 @@
   (
     kind: "blank",
     stem: [
-      设闭区域 $D = {(x, y) | x^2 + y^2 <= a^2, x >= 0, y >= 0}$ ($a > 0$)，则 $iint_D sqrt(a^2 - x^2 - y^2) dif sigma =$ 。
+      设闭区域 $D = {(x, y) | x^2 + y^2 <= a^2, x >= 0, y >= 0}$ ($a > 0$)，则 $iint_D sqrt(a^2 - x^2 - y^2) dif sigma =$
     ],
     answer: [$(pi a^3)/(6)$],
     solution: [
@@ -99,7 +99,7 @@
   (
     kind: "blank",
     stem: [
-      设一平面薄片在 $x O y$ 面内占有区域 $D$，其面密度函数为 $rho = (x^2 + y^2) / 2$，则此薄片的质量可表示为 。
+      设一平面薄片在 $x O y$ 面内占有区域 $D$，其面密度函数为 $rho = (x^2 + y^2) / 2$，则此薄片的质量可表示为
     ],
     answer: [$1/2 iint_D (x^2 + y^2) dif sigma$],
     solution: [

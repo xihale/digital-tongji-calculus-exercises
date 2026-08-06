@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section
+#import "../lib/render.typ": book-section, blank
 
 #let section-title = [第二节 二重积分的计算法（1）]
 
@@ -93,7 +93,7 @@
     kind: "blank",
     kind-title: [三、填空题],
     stem: [
-      已知闭区域 $D = {(x, y) | a <= x <= b, 0 <= y <= 1}$，且 $iint_D y f(x) dif sigma = 1$，则 $int_a^b f(x) dif x =$ 。
+      已知闭区域 $D = {(x, y) | a <= x <= b, 0 <= y <= 1}$，且 $iint_D y f(x) dif sigma = 1$，则 $int_a^b f(x) dif x =$
     ],
     answer: [$2$],
     solution: [
@@ -103,7 +103,7 @@
   (
     kind: "blank",
     stem: [
-      设闭区域 $D$ 由两坐标轴与直线 $x + y = 2$ 所围成，若将 $D$ 视为 $X$ 型区域，则其相应积分限为 ；若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 。
+      设闭区域 $D$ 由两坐标轴与直线 $x + y = 2$ 所围成，若将 $D$ 视为 $X$ 型区域，则其相应积分限为 #blank()；若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 #blank()
     ],
     answers: (
       [$0 <= x <= 2, 0 <= y <= 2 - x$],
@@ -118,7 +118,7 @@
   (
     kind: "blank",
     stem: [
-      设闭区域 $D$ 由曲线 $y = e^x$ 与直线 $x = 0, y = e$ 所围成，若将 $D$ 视为 $X$ 型区域，则其相应积分限为 ；若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 。
+      设闭区域 $D$ 由曲线 $y = e^x$ 与直线 $x = 0, y = e$ 所围成，若将 $D$ 视为 $X$ 型区域，则其相应积分限为 #blank()；若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 #blank()
     ],
     answers: (
       [$0 <= x <= 1, e^x <= y <= e$],
@@ -132,11 +132,9 @@
     kind: "blank",
     stem: [
       设闭区域 $D$ 由曲线 $y^2 = 2x$ 与直线 $y = x - 4$ 所围成。
-          若将 $D$ 视为 $X$ 型区域，则其相应积分限为
-          ；
-          若将 $D$ 视为 $Y$ 型区域，则其相应积分限为
-          。
-    ],
+          若将 $D$ 视为 $X$ 型区域，则其相应积分限为 #blank()；
+          若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 #blank()
+        ],
     answers: (
       [$0 <= x <= 2, -sqrt(2x) <= y <= sqrt(2x)$ 和 $2 <= x <= 8, x - 4 <= y <= sqrt(2x)$],
       [$-2 <= y <= 4,(y^2)/(2)<= x <= y + 4$],

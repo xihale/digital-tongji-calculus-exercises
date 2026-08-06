@@ -39,8 +39,7 @@
     stem: [
       设 $Omega$ 是由曲面 $z = x^2 + y^2$ 和 $z = 2 - x^2 - y^2$ 所围成的空间闭区域，
           则 $iiint_Omega f(x, y, z) dif v$ 在柱面坐标系下的三次积分为
-          。
-    ],
+        ],
     answer: [$int_0^(2 pi) dif theta int_0^1 dif rho int_(rho^2)^(2 - rho^2) f(rho cos theta, rho sin theta, z) rho dif z$],
     solution: [
       两曲面交线为 $x^2+y^2=1$。在柱面坐标下 $rho$ 范围为 $0$ 到 $1$，$z$ 范围从下曲面 $rho^2$ 到上曲面 $2-rho^2$。
@@ -49,7 +48,7 @@
   (
     kind: "blank",
     stem: [
-      设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域，则 $iiint_Omega (z ln(x^2 + y^2 + z^2 + 1)) / (x^2 + y^2 + z^2 + 1) dif v =$ 。
+      设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域，则 $iiint_Omega (z ln(x^2 + y^2 + z^2 + 1)) / (x^2 + y^2 + z^2 + 1) dif v =$
     ],
     answer: [$0$],
     solution: [
