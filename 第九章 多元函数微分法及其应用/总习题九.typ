@@ -219,7 +219,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = z(x, y)$ 由方程 $F(z^2 - x^2, z^2 - y^2) = 0$ 所确定，其中 $F$ 具有一阶连续偏导数，试求 $1/x (pd z / pd x) + 1/y (pd z / pd y)$ .
+      设函数 $z = z(x, y)$ 由方程 $F(z^2 - x^2, z^2 - y^2) = 0$ 所确定，其中 $F$ 具有一阶连续偏导数，试求 $1/x (pd z)/(pd x) + 1/y (pd z)/(pd y)$ .
     ],
     solution: [
       设 \

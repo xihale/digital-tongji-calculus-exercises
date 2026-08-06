@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $u = arctan y/x$，则 $pd u / pd x=$ 。
+      设函数 $u = arctan y/x$，则 $(pd u)/(pd x)=$ 。
     ],
     options: (
       [$(x)/(x^2 + y^2)$],
@@ -20,7 +20,7 @@
     ),
     answer: [B],
     solution: [
-      $pd u / pd x= ((1)/(1 + ((y)/(x))^2)) dot (-(y)/(x^2))$
+      $(pd u)/(pd x)= ((1)/(1 + ((y)/(x))^2)) dot (-(y)/(x^2))$
       $= ((x^2)/(x^2 + y^2)) dot (-(y)/(x^2)) = -(y)/(x^2 + y^2)$。
     ],
   ),
@@ -43,7 +43,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $z = y^x$，则 $(pd z / pd x+pd z / pd y) |_(x=2, y=1) =$ 。
+      设函数 $z = y^x$，则 $((pd z)/(pd x)+(pd z)/(pd y)) |_(x=2, y=1) =$ 。
     ],
     options: (
       [2],
@@ -60,7 +60,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $z = sin(3x - y) + y$，则 $(pd z / pd x) |_(x=2, y=1) =$ 。
+      设函数 $z = sin(3x - y) + y$，则 $(pd z)/(pd x) |_(x=2, y=1) =$ 。
     ],
     answer: [$3 cos 5$],
     solution: [
@@ -72,7 +72,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = x y +(y)/(x^3)$，则 $(pd^2 u / pd x^2) =$ 。
+      设函数 $u = x y +(y)/(x^3)$，则 $(pd^2 u)/(pd x^2) =$ 。
     ],
     answer: [$(12y)/(x^5)$],
     solution: [
@@ -84,7 +84,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $u = x ln(x y)$，则 $(pd^2 u / pd x pd y) =$ 。
+      设函数 $u = x ln(x y)$，则 $(pd^2 u)/(pd x pd y) =$ 。
     ],
     answer: [$(1)/(y)$],
     solution: [
@@ -106,30 +106,30 @@
       (4) $u = (x - y)^z$。
     ],
     solution: [
-      (1) $pd z / pd x=(1)/(2x sqrt(ln(x y))),pd z / pd y=(1)/(2y sqrt(ln(x y)))$； \
-      (2) $pd z / pd x= y^2 (1 + x y )^(y - 1),pd z / pd y= (1 + x y )^y [ln(1 + x y ) +(x y)/(1 + x y )]$； \
-      (3) $pd u / pd x= ((y)/(z)) x^(((y)/(z)) - 1),pd u / pd y= ((1)/(z)) x^((y)/(z)) ln x,pd u / pd z= (-(y)/(z^2)) x^((y)/(z)) ln x$； \
-      (4) $pd u / pd x= z(x - y)^(z - 1),pd u / pd y= -z(x - y)^(z - 1),pd u / pd z= (x - y)^z ln(x - y)$。
+      (1) $(pd z)/(pd x)=(1)/(2x sqrt(ln(x y))),(pd z)/(pd y)=(1)/(2y sqrt(ln(x y)))$； \
+      (2) $(pd z)/(pd x)= y^2 (1 + x y )^(y - 1),(pd z)/(pd y)= (1 + x y )^y [ln(1 + x y ) +(x y)/(1 + x y )]$； \
+      (3) $(pd u)/(pd x)= ((y)/(z)) x^(((y)/(z)) - 1),(pd u)/(pd y)= ((1)/(z)) x^((y)/(z)) ln x,(pd u)/(pd z)= (-(y)/(z^2)) x^((y)/(z)) ln x$； \
+      (4) $(pd u)/(pd x)= z(x - y)^(z - 1),(pd u)/(pd y)= -z(x - y)^(z - 1),(pd u)/(pd z)= (x - y)^z ln(x - y)$。
     ],
   ),
   (
     kind: "compute",
     stem: [
-      求下列函数的二阶偏导数 $pd^2 z / pd x^2,pd^2 z / pd y^2,pd^2 z / pd x pd y$：
+      求下列函数的二阶偏导数 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$：
       (1) $z = arctan y/x$；
 
       (2) $z = y^x$。
     ],
     solution: [
-      (1) $pd^2 z / pd x^2=(2 x y )/((x^2 + y^2)^2),pd^2 z / pd y^2= -(2 x y )/((x^2 + y^2)^2),pd^2 z / pd x pd y=(y^2 - x^2)/((x^2 + y^2)^2)$； \
-      (2) $pd^2 z / pd x^2= y^x ln^2 y,pd^2 z / pd y^2= x(x - 1)y^(x - 2),pd^2 z / pd x pd y= y^(x - 1)(1 + x ln y)$。
+      (1) $(pd^2 z)/(pd x^2)=(2 x y )/((x^2 + y^2)^2),(pd^2 z)/(pd y^2)= -(2 x y )/((x^2 + y^2)^2),(pd^2 z)/(pd x pd y)=(y^2 - x^2)/((x^2 + y^2)^2)$； \
+      (2) $(pd^2 z)/(pd x^2)= y^x ln^2 y,(pd^2 z)/(pd y^2)= x(x - 1)y^(x - 2),(pd^2 z)/(pd x pd y)= y^(x - 1)(1 + x ln y)$。
     ],
   ),
   (
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z / pd x) + y^2 (pd z / pd y) = z$。
+      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = z$。
     ],
     solution: [
       设 $phi(x, y)=-((1)/(x)+(1)/(y))$，则 $z=ee^(phi)$。 \
@@ -138,7 +138,7 @@
       $z_y=ee^(phi) phi_y=z dot ((1)/(y^2))=(z)/(y^2)$。 \
       因而 \
       $x^2 z_x + y^2 z_y =(x^2 dot z)/(x^2)+(y^2 dot z)/(y^2)= z+z = 2z$。 \
-      $x^2 (pd z / pd x) + y^2 (pd z / pd y) = 2z$。
+      $x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = 2z$。
     ],
   ),
 )

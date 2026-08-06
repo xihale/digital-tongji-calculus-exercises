@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      已知 $x + y - z = ee^x, x ee^x = tan t, y = cos t$，则 $(dif z / dif t) |_(t=0) =$。
+      已知 $x + y - z = ee^x, x ee^x = tan t, y = cos t$，则 $(dif z)/(dif t) |_(t=0) =$。
     ],
     options: (
       [$(1)/(2)$],
@@ -20,10 +20,10 @@
     ),
     answer: [D],
     solution: [
-      $z = x + y - ee^x$。 $dif z / dif t=((1 - ee^x) (dif x))/(dif t)+(dif y)/(dif t)$。 \
+      $z = x + y - ee^x$。 $(dif z)/(dif t)=((1 - ee^x) (dif x))/(dif t)+(dif y)/(dif t)$。 \
       当 $t=0$ 时，$x ee^x = tan 0 = 0 => x=0$。此时 $1-ee^0 = 0$。 \
       又 $(dif y)/(dif t)= -sin t$，当 $t=0$ 时为 0。 \
-      故 $(dif z / dif t) |_(t=0) = 0 dot x'(0) + 0 = 0$。
+      故 $(dif z)/(dif t) |_(t=0) = 0 dot x'(0) + 0 = 0$。
     ],
   ),
   (
@@ -49,7 +49,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设函数 $y = y(x)$ 由方程 $1 + x^2 y = ee^y$ 所确定，则 $dif y / dif x=$ 。
+      设函数 $y = y(x)$ 由方程 $1 + x^2 y = ee^y$ 所确定，则 $(dif y)/(dif x)=$ 。
     ],
     answer: [$(2 x y )/(ee^y - x^2)$],
     solution: [
@@ -66,7 +66,7 @@
   (
     kind: "blank",
     stem: [
-      设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $pd z / pd y=$ 。
+      设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $(pd z)/(pd y)=$ 。
     ],
     answer: [$(2 x y z - 1)/(1 - x y^2)$],
     solution: [
@@ -114,7 +114,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      设 $ln sqrt(x^2 + y^2) =(y)/(x)$，求 $dif y / dif x$。
+      设 $ln sqrt(x^2 + y^2) =(y)/(x)$，求 $(dif y)/(dif x)$。
     ],
     solution: [
       先把方程写成 \
@@ -134,10 +134,10 @@
   (
     kind: "compute",
     stem: [
-      设 $((x)/(z)) = ln z/y$ , 求 $pd z / pd x,pd z / pd y$ .
+      设 $((x)/(z)) = ln z/y$ , 求 $(pd z)/(pd x),(pd z)/(pd y)$ .
     ],
     solution: [
-      $pd z / pd x=(z)/(x+z)$，$pd z / pd y=(z^2)/(y(x+z))$。
+      $(pd z)/(pd x)=(z)/(x+z)$，$(pd z)/(pd y)=(z^2)/(y(x+z))$。
 
       记 \
       $F(x,y,z)=(x)/(z)- ln z/y=0$。 \
@@ -148,17 +148,17 @@
       $F_y=(1)/(y)$， \
       $F_z=-(x)/(z^2)-(1)/(z)=-(x+z)/(z^2)$。 \
       所以 \
-      $pd z / pd x= -((1)/(z))/(-(x+z)/(z^2))=(z)/(x+z)$， \
-      $pd z / pd y= -(1/y)/(-(x+z)/(z^2))=(z^2)/(y(x+z))$。
+      $(pd z)/(pd x)= -((1)/(z))/(-(x+z)/(z^2))=(z)/(x+z)$， \
+      $(pd z)/(pd y)= -(1/y)/(-(x+z)/(z^2))=(z^2)/(y(x+z))$。
     ],
   ),
   (
     kind: "compute",
     stem: [
-      设 $cases(z = x^2 + y^2, x^2 + 2 y^2 + 3 z^2 = 20)$ 求 $dif y / dif x,dif z / dif x$ .
+      设 $cases(z = x^2 + y^2, x^2 + 2 y^2 + 3 z^2 = 20)$ 求 $(dif y)/(dif x),(dif z)/(dif x)$ .
     ],
     solution: [
-      $dif y / dif x=-(x(6z+1))/(2y(3z+1))$，$dif z / dif x=(x)/(3z+1)$。
+      $(dif y)/(dif x)=-(x(6z+1))/(2y(3z+1))$，$(dif z)/(dif x)=(x)/(3z+1)$。
 
       由第一式 $z=x^2+y^2$ 对 $x$ 求导： \
       $z' = 2x + 2y y'$。 \
@@ -168,18 +168,18 @@
       $2x+4y y'+6z(2x+2y y')=0$， \
       即 $2x(1+6z)+4y(1+3z)y'=0$。 \
       解得 \
-      $dif y / dif x= y' = -(x(6z+1))/(2y(3z+1))$。 \
+      $(dif y)/(dif x)= y' = -(x(6z+1))/(2y(3z+1))$。 \
       再代回 $z'=2x+2y y'$： \
-      $dif z / dif x= z' =(x)/(3z+1)$。
+      $(dif z)/(dif x)= z' =(x)/(3z+1)$。
     ],
   ),
   (
     kind: "compute",
     stem: [
-      设 $cases(u = f(u x, v + y), v = g(u - x, v^2y),)$ 其中 $f, g$ 具有一阶连续偏导数，求 $pd u / pd x,(partial v)/(partial x)$ .
+      设 $cases(u = f(u x, v + y), v = g(u - x, v^2y),)$ 其中 $f, g$ 具有一阶连续偏导数，求 $(pd u)/(pd x),(partial v)/(partial x)$ .
     ],
     solution: [
-      $pd u / pd x=(u f_1' (1 - 2 y v g_2') - f_2' g_1')/(Delta)$，$(partial v)/(partial x)=(g_1' (x f_1' + u f_1' - 1))/(Delta)$。
+      $(pd u)/(pd x)=(u f_1' (1 - 2 y v g_2') - f_2' g_1')/(Delta)$，$(partial v)/(partial x)=(g_1' (x f_1' + u f_1' - 1))/(Delta)$。
 
       对方程组关于 $x$ 求导，设 $u_x=(partial u)/(partial x), v_x=(partial v)/(partial x)$： \
       $u_x = f_1'(u + x u_x) + f_2' v_x$， \
@@ -190,7 +190,7 @@
       分母 \
       $Delta=(1 - x f_1')(1 - 2 y v g_2') - f_2' g_1'$， \
       从而 \
-      $pd u / pd x=(u f_1' (1 - 2 y v g_2') - f_2' g_1')/(Delta)$， \
+      $(pd u)/(pd x)=(u f_1' (1 - 2 y v g_2') - f_2' g_1')/(Delta)$， \
       $(partial v)/(partial x)=(g_1' (x f_1' + u f_1' - 1))/(Delta)$。
     ],
   ),
@@ -198,7 +198,7 @@
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设 $2 sin (x + 2 y - 3 z) = x + 2 y - 3 z$ ，证明： $pd z / pd x+pd z / pd y= 1 .$
+      设 $2 sin (x + 2 y - 3 z) = x + 2 y - 3 z$ ，证明： $(pd z)/(pd x)+(pd z)/(pd y)= 1 .$
     ],
     solution: [
       设 $u=x+2y-3z(x,y)$，原式为 $2sin u=u$。 \
@@ -210,13 +210,13 @@
       故 $2cos u-1 != 0$，于是 \
       $z_x=(1)/(3), z_y=(2)/(3)$。 \
       所以 \
-      $pd z / pd x+pd z / pd y= 1$。
+      $(pd z)/(pd x)+(pd z)/(pd y)= 1$。
     ],
   ),
   (
     kind: "proof",
     stem: [
-      设函数 $Phi (u, v)$ 具有一阶连续偏导数，证明：由方程 $Phi (c x - a z, c y - b z) = 0$ 所确定的函数 $z = f(x, y)$ 满足 $a (pd z / pd x) + b (pd z / pd y) = c .$
+      设函数 $Phi (u, v)$ 具有一阶连续偏导数，证明：由方程 $Phi (c x - a z, c y - b z) = 0$ 所确定的函数 $z = f(x, y)$ 满足 $a (pd z)/(pd x) + b (pd z)/(pd y) = c .$
     ],
     solution: [
       令 \
@@ -231,7 +231,7 @@
       $a c Phi_u + b c Phi_v = (a Phi_u + b Phi_v)(a z_x + b z_y)$。 \
       只要 $a Phi_u + b Phi_v != 0$（隐函数可解条件），即可约去，得 \
       $a z_x + b z_y = c$，即 \
-      $a (pd z / pd x) + b (pd z / pd y) = c$。
+      $a (pd z)/(pd x) + b (pd z)/(pd y) = c$。
     ],
   ),
 )
