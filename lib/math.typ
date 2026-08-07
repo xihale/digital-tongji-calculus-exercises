@@ -20,13 +20,14 @@
 
 // ---------- cases：式子与条件列距；可选式子后逗号 ----------
 // Typst 的 math.cases 没有 column-gap，默认两列贴太紧。
+// AMS 习惯：式子左对齐、默认不加逗号；列距 0.6em（约 \quad 量级）。
 // 入口文档顶层写：#show math.cases: math-cases-show
-// 关逗号（论文风）：#show math.cases: it => math-cases-show(it, comma: false)
-// 或改默认：#let cases-comma = false（需在 show 绑定前，见 math-cases-show 参数）
+// 教材风加逗号：#show math.cases: it => math-cases-show(it, comma: true)
+// 或改默认：#let cases-comma = true（需在 show 绑定前，见 math-cases-show 参数）
 
 #let cases-col-gap = 0.6em
-/// 教材风：有条件列时式子后加 ","（默认开）；论文风设 false
-#let cases-comma = true
+/// AMS 习惯：式子后不加逗号（默认关）；教材风可设 true
+#let cases-comma = false
 
 #let _is-align-point(k) = type(k) == content and repr(k) == "align-point()"
 #let _is-math-space(k) = type(k) == content and k.func() == math.space
@@ -79,33 +80,32 @@
   if it.reverse { (none, left) } else { (left, none) }
 }
 
-/// 替换 math.cases：用 mat 实现；统一列距；comma 控制式子后逗号（默认开）。
+/// 替换 math.cases：用 mat 实现；统一列距；式子左对齐（AMS）；comma 控制式子后逗号（默认关）。
 /// 原写法 `$cases(x-1 & x<=1, 3-x & x>1)$` 无需改动。
+/// 单列方程组也左对齐：mat 默认 center，须显式 align: left。
 #let math-cases-show(
   it,
   col-gap: cases-col-gap,
   comma: cases-comma,
-) = context {
+) = {
   let rows = it.children.map(_split-align-row)
-  // 式子列最大宽：右缘对齐（逗号开时贴逗号，关时贴式子）
-  let max-w = {
-    let widths = rows
-      .filter(r => r.len() >= 2)
-      .map(r => measure(_expr-cell(r.at(0), comma: comma)).width)
-    if widths.len() == 0 { 0pt } else { calc.max(..widths) }
+  let rows2 = if comma {
+    rows.map(r => {
+      if r.len() < 2 {
+        // 单列：逗号贴行末
+        (_expr-cell(r.at(0), comma: true),)
+      } else {
+        (_expr-cell(r.at(0), comma: true),) + r.slice(1)
+      }
+    })
+  } else {
+    rows
   }
-  let rows2 = rows.map(r => {
-    if r.len() < 2 {
-      r
-    } else {
-      let cell = box(width: max-w, align(right, _expr-cell(r.at(0), comma: comma)))
-      (cell,) + r.slice(1)
-    }
-  })
   math.mat(
     delim: _cases-mat-delim(it),
     column-gap: col-gap,
     row-gap: it.gap,
+    align: left,
     ..rows2,
   )
 }
