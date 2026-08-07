@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      $(lim_((x,y) arrow (0,0)) (x^2 y))/(x^4 + y^2)=$
+      $lim_((x,y) arrow (0,0)) (x^2 y)/(x^4 + y^2)=$
     ],
     options: (
       [$0$],
@@ -20,7 +20,7 @@
     ),
     answer: [B],
     solution: [
-      沿直线 $y = k x^2$ 趋于原点，$I =(lim_(x arrow 0) (x^2 dot k x^2))/(x^4 + k^2 x^4)=(k)/(1 + k^2)$。其值随 $k$ 的变化而变化，故极限不存在。
+      沿直线 $y = k x^2$ 趋于原点，$I = lim_(x arrow 0) (x^2 dot k x^2)/(x^4 + k^2 x^4)=(k)/(1 + k^2)$。其值随 $k$ 的变化而变化，故极限不存在。
     ],
   ),
   (
@@ -115,7 +115,7 @@
     answer: [$1$],
     solution: [
       令 $r^2=x^2+y^2$，则 \
-      $(lim_((x,y) arrow (0,0)) (tan(x^2+y^2)))/(x^2+y^2)=(lim_(r arrow 0) tan(r^2))/(r^2)=1$。 \
+      $lim_((x,y) arrow (0,0)) (tan(x^2+y^2))/(x^2+y^2)=lim_(r arrow 0) (tan(r^2))/(r^2)=1$。 \
       连续要求函数值等于该极限，所以 $A=1$。
     ],
   ),

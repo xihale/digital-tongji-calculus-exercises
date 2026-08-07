@@ -1,7 +1,7 @@
 // 数据层：只放内容。公式一律行内。
 // 由下册自动转换（git 完整题量 + HEAD 解析优先）；请抽查选项切分。
 #import "../lib/math.typ": *
-#import "../lib/render.typ": book-section, blank
+#import "../lib/render.typ": blank, book-section
 
 #let section-title = [总习题八]
 
@@ -36,7 +36,9 @@
     ),
     answer: [B],
     solution: [
-      $ (bold(a) + lambda bold(b)) dot bold(a) = |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 3 + lambda(2-1+1) = 3 + 2lambda = 0 => lambda = -(3)/(2) $
+      $
+        (bold(a) + lambda bold(b)) dot bold(a) = |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 3 + lambda(2-1+1) = 3 + 2lambda = 0 => lambda = -(3)/(2)
+      $
     ],
   ),
   (
@@ -92,11 +94,11 @@
     kind-title: [二、填空题],
     stem: [
       已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则：
-            (1) 向量 $arrow(A B)$ 的方向余弦为 #blank()，单位向量为 #blank()；
-            (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #blank()，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #blank()；
-            (3) 以该三点为顶点的三角形的面积为 #blank()；
-            (4) 过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 #blank()；
-            (5) 过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 #blank()
+      (1) 向量 $arrow(A B)$ 的方向余弦为 #blank()，单位向量为 #blank()；
+      (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #blank()，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #blank()；
+      (3) 以该三点为顶点的三角形的面积为 #blank()；
+      (4) 过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 #blank()；
+      (5) 过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 #blank()
     ],
     answers: (
       [$3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2)$],
@@ -115,9 +117,9 @@
     kind: "blank",
     stem: [
       设向量 $bold(a) = (1, 1, -4), bold(b) = (2, 0, -2)$，则
-          (1) $(bold(a) + bold(b)) dot (bold(a) - bold(b)) =$ 
+      (1) $(bold(a) + bold(b)) dot (bold(a) - bold(b)) =$
 
-          (2) $(bold(a) + bold(b)) times (bold(a) - bold(b)) =$
+      (2) $(bold(a) + bold(b)) times (bold(a) - bold(b)) =$
     ],
     answers: (
       [$10$],
@@ -125,7 +127,7 @@
     ),
     solution: [
       （1）10；
-          (2) $(4, 12, 4)$。
+      (2) $(4, 12, 4)$。
     ],
   ),
   (
@@ -163,11 +165,11 @@
     ],
     solution: [
       $bold(A) dot bold(B) = (2 bold(a) + 3 bold(b)) dot (3 bold(a) - bold(b)) = 6 bold(a)^2 + 7 bold(a) dot bold(b) - 3 bold(b)^2$
-          $= 6(4) + 7(2 dot 3 dot 1/2) - 3(9) = 24 + 21 - 27 = 18$。
+      $= 6(4) + 7(2 dot 3 dot 1/2) - 3(9) = 24 + 21 - 27 = 18$。
 
-          $bold(A) times bold(B) = (2 bold(a) + 3 bold(b)) times (3 bold(a) - bold(b)) = -2 (bold(a) times bold(b)) + 9 (bold(b) times bold(a)) = -11 (bold(a) times bold(b))$。
-          $|bold(a) times bold(b)| = |bold(a)| dot |bold(b)| sin pi/3 = 2 dot 3 dot sqrt(3)/2 = 3 sqrt(3)$。
-          故 $|bold(A) times bold(B)| = 11 dot 3 sqrt(3) = 33 sqrt(3)$。
+      $bold(A) times bold(B) = (2 bold(a) + 3 bold(b)) times (3 bold(a) - bold(b)) = -2 (bold(a) times bold(b)) + 9 (bold(b) times bold(a)) = -11 (bold(a) times bold(b))$。
+      $|bold(a) times bold(b)| = |bold(a)| dot |bold(b)| sin pi/3 = 2 dot 3 dot sqrt(3)/2 = 3 sqrt(3)$。
+      故 $|bold(A) times bold(B)| = 11 dot 3 sqrt(3) = 33 sqrt(3)$。
     ],
   ),
   (
@@ -177,8 +179,8 @@
     ],
     solution: [
       平行于 $x$ 轴说明法向量 $perp (1,0,0)$。由两点 $A, B$ 得向量 $arrow(A B) = (-6, 0, 8)$。
-          法向量 $arrow(n) = (1,0,0) times (-6,0,8) = (0, -8, 0)$。
-          故平面方程为 $y = 2$（或 $y - 2 = 0$）。
+      法向量 $arrow(n) = (1,0,0) times (-6,0,8) = (0, -8, 0)$。
+      故平面方程为 $y = 2$（或 $y - 2 = 0$）。
     ],
   ),
   (
@@ -188,8 +190,8 @@
     ],
     solution: [
       平面束方程：$(x - 5y - 16) + lambda(2y - z + 6) = 0$。
-          代入点 $(2, -3, 1)$ 得：$(2 + 15 - 16) + lambda(-6 - 1 + 6) = 0 => 1 - lambda = 0 => lambda = 1$。
-          故方程为 $x - 3y - z - 10 = 0$。
+      代入点 $(2, -3, 1)$ 得：$(2 + 15 - 16) + lambda(-6 - 1 + 6) = 0 => 1 - lambda = 0 => lambda = 1$。
+      故方程为 $x - 3y - z - 10 = 0$。
     ],
   ),
   (
@@ -199,8 +201,8 @@
     ],
     solution: [
       直线通过点 $M_0(1, -1, 2)$，方向向量 $arrow(s) = (2, -1, 3)$。
-          设点 $P(1, 2, -1)$。向量 $arrow(M_0 P) = (0, 3, -3)$。
-          距离 $d = |arrow(M_0 P) times arrow(s)| / |arrow(s)| = |(0, 3, -3) times (2, -1, 3)| / sqrt(4+1+9) = |(6, -6, -6)| / sqrt(14) = 6 sqrt(3) / sqrt(14) = (3/7) sqrt(42)$。
+      设点 $P(1, 2, -1)$。向量 $arrow(M_0 P) = (0, 3, -3)$。
+      距离 $d = |arrow(M_0 P) times arrow(s)| / |arrow(s)| = |(0, 3, -3) times (2, -1, 3)| / sqrt(4+1+9) = |(6, -6, -6)| / sqrt(14) = 6 sqrt(3) / sqrt(14) = (3/7) sqrt(42)$。
     ],
   ),
   (
@@ -210,8 +212,8 @@
     ],
     solution: [
       直线的方向向量 $arrow(s) = (5, 2, 4)$，已知平面的法向量 $arrow(n_1) = (1, 4, -3)$。
-          所求平面的法向量 $arrow(n) = arrow(s) times arrow(n_1) = (5, 2, 4) times (1, 4, -3) = (-22, 19, 18)$。
-          过点 $(2, -1, 2)$ 的方程为：$-22(x-2) + 19(y+1) + 18(z-2) = 0$，即 $22x - 19y - 18z - 27 = 0$。
+      所求平面的法向量 $arrow(n) = arrow(s) times arrow(n_1) = (5, 2, 4) times (1, 4, -3) = (-22, 19, 18)$。
+      过点 $(2, -1, 2)$ 的方程为：$-22(x-2) + 19(y+1) + 18(z-2) = 0$，即 $22x - 19y - 18z - 27 = 0$。
     ],
   ),
   (
@@ -248,17 +250,17 @@
     ],
     solution: [
       设直线 $L$ 的方向向量为
-          $bold(v)=(2,-4,1) times (3,-1,-2)=(9,7,10)$。
-          设平面 $Pi$ 的法向量为 $bold(n)=(4,-1,1)$。
+      $bold(v)=(2,-4,1) times (3,-1,-2)=(9,7,10)$。
+      设平面 $Pi$ 的法向量为 $bold(n)=(4,-1,1)$。
 
-          投影直线 $L'$ 在平面内，其方向向量应为 $bold(v)$ 在 $Pi$ 内的分量：
-          $bold(v') = bold(v) - ((bold(v) dot bold(n))/(norm(bold(n))^2)) bold(n)$，
-          化简得与 $(31,-17,37)$ 平行。
+      投影直线 $L'$ 在平面内，其方向向量应为 $bold(v)$ 在 $Pi$ 内的分量：
+      $bold(v') = bold(v) - ((bold(v) dot bold(n))/(norm(bold(n))^2)) bold(n)$，
+      化简得与 $(31,-17,37)$ 平行。
 
-          再取 $L$ 上一点并沿 $bold(n)$ 投影到 $Pi$，可得 $L'$ 经过该投影点；
-          因而 $L'$ 可写成两平面交线：
-          $cases(4x - y + z = 1, 17x + 31y - 37z - 117 = 0)$。
-          （与此等价的线性组合形式均正确。）
+      再取 $L$ 上一点并沿 $bold(n)$ 投影到 $Pi$，可得 $L'$ 经过该投影点；
+      因而 $L'$ 可写成两平面交线：
+      $cases(4x - y + z = 1, 17x + 31y - 37z - 117 = 0)$。
+      （与此等价的线性组合形式均正确。）
     ],
   ),
   (
@@ -268,8 +270,8 @@
     ],
     solution: [
       第一个方程表示上半球面，第二个表示圆柱面（母线平行于 $z$ 轴）。
-          消去 $y$：$y^2 = a x - x^2$。代入球面方程 $z^2 = a^2 - x^2 - (a x - x^2) = a^2 - a x$。
-          故投影方程为 $cases(z^2 = a^2 - a x, y = 0)$（其中 $0 <= x <= a$），曲线类型为抛物线。
+      消去 $y$：$y^2 = a x - x^2$。代入球面方程 $z^2 = a^2 - x^2 - (a x - x^2) = a^2 - a x$。
+      故投影方程为 $cases(z^2 = a^2 - a x, y = 0)$（其中 $0 <= x <= a$），曲线类型为抛物线。
     ],
   ),
 )
