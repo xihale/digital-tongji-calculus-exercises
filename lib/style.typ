@@ -38,8 +38,8 @@
 
 // 练习模式计算/证明/简答默认书写留白高度（仅 practice）。
 // 高度固定、不可压缩：页底不够则整块留白移到下一页（只可多不可少）。
-// 短题：题干+留白能装进一页版心时整题 unbreakable，页底不够整题下移。
-// 长题：题干允许跨页，文末仍追加完整 practice-gap，绝不缩短作答区。
+// 所有题型：整题高度 ≤ 版心时 unbreakable（选择/填空/大题均不跨页）；
+// 长题（含留白）超出版心时才允许分页，文末仍追加完整 practice-gap。
 // 单题可用 practice-gap 覆盖；practice-space: false 可关闭留白。
 #let practice-gap = 6cm
 

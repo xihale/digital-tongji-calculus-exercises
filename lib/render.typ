@@ -140,13 +140,12 @@
     )
   } else {
     // compute / proof / short / …
-    // 练习版：题干与作答留白绑定（短题不跨页；留白固定高度不可拆）
+    // 练习版：题干后固定高度作答留白（不可拆）；整题是否跨页由 problem 统一判断
     let want-space = mode == "practice" and p.at("practice-space", default: true)
     let show-sol = show-solutions and sol != none
     problem(
       num,
       p.stem,
-      bind: want-space and not show-sol,
       extras: {
         fig
         if stem-parts != none { stem-parts }
