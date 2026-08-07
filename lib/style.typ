@@ -47,38 +47,47 @@
 // 固定高度、不可分页；仅 practice 生效（full/answers 下解答占位）。
 #let spacer-default = 3cm
 
-// 节标题：居左。
-// sticky：页底只够放下节标题时，与后文（小节标题 / 首题）一同移到下一页，避免孤行大标题。
-// 与 subsection-title 的 sticky 链式衔接：大标题 → 小标题 → 首题 组成整体块。
-#let section-title(body) = block(below: gap-item, width: 100%, sticky: true)[
-  #set text(weight: "bold", size: 1.25em, fill: stem-color)
+// 标题层级（只靠字号 + 字重，同色、无装饰线）：
+//   章 1.45em bold  → 节 1.18em bold  → 题型 1.02em bold
+// 结构间距一律 gap-item（章/节/题型/题 之间同档；块 margin 折叠取 max，不叠加）：
+//   各块 above: gap-item、below: 0（章例外：below gap-item 压住首节）
+// sticky 链式：章 / 节 / 题型 页底不够时与后文同移，避免孤行标题。
+
+// 节标题
+#let section-title(body) = block(
+  width: 100%,
+  above: gap-item,
+  below: 0em,
+  sticky: true,
+)[
+  #set text(weight: "bold", size: 1.18em, fill: stem-color)
   #set align(left)
   #set par(leading: body-leading, spacing: par-spacing)
   #body
 ]
 
-// 小节标题：上下都留空，避免后文贴住。
-// sticky：页底只够放下标题时，与后文（首题）一同移到下一页，避免孤行标题。
+// 题型/小节标题
 #let subsection-title(body) = block(
   width: 100%,
   above: gap-item,
-  below: gap-block,
+  below: 0em,
   sticky: true,
 )[
-  #set text(weight: "bold", size: 1.08em, fill: stem-color)
+  #set text(weight: "bold", size: 1.02em, fill: stem-color)
   #set align(left)
   #body
 ]
 
-// 章标题：居左、更大；底部加细分隔线拉开章节层次（2026-07-21 新增）
-// sticky：避免章标题孤悬页底（后文通常是该章第一节）
-#let chapter-title(body) = block(below: gap-item, width: 100%, sticky: true)[
-  #set text(weight: "bold", size: 1.55em, fill: stem-color)
+// 章标题：无线；below 与后文（首节）隔开一档 gap-item
+#let chapter-title(body) = block(
+  width: 100%,
+  below: gap-item,
+  sticky: true,
+)[
+  #set text(weight: "bold", size: 1.45em, fill: stem-color)
   #set align(left)
   #set par(leading: body-leading, spacing: par-spacing)
   #body
-  #v(0.3em)
-  #line(length: 100%, stroke: 0.6pt + muted)
 ]
 
 // 全局页面设置（index 与独立入口共用）。

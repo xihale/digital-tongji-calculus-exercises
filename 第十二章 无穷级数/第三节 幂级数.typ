@@ -24,7 +24,7 @@
     ],
     answer: [√],
     solution: [
-      令 $t = x^2$，则级数化为 $x sum_(n=1)^oo (a_n)/(2^n) t^n$。由 $(lim |a_n|)/(|a_(n+1)|) = R$，新级数收敛半径 $R_t = 2R$。故 $|x^2| < 2R$，即 $|x| < sqrt(2R)$。但原题中系数为 $(a_n)/(2^n)$，$(lim |a_n/2^n|)/(|a_(n+1)/2^(n+1)|) = 2R$，故 $|x^2| < 2R$，$R_x = sqrt(2R)$。注意原题结论为 $sqrt(R)$，具体取决于系数定义。
+      令 $t = x^2$，则级数化为 $x sum_(n=1)^oo (a_n)/(2^n) t^n$。由 $lim abs(a_n)/abs(a_(n+1)) = R$，新级数收敛半径 $R_t = 2R$。故 $|x^2| < 2R$，即 $|x| < sqrt(2R)$。但原题中系数为 $(a_n)/(2^n)$，$lim abs(a_n/2^n)/abs(a_(n+1)/2^(n+1)) = 2R$，故 $|x^2| < 2R$，$R_x = sqrt(2R)$。注意原题结论为 $sqrt(R)$，具体取决于系数定义。
     ],
   ),
   (
@@ -52,9 +52,9 @@
     answer: [D],
     solution: [
       计算系数比值的极限： \
-          $(lim_(n arrow oo) |c_n)/(c_(n+1)|)$ \
-          $(= lim_(n arrow oo) | ((a^n - b^n)/(a^n + b^n)))/(((a^(n+1) - b^(n+1))/(a^(n+1) + b^(n+1))) |)$ \
-          $(= lim_(n arrow oo) | (-1))/((-1) | = 1)$。 \
+          $lim_(n arrow oo) abs(c_n)/abs(c_(n+1))$ \
+          $= lim_(n arrow oo) abs((a^n - b^n)/(a^n + b^n)) / abs((a^(n+1) - b^(n+1))/(a^(n+1) + b^(n+1)))$ \
+          $= lim_(n arrow oo) abs((-1)/((-1))) = 1$。 \
           收敛半径 $R = 1$，与 $a, b$ 无关。
     ],
   ),
@@ -92,14 +92,14 @@
   (
     kind: "blank",
     stem: [
-      若 $(lim_(n arrow oo) |c_n)/(c_(n+1)| = 2)$，则幂级数 $sum_(n=0)^oo c_n x^(2n)$ 的收敛半径为
+      若 $lim_(n arrow oo) abs(c_n)/abs(c_(n+1)) = 2$，则幂级数 $sum_(n=0)^oo c_n x^(2n)$ 的收敛半径为
     ],
     answer: [$sqrt(2)$],
     solution: [
       令 $t=x^2$，则原级数可看作 \
           $sum_(n=0)^oo c_n t^n$。 \
           已知 \
-          $(lim_(n arrow oo) |c_n)/(c_(n+1)|=2)$，故关于 $t$ 的收敛半径为 $R_t=2$。 \
+          $lim_(n arrow oo) abs(c_n)/abs(c_(n+1))=2$，故关于 $t$ 的收敛半径为 $R_t=2$。 \
           即 \
           $|t|<2 arrow |x|^2<2 arrow |x|<sqrt(2)$。 \
           因而关于 $x$ 的收敛半径 \

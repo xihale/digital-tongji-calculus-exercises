@@ -60,7 +60,7 @@
   (
     kind: "judge",
     stem: [
-      若 $(lim_(n arrow oo) u_n)/(v_n)= l$ ($0 < l < +oo$)，则级数 $sum_(n=1)^oo u_n$ 和 $sum_(n=1)^oo v_n$ 有相同的敛散性。
+      若 $lim_(n arrow oo) (u_n)/(v_n)= l$ ($0 < l < +oo$)，则级数 $sum_(n=1)^oo u_n$ 和 $sum_(n=1)^oo v_n$ 有相同的敛散性。
     ],
     answer: [√],
     solution: [
@@ -508,7 +508,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0, f'(0) = 1$，求 $(lim_(t arrow 0^+) 1)/(t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y)$。
+      设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0, f'(0) = 1$，求 $lim_(t arrow 0^+) 1/(t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y)$。
     ],
     solution: [
       极坐标变换后 \
@@ -1256,7 +1256,7 @@
     ],
     solution: [
       (1) 系数 $a_n =(1)/(n dot 3^n)$。 \
-          $(R = lim_(n arrow oo) |a_n)/(a_(n+1)| =(lim_(n arrow oo) ((n+1) dot 3^(n+1)))/(n dot 3^n)= 3)$。 \
+          $R = lim_(n arrow oo) abs(a_n)/abs(a_(n+1)) = lim_(n arrow oo) ((n+1) dot 3^(n+1))/(n dot 3^n)= 3$。 \
           (2) 收敛区间为 $|x-3| < 3$，即 $0 < x < 6$。 \
           当 $x = 0$ 时, 原级数为 $(sum_(n=1)^( oo ) (-1)^n)/(n)$ 收敛; \
           当 $x = 6$ 时, 原级数为 $(sum_(n=1)^( oo ) 1)/(n)$ 发散. \
@@ -1581,7 +1581,7 @@
       设 \
           $S(x)=sum_(n=0)^oo (n+1)(n+2)(x-1)^n$。 \
           由系数 $a_n=(n+1)(n+2)$， \
-          $lim_(n->oo) abs((a_(n+1))/(a_n)) =(lim_(n->oo) ((n+2)(n+3)))/((n+1)(n+2))=1$， \
+          $lim_(n->oo) abs((a_(n+1))/(a_n)) = lim_(n->oo) ((n+2)(n+3))/((n+1)(n+2))=1$， \
           故收敛半径 $R=1$，即先有 $|x-1|<1$。 \
           端点检验： \
           $x=0$ 时级数为 $sum (-1)^n(n+1)(n+2)$，通项不趋于 0，发散； \
@@ -1660,7 +1660,7 @@
     solution: [
       因 $f(0,0)=|0-0|g(0,0)=0$。 \
           对 $x$ 的偏导： \
-          $f_x(0,0)=(lim_(h->0) (f(h,0)-f(0,0)))/(h)=lim_(h->0) ((abs(h))/(h)) g(h,0)$。 \
+          $f_x(0,0)=lim_(h->0) (f(h,0)-f(0,0))/h=lim_(h->0) ((abs(h))/(h)) g(h,0)$。 \
           当 $h->0^+$ 时极限为 $g(0,0)$，当 $h->0^-$ 时为 $-g(0,0)$。 \
           两侧相等当且仅当 $g(0,0)=0$，此时 $f_x(0,0)=0$。 \
           同理 \

@@ -13,8 +13,8 @@
       已知 $sum_(n=1)^oo u_n$ 为正项级数，下列命题中错误的是。
     ],
     options: (
-      [若 $(lim_(n arrow oo) u_(n+1))/(u_n)= rho < 1$，则 $sum_(n=1)^oo u_n$ 收敛],
-      [若 $(lim_(n arrow oo) u_(n+1))/(u_n)= rho > 1$，则 $sum_(n=1)^oo u_n$ 发散],
+      [若 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho < 1$，则 $sum_(n=1)^oo u_n$ 收敛],
+      [若 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho > 1$，则 $sum_(n=1)^oo u_n$ 发散],
       [若 $(u_(n+1))/(u_n)< 1$，则 $sum_(n=1)^oo u_n$ 收敛],
       [若 $(u_(n+1))/(u_n)> 1$，则 $sum_(n=1)^oo u_n$ 发散],
     ),
@@ -30,14 +30,14 @@
     ],
     options: (
       [因为 $1 +(1)/(n)> 0$，所以此级数收敛],
-      [因为 $(lim_(n arrow oo) 1)/(n^(1 +(1)/(n)))= 0$，所以此级数收敛],
+      [因为 $lim_(n arrow oo) 1/(n^(1 +(1)/(n)))= 0$，所以此级数收敛],
       [因为 $(1)/(n^(1 +(1)/(n)))>(1)/(n)$，所以此级数发散],
       [以上说法均不对],
     ),
     answer: [D],
     solution: [
       由于 \
-      $(lim_(n arrow oo) ((1)/(n^(1+(1)/(n)))))/((1)/(n)) = (lim_(n arrow oo) 1)/(n^((1)/(n))) = 1$， \
+      $lim_(n arrow oo) ((1)/(n^(1+(1)/(n))))/((1)/(n)) = lim_(n arrow oo) 1/(n^((1)/(n))) = 1$， \
       由极限比较审敛法可知原级数与调和级数 $sum frac(1, n, style: "horizontal")$ 同敛散，故原级数发散。选项 A、B 是错误结论，C 不成立（实际上当 $n$ 较大时 $< frac(1, n, style: "horizontal")$），故选 D。
     ],
   ),
@@ -128,8 +128,8 @@
           由比值审敛法，级数收敛。 \
           (2) 设 $v_n=n tan(pi/2^(n+1))$。 \
           且 \
-          $(lim_(x arrow 0) tan x)/(x)= 1$，故 \
-          $(lim_(n arrow oo) (n tan(pi/2^(n+1))))/((n pi)/(2^(n+1))) = 1$。 \
+          $lim_(x arrow 0) (tan x)/(x)= 1$，故 \
+          $lim_(n arrow oo) (n tan(pi/2^(n+1)))/((n pi)/(2^(n+1))) = 1$。 \
           再看 $w_n = frac(n, 2^n, style: "horizontal")$，有 \
           $(w_(n+1))/(w_n) = (n+1)/((2n) arrow frac(1, 2, style: "horizontal")) < 1$，故 $sum w_n$ 收敛. \
           由极限比较，$sum v_n$ 亦收敛。

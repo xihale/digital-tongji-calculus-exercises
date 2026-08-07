@@ -9,7 +9,7 @@
     kind: "choice",
     stem: [下列式子中运用洛必达法则正确的是],
     options: (
-      [$lim_(n->oo) root(n, n) = e^(lim_(n->oo)(ln n)/n) = e^(lim_(n->oo)(1/n)) = 1$],
+      [$lim_(n->oo) root(n, n) = e^(lim_(n->oo) (ln n)/n) = e^(lim_(n->oo) 1/n) = 1$],
       [$lim_(x->0)(x + sin x)/(x - sin x) = lim_(x->0)(1 + cos x)/(1 - cos x) = oo$],
       [$lim_(x->0)(x^2 sin 1/x)/(sin x) = lim_(x->0)(2x sin 1/x - cos 1/x)/(cos x)$ 不存在],
       [$lim_(x->0) x/e^x = lim_(x->0) 1/e^x = 1$],

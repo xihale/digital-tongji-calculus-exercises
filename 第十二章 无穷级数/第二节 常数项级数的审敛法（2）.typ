@@ -16,7 +16,7 @@
   (
     kind: "judge",
     stem: [
-      若正项级数 $sum_(n=1)^oo u_n$ 发散，则 $(lim_(n arrow oo) u_(n+1))/(u_n)= rho > 1$。
+      若正项级数 $sum_(n=1)^oo u_n$ 发散，则 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho > 1$。
     ],
   ),
   (
@@ -100,8 +100,8 @@
           (2) 设 $u_n=(n+1)/(n(n+2))=(1)/(2((1)/(n)+(1)/(n+2)))$。 \
           与调和级数同阶，故发散。 \
           (3) 设 $u_n=2^n sin(pi/3^n)$。 \
-          由 $(lim_(x arrow 0) sin x)/(x)= 1$， \
-          $(lim_(n arrow oo) (2^n sin(pi/3^n)))/(2^n ((pi)/(3^n)))= 1$， \
+          由 $lim_(x arrow 0) (sin x)/(x)= 1$， \
+          $lim_(n arrow oo) (2^n sin(pi/3^n))/(2^n ((pi)/(3^n)))= 1$， \
           即与 $pi ((2)/(3))^n$ 同阶， \
           与收敛等比级数极限比较，故收敛。 \
           (4) 通项 $u_n=sqrt((n+1)/(n))=sqrt(1+(1)/(n)) arrow 1 != 0$， \
