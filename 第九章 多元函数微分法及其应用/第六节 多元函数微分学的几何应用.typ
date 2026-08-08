@@ -48,17 +48,17 @@
   (
     kind: "choice",
     stem: [
-      曲面 $x cos z + y cos x - ((pi)/(2)) z = ((pi)/(2))$ 在点 $((pi)/(2), 1 - ((pi)/(2)), 0)$ 处的切平面方程为. \
+      曲面 $x cos z + y cos x - pi/2 z = pi/2$ 在点 $((pi)/(2), 1 - pi/2, 0)$ 处的切平面方程为. \
     ],
     options: (
       [$x - z = pi - 1$],
       [$x - y = pi - 1$],
-      [$x - y = ((pi)/(2))$],
-      [$x - z = ((pi)/(2))$],
+      [$x - y = pi/2$],
+      [$x - z = pi/2$],
     ),
     answer: [D],
     solution: [
-      设 $F = x cos z + y cos x - ((pi)/(2)) z - ((pi)/(2))$。在其点处： \
+      设 $F = x cos z + y cos x - pi/2 z - pi/2$。在其点处： \
       $F_x = cos z - y sin x = cos 0 - (1 -(pi)/(2)) sin pi/2 = 1 - (1 -(pi)/(2)) =(pi)/(2)$。 \
       $F_y = cos x = cos pi/2 = 0$。 \
       $F_z = -x sin z -(pi)/(2)= -(pi)/(2 sin 0)-(pi)/(2)= -(pi)/(2)$。 \
@@ -128,7 +128,7 @@
   (
     kind: "blank",
     stem: [
-      曲面 $x ee^(y) + y^2 ee^(2 z) + z^3 ee^(3 x) = ((2)/(ee)) + 1$ 在点 $(2, -1, 0)$ 处的法线方程为
+      曲面 $x ee^(y) + y^2 ee^(2 z) + z^3 ee^(3 x) = 2/ee + 1$ 在点 $(2, -1, 0)$ 处的法线方程为
     ],
     solution: [
       设 \
@@ -263,7 +263,7 @@
       题设要求切平面平行于 \
       $x-y+2z=0$， \
       故法向量应平行于 $(1,-1,2)$： \
-      $(2x,4y,2z)=lambda(1,-1,2)$。 \
+      $(2x,4y,2z)=lambda(1, -1, 2)$。 \
       解得 \
       $x=(lambda)/(2), y=-(lambda)/(4), z=lambda$。 \
       代入椭球方程： \

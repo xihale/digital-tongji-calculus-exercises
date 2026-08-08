@@ -134,7 +134,7 @@
   (
     kind: "compute",
     stem: [
-      设 $((x)/(z)) = ln z/y$ , 求 $(pd z)/(pd x),(pd z)/(pd y)$ .
+      设 $x/z = ln z/y$ , 求 $(pd z)/(pd x),(pd z)/(pd y)$ .
     ],
     solution: [
       $(pd z)/(pd x)=(z)/(x+z)$，$(pd z)/(pd y)=(z^2)/(y(x+z))$。
