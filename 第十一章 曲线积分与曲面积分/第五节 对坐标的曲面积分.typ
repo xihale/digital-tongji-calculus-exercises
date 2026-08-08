@@ -96,7 +96,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算下列对坐标的曲面积分：
+      计算下列对坐标的曲面积分： \
           (1) $iint_Sigma x^2 y^2 z dif x dif y$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = R^2$ 的下半部分的下侧；
           (2) $iint_Sigma z dif x dif y + x dif y dif z + y dif z dif x$，其中 $Sigma$ 为柱面 $x^2 + y^2 = 1$ 被平面 $z = 0$ 及 $z = 3$ 所截的在第一卦限内的部分的前侧；
           (3) $iint_Sigma [f(x, y, z) + x] dif y dif z + [2 f(x, y, z) + y] dif z dif x + [f(x, y, z) + z] dif x dif y$，其中 $f(x, y, z)$ 为连续函数，$Sigma$ 为平面 $x - y + z = 1$ 在第四卦限部分的上侧。

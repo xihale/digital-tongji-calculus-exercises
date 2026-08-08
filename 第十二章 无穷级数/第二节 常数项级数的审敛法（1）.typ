@@ -87,13 +87,10 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      用比较审敛法或极限形式的比较审敛法判定下列级数的敛散性：
-          (1) $1 +(1)/(3)+(1)/(5)+ dots +(1)/(2n-1)+ dots$；
-
-          (2) $(1)/(2 dot 5)+(1)/(3 dot 6)+ dots +(1)/((n+1)(n+4))+ dots$；
-
-          (3) $sin pi / 2 + sin(pi/2^2) + dots + sin(pi/2^n) + dots$；
-
+      用比较审敛法或极限形式的比较审敛法判定下列级数的敛散性： \
+          (1) $1 +(1)/(3)+(1)/(5)+ dots +(1)/(2n-1)+ dots$； \
+          (2) $(1)/(2 dot 5)+(1)/(3 dot 6)+ dots +(1)/((n+1)(n+4))+ dots$； \
+          (3) $sin pi / 2 + sin(pi/2^2) + dots + sin(pi/2^n) + dots$； \
           (4) $(sum_(n=1)^oo 1)/(1 + a^n)$ ($a > 0$)。
     ],
     solution: [
@@ -117,9 +114,8 @@
   (
     kind: "compute",
     stem: [
-      用比值审敛法判定下列级数的敛散性：
-          (1) $(sum_(n=1)^oo (2^n dot n!))/(n^n)$；
-
+      用比值审敛法判定下列级数的敛散性： \
+          (1) $(sum_(n=1)^oo (2^n dot n!))/(n^n)$； \
           (2) $sum_(n=1)^oo n tan(pi/2^(n+1))$。
     ],
     solution: [
@@ -138,9 +134,8 @@
   (
     kind: "compute",
     stem: [
-      用根值审敛法判定下列级数的敛散性：
-          (1) $sum_(n=1)^oo ((n)/(2n+1))^n$；
-
+      用根值审敛法判定下列级数的敛散性： \
+          (1) $sum_(n=1)^oo ((n)/(2n+1))^n$； \
           (2) $sum_(n=1)^oo ((b)/(a_n))^n$，其中 $lim_(n arrow oo) a_n = a$，$a_n, b, a$ 均为正数。
     ],
     solution: [

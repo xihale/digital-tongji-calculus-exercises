@@ -142,7 +142,7 @@
   (
     kind: "compute",
     stem: [
-      利用高斯公式计算下列曲面积分：
+      利用高斯公式计算下列曲面积分： \
           (1) $iint_Sigma x^2 dif y dif z + y^2 dif z dif x + z^2 dif x dif y$，其中 $Sigma$ 为平面 $x = 0, y = 0, z = 0, x = a, y = a, z = a$ 所围成立体表面的外侧；
           (2) $iint_Sigma x^3 dif y dif z + y^3 dif z dif x + z^3 dif x dif y$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$ 的外侧；
           (3) $iint_Sigma x dif y dif z + y dif z dif x + z dif x dif y$，其中 $Sigma$ 为介于 $z = 0, z = 3$ 之间的圆柱体 $x^2 + y^2 <= 9$ 的整个表面的外侧。

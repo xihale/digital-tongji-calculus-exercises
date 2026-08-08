@@ -118,7 +118,7 @@
     kind: "compute",
     kind-title: [四、计算题],
     stem: [
-      设向量 $bold(a) = 3 bold(i) - bold(j) - 2 bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，求：
+      设向量 $bold(a) = 3 bold(i) - bold(j) - 2 bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，求： \
             (1) $bold(a) dot bold(b)$ 及 $bold(a) times bold(b)$；
             (2) $(-2 bold(a)) dot 3 bold(b)$ 及 $bold(a) times 2 bold(b)$；
             (3) $bold(a), bold(b)$ 的夹角的余弦。

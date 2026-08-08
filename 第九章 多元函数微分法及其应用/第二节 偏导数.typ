@@ -96,13 +96,10 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      求下列函数的偏导数：
-      (1) $z = sqrt(ln(x y))$；
-
-      (2) $z = (1 + x y )^y$；
-
-      (3) $u = x^((y)/(z))$；
-
+      求下列函数的偏导数： \
+      (1) $z = sqrt(ln(x y))$； \
+      (2) $z = (1 + x y )^y$； \
+      (3) $u = x^((y)/(z))$； \
       (4) $u = (x - y)^z$。
     ],
     solution: [
@@ -115,9 +112,8 @@
   (
     kind: "compute",
     stem: [
-      求下列函数的二阶偏导数 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$：
-      (1) $z = arctan y/x$；
-
+      求下列函数的二阶偏导数 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$： \
+      (1) $z = arctan y/x$； \
       (2) $z = y^x$。
     ],
     solution: [

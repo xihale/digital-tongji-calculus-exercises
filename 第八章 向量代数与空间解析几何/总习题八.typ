@@ -93,7 +93,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则：
+      已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则： \
       (1) 向量 $arrow(A B)$ 的方向余弦为 #blank()，单位向量为 #blank()；
       (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #blank()，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #blank()；
       (3) 以该三点为顶点的三角形的面积为 #blank()；
@@ -117,8 +117,7 @@
     kind: "blank",
     stem: [
       设向量 $bold(a) = (1, 1, -4), bold(b) = (2, 0, -2)$，则
-      (1) $(bold(a) + bold(b)) dot (bold(a) - bold(b)) =$
-
+      (1) $(bold(a) + bold(b)) dot (bold(a) - bold(b)) =$ \
       (2) $(bold(a) + bold(b)) times (bold(a) - bold(b)) =$
     ],
     answers: (
