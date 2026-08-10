@@ -82,10 +82,12 @@ make clean      # 清理产物
 对应底层命令（亦可直接调用）：
 
 ```bash
-typst compile --no-pdf-tags --input MODE=practice index.typ 高等数学习题册.pdf
-typst compile --no-pdf-tags --input MODE=full     index.typ 高等数学习题册_附答案.pdf
-typst compile --no-pdf-tags --input MODE=answers  index.typ 高等数学习题册_纯答案.pdf
+typst compile --no-pdf-tags --input MODE=practice --input VERSION=$(git describe --tags --always) index.typ 高等数学习题册.pdf
+typst compile --no-pdf-tags --input MODE=full     --input VERSION=$(git describe --tags --always) index.typ 高等数学习题册_附答案.pdf
+typst compile --no-pdf-tags --input MODE=answers  --input VERSION=$(git describe --tags --always) index.typ 高等数学习题册_纯答案.pdf
 ```
+
+封面版本号由 git tag 自动识别（`git describe --tags --always --dirty`）：贴在 tag 上为 `vX.Y.Z`，中间提交为 `vX.Y.Z-N-gHASH`。可覆盖：`VERSION=v1.0.0 make practice`。
 
 ### 实时预览
 

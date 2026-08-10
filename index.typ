@@ -25,7 +25,8 @@
   it.body
 }
 
-#let VERSION = "v0.2.0"
+// 版本由 Makefile 注入：--input VERSION=$(git describe …)；直调 typst 时默认 dev
+#let VERSION = sys.inputs.at("VERSION", default: "dev")
 
 #align(center)[
   #text(weight: "bold", size: 2.0em)[高等数学习题册]\
