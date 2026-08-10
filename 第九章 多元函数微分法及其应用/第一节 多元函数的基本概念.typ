@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = cases(x sin 1/y + y sin 1/x & "if" x y != 0, 0 & "if" x y = 0)$ 则 $lim_((x, y) arrow (0, 0)) f(x, y) =$
+      设函数 $f(x, y) = cases(x sin 1/y + y sin 1/x & x y != 0, 0 & x y = 0)$ 则 $lim_((x, y) arrow (0, 0)) f(x, y) =$
     ],
     options: (
       [不存在],
@@ -51,7 +51,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & "if" x^2 + y^2 != 0, 0 & "if" x^2 + y^2 = 0)$ 则 $f(x, y)$  \
+      设函数 $f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & x^2 + y^2 != 0, 0 & x^2 + y^2 = 0)$ 则 $f(x, y)$  \
     ],
     options: (
       [处处连续],

@@ -112,6 +112,9 @@
             }
           } else if "answer" in p {
             choice-mark(p.answer)
+          } else {
+            // 既无 answer 也无 answers：题末兜底补一个空括号（避免判断题无括号）
+            choice-mark([])
           }
         }
         // 选择/判断：只贴（　），括号后不加句号。

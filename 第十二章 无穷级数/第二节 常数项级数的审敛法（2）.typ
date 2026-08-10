@@ -12,12 +12,14 @@
     stem: [
       若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo u_n^2$ 也收敛
     ],
+    answer: [√],
   ),
   (
     kind: "judge",
     stem: [
       若正项级数 $sum_(n=1)^oo u_n$ 发散，则 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho > 1$
     ],
+    answer: [×],
   ),
   (
     kind: "choice",

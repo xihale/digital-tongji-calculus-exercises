@@ -10,13 +10,13 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(0 & "if" -pi <= x < 0, x & "if" 0 <= x < pi)$。已知 $f(x)$ 的傅里叶级数，则该级数的和函数为
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(0 & -pi <= x < 0, x & 0 <= x < pi)$。已知 $f(x)$ 的傅里叶级数，则该级数的和函数为
     ],
     options: (
       [$S(x) = f(x)$，$x in (-pi, pi)$],
       [$S(x) = f(x)$，$x in (-oo, +oo)$],
-      [$S(x) = cases(f(x) & "if" x != k pi, (pi)/(2) & "if" x = k pi)$（$k$ 为整数）],
-      [$S(x) = cases(f(x) & "if" x != (2k-1) pi, (pi)/(2) & "if" x = (2k-1) pi)$（$k$ 为整数）],
+      [$S(x) = cases(f(x) & x != k pi, (pi)/(2) & x = k pi)$（$k$ 为整数）],
+      [$S(x) = cases(f(x) & x != (2k-1) pi, (pi)/(2) & x = (2k-1) pi)$（$k$ 为整数）],
     ),
     answer: [D],
     solution: [
@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(x & "if" -pi <= x < 0, 0 & "if" 0 <= x < pi)$。$f(x)$ 的傅里叶级数的和函数为 $S(x)$，则 $S(pi) =$
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(x & -pi <= x < 0, 0 & 0 <= x < pi)$。$f(x)$ 的傅里叶级数的和函数为 $S(x)$，则 $S(pi) =$
     ],
     options: (
       [$-(pi)/(2)$],
@@ -74,7 +74,7 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(1 & "if" -pi <= x < 0, x & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = pi$ 处收敛于
+      设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(1 & -pi <= x < 0, x & 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = pi$ 处收敛于
     ],
     answer: [$(pi+1)/(2)$],
     solution: [
