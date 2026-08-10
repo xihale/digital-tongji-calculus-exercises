@@ -6,6 +6,6 @@
 
 本书大量借助 AI 进行处理，内容提取主要用 MinerU，答案和解析部分主要由 AI 生成，有限的人工校对。
 
-如遇错误、疑惑，欢迎提交 issue 或 pull request 进行讨论、修正。（地址：https://github.com/xihale/digital-tongji-calculus-exercises）
+如遇错误、疑惑，欢迎提交 issue 或 pull request 进行讨论、修正。（地址：https://github.com/xihale/tongji-calculus）
 
 #pagebreak()

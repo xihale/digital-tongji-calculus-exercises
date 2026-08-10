@@ -1,6 +1,7 @@
 // 数据层：只放内容。公式一律行内。
+#import "../lib/math.typ": *
 #import "../lib/render.typ": book-section
-#import "../lib/figures.typ": fig-parabola-region, fig-piecewise-limits
+#import "../lib/figures.typ": fig-parabola-region, fig-arched-curve
 
 #let section-title = [高等数学(上册)期末测试真题(一)]
 
@@ -87,11 +88,12 @@
     ],
   ),
   (
-    kind: "short",
+    // 看图定符号，仍属选择题编号流；不用 short，避免中途换 kind 拆开「一、选择题」
+    kind: "choice",
     stem: [
-      设函数 $f(x)$ 具有二阶连续导数，其部分图形如图 1 所示，试确定下列定积分的符号：
+      设函数 $f(x)$ 具有三阶连续导数，其部分图形如图 1 所示，试确定下列定积分的符号：
     ],
-    figure: fig-piecewise-limits(),
+    figure: fig-arched-curve(),
     figure-caption: [图1],
     parts: (
       [$integral_(-3)^2 f(x) dif x$；],
@@ -100,10 +102,17 @@
       [$integral_(-3)^2 f'''(x) dif x$。],
     ),
     solution-parts: (
-      [图中 $[-3,0]$ 上 $f$ 多在 $x$ 轴下方，$[0,2]$ 上 $f equiv 1$；负面积绝对值大于 2，积分 $<0$。],
-      [按 FTC 并计及间断，净变化约为 $f(2^+)-f(-3)$ 与跃度；结合图形 $f$ 右端约 1、左端约负，积分可判定符号（常为 $>0$）。],
-      [$integral f'' = f'(2)-f'(-3)$（连续段），结合折线斜率变化判定。],
-      [分段线性处 $f'''=0$，拐点/角点贡献为 0，积分 $=0$。],
+      [在 $[-3, 2]$ 上曲线均在 $x$ 轴上方（端点为零），故积分 $> 0$。],
+      [$integral_(-3)^2 f' = f(2) - f(-3) = 0 - 0 = 0$。],
+      [
+        $integral_(-3)^2 f'' = f'(2) - f'(-3)$。
+        图中 $x = -3$ 处斜率为正，$x = 2$ 处斜率为负，故结果 $< 0$。
+      ],
+      [
+        $integral_(-3)^2 f''' = f''(2) - f''(-3)$。
+        图中 $x = -3$ 附近曲线下凸（$f''(-3) > 0$），
+        $x = 2$ 附近曲线上凸（$f''(2) < 0$），故积分 $< 0$。
+      ],
     ),
   ),
   (
@@ -190,9 +199,11 @@
   (
     kind: "blank",
     stem: [$integral_(-1)^1 (2x^2 + x sin^2 x)/(1 + sqrt(1 - x^2)) dif x =$],
-    answer: [$2/3$],
+    answer: [$4 - pi$],
     solution: [
-      奇函数部分为 0；偶部化简后积分得 $2/3$。
+      奇部 $x sin^2 x \/ (1 + sqrt(1 - x^2))$ 积分为 0；
+      偶部 $(2x^2)/(1 + sqrt(1 - x^2)) = 2(1 - sqrt(1 - x^2))$，
+      故原式 $= integral_(-1)^1 2(1 - sqrt(1 - x^2)) dif x = 4 - pi$。
     ],
   ),
   (
@@ -244,8 +255,9 @@
       求 $(dif^2 y)/(dif x^2)|_(x=0)$
     ],
     solution: [
-      $x=0$ 时 $y=-1$。$y' = (4x^3 - y(1+e^x))/(x+e^x)$，$y'(0)=2$。
-      再求导得 $y''(0) = -7$。
+      $x=0$ 时 $y=-1$。隐函数求导：
+      $y' = (4x^3 - y(1+e^x))/(x+e^x)$，$y'(0)=2$。
+      再对 $y'$ 求导并代入 $x=0$、$y=-1$、$y'=2$，得 $y''(0) = -7$。
     ],
   ),
   (
@@ -292,9 +304,12 @@
       $(b^2 - a^2)/(integral_a^b f(x) dif x) = (2 xi)/f(xi)$
     ],
     solution: [
-      由 $f'>0$ 知 $f$ 严格增且 $integral_a^b f > 0$。
-      对 $F(x)=x^2$、$G(x)=integral_a^x f$ 等形式应用柯西中值定理，
-      或构造辅助函数并利用罗尔定理，可得存在 $xi$ 满足所证等式。
+      极限 $lim_(x -> a^+) f(2x-a)/(x-a)$ 存在：令 $t=2x-a$，则
+      $lim_(t -> a^+) 2 f(t)/(t-a)$ 有限，又 $f$ 在 $a$ 连续，故必有 $f(a)=0$。
+      由 $f'>0$ 知 $f$ 在 $(a,b]$ 上 $f>0$，从而 $integral_a^b f > 0$。
+      令 $F(x)=x^2$，$G(x)=integral_a^x f(t) dif t$，对 $[a,b]$ 用柯西中值定理：
+      存在 $xi in (a,b)$ 使 $(F(b)-F(a))/(G(b)-G(a)) = F'(xi)/G'(xi)$，
+      即 $(b^2-a^2)/(integral_a^b f) = (2 xi)/f(xi)$。
     ],
   ),
   (

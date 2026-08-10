@@ -168,13 +168,10 @@
     kind: "compute",
     stem: [求 $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) dif x$],
     solution: [
-      $sqrt(cos x - cos^3 x) = sqrt(cos x)|sin x|$（$cos x >= 0$ 时）。
-      在 $[-pi/4, pi/2]$ 上 $cos x >= 0$，分段去掉绝对值并换元，
-      得 $integral_(-pi/4)^(pi/2) = 2/3 [1 - (sqrt(2)/2)^(3/2)] + 2/3 = 2/3 (2 - 2^(-3/4))$ 等（计算得 $2/3 + 2/3 (1 - (sqrt(2)/2)^(3/2))$）。
-      更简：令 $u = sin x$ 等，结果为 $2/3 [1 + (sqrt(2)/2)^(3/2)?]$；
-      标准结果 $2/3 (1 + (sqrt(2)/2)^(3/2))$ 需按区间符号核算——取 $u=sin x$：
-      $[ -pi/4, 0]$ 上 $|sin x| = -sin x$，$[0,pi/2]$ 上为 $sin x$，
-      $integral = 2/3 [1 - (sqrt(2)/2)^(3/2)] + 2/3 = 2/3 [2 - 2^(-3/4)]$。
+      $sqrt(cos x - cos^3 x) = sqrt(cos x)\,|sin x|$（区间上 $cos x >= 0$）。
+      令 $u = cos x$，$dif u = -sin x dif x$：
+      $[0, pi/2]$ 上得 $2/3$；$[-pi/4, 0]$ 上得 $2/3 [1 - (sqrt(2)/2)^(3/2)]$。
+      合计 $2/3 [2 - 2^(-3/4)]$。
     ],
   ),
   (
