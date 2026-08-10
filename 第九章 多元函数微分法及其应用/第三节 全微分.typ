@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处全微分存在的.
+      函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处全微分存在的
     ],
     options: (
       [充分条件],
@@ -107,6 +107,7 @@
     stem: [
       设函数 $z = ee^(y(x^2 + y^2))$，则 $dif z =$
     ],
+    answer: [$2 x y ee^(y(x^2 + y^2)) dif x + (x^2 + 3 y^2) ee^(y(x^2 + y^2)) dif y$],
     solution: [
       设 \
       $phi(x, y)=y(x^2+y^2)=x^2y+y^3$， \
@@ -127,6 +128,7 @@
     stem: [
       设函数 $z = f((y)/(x))$，则 $dif z =$
     ],
+    answer: [$f'((y)/(x)) [-(y)/(x^2) dif x + (1)/(x) dif y]$],
     solution: [
       设中间变量 \
       $u=(y)/(x)$，则 $z=f(u)$。 \
@@ -145,7 +147,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      设函数 $u = a^(x + y z) - ln x^a$ ($a > 0$)，求 $dif u$。
+      设函数 $u = a^(x + y z) - ln x^a$ ($a > 0$)，求 $dif u$
     ],
     solution: [
       $dif u = (a^(x + y z) ln a -(a)/(x)) dif x + a^(x + y z) z ln a dif y + a^(x + y z) y ln a dif z$。
@@ -156,7 +158,7 @@
   (
     kind: "compute",
     stem: [
-      求函数 $z = ln(x^2 + y^2 + ee^(x y))$ 的全微分。
+      求函数 $z = ln(x^2 + y^2 + ee^(x y))$ 的全微分
     ],
     solution: [
       $dif z =(1)/((x^2 + y^2 + ee^(x y)) [(2x + y ee^(x y)) dif x + (2y + x ee^(x y)) dif y])$。
@@ -191,7 +193,7 @@
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设函数 $f(x, y) = cases(x y sin 1/sqrt(x^2 + y^2) & x^2 + y^2 != 0, 0 & x^2 + y^2 = 0)$ 证明: $f(x, y)$ 在点 (0,0) 处连续且偏导数存在, 但偏导数在点 (0,0) 处不连续, 而 $f(x, y)$ 在点 (0,0) 处可微分.
+      设函数 $f(x, y) = cases(x y sin 1/sqrt(x^2 + y^2) & x^2 + y^2 != 0, 0 & x^2 + y^2 = 0)$ 证明: $f(x, y)$ 在点 $(0,0)$ 处连续且偏导数存在, 但偏导数在点 $(0,0)$ 处不连续, 而 $f(x, y)$ 在点 $(0,0)$ 处可微分.
     ],
     solution: [
       记 $r=sqrt(x^2+y^2)$。当 $(x,y)!=(0,0)$ 时， \

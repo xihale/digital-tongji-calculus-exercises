@@ -143,7 +143,7 @@
     kind: "compute",
     stem: [
       设 $a > 1$，函数 $f(x) = a^x - a x$ 在 $(-oo, +oo)$ 上的驻点为 $x(a)$。
-      问：$a$ 为何值时 $x(a)$ 最小？并求出最小值。
+      问：$a$ 为何值时 $x(a)$ 最小？并求出最小值
     ],
     solution: [
       $f' = a^x ln a - a = 0 => a^x = a / ln a$，
@@ -154,7 +154,7 @@
   ),
   (
     kind: "compute",
-    stem: [曲线弧 $y = sin x$（$0 < x < pi$）上哪一点处的曲率半径最小？求出该点处的曲率半径。],
+    stem: [曲线弧 $y = sin x$（$0 < x < pi$）上哪一点处的曲率半径最小？求出该点处的曲率半径],
     solution: [
       $K = sin x / (1 + cos^2 x)^(3/2)$，$R = 1/K$。
       令 $K' = 0$ 得 $cos x = 0$，即 $x = pi/2$。
@@ -165,7 +165,7 @@
     kind: "compute",
     stem: [
       试确定常数 $a$、$b$，使得 $f(x) = x - (a + b cos x) sin x$
-      为当 $x -> 0$ 时关于 $x$ 的五阶无穷小。
+      为当 $x -> 0$ 时关于 $x$ 的五阶无穷小
     ],
     solution: [
       需 $f(0) = f'(0) = f''(0) = f'''(0) = f^((4))(0) = 0$ 且 $f^((5))(0) != 0$。
@@ -181,7 +181,7 @@
     stem: [
       设 $a_0 + a_1/2 + a_2/3 + dots + a_n/(n+1) = 0$，证明：多项式
       $f(x) = a_0 + a_1 x + a_2 x^2 + dots + a_n x^n$
-      在区间 $(0, 1)$ 内至少有一个零点。
+      在区间 $(0, 1)$ 内至少有一个零点
     ],
     solution: [
       令 $F(x) = a_0 x + a_1 x^2/2 + dots + a_n x^(n+1)/(n+1)$，
@@ -191,7 +191,7 @@
   ),
   (
     kind: "proof",
-    stem: [证明：当 $e < a < b < e^2$ 时，$ln^2 b - ln^2 a > (4/e^2)(b - a)$。],
+    stem: [证明：当 $e < a < b < e^2$ 时，$ln^2 b - ln^2 a > (4/e^2)(b - a)$],
     solution: [
       由中值定理：$ln^2 b - ln^2 a = (2 ln xi / xi)(b-a)$，$xi in (a,b) subset (e, e^2)$。
       令 $g(x) = 2 ln x / x$，则 $g'(x) = 2(1 - ln x)/x^2$，

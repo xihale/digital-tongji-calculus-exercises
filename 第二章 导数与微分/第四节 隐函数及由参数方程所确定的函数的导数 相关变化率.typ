@@ -65,7 +65,7 @@
   // ===== 三、计算题 =====
   (
     kind: "compute",
-    stem: [求由方程 $x y = e^(x + y)$ 所确定的隐函数的导数 $(dif y)/(dif x)$。],
+    stem: [求由方程 $x y = e^(x + y)$ 所确定的隐函数的导数 $(dif y)/(dif x)$],
     solution: [
       两边对 $x$ 求导：$y + x y' = e^(x+y)(1 + y')$，
       整理得 $(x - e^(x+y)) y' = e^(x+y) - y$，
@@ -76,7 +76,7 @@
     kind: "compute",
     stem: [
       求曲线 $x^(2/3) + y^(2/3) = a^(2/3)$ 上点
-      $(sqrt(2)/4 a,\, sqrt(2)/4 a)$ 处的切线方程和法线方程。
+      $(sqrt(2)/4 a, sqrt(2)/4 a)$ 处的切线方程和法线方程
     ],
     solution: [
       两边对 $x$ 求导：$(2/3) x^(-1/3) + (2/3) y^(-1/3) y' = 0$，
@@ -86,7 +86,7 @@
   ),
   (
     kind: "compute",
-    stem: [求由方程 $y = tan(x + y)$ 所确定的隐函数的二阶导数 $(dif^2 y)/(dif x^2)$。],
+    stem: [求由方程 $y = tan(x + y)$ 所确定的隐函数的二阶导数 $(dif^2 y)/(dif x^2)$],
     solution: [
       对 $y = tan(x + y)$ 求导：$y' = sec^2(x+y)(1 + y')$，
       解得 $y' = - (sec^2(x+y))/(tan^2(x+y))$。
@@ -95,7 +95,7 @@
   ),
   (
     kind: "compute",
-    stem: [用对数求导法求函数 $y = (x/(1 + x))^x$ 的导数。],
+    stem: [用对数求导法求函数 $y = (x/(1 + x))^x$ 的导数],
     solution: [
       取对数：$ln y = x(ln x - ln(1+x))$。
       两边对 $x$ 求导：$y'/y = ln(x/(1+x)) + 1/(1+x)$，
@@ -105,7 +105,7 @@
   (
     kind: "compute",
     stem: [
-      求由参数方程 $x = a t^2$，$y = b t^3$ 所确定的函数的导数 $(dif y)/(dif x)$。
+      求由参数方程 $x = a t^2$，$y = b t^3$ 所确定的函数的导数 $(dif y)/(dif x)$
     ],
     solution: [
       $(dif x)/(dif t) = 2 a t$，$(dif y)/(dif t) = 3 b t^2$，
@@ -116,7 +116,7 @@
     kind: "compute",
     stem: [
       已知一曲线的参数方程为 $x = sin t$，$y = cos 2t$，
-      求该曲线在点 $t = pi/4$ 处的切线方程和法线方程。
+      求该曲线在点 $t = pi/4$ 处的切线方程和法线方程
     ],
     solution: [
       $(dif x)/(dif t) = cos t$，$(dif y)/(dif t) = -2 sin 2t$。

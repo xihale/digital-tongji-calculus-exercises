@@ -10,7 +10,7 @@
     kind: "judge",
     kind-title: [一、判断题],
     stem: [
-      若级数 $sum_(n=1)^oo u_n$ 收敛，则 $lim_(n arrow oo) u_n = 0$。
+      若级数 $sum_(n=1)^oo u_n$ 收敛，则 $lim_(n arrow oo) u_n = 0$
     ],
     answer: [√],
     solution: [
@@ -20,7 +20,7 @@
   (
     kind: "judge",
     stem: [
-      若级数 $sum_(n=1)^oo u_n$ 收敛，$sum_(n=1)^oo v_n$ 发散，则级数 $sum_(n=1)^oo (u_n + v_n)$ 发散。
+      若级数 $sum_(n=1)^oo u_n$ 收敛，$sum_(n=1)^oo v_n$ 发散，则级数 $sum_(n=1)^oo (u_n + v_n)$ 发散
     ],
     answer: [√],
     solution: [
@@ -30,7 +30,7 @@
   (
     kind: "judge",
     stem: [
-      级数加括号后不改变其敛散性。
+      级数加括号后不改变其敛散性
     ],
     answer: [×],
     solution: [
@@ -40,7 +40,7 @@
   (
     kind: "judge",
     stem: [
-      正项级数收敛的充要条件是前 $n$ 项和构成的数列 $(s_n)$ 有界。
+      正项级数收敛的充要条件是前 $n$ 项和构成的数列 $(s_n)$ 有界
     ],
     answer: [√],
     solution: [
@@ -50,7 +50,7 @@
   (
     kind: "judge",
     stem: [
-      若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo sqrt(u_n u_(n+1))$ 也收敛。
+      若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo sqrt(u_n u_(n+1))$ 也收敛
     ],
     answer: [√],
     solution: [
@@ -60,7 +60,7 @@
   (
     kind: "judge",
     stem: [
-      若 $lim_(n arrow oo) (u_n)/(v_n)= l$ ($0 < l < +oo$)，则级数 $sum_(n=1)^oo u_n$ 和 $sum_(n=1)^oo v_n$ 有相同的敛散性。
+      若 $lim_(n arrow oo) (u_n)/(v_n)= l$ ($0 < l < +oo$)，则级数 $sum_(n=1)^oo u_n$ 和 $sum_(n=1)^oo v_n$ 有相同的敛散性
     ],
     answer: [√],
     solution: [
@@ -71,7 +71,7 @@
     kind: "choice",
     kind-title: [二、选择题],
     stem: [
-      当级数 $sum_(n=1)^oo (a_n + b_n)$ 收敛时，级数 $sum_(n=1)^oo a_n$ 与 $sum_(n=1)^oo b_n$。
+      当级数 $sum_(n=1)^oo (a_n + b_n)$ 收敛时，级数 $sum_(n=1)^oo a_n$ 与 $sum_(n=1)^oo b_n$
     ],
     options: (
       [必同时收敛],
@@ -87,7 +87,7 @@
   (
     kind: "choice",
     stem: [
-      在正项级数中，$sum_(n=1)^oo a_n$ 收敛是级数 $sum_(n=1)^oo a_n^2$ 收敛的。
+      在正项级数中，$sum_(n=1)^oo a_n$ 收敛是级数 $sum_(n=1)^oo a_n^2$ 收敛的
     ],
     options: (
       [充分条件],
@@ -103,7 +103,7 @@
   (
     kind: "choice",
     stem: [
-      设 $sum_(n=1)^oo a_n$ 为任意项级数，若 $|a_n| > |a_(n+1)|$ 且 $lim_(n arrow oo) a_n = 0$，则该级数。
+      设 $sum_(n=1)^oo a_n$ 为任意项级数，若 $|a_n| > |a_(n+1)|$ 且 $lim_(n arrow oo) a_n = 0$，则该级数
     ],
     options: (
       [条件收敛],
@@ -119,7 +119,7 @@
   (
     kind: "choice",
     stem: [
-      若函数 $y =(sum_(n=0)^oo x^n)/((n!)^2)$，则 $x y'' + y' =$。
+      若函数 $y =(sum_(n=0)^oo x^n)/((n!)^2)$，则 $x y'' + y' =$
     ],
     options: (
       [$y$],
@@ -141,7 +141,7 @@
   (
     kind: "choice",
     stem: [
-      若级数 $sum_(n=0)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则该级数在点 $x = 2$ 处。
+      若级数 $sum_(n=0)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则该级数在点 $x = 2$ 处
     ],
     options: (
       [发散],
@@ -157,7 +157,7 @@
   (
     kind: "choice",
     stem: [
-      级数 $(1)/(2)-(1)/(4)+(1)/(8)- dots +((-1)^(n-1))/(2^n)+ dots$ 的和为。
+      级数 $(1)/(2)-(1)/(4)+(1)/(8)- dots +((-1)^(n-1))/(2^n)+ dots$ 的和为
     ],
     options: (
       [$(1)/(2)$],
@@ -265,7 +265,7 @@
     kind: "compute",
     kind-title: [四、计算题],
     stem: [
-      计算 $iint_D (x^2 + y) dif x dif y$，其中 $D$ 是由 $x^2 + y^2 <= 1$ 围成的闭区域。
+      计算 $iint_D (x^2 + y) dif x dif y$，其中 $D$ 是由 $x^2 + y^2 <= 1$ 围成的闭区域
     ],
     solution: [
       $(pi)/(4)$
@@ -284,7 +284,7 @@
   (
     kind: "compute",
     stem: [
-      求幂级数 $(sum_(n=1)^oo (n^2 + 1))/(n x^(2n))$ ($|x| < 1$) 在收敛区间内的和函数，并求 $(sum_(n=1)^oo (n^2 + 1))/(n dot 2^n)$ 的和。
+      求幂级数 $(sum_(n=1)^oo (n^2 + 1))/(n x^(2n))$ ($|x| < 1$) 在收敛区间内的和函数，并求 $(sum_(n=1)^oo (n^2 + 1))/(n dot 2^n)$ 的和
     ],
     solution: [
       拆项： \
@@ -304,7 +304,7 @@
     kind: "choice",
     kind-title: [一、选择题（每小题3分，共15分）],
     stem: [
-      若函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处可微，则 $f(x, y)$ 在点 $(x_0, y_0)$ 处不一定。
+      若函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处可微，则 $f(x, y)$ 在点 $(x_0, y_0)$ 处不一定
     ],
     options: (
       [连续],
@@ -317,7 +317,7 @@
   (
     kind: "choice",
     stem: [
-      设 $f(x)$ 为连续函数，$F(t) = int_1^t dif y int_y^t f(x) dif x$，则 $F'(2) =$ 。
+      设 $f(x)$ 为连续函数，$F(t) = int_1^t dif y int_y^t f(x) dif x$，则 $F'(2) =$ 
     ],
     answer: [$int_1^2 f(x) dif x$],
     solution: [
@@ -331,7 +331,7 @@
   (
     kind: "choice",
     stem: [
-      将 $x O y$ 面上的双曲线 $(x^2)/(3)- 4y^2 = 1$ 绕 $y$ 轴旋转一周所得旋转曲面的方程为。
+      将 $x O y$ 面上的双曲线 $(x^2)/(3)- 4y^2 = 1$ 绕 $y$ 轴旋转一周所得旋转曲面的方程为
     ],
     options: (
       [$(x^2)/(3)- 4y^2 - 4z^2 = 1$],
@@ -344,7 +344,7 @@
   (
     kind: "choice",
     stem: [
-      设 $L: x^2 + y^2 = 1$，取顺时针方向，则 $(oint_L (x dif y - y dif x))/(x^2 + y^2)=$ 。
+      设 $L: x^2 + y^2 = 1$，取顺时针方向，则 $(oint_L (x dif y - y dif x))/(x^2 + y^2)=$ 
     ],
     answer: [$-2 pi$],
     solution: [
@@ -355,7 +355,7 @@
   (
     kind: "choice",
     stem: [
-      下列级数中，条件收敛的是。
+      下列级数中，条件收敛的是
     ],
     options: (
       [$sum_(n=1)^oo (-1)^n sqrt((n)/(n+1))$],
@@ -436,7 +436,7 @@
     kind: "compute",
     kind-title: [三、计算题（11~12 每小题6分，13~17 每小题7分，18小题8分，19小题10分，20小题5分，共70分）],
     stem: [
-      设函数 $z = f(x, y)$ 的全微分为 $dif z = (4 - 2x) dif x - (2y + 4) dif y$，试确定 $f(x, y)$ 的极值点，并判别该点是极大值点还是极小值点。
+      设函数 $z = f(x, y)$ 的全微分为 $dif z = (4 - 2x) dif x - (2y + 4) dif y$，试确定 $f(x, y)$ 的极值点，并判别该点是极大值点还是极小值点
     ],
     solution: [
       由全微分可读出 \
@@ -455,7 +455,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D cos x/y dif x dif y$，其中 $D$ 为由直线 $x = 0, y =(pi)/(2), y = pi$ 及抛物线 $x = y^2$ 所围成的平面区域。
+      计算 $iint_D cos x/y dif x dif y$，其中 $D$ 为由直线 $x = 0, y =(pi)/(2), y = pi$ 及抛物线 $x = y^2$ 所围成的平面区域
     ],
     solution: [
       按区域先对 $x$ 积分： \
@@ -471,7 +471,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = f((x)/(y),(y)/(x))$，其中 $f$ 具有一阶连续偏导数，求 $dif z$。
+      设函数 $z = f((x)/(y),(y)/(x))$，其中 $f$ 具有一阶连续偏导数，求 $dif z$
     ],
     solution: [
       设 \
@@ -488,7 +488,7 @@
   (
     kind: "compute",
     stem: [
-      求曲线 $cases(x^2 + 2y^2 + z^2 = 10, x - y + z = 0)$ 在点 $(1, 2, 1)$ 处的切线方程。
+      求曲线 $cases(x^2 + 2y^2 + z^2 = 10, x - y + z = 0)$ 在点 $(1, 2, 1)$ 处的切线方程
     ],
     solution: [
       设 \
@@ -508,7 +508,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0, f'(0) = 1$，求 $lim_(t arrow 0^+) 1/(t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y)$。
+      设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0, f'(0) = 1$，求 $lim_(t arrow 0^+) 1/(t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y)$
     ],
     solution: [
       极坐标变换后 \
@@ -526,7 +526,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $oint_L (y^2 + x) dif s$，其中 $L$ 为圆 $x^2 + y^2 = 4$。
+      计算 $oint_L (y^2 + x) dif s$，其中 $L$ 为圆 $x^2 + y^2 = 4$
     ],
     solution: [
       取参数方程 \
@@ -542,7 +542,7 @@
   (
     kind: "compute",
     stem: [
-      将函数 $f(x) =(1)/(x^2 + 4x + 3)$ 展开成 $(x - 1)$ 的幂级数。
+      将函数 $f(x) =(1)/(x^2 + 4x + 3)$ 展开成 $(x - 1)$ 的幂级数
     ],
     solution: [
       令 $t=x-1$，则 \
@@ -564,7 +564,7 @@
       设函数 $f(x)$ 在区间 $(-oo, +oo)$ 上具有连续导数，$L$ 是上半平面 ($y > 0$) 内以点 $(a, b)$ 为起点、点 $(c, d)$ 为终点的有向分段光滑曲线，记 $I = int_L [(1)/(y)+ y f(x y)] dif x + [x f(x y) -(x)/(y^2)] dif y$。
 
           (1) 证明：曲线积分 $I$ 与路径 $L$ 无关； \
-          (2) 当 $a b = c d$ 时，计算 $I$ 的值。
+          (2) 当 $a b = c d$ 时，计算 $I$ 的值
     ],
     solution: [
       记 \
@@ -589,7 +589,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $I = iint_Sigma [f_y(x, y) + x^3] dif y dif z + [y^3 - f_x(x, y)] dif z dif x + z^3 dif x dif y$，其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$ ($0 <= z <= 1$) 的下侧。
+      计算 $I = iint_Sigma [f_y(x, y) + x^3] dif y dif z + [y^3 - f_x(x, y)] dif z dif x + z^3 dif x dif y$，其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$ ($0 <= z <= 1$) 的下侧
     ],
     solution: [
       设向量场 \
@@ -613,7 +613,7 @@
   (
     kind: "compute",
     stem: [
-      设幂级数 $sum_(n=0)^oo a_n x^n$ 在 $(-oo, +oo)$ 上收敛，且 $a_0 = 0, a_1 = 1, a_2 = 0, a_(n+2) =(2)/((n+1) a_n)$ ($n = 0, 1, 2, dots$)，求该级数的和函数 $S(x)$。
+      设幂级数 $sum_(n=0)^oo a_n x^n$ 在 $(-oo, +oo)$ 上收敛，且 $a_0 = 0, a_1 = 1, a_2 = 0, a_(n+2) =(2)/((n+1) a_n)$ ($n = 0, 1, 2, dots$)，求该级数的和函数 $S(x)$
     ],
     solution: [
       由递推式 \
@@ -631,7 +631,7 @@
     kind: "choice",
     kind-title: [一、选择题（每小题3分，共15分）],
     stem: [
-      设有直线 $l: cases(2 x + 3 y - z = 1, x - 2 y - 3 z = 2)$ 及平面 $Pi : 11x - 5y + 7z = 2$，则直线 $l$。
+      设有直线 $l: cases(2 x + 3 y - z = 1, x - 2 y - 3 z = 2)$ 及平面 $Pi : 11x - 5y + 7z = 2$，则直线 $l$
     ],
     options: (
       [与平面 $Pi$ 斜交],
@@ -644,7 +644,7 @@
   (
     kind: "choice",
     stem: [
-      函数 $z = 2x^3 - 4x^2 + 2x y - y^2$ 的极大值点为。
+      函数 $z = 2x^3 - 4x^2 + 2x y - y^2$ 的极大值点为
     ],
     options: (
       [$(0, 0)$],
@@ -657,7 +657,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = cases(((x y)/( sqrt(x^4 + y^4))), & (x, y) != (0, 0), 0, & (x, y) = (0, 0),)$ 则在点(0,0)处.
+      设函数 $f(x, y) = cases(((x y)/( sqrt(x^4 + y^4))), & (x, y) != (0, 0), 0, & (x, y) = (0, 0),)$ 则在点 $(0,0)$处
     ],
     options: (
       [偏导数不存在, 函数不连续],
@@ -670,7 +670,7 @@
   (
     kind: "choice",
     stem: [
-      设曲面 $Sigma$ 的方程为 $x^2 + y^2 + z^2 = a^2$ ($z >= 0$)，$Sigma_1$ 为 $Sigma$ 在第一卦限的部分，则下列选项中正确的是。
+      设曲面 $Sigma$ 的方程为 $x^2 + y^2 + z^2 = a^2$ ($z >= 0$)，$Sigma_1$ 为 $Sigma$ 在第一卦限的部分，则下列选项中正确的是
     ],
     options: (
       [$iint_Sigma x dif S = 4 iint_(Sigma_1) x dif S$],
@@ -683,7 +683,7 @@
   (
     kind: "choice",
     stem: [
-      级数 $(sum_(n=1)^oo (sin n alpha))/(n^4)$ 是。
+      级数 $(sum_(n=1)^oo (sin n alpha))/(n^4)$ 是
     ],
     options: (
       [条件收敛级数],
@@ -832,7 +832,7 @@
     kind: "compute",
     kind-title: [三、计算题(14～17每小题8分，18～19每小题10分，共52分)],
     stem: [
-      求曲线 $cases(2 x^2 + 3 y^2 + z^2 = 9, x + y + z = 2)$ 在点 $(1, -1, 2)$ 处的法平面方程。
+      求曲线 $cases(2 x^2 + 3 y^2 + z^2 = 9, x + y + z = 2)$ 在点 $(1, -1, 2)$ 处的法平面方程
     ],
     solution: [
       设 \
@@ -849,7 +849,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = f(x, y)$ 是由方程 $Phi(c dot x - a dot z, c dot y - b dot z) = 0$ 所确定的隐函数，其中 $Phi$ 具有一阶连续偏导数，求 $(a (partial z))/(partial x)+(b (partial z))/(partial y)$ ($a, b, c$ 是常数)。
+      设函数 $z = f(x, y)$ 是由方程 $Phi(c dot x - a dot z, c dot y - b dot z) = 0$ 所确定的隐函数，其中 $Phi$ 具有一阶连续偏导数，求 $(a (partial z))/(partial x)+(b (partial z))/(partial y)$ ($a, b, c$ 是常数)
     ],
     solution: [
       记 \
@@ -866,7 +866,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D y ee^(x y) dif sigma$，其中闭区域 $(D: 1)/(x)<= y <= 1, 1 <= x <= 2$。
+      计算 $iint_D y ee^(x y) dif sigma$，其中闭区域 $(D: 1)/(x)<= y <= 1, 1 <= x <= 2$
     ],
     solution: [
       按题给区域可写为 \
@@ -879,7 +879,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $int_L (3 sin x + 2 x y - 4 x) dif x + (x^2 - ee^y) dif y$，其中 $L$ 为摆线 $x = t - sin t, y = 1 - cos t$ 上从点 $O(0, 0)$ 到点 $A(pi, 2)$ 的一段弧。
+      计算 $int_L (3 sin x + 2 x y - 4 x) dif x + (x^2 - ee^y) dif y$，其中 $L$ 为摆线 $x = t - sin t, y = 1 - cos t$ 上从点 $O(0, 0)$ 到点 $A(pi, 2)$ 的一段弧
     ],
     solution: [
       记 \
@@ -896,7 +896,7 @@
   (
     kind: "compute",
     stem: [
-      求幂级数 $(sum_(n=1)^oo (-1)^(n-1) (2n-1))/(n x^n)$ 的收敛半径、收敛域及和函数。
+      求幂级数 $(sum_(n=1)^oo (-1)^(n-1) (2n-1))/(n x^n)$ 的收敛半径、收敛域及和函数
     ],
     solution: [
       系数数量级不改变比值极限，故收敛半径 \
@@ -907,13 +907,13 @@
           $((-1)^(n-1)(2n-1))/(n x^n)=2(-1)^(n-1)x^n-((-1)^(n-1)x^n)/(n)$。 \
           故和函数 \
           $S(x)=2 sum_(n=1)^oo (-1)^(n-1)x^n-(sum_(n=1)^oo (-1)^(n-1)x^n)/(n)$ \
-          $=(2x)/(1+x)+ln(1+x)$。
+          $=(2x)/(1+x)+ln(1+x)$
     ],
   ),
   (
     kind: "compute",
     stem: [
-      计算 $I = iint_Sigma x z^2 dif y dif z + (x^2 y - z^3) dif z dif x + (2 x y + y^2 z) dif x dif y$，其中 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ ($a > 0$) 上半部分的上侧。
+      计算 $I = iint_Sigma x z^2 dif y dif z + (x^2 y - z^3) dif z dif x + (2 x y + y^2 z) dif x dif y$，其中 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ ($a > 0$) 上半部分的上侧
     ],
     solution: [
       写成通量形式，取 \
@@ -949,7 +949,7 @@
     kind: "choice",
     kind-title: [一、选择题（每小题3分，共30分）],
     stem: [
-      下列四个平面中，通过坐标原点且与 $x$ 轴平行的是。
+      下列四个平面中，通过坐标原点且与 $x$ 轴平行的是
     ],
     options: (
       [$2x + 2y = 0$],
@@ -962,7 +962,7 @@
   (
     kind: "choice",
     stem: [
-      已知曲面 $z = 4 - x^2 - y^2$ 在点 $P$ 处的切平面平行于平面 $2x + 2y + z - 1 = 0$，则点 $P$ 的坐标为。
+      已知曲面 $z = 4 - x^2 - y^2$ 在点 $P$ 处的切平面平行于平面 $2x + 2y + z - 1 = 0$，则点 $P$ 的坐标为
     ],
     options: (
       [$(1, -1, 2)$],
@@ -975,7 +975,7 @@
   (
     kind: "choice",
     stem: [
-      函数 $f(x, y) =(x)/(y)$ 在点 $(1, 1)$ 处的梯度为。（注：原题点 (1,0) 处无意义，修正为 (1,1) 或考察 $(x,y) arrow (1,0)$ 的极限行为）
+      函数 $f(x, y) =(x)/(y)$ 在点 $(1, 1)$ 处的梯度为。（注：原题点 $(1,0)$ 处无意义，修正为 (1,1) 或考察 $(x,y) arrow (1,0)$ 的极限行为）
     ],
     options: (
       [$-bold(i)$],
@@ -991,7 +991,7 @@
   (
     kind: "choice",
     stem: [
-      函数 $f(x, y) = cases(((x y)/( sqrt(x^2 + y^2))), & (x, y) != (0, 0), 0, & (x, y) = (0, 0))$ 在点(0,0)处.
+      函数 $f(x, y) = cases(((x y)/( sqrt(x^2 + y^2))), & (x, y) != (0, 0), 0, & (x, y) = (0, 0))$ 在点 $(0,0)$处
     ],
     options: (
       [不连续, 偏导数存在],
@@ -1004,7 +1004,7 @@
   (
     kind: "choice",
     stem: [
-      函数 $z = x^3 - 3x + y^2$ 在点 $(1, 0)$ 处。
+      函数 $z = x^3 - 3x + y^2$ 在点 $(1, 0)$ 处
     ],
     options: (
       [取得极大值],
@@ -1017,7 +1017,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $z = (1 + x y)^(x + y)$ ，则 $((partial z)/(partial y)) |_( (2,1) ) =$ 。
+      设函数 $z = (1 + x y)^(x + y)$ ，则 $((partial z)/(partial y)) |_( (2,1) ) =$ 
     ],
     options: (
       [$27(ln 3 + 2)$],
@@ -1030,7 +1030,7 @@
   (
     kind: "choice",
     stem: [
-      设曲面 $Sigma : x^2 + y^2 + z^2 = R^2 (R > 0)$ 的外法向量的方向余弦为 $cos alpha , cos beta , cos gamma$ ，则 $iint_Sigma (x cos alpha + y cos beta + z cos gamma ) dif S =$ 。
+      设曲面 $Sigma : x^2 + y^2 + z^2 = R^2 (R > 0)$ 的外法向量的方向余弦为 $cos alpha , cos beta , cos gamma$ ，则 $iint_Sigma (x cos alpha + y cos beta + z cos gamma ) dif S =$ 
     ],
     options: (
       [$pi R^3$],
@@ -1043,7 +1043,7 @@
   (
     kind: "choice",
     stem: [
-      幂级数 $(sum_(n=0)^oo (-1)^n x^(2n))/(n!)$ 在区间 $(-oo, +oo)$ 上的和函数是 $S(x) =$。
+      幂级数 $(sum_(n=0)^oo (-1)^n x^(2n))/(n!)$ 在区间 $(-oo, +oo)$ 上的和函数是 $S(x) =$
     ],
     options: (
       [$ee^(-x^2)$],
@@ -1056,7 +1056,7 @@
   (
     kind: "choice",
     stem: [
-      设空间闭区域 $Omega = ((x, y, z) | x^2 + y^2 + z^2 <= 1)$ ，则 $iiint_Omega sqrt(x^2 + y^2 + z^2) dif v =$ 。
+      设空间闭区域 $Omega = ((x, y, z) | x^2 + y^2 + z^2 <= 1)$ ，则 $iiint_Omega sqrt(x^2 + y^2 + z^2) dif v =$ 
     ],
     options: (
       [$iiint_Omega dif x dif y dif z$],
@@ -1172,7 +1172,7 @@
     kind: "compute",
     kind-title: [三、计算题（ $17~ 21$ 每小题7分，22小题9分，共44分）],
     stem: [
-      求过直线 $L_1$: $(x-1)/(1)=(y-2)/(2)=(z-3)/(3)$ 且平行于直线 $L_2$: $x = t+1, y = -2, z = t-3$ 的平面方程。
+      求过直线 $L_1$: $(x-1)/(1)=(y-2)/(2)=(z-3)/(3)$ 且平行于直线 $L_2$: $x = t+1, y = -2, z = t-3$ 的平面方程
     ],
     solution: [
       平面需包含 $L_1$，并平行于 $L_2$， \
@@ -1190,7 +1190,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $(partial^2 z)/(partial x partial y)$。
+      设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $(partial^2 z)/(partial x partial y)$
     ],
     solution: [
       设 \
@@ -1209,7 +1209,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D (x^2 + y) dif x dif y$，其中闭区域 $D: x^2 + y^2 <= 1$。
+      计算 $iint_D (x^2 + y) dif x dif y$，其中闭区域 $D: x^2 + y^2 <= 1$
     ],
     solution: [
       圆域关于 $x$ 轴对称，故 \
@@ -1223,7 +1223,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $int_L (x ee^y - 2y) dif y + (ee^y + x - y) dif x$，其中 $L$ 为圆 $x^2 + y^2 = a x$ ($a > 0$) 的上半部分，取逆时针方向。
+      计算 $int_L (x ee^y - 2y) dif y + (ee^y + x - y) dif x$，其中 $L$ 为圆 $x^2 + y^2 = a x$ ($a > 0$) 的上半部分，取逆时针方向
     ],
     solution: [
       记 \
@@ -1240,7 +1240,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_Sigma x dif y dif z - y dif z dif x + (z^2 + x) dif x dif y$，其中 $Sigma$ 为半球面 $z = sqrt(4 - x^2 - y^2)$ 的下侧。
+      计算 $iint_Sigma x dif y dif z - y dif z dif x + (z^2 + x) dif x dif y$，其中 $Sigma$ 为半球面 $z = sqrt(4 - x^2 - y^2)$ 的下侧
     ],
     solution: [
       提示: 作辅助曲面 $Sigma_1: z = 0 (x^2 + y^2 <= 4)$ , 取上侧, $Omega$ 为 $Sigma$ 与 $Sigma_1$ 所围成的空间闭区域. 由高斯公式, 得 \
@@ -1271,7 +1271,7 @@
     kind: "compute",
     kind-title: [四、选答题(8分)(考生可从下面2个题中任选1个作答，多做不多得分)],
     stem: [
-      在椭球面 $2 x^2 + 2 y^2 + z^2 = 1$ 上求一点，使得函数 $u = x^2 + y^2 + z^2$ 在该点处沿方向 $l = (1, -1, 0)$ 的方向导数最大。
+      在椭球面 $2 x^2 + 2 y^2 + z^2 = 1$ 上求一点，使得函数 $u = x^2 + y^2 + z^2$ 在该点处沿方向 $l = (1, -1, 0)$ 的方向导数最大
     ],
     solution: [
       提示：由题意可知目标函数为 \
@@ -1305,7 +1305,7 @@
     kind: "choice",
     kind-title: [一、选择题（每小题4分，共20分）],
     stem: [
-      级数 $(sum_(n=1)^oo (-1)^(n-1))/(n + (-1)^(n-1))$ 是。
+      级数 $(sum_(n=1)^oo (-1)^(n-1))/(n + (-1)^(n-1))$ 是
     ],
     options: (
       [绝对收敛],
@@ -1318,7 +1318,7 @@
   (
     kind: "choice",
     stem: [
-      直线 $cases(x + 3y + 2z + 1 = 0, 4x - 2y + z - 2 = 0)$ 的位置关系是。
+      直线 $cases(x + 3y + 2z + 1 = 0, 4x - 2y + z - 2 = 0)$ 的位置关系是
     ],
     options: (
       [直线在平面内],
@@ -1331,7 +1331,7 @@
   (
     kind: "choice",
     stem: [
-      设 $L: 4 x^2 + y^2 = 1$，取正向，则 $(oint_L (-y dif x + x dif y))/(4x^2 + y^2)=$ 。
+      设 $L: 4 x^2 + y^2 = 1$，取正向，则 $(oint_L (-y dif x + x dif y))/(4x^2 + y^2)=$ 
     ],
     options: (
       [$-2 pi$],
@@ -1344,7 +1344,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) =(x y)/(x^2 + y^2)$，则 $lim_((x, y) arrow (0, 0)) f(x, y)$。
+      设函数 $f(x, y) =(x y)/(x^2 + y^2)$，则 $lim_((x, y) arrow (0, 0)) f(x, y)$
     ],
     options: (
       [不存在],
@@ -1357,7 +1357,7 @@
   (
     kind: "choice",
     stem: [
-      $int_0^2 dif x int_0^x f(x,y) dif y + int_2^(sqrt(8)) dif x int_0^(sqrt(8 - x^2))f(x,y) dif y$ 交换积分次序后为( ).
+      $int_0^2 dif x int_0^x f(x,y) dif y + int_2^(sqrt(8)) dif x int_0^(sqrt(8 - x^2))f(x,y) dif y$ 交换积分次序后为
     ],
     options: (
       [$int_0^2 dif y int_(sqrt(8 - y^2))^2 f(x,y) dif x$],
@@ -1486,7 +1486,7 @@
     kind: "compute",
     kind-title: [三、计算题（11~15 每小题7分，16~17 每小题9分，18小题7分，共60分）],
     stem: [
-      计算 $iint_D ee^(-x^2 - y^2) dif x dif y$ ，其中 $D$ 是由中心在坐标原点，半径为 $R$ 的圆所围成的闭区域。
+      计算 $iint_D ee^(-x^2 - y^2) dif x dif y$ ，其中 $D$ 是由中心在坐标原点，半径为 $R$ 的圆所围成的闭区域
     ],
     solution: [
       区域 $D$ 为圆盘 $x^2+y^2<=R^2$，改用极坐标 \
@@ -1502,7 +1502,7 @@
   (
     kind: "compute",
     stem: [
-      求过点 $M(2, 1, 3)$ 且与直线 $(x + 1)/(3)=(y - 1)/(2)=(z)/(-1)$ 垂直的直线方程。
+      求过点 $M(2, 1, 3)$ 且与直线 $(x + 1)/(3)=(y - 1)/(2)=(z)/(-1)$ 垂直的直线方程
     ],
     solution: [
       设已知直线为 \
@@ -1601,7 +1601,7 @@
       计算
           $iint_( Sigma ) x^3 dif y dif z + [((1)/(z)) f((y)/(z)) + y^3] dif z dif x + [((1)/(y)) f((y)/(z)) + z^3] dif x dif y$，
           其中 $f$ 具有一阶连续导数，$Sigma$ 为锥面 $x = sqrt(y^2 + z^2)$ 和
-          球面 $x^2 + y^2 + z^2 = 1$ 所围立体表面的外侧。
+          球面 $x^2 + y^2 + z^2 = 1$ 所围立体表面的外侧
     ],
     solution: [
       记向量场 \
@@ -1630,7 +1630,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $int_L (2 x y^3 - y^2 cos x) dif x + (1 - 2 y sin x + 3 x^2 y^2) dif y$ ，其中 $L$ 为抛物线 $2 x = pi y^2$ 上从点 $(0,0)$ 到点 $((pi)/(2), 1)$ 的一段弧。
+      计算 $int_L (2 x y^3 - y^2 cos x) dif x + (1 - 2 y sin x + 3 x^2 y^2) dif y$ ，其中 $L$ 为抛物线 $2 x = pi y^2$ 上从点 $(0,0)$ 到点 $((pi)/(2), 1)$ 的一段弧
     ],
     solution: [
       设 \
@@ -1654,7 +1654,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(x, y) = |x - y|g(x, y)$ ，其中函数 $g(x, y)$ 在点(0,0)的某邻域内连续，试问： $g(0,0)$ 为何值时， $f(x, y)$ 在点(0,0)处的两个偏导数均存在？ $g(0,0)$ 为何值时， $f(x, y)$ 在点(0,0)处可微分？
+      设函数 $f(x, y) = |x - y|g(x, y)$ ，其中函数 $g(x, y)$ 在点 $(0,0)$的某邻域内连续，试问： $g(0,0)$ 为何值时， $f(x, y)$ 在点 $(0,0)$处的两个偏导数均存在？ $g(0,0)$ 为何值时， $f(x, y)$ 在点 $(0,0)$处可微分？
     ],
     solution: [
       因 $f(0,0)=|0-0|g(0,0)=0$。 \

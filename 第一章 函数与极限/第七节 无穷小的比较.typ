@@ -56,7 +56,7 @@
     kind: "compute",
     stem: [
       设 $lim_(x -> -1) (x^3 - a x^2 - x + 4)/(x + 1) = l$（$l != oo$），
-      试求 $a$ 和 $l$ 的值。
+      试求 $a$ 和 $l$ 的值
     ],
     answer: [$a = 4$，$l = 10$],
     solution: [
@@ -68,7 +68,7 @@
   // ===== 三、证明题 =====
   (
     kind: "proof",
-    stem: [证明：当 $x -> 0$ 时，有 $sec x - 1 ~ x^2/2$。],
+    stem: [证明：当 $x -> 0$ 时，有 $sec x - 1 ~ x^2/2$],
     solution: [
       $lim_(x -> 0) (sec x - 1)/(x^2/2)
       = lim_(x -> 0) (1 - cos x)/(cos x dot x^2/2)$。

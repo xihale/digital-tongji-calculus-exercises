@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = cases(x sin 1/y + y sin 1/x & "if" x y != 0, 0 & "if" x y = 0)$ 则 $lim_((x, y) arrow (0, 0)) f(x, y) =$。
+      设函数 $f(x, y) = cases(x sin 1/y + y sin 1/x & "if" x y != 0, 0 & "if" x y = 0)$ 则 $lim_((x, y) arrow (0, 0)) f(x, y) =$
     ],
     options: (
       [不存在],
@@ -51,7 +51,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & "if" x^2 + y^2 != 0, 0 & "if" x^2 + y^2 = 0)$ 则 $f(x, y)$ 。 \
+      设函数 $f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & "if" x^2 + y^2 != 0, 0 & "if" x^2 + y^2 = 0)$ 则 $f(x, y)$  \
     ],
     options: (
       [处处连续],
@@ -137,7 +137,7 @@
         (1) $z = sqrt(1 - x^2 - y^2)$；
         (2) $z = ln (x + y)$；
         (3) $z =(1)/(ln (x + y))$；
-        (4) $z = ln (x y - 1)$。
+        (4) $z = ln (x y - 1)$
     ],
     solution: [
       (1) $x^2 + y^2 <= 1$（单位圆盘内部及边界）； \

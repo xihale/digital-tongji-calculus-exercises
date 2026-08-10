@@ -121,7 +121,7 @@
   ),
   (
     kind: "compute",
-    stem: [（附加题）利用定积分的定义计算 $integral_0^1 e^x dif x$。],
+    stem: [（附加题）利用定积分的定义计算 $integral_0^1 e^x dif x$],
     solution: [
       等分 $[0, 1]$：$Delta x = 1/n$，取 $xi_i = i/n$，
       积分和 $sum_(i=1)^n e^(i/n) · (1/n)
@@ -137,7 +137,7 @@
       （附加题）已知当 $a > 0$ 时，$a x^2 + b x + c >= 0$ 恒成立
       $arrow.l.r.double b^2 - 4 a c <= 0$。
       试用此结论证明：若 $f$ 在 $[0, 1]$ 上连续，则
-      $integral_0^1 f^2(x) dif x >= (integral_0^1 f(x) dif x)^2$。
+      $integral_0^1 f^2(x) dif x >= (integral_0^1 f(x) dif x)^2$
     ],
     solution: [
       对任意实数 $t$，有 $integral_0^1 (f(x) - t)^2 dif x >= 0$，即

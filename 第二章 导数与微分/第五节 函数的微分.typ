@@ -83,7 +83,7 @@
     kind: "compute",
     stem: [
       已知 $x = f'(t)$，$y = t f'(t) - f(t)$，设 $f''(t)$ 存在且不为零，
-      求 $y$ 对 $x$ 的微分。
+      求 $y$ 对 $x$ 的微分
     ],
     solution: [
       $dif x = f''(t) dif t$，$dif y = t f''(t) dif t$，故 $(dif y)/(dif x) = t$，
@@ -94,7 +94,7 @@
     kind: "compute",
     stem: [
       设函数 $y = y(x)$ 由方程 $y^2 f(x) + x f(y) = x^2$ 所确定，
-      其中 $f(x)$ 是 $x$ 的可微函数，试求 $dif y$。
+      其中 $f(x)$ 是 $x$ 的可微函数，试求 $dif y$
     ],
     solution: [
       两边求微分：
@@ -105,7 +105,7 @@
   ),
   (
     kind: "compute",
-    stem: [计算 $root(3, 996)$ 的近似值。],
+    stem: [计算 $root(3, 996)$ 的近似值],
     solution: [
       令 $f(x) = x^(1/3)$，在 $x = 1000$ 处：$f(1000) = 10$，
       $f'(x) = 1/(3 x^(2/3))$，$f'(1000) = 1/300$。

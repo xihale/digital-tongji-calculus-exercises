@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设 $L$ 为从点 $A(1, 0)$ 到点 $B(-1, 2)$ 的线段，则 $int_L (x + y) dif s =$。
+      设 $L$ 为从点 $A(1, 0)$ 到点 $B(-1, 2)$ 的线段，则 $int_L (x + y) dif s =$
     ],
     options: (
       [$sqrt(2)$],
@@ -27,7 +27,7 @@
   (
     kind: "choice",
     stem: [
-      $oint_L (x^2 + y^2) dif s =$，其中 $L$ 为圆 $x^2 + y^2 = 1$。
+      $oint_L (x^2 + y^2) dif s =$，其中 $L$ 为圆 $x^2 + y^2 = 1$
     ],
     options: (
       [$int_(2 pi)^0 dif theta$],
@@ -44,7 +44,7 @@
   (
     kind: "choice",
     stem: [
-      $int_L x dif s =$，其中 $L$ 为抛物线 $y = x^2$ 上相应于 $x$ 从 0 到 1 的一段弧。
+      $int_L x dif s =$，其中 $L$ 为抛物线 $y = x^2$ 上相应于 $x$ 从 0 到 1 的一段弧
     ],
     options: (
       [$(1)/(12 (5 sqrt(5) - 1))$],
@@ -61,7 +61,7 @@
   (
     kind: "choice",
     stem: [
-      设 $O M$ 为从点 $O(0, 0)$ 到点 $M(1, 1)$ 的线段，则与 $int_(O M) ee^(sqrt(x^2 + y^2)) dif s$ 不相等的积分是。
+      设 $O M$ 为从点 $O(0, 0)$ 到点 $M(1, 1)$ 的线段，则与 $int_(O M) ee^(sqrt(x^2 + y^2)) dif s$ 不相等的积分是
     ],
     options: (
       [$int_0^1 sqrt(2) ee^(sqrt(2) x) dif x$],
@@ -124,7 +124,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $int_L (2 x - y) dif s$，其中 $L$ 为联结点 $(0, 0), (1, 0), (0, 1)$ 的闭折线。
+      计算 $int_L (2 x - y) dif s$，其中 $L$ 为联结点 $(0, 0), (1, 0), (0, 1)$ 的闭折线
     ],
     solution: [
       $L_1: y=0, x in [0, 1], dif s = dif x$
@@ -139,7 +139,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $oint_L x dif s$，其中 $L$ 为由直线 $y = x$ 及抛物线 $y = x^2$ 所围成闭区域的整个边界。
+      计算 $oint_L x dif s$，其中 $L$ 为由直线 $y = x$ 及抛物线 $y = x^2$ 所围成闭区域的整个边界
     ],
     solution: [
       $L_1: y=x, x in [0, 1], dif s = sqrt(2) dif x$
@@ -152,7 +152,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $oint_L ee^(sqrt(x^2 + y^2)) dif s$，其中 $L$ 为圆 $x^2 + y^2 = a^2$，直线 $y = x$ 和 $x$ 轴在第一象限所围成扇形的整个边界。
+      计算 $oint_L ee^(sqrt(x^2 + y^2)) dif s$，其中 $L$ 为圆 $x^2 + y^2 = a^2$，直线 $y = x$ 和 $x$ 轴在第一象限所围成扇形的整个边界
     ],
     solution: [
       $L_1: y=0, x in [0, a], dif s = dif x$
@@ -167,7 +167,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $int_L x y z dif s$，其中 $L$ 为曲线弧 $x = t, y = 2/(3 sqrt(2) t^(3/2)), z = 1/(2 t^2)$ ($0 <= t <= 1$)。
+      计算 $int_L x y z dif s$，其中 $L$ 为曲线弧 $x = t, y = 2/(3 sqrt(2) t^(3/2)), z = 1/(2 t^2)$ ($0 <= t <= 1$)
     ],
     solution: [
       $ x=t, y=2/(3 sqrt(2) t^(3/2)), z=1/(2 t^2) $, $ dif s = sqrt(1 + 2t + t^2) dif t = (1+t) dif t $
@@ -177,7 +177,7 @@
   (
     kind: "compute",
     stem: [
-      （附加题）计算 $oint_L (2 y^2 + z^2) dif s$，其中 $L$ 为球面 $x^2 + y^2 + z^2 = a^2$ 与平面 $x = y$ 相交的圆。
+      （附加题）计算 $oint_L (2 y^2 + z^2) dif s$，其中 $L$ 为球面 $x^2 + y^2 + z^2 = a^2$ 与平面 $x = y$ 相交的圆
     ],
     solution: [
       在 $L$ 上 $x=y => 2y^2+z^2=x^2+y^2+z^2=a^2$。

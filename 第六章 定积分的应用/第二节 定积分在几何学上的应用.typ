@@ -57,7 +57,7 @@
   // ===== 二、计算题 =====
   (
     kind: "compute",
-    stem: [求由曲线 $y = 1/x$ 和直线 $y = x$ 及 $x = 2$ 所围成图形的面积。],
+    stem: [求由曲线 $y = 1/x$ 和直线 $y = x$ 及 $x = 2$ 所围成图形的面积],
     solution: [
       曲线交于 $x = 1$。在 $[1, 2]$ 上上方函数为 $y = x$。
       面积 $S = integral_1^2 (x - 1/x) dif x = [x^2/2 - ln x]_1^2 = 3/2 - ln 2$。
@@ -65,14 +65,14 @@
   ),
   (
     kind: "compute",
-    stem: [求由曲线 $y = e^x$ 及 $y = e^(-x)$ 与直线 $x = 1$ 所围成图形的面积。],
+    stem: [求由曲线 $y = e^x$ 及 $y = e^(-x)$ 与直线 $x = 1$ 所围成图形的面积],
     solution: [
       两曲线交于 $x = 0$。面积 $S = integral_0^1 (e^x - e^(-x)) dif x = [e^x + e^(-x)]_0^1 = e + 1/e - 2$。
     ],
   ),
   (
     kind: "compute",
-    stem: [求由抛物线 $y^2 = 2 p x$ 及其在点 $(p/2, p)$ 处的法线所围成图形的面积。],
+    stem: [求由抛物线 $y^2 = 2 p x$ 及其在点 $(p/2, p)$ 处的法线所围成图形的面积],
     solution: [
       法线方程：$y = -x + 3p/2$，与抛物线除给定点外再交于 $(9p/2, -3p)$。
       采用横条法：$S = integral_(-3p)^p [(3p/2 - y) - y^2/(2p)] dif y = (16/3) p^2$。
@@ -82,7 +82,7 @@
     kind: "compute",
     stem: [
       求由摆线 $x = a(t - sin t)$，$y = a(1 - cos t)$（$0 <= t <= pi$）
-      的一拱与 $x$ 轴所围成图形的面积。
+      的一拱与 $x$ 轴所围成图形的面积
     ],
     solution: [
       参数面积公式 $S = integral y x'(t) dif t$，其中 $x'(t) = a(1 - cos t)$。
@@ -93,7 +93,7 @@
     kind: "compute",
     stem: [
       由曲线 $y = x^3$ 与直线 $x = 2$ 及 $y = 0$ 所围成的图形分别绕 $x$ 轴及 $y$ 轴旋转一周，
-      计算所得两个旋转体的体积。
+      计算所得两个旋转体的体积
     ],
     solution-parts: (
       [绕 $x$ 轴：$V_x = pi integral_0^2 (x^3)^2 dif x = (128 pi)/7$。],
@@ -102,7 +102,7 @@
   ),
   (
     kind: "compute",
-    stem: [由曲线 $y = x^2$ 及 $y^2 = x$ 所围成的图形绕 $y$ 轴旋转一周，计算所得旋转体的体积。],
+    stem: [由曲线 $y = x^2$ 及 $y^2 = x$ 所围成的图形绕 $y$ 轴旋转一周，计算所得旋转体的体积],
     solution: [
       对 $0 <= y <= 1$，外半径 $r_o = sqrt(y)$，内半径 $r_i = y^2$。
       $V = pi integral_0^1 (r_o^2 - r_i^2) dif y = pi integral_0^1 (y - y^4) dif y = 3 pi/10$。
@@ -110,7 +110,7 @@
   ),
   (
     kind: "compute",
-    stem: [计算曲线 $y = ln x$ 上相应于 $sqrt(3) <= x <= sqrt(8)$ 的一段弧的长度。],
+    stem: [计算曲线 $y = ln x$ 上相应于 $sqrt(3) <= x <= sqrt(8)$ 的一段弧的长度],
     solution: [
       弧长 $L = integral_(sqrt(3))^(sqrt(8)) sqrt(x^2 + 1)/x dif x$。
       化简为 $L = [sqrt(x^2 + 1) + ln (x /(sqrt(x^2 + 1) + 1))]_(sqrt(3))^(sqrt(8)) = 1 + 1/2 ln 3/2$。
@@ -120,7 +120,7 @@
     kind: "compute",
     stem: [
       （附加题）由圆 $x^2 + (y - 1)^2 = 1$ 所围成的图形分别绕 $x$ 轴和 $y$ 轴旋转一周，
-      计算所得旋转体的体积。
+      计算所得旋转体的体积
     ],
     solution-parts: (
       [圆盘面积为 $pi$，质心距 $x$ 轴的距离为 1；绕 $x$ 轴旋转得圆环体：$V_x = pi · 2 pi = 2 pi^2$。],

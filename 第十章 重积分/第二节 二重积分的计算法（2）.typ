@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设闭区域 $D$ 关于直线 $y = x$ 对称，则有 $iint_D f(x, y) dif sigma = iint_D f(y, x) dif sigma$。用此结论可得 $iint_(x^2 + y^2 <= 2) (x^2 + y^2/4) dif sigma =$。
+      设闭区域 $D$ 关于直线 $y = x$ 对称，则有 $iint_D f(x, y) dif sigma = iint_D f(y, x) dif sigma$。用此结论可得 $iint_(x^2 + y^2 <= 2) (x^2 + y^2/4) dif sigma =$
     ],
     options: (
       [$pi$],
@@ -94,7 +94,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $iint_D x y^2 dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4$ 及 $y$ 轴所围成的右半闭区域。
+      计算 $iint_D x y^2 dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4$ 及 $y$ 轴所围成的右半闭区域
     ],
     solution: [
       $64/15$
@@ -105,7 +105,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D |1 - x^2 - y^2| dif sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= 4}$。
+      计算 $iint_D |1 - x^2 - y^2| dif sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= 4}$
     ],
     solution: [
       $5 pi$
@@ -116,7 +116,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_D y/x dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4, x^2 + y^2 = 1$ 及直线 $y = 0, y = x$ 所围成的在第一象限的闭区域。
+      计算 $iint_D y/x dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4, x^2 + y^2 = 1$ 及直线 $y = 0, y = x$ 所围成的在第一象限的闭区域
     ],
     solution: [
       $3/4 ln 2$
@@ -132,7 +132,7 @@
   (
     kind: "compute",
     stem: [
-      （附加题）计算 $iint_D (x + y) dif sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= x + y}$。
+      （附加题）计算 $iint_D (x + y) dif sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= x + y}$
     ],
     solution: [
       $pi/2$

@@ -104,7 +104,7 @@
         x sin 1/x & x != 0,
         0 & x = 0,
       )$
-      在点 $x = 0$ 处的连续性与可导性。
+      在点 $x = 0$ 处的连续性与可导性
     ],
     solution: [
       连续性：$lim_(x -> 0) x sin 1/x = 0 = f(0)$，故连续。
@@ -113,7 +113,7 @@
   ),
   (
     kind: "compute",
-    stem: [求函数 $y = arctan((1 + x)/(1 - x))$ 的导数。],
+    stem: [求函数 $y = arctan((1 + x)/(1 - x))$ 的导数],
     solution: [
       $y' = 1/(1 + ((1+x)/(1-x))^2) · 2/(1-x)^2
       = 2/((1-x)^2 + (1+x)^2) = 2/(2 + 2 x^2) = 1/(1 + x^2)$。
@@ -121,7 +121,7 @@
   ),
   (
     kind: "compute",
-    stem: [求函数 $y = cos^2 x ln x$ 的二阶导数。],
+    stem: [求函数 $y = cos^2 x ln x$ 的二阶导数],
     solution: [
       $y' = -sin 2 x ln x + cos^2 x / x$，
       $y'' = -2 cos 2 x ln x - (sin 2 x)/x
@@ -131,7 +131,7 @@
   ),
   (
     kind: "compute",
-    stem: [设函数 $y = y(x)$ 由方程 $e^y + x y = e$ 所确定，求 $y''(0)$。],
+    stem: [设函数 $y = y(x)$ 由方程 $e^y + x y = e$ 所确定，求 $y''(0)$],
     solution: [
       当 $x = 0$ 时 $e^y = e$，得 $y(0) = 1$。
       求导得 $y' = -y/(e^y + x)$，故 $y'(0) = -1/e$。
@@ -142,7 +142,7 @@
     kind: "compute",
     stem: [
       求由参数方程 $x = ln sqrt(1 + t^2)$，$y = arctan t$ 所确定的函数的一阶导数
-      $(dif y)/(dif x)$ 及二阶导数 $(dif^2 y)/(dif x^2)$。
+      $(dif y)/(dif x)$ 及二阶导数 $(dif^2 y)/(dif x^2)$
     ],
     solution: [
       $(dif x)/(dif t) = t/(1 + t^2)$，$(dif y)/(dif t) = 1/(1 + t^2)$，

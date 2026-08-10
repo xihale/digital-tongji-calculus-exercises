@@ -99,7 +99,7 @@
       （附加题）证明：若 $f$ 在 $(-oo, +oo)$ 上连续，且
       $integral_(-oo)^(+oo) f(x) dif x$ 收敛，则对任意 $x in RR$，
       $(dif)/(dif x) integral_(-oo)^x f(t) dif t = f(x)$，
-      $(dif)/(dif x) integral_x^(+oo) f(t) dif t = -f(x)$。
+      $(dif)/(dif x) integral_x^(+oo) f(t) dif t = -f(x)$
     ],
     solution: [
       因积分收敛，可写 $F(x) = integral_(-oo)^x f(t) dif t

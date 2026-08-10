@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $u = arctan y/x$，则 $(pd u)/(pd x)=$ 。
+      设函数 $u = arctan y/x$，则 $(pd u)/(pd x)=$ 
     ],
     options: (
       [$(x)/(x^2 + y^2)$],
@@ -27,7 +27,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $f(x, y) = sqrt((y)/(x))$，则 $f_x'(2, 1) =$。
+      设函数 $f(x, y) = sqrt((y)/(x))$，则 $f_x'(2, 1) =$
     ],
     options: (
       [$-(sqrt(2))/(8)$],
@@ -43,7 +43,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $z = y^x$，则 $((pd z)/(pd x)+(pd z)/(pd y)) |_(x=2, y=1) =$ 。
+      设函数 $z = y^x$，则 $((pd z)/(pd x)+(pd z)/(pd y)) |_(x=2, y=1) =$ 
     ],
     options: (
       [2],
@@ -100,7 +100,7 @@
       (1) $z = sqrt(ln(x y))$； \
       (2) $z = (1 + x y )^y$； \
       (3) $u = x^((y)/(z))$； \
-      (4) $u = (x - y)^z$。
+      (4) $u = (x - y)^z$
     ],
     solution: [
       (1) $(pd z)/(pd x)=(1)/(2x sqrt(ln(x y))),(pd z)/(pd y)=(1)/(2y sqrt(ln(x y)))$； \
@@ -114,7 +114,7 @@
     stem: [
       求下列函数的二阶偏导数 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$： \
       (1) $z = arctan y/x$； \
-      (2) $z = y^x$。
+      (2) $z = y^x$
     ],
     solution: [
       (1) $(pd^2 z)/(pd x^2)=(2 x y )/((x^2 + y^2)^2),(pd^2 z)/(pd y^2)= -(2 x y )/((x^2 + y^2)^2),(pd^2 z)/(pd x pd y)=(y^2 - x^2)/((x^2 + y^2)^2)$； \
@@ -125,7 +125,7 @@
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = z$。
+      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = z$
     ],
     solution: [
       设 $phi(x, y)=-((1)/(x)+(1)/(y))$，则 $z=ee^(phi)$。 \

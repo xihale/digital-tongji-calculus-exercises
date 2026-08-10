@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      $iint_D f(x, y) dif sigma = lim_(lambda arrow 0) sum_(i=1)^n f(xi_i, eta_i) Delta sigma_i$ 中 $lambda$ 是。
+      $iint_D f(x, y) dif sigma = lim_(lambda arrow 0) sum_(i=1)^n f(xi_i, eta_i) Delta sigma_i$ 中 $lambda$ 是
     ],
     options: (
       [最大小区间长度],
@@ -27,7 +27,7 @@
   (
     kind: "choice",
     stem: [
-      能使得等式 $iint_D dif sigma = 1$ 成立的积分区域 $D$ 为。
+      能使得等式 $iint_D dif sigma = 1$ 成立的积分区域 $D$ 为
     ],
     options: (
       [由直线 $y = x, x = 1, y = 0$ 所围成的平面区域],
@@ -48,7 +48,7 @@
   (
     kind: "choice",
     stem: [
-      设 $D$ 是由直线 $x = 0, y = 0, x + y = 3, x + y = 5$ 所围成的闭区域，记 $I_1 = iint_D ln(x + y) dif sigma, I_2 = iint_D ln^2(x + y) dif sigma$，则。
+      设 $D$ 是由直线 $x = 0, y = 0, x + y = 3, x + y = 5$ 所围成的闭区域，记 $I_1 = iint_D ln(x + y) dif sigma, I_2 = iint_D ln^2(x + y) dif sigma$，则
     ],
     options: (
       [$I_1 < I_2$],
@@ -110,7 +110,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      利用二重积分的性质估计二重积分 $I = iint_D (x^2 + y^2 + 2) dif sigma$ 的值，其中积分区域 $D = {(x, y) | |x| + |y| <= 1}$。
+      利用二重积分的性质估计二重积分 $I = iint_D (x^2 + y^2 + 2) dif sigma$ 的值，其中积分区域 $D = {(x, y) | |x| + |y| <= 1}$
     ],
     solution: [
       $4 < I < 6$

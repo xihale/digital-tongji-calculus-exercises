@@ -96,7 +96,7 @@
   ),
   (
     kind: "compute",
-    stem: [（附加题）试用两种方法计算不定积分 $integral (dif x)/(sin 2x + 2 sin x)$。],
+    stem: [（附加题）试用两种方法计算不定积分 $integral (dif x)/(sin 2x + 2 sin x)$],
     solution: [
       方法一：原式 $= integral dif x/(2 sin x (1 + cos x))$。
       用半角公式 $sin x = 2 sin x/2 cos x/2$，$1+cos x = 2 cos^2 x/2$，

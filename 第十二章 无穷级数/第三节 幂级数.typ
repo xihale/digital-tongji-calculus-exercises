@@ -10,7 +10,7 @@
     kind: "judge",
     kind-title: [一、判断题],
     stem: [
-      若幂级数 $sum_(n=1)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则在点 $x = 2$ 处必收敛。
+      若幂级数 $sum_(n=1)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则在点 $x = 2$ 处必收敛
     ],
     answer: [√],
     solution: [
@@ -20,7 +20,7 @@
   (
     kind: "judge",
     stem: [
-      已知幂级数 $sum_(n=1)^oo a_n x^n$ 的收敛半径为 $R$，则幂级数 $sum_(n=1)^oo a_n (1)/(2^n) x^(2n+1)$ 的收敛半径为 $sqrt(R)$。
+      已知幂级数 $sum_(n=1)^oo a_n x^n$ 的收敛半径为 $R$，则幂级数 $sum_(n=1)^oo a_n (1)/(2^n) x^(2n+1)$ 的收敛半径为 $sqrt(R)$
     ],
     answer: [√],
     solution: [
@@ -30,7 +30,7 @@
   (
     kind: "judge",
     stem: [
-      幂级数 $sum_(n=1)^oo a_n x^n$ 和 $sum_(n=1)^oo b_n x^n$ 的收敛半径分别为 $R_a, R_b$，则幂级数 $sum_(n=1)^oo (a_n + b_n) x^n$ 的收敛半径为 $R = min(R_a, R_b)$。
+      幂级数 $sum_(n=1)^oo a_n x^n$ 和 $sum_(n=1)^oo b_n x^n$ 的收敛半径分别为 $R_a, R_b$，则幂级数 $sum_(n=1)^oo (a_n + b_n) x^n$ 的收敛半径为 $R = min(R_a, R_b)$
     ],
     answer: [×],
     solution: [
@@ -41,7 +41,7 @@
     kind: "choice",
     kind-title: [二、选择题],
     stem: [
-      设幂级数 $(sum_(n=0)^oo (a^n - b^n))/((a^n + b^n) x^n)$ ($0 < a < b$)，则幂级数的收敛半径 $R$ 为。
+      设幂级数 $(sum_(n=0)^oo (a^n - b^n))/((a^n + b^n) x^n)$ ($0 < a < b$)，则幂级数的收敛半径 $R$ 为
     ],
     options: (
       [$b$],
@@ -61,7 +61,7 @@
   (
     kind: "choice",
     stem: [
-      当常数 $p > 0$ 时，幂级数 $sum_(n=1)^oo (((-1)^(n-1))/(n^p)) x^n$ 在其收敛区间的右端点处。
+      当常数 $p > 0$ 时，幂级数 $sum_(n=1)^oo (((-1)^(n-1))/(n^p)) x^n$ 在其收敛区间的右端点处
     ],
     options: (
       [条件收敛],
@@ -130,7 +130,7 @@
       求下列幂级数的收敛区间： \
           (1) $1 - x +(x^2)/(2^2)- dots +((-1)^n x^n)/(n^2)+ dots$； \
           (2) $(sum_(n=1)^oo (-1)^n x^(2n+1))/(2n+1)$； \
-          (3) $(sum_(n=1)^oo (x-5)^n)/(sqrt(n))$。
+          (3) $(sum_(n=1)^oo (x-5)^n)/(sqrt(n))$
     ],
     solution: [
       (1) 级数 $(sum (-1)^n x^n)/(n^2)$。 \
@@ -159,7 +159,7 @@
       利用逐项求导或逐项积分，求下列幂级数的和函数： \
           (1) $sum_(n=1)^oo n x^(n-1)$； \
           (2) $(sum_(n=0)^oo x^(4n+1))/(4n+1)$； \
-          (3) $sum_(n=1)^oo (n+2) x^(n+3)$。
+          (3) $sum_(n=1)^oo (n+2) x^(n+3)$
     ],
     solution: [
       (1) 由 \

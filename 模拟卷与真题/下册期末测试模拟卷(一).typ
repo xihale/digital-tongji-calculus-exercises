@@ -141,7 +141,7 @@
     kind-title: [三、计算题（11～12每小题6分，13～17每小题7分，18小题8分，19小题10分，20小题5分，共70分）],
     stem: [
       设函数 $z = f(x, y)$ 的全微分为 $dif z = (4 - 2x) dif x - (2y + 4) dif y$，
-      试确定 $f(x, y)$ 的极值点，并判别该点是极大值点还是极小值点。
+      试确定 $f(x, y)$ 的极值点，并判别该点是极大值点还是极小值点
     ],
     solution: [
       由 $f'_x = 4-2x$，$f'_y = -2y-4$，令二者为 0 得驻点 $(2, -2)$。
@@ -153,7 +153,7 @@
     kind: "compute",
     stem: [
       计算 $iint_D cos x/y dif x dif y$，其中 $D$ 为由直线 $x = 0$，$y = pi/2$，$y = pi$
-      及抛物线 $x = y^2$ 所围成的平面区域。
+      及抛物线 $x = y^2$ 所围成的平面区域
     ],
     solution: [
       $I = integral_(pi/2)^pi dif y integral_0^(y^2) cos x/y dif x
@@ -162,7 +162,7 @@
   ),
   (
     kind: "compute",
-    stem: [设函数 $z = f(x/y, y/x)$，其中 $f$ 具有一阶连续偏导数，求 $dif z$。],
+    stem: [设函数 $z = f(x/y, y/x)$，其中 $f$ 具有一阶连续偏导数，求 $dif z$],
     solution: [
       记 $f'_1 = partial f \/ partial u$，$f'_2 = partial f \/ partial v$（$u=x/y$，$v=y/x$），则
       $(pd z)/(pd x) = (1/y) f'_1 - (y/x^2) f'_2$，
@@ -173,7 +173,7 @@
   (
     kind: "compute",
     stem: [
-      求曲线 $cases(x^2 + 2 y^2 + z^2 = 10, x - y + z = 0)$ 在点 $(1, 2, 1)$ 处的切线方程。
+      求曲线 $cases(x^2 + 2 y^2 + z^2 = 10, x - y + z = 0)$ 在点 $(1, 2, 1)$ 处的切线方程
     ],
     solution: [
       $grad F = (2x, 4y, 2z)$，$grad G = (1, -1, 1)$；
@@ -186,7 +186,7 @@
     kind: "compute",
     stem: [
       设函数 $f(u)$ 具有一阶连续导数，且 $f(0) = 0$，$f'(0) = 1$，求
-      $lim_(t -> 0^+) 1/t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y$。
+      $lim_(t -> 0^+) 1/t^3 iint_(x^2 + y^2 <= t^2) f(sqrt(x^2 + y^2)) dif x dif y$
     ],
     solution: [
       极坐标：$lim_(t->0^+) (2 pi integral_0^t f(rho) rho dif rho)/t^3
@@ -195,7 +195,7 @@
   ),
   (
     kind: "compute",
-    stem: [计算 $oint_L (y^2 + x) dif s$，其中 $L$ 为圆 $x^2 + y^2 = 4$。],
+    stem: [计算 $oint_L (y^2 + x) dif s$，其中 $L$ 为圆 $x^2 + y^2 = 4$],
     solution: [
       参数 $x=2 cos theta$，$y=2 sin theta$，$dif s = 2 dif theta$，
       $oint = integral_0^(2 pi) (4 sin^2 theta + 2 cos theta) · 2 dif theta = 8 pi$；
@@ -204,7 +204,7 @@
   ),
   (
     kind: "compute",
-    stem: [将函数 $f(x) = 1/(x^2 + 4x + 3)$ 展开成 $(x - 1)$ 的幂级数。],
+    stem: [将函数 $f(x) = 1/(x^2 + 4x + 3)$ 展开成 $(x - 1)$ 的幂级数],
     solution: [
       $f(x) = 1/((x+1)(x+3)) = 1/(2(1+x)) - 1/(2(3+x))$
       $= 1/(4(1+(x-1)/2)) - 1/(8(1+(x-1)/4))$。
@@ -217,7 +217,7 @@
     stem: [
       设函数 $f(x)$ 在区间 $(-oo, +oo)$ 上具有连续导数，$L$ 是上半平面 $(y > 0)$ 内以点 $(a, b)$ 为起点、
       点 $(c, d)$ 为终点的有向分段光滑曲线，记
-      $I = integral_L [1/y + y f(x y)] dif x + [x f(x y) - x/y^2] dif y$。
+      $I = integral_L [1/y + y f(x y)] dif x + [x f(x y) - x/y^2] dif y$
     ],
     parts: (
       [证明：曲线积分 $I$ 与路径 $L$ 无关；],
@@ -240,7 +240,7 @@
     kind: "compute",
     stem: [
       计算 $I = iint_Sigma [f_y (x, y) + x^3] dif y dif z + [y^3 - f_x (x, y)] dif z dif x + z^3 dif x dif y$，
-      其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$（$0 <= z <= 1$）的下侧。
+      其中 $f(x, y)$ 具有二阶连续偏导数，$Sigma$ 为锥面 $z = sqrt(x^2 + y^2)$（$0 <= z <= 1$）的下侧
     ],
     solution: [
       取辅助面 $Sigma_1: z=1$（$x^2+y^2<=1$）上侧，与锥面 $Sigma$（下侧）围成
@@ -256,7 +256,7 @@
     stem: [
       设幂级数 $sum_(n=0)^oo a_n x^n$ 在 $(-oo, +oo)$ 上收敛，且
       $a_0 = 0$，$a_1 = 1$，$a_2 = 0$，$a_(n+2) = 2/((n+1)) a_n$（$n = 0, 1, 2, dots$），
-      求该级数的和函数 $S(x)$。
+      求该级数的和函数 $S(x)$
     ],
     solution: [
       偶项全为 0；$a_(2n+1) = 1/n!$（$n = 0, 1, 2, dots$），

@@ -71,7 +71,7 @@
   (
     kind: "compute",
     stem: [
-      一曲线过点 $(e^2, 3)$，且该曲线在任一点处的切线斜率等于该点横坐标的倒数，求该曲线的方程。
+      一曲线过点 $(e^2, 3)$，且该曲线在任一点处的切线斜率等于该点横坐标的倒数，求该曲线的方程
     ],
     solution: [
       $y' = 1/x$，故 $y = integral 1/x dif x = ln|x| + C$。
@@ -82,7 +82,7 @@
   (
     kind: "compute",
     stem: [
-      已知函数 $F(x)$ 的导函数为 $1/sqrt(1 - x^2)$，且当 $x = 1$ 时函数值为 $3pi/2$，试求此函数。
+      已知函数 $F(x)$ 的导函数为 $1/sqrt(1 - x^2)$，且当 $x = 1$ 时函数值为 $3pi/2$，试求此函数
     ],
     solution: [
       $F(x) = arcsin x + C$。由 $F(1) = 3pi/2$：$pi/2 + C = 3pi/2$，得 $C = pi$。
@@ -95,7 +95,7 @@
     kind: "proof",
     stem: [
       证明：$arcsin(2x - 1)$，$arccos(1 - 2x)$ 和 $2 arctan sqrt(x/(1 - x))$
-      都是 $1/sqrt(x - x^2)$ 的原函数。
+      都是 $1/sqrt(x - x^2)$ 的原函数
     ],
     solution: [
       逐一求导验证：

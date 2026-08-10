@@ -8,8 +8,9 @@
 
 #import "style.typ": *
 #import "ui.typ": *
-// 供题干内嵌空：#import "…/render.typ": book-section, blank
+// 供题干内嵌空：#import "…/render.typ": book-section, blank, judge-blank
 #let blank = blank
+#let judge-blank = judge-blank
 
 // 题型显示名（序号按本节首次出现顺序自动编：一、二、三…）
 #let kind-names = (
@@ -73,12 +74,48 @@
   }
 
   if p.kind == "choice" or p.kind == "judge" {
+    // 判断：answer 单空；answers 多空（「；」分隔语义）
+    // 多空可在题干用 #judge-blank() 内嵌；未写则题末自动补括号。
+    let judge-ans-list = if p.kind == "judge" {
+      if "answers" in p {
+        p.answers
+      } else if "answer" in p {
+        (p.answer,)
+      } else {
+        ()
+      }
+    } else {
+      ()
+    }
     problem(
       num,
       {
+        if p.kind == "judge" and judge-ans-list.len() > 0 {
+          blank-answers.update(judge-ans-list)
+          blank-counter.update(0)
+        }
         p.stem
-        if "answer" in p { choice-mark(p.answer) }
-        if p.kind == "choice" or p.kind == "judge" [。]
+        if p.kind == "choice" {
+          if "answer" in p { choice-mark(p.answer) }
+        } else if p.kind == "judge" {
+          if "answers" in p {
+            context {
+              let used = blank-counter.get().first()
+              let n = judge-ans-list.len()
+              if n > 0 and used < n {
+                if used == 0 {
+                  choice-marks(judge-ans-list)
+                } else {
+                  choice-marks(judge-ans-list.slice(used))
+                }
+              }
+            }
+          } else if "answer" in p {
+            choice-mark(p.answer)
+          }
+        }
+        // 选择/判断：只贴（　），括号后不加句号。
+        // 题干本身勿再写句号。
       },
       extras: {
         fig
@@ -108,6 +145,7 @@
         p.stem
         // 题干内未写 #blank()：空位贴在末尾；
         // 若已写部分 #blank() 但仍少于答案数：剩余空位补在末尾。
+        // 若既无 answer/answers 也未写 #blank()：仍画一个空位（避免「填空题无空」）。
         if not has-parts {
           context {
             let used = blank-counter.get().first()
@@ -118,9 +156,11 @@
               } else {
                 blank-marks(ans-list.slice(used))
               }
+            } else if n == 0 and used == 0 {
+              blank-mark([])
             }
           }
-          [。]
+          // 填空题空位后不加句号
         }
       },
       extras: {
@@ -222,8 +262,19 @@
     if p.kind == "spacer" { continue }
     num += 1
     if not problem-has-answer(p) { continue }
-    let ans = if p.kind == "choice" or p.kind == "judge" {
+    let ans = if p.kind == "choice" {
       text(fill: answer-color, weight: "bold")[#p.answer]
+    } else if p.kind == "judge" {
+      if "answers" in p {
+        {
+          for (i, a) in p.answers.enumerate() {
+            if i > 0 [；]
+            text(fill: answer-color, weight: "bold")[#a]
+          }
+        }
+      } else {
+        text(fill: answer-color, weight: "bold")[#p.answer]
+      }
     } else if p.kind == "blank" {
       if "answers" in p {
         blank-marks(p.answers)

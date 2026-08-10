@@ -208,7 +208,7 @@
   (
     kind: "compute",
     kind-title: [三、计算题（每小题7分，共35分）],
-    stem: [已知连续函数 $f(x) = integral_0^(3x) f(t/3) dif t + e^(2x)$，求 $f(x)$。],
+    stem: [已知连续函数 $f(x) = integral_0^(3x) f(t/3) dif t + e^(2x)$，求 $f(x)$],
     solution: [
       求导得 $f'(x) = 3 f(x) + 2 e^(2x)$，即 $f' - 3f = 2 e^(2x)$。
       积分因子 $e^(-3x)$，得 $f(x) = 3 e^(3x) - 2 e^(2x)$（由 $f(0)=1$ 定常数）。
@@ -218,7 +218,7 @@
     kind: "compute",
     stem: [
       已知 $f(pi) = 1$，函数 $f(x)$ 二阶连续可微，且
-      $integral_0^pi [f(x) + f''(x)] sin x dif x = 3$，求 $f(0)$。
+      $integral_0^pi [f(x) + f''(x)] sin x dif x = 3$，求 $f(0)$
     ],
     solution: [
       因 $(dif)/(dif x)(f' sin x - f cos x) = (f''+f)sin x$，
@@ -229,7 +229,7 @@
     kind: "compute",
     stem: [
       求微分方程 $y'' - y' = 4x e^x$ 满足初值条件
-      $y|_(x=0) = 0$，$y'|_(x=0) = 1$ 的特解。
+      $y|_(x=0) = 0$，$y'|_(x=0) = 1$ 的特解
     ],
     solution: [
       齐次通解 $C_1 + C_2 e^x$；特解 $(2x^2 - 4x)e^x$。
@@ -241,7 +241,7 @@
     kind: "compute",
     stem: [
       设函数 $y = y(x)$ 由方程 $x^4 - x y - y e^x = 1$ 所确定，
-      求 $(dif^2 y)/(dif x^2)|_(x=0)$。
+      求 $(dif^2 y)/(dif x^2)|_(x=0)$
     ],
     solution: [
       $x=0$ 时 $y=-1$。$y' = (4x^3 - y(1+e^x))/(x+e^x)$，$y'(0)=2$。
@@ -250,7 +250,7 @@
   ),
   (
     kind: "compute",
-    stem: [求 $integral_(sqrt(2)/2)^1 (sqrt(1 - x^2))/(x^2) dif x$。],
+    stem: [求 $integral_(sqrt(2)/2)^1 (sqrt(1 - x^2))/(x^2) dif x$],
     solution: [
       三角代换得原函数 $-sqrt(1-x^2)/x - arcsin x$，
       定积分值为 $1 - pi/4$。
@@ -263,7 +263,7 @@
     kind-title: [四、应用题（10分）],
     stem: [
       如图 2 所示，由抛物线 $y = 2x^2$ 与直线 $x = a$、$x = 2$ 及 $y = 0$ 所围成的平面图形为 $D_1$，
-      由抛物线 $y = 2x^2$ 与直线 $x = a$ 及 $y = 0$ 所围成的平面图形为 $D_2$，其中 $0 < a < 2$。
+      由抛物线 $y = 2x^2$ 与直线 $x = a$ 及 $y = 0$ 所围成的平面图形为 $D_2$，其中 $0 < a < 2$
     ],
     figure: fig-parabola-region(),
     figure-caption: [图2],
@@ -289,7 +289,7 @@
     stem: [
       设函数 $f(x)$ 在区间 $[a, b]$ 上连续，在 $(a, b)$ 内可导，又 $f'(x) > 0$，
       且极限 $lim_(x -> a^+) (f(2x - a))/(x - a)$ 存在，证明：在 $(a, b)$ 内存在一点 $xi$，使得
-      $(b^2 - a^2)/(integral_a^b f(x) dif x) = (2 xi)/f(xi)$。
+      $(b^2 - a^2)/(integral_a^b f(x) dif x) = (2 xi)/f(xi)$
     ],
     solution: [
       由 $f'>0$ 知 $f$ 严格增且 $integral_a^b f > 0$。
@@ -299,7 +299,7 @@
   ),
   (
     kind: "proof",
-    stem: [证明：当 $x > 0$ 时，$x/(1 + x) < ln(1 + x) < x$。],
+    stem: [证明：当 $x > 0$ 时，$x/(1 + x) < ln(1 + x) < x$],
     solution: [
       令 $f(x)=x-ln(1+x)$，$f(0)=0$，$f'(x)=x/(1+x)>0$，故 $ln(1+x)<x$。
       令 $g(x)=ln(1+x)-x/(1+x)$，$g(0)=0$，$g'(x)=x/(1+x)^2>0$，故 $x/(1+x)<ln(1+x)$。

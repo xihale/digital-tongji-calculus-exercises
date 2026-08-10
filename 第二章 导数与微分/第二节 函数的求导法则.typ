@@ -43,7 +43,7 @@
   ),
   (
     kind: "compute",
-    stem: [求函数 $f(x) = 3/(5 - x) + x^2/5$ 在点 $x = 0$ 和点 $x = 2$ 处的导数。],
+    stem: [求函数 $f(x) = 3/(5 - x) + x^2/5$ 在点 $x = 0$ 和点 $x = 2$ 处的导数],
     solution: [
       $f'(x) = 3/(5 - x)^2 + 2 x/5$。
       故 $f'(0) = 3/25$，$f'(2) = 1/3 + 4/5 = 17/15$。
@@ -77,7 +77,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(x)$ 可导，求函数 $y = f(sin^2 x) + f(cos^2 x)$ 的导数 $(dif y)/(dif x)$。
+      设函数 $f(x)$ 可导，求函数 $y = f(sin^2 x) + f(cos^2 x)$ 的导数 $(dif y)/(dif x)$
     ],
     solution: [
       $(dif y)/(dif x) = f'(sin^2 x) · 2 sin x cos x + f'(cos^2 x) · (-2 cos x sin x)$
@@ -92,7 +92,7 @@
       设函数 $f(x)$ 满足：
       （1）$f(x + y) = f(x) f(y)$，$forall x, y in RR$；
       （2）$f(x) = 1 + x g(x)$，且 $lim_(x -> 0) g(x) = 1$。
-      试证：$f(x)$ 在 $RR$ 上处处可导，且 $f'(x) = f(x)$。
+      试证：$f(x)$ 在 $RR$ 上处处可导，且 $f'(x) = f(x)$
     ],
     solution: [
       由（2）得 $f(0) = 1$。对任意 $x in RR$，

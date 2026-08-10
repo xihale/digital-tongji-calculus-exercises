@@ -65,7 +65,7 @@
     kind: "compute",
     stem: [
       函数 $y = x cos x$ 在区间 $(-oo, +oo)$ 上是否有界？
-      这个函数是否为 $x -> +oo$ 时的无穷大？为什么。
+      这个函数是否为 $x -> +oo$ 时的无穷大？为什么
     ],
     solution: [
       无界：取 $x_n = 2 n pi$，则 $y(x_n) = 2 n pi -> +oo$。

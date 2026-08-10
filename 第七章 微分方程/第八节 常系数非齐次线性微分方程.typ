@@ -78,7 +78,7 @@
   // ===== 三、应用题 =====
   (
     kind: "short",
-    stem: [大炮以仰角 $alpha$、初速度 $v_0$ 发射炮弹，若不计空气阻力，求弹道曲线。],
+    stem: [大炮以仰角 $alpha$、初速度 $v_0$ 发射炮弹，若不计空气阻力，求弹道曲线],
     solution: [
       $x = v_0 cos alpha thin t$，$y = v_0 sin alpha thin t - (1/2) g t^2$。
       消去 $t$ 得 $y = x tan alpha - (g x^2)/(2 v_0^2 cos^2 alpha)$，

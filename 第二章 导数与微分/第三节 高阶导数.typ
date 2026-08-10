@@ -63,7 +63,7 @@
   ),
   (
     kind: "compute",
-    stem: [设 $f''(x)$ 存在，求函数 $y = f(x^2)$ 的二阶导数 $(dif^2 y)/(dif x^2)$。],
+    stem: [设 $f''(x)$ 存在，求函数 $y = f(x^2)$ 的二阶导数 $(dif^2 y)/(dif x^2)$],
     solution: [
       $y' = 2 x f'(x^2)$，
       $y'' = 4 x^2 f''(x^2) + 2 f'(x^2)$。

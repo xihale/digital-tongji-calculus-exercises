@@ -7,7 +7,7 @@
   // ===== 一、简答题 =====
   (
     kind: "short",
-    stem: [写出不定积分的分部积分公式及其推导过程（作业讲评时随机点名答辩）。],
+    stem: [写出不定积分的分部积分公式及其推导过程（作业讲评时随机点名答辩）],
     solution: [
       公式：$integral u dif v = u v - integral v dif u$。
       由 $(u v)' = u' v + u v'$，两边积分得
@@ -63,7 +63,7 @@
   ),
   (
     kind: "compute",
-    stem: [设函数 $f(x)$ 的一个原函数是 $(sin x)/x$，求 $integral x f'(x) dif x$。],
+    stem: [设函数 $f(x)$ 的一个原函数是 $(sin x)/x$，求 $integral x f'(x) dif x$],
     solution: [
       $f(x) = ((sin x)/x)' = (x cos x - sin x)/x^2$。
       分部积分：$integral x f'(x) dif x = x f(x) - integral f(x) dif x$

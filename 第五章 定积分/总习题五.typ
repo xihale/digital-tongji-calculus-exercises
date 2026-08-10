@@ -187,7 +187,7 @@
     kind: "proof",
     stem: [
       设 $f''(x)$ 在 $[a, b]$ 上连续，证明：
-      $integral_a^b x f''(x) dif x = [b f'(b) - f(b)] - [a f'(a) - f(a)]$。
+      $integral_a^b x f''(x) dif x = [b f'(b) - f(b)] - [a f'(a) - f(a)]$
     ],
     solution: [
       分部：取 $u = x$，$dif v = f'' dif x$，则 $v = f'$，

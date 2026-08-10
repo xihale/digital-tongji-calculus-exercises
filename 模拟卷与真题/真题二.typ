@@ -201,14 +201,14 @@
   (
     kind: "compute",
     kind-title: [三、计算题（每小题7分，共35分）],
-    stem: [求 $lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$。],
+    stem: [求 $lim_(x -> 0^+) (tan 3x)^(1/(2 ln x))$],
     solution: [
       取对数后洛必达，得 $ln L = 1/2$，故 $L = sqrt(e)$。
     ],
   ),
   (
     kind: "compute",
-    stem: [求 $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) dif x$。],
+    stem: [求 $integral (1 - sqrt(3x + 2))/(1 + sqrt(3x + 2)) dif x$],
     solution: [
       令 $u=sqrt(3x+2)$，得
       $-x - 2/3 + (4/3)u - (4/3) ln|1+u| + C$，
@@ -217,7 +217,7 @@
   ),
   (
     kind: "compute",
-    stem: [求微分方程 $y'' - y' - 2y = (1 - 2x) e^x$ 的通解。],
+    stem: [求微分方程 $y'' - y' - 2y = (1 - 2x) e^x$ 的通解],
     solution: [
       齐次通解 $C_1 e^(2x) + C_2 e^(-x)$；特解 $x e^x$。
       通解 $y = C_1 e^(2x) + C_2 e^(-x) + x e^x$。
@@ -225,7 +225,7 @@
   ),
   (
     kind: "compute",
-    stem: [求 $integral_0^(+oo) x^2 e^(-x) dif x$。],
+    stem: [求 $integral_0^(+oo) x^2 e^(-x) dif x$],
     solution: [
       分部积分两次得 $integral x^2 e^(-x) dif x = -e^(-x)(x^2+2x+2)$，
       反常积分值为 $2$（即 $Gamma(3)=2!$）。
@@ -233,7 +233,7 @@
   ),
   (
     kind: "compute",
-    stem: [求函数 $f(x) = (2x + 3) e^(2/x)$ 的单调区间、极值以及渐近线方程。],
+    stem: [求函数 $f(x) = (2x + 3) e^(2/x)$ 的单调区间、极值以及渐近线方程],
     solution: [
       $f'(x) = (2 e^(2/x)/x^2)(x-3)(x+1)$。
       增：$(-oo,-1)$、$(3,+oo)$；减：$(-1,0)$、$(0,3)$。

@@ -186,7 +186,7 @@
   (
     kind: "compute",
     kind-title: [三、计算题（14～17每小题8分，18～19每小题10分，共52分）],
-    stem: [求曲线 $cases(2 x^2 + 3 y^2 + z^2 = 9, x + y + z = 2)$ 在点 $(1, -1, 2)$ 处的法平面方程。],
+    stem: [求曲线 $cases(2 x^2 + 3 y^2 + z^2 = 9, x + y + z = 2)$ 在点 $(1, -1, 2)$ 处的法平面方程],
     solution: [
       $n_1 = (4x, 6y, 2z)|_((1,-1,2)) = (4,-6,4)$，$n_2 = (1,1,1)$，
       切向 $T = n_1 times n_2 = (-10, 0, 10)$，
@@ -197,7 +197,7 @@
     kind: "compute",
     stem: [
       设函数 $z = f(x, y)$ 是由方程 $phi(c x - a z, c y - b z) = 0$ 所确定的隐函数，
-      其中 $phi$ 具有一阶连续偏导数，求 $a (pd z)/(pd x) + b (pd z)/(pd y)$（$a, b, c$ 是常数）。
+      其中 $phi$ 具有一阶连续偏导数，求 $a (pd z)/(pd x) + b (pd z)/(pd y)$（$a, b, c$ 是常数）
     ],
     solution: [
       $(pd z)/(pd x) = (c phi'_1)/(a phi'_1 + b phi'_2)$，
@@ -207,7 +207,7 @@
   ),
   (
     kind: "compute",
-    stem: [计算 $iint_D y e^(x y) dif sigma$，其中闭区域 $D: 1/x <= y <= 1$，$1 <= x <= 2$。],
+    stem: [计算 $iint_D y e^(x y) dif sigma$，其中闭区域 $D: 1/x <= y <= 1$，$1 <= x <= 2$],
     solution: [
       $I = integral_1^2 dif x integral_(1/x)^1 y e^(x y) dif y$。
       内层 $integral y e^(x y) dif y = e^(x y)(x y - 1)/x^2$，
@@ -219,7 +219,7 @@
     kind: "compute",
     stem: [
       计算 $integral_L (3 sin x + 2 x y - 4 x) dif x + (x^2 - e^y) dif y$，
-      其中 $L$ 为摆线 $x = t - sin t$，$y = 1 - cos t$ 上从点 $O(0, 0)$ 到点 $A(pi, 2)$ 的一段弧。
+      其中 $L$ 为摆线 $x = t - sin t$，$y = 1 - cos t$ 上从点 $O(0, 0)$ 到点 $A(pi, 2)$ 的一段弧
     ],
     solution: [
       $P = 3 sin x + 2 x y - 4 x$，$Q = x^2 - e^y$，$P_y = 2x = Q_x$，与路径无关。
@@ -229,7 +229,7 @@
   ),
   (
     kind: "compute",
-    stem: [求幂级数 $sum_(n=1)^oo (-1)^(n-1) (2n-1)/n x^n$ 的收敛半径、收敛域及和函数。],
+    stem: [求幂级数 $sum_(n=1)^oo (-1)^(n-1) (2n-1)/n x^n$ 的收敛半径、收敛域及和函数],
     solution: [
       $R = 1$；端点 $x=±1$ 通项不趋于 0，发散；收敛域 $(-1, 1)$。
       $S(x) = 2 sum (-1)^(n-1) x^n - sum (-1)^(n-1) x^n / n
@@ -240,7 +240,7 @@
     kind: "compute",
     stem: [
       计算 $I = iint_Sigma x z^2 dif y dif z + (x^2 y - z^3) dif z dif x + (2 x y + y^2 z) dif x dif y$，
-      其中 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$（$a > 0$）上半部分的上侧。
+      其中 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$（$a > 0$）上半部分的上侧
     ],
     solution: [
       补 $Sigma_1: z=0$（下侧），散度 $div = z^2 + x^2 + y^2$，

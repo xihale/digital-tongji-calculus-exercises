@@ -21,7 +21,7 @@
   (
     kind: "judge",
     stem: [
-      若向量 $bold(a) = (a_x, a_y, a_z)$，则平行于向量 $bold(a)$ 的单位向量为 $(a_x/(|bold(a)|), a_y/(|bold(a)|), a_z/(|bold(a)|))$。
+      若向量 $bold(a) = (a_x, a_y, a_z)$，则平行于向量 $bold(a)$ 的单位向量为 $(a_x/(|bold(a)|), a_y/(|bold(a)|), a_z/(|bold(a)|))$
     ],
     answer: [×],
   ),
@@ -45,7 +45,7 @@
   (
     kind: "choice",
     stem: [
-      设有非零向量 $bold(a), bold(b)$，若 $bold(a) perp bold(b)$，则必有。
+      设有非零向量 $bold(a), bold(b)$，若 $bold(a) perp bold(b)$，则必有
     ],
     options: (
       [$|bold(a) + bold(b)| = |bold(a)| + |bold(b)|$],
@@ -120,9 +120,10 @@
     stem: [
       求平行于向量 $bold(a) = (6, 7, -6)$ 的单位向量
     ],
+    answer: [$plus.minus (6/11, 7/11, -6/11)$],
     solution: [
       $ |bold(a)| = sqrt(6^2 + 7^2 + (-6)^2) = 11 $
-          $ bold(e) =(plus.minus bold(a))/(|bold(a)|)= (plus.minus 6/11, 7/11, -6/11) $
+          $ bold(e) =(plus.minus bold(a))/(|bold(a)|)= plus.minus (6/11, 7/11, -6/11) $
     ],
   ),
   (
@@ -155,7 +156,7 @@
     kind: "proof",
     kind-title: [五、证明题],
     stem: [
-      如果平面上一个四边形的对角线互相平分，试用向量证明它是平行四边形。
+      如果平面上一个四边形的对角线互相平分，试用向量证明它是平行四边形
     ],
     solution: [
       设对角线交于 $M$。由中点性质，$arrow(M A)+arrow(M C)=bold(0), arrow(M B)+arrow(M D)=bold(0)$。

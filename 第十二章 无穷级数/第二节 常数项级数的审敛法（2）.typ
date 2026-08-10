@@ -10,20 +10,20 @@
     kind: "judge",
     kind-title: [一、判断题],
     stem: [
-      若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo u_n^2$ 也收敛。
+      若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo u_n^2$ 也收敛
     ],
   ),
   (
     kind: "judge",
     stem: [
-      若正项级数 $sum_(n=1)^oo u_n$ 发散，则 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho > 1$。
+      若正项级数 $sum_(n=1)^oo u_n$ 发散，则 $lim_(n arrow oo) (u_(n+1))/(u_n)= rho > 1$
     ],
   ),
   (
     kind: "choice",
     kind-title: [二、选择题],
     stem: [
-      下列级数中，条件收敛的是。
+      下列级数中，条件收敛的是
     ],
     options: (
       [$(sum_(n=1)^oo (-1)^n n)/(n+1)$],
@@ -39,7 +39,7 @@
   (
     kind: "choice",
     stem: [
-      下列级数中，收敛的是。
+      下列级数中，收敛的是
     ],
     options: (
       [$(sum_(n=1)^oo 1)/(n root(n, n))$],
@@ -89,7 +89,7 @@
           (1) $(1^4)/(1!)+(2^4)/(2!)+ dots +(n^4)/(n!)+ dots$； \
           (2) $(sum_(n=1)^oo (n+1))/(n(n+2))$； \
           (3) $sum_(n=1)^oo 2^n sin(pi/3^n)$； \
-          (4) $sqrt(2) + sqrt((3)/(2)) + dots + sqrt((n+1)/(n)) + dots$。
+          (4) $sqrt(2) + sqrt((3)/(2)) + dots + sqrt((n+1)/(n)) + dots$
     ],
     solution: [
       (1) 设 $u_n=(n^4)/(n!)$。 \
@@ -110,7 +110,7 @@
     stem: [
       判定下列级数的敛散性，如果收敛，是绝对收敛还是条件收敛： \
           (1) $1 -(1)/(sqrt(2))+(1)/(sqrt(3))-(1)/(sqrt(4))+ dots +((-1)^(n-1))/(sqrt(n))+ dots$； \
-          (2) $(sum_(n=1)^oo (-1)^(n-1) n)/(3^(n-1))$。
+          (2) $(sum_(n=1)^oo (-1)^(n-1) n)/(3^(n-1))$
     ],
     solution: [
       (1) 级数为 $(sum (-1)^(n-1))/(sqrt(n))$。 \

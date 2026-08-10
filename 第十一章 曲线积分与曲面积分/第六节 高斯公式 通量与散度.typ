@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $f(u)$ 具有连续导数，$Sigma$ 是曲面 $y = x^2 + z^2$ 与 $y = 8 - x^2 - z^2$ 所围成立体表面的外侧，则 $(iint_Sigma 1)/(y f((x)/(y)) dif y dif z)+(1)/(x f((x)/(y)) dif z dif x)+ z dif x dif y =$。
+      设函数 $f(u)$ 具有连续导数，$Sigma$ 是曲面 $y = x^2 + z^2$ 与 $y = 8 - x^2 - z^2$ 所围成立体表面的外侧，则 $(iint_Sigma 1)/(y f((x)/(y)) dif y dif z)+(1)/(x f((x)/(y)) dif z dif x)+ z dif x dif y =$
     ],
     options: (
       [$16 pi$],
@@ -28,7 +28,7 @@
   (
     kind: "choice",
     stem: [
-      设 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ 的外侧，则 $iint_Sigma z dif x dif y =$。
+      设 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ 的外侧，则 $iint_Sigma z dif x dif y =$
     ],
     options: (
       [0],
@@ -44,7 +44,7 @@
   (
     kind: "choice",
     stem: [
-      设流速场 $bold(v) = (0, 0, 1)$，则流过球面 $x^2 + y^2 + z^2 = R^2$ 的通量为。
+      设流速场 $bold(v) = (0, 0, 1)$，则流过球面 $x^2 + y^2 + z^2 = R^2$ 的通量为
     ],
     options: (
       [0],
@@ -133,7 +133,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      求向量场 $bold(A)$ 的散度，其中 $bold(A) = ee^(x y) bold(i) + cos(x y) bold(j) + cos(x z^2) bold(k)$。
+      求向量场 $bold(A)$ 的散度，其中 $bold(A) = ee^(x y) bold(i) + cos(x y) bold(j) + cos(x z^2) bold(k)$
     ],
     solution: [
       $ div bold(A) = y ee^(x y) - x sin(x y) - 2 x z sin(x z^2) $。
@@ -145,7 +145,7 @@
       利用高斯公式计算下列曲面积分： \
           (1) $iint_Sigma x^2 dif y dif z + y^2 dif z dif x + z^2 dif x dif y$，其中 $Sigma$ 为平面 $x = 0, y = 0, z = 0, x = a, y = a, z = a$ 所围成立体表面的外侧；
           (2) $iint_Sigma x^3 dif y dif z + y^3 dif z dif x + z^3 dif x dif y$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$ 的外侧；
-          (3) $iint_Sigma x dif y dif z + y dif z dif x + z dif x dif y$，其中 $Sigma$ 为介于 $z = 0, z = 3$ 之间的圆柱体 $x^2 + y^2 <= 9$ 的整个表面的外侧。
+          (3) $iint_Sigma x dif y dif z + y dif z dif x + z dif x dif y$，其中 $Sigma$ 为介于 $z = 0, z = 3$ 之间的圆柱体 $x^2 + y^2 <= 9$ 的整个表面的外侧
     ],
     solution: [
       (1) $ div bold(F) = 2(x+y+z) => I = iiint_Omega 2(x+y+z) dif v = 3a^4 $
@@ -156,7 +156,7 @@
   (
     kind: "compute",
     stem: [
-      求向量场 $bold(A) = (2x + 3z) bold(i) - (x z + y) bold(j) + (y^2 + 2z) bold(k)$ 穿过曲面 $Sigma$ 流向指定侧的通量，其中 $Sigma$ 是以点 $(3, -1, 2)$ 为球心，半径 $R = 3$ 的球面，流向外侧。
+      求向量场 $bold(A) = (2x + 3z) bold(i) - (x z + y) bold(j) + (y^2 + 2z) bold(k)$ 穿过曲面 $Sigma$ 流向指定侧的通量，其中 $Sigma$ 是以点 $(3, -1, 2)$ 为球心，半径 $R = 3$ 的球面，流向外侧
     ],
     solution: [
       $ div bold(A) = 3 $。$ Phi = iiint_Omega 3 dif v = 3V = 3 dot 36 pi = 108 pi $。

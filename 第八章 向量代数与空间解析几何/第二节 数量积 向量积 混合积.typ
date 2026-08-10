@@ -10,7 +10,7 @@
     kind: "judge",
     kind-title: [一、判断题],
     stem: [
-      若 $bold(a) times bold(b) = bold(a) times bold(c)$ 且 $bold(a) != 0$，则 $bold(b) = bold(c)$。
+      若 $bold(a) times bold(b) = bold(a) times bold(c)$ 且 $bold(a) != 0$，则 $bold(b) = bold(c)$
     ],
     answer: [×],
     solution: [
@@ -21,7 +21,7 @@
   (
     kind: "judge",
     stem: [
-      若向量 $bold(a), bold(b), bold(c)$ 满足 $bold(a) = bold(b) times bold(c), bold(b) = bold(c) times bold(a)$，则 $bold(a), bold(b), bold(c)$ 两两垂直。
+      若向量 $bold(a), bold(b), bold(c)$ 满足 $bold(a) = bold(b) times bold(c), bold(b) = bold(c) times bold(a)$，则 $bold(a), bold(b), bold(c)$ 两两垂直
     ],
     answer: [√],
     solution: [
@@ -50,7 +50,7 @@
   (
     kind: "choice",
     stem: [
-      设向量 $bold(a) = 2 bold(i) - bold(j) + bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，则 $(bold(a) + bold(b)) times (bold(a) - bold(b)) =$。
+      设向量 $bold(a) = 2 bold(i) - bold(j) + bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，则 $(bold(a) + bold(b)) times (bold(a) - bold(b)) =$
     ],
     options: (
       [$-bold(i) + 3 bold(j) + 5 bold(k)$],
@@ -67,7 +67,7 @@
   (
     kind: "choice",
     stem: [
-      下列结论中正确的是。
+      下列结论中正确的是
     ],
     options: (
       [$|bold(a)| bold(a) = bold(a)^2$],
@@ -121,7 +121,7 @@
       设向量 $bold(a) = 3 bold(i) - bold(j) - 2 bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，求： \
             (1) $bold(a) dot bold(b)$ 及 $bold(a) times bold(b)$；
             (2) $(-2 bold(a)) dot 3 bold(b)$ 及 $bold(a) times 2 bold(b)$；
-            (3) $bold(a), bold(b)$ 的夹角的余弦。
+            (3) $bold(a), bold(b)$ 的夹角的余弦
     ],
     solution: [
       (1) $bold(a) dot bold(b) = 3-2+2=3$；$bold(a) times bold(b) = (5, 1, 7)$。
@@ -133,7 +133,7 @@
   (
     kind: "compute",
     stem: [
-      已知三点 $M_1(1, -1, 2), M_2(3, 3, 1)$ 和 $M_3(3, 1, 3)$，求与向量 $arrow(M_1 M_2), arrow(M_2 M_3)$ 同时垂直的单位向量。
+      已知三点 $M_1(1, -1, 2), M_2(3, 3, 1)$ 和 $M_3(3, 1, 3)$，求与向量 $arrow(M_1 M_2), arrow(M_2 M_3)$ 同时垂直的单位向量
     ],
     solution: [
       $ arrow(M_1 M_2) = (2, 4, -1), arrow(M_2 M_3) = (0, -2, 2) $
@@ -144,7 +144,7 @@
   (
     kind: "compute",
     stem: [
-      求向量 $bold(a) = (4, -3, 4)$ 在向量 $bold(b) = (2, 2, 1)$ 上的投影。
+      求向量 $bold(a) = (4, -3, 4)$ 在向量 $bold(b) = (2, 2, 1)$ 上的投影
     ],
     solution: [
       $ Prj_(bold(b)) bold(a) =(bold(a) dot bold(b)) / |bold(b)|=(8 - 6 + 4)/(3)= 2 $
@@ -153,7 +153,7 @@
   (
     kind: "compute",
     stem: [
-      已知向量 $arrow(O A) = bold(i) + 3 bold(k), arrow(O B) = bold(j) + 3 bold(k)$，求 $Delta "OAB"$ 的面积。
+      已知向量 $arrow(O A) = bold(i) + 3 bold(k), arrow(O B) = bold(j) + 3 bold(k)$，求 $Delta "OAB"$ 的面积
     ],
     solution: [
       面积 $S = 1/2 |arrow(O A) times arrow(O B)|$。
@@ -165,7 +165,7 @@
   (
     kind: "compute",
     stem: [
-      设向量 $bold(a) = (2, 3, -1), bold(b) = (1, -2, 3), bold(c) = (2, 1, 2)$，向量 $bold(d)$ 与 $bold(a), bold(b)$ 均垂直，且在向量 $bold(c)$ 上的投影是 14，求向量 $bold(d)$。
+      设向量 $bold(a) = (2, 3, -1), bold(b) = (1, -2, 3), bold(c) = (2, 1, 2)$，向量 $bold(d)$ 与 $bold(a), bold(b)$ 均垂直，且在向量 $bold(c)$ 上的投影是 14，求向量 $bold(d)$
     ],
     solution: [
       $ bold(d) parallel (bold(a) times bold(b)) = (7, -7, -7) $

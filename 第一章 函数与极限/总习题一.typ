@@ -128,7 +128,7 @@
   // ===== 四、证明题 =====
   (
     kind: "proof",
-    stem: [根据函数极限的定义，证明：$lim_(x -> 3) (x^2 - x - 6)/(x - 3) = 5$。],
+    stem: [根据函数极限的定义，证明：$lim_(x -> 3) (x^2 - x - 6)/(x - 3) = 5$],
     solution: [
       $x != 3$ 时 $(x^2 - x - 6)/(x - 3) = x + 2$。
       对任意 $epsilon > 0$，取 $delta = epsilon$，
@@ -139,7 +139,7 @@
     kind: "proof",
     stem: [
       证明：
-      $lim_(n -> oo) (1/sqrt(n^2 + 1) + 1/sqrt(n^2 + 2) + dots + 1/sqrt(n^2 + n)) = 1$。
+      $lim_(n -> oo) (1/sqrt(n^2 + 1) + 1/sqrt(n^2 + 2) + dots + 1/sqrt(n^2 + n)) = 1$
     ],
     solution: [
       设 $S_n = sum_(k = 1)^n 1/sqrt(n^2 + k)$。
@@ -149,7 +149,7 @@
   ),
   (
     kind: "proof",
-    stem: [证明：方程 $sin x + x + 1 = 0$ 在开区间 $(-pi/2, pi/2)$ 内至少有一个根。],
+    stem: [证明：方程 $sin x + x + 1 = 0$ 在开区间 $(-pi/2, pi/2)$ 内至少有一个根],
     solution: [
       令 $f(x) = sin x + x + 1$，在 $[-pi/2, pi/2]$ 上连续。
       $f(-pi/2) = -pi/2 < 0$，$f(pi/2) = 2 + pi/2 > 0$，

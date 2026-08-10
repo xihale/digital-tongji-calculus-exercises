@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设有曲线 $Gamma : cases(x^2 + y^2 + z^2 = a^2, x + y + z = 0)$ 从 $z$ 轴正向看去为逆时针方向，则 $oint_Gamma y dif x + z dif y + x dif z =$。
+      设有曲线 $Gamma : cases(x^2 + y^2 + z^2 = a^2, x + y + z = 0)$ 从 $z$ 轴正向看去为逆时针方向，则 $oint_Gamma y dif x + z dif y + x dif z =$
     ],
     options: (
       [$sqrt(2) pi a^2$],
@@ -27,7 +27,7 @@
   (
     kind: "choice",
     stem: [
-      $oint_L (z - y) dif x + (x - z) dif y + (y - x) dif z =$，其中 $L$ 为以三点 $A(a, 0, 0), B(0, a, 0), C(0, 0, a)$ 为顶点的三角形边界，沿 $A B C A$ 的方向。
+      $oint_L (z - y) dif x + (x - z) dif y + (y - x) dif z =$，其中 $L$ 为以三点 $A(a, 0, 0), B(0, a, 0), C(0, 0, a)$ 为顶点的三角形边界，沿 $A B C A$ 的方向
     ],
     options: (
       [$3 a^2$],
@@ -44,7 +44,7 @@
   (
     kind: "choice",
     stem: [
-      若 $L$ 为平面 $x cos alpha + y cos beta + z cos gamma = rho$ 上的闭曲线，它所包围区域的面积为 $S$，则 $oint_L (cos alpha dif x + cos beta dif y + cos gamma dif z) =$。
+      若 $L$ 为平面 $x cos alpha + y cos beta + z cos gamma = rho$ 上的闭曲线，它所包围区域的面积为 $S$，则 $oint_L (cos alpha dif x + cos beta dif y + cos gamma dif z) =$
     ],
     options: (
       [0],
@@ -113,7 +113,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      利用斯托克斯公式计算积分 $oint_Gamma y dif x + z dif y + x dif z$，其中 $Gamma$ 为圆 $x^2 + y^2 + z^2 = a^2, x + y + z = 0$，从 $x$ 轴正向看去为逆时针方向。
+      利用斯托克斯公式计算积分 $oint_Gamma y dif x + z dif y + x dif z$，其中 $Gamma$ 为圆 $x^2 + y^2 + z^2 = a^2, x + y + z = 0$，从 $x$ 轴正向看去为逆时针方向
     ],
     solution: [
       $ rot bold(F) = (-1, -1, -1) $。取 $ bold(n) = (1, 1, 1)/sqrt(3) $
@@ -123,7 +123,7 @@
   (
     kind: "compute",
     stem: [
-      求向量场 $bold(A) = (2z - 3y) bold(i) + (3x - z) bold(j) + (y - 2x) bold(k)$ 的旋度。
+      求向量场 $bold(A) = (2z - 3y) bold(i) + (3x - z) bold(j) + (y - 2x) bold(k)$ 的旋度
     ],
     solution: [
       $ rot bold(A) = (R_y-Q_z, P_z-R_x, Q_x-P_y) = (2, 4, 6) $。

@@ -101,7 +101,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(x) = x - integral_0^pi f(x) cos x dif x$，求 $f(x)$。
+      设函数 $f(x) = x - integral_0^pi f(x) cos x dif x$，求 $f(x)$
     ],
     solution: [
       设 $c = integral_0^pi f(x) cos x dif x$，则 $f(x) = x - c$。
@@ -115,7 +115,7 @@
     kind: "compute",
     stem: [
       （附加题）设 $f(x) = integral_1^(x^2) (sin t)/t dif t$，
-      求 $integral_0^1 x f(x) dif x$。
+      求 $integral_0^1 x f(x) dif x$
     ],
     solution: [
       $f'(x) = (sin x^2)/x^2 · 2x = 2 sin x^2/x$。

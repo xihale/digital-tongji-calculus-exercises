@@ -243,7 +243,7 @@
     kind-title: [三、计算题（17～21每小题7分，22小题9分，共44分）],
     stem: [
       求过直线 $L_1: (x-1)/1 = (y-2)/2 = (z-3)/3$ 且平行于直线
-      $L_2: cases(x = t + 1, y = -2, z = t - 3)$ 的平面方程。
+      $L_2: cases(x = t + 1, y = -2, z = t - 3)$ 的平面方程
     ],
     solution: [
       $L_1$ 方向 $(1,2,3)$，$L_2$ 方向 $(1,0,1)$，
@@ -254,7 +254,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $(pd^2 z)/(pd x pd y)$。
+      设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $(pd^2 z)/(pd x pd y)$
     ],
     solution: [
       $z_x = 2 f'_1 + y cos x · f'_2$，
@@ -263,7 +263,7 @@
   ),
   (
     kind: "compute",
-    stem: [计算 $iint_D (x^2 + y) dif x dif y$，其中闭区域 $D: x^2 + y^2 <= 1$。],
+    stem: [计算 $iint_D (x^2 + y) dif x dif y$，其中闭区域 $D: x^2 + y^2 <= 1$],
     solution: [
       $iint_D y = 0$；$iint_D x^2 = (1/2) iint_D (x^2+y^2) = (1/2) integral_0^(2pi) integral_0^1 rho^3 dif rho = pi/4$。
     ],
@@ -272,7 +272,7 @@
     kind: "compute",
     stem: [
       计算 $integral_L (x e^y - 2y) dif y + (e^y + x - y) dif x$，
-      其中 $L$ 为圆 $x^2 + y^2 = a x$（$a > 0$）的上半部分，取逆时针方向。
+      其中 $L$ 为圆 $x^2 + y^2 = a x$（$a > 0$）的上半部分，取逆时针方向
     ],
     solution: [
       记 $P = e^y + x - y$，$Q = x e^y - 2y$。圆 $x^2+y^2=a x$ 圆心 $(a/2,0)$、半径 $a/2$，
@@ -287,7 +287,7 @@
     kind: "compute",
     stem: [
       计算 $iint_Sigma x dif y dif z - y dif z dif x + (z^2 + x) dif x dif y$，
-      其中 $Sigma$ 为半球面 $z = sqrt(4 - x^2 - y^2)$ 的下侧。
+      其中 $Sigma$ 为半球面 $z = sqrt(4 - x^2 - y^2)$ 的下侧
     ],
     solution: [
       补底 $Sigma_1: z=0$（上侧），散度 $1 - 1 + 2z = 2z$，
@@ -315,7 +315,7 @@
     kind-title: [四、选答题（8分，二选一）],
     stem: [
       在椭球面 $2x^2 + 2y^2 + z^2 = 1$ 上求一点，使得函数 $u = x^2 + y^2 + z^2$ 在该点处沿方向
-      $bold(l) = {1, -1, 0}$ 的方向导数最大。
+      $bold(l) = {1, -1, 0}$ 的方向导数最大
     ],
     solution: [
       $D_l u = sqrt(2)(x - y)$。拉格朗日极值得候选点
@@ -328,7 +328,7 @@
     stem: [
       设有一凤凰山，底面区域 $D = {(x,y) | x^2 + y^2 - x y <= 75}$，
       高度 $h(x, y) = 75 - x^2 - y^2 + x y$。
-      欲寻找山脚坡度最大的点作为攀爬起点，试确定攀爬起点的位置。
+      欲寻找山脚坡度最大的点作为攀爬起点，试确定攀爬起点的位置
     ],
     solution: [
       最大方向导数 $= |grad h| = sqrt(5x^2+5y^2-8 x y)$。

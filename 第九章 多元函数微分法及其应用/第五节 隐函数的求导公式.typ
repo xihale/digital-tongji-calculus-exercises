@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      已知 $x + y - z = ee^x, x ee^x = tan t, y = cos t$，则 $(dif z)/(dif t) |_(t=0) =$。
+      已知 $x + y - z = ee^x, x ee^x = tan t, y = cos t$，则 $(dif z)/(dif t) |_(t=0) =$
     ],
     options: (
       [$(1)/(2)$],
@@ -29,7 +29,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $y = y(x, z)$ 由方程 $x y z = ee^(x + y)$ 所确定，则 $(partial y)/(partial x)=$。 \
+      设函数 $y = y(x, z)$ 由方程 $x y z = ee^(x + y)$ 所确定，则 $(partial y)/(partial x)=$ \
     ],
     options: (
       [$(y(x - 1))/(x(1 - y))$],
@@ -114,7 +114,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      设 $ln sqrt(x^2 + y^2) =(y)/(x)$，求 $(dif y)/(dif x)$。
+      设 $ln sqrt(x^2 + y^2) =(y)/(x)$，求 $(dif y)/(dif x)$
     ],
     solution: [
       先把方程写成 \

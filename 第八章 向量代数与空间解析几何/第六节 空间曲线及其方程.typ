@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      已知曲线 $cases(x^2 + y^2 + z^2 = 2, x + y + z = a)$ 在 $y O z$ 面上的投影曲线为 $cases(y^2 + y z + z^2 = 1, x = 0)$，则 $a =$ 。
+      已知曲线 $cases(x^2 + y^2 + z^2 = 2, x + y + z = a)$ 在 $y O z$ 面上的投影曲线为 $cases(y^2 + y z + z^2 = 1, x = 0)$，则 $a =$ 
     ],
     options: (
       [$sqrt(2)$],
@@ -29,7 +29,7 @@
   (
     kind: "choice",
     stem: [
-      双曲抛物面 $x^2 - y^2 = z$ 在 $z O x$ 面上的截痕是.
+      双曲抛物面 $x^2 - y^2 = z$ 在 $z O x$ 面上的截痕是
     ],
     options: (
       [$x^2 = z$],
@@ -45,7 +45,7 @@
   (
     kind: "choice",
     stem: [
-      曲面 $x^2 + y^2 + z^2 = a$ 与 $x^2 + y^2 = 2 a z(a > 0)$ 的交线是.
+      曲面 $x^2 + y^2 + z^2 = a$ 与 $x^2 + y^2 = 2 a z(a > 0)$ 的交线是
     ],
     options: (
       [抛物线],
@@ -125,7 +125,7 @@
   (
     kind: "compute",
     stem: [
-      求螺旋线 $x = a cos theta, y = a sin theta, z = b theta$ 在三个坐标面上的投影曲线的直角坐标方程。
+      求螺旋线 $x = a cos theta, y = a sin theta, z = b theta$ 在三个坐标面上的投影曲线的直角坐标方程
     ],
     solution: [
       在 $x O y$ 面上的投影：$x^2 + y^2 = a^2, z = 0$；在 $z O x$ 面上的投影：$x = a cos z/b, y = 0$；在 $y O z$ 面上的投影：$y = a sin z/b, x = 0$。
@@ -134,7 +134,7 @@
   (
     kind: "compute",
     stem: [
-      求上半球 $0 <= z <= sqrt(a^2 - x^2 - y^2)$ 与圆柱体 $x^2 + y^2 <= a x$ ($a > 0$) 的公共部分在 $x O y$ 面和 $z O x$ 面上的投影。
+      求上半球 $0 <= z <= sqrt(a^2 - x^2 - y^2)$ 与圆柱体 $x^2 + y^2 <= a x$ ($a > 0$) 的公共部分在 $x O y$ 面和 $z O x$ 面上的投影
     ],
     solution: [
       在 $x O y$ 面上的投影：$x^2 + y^2 <= a x, z = 0$；在 $z O x$ 面上的投影：$0 <= z <= sqrt(a^2 - a x), 0 <= x <= a, y = 0$。
@@ -143,7 +143,7 @@
   (
     kind: "compute",
     stem: [
-      求旋转抛物面 $z = x^2 + y^2$ ($0 <= z <= 4$) 在三个坐标面上的投影。
+      求旋转抛物面 $z = x^2 + y^2$ ($0 <= z <= 4$) 在三个坐标面上的投影
     ],
     solution: [
       在 $x O y$ 面上的投影：$x^2 + y^2 <= 4, z = 0$；在 $z O x$ 面上的投影：$x^2 <= z <= 4, -2 <= x <= 2, y = 0$；在 $y O z$ 面上的投影：$y^2 <= z <= 4, -2 <= y <= 2, x = 0$。

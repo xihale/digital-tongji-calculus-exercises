@@ -140,14 +140,14 @@
   (
     kind: "compute",
     kind-title: [三、计算题（12～15题每小题7分，16～17题每小题8分，共44分）],
-    stem: [求 $lim_(x -> +oo) (integral_0^x arctan^2 t dif t)/(sqrt(x^2 + 1))$。],
+    stem: [求 $lim_(x -> +oo) (integral_0^x arctan^2 t dif t)/(sqrt(x^2 + 1))$],
     solution: [
       $oo/oo$ 型，洛必达得 $lim_(x->+oo) arctan^2 x · sqrt(1+1/x^2) = (pi/2)^2 = pi^2/4$。
     ],
   ),
   (
     kind: "compute",
-    stem: [已知函数 $y(x)$ 由方程 $x^3 + y^3 - 3x + 3y - 2 = 0$ 所确定，求 $y''(1)$。],
+    stem: [已知函数 $y(x)$ 由方程 $x^3 + y^3 - 3x + 3y - 2 = 0$ 所确定，求 $y''(1)$],
     solution: [
       由 $x=1$ 得 $y=1$。隐函数求导 $y' = (1-x^2)/(y^2+1)$，$y'(1)=0$；
       再求导得 $y''(1) = -1$。
@@ -155,14 +155,14 @@
   ),
   (
     kind: "compute",
-    stem: [求 $integral arctan sqrt(x) dif x$。],
+    stem: [求 $integral arctan sqrt(x) dif x$],
     solution: [
       分部积分并令 $sqrt(x)=t$，得 $integral arctan sqrt(x) dif x = (x+1) arctan sqrt(x) - sqrt(x) + C$。
     ],
   ),
   (
     kind: "compute",
-    stem: [求 $integral_0^pi x^2 |cos x| dif x$。],
+    stem: [求 $integral_0^pi x^2 |cos x| dif x$],
     solution: [
       分段：$integral_0^(pi/2) x^2 cos x dif x + integral_(pi/2)^pi x^2 (-cos x) dif x$。
       原函数 $x^2 sin x + 2x cos x - 2 sin x$，计算得 $pi^2/2 + 2 pi - 4$。
@@ -171,7 +171,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(x) = cases(1 + x^2 & x < 0, e^(-x) & x >= 0)$，求 $integral_1^3 f(x - 2) dif x$。
+      设函数 $f(x) = cases(1 + x^2 & x < 0, e^(-x) & x >= 0)$，求 $integral_1^3 f(x - 2) dif x$
     ],
     solution: [
       令 $u = x-2$，得 $integral_(-1)^1 f(u) dif u = integral_(-1)^0 (1+u^2) dif u + integral_0^1 e^(-u) dif u = 7/3 - 1/e$。
@@ -179,7 +179,7 @@
   ),
   (
     kind: "compute",
-    stem: [求曲线 $y = x^4 (12 ln x - 7)$ 的凹凸区间及拐点。],
+    stem: [求曲线 $y = x^4 (12 ln x - 7)$ 的凹凸区间及拐点],
     solution: [
       $y'' = 144 x^2 ln x$（$x > 0$）。$0 < x < 1$ 时 $y'' < 0$（凸）；$x > 1$ 时 $y'' > 0$（凹）；
       拐点 $(1, -7)$。
@@ -200,7 +200,7 @@
     kind: "short",
     stem: [
       求由抛物线 $y^2 = 2x$ 与直线 $y = x - 4$ 所围成图形的面积，
-      并求此图形绕 $y$ 轴旋转一周所得旋转体的体积。
+      并求此图形绕 $y$ 轴旋转一周所得旋转体的体积
     ],
     solution-parts: (
       [交点 $(2,-2)$、$(8,4)$，面积 $S = integral_(-2)^4 (y+4 - y^2/2) dif y = 18$。],
@@ -214,7 +214,7 @@
     kind-title: [五、证明题（5分）],
     stem: [
       若函数 $f(x)$ 在区间 $(a, b)$ 内具有二阶导数且 $f(x_1) = f(x_2) = f(x_3)$，
-      其中 $a < x_1 < x_2 < x_3 < b$，证明：在 $(a, b)$ 内至少存在一点 $xi$，使得 $f''(xi) = 0$。
+      其中 $a < x_1 < x_2 < x_3 < b$，证明：在 $(a, b)$ 内至少存在一点 $xi$，使得 $f''(xi) = 0$
     ],
     solution: [
       由罗尔定理，存在 $xi_1 in (x_1,x_2)$、$xi_2 in (x_2,x_3)$ 使 $f'(xi_1)=f'(xi_2)=0$；

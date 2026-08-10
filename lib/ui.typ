@@ -51,12 +51,23 @@
   ]
 }
 
-// ---------- 选择题括号答案（括号内加宽） ----------
+// ---------- 选择题 / 判断题括号答案（括号内加宽） ----------
 #let choice-mark(ans) = {
   if show-solutions {
     [（#h(0.4em)#text(fill: answer-color, weight: "bold")[#ans]#h(0.4em)）]
   } else {
     [（#h(2em)）]
+  }
+}
+
+// 多个判断括号（答案序列，以中文分号「；」分隔）
+#let choice-marks(answers) = {
+  for (i, a) in answers.enumerate() {
+    if i > 0 {
+      text(fill: stem-color)[；]
+      h(0.2em)
+    }
+    choice-mark(a)
   }
 }
 
@@ -103,6 +114,21 @@
       blank-mark(answers.at(i))
     } else {
       blank-mark([])
+    }
+  }
+}
+
+// 判断题干内嵌括号空：按序消费 answers（样式同 choice-mark）
+// 用法：stem: [（1）…#judge-blank()；（2）…#judge-blank()]
+#let judge-blank() = {
+  blank-counter.step()
+  context {
+    let i = blank-counter.get().first() - 1
+    let answers = blank-answers.get()
+    if i < answers.len() {
+      choice-mark(answers.at(i))
+    } else {
+      choice-mark([])
     }
   }
 }

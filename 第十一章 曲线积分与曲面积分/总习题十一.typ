@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设 $L$ 为以三点 $O(0,0), A(1,0), B(0,1)$ 为顶点的三角形边界，则 $int_L (x + y) dif s =$ 。
+      设 $L$ 为以三点 $O(0,0), A(1,0), B(0,1)$ 为顶点的三角形边界，则 $int_L (x + y) dif s =$
     ],
     options: (
       [$sqrt(2)$],
@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设 $L$ 为抛物线 $y^2 = x$ 上从点 $A(1, -1)$ 到点 $B(1, 1)$ 的一段弧，$P(x, y)$ 是连续函数，则 $int_L P(x, y) dif x =$.
+      设 $L$ 为抛物线 $y^2 = x$ 上从点 $A(1, -1)$ 到点 $B(1, 1)$ 的一段弧，$P(x, y)$ 是连续函数，则 $int_L P(x, y) dif x =$
     ],
     options: (
       [$2 int_0^1 P(x, sqrt(x)) dif x$],
@@ -42,7 +42,7 @@
   (
     kind: "choice",
     stem: [
-      设 $L$ 为圆 $x^2 + y^2 = -2x$ 的正向边界，则 $oint_L (x^3 - y) dif x + (x - y^3) dif y =$。
+      设 $L$ 为圆 $x^2 + y^2 = -2x$ 的正向边界，则 $oint_L (x^3 - y) dif x + (x - y^3) dif y =$
     ],
     options: (
       [$-2 pi$],
@@ -58,7 +58,7 @@
   (
     kind: "choice",
     stem: [
-      设 $Sigma$ 为平面 $2x + 2y + z - 2 = 0$ 被三个坐标面所截的在第一卦限的部分，则 $iint_Sigma (2x + 2y + z) dif S =$。
+      设 $Sigma$ 为平面 $2x + 2y + z - 2 = 0$ 被三个坐标面所截的在第一卦限的部分，则 $iint_Sigma (2x + 2y + z) dif S =$
     ],
     options: (
       [$(3)/(4)$],
@@ -74,7 +74,7 @@
   (
     kind: "choice",
     stem: [
-      已知 $( (x + a y) dif x + y dif y )/((x + y)^2)$ 为某个函数的全微分，则 $a =$。
+      已知 $( (x + a y) dif x + y dif y )/((x + y)^2)$ 为某个函数的全微分，则 $a =$
     ],
     options: (
       [-1],
@@ -90,7 +90,7 @@
   (
     kind: "choice",
     stem: [
-      设 $int_L x y^2 dif x + psi(y) x dif y$ 与路径无关，其中 $psi(y)$ 具有连续导数，且 $psi(0) = 0$ ，则 $int_(0,0)^(1,1) x y^2 dif x + psi(y) x dif y =$。
+      设 $int_L x y^2 dif x + psi(y) x dif y$ 与路径无关，其中 $psi(y)$ 具有连续导数，且 $psi(0) = 0$ ，则 $int_((0,0))^((1,1)) x y^2 dif x + psi(y) x dif y =$
     ],
     options: (
       [$(3)/(8)$],
@@ -106,7 +106,7 @@
   (
     kind: "choice",
     stem: [
-      设 $S$ 是平面 $x + y + z = 4$ 被柱面 $x^2 + y^2 = 1$ 截出的有限部分，则 $iint_S y dif S =$。
+      设 $S$ 是平面 $x + y + z = 4$ 被柱面 $x^2 + y^2 = 1$ 截出的有限部分，则 $iint_S y dif S =$
     ],
     options: (
       [0],
@@ -197,18 +197,18 @@
     ],
     answer: [$(iiint_V (partial P))/((partial x) dif v)$],
     solution: [
-      $ div(P,0,0) = P_x => I = iiint_V (partial P)/(partial x) dif v $。
+      $ div(P, 0, 0) = P_x => I = iiint_V (partial P)/(partial x) dif v $。
     ],
   ),
   (
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $oint_L sqrt(x^2 + y^2) dif s$，其中 $L$ 为圆 $x^2 + y^2 = a x$。
+      计算 $oint_L sqrt(x^2 + y^2) dif s$，其中 $L$ 为圆 $x^2 + y^2 = a x$
     ],
     solution: [
       $ x = a/2(1+cos theta), y = a/2 sin theta, dif s = a/2 dif theta $
-          $ I = a^2/2 int_0^(2 pi) |cos theta/2| dif theta = 2a^2 $
+      $ I = a^2/2 int_0^(2 pi) |cos theta/2| dif theta = 2a^2 $
     ],
   ),
 )

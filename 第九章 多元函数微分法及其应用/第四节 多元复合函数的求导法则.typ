@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $u = (x - y)^z$，而 $z = x^2 + y^2$，则 $u_x' + u_y' =$。 \
+      设函数 $u = (x - y)^z$，而 $z = x^2 + y^2$，则 $u_x' + u_y' =$ \
     ],
     options: (
       [$2[z(x - y)^(z - 1) + (x + y)(x - y)^z ln(x - y)]$],
@@ -28,7 +28,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $z = 3^(x y)$，而 $x = f(y)$ 且 $f$ 可导，则 $(dif z)/(dif y)=$。 \
+      设函数 $z = 3^(x y)$，而 $x = f(y)$ 且 $f$ 可导，则 $(dif z)/(dif y)=$ \
     ],
     options: (
       [$3^(x y) (y + x f'(y)) ln 3$],
@@ -45,7 +45,7 @@
   (
     kind: "choice",
     stem: [
-      设函数 $u = f(x + y, x z)$，其中 $f$ 具有二阶连续偏导数，则 $(partial^2 u)/(partial x partial z)=$。
+      设函数 $u = f(x + y, x z)$，其中 $f$ 具有二阶连续偏导数，则 $(partial^2 u)/(partial x partial z)=$
     ],
     options: (
       [$f_2' + x f_(11)'' + z f_(12)'' + x f_(12)''$],
@@ -62,7 +62,7 @@
   (
     kind: "choice",
     stem: [
-      若函数 $f(x, 2 x) = x^2 + 3 x$ , $f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) =$ 。 \
+      若函数 $f(x, 2 x) = x^2 + 3 x$ , $f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) =$  \
     ],
     options: (
       [$x +(3)/(2)$],
@@ -97,6 +97,7 @@
     stem: [
       设函数 $z = f(x + y, x - y)$，其中 $f$ 可微，则 $dif z =$
     ],
+    answer: [$(f_1' + f_2') dif x + (f_1' - f_2') dif y$],
     solution: [
       设 \
       $u=x+y, v=x-y$，则 $z=f(u,v)$。 \
@@ -133,7 +134,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      设函数 $z = u^2 ln v$，而 $u =(x)/(y), v = 3x - 2y$，求 $(pd z)/(pd x),(pd z)/(pd y)$。
+      设函数 $z = u^2 ln v$，而 $u =(x)/(y), v = 3x - 2y$，求 $(pd z)/(pd x),(pd z)/(pd y)$
     ],
     solution: [
       $(pd z)/(pd x)= ((2x)/(y^2)) ln(3x-2y) +(3x^2)/((3x-2y)y^2)$，
@@ -143,7 +144,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = arcsin(x - y)$，而 $x = 3t, y = 4t^3$，求 $(dif z)/(dif t)$。
+      设函数 $z = arcsin(x - y)$，而 $x = 3t, y = 4t^3$，求 $(dif z)/(dif t)$
     ],
     solution: [
       先合成一元函数： \
@@ -164,7 +165,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = arctan(x y)$，而 $y = ee^x$，求 $(dif z)/(dif x)$。
+      设函数 $z = arctan(x y)$，而 $y = ee^x$，求 $(dif z)/(dif x)$
     ],
     solution: [
       把复合关系代入： \

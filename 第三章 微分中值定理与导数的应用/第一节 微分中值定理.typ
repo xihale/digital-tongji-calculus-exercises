@@ -49,7 +49,7 @@
   // ===== 三、证明题 =====
   (
     kind: "proof",
-    stem: [证明恒等式：$arcsin x + arccos x = pi/2$ （$-1 <= x <= 1$）。],
+    stem: [证明恒等式：$arcsin x + arccos x = pi/2$ （$-1 <= x <= 1$）],
     solution: [
       令 $f(x) = arcsin x + arccos x$，则
       $f'(x) = 1/sqrt(1-x^2) - 1/sqrt(1-x^2) = 0$，故 $f$ 为常数。
@@ -61,7 +61,7 @@
     kind: "proof",
     stem: [
       若函数 $f(x)$ 在区间 $(a, b)$ 内具有二阶导数，且 $f(x_1) = f(x_2) = f(x_3)$，
-      其中 $a < x_1 < x_2 < x_3 < b$，证明：在区间 $(x_1, x_3)$ 内至少存在一点 $xi$，使得 $f''(xi) = 0$。
+      其中 $a < x_1 < x_2 < x_3 < b$，证明：在区间 $(x_1, x_3)$ 内至少存在一点 $xi$，使得 $f''(xi) = 0$
     ],
     solution: [
       由罗尔定理，存在 $c_1 in (x_1, x_2)$、$c_2 in (x_2, x_3)$ 使 $f'(c_1) = f'(c_2) = 0$。
@@ -71,7 +71,7 @@
   ),
   (
     kind: "proof",
-    stem: [设 $a > b > 0$，证明：$(a - b)/a < ln(a/b) < (a - b)/b$。],
+    stem: [设 $a > b > 0$，证明：$(a - b)/a < ln(a/b) < (a - b)/b$],
     solution: [
       对 $f(x) = ln x$ 在 $[b, a]$ 上用拉格朗日中值定理，
       存在 $xi in (b, a)$ 使 $ln a - ln b = (a - b)/xi$，即 $ln(a/b) = (a - b)/xi$。

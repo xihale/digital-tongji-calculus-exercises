@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设 $Sigma$ 为抛物面 $z = 2 - x^2 - y^2$ 在 $x O y$ 面上方的部分，则 $iint_Sigma dif S =$。
+      设 $Sigma$ 为抛物面 $z = 2 - x^2 - y^2$ 在 $x O y$ 面上方的部分，则 $iint_Sigma dif S =$
     ],
     options: (
       [$int_0^(2 pi) dif theta int_0^1 sqrt(1 + 4 r^2) r dif r$],
@@ -28,7 +28,7 @@
   (
     kind: "choice",
     stem: [
-      设有一曲面 $Sigma$，其面密度为 $rho(x, y, z)$，则曲面 $Sigma$ 关于 $x$ 轴的转动惯量为。
+      设有一曲面 $Sigma$，其面密度为 $rho(x, y, z)$，则曲面 $Sigma$ 关于 $x$ 轴的转动惯量为
     ],
     options: (
       [$iint_Sigma x dif S$],
@@ -85,7 +85,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $iint_Sigma (z + 2x +(4)/(3 y)) dif S$，其中 $Sigma$ 为平面 $(x)/(2)+(y)/(3)+(z)/(4)= 1$ 在第一卦限的部分。
+      计算 $iint_Sigma (z + 2x +(4)/(3 y)) dif S$，其中 $Sigma$ 为平面 $(x)/(2)+(y)/(3)+(z)/(4)= 1$ 在第一卦限的部分
     ],
     solution: [
       $ z = 4 - 2x -(4y)/3, dif S = sqrt(61)/3 dif x dif y $
@@ -96,7 +96,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_Sigma (x + y + z) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$ 在 $z >= h$ ($0 < h < a$) 的部分。
+      计算 $iint_Sigma (x + y + z) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = a^2$ 在 $z >= h$ ($0 < h < a$) 的部分
     ],
     solution: [
       由对称性 $ iint x dif S = iint y dif S = 0 $
@@ -106,7 +106,7 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_Sigma (x^2 +(1)/(2 y^2)+(1)/(4 z^2)) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = R^2$。
+      计算 $iint_Sigma (x^2 +(1)/(2 y^2)+(1)/(4 z^2)) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = R^2$
     ],
     solution: [
       由对称性 $ iint x^2 dif S = iint y^2 dif S = iint z^2 dif S = 4/(3 pi R^4) $
@@ -116,7 +116,7 @@
   (
     kind: "compute",
     stem: [
-      求球面 $z = sqrt(a^2 - x^2 - y^2)$ 在柱面 $x^2 + y^2 = a x$ 内部的表面积。
+      求球面 $z = sqrt(a^2 - x^2 - y^2)$ 在柱面 $x^2 + y^2 = a x$ 内部的表面积
     ],
     solution: [
       $ dif S = a/z dif sigma $
@@ -126,7 +126,7 @@
   (
     kind: "compute",
     stem: [
-      求抛物面壳 $z =(1)/(2 (x^2 + y^2))$ ($0 <= z <= 1$) 的质量，已知壳的面密度为 $rho = z$。
+      求抛物面壳 $z =(1)/(2 (x^2 + y^2))$ ($0 <= z <= 1$) 的质量，已知壳的面密度为 $rho = z$
     ],
     solution: [
       $ z = r^2/2, dif S = sqrt(1+r^2) r dif r dif theta $

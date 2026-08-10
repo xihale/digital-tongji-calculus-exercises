@@ -143,7 +143,7 @@
   (
     kind: "compute",
     kind-title: [三、计算题（12～15题每小题7分，16～17题每小题8分，共44分）],
-    stem: [求 $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$。],
+    stem: [求 $lim_(x -> 0) ((integral_0^x e^(t^2) dif t)^2)/(integral_0^x t e^(2 t^2) dif t)$],
     solution: [
       $0/0$ 型。分母 $= 1/4 (e^(2x^2) - 1)$；分子中 $integral_0^x e^(t^2) dif t ~ x$。
       或洛必达两次，极限为 $2$。
@@ -151,7 +151,7 @@
   ),
   (
     kind: "compute",
-    stem: [已知函数 $y = f(x)$ 由方程 $e^y + x y - 2x - 1 = 0$ 所确定，求 $y''(0)$。],
+    stem: [已知函数 $y = f(x)$ 由方程 $e^y + x y - 2x - 1 = 0$ 所确定，求 $y''(0)$],
     solution: [
       $x=0$ 时 $y=0$。求导得 $e^y y' + y + x y' - 2 = 0$，$y'(0)=2$。
       再求导并代入，得 $y''(0) = -8$。
@@ -159,14 +159,14 @@
   ),
   (
     kind: "compute",
-    stem: [求 $integral e^(sqrt(x)) dif x$。],
+    stem: [求 $integral e^(sqrt(x)) dif x$],
     solution: [
       令 $t = sqrt(x)$，$dif x = 2 t dif t$，$integral 2 t e^t dif t = 2 e^t (t - 1) + C = 2 e^(sqrt(x))(sqrt(x) - 1) + C$。
     ],
   ),
   (
     kind: "compute",
-    stem: [求 $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) dif x$。],
+    stem: [求 $integral_(-pi/4)^(pi/2) sqrt(cos x - cos^3 x) dif x$],
     solution: [
       $sqrt(cos x - cos^3 x) = sqrt(cos x)|sin x|$（$cos x >= 0$ 时）。
       在 $[-pi/4, pi/2]$ 上 $cos x >= 0$，分段去掉绝对值并换元，
@@ -180,7 +180,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $f(x) = cases(1/(1 + x^2) & x <= 0, ln x & x > 0)$，求 $integral_(-1)^1 x f(x) dif x$。
+      设函数 $f(x) = cases(1/(1 + x^2) & x <= 0, ln x & x > 0)$，求 $integral_(-1)^1 x f(x) dif x$
     ],
     solution: [
       $integral_(-1)^0 x/(1+x^2) dif x + integral_0^1 x ln x dif x = -1/2 ln 2 + (-1/4) = -1/2 ln 2 - 1/4$。
@@ -188,7 +188,7 @@
   ),
   (
     kind: "compute",
-    stem: [求曲线 $y = (x - 1) root(3, x^2)$ 的凹凸区间及拐点。],
+    stem: [求曲线 $y = (x - 1) root(3, x^2)$ 的凹凸区间及拐点],
     solution: [
       $y = x^(5/3) - x^(2/3)$，$y'' = (2/9) x^(-4/3)(5x + 1)$（$x != 0$）。
       $y''=0$ 于 $x=-1/5$；$x=0$ 处需单独讨论。
@@ -213,7 +213,7 @@
     kind: "short",
     stem: [
       求由曲线 $y = x^(3/2)$、直线 $x = 4$ 及 $x$ 轴所围成图形的面积，
-      并求此图形绕 $x$ 轴旋转一周所得旋转体的体积。
+      并求此图形绕 $x$ 轴旋转一周所得旋转体的体积
     ],
     solution-parts: (
       [面积 $S = integral_0^4 x^(3/2) dif x = 64/5$。],
@@ -227,7 +227,7 @@
     kind-title: [五、证明题（5分）],
     stem: [
       设函数 $f(x)$ 在区间 $[0,1]$ 上连续，在 $(0,1)$ 内可导，且 $integral_0^1 f(x) dif x = 0$，
-      证明：必存在 $xi in (0,1)$，使得 $2 f(xi) = - xi f'(xi)$。
+      证明：必存在 $xi in (0,1)$，使得 $2 f(xi) = - xi f'(xi)$
     ],
     solution: [
       令 $F(x) = integral_0^x f(t) dif t$，则 $F(0)=F(1)=0$。由罗尔定理，存在 $eta in (0,1)$ 使 $f(eta)=0$。

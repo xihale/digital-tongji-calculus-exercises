@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向。若函数 $P(x, y), Q(x, y)$ 在 $D$ 上具有一阶连续偏导数，则 $oint_L P dif x + Q dif y =$。
+      设有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向。若函数 $P(x, y), Q(x, y)$ 在 $D$ 上具有一阶连续偏导数，则 $oint_L P dif x + Q dif y =$
     ],
     options: (
       [$iint_D ((pd P)/(pd y)-(pd Q)/(pd x)) dif sigma$],
@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      设 $L: x^2 + y^2 = a^2$，取逆时针方向，则 $oint_L x y^2 dif y - x^2 y dif x =$。
+      设 $L: x^2 + y^2 = a^2$，取逆时针方向，则 $oint_L x y^2 dif y - x^2 y dif x =$
     ],
     options: (
       [$pi a^2/2$],
@@ -42,7 +42,7 @@
   (
     kind: "choice",
     stem: [
-      设面积为 3 的平面有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向，则 $oint_L y dif x + 2 dif y =$。
+      设面积为 3 的平面有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向，则 $oint_L y dif x + 2 dif y =$
     ],
     options: (
       [3],
@@ -64,7 +64,7 @@
     answer: [$-36 pi$],
     solution: [
       $ Q_x - P_y = 3 - (-1) = 4 $。由于 $L$ 取顺时针方向：
-          $ I = - iint_D 4 dif sigma = -4 dot 9 pi = -36 pi $
+      $ I = - iint_D 4 dif sigma = -4 dot 9 pi = -36 pi $
     ],
   ),
   (
@@ -75,7 +75,7 @@
     answer: [$2 pi a b$],
     solution: [
       $ Q_x - P_y = 1 - (-1) = 2 $
-          $ oint_L x dif y - y dif x = iint_D 2 dif sigma = 2 pi a b $
+      $ oint_L x dif y - y dif x = iint_D 2 dif sigma = 2 pi a b $
     ],
   ),
   (
@@ -92,7 +92,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      利用格林公式计算 $iint_D x dif sigma$，其中 $D$ 是以三点 $O(0, 0), A(2, 0), B(2, 2)$ 为顶点的三角形闭区域。
+      利用格林公式计算 $iint_D x dif sigma$，其中 $D$ 是以三点 $O(0, 0), A(2, 0), B(2, 2)$ 为顶点的三角形闭区域
     ],
     solution: [
       $iint_D x dif sigma = int_0^2 x dif x int_0^x dif y = int_0^2 x^2 dif x = [x^3/3]_0^2 = 8/3$。
@@ -101,31 +101,31 @@
   (
     kind: "compute",
     stem: [
-      计算 $oint_L (2x y - x^2) dif x + (x + y^2) dif y$，其中 $L$ 为由抛物线 $y = x^2$ 和 $y^2 = x$ 所围成的区域的正向边界曲线。
+      计算 $oint_L (2x y - x^2) dif x + (x + y^2) dif y$，其中 $L$ 为由抛物线 $y = x^2$ 和 $y^2 = x$ 所围成的区域的正向边界曲线
     ],
     solution: [
       $ Q_x - P_y = 1 - 2x $
-          $ I = int_0^1 int_(x^2)^(sqrt(x)) (1 - 2x) dif y dif x = int_0^1 (1 - 2x)(sqrt(x) - x^2) dif x = 1/30 $
+      $ I = int_0^1 int_(x^2)^(sqrt(x)) (1 - 2x) dif y dif x = int_0^1 (1 - 2x)(sqrt(x) - x^2) dif x = 1/30 $
     ],
   ),
   (
     kind: "compute",
     stem: [
-      计算 $int_L (ee^x sin y - m y) dif x + (ee^x cos y - m) dif y$，其中 $L$ 为圆 $x^2 + y^2 = a x$ ($a > 0$) 上从点 $(a, 0)$ 到点 $(0, 0)$ 的上半部分。
+      计算 $int_L (ee^x sin y - m y) dif x + (ee^x cos y - m) dif y$，其中 $L$ 为圆 $x^2 + y^2 = a x$ ($a > 0$) 上从点 $(a, 0)$ 到点 $(0, 0)$ 的上半部分
     ],
     solution: [
       补 $S$: 从 $(0,0)$ 到 $(a,0)$ 的线段，且 $int_S = 0$。$C = L + S$ 为正向。
-          $ Q_x - P_y = m $。$ I = iint_D m dif sigma = m dot pi (a/2)^2 = pi m a^2/8 $
+      $ Q_x - P_y = m $。$ I = iint_D m dif sigma = m dot pi (a/2)^2 = pi m a^2/8 $
     ],
   ),
   (
     kind: "compute",
     stem: [
-      计算 $(oint_L ((x + y) dif x - (x - y) dif y))/(x^2 + y^2)$，其中 $L$ 为一条无重点、分段光滑且不经过坐标原点的连续闭曲线，取逆时针方向。
+      计算 $(oint_L (x + y) dif x - (x - y) dif y)/(x^2 + y^2)$，其中 $L$ 为一条无重点、分段光滑且不经过坐标原点的连续闭曲线，取逆时针方向
     ],
     solution: [
       $ = (x dif x + y dif y)/(x^2+y^2) + (y dif x - x dif y)/(x^2+y^2) = dif (ln sqrt(x^2+y^2)) - dif theta $
-          闭路积分第一项为 0。原点在内时 $I = -2 pi$，在外时 $I = 0$。
+      闭路积分第一项为 0。原点在内时 $I = -2 pi$，在外时 $I = 0$。
     ],
   ),
 )
