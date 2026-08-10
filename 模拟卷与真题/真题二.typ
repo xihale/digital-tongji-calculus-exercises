@@ -57,7 +57,7 @@
   ),
   (
     kind: "choice",
-    stem: [$x = 1$ 是函数 $f(x) = (ln x)/|x - 1|$ 的],
+    stem: [$x = 1$ 是函数 $f(x) = (ln x)/(|x - 1|)$ 的],
     options: ([可去间断点], [跳跃间断点], [无穷间断点], [振荡间断点]),
     answer: [B],
     solution: [
@@ -118,7 +118,7 @@
     kind: "choice",
     stem: [
       设函数 $f(x)$ 连续，则
-      $lim_(x -> 2) (1/(x - 2)) integral_4^(2x) f(t/2) dif t =$
+      $lim_(x -> 2) 1/(x - 2) integral_4^(2x) f(t/2) dif t =$
     ],
     options: ([$f(2)$], [$f(1)$], [$2 f(2)$], [$2 f(1)$]),
     answer: [C],

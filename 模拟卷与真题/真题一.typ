@@ -1,6 +1,6 @@
 // 数据层：只放内容。公式一律行内。
 #import "../lib/render.typ": book-section
-#import "../lib/figures.typ": fig-piecewise-limits, fig-parabola-region
+#import "../lib/figures.typ": fig-parabola-region, fig-piecewise-limits
 
 #let section-title = [高等数学(上册)期末测试真题(一)]
 
@@ -37,7 +37,7 @@
     stem: [
       设函数
       $f(x) = cases(
-        (2/pi) arctan 1/x & x < 0,
+        2/pi arctan 1/x & x < 0,
         (1 + x)^x & x >= 0,
       )$，
       则 $x = 0$ 是 $f(x)$ 的
