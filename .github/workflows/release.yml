@@ -1,0 +1,107 @@
+# push v* tag → make all → GitHub Release（挂三态 PDF）+ 部署 Pages 发布页
+# 版本号由 Makefile 的 git describe 注入，贴 tag 时封面即为该 tag。
+# Pages 源需在仓库 Settings → Pages 设为 "GitHub Actions"。
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # git describe 需要完整 tag 历史
+          fetch-depth: 0
+
+      - name: Install CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-noto-cjk
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: 0.15.1
+
+      - name: Build PDFs
+        run: |
+          echo "VERSION=$(git describe --tags --always --dirty)"
+          make all
+          ls -lh 高等数学习题册*.pdf
+
+      - name: Upload PDFs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: |
+            高等数学习题册.pdf
+            高等数学习题册_附答案.pdf
+            高等数学习题册_纯答案.pdf
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Release ${{ github.ref_name }}
+          generate_release_notes: true
+          body: |
+            ## 高等数学习题册 ${{ github.ref_name }}
+
+            CI 根据 tag 自动构建三态 PDF。
+
+            | 文件 | 说明 |
+            |------|------|
+            | `高等数学习题册.pdf` | 练习版（纯题） |
+            | `高等数学习题册_附答案.pdf` | 完整版（题 + 详解） |
+            | `高等数学习题册_纯答案.pdf` | 答案速查 + 详解 |
+          files: |
+            高等数学习题册.pdf
+            高等数学习题册_附答案.pdf
+            高等数学习题册_纯答案.pdf
+
+  pages:
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      # web 分支含 index.html + CNAME，作为 Pages 根
+      - name: Checkout web branch
+        uses: actions/checkout@v4
+        with:
+          ref: web
+
+      - name: Download PDFs
+        uses: actions/download-artifact@v4
+        with:
+          name: pdfs
+          path: latest
+
+      # 改名为 URL 友好的 ASCII，与 index.html 链接对应
+      - name: Rename PDFs to latest/
+        run: |
+          mv "latest/高等数学习题册.pdf"           latest/practice.pdf
+          mv "latest/高等数学习题册_附答案.pdf"     latest/full.pdf
+          mv "latest/高等数学习题册_纯答案.pdf"     latest/answers.pdf
+          ls -lh latest/
+
+      - name: Inject version
+        run: sed -i "s/{{VERSION}}/${{ github.ref_name }}/" index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4
