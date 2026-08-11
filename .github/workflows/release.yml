@@ -96,8 +96,12 @@ jobs:
       - name: Inject version
         run: sed -i "s/{{VERSION}}/${{ github.ref_name }}/" index.html
 
+      # web 分支内容（index.html/CNAME/下载的 latest/）就在仓库根，
+      # 没有独立 _site，故显式指定 path: .
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
 
       - name: Deploy to GitHub Pages
         id: deploy
