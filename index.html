@@ -25,12 +25,17 @@
       }
       .links { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0 2rem; }
       .links a {
-        display: block; padding: 0.9rem 1.5rem; background: #0066cc;
-        color: #fff; text-decoration: none; border-radius: 6px;
-        font-size: 1.05rem; transition: background 0.2s;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0.9rem 1.25rem; background: #eef4ff; color: #0066cc;
+        text-decoration: none; border-radius: 8px; font-size: 1.05rem;
+        font-weight: 500; transition: background 0.2s;
       }
-      .links a:hover { background: #0052a3; }
-      .links a .desc { display: block; font-size: 0.85rem; opacity: 0.85; margin-top: 0.15rem; }
+      .links a:hover { background: #dde9ff; }
+      .links a .desc {
+        display: block; font-size: 0.85rem; font-weight: 400;
+        color: #5a7fb8; margin-top: 0.15rem;
+      }
+      .links a .arrow { margin-left: 1rem; opacity: 0.6; font-size: 1.1rem; flex-shrink: 0; }
       footer {
         margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #eee;
         color: #888; font-size: 0.9rem; text-align: center;
@@ -38,8 +43,11 @@
       footer a { color: #0066cc; text-decoration: none; }
       footer a:hover { text-decoration: underline; }
       @media (max-width: 600px) {
-        body { padding: 1rem; }
-        .container { padding: 1.5rem; }
+        body { padding: 0; background: #fff; }
+        .container {
+          max-width: none; padding: 1.5rem;
+          border-radius: 0; box-shadow: none;
+        }
         h1 { font-size: 1.5rem; }
       }
     </style>
@@ -55,16 +63,25 @@
 
       <div class="links">
         <a href="latest/practice.pdf">
-          练习版（纯题）
-          <span class="desc">仅题干，用于自测</span>
+          <span>
+            练习版（纯题）
+            <span class="desc">仅题干，用于自测</span>
+          </span>
+          <span class="arrow">›</span>
         </a>
         <a href="latest/full.pdf">
-          附答案（题 + 详解）
-          <span class="desc">题干与蓝色详解并列</span>
+          <span>
+            附答案（题 + 详解）
+            <span class="desc">题干与蓝色详解并列</span>
+          </span>
+          <span class="arrow">›</span>
         </a>
         <a href="latest/answers.pdf">
-          纯答案（速查 + 详解）
-          <span class="desc">无题干，答案速查与详解</span>
+          <span>
+            纯答案（速查 + 详解）
+            <span class="desc">无题干，答案速查与详解</span>
+          </span>
+          <span class="arrow">›</span>
         </a>
       </div>
 
