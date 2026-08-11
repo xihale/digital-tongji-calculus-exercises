@@ -96,6 +96,22 @@ make watch                    # 默认练习版
 WATCH=full make watch         # 完整版
 ```
 
+### 发版
+
+推送符合 `v*` 的 git tag 后，GitHub Actions（`.github/workflows/release.yml`）会：
+
+1. 检出完整历史（供 `git describe`）
+2. `make all` 编译三态 PDF
+3. 创建 GitHub Release 并挂上产物
+
+```bash
+git tag -a v0.2.1 -m "v0.2.1"
+git push origin v0.2.1
+# 或：git push origin master --tags
+```
+
+**注意**：workflow 文件必须存在于**被 tag 的那次提交**里，否则该 tag 不会触发 CI。
+
 ## License
 
 本项目采用 [MIT License](./LICENSE) 开源许可证。
