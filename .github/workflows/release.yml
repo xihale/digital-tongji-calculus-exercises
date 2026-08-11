@@ -35,16 +35,21 @@ jobs:
         run: |
           echo "VERSION=$(git describe --tags --always --dirty)"
           make all
-          ls -lh 高等数学习题册*.pdf
+          # Release asset 名不能含中文（GitHub 处理中文 label 会 404），
+          # 故产物在 CI 内一律改名成 ASCII，与 web/index.html 链接保持一致。
+          mv 高等数学习题册.pdf           practice.pdf
+          mv 高等数学习题册_附答案.pdf     full.pdf
+          mv 高等数学习题册_纯答案.pdf     answers.pdf
+          ls -lh *.pdf
 
       - name: Upload PDFs artifact
         uses: actions/upload-artifact@v4
         with:
           name: pdfs
           path: |
-            高等数学习题册.pdf
-            高等数学习题册_附答案.pdf
-            高等数学习题册_纯答案.pdf
+            practice.pdf
+            full.pdf
+            answers.pdf
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -58,13 +63,13 @@ jobs:
 
             | 文件 | 说明 |
             |------|------|
-            | `高等数学习题册.pdf` | 练习版（纯题） |
-            | `高等数学习题册_附答案.pdf` | 完整版（题 + 详解） |
-            | `高等数学习题册_纯答案.pdf` | 答案速查 + 详解 |
+            | `practice.pdf` | 练习版（纯题） |
+            | `full.pdf` | 完整版（题 + 详解） |
+            | `answers.pdf` | 答案速查 + 详解 |
           files: |
-            高等数学习题册.pdf
-            高等数学习题册_附答案.pdf
-            高等数学习题册_纯答案.pdf
+            practice.pdf
+            full.pdf
+            answers.pdf
 
   pages:
     needs: release
@@ -87,14 +92,6 @@ jobs:
         with:
           name: pdfs
           path: latest
-
-      # 改名为 URL 友好的 ASCII，与 index.html 链接对应
-      - name: Rename PDFs to latest/
-        run: |
-          mv "latest/高等数学习题册.pdf"           latest/practice.pdf
-          mv "latest/高等数学习题册_附答案.pdf"     latest/full.pdf
-          mv "latest/高等数学习题册_纯答案.pdf"     latest/answers.pdf
-          ls -lh latest/
 
       - name: Inject version
         run: sed -i "s/{{VERSION}}/${{ github.ref_name }}/" index.html
