@@ -59,7 +59,7 @@
     kind: "compute",
     stem: [求下列微分方程满足所给初值条件的特解：],
     parts: (
-      [$(dif y)/(dif x) + y/x = sin x / x$，$y|_(x=pi) = 1$；],
+      [$(dif y)/(dif x) + y/x = (sin x)/x$，$y|_(x=pi) = 1$；],
       [$(dif y)/(dif x) + 3y = 8$，$y|_(x=0) = 2$。],
     ),
     solution-parts: (
@@ -89,7 +89,9 @@
     ),
     solution-parts: (
       [
-        设 $y > 0$，令 $u = ln y$，得 $ln y = C x - ln x$，即 $y = e^(C x)/x$。
+        设 $y > 0$，左端 $x y' + y = (x y)'$，右端为 $y ln(x y)$。
+        令 $u = x y$，得 $(dif u)/(u ln u) = (dif x)/x$，积分得 $ln|ln u| = ln|x| + C$，
+        即 $ln(x y) = C_1 x$，故 $y = e^(C_1 x)/x$。
       ],
       [
         令 $u = x y$，分离变量并积分得 $ln|y| - 1/(x y) - 1/(2 x^2 y^2) = C$。

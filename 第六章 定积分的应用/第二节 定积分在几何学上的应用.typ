@@ -82,7 +82,7 @@
     kind: "compute",
     stem: [
       求由摆线 $x = a(t - sin t)$，$y = a(1 - cos t)$（$0 <= t <= pi$）
-      的一拱与 $x$ 轴所围成图形的面积
+      的一段与 $x$ 轴所围成图形的面积
     ],
     solution: [
       参数面积公式 $S = integral y x'(t) dif t$，其中 $x'(t) = a(1 - cos t)$。
