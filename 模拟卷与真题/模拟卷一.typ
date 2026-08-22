@@ -17,7 +17,7 @@
     ),
     answer: [B],
     solution: [
-      A. $sin x - x tilde -x^3/6$，为高阶；B. $lim (ln(1-x))/x = -1 != 0,plus.minus 1$，同阶不等价；
+      A. $sin x - x tilde -x^3/6$，为高阶；B. $lim_(x->0) (ln(1-x))/x = -1 (!= 0, != 1)$，同阶不等价；
       C. $x^2 sin x tilde x^3$，高阶；D. $e^x - 1 tilde x$，等价。
     ],
   ),
