@@ -53,7 +53,7 @@
       则 $m <= overline(f) <= M$，其中 $overline(f)$ 为算术平均。
       $f$ 在 $[x_1, x_n]$ 上连续，由介值定理存在 $xi in [x_1, x_n]$ 使 $f(xi) = overline(f)$。
       若各 $f(x_i)$ 不全相等，则 $m < overline(f) < M$，故 $xi$ 可取在 $(x_1, x_n)$ 内；
-      若全相等，则任意 $xi in (x_1, x_n)$ 均可。
+      若全相等，则 $overline(f) = f(x_2)$，取 $xi = x_2 in (x_1, x_n)$ 即可。
     ],
   ),
 )
