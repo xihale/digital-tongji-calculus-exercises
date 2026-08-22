@@ -98,7 +98,7 @@
       ],
       [
         令 $y = x^(sin x) = e^(sin x ln x)$。
-        $lim sin x ln x = lim ln x / csc x$（洛必达）$= lim sin^2 x/(x cos x) = 0$，
+        $lim sin x ln x = lim ln x / csc x$（洛必达）$= lim (-sin^2 x)/(x cos x) = 0$，
         故极限为 $e^0 = 1$。
       ],
       [

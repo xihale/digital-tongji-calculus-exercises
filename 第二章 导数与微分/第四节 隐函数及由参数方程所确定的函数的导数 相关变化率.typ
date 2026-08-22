@@ -90,7 +90,7 @@
     solution: [
       对 $y = tan(x + y)$ 求导：$y' = sec^2(x+y)(1 + y')$，
       解得 $y' = - (sec^2(x+y))/(tan^2(x+y))$。
-      再求导并代入 $y'$，化简得 $(dif^2 y)/(dif x^2) = (2 sec^6(x+y))/(tan^5(x+y))$。
+      再求导并代入 $y'$，化简得 $(dif^2 y)/(dif x^2) = - (2 sec^2(x+y))/(tan^5(x+y))$。
     ],
   ),
   (
