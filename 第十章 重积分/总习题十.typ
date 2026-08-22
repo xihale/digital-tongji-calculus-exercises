@@ -10,7 +10,7 @@
     kind: "judge",
     kind-title: [一、判断题],
     stem: [
-      设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，$D_1$ 为 $D$ 在 first 象限的区域，则
+      设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，$D_1$ 为 $D$ 在第一象限的区域，则
       $iint_D sqrt(1 - x^2 - y^2) dif sigma = 4 iint_(D_1) sqrt(1 - x^2 - y^2) dif sigma$
     ],
     answer: [√],
@@ -32,9 +32,12 @@
   (
     kind: "judge",
     stem: [
-      二重积分 $iint_D f(x, y) dif sigma$ 的几何意义是以曲面 $z = f(x, y)$ 为曲顶，以区域 $D$ 为底面的曲顶柱体的体积。（注：需 $f(x,y) >= 0$）
+      二重积分 $iint_D f(x, y) dif sigma$ 的几何意义是以曲面 $z = f(x, y)$ 为曲顶，以区域 $D$ 为底面的曲顶柱体的体积
     ],
     answer: [×],
+    solution: [
+      只有当 $f(x, y) >= 0$ 时，$iint_D f(x, y) dif sigma$ 才表示曲顶柱体的体积；当 $f(x, y)$ 变号时，它表示 $x O y$ 面上、下方曲顶柱体体积的代数和。
+    ],
   ),
   (
     kind: "judge",
@@ -43,7 +46,7 @@
     ],
     answer: [×],
     solution: [
-      被积函数 $x$ 对 $x$ 轴奇对称值抵消，在 $Omega$ 上积分为 0。
+      被积函数 $x$ 是 $x$ 的奇函数，$Omega$ 关于 $y O z$ 面对称，故积分为 0。
     ],
   ),
   (
@@ -108,7 +111,7 @@
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $int_0^1 dif x int_x^1 x^2 e^(-y^2) dif y .$
+      计算 $int_0^1 dif x int_x^1 x^2 e^(-y^2) dif y$
     ],
     solution: [
       交换积分次序：$0 <= y <= 1, 0 <= x <= y$。
@@ -174,15 +177,15 @@
     kind: "compute",
     stem: [
       一均匀物体（密度 $rho$ 为常数）占有的空间闭区域 $Omega$ 由曲面 $z = x^2 + y^2$ 和平面 $z = 0$ ， $|x| = a, |y| = a$ 所围成，求：
-      （1）物体的体积； (2) 物体的质心； （3）物体关于 $z$ 轴的转动惯量
+      （1）物体的体积；（2）物体的质心；（3）物体关于 $z$ 轴的转动惯量
     ],
     solution: [
-      (1) $(8 a^4)/3$; (2) $(0, 0, 7/(15 a^2))$; (3) $(112 rho a^6)/45$
+      (1) $(8 a^4)/3$; (2) $(0, 0, (7 a^2)/15)$; (3) $(112 rho a^6)/45$
 
       (1)
       $ V = iint_D (x^2 + y^2) dif sigma = (8 a^4)/3 $
       (2)
-      $ bar(x) = 0, bar(y) = 0, bar(z) = M_(x y)/V = (56/45 a^6)/(8/3 a^4) = 7/(15 a^2) $
+      $ bar(x) = 0, bar(y) = 0, bar(z) = M_(x y)/V = (56/45 a^6)/(8/3 a^4) = (7 a^2)/15 $
       (3)
       $ I_z = rho iint_D (x^2+y^2)^2 dif sigma = (112 rho a^6)/45 $
     ],

@@ -26,7 +26,7 @@
   (
     kind: "choice",
     stem: [
-      判定级数 $(sum_(n=1)^oo 1)/(n^(1 +(1)/(n)))$ 的敛散性，下列说法正确的是
+      判定级数 $sum_(n=1)^oo (1)/(n^(1 +(1)/(n)))$ 的敛散性，下列说法正确的是
     ],
     options: (
       [因为 $1 +(1)/(n)> 0$，所以此级数收敛],
@@ -38,19 +38,19 @@
     solution: [
       由于 \
       $lim_(n arrow oo) ((1)/(n^(1+(1)/(n))))/((1)/(n)) = lim_(n arrow oo) 1/(n^((1)/(n))) = 1$， \
-      由极限比较审敛法可知原级数与调和级数 $sum frac(1, n, style: "horizontal")$ 同敛散，故原级数发散。选项 A、B 是错误结论，C 不成立（实际上当 $n$ 较大时 $< frac(1, n, style: "horizontal")$），故选 D。
+      由极限比较审敛法可知原级数与调和级数 $sum frac(1, n, style: "horizontal")$ 同敛散，故原级数发散。选项 A、B 是错误结论，C 不成立（实际上 $frac(1, n^(1+(1)/(n)), style: "horizontal") < frac(1, n, style: "horizontal")$），故选 D。
     ],
   ),
   (
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      级数 $(sum_(n=1)^oo sqrt(2n+1))/(n^alpha)$ 收敛的充要条件是 $alpha$ 满足条件
+      级数 $sum_(n=1)^oo (sqrt(2n+1))/(n^alpha)$ 收敛的充要条件是 $alpha$ 满足条件
     ],
     answer: [$alpha >(3)/(2)$],
     solution: [
       有 \
-      $(sqrt(2n+1))/(n^((1)/(2)) arrow sqrt(2))$（$n arrow oo$）， \
+      $(sqrt(2n+1))/(n^((1)/(2))) arrow sqrt(2)$（$n arrow oo$）， \
       故可与 $(1)/(n^(alpha-(1)/(2)))$ 作极限比较。 \
       与 $p$ 级数比较，收敛当且仅当 \
       $alpha - frac(1, 2, style: "horizontal") > 1$，即 \
@@ -60,7 +60,7 @@
   (
     kind: "blank",
     stem: [
-      当 $p$ 满足条件 #blank() 时，级数 $(sum_(n=1)^oo 1)/(n^p)$ 收敛
+      当 $p$ 满足条件 #blank() 时，级数 $sum_(n=1)^oo (1)/(n^p)$ 收敛
     ],
     answer: [$p > 1$],
     solution: [
@@ -90,8 +90,8 @@
       用比较审敛法或极限形式的比较审敛法判定下列级数的敛散性： \
       (1) $1 +(1)/(3)+(1)/(5)+ dots +(1)/(2n-1)+ dots$； \
       (2) $(1)/(2 dot 5)+(1)/(3 dot 6)+ dots +(1)/((n+1)(n+4))+ dots$； \
-      (3) $sin pi / 2 + sin(pi/2^2) + dots + sin(pi/2^n) + dots$； \
-      (4) $(sum_(n=1)^oo 1)/(1 + a^n)$ ($a > 0$)
+      (3) $sin(pi/2) + sin(pi/2^2) + dots + sin(pi/2^n) + dots$； \
+      (4) $sum_(n=1)^oo (1)/(1 + a^n)$ ($a > 0$)
     ],
     solution: [
       (1) $u_n=(1)/(2n-1)$。 \
@@ -115,19 +115,19 @@
     kind: "compute",
     stem: [
       用比值审敛法判定下列级数的敛散性： \
-      (1) $(sum_(n=1)^oo 2^n dot n!)/(n^n)$； \
+      (1) $sum_(n=1)^oo (2^n dot n!)/(n^n)$； \
       (2) $sum_(n=1)^oo n tan(pi/2^(n+1))$
     ],
     solution: [
       (1) 设 $u_n=(2^n n!)/(n^n)$， \
-      $(u_(n+1))/(u_n) = (2 ((n)/(n+1))^n arrow 2)/(ee) < 1$， \
+      $(u_(n+1))/(u_n) = 2 ((n)/(n+1))^n arrow (2)/(ee) < 1$， \
       由比值审敛法，级数收敛。 \
       (2) 设 $v_n=n tan(pi/2^(n+1))$。 \
       且 \
       $lim_(x arrow 0) (tan x)/(x)= 1$，故 \
       $lim_(n arrow oo) (n tan(pi/2^(n+1)))/((n pi)/(2^(n+1))) = 1$。 \
       再看 $w_n = frac(n, 2^n, style: "horizontal")$，有 \
-      $(w_(n+1))/(w_n) = (n+1)/((2n) arrow frac(1, 2, style: "horizontal")) < 1$，故 $sum w_n$ 收敛. \
+      $(w_(n+1))/(w_n) = (n+1)/(2n) arrow frac(1, 2, style: "horizontal") < 1$，故 $sum w_n$ 收敛。 \
       由极限比较，$sum v_n$ 亦收敛。
     ],
   ),
@@ -141,10 +141,10 @@
     solution: [
       (1) 设 $u_n=((n)/(2n+1))^n$， \
       则 \
-      $root(n, u_n) = (n)/((2n+1) arrow frac(1, 2, style: "horizontal")) < 1$。 \
+      $root(n, u_n) = (n)/(2n+1) arrow frac(1, 2, style: "horizontal") < 1$。 \
       由根值审敛法，级数收敛。 \
       (2) 设 $u_n=((b)/(a_n))^n$，则 \
-      $root(n, u_n) = (b)/(a_n arrow b)/(a)$。 \
+      $root(n, u_n) = (b)/(a_n) arrow (b)/(a)$。 \
       因此： \
       若 $(b)/(a) < 1$（即 $b < a$）则收敛； \
       若 $(b)/(a) > 1$（即 $b > a$）则发散； \

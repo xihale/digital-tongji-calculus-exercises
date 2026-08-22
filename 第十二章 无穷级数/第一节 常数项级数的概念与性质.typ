@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      级数 $(sum_(n=1)^oo (-1)^(n+1))/(3^n)$ 的和等于
+      级数 $sum_(n=1)^oo ((-1)^(n+1))/(3^n)$ 的和等于
     ],
     options: (
       [$-(1)/(4)$],
@@ -30,10 +30,10 @@
       下列级数中收敛的是
     ],
     options: (
-      [$(sum_(n=1)^oo 4^n + 8^n)/(8^n)$],
-      [$(sum_(n=1)^oo 8^n - 4^n)/(8^n)$],
-      [$(sum_(n=1)^oo 2^n + 4^n)/(8^n)$],
-      [$(sum_(n=1)^oo 2^n dot 4^n)/(8^n)$],
+      [$sum_(n=1)^oo ((4^n + 8^n))/(8^n)$],
+      [$sum_(n=1)^oo ((8^n - 4^n))/(8^n)$],
+      [$sum_(n=1)^oo ((2^n + 4^n))/(8^n)$],
+      [$sum_(n=1)^oo ((2^n dot 4^n))/(8^n)$],
     ),
     answer: [C],
     solution: [
@@ -63,9 +63,9 @@
     ],
     options: (
       [$sum_(n=1)^oo ln(1 +(1)/(n))$],
-      [$(sum_(n=1)^oo 1)/(3^n)$],
+      [$sum_(n=1)^oo (1)/(3^n)$],
       [$sum_(n=1)^oo 1 / (n (n + 2))$],
-      [$(sum_(n=1)^oo (3^n + (-1)^n))/(4^n)$],
+      [$sum_(n=1)^oo ((3^n + (-1)^n))/(4^n)$],
     ),
     answer: [A],
     solution: [
@@ -93,7 +93,7 @@
       设级数 $sum_(n=1)^oo 1 / ((2n - 1) (2n + 1))$，则 $s_n =$ #blank()，$lim_(n arrow oo) s_n =$ #blank()
     ],
     answers: (
-      [$(1)/(2 (1 -(1)/(2n+1)))$],
+      [$(1)/(2) (1 - (1)/(2n+1))$],
       [$(1)/(2)$],
     ),
     solution: [
@@ -146,7 +146,7 @@
     stem: [
       根据级数收敛与发散的定义判定下列级数的敛散性： \
       (1) $(1)/(1 dot 3)+(1)/(3 dot 5)+ dots +(1)/((2n-1)(2n+1))+ dots$； \
-      (2) $sin pi / 6 + sin(2 pi/6) + dots + sin(n pi/6) + dots$； \
+      (2) $sin(pi/6) + sin(2 pi/6) + dots + sin(n pi/6) + dots$； \
       (3) $sum_(n=1)^oo ln(1 +(1)/(n))$
     ],
     solution: [

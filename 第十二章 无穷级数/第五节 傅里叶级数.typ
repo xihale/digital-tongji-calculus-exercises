@@ -20,7 +20,7 @@
     ),
     answer: [D],
     solution: [
-      狄利克雷收敛定理指出，在间断点 $x$ 处，和函数 $S(x) =(f(x^-) + f(x^+))/(2)$。函数在 $x = pi$ (即 $x = (2k-1)pi$) 处间断，$f(pi^-) = pi, f(pi^+) = f(-pi^+) = 0$，故 $S(pi) =(pi)/(2)$。在连续点处 $S(x) = f(x)$。处选 D。
+      狄利克雷收敛定理指出，在间断点 $x$ 处，和函数 $S(x) =(f(x^-) + f(x^+))/(2)$。函数在 $x = pi$ (即 $x = (2k-1)pi$) 处间断，$f(pi^-) = pi, f(pi^+) = f(-pi^+) = 0$，故 $S(pi) =(pi)/(2)$。在连续点处 $S(x) = f(x)$。故选 D。
     ],
   ),
   (
@@ -58,7 +58,7 @@
   (
     kind: "choice",
     stem: [
-      利用函数 $f(x) = x^2$ 在区间 $[-pi, pi]$ 上的傅里叶级数展开式可得 $(sum_(n=1)^oo 1)/(n^2)=$    ],
+      利用函数 $f(x) = x^2$ 在区间 $[-pi, pi]$ 上的傅里叶级数展开式可得 $sum_(n=1)^oo (1)/(n^2)=$    ],
     options: (
       [$(pi^2)/(3)$],
       [$(pi^2)/(6)$],
@@ -67,7 +67,7 @@
     ),
     answer: [B],
     solution: [
-      $f(x) = x^2$ 的傅里叶级数为 $(pi^2)/(3)+(4 sum_(n=1)^oo (-1)^n)/(n^2 cos n x)$。令 $x = pi$，得 $pi^2 =(pi^2)/(3)+(4 sum_(n=1)^oo 1)/(n^2)$，整理得 $(sum_(n=1)^oo 1)/(n^2)=(pi^2)/(6)$。
+      $f(x) = x^2$ 的傅里叶级数为 $(pi^2)/(3)+4 sum_(n=1)^oo ((-1)^n)/(n^2) cos n x$。令 $x = pi$，得 $pi^2 =(pi^2)/(3)+4 sum_(n=1)^oo (1)/(n^2)$，整理得 $sum_(n=1)^oo (1)/(n^2)=(pi^2)/(6)$。
     ],
   ),
   (
@@ -91,14 +91,15 @@
     stem: [
       设函数 $f(x) = pi x + x^2$ ($-pi <= x <= pi$)，且其傅里叶级数为 $(a_0)/(2)+ sum_(n=1)^oo (a_n cos n x + b_n sin n x)$，则 $b_3 =$
     ],
-    answer: [$(2)/(3)$],
+    answer: [$(2 pi)/(3)$],
     solution: [
       按公式 \
-      $b_n=(1)/(pi int_(-pi)^pi f(x) sin n x dif x)$。 \
+      $b_n=(1)/(pi) int_(-pi)^pi f(x) sin n x dif x$。 \
       其中 $x^2 sin n x$ 为奇函数，积分为 0，故只需算 \
-      $(1)/(pi int_(-pi)^pi pi x sin n x dif x)$。 \
-      代入 $n=3$ 计算后得 \
-      $b_3=(2)/(3)$。
+      $(1)/(pi) int_(-pi)^pi pi x sin n x dif x$。 \
+      分部积分得 \
+      $b_n=(2 pi (-1)^(n+1))/(n)$，代入 $n=3$ 得 \
+      $b_3=(2 pi)/(3)$。
     ],
   ),
   (
@@ -109,9 +110,9 @@
     answer: [$7$],
     solution: [
       狄利克雷定理给出 \
-      $S(0)=(1)/(2(f(0^-)+f(0^+)))$。 \
+      $S(0)=(1)/(2)(f(0^-)+f(0^+))$。 \
       已知 $S(0)=3, f(0^-)=-1$，故 \
-      $3=(1)/(2(-1+f(0^+)))$， \
+      $3=(1)/(2)(-1+f(0^+))$， \
       解得 \
       $f(0^+)=7$。
     ],
@@ -139,11 +140,11 @@
     answer: [$a_n^* = a_n$，$b_n^* = -b_n$],
     solution: [
       由定义 \
-      $a_n^*=(1)/(pi int_(-pi)^pi g(x) cos n x dif x)$ \
-      $=(1)/(pi int_(-pi)^pi f(-x) cos n x dif x)$。 \
+      $a_n^*=(1)/(pi) int_(-pi)^pi g(x) cos n x dif x$ \
+      $=(1)/(pi) int_(-pi)^pi f(-x) cos n x dif x$。 \
       令 $t=-x$ 后利用 $cos$ 偶性，可得 $a_n^*=a_n$。 \
       同理 \
-      $b_n^*=(1)/(pi int_(-pi)^pi f(-x) sin n x dif x)$， \
+      $b_n^*=(1)/(pi) int_(-pi)^pi f(-x) sin n x dif x$， \
       令 $t=-x$ 后利用 $sin$ 奇性，得 \
       $b_n^*=-b_n$。
     ],
@@ -156,11 +157,11 @@
     ],
     solution: [
       正弦级数系数 \
-      $b_n=(2)/(pi int_0^pi (pi-(x)/(2)) sin n x dif x)$。 \
+      $b_n=(2)/(pi) int_0^pi (pi-(x)/(2)) sin n x dif x$。 \
       分部积分并化简可得 \
-      $b_n=(2)/(n)+((-1)^n)/(n)$。 \
+      $b_n=(2)/(n)+((-1)^(n+1))/(n)$。 \
       因而 \
-      $f(x)=sum_(n=1)^oo ((2)/(n)+((-1)^n)/(n)) sin n x, x in (0,pi)$。
+      $f(x)=sum_(n=1)^oo ((2)/(n)+((-1)^(n+1))/(n)) sin n x, x in (0,pi)$。
     ],
   ),
   (
@@ -171,14 +172,14 @@
     solution: [
       函数为偶函数，故 $b_n=0$。 \
       计算 \
-      $a_0=(1)/(pi int_(-pi)^pi (3x^2+1) dif x)=2(pi^2+1)$， \
+      $a_0=(1)/(pi) int_(-pi)^pi (3x^2+1) dif x=2(pi^2+1)$， \
       故常数项为 $(a_0)/(2)=pi^2+1$。 \
       再由 \
-      $a_n=(1)/(pi int_(-pi)^pi (3x^2+1) cos n x dif x)$ \
+      $a_n=(1)/(pi) int_(-pi)^pi (3x^2+1) cos n x dif x$ \
       得 \
       $a_n=(12(-1)^n)/(n^2)$。 \
       因而 \
-      $f(x)=pi^2+1+(12 sum_(n=1)^oo (-1)^n)/(n^2 cos n x)$。
+      $f(x)=pi^2+1+12 sum_(n=1)^oo ((-1)^n)/(n^2) cos n x$。
     ],
   ),
   (
@@ -188,11 +189,11 @@
     ],
     solution: [
       在端点 $x=pi$ 处，傅里叶级数收敛到左右极限平均值： \
-      $S(pi)=(1)/(2(f(pi-0)+f(-pi+0)))$。 \
+      $S(pi)=(1)/(2)(f(pi-0)+f(-pi+0))$。 \
       其中 \
       $f(pi)=pi ee^pi, f(-pi)=-pi ee^(-pi)$。 \
       故 \
-      $S(pi)=(1)/(2[pi ee^pi-pi ee^(-pi)])=pi sinh pi$。
+      $S(pi)=(1)/(2)(pi ee^pi-pi ee^(-pi))=pi sinh pi$。
     ],
   ),
 )

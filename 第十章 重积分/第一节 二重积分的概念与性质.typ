@@ -93,7 +93,7 @@
     answer: [$(pi a^3)/(6)$],
     solution: [
       变换为极坐标：$x = r cos theta, y = r sin theta$。
-          $ I = int_0^(pi/2) dif theta int_0^a sqrt(a^2 - r^2) r dif r = pi/2 times [-1/(3 (a^2 - r^2)^(3/2))]_0^a = (pi a^3)/6 $
+          $ I = int_0^(pi/2) dif theta int_0^a sqrt(a^2 - r^2) r dif r = pi/2 times [-1/3 (a^2 - r^2)^(3/2)]_0^a = (pi a^3)/6 $
     ],
   ),
   (
