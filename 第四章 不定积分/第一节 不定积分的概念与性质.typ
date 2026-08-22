@@ -59,12 +59,12 @@
       ],
       [
         $cos 2x = cos^2 x - sin^2 x$，
-        原式 $= integral (1/sin^2 x - 1/cos^2 x) dif x = integral (csc^2 x - sec^2 x) dif x$
+        原式 $= integral (1/(sin^2 x) - 1/(cos^2 x)) dif x = integral (csc^2 x - sec^2 x) dif x$
         $= -cot x - tan x + C$。
       ],
       [
-        原式 $= integral [3 (2/3)^x - 2] dif x = 3 (2/3)^x / ln 2/3 - 2x + C$
-        $= -3 (2/3)^x / ln 3/2 - 2x + C$。
+        原式 $= integral [3 (2/3)^x - 2] dif x = 3 (2/3)^x / ln(2/3) - 2x + C$
+        $= -3 (2/3)^x / ln(3/2) - 2x + C$。
       ],
     ),
   ),

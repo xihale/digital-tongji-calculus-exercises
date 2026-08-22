@@ -37,7 +37,7 @@
     answer: [×],
     solution: [
       $x = 0$ 是积分区间内的奇点，属于反常积分，不能直接用牛顿–莱布尼茨公式。
-      应分两端极限：$lim_(epsilon -> 0^-) integral_(-2)^epsilon + lim_(delta -> 0^+) integral_delta^3$，
+      应分两端极限：$lim_(epsilon -> 0^-) integral_(-2)^epsilon (dif x)/x + lim_(delta -> 0^+) integral_delta^3 (dif x)/x$，
       两项均发散，故积分发散。
     ],
   ),

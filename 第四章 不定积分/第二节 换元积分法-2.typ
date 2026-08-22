@@ -52,7 +52,7 @@
     solution-parts: (
       [
         令 $x = tan t$（$t in (-pi/2, pi/2)$），则 $dif x = sec^2 t dif t$，$sqrt(1+x^2) = sec t$。
-        原式 $= integral sec t / tan t dif t = integral csc t dif t = ln|(csc t - cot t)| + C$
+        原式 $= integral (sec t)/(tan t) dif t = integral csc t dif t = ln|(csc t - cot t)| + C$
         （或 $-ln|csc t + cot t| + C$）。
         回代得 $ln |x|/(1 + sqrt(1+x^2)) + C$（差一常数形式等价）。
       ],
@@ -77,8 +77,8 @@
       ],
       [
         令 $x = sin t$，则 $dif x = cos t dif t$，$sqrt(1-x^2) = cos t$。
-        原式 $= integral cos t/(sin t + cos t) dif t$。
-        设 $I_1$ 为该积分，$I_2 = integral sin t/(sin t + cos t) dif t$，
+        原式 $= integral (cos t)/(sin t + cos t) dif t$。
+        设 $I_1$ 为该积分，$I_2 = integral (sin t)/(sin t + cos t) dif t$，
         则 $I_1 + I_2 = t$，$I_1 - I_2 = ln|sin t + cos t|$，
         故 $I_1 = 1/2 [t + ln|sin t + cos t|] + C$
         $= 1/2 [arcsin x + ln|x + sqrt(1-x^2)|] + C$。

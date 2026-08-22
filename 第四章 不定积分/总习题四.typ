@@ -153,8 +153,8 @@
     kind: "compute",
     stem: [设函数 $f(sin^2 x) = x/(sin x)$，求 $integral sqrt(x)/sqrt(1 - x) f(x) dif x$],
     solution: [
-      由 $f(sin^2 x) = x/sin x$ 得 $f(u) = arcsin sqrt(u)/sqrt(u)$。
-      故原式 $= integral arcsin sqrt(x)/sqrt(1-x) dif x$。
+      由 $f(sin^2 x) = x/(sin x)$ 得 $f(u) = (arcsin sqrt(u))/sqrt(u)$。
+      故原式 $= integral (arcsin sqrt(x))/sqrt(1-x) dif x$。
       令 $v = sqrt(x)$，再令 $w = arcsin v$，得
       $2 integral w sin w dif w = 2(-w cos w + sin w) + C$
       $= 2[-arcsin sqrt(x) · sqrt(1-x) + sqrt(x)] + C$。
@@ -164,7 +164,7 @@
     kind: "compute",
     stem: [已知函数 $f(x)$ 的一个原函数为 $ln^2 x$，求 $integral x f'(x) dif x$],
     solution: [
-      $f(x) = (ln^2 x)' = 2 ln x / x$。
+      $f(x) = (ln^2 x)' = (2 ln x)/x$。
       分部积分：$integral x f'(x) dif x = x f(x) - integral f(x) dif x$
       $= 2 ln x - ln^2 x + C$。
     ],

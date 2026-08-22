@@ -25,7 +25,7 @@
     kind: "judge",
     stem: [
       令 $t = tan x/2$，则
-      $integral (tan x)/(sin x + cos x - 1) dif x = integral 2/((1 - t)(1 - t^2)) dif t$
+      $integral (tan x)/(sin x + cos x - 1) dif x = integral A/((1 - t)(1 - t^2)) dif t$
       中系数 $A = 2$ 的写法正确
     ],
     answer: [√],
@@ -90,7 +90,7 @@
       ],
       [
         令 $t = tan x$，则 $dif x = dif t/(1+t^2)$，$sin^2 x = t^2/(1+t^2)$，
-        原式 $= integral dif t/(3 + 4t^2) = 1/(2 sqrt(3)) arctan(2 tan x / sqrt(3)) + C$。
+        原式 $= integral dif t/(3 + 4t^2) = 1/(2 sqrt(3)) arctan((2 tan x)/sqrt(3)) + C$。
       ],
     ),
   ),

@@ -158,8 +158,8 @@
         令 $u = ln x$：$integral_0^1 u dif u = 1/2$。
       ],
       [
-        洛必达：$lim_(x -> 0) (2x cos x)/sin x
-        = lim_(x -> 0) 2 cos x · (x / sin x) = 2$。
+        洛必达：$lim_(x -> 0) (2x cos x)/(sin x)
+        = lim_(x -> 0) 2 cos x · x/(sin x) = 2$。
       ],
       [
         令 $u = 5 - 4x$，$x = (5 - u)/4$，$x: -1 -> 1$ 对应 $u: 9 -> 1$，
@@ -168,7 +168,7 @@
         = (1/16)[(30 - 18) - (10 - 2/3)] = (1/16)(8/3) = 1/6$。
       ],
       [
-        分部：$u = log_2 x = ln x / ln 2$，$dif v = x dif x$，
+        分部：$u = log_2 x = (ln x)/(ln 2)$，$dif v = x dif x$，
         原式 $= [x^2/2 · log_2 x]_1^2 - (1/(2 ln 2)) integral_1^2 x dif x
         = 2 - (1/(2 ln 2)) · (3/2) = 2 - 3/(4 ln 2)$。
       ],

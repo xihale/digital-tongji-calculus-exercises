@@ -40,7 +40,7 @@
       [$dif(square) = 1/x^2 dif x$。],
     ),
     answers: (
-      [$1/a$],
+      [$a$],
       [$x^2/2$],
       [$ln|x|$],
       [$sin x$],
@@ -50,7 +50,7 @@
       [$-1/x$],
     ),
     solution-parts: (
-      [$1/a$],
+      [$a$],
       [$x^2/2$],
       [$ln|x|$],
       [$sin x$],
@@ -93,7 +93,7 @@
       ],
       [
         $cos^3 x = cos x (1 - sin^2 x)$，令 $u = sin x$，
-        原式 $= integral (1 - u^2) dif u = sin x - sin^3 x/3 + C$。
+        原式 $= integral (1 - u^2) dif u = sin x - (sin^3 x)/3 + C$。
       ],
       [
         分子分母同乘 $e^x$：令 $u = e^x$，
@@ -110,7 +110,7 @@
     stem: [（附加题）计算下列不定积分：],
     parts: (
       [$integral x/(x^2 + 2x + 2) dif x$；],
-      [$integral cos x/(sin x + cos x) dif x$。],
+      [$integral (cos x)/(sin x + cos x) dif x$。],
     ),
     solution-parts: (
       [
@@ -119,7 +119,7 @@
         $= 1/2 ln(x^2 + 2x + 2) - arctan(x+1) + C$。
       ],
       [
-        设 $I_1 = integral cos x/(sin x + cos x) dif x$，$I_2 = integral sin x/(sin x + cos x) dif x$。
+        设 $I_1 = integral (cos x)/(sin x + cos x) dif x$，$I_2 = integral (sin x)/(sin x + cos x) dif x$。
         则 $I_1 + I_2 = x + C_1$，$I_1 - I_2 = ln|sin x + cos x| + C_2$，
         故 $I_1 = 1/2 [x + ln|sin x + cos x|] + C$。
       ],

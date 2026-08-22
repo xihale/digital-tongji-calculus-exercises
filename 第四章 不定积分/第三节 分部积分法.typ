@@ -85,8 +85,8 @@
       [
         令 $u = e^x$，原式 $= integral (arctan u)/u^3 dif u$。
         分部积分并用 $1/(u^2(1+u^2)) = 1/u^2 - 1/(1+u^2)$，得
-        $-arctan u/(2u^2) - 1/(2u) - 1/2 arctan u + C$
-        $= -arctan e^x/(2 e^(2x)) - 1/(2 e^x) - 1/2 arctan e^x + C$。
+        $-(arctan u)/(2u^2) - 1/(2u) - 1/2 arctan u + C$
+        $= -(arctan e^x)/(2 e^(2x)) - 1/(2 e^x) - 1/2 arctan e^x + C$。
       ],
     ),
   ),

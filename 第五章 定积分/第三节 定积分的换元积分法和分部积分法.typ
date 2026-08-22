@@ -59,11 +59,11 @@
       ],
       [
         $cos x cos 2x = (1/2)(cos 3x + cos x)$，
-        原式 $= (1/2)[sin 3x/3 + sin x]_(-pi/2)^(pi/2) = 2/3$。
+        原式 $= (1/2)[(sin 3x)/3 + sin x]_(-pi/2)^(pi/2) = 2/3$。
       ],
       [
         令 $x = tan t$，$t: pi/4 -> pi/3$，
-        原式 $= integral_(pi/4)^(pi/3) cos t / sin^2 t dif t$。
+        原式 $= integral_(pi/4)^(pi/3) (cos t)/(sin^2 t) dif t$。
         再令 $u = sin t$：$[-1/u]_(sqrt(2)/2)^(sqrt(3)/2)
         = -2/sqrt(3) + sqrt(2) = sqrt(2) - (2 sqrt(3))/3$。
       ],
@@ -107,8 +107,8 @@
       设 $c = integral_0^pi f(x) cos x dif x$，则 $f(x) = x - c$。
       $c = integral_0^pi (x - c) cos x dif x
       = integral_0^pi x cos x dif x - c integral_0^pi cos x dif x$。
-      后一积分 $= 0$；前一积分分部得 $[x sin x]_0^pi + integral_0^pi sin x dif x
-      = [-cos x]_0^pi = -2$。故 $c = -2$，$f(x) = x + 2$。
+      后一积分 $= 0$；前一积分分部得 $[x sin x]_0^pi - integral_0^pi sin x dif x
+      = -[-cos x]_0^pi = -2$。故 $c = -2$，$f(x) = x + 2$。
     ],
   ),
   (
@@ -118,7 +118,7 @@
       求 $integral_0^1 x f(x) dif x$
     ],
     solution: [
-      $f'(x) = (sin x^2)/x^2 · 2x = 2 sin x^2/x$。
+      $f'(x) = (sin x^2)/x^2 · 2x = (2 sin x^2)/x$。
       分部：$integral_0^1 x f(x) dif x
       = [x^2/2 f(x)]_0^1 - (1/2) integral_0^1 x^2 f'(x) dif x
       = (1/2) f(1) - integral_0^1 x sin x^2 dif x$。
