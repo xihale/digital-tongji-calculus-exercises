@@ -100,14 +100,14 @@
       $F_z=x y+(z)/(sqrt(x^2+y^2+z^2))$。 \
       在点 $(1,0,-1)$ 处有 $sqrt(x^2+y^2+z^2)=sqrt(2)$， \
       故 \
-      $F_x=-1+(1)/(sqrt(2))$， \
+      $F_x=(1)/(sqrt(2))$， \
       $F_y=-1$， \
       $F_z=-(1)/(sqrt(2))$。 \
       所以 \
-      $z_x=-(F_x)/(F_z)=1-sqrt(2)$， \
+      $z_x=-(F_x)/(F_z)=1$， \
       $z_y=-(F_y)/(F_z)=-sqrt(2)$， \
       即 \
-      $dif z=(1-sqrt(2)) dif x-sqrt(2) dif y$。
+      $dif z=dif x-sqrt(2) dif y$。
     ],
   ),
   (
@@ -134,7 +134,7 @@
   (
     kind: "compute",
     stem: [
-      设 $x/z = ln z/y$ , 求 $(pd z)/(pd x),(pd z)/(pd y)$ .
+      设 $x/z = ln z/y$，求 $(pd z)/(pd x),(pd z)/(pd y)$
     ],
     solution: [
       $(pd z)/(pd x)=(z)/(x+z)$，$(pd z)/(pd y)=(z^2)/(y(x+z))$。
@@ -155,7 +155,7 @@
   (
     kind: "compute",
     stem: [
-      设 $cases(z = x^2 + y^2, x^2 + 2 y^2 + 3 z^2 = 20)$ 求 $(dif y)/(dif x),(dif z)/(dif x)$ .
+      设 $cases(z = x^2 + y^2, x^2 + 2 y^2 + 3 z^2 = 20)$ 求 $(dif y)/(dif x),(dif z)/(dif x)$
     ],
     solution: [
       $(dif y)/(dif x)=-(x(6z+1))/(2y(3z+1))$，$(dif z)/(dif x)=(x)/(3z+1)$。
@@ -176,7 +176,7 @@
   (
     kind: "compute",
     stem: [
-      设 $cases(u = f(u x, v + y), v = g(u - x, v^2y),)$ 其中 $f, g$ 具有一阶连续偏导数，求 $(pd u)/(pd x),(partial v)/(partial x)$ .
+      设 $cases(u = f(u x, v + y), v = g(u - x, v^2y),)$ 其中 $f, g$ 具有一阶连续偏导数，求 $(pd u)/(pd x),(partial v)/(partial x)$
     ],
     solution: [
       $(pd u)/(pd x)=(u f_1' (1 - 2 y v g_2') - f_2' g_1')/(Delta)$，$(partial v)/(partial x)=(g_1' (x f_1' + u f_1' - 1))/(Delta)$。
@@ -198,7 +198,7 @@
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设 $2 sin (x + 2 y - 3 z) = x + 2 y - 3 z$ ，证明： $(pd z)/(pd x)+(pd z)/(pd y)= 1 .$
+      设 $2 sin (x + 2 y - 3 z) = x + 2 y - 3 z$，证明： $(pd z)/(pd x)+(pd z)/(pd y)= 1$
     ],
     solution: [
       设 $u=x+2y-3z(x,y)$，原式为 $2sin u=u$。 \
@@ -206,7 +206,7 @@
       $2cos u dot u_x = u_x$，即 $(2cos u-1)(1-3z_x)=0$。 \
       对 $y$ 求偏导： \
       $2cos u dot u_y = u_y$，即 $(2cos u-1)(2-3z_y)=0$。 \
-      若 $2cos u-1=0$，则 $cos u=(1)/(2)$，而由 $2sin u=u$ 在实数域只可能 $u=0$，对应 $cos u=1$，矛盾。 \
+      若 $2cos u-1=0$，则 $cos u=(1)/(2)$，即 $u=plus.minus (pi)/(3)+2k pi$，此时 $2sin u=plus.minus sqrt(3) != u$，与方程 $2sin u=u$ 矛盾。 \
       故 $2cos u-1 != 0$，于是 \
       $z_x=(1)/(3), z_y=(2)/(3)$。 \
       所以 \
@@ -216,7 +216,7 @@
   (
     kind: "proof",
     stem: [
-      设函数 $Phi (u, v)$ 具有一阶连续偏导数，证明：由方程 $Phi (c x - a z, c y - b z) = 0$ 所确定的函数 $z = f(x, y)$ 满足 $a (pd z)/(pd x) + b (pd z)/(pd y) = c .$
+      设函数 $Phi (u, v)$ 具有一阶连续偏导数，证明：由方程 $Phi (c x - a z, c y - b z) = 0$ 所确定的函数 $z = f(x, y)$ 满足 $a (pd z)/(pd x) + b (pd z)/(pd y) = c$
     ],
     solution: [
       令 \

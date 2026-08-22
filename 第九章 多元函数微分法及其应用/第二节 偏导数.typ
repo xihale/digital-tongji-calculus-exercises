@@ -37,7 +37,7 @@
     ),
     answer: [A],
     solution: [
-      $f_x' =(1)/((2 sqrt((y)/(x))) dot (-(y)/(x^2)))= -(1)/(2 sqrt((y)/(x)) dot y)/(x^2)$。代入 $(2, 1)$ 得 $f_x'(2,1) = -(1)/(2 sqrt(1) dot 1)/(4)= -(sqrt(2))/(8)$。
+      $f_x' =(1)/(2 sqrt((y)/(x))) dot (-(y)/(x^2)) = -(y)/(2 x^2 sqrt((y)/(x)))$。代入 $(2, 1)$：$sqrt((y)/(x)) = sqrt((1)/(2))$，故 $f_x'(2,1) = -(1)/(2 dot 2^2 dot sqrt((1)/(2))) = -(sqrt(2))/(8)$。
     ],
   ),
   (
@@ -78,7 +78,7 @@
     solution: [
       $u_x = y -(3y)/(x^4)$， \
       故 \
-      $u_(x x)=(partial)/((partial x)(-3y x^(-4)))=(12y)/(x^5)$。
+      $u_(x x)=(partial)/((partial x))(-3y x^(-4))=(12y)/(x^5)$。
     ],
   ),
   (
@@ -89,7 +89,7 @@
     answer: [$(1)/(y)$],
     solution: [
       先对 $x$ 求导：$u_x=ln(x y)+1$。 \
-      再对 $y$ 求导：$u_(x y)=(partial)/((partial y)(ln(x y)+1))=(1)/(y)$。
+      再对 $y$ 求导：$u_(x y)=(partial)/((partial y))(ln(x y)+1)=(1)/(y)$。
     ],
   ),
   (
@@ -125,7 +125,7 @@
     kind: "proof",
     kind-title: [四、证明题],
     stem: [
-      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = z$
+      设函数 $z = ee^(-((1)/(x)+(1)/(y)))$，求证：$x^2 (pd z)/(pd x) + y^2 (pd z)/(pd y) = 2z$
     ],
     solution: [
       设 $phi(x, y)=-((1)/(x)+(1)/(y))$，则 $z=ee^(phi)$。 \

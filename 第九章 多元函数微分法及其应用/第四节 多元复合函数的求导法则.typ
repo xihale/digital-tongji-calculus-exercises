@@ -20,8 +20,8 @@
     ),
     answer: [C],
     solution: [
-      $u_x' =(pd u)/(pd x)+(partial u)/((partial z) dot (partial z))/(partial x)= z(x-y)^(z-1) + (x-y)^z ln(x-y) dot 2x$。 \
-      $u_y' =(pd u)/(pd y)+(partial u)/((partial z) dot (partial z))/(partial y)= -z(x-y)^(z-1) + (x-y)^z ln(x-y) dot 2y$。 \
+      $u_x' =(pd u)/(pd x)+(pd u)/(pd z) dot (pd z)/(pd x)= z(x-y)^(z-1) + (x-y)^z ln(x-y) dot 2x$。 \
+      $u_y' =(pd u)/(pd y)+(pd u)/(pd z) dot (pd z)/(pd y)= -z(x-y)^(z-1) + (x-y)^z ln(x-y) dot 2y$。 \
       故 $u_x' + u_y' = 2(x+y)(x-y)^z ln(x-y)$。
     ],
   ),
@@ -56,13 +56,13 @@
     answer: [D],
     solution: [
       $(pd u)/(pd z)= f_2' dot x$。 \
-      $(partial^2 u)/(partial x partial z)=(partial)/((partial x) (x f_2'))= f_2' + x ((partial f_2')/(partial x)) = f_2' + x (f_(21)'' dot 1 + f_(22)'' dot z) = f_2' + x f_(21)'' + x z f_(22)''$。
+      $(partial^2 u)/(partial x partial z)=(partial)/((partial x))(x f_2')= f_2' + x ((partial f_2')/(partial x)) = f_2' + x (f_(21)'' dot 1 + f_(22)'' dot z) = f_2' + x f_(21)'' + x z f_(22)''$。
     ],
   ),
   (
     kind: "choice",
     stem: [
-      若函数 $f(x, 2 x) = x^2 + 3 x$ , $f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) =$  \
+      若函数 $f(x, 2 x) = x^2 + 3 x$，$f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) =$  \
     ],
     options: (
       [$x +(3)/(2)$],
@@ -115,7 +115,7 @@
     stem: [
       设函数 $z = f(x,(x)/(y))$，其中 $f$ 具有二阶连续偏导数，则 $(pd^2 z)/(pd x pd y)=$
     ],
-    answer: [$-(1)/((y^2) f_2')-(x)/((y^2) f_(12)'')-(x)/((y^3) f_(22)'')$],
+    answer: [$-(f_2')/(y^2)-(x f_(12)'')/(y^2)-(x f_(22)'')/(y^3)$],
     solution: [
       设 \
       $u_1=x, u_2=(x)/(y)$，则 $z=f(u_1,u_2)$。 \
@@ -127,7 +127,7 @@
       $(partial f_1')/(partial y)=f_(12)'' u_(2y)=f_(12)''(-(x)/(y^2))$； \
       $(partial(1/y f_2'))/(partial y)=-((1)/(y^2))f_2'+1/y f_(22)'' u_(2y) =-((1)/(y^2))f_2'-((x)/(y^3))f_(22)''$。 \
       合并得 \
-      $(pd^2 z)/(pd x pd y)=-(1)/(y^2 f_2')-(x)/(y^2 f_(12)'')-(x)/(y^3 f_(22)'')$。
+      $(pd^2 z)/(pd x pd y)=-(f_2')/(y^2)-(x f_(12)'')/(y^2)-(x f_(22)'')/(y^3)$。
     ],
   ),
   (
@@ -147,13 +147,6 @@
       设函数 $z = arcsin(x - y)$，而 $x = 3t, y = 4t^3$，求 $(dif z)/(dif t)$
     ],
     solution: [
-      先合成一元函数： \
-      $z(t)=arcsin(3t-4t^3)$。 \
-      设 $u(t)=3t-4t^3$，则 $u'(t)=3-12t^2$。 \
-      由链式法则 \
-      $(dif z)/(dif t)=(u'(t))/(sqrt(1-u(t)^2))$ \
-      $=(3-12t^2)/(sqrt(1-(3t-4t^3)^2))$。
-
       先合成一元函数： \
       $z(t)=arcsin(3t-4t^3)$。 \
       设 $u(t)=3t-4t^3$，则 $u'(t)=3-12t^2$。 \
@@ -181,7 +174,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $u = f((x)/(y),(y)/(z))$ , 其中 $f$ 具有一阶连续偏导数, 求 $(pd u)/(pd x),(pd u)/(pd y),(pd u)/(pd z)$ .
+      设函数 $u = f((x)/(y),(y)/(z))$，其中 $f$ 具有一阶连续偏导数，求 $(pd u)/(pd x),(pd u)/(pd y),(pd u)/(pd z)$
     ],
     solution: [
       $(pd u)/(pd x)= 1/y f_1'$，
@@ -192,7 +185,7 @@
   (
     kind: "compute",
     stem: [
-      设函数 $z = f(x^2 + y^2)$ ，其中 $f$ 具有二阶连续导数，求 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$ .
+      设函数 $z = f(x^2 + y^2)$ ，其中 $f$ 具有二阶连续导数，求 $(pd^2 z)/(pd x^2),(pd^2 z)/(pd y^2),(pd^2 z)/(pd x pd y)$
     ],
     solution: [
       $(pd^2 z)/(pd x^2)= 2 f' + 4 x^2 f''$，$(pd^2 z)/(pd y^2)= 2 f' + 4 y^2 f''$，$(pd^2 z)/(pd x pd y)= 4 x y f''$。
