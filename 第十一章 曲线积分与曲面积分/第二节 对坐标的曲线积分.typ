@@ -70,8 +70,8 @@
     ),
     answer: [D],
     solution: [
-      取 $A O$ 封闭 $L$。$ oint_(L+A O) -y dif x + x dif y = 2 iint_D dif sigma = 2 $
-      $ int_(A O) = 0 $。由于 $L$ 为顺时针，$I = -2$。
+      取 $A O$ 封闭 $L$。由于 $L$ 为顺时针，$ oint_(L+A O) -y dif x + x dif y = -2 iint_D dif sigma = -2 $
+      $ int_(A O) = 0 $，故 $I = -2$。
     ],
   ),
   (
@@ -103,10 +103,10 @@
     stem: [
       设 $L$ 是上半圆 $x^2 + y^2 = 2x$ 从点 $(0, 0)$ 到点 $(1, 1)$ 的一段弧，则将对坐标的曲线积分 $int_L P(x, y) dif x + Q(x, y) dif y$ 化为对弧长的曲线积分是
     ],
-    answer: [$int_L [-y P + (x - 1) Q] dif s$],
+    answer: [$int_L [y P + (1 - x) Q] dif s$],
     solution: [
-      $ (x-1)^2+y^2=1 => dif x = -y dif s, dif y = (x-1) dif s $
-      $ int_L P dif x + Q dif y = int_L [-y P + (x-1)Q] dif s $
+      $ (x-1)^2+y^2=1 => dif x = y dif s, dif y = (1-x) dif s $
+      $ int_L P dif x + Q dif y = int_L [y P + (1-x)Q] dif s $
     ],
   ),
   (

@@ -10,7 +10,7 @@
     kind: "choice",
     kind-title: [一、选择题],
     stem: [
-      设函数 $f(u)$ 具有连续导数，$Sigma$ 是曲面 $y = x^2 + z^2$ 与 $y = 8 - x^2 - z^2$ 所围成立体表面的外侧，则 $(iint_Sigma 1)/(y f((x)/(y)) dif y dif z)+(1)/(x f((x)/(y)) dif z dif x)+ z dif x dif y =$
+      设函数 $f(u)$ 具有连续导数，$Sigma$ 是曲面 $y = x^2 + z^2$ 与 $y = 8 - x^2 - z^2$ 所围成立体表面的外侧，则 $iint_Sigma 1/(y f((x)/(y))) dif y dif z + 1/(x f((x)/(y))) dif z dif x + z dif x dif y =$
     ],
     options: (
       [$16 pi$],
@@ -18,11 +18,11 @@
       [$-8 pi$],
       [因 $f(u)$ 未知, 故无法确定],
     ),
-    answer: [C],
+    answer: [A],
     solution: [
-      $ div bold(F) = 1 $
+      $ P_x + Q_y = 0 => div bold(F) = 1 $
           $ V = int_0^(2 pi) int_0^2 (8-2r^2) r dif r dif theta = 16 pi $
-          通量 $Phi = iiint_Omega 1 dif v = 16 pi $
+          通量 $Phi = iiint_Omega 1 dif v = 16 pi $。选 A。
     ],
   ),
   (
@@ -32,13 +32,13 @@
     ],
     options: (
       [0],
-      [$(4)/(3 pi a^3)$],
+      [$(4 pi a^3)/3$],
       [$4 pi a^3$],
       [$(1)/(2 pi a^4)$],
     ),
     answer: [B],
     solution: [
-      $ I = iiint_Omega div(0,0,z) dif v = iiint_Omega 1 dif v = 4/(3 pi a^3) $。选 B。
+      $ I = iiint_Omega div(0,0,z) dif v = iiint_Omega 1 dif v = (4 pi a^3)/3 $。选 B。
     ],
   ),
   (
@@ -49,7 +49,7 @@
     options: (
       [0],
       [$4 pi R^2$],
-      [$(4)/(3 pi R^3)$],
+      [$(4 pi R^3)/3$],
       [1],
     ),
     answer: [A],
@@ -61,9 +61,9 @@
     kind: "blank",
     kind-title: [二、填空题],
     stem: [
-      设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦， $Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外）， 则用高斯公式化曲面积分为重积分时，有 $(iint_Sigma (x cos alpha + y cos beta + z cos gamma))/((sqrt(x^2 + y^2 + z^2)) dif S)$ $=$
+      设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦， $Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外）， 则用高斯公式化曲面积分为重积分时，有 $iint_Sigma (x cos alpha + y cos beta + z cos gamma)/(sqrt(x^2 + y^2 + z^2)) dif S$ $=$
     ],
-    answer: [$(iiint_Omega 2)/((sqrt(x^2 + y^2 + z^2)) dif v)$],
+    answer: [$iiint_Omega 2/(sqrt(x^2 + y^2 + z^2)) dif v$],
     solution: [
       $ div ((bold(r))/r) = 2/r => I = iiint_Omega 2/r dif v = iiint_Omega 2/(sqrt(x^2+y^2+z^2)) dif v $。
     ],
@@ -73,9 +73,9 @@
     stem: [
       设 $Omega$ 是由光滑闭曲面 $Sigma$ 所围成的空间闭区域，其体积记为 $V$，则沿 $Sigma$ 外侧的积分 $iint_Sigma (z - y) dif x dif y + (y - x) dif z dif x + (x - z) dif y dif z =$
     ],
-    answer: [$0$],
+    answer: [$3 V$],
     solution: [
-      $ div bold(F) = 0 => I = iiint_Omega 0 dif v = 0 $。
+      $ div bold(F) = (x-z)_x + (y-x)_y + (z-y)_z = 3 => I = iiint_Omega 3 dif v = 3 V $。
     ],
   ),
   (
@@ -93,10 +93,10 @@
     stem: [
       设空间闭区域 $Omega$ 由曲面 $z = a^2 - x^2 - y^2$ 与平面 $z = 0$ 所围成， 其中 $a$ 为正整数，记闭区域 $Omega$ 的表面外侧为 $S$，$Omega$ 的体积为 $V$， 则 $iint_S x^2 y z^2 dif y dif z - x y^2 z^2 dif z dif x + z (1 + x y z) dif x dif y$ $=$
     ],
-    answer: [$iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + x y z) dif v$],
+    answer: [$iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + 2 x y z) dif v$],
     solution: [
-      $ div bold(F) = P_x + Q_y + R_z = 2 x y z^2 - 2 x y^2 z + (1 + x y z) $
-          $ I = iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + x y z) dif v $
+      $ div bold(F) = P_x + Q_y + R_z = 2 x y z^2 - 2 x y^2 z + (1 + 2 x y z) $
+          $ I = iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + 2 x y z) dif v $
     ],
   ),
   (
@@ -149,7 +149,7 @@
     ],
     solution: [
       (1) $ div bold(F) = 2(x+y+z) => I = iiint_Omega 2(x+y+z) dif v = 3a^4 $
-          (2) $ div bold(F) = 3r^2 => I = iiint_Omega 3r^2 dif v = 12/(5 pi a^5) $
+          (2) $ div bold(F) = 3r^2 => I = iiint_Omega 3r^2 dif v = (12 pi a^5)/5 $
           (3) $ div bold(F) = 3 => I = 3V = 81 pi $
     ],
   ),

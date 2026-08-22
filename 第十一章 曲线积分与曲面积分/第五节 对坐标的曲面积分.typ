@@ -57,9 +57,9 @@
     stem: [
       设 $Sigma$ 是球面 $x^2 + y^2 + z^2 = a^2$ 的外侧，则 $iint_Sigma z dif x dif y =$
     ],
-    answer: [$(4)/(3 pi a^3)$],
+    answer: [$(4 pi a^3)/3$],
     solution: [
-      由高斯公式，$ I = iiint_Omega div(0,0,z) dif v = V = 4/(3 pi a^3) $。
+      由高斯公式，$ I = iiint_Omega div(0,0,z) dif v = V = (4 pi a^3)/3 $。
     ],
   ),
   (
@@ -77,10 +77,10 @@
     stem: [
       $iint_Sigma z dif x dif y + x dif y dif z + y dif z dif x =$ #blank()，其中 $Sigma$ 为柱面 $x^2 + y^2 = a^2$ 被平面 $z = 1$ 和 $z = 4$ 所截的在第一卦限部分的前侧
     ],
-    answer: [$(3)/(2 pi a^2)$],
+    answer: [$(3 pi a^2)/2$],
     solution: [
       $ bold(F)=(x,y,z), bold(n) dif S = (cos theta, sin theta, 0) a dif theta dif z $
-          $ bold(F) dot bold(n) = a $。$ I = int_1^4 int_0^pi/2 a^2 dif theta dif z = 3/(2 pi a^2) $
+          $ bold(F) dot bold(n) = a $。$ I = int_1^4 int_0^(pi/2) a^2 dif theta dif z = (3 pi a^2)/2 $
     ],
   ),
   (
@@ -105,9 +105,9 @@
     ],
     solution: [
       (1) 下侧 $ dif x dif y = -dif sigma $, $ z = -sqrt(R^2-r^2) $
-          $ I = iint_D x^2 y^2 sqrt(R^2-r^2) dif sigma = 2/(105 pi R^7) $
+          $ I = iint_D x^2 y^2 sqrt(R^2-r^2) dif sigma = (2 pi R^7)/105 $
           (2) $ bold(F)=(x,y,z) $, $ bold(n) dif S = (cos theta, sin theta, 0) dif theta dif z $
-          $ I = int_0^3 int_0^pi/2 1 dif theta dif z = (3 pi)/2 $
+          $ I = int_0^3 int_0^(pi/2) 1 dif theta dif z = (3 pi)/2 $
           (3) $ z = 1-x+y, z_x=-1, z_y=1 $
           $ I = iint_D (P - Q + R) dif sigma = iint_D 1 dif sigma = 1/2 $
     ],

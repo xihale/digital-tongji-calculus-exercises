@@ -95,7 +95,9 @@
       利用格林公式计算 $iint_D x dif sigma$，其中 $D$ 是以三点 $O(0, 0), A(2, 0), B(2, 2)$ 为顶点的三角形闭区域
     ],
     solution: [
-      $iint_D x dif sigma = int_0^2 x dif x int_0^x dif y = int_0^2 x^2 dif x = [x^3/3]_0^2 = 8/3$。
+      由格林公式，取 $P = 0, Q = x^2/2$，则 $iint_D x dif sigma = oint_L x^2/2 dif y$，$L$ 为 $D$ 的正向边界：
+          $L_1 (O -> A): y = 0, dif y = 0$；$L_2 (A -> B): x = 2$，$int_0^2 2 dif y = 4$；$L_3 (B -> O): y = x$，$int_2^0 x^2/2 dif x = -4/3$
+          $ I = 4 - 4/3 = 8/3 $
     ],
   ),
   (
@@ -115,7 +117,7 @@
     ],
     solution: [
       补 $S$: 从 $(0,0)$ 到 $(a,0)$ 的线段，且 $int_S = 0$。$C = L + S$ 为正向。
-      $ Q_x - P_y = m $。$ I = iint_D m dif sigma = m dot pi (a/2)^2 = pi m a^2/8 $
+      $ Q_x - P_y = m $。$ I = iint_D m dif sigma = m dot 1/2 dot pi (a/2)^2 = pi m a^2/8 $
     ],
   ),
   (

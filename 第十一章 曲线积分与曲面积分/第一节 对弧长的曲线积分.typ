@@ -47,7 +47,7 @@
       $int_L x dif s =$，其中 $L$ 为抛物线 $y = x^2$ 上相应于 $x$ 从 0 到 1 的一段弧
     ],
     options: (
-      [$(1)/(12 (5 sqrt(5) - 1))$],
+      [$1/12 (5 sqrt(5) - 1)$],
       [$5 sqrt(5) - 1$],
       [$(1)/(12)$],
       [$(1)/(8 (5 sqrt(5) - 1))$],
@@ -145,8 +145,8 @@
       $L_1: y=x, x in [0, 1], dif s = sqrt(2) dif x$
           $ I_1 = sqrt(2) int_0^1 x dif x = sqrt(2)/2 $
           $L_2: y=x^2, x in [0, 1], dif s = sqrt(1+4x^2) dif x$
-          $ I_2 = int_0^1 x sqrt(1+4x^2) dif x = 1/(12 (5 sqrt(5) - 1)) $
-          $ I = sqrt(2)/2 + 1/(12 (5 sqrt(5) - 1)) $
+          $ I_2 = int_0^1 x sqrt(1+4x^2) dif x = 1/12 (5 sqrt(5) - 1) $
+          $ I = sqrt(2)/2 + 1/12 (5 sqrt(5) - 1) $
     ],
   ),
   (
@@ -167,11 +167,11 @@
   (
     kind: "compute",
     stem: [
-      计算 $int_L x y z dif s$，其中 $L$ 为曲线弧 $x = t, y = 2/(3 sqrt(2) t^(3/2)), z = 1/(2 t^2)$ ($0 <= t <= 1$)
+      计算 $int_L x y z dif s$，其中 $L$ 为曲线弧 $x = t, y = (2 sqrt(2))/3 t^(3/2), z = t^2/2$ ($0 <= t <= 1$)
     ],
     solution: [
-      $ x=t, y=2/(3 sqrt(2) t^(3/2)), z=1/(2 t^2) $, $ dif s = sqrt(1 + 2t + t^2) dif t = (1+t) dif t $
-          $ I = int_0^1 t dot 2/(3 sqrt(2) t^(3/2)) dot 1/(2 t^2) (1+t) dif t = sqrt(2)/3 int_0^1 (t^(-5/2) + t^(-3/2)) dif t = 16 sqrt(2)/143 $
+      $ x=t, y=(2 sqrt(2))/3 t^(3/2), z=t^2/2 $, $ dif s = sqrt(1 + 2t + t^2) dif t = (1+t) dif t $
+          $ I = int_0^1 t dot (2 sqrt(2))/3 t^(3/2) dot t^2/2 (1+t) dif t = sqrt(2)/3 int_0^1 (t^(9/2) + t^(11/2)) dif t = 16 sqrt(2)/143 $
     ],
   ),
   (

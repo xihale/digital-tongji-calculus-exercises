@@ -28,7 +28,7 @@
   (
     kind: "choice",
     stem: [
-      $(int_L 2x(x^2 + y^2)^alpha)/(y dif x)-(x^2(x^2 + y^2)^alpha)/(y^2 dif y)$ 在不与 $x$ 轴相交的区域上与路径无关，则 $alpha =$
+      $int_L (2x(x^2 + y^2)^alpha)/y dif x - (x^2(x^2 + y^2)^alpha)/(y^2) dif y$ 在不与 $x$ 轴相交的区域上与路径无关，则 $alpha =$
     ],
     options: (
       [$1/2$],

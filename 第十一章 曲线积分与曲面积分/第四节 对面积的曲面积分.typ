@@ -67,7 +67,7 @@
     answer: [$(17 pi)/(6)$],
     solution: [
       $ x=sin phi cos theta, y=sin phi sin theta, z=1+cos phi, dif S = sin phi dif phi dif theta $
-          $ I = int_0^(2 pi) dif theta int_0^pi/2 [sin^2 phi +(1+cos phi)/2] sin phi dif phi = (17 pi)/6 $
+          $ I = int_0^(2 pi) dif theta int_0^(pi/2) [sin^2 phi +(1+cos phi)/2] sin phi dif phi = (17 pi)/6 $
     ],
   ),
   (
@@ -75,17 +75,17 @@
     stem: [
       设 $Sigma$ 为圆锥面 $z = sqrt(x^2 + y^2)$ 被圆柱面 $x^2 + y^2 = 2 a x$ ($a > 0$) 所截的部分，则 $iint_Sigma (x y + y z + z x) dif S =$
     ],
-    answer: [$(64 sqrt(2))/(15 a^4)$],
+    answer: [$(64 sqrt(2) a^4)/15$],
     solution: [
       $ dif S = sqrt(2) r dif r dif theta $
-          $ I = sqrt(2) int_(-pi/2)^pi/2 int_0^(2a cos theta) r^3 (cos theta sin theta + sin theta + cos theta) dif r dif theta = (64 sqrt(2))/(15 a^4) $
+          $ I = sqrt(2) int_(-pi/2)^(pi/2) int_0^(2a cos theta) r^3 (cos theta sin theta + sin theta + cos theta) dif r dif theta = (64 sqrt(2) a^4)/15 $
     ],
   ),
   (
     kind: "compute",
     kind-title: [三、计算题],
     stem: [
-      计算 $iint_Sigma (z + 2x +(4)/(3 y)) dif S$，其中 $Sigma$ 为平面 $(x)/(2)+(y)/(3)+(z)/(4)= 1$ 在第一卦限的部分
+      计算 $iint_Sigma (z + 2x + (4y)/3) dif S$，其中 $Sigma$ 为平面 $(x)/(2)+(y)/(3)+(z)/(4)= 1$ 在第一卦限的部分
     ],
     solution: [
       $ z = 4 - 2x -(4y)/3, dif S = sqrt(61)/3 dif x dif y $
@@ -106,11 +106,11 @@
   (
     kind: "compute",
     stem: [
-      计算 $iint_Sigma (x^2 +(1)/(2 y^2)+(1)/(4 z^2)) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = R^2$
+      计算 $iint_Sigma (x^2 + (y^2)/2 + (z^2)/4) dif S$，其中 $Sigma$ 为球面 $x^2 + y^2 + z^2 = R^2$
     ],
     solution: [
-      由对称性 $ iint x^2 dif S = iint y^2 dif S = iint z^2 dif S = 4/(3 pi R^4) $
-          $ I = (1 + 1/2 + 1/4) dot 4/(3 pi R^4) = 7/(3 pi R^4) $
+      由对称性 $ iint x^2 dif S = iint y^2 dif S = iint z^2 dif S = (4 pi R^4)/3 $
+          $ I = (1 + 1/2 + 1/4) dot (4 pi R^4)/3 = (7 pi R^4)/3 $
     ],
   ),
   (
@@ -120,17 +120,17 @@
     ],
     solution: [
       $ dif S = a/z dif sigma $
-          $ A = int_(-pi/2)^pi/2 int_0^(a cos theta) a r/sqrt(a^2-r^2) dif r dif theta = a^2(pi-2) $
+          $ A = int_(-pi/2)^(pi/2) int_0^(a cos theta) a r/sqrt(a^2-r^2) dif r dif theta = a^2(pi-2) $
     ],
   ),
   (
     kind: "compute",
     stem: [
-      求抛物面壳 $z =(1)/(2 (x^2 + y^2))$ ($0 <= z <= 1$) 的质量，已知壳的面密度为 $rho = z$
+      求抛物面壳 $z = (x^2 + y^2)/2$ ($0 <= z <= 1$) 的质量，已知壳的面密度为 $rho = z$
     ],
     solution: [
       $ z = r^2/2, dif S = sqrt(1+r^2) r dif r dif theta $
-          $ M = pi int_0^(sqrt(2)) r^3 sqrt(1+r^2) dif r = 2/(15 pi (6 sqrt(3)+1)) $
+          $ M = pi int_0^(sqrt(2)) r^3 sqrt(1+r^2) dif r = (2 pi (6 sqrt(3)+1))/15 $
     ],
   ),
 )

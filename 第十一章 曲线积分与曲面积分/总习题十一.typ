@@ -90,7 +90,7 @@
   (
     kind: "choice",
     stem: [
-      设 $int_L x y^2 dif x + psi(y) x dif y$ 与路径无关，其中 $psi(y)$ 具有连续导数，且 $psi(0) = 0$ ，则 $int_((0,0))^((1,1)) x y^2 dif x + psi(y) x dif y =$
+      设 $int_L x y^2 dif x + y psi(x) dif y$ 与路径无关，其中 $psi(x)$ 具有连续导数，且 $psi(0) = 0$ ，则 $int_((0,0))^((1,1)) x y^2 dif x + y psi(x) dif y =$
     ],
     options: (
       [$(3)/(8)$],
@@ -100,7 +100,7 @@
     ),
     answer: [B],
     solution: [
-      $ P_y = Q_x => psi(y) = 2y $。$ I = [1/2 x^2 y^2]_((0,0))^((1,1)) = 1/2 $。选 B。
+      $ P_y = Q_x => psi'(x) = 2x => psi(x) = x^2 $。$ I = [1/2 x^2 y^2]_((0,0))^((1,1)) = 1/2 $。选 B。
     ],
   ),
   (
@@ -125,9 +125,9 @@
     stem: [
       设 $L$ 为圆 $x^2 + y^2 = a^2$ 在第一象限的部分，则 $int_L x y dif s =$
     ],
-    answer: [$(1)/(2 a^3)$],
+    answer: [$a^3/2$],
     solution: [
-      $ I = int_0^pi/2 a^3 cos t sin t dif t = a^3/2 $。
+      $ I = int_0^(pi/2) a^3 cos t sin t dif t = a^3/2 $。
     ],
   ),
   (
@@ -195,7 +195,7 @@
     stem: [
       设函数 $P(x, y, z)$ 在空间有界闭区域 $V$ 上具有一阶连续偏导数，$Sigma$ 为 $V$ 的光滑边界曲面的外侧，由高斯公式得 $iint_Sigma P(x, y, z) dif y dif z =$
     ],
-    answer: [$(iiint_V (partial P))/((partial x) dif v)$],
+    answer: [$iiint_V (partial P)/(partial x) dif v$],
     solution: [
       $ div(P, 0, 0) = P_x => I = iiint_V (partial P)/(partial x) dif v $。
     ],
@@ -208,7 +208,7 @@
     ],
     solution: [
       $ x = a/2(1+cos theta), y = a/2 sin theta, dif s = a/2 dif theta $
-      $ I = a^2/2 int_0^(2 pi) |cos theta/2| dif theta = 2a^2 $
+      $ I = a^2/2 int_0^(2 pi) |cos(theta/2)| dif theta = 2a^2 $
     ],
   ),
 )

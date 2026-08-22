@@ -35,10 +35,10 @@
       [$sqrt(3) a^2$],
       [$-sqrt(3) a^2$],
     ),
-    answer: [B],
+    answer: [A],
     solution: [
-      $ rot bold(F) = (2, 2, 2) $。取 $ bold(n) = -(1, 1, 1)/sqrt(3) $
-          $ I = iint_S rot bold(F) dot bold(n) dif S = -(2sqrt(3) dot sqrt(3))/2 a^2 = -3a^2 $。选 B。
+      $ rot bold(F) = (2, 2, 2) $。取 $ bold(n) = (1, 1, 1)/sqrt(3) $
+          $ I = iint_S rot bold(F) dot bold(n) dif S = (2sqrt(3) dot sqrt(3))/2 a^2 = 3a^2 $。选 A。
     ],
   ),
   (
@@ -101,12 +101,12 @@
   (
     kind: "blank",
     stem: [
-      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $z = x + y$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L x z dif x + x dif y +(y^2)/(2 dif z)=$
+      设 $L$ 为柱面 $x^2 + y^2 = 1$ 与平面 $z = x + y$ 的交线，从 $z$ 轴正向看去为逆时针方向，则 $oint_L x z dif x + x dif y + (y^2)/2 dif z =$
     ],
     answer: [$pi$],
     solution: [
-      $ rot bold(F) = (y, -x, 1) $。取上侧 $ bold(n) dif S = (-1, -1, 1) dif sigma $
-          $ I = iint_D (1+x-y) dif sigma = pi $
+      $ rot bold(F) = (y, x, 1) $。取上侧 $ bold(n) dif S = (-1, -1, 1) dif sigma $
+          $ I = iint_D (1-x-y) dif sigma = pi $
     ],
   ),
   (
