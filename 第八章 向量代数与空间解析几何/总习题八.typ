@@ -36,9 +36,7 @@
     ),
     answer: [B],
     solution: [
-      $
-        (bold(a) + lambda bold(b)) dot bold(a) = |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 3 + lambda(2-1+1) = 3 + 2lambda = 0 => lambda = -(3)/(2)
-      $
+      $ (bold(a) + lambda bold(b)) dot bold(a) = |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 3 + lambda(2-1+1) = 3 + 2lambda = 0 => lambda = -(3)/(2) $
     ],
   ),
   (
@@ -151,9 +149,9 @@
     stem: [
       点 $(-1,2,0)$ 在平面 $x + 2 y - z + 1 = 0$ 上的投影是
     ],
-    answer: [$(-(5/3), (2/3), (2/3))$ .],
+    answer: [$(-(5/3), (2/3), (2/3))$],
     solution: [
-      $(-(5/3), (2/3), (2/3))$ .
+      $(-(5/3), (2/3), (2/3))$
     ],
   ),
   (
@@ -254,7 +252,7 @@
 
       投影直线 $L'$ 在平面内，其方向向量应为 $bold(v)$ 在 $Pi$ 内的分量：
       $bold(v') = bold(v) - ((bold(v) dot bold(n))/(norm(bold(n))^2)) bold(n)$，
-      化简得与 $(31,-17,37)$ 平行。
+      化简得与 $(2,55,47)$ 平行。
 
       再取 $L$ 上一点并沿 $bold(n)$ 投影到 $Pi$，可得 $L'$ 经过该投影点；
       因而 $L'$ 可写成两平面交线：
@@ -265,7 +263,7 @@
   (
     kind: "compute",
     stem: [
-      方程 $z = sqrt(a^2 - x^2 - y^2)$ 及 $x^2 + y^2 = a x$ ($a > 0$) 分别表示什么曲面？求这两个曲面的交线在 $z O x$ 面上的投影直线方程，并指明曲线类型
+      方程 $z = sqrt(a^2 - x^2 - y^2)$ 及 $x^2 + y^2 = a x$ ($a > 0$) 分别表示什么曲面？求这两个曲面的交线在 $z O x$ 面上的投影曲线方程，并指明曲线类型
     ],
     solution: [
       第一个方程表示上半球面，第二个表示圆柱面（母线平行于 $z$ 轴）。

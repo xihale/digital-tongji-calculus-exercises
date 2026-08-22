@@ -13,17 +13,16 @@
       已知曲线 $cases(x^2 + y^2 + z^2 = 2, x + y + z = a)$ 在 $y O z$ 面上的投影曲线为 $cases(y^2 + y z + z^2 = 1, x = 0)$，则 $a =$ 
     ],
     options: (
-      [$sqrt(2)$],
+      [0],
       [1],
       [$plus.minus sqrt(2)$],
       [$plus.minus 1$],
     ),
-    answer: [C],
+    answer: [A],
     solution: [
-      消去 $x$：
+      消去 $x$：由 $x = a - y - z$ 代入第一个方程，得
           $ (a - y - z)^2 + y^2 + z^2 = 2 => 2 y^2 + 2 y z + 2 z^2 - 2 a (y + z) + a^2 - 2 = 0 $
-          对比 $2 y^2 + 2 y z + 2 z^2 = 2$，需 $a = 0$（不合）或系数满足特定关系。
-          通常此类题 $a = plus.minus sqrt(2)$ 为使常数项匹配的结果。
+          与 $y^2 + y z + z^2 = 1$（即 $2 y^2 + 2 y z + 2 z^2 = 2$）比较，需 $a^2 - 2 a (y + z) = 0$ 对曲线上一切点成立，故 $a = 0$。
     ],
   ),
   (
@@ -89,12 +88,11 @@
     stem: [
       曲线 $cases(x = t + 1, y = t^2, z = 2t + 1)$ 的一般方程为
     ],
-    answer: [$cases(y = (x - 1)^2, z = 2x - 2)$],
+    answer: [$cases(y = (x - 1)^2, z = 2x - 1)$],
     solution: [
       由 $x = t + 1 => t = x - 1$。
           代入 $y => y = (x - 1)^2$。
           代入 $z => z = 2(x - 1) + 1 = 2x - 1$。
-          *注：原答案 $z = 2x - 2$ 可能是 $z = 2t$ 型，此处依题意调整为 $z = 2x - 1$。*
     ],
   ),
   (
@@ -118,8 +116,8 @@
           (2) $cases((x - 1)^2 + y^2 + (z + 1)^2 = 4, z = 0)$
     ],
     solution: [
-      (1) $cases(x = (3/sqrt(2)) cos t, y = (3/sqrt(2)) cos t, z = 3 sin t)$ ( $0 <= t <= 2 pi$ );
-          (2) $cases(x = 1 + sqrt(3) cos t, y = sqrt(3) sin t, z = 0)$ ( $0 <= t <= 2 pi$ ).
+      (1) $cases(x = (3/sqrt(2)) cos t, y = (3/sqrt(2)) cos t, z = 3 sin t)$（$0 <= t <= 2 pi$）；
+          (2) $cases(x = 1 + sqrt(3) cos t, y = sqrt(3) sin t, z = 0)$（$0 <= t <= 2 pi$）。
     ],
   ),
   (

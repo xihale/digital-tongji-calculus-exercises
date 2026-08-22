@@ -37,10 +37,10 @@
       设 $bold(a)$ 与 $bold(b)$ 为非零向量，则 $bold(a) dot bold(b) = 0$ 是
     ],
     options: (
-      [$bold(a) || bold(b)$ 的充要条件],
+      [$bold(a) parallel bold(b)$ 的充要条件],
       [$bold(a) perp bold(b)$ 的充要条件],
       [$bold(a) = bold(b)$ 的充要条件],
-      [$bold(a) || bold(b)$ 的必要但不充分条件],
+      [$bold(a) parallel bold(b)$ 的必要但不充分条件],
     ),
     answer: [B],
     solution: [
@@ -97,11 +97,9 @@
     stem: [
       设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $Prj_bold(b) bold(a) =$
     ],
-    answer: [$4/3$],
+    answer: [$2$],
     solution: [
-      $Prj_bold(b) bold(a) = (bold(a) dot bold(b)) / |bold(b)| = (4 dot 2 - 3 dot 2 + 4 dot 1) / sqrt(2^2 + 2^2 + 1^2) = (8 - 6 + 4) / 3 = 6 / 3 = 2$（此处原答案 4/3 与计算不符，以计算为准，或检查题面）。
-          *纠正：$4 dot 2 + (-3) dot 2 + 4 dot 1 = 6$。$|bold(b)| = 3$。所以结果为 2。*
-          但若按原 4/3 填写则保留逻辑过程。
+      $ Prj_(bold(b)) bold(a) =(bold(a) dot bold(b)) / |bold(b)|=(8 - 6 + 4)/(3)= 2 $
     ],
   ),
   (
